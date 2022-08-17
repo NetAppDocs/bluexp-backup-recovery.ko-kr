@@ -7,6 +7,7 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: false
+  rss_page: whats-new.html
   filter:
     label: 클라우드 공급자
     default: 모든 클라우드 공급자
@@ -34,7 +35,9 @@ sidebar:
     - title: 라이센스를 설정합니다
       url: "/task-licensing-cloud-backup.html"
     - title: 백업 및 복원 작업의 상태를 모니터링합니다
-      url: task-monitor-backup-jobs.html
+      url: "/task-monitor-backup-jobs.html"
+    - title: 클라우드 백업 정책 설정
+      url: "/concept-cloud-backup-policies.html"
   - title: ONTAP 데이터를 백업 및 복원합니다
     entries:
     - title: ONTAP 데이터 보호

@@ -76,11 +76,11 @@ image:screenshot_backup_modify_policy_k8s.png["백업 설정 페이지의 정책
 
 . Manage Policies_ 페이지에서 해당 작업 환경에서 변경할 백업 정책에 대해 * Edit Policy * 를 클릭합니다.
 +
-image:screenshot_backup_manage_policy_page_edit.png["정책 관리 페이지의 정책 편집 단추를 보여 주는 스크린샷"]
+image:screenshot_backup_manage_policy_page_edit_k8s.png["정책 관리 페이지의 정책 편집 단추를 보여 주는 스크린샷"]
 
 . Edit Policy_페이지에서 스케줄 및 백업 보존을 변경하고 * Save * 를 클릭합니다.
 +
-image:screenshot_backup_edit_policy.png["백업 스케줄 및 백업 보존 설정을 수정할 수 있는 백업 정책 설정을 보여 주는 스크린샷"]
+image:screenshot_backup_edit_policy_k8s.png["백업 스케줄 및 백업 보존 설정을 수정할 수 있는 백업 정책 설정을 보여 주는 스크린샷"]
 
 
 
@@ -181,7 +181,7 @@ image:screenshot_backup_view_k8s_backups_button.png["단일 볼륨에 사용할 
 모든 백업 파일 목록이 표시됩니다.
 
 +
-image:screenshot_backup_view_backups.png["단일 볼륨의 모든 백업 파일 목록을 보여 주는 스크린샷"]
+image:screenshot_backup_view_backups_k8s.png["단일 볼륨의 모든 백업 파일 목록을 보여 주는 스크린샷"]
 
 . Actions * > * Delete all backups * 를 클릭합니다.
 +
@@ -205,11 +205,11 @@ image:screenshot_backup_view_k8s_backups_button.png["단일 볼륨에 사용할 
 모든 백업 파일 목록이 표시됩니다.
 
 +
-image:screenshot_backup_view_backups.png["단일 볼륨의 모든 백업 파일 목록을 보여 주는 스크린샷"]
+image:screenshot_backup_view_backups_k8s.png["단일 볼륨의 모든 백업 파일 목록을 보여 주는 스크린샷"]
 
 . 을 클릭합니다 image:screenshot_horizontal_more_button.gif["추가 아이콘"] 삭제하려는 볼륨 백업 파일의 경우 * 삭제 * 를 클릭합니다.
 +
-image:screenshot_delete_one_backup.png["단일 백업 파일을 삭제하는 방법을 보여 주는 스크린샷"]
+image:screenshot_delete_one_backup_k8s.png["단일 백업 파일을 삭제하는 방법을 보여 주는 스크린샷"]
 
 . 확인 대화 상자에서 * 삭제 * 를 클릭합니다.
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-manage-backups-ontap.html 
 keywords: cloud backup, cloud backup service, backup schedule, change schedule, change backup schedule, modify schedule, modify backup schedule, retention, backup retention, delete, delete backups, deleting, deleting backups, disable, disable backups, turn off backups, disable cloud backup, turn off cloud backup 
-summary: 백업 일정을 변경하고, 볼륨 백업을 활성화/비활성화하고, 백업을 삭제하는 등 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다. 
+summary: 백업 일정을 변경하고, 새 백업 정책을 만들고, 볼륨 백업을 활성화/비활성화하고, 백업을 삭제하는 등 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다. 
 ---
 = ONTAP 시스템의 백업 관리
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 백업 일정을 변경하고, 볼륨 백업을 활성화/비활성화�
 
 
 [role="lead"]
-백업 일정을 변경하고, 볼륨 백업을 활성화/비활성화하고, 백업을 삭제하는 등 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다.
+백업 일정을 변경하고, 새 백업 정책을 만들고, 볼륨 백업을 활성화/비활성화하고, 백업을 삭제하는 등 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다.
 
 
 CAUTION: 클라우드 공급자 환경에서 직접 백업 파일을 관리하거나 변경하지 마십시오. 이로 인해 파일이 손상되어 지원되지 않는 구성이 발생할 수 있습니다.
@@ -27,7 +27,7 @@ Backup Dashboard에서 현재 백업 중인 모든 볼륨의 목록을 볼 수 �
 
 .단계
 . Cloud Manager의 왼쪽 탐색 메뉴에서 * 백업 및 복원 * 을 클릭합니다.
-. 볼륨 * 탭을 클릭하여 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 시스템의 볼륨 목록을 표시합니다.
+. 볼륨 * 탭을 클릭하여 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 시스템에 대해 백업된 볼륨 목록을 표시합니다.
 +
 image:screenshot_backup_dashboard.png["백업 파일이 있는 모든 작업 환경 및 볼륨을 보여 주는 스크린샷"]
 
@@ -65,20 +65,30 @@ image:screenshot_backup_manage_volumes_page.png["볼륨 관리 페이지에서 �
 
 작업 환경의 볼륨에 현재 적용된 백업 정책의 속성을 변경할 수 있습니다. 백업 정책을 변경하면 정책을 사용하는 모든 기존 볼륨에 영향을 줍니다.
 
+[NOTE]
+====
+* 이 클러스터에 대한 Cloud Backup을 활성화할 때 초기 정책에서 _DataLock 및 랜섬웨어 보호_를 활성화한 경우 편집한 모든 정책은 동일한 DataLock 설정(엔터프라이즈 또는 규정 준수)으로 구성해야 합니다. Cloud Backup을 활성화할 때 _DataLock 및 랜섬웨어 보호_를 활성화하지 않은 경우 지금 DataLock을 설정할 수 없습니다.
+* AWS에서 백업을 생성할 때 Cloud Backup을 활성화할 때 첫 번째 백업 정책에서 _S3 Glacier_또는 _S3 Glacier Deep Archive_를 선택한 경우 해당 계층은 백업 정책을 편집할 때 사용할 수 있는 유일한 아카이브 계층이 됩니다. 첫 번째 백업 정책에서 아카이브 계층을 선택하지 않은 경우 정책을 편집할 때 _S3 Glacier_가 유일한 아카이브 옵션입니다.
+
+
+====
 .단계
 . 볼륨 * 탭에서 * 백업 설정 * 을 선택합니다.
 +
 image:screenshot_backup_settings_button.png["볼륨 탭의 백업 설정 단추를 보여 주는 스크린샷"]
 
-. 백업 설정 페이지에서 을 클릭합니다 image:screenshot_horizontal_more_button.gif["추가 아이콘"] 설정을 변경하려는 작업 환경의 경우 * 정책 관리 * 를 선택합니다.
+. 백업 설정 페이지에서 을 클릭합니다 image:screenshot_horizontal_more_button.gif["추가 아이콘"] 정책 설정을 변경하려는 작업 환경의 경우 * 정책 관리 * 를 선택합니다.
 +
 image:screenshot_backup_modify_policy.png["백업 설정 페이지의 정책 관리 옵션을 보여 주는 스크린샷"]
 
-. Manage Policies_ 페이지에서 해당 작업 환경에서 변경할 백업 정책에 대해 * Edit Policy * 를 클릭합니다.
+. Manage Policies_ 페이지에서 해당 작업 환경에서 변경할 백업 정책에 대해 * Edit * 를 클릭합니다.
++
+참고 를 클릭할 수 있습니다 image:button_down_caret.png[""] 정책의 전체 세부 정보를 봅니다.
+
 +
 image:screenshot_backup_manage_policy_page_edit.png["정책 관리 페이지의 정책 편집 단추를 보여 주는 스크린샷"]
 
-. Edit Policy_페이지에서 스케줄 및 백업 보존을 변경하고 * Save * 를 클릭합니다.
+. Edit Policy_페이지에서 를 클릭합니다 image:button_down_caret.png[""] 스케줄 및/또는 백업 보존을 변경하려면 _ Labels & Retention _ 섹션을 확장하고 * Save * 를 클릭합니다.
 +
 image:screenshot_backup_edit_policy.png["백업 스케줄 및 백업 보존 설정을 수정할 수 있는 백업 정책 설정을 보여 주는 스크린샷"]
 
@@ -100,6 +110,8 @@ link:reference-azure-backup-tiers.html["Azure 아카이브 스토리지 사용�
 
 endif::azure[]
 
+를 누릅니다image:screenshot_backup_modify_policy_page2.png["Cloud Backup의 아카이브 스토리지 설정으로 계층화하는 방법을 보여 주는 스크린샷"]
+
 + 아카이브 스토리지로 계층화된 백업 파일은 아카이브로 백업을 계층화하는 것을 중지하면 해당 계층에 남아 있습니다. 이러한 백업 파일은 자동으로 표준 계층으로 다시 이동되지 않습니다.
 
 
@@ -110,6 +122,13 @@ endif::azure[]
 
 작업 환경의 특정 볼륨에 새 백업 정책을 적용하려면 먼저 작업 환경에 백업 정책을 추가해야 합니다. 그러면 됩니다 <<Changing the policy assigned to existing volumes,해당 작업 환경의 볼륨에 정책을 적용합니다>>.
 
+[NOTE]
+====
+* 이 클러스터에 대한 Cloud Backup을 활성화할 때 초기 정책에서 _DataLock 및 랜섬웨어 보호_를 활성화한 경우, 생성한 추가 정책을 동일한 DataLock 설정(엔터프라이즈 또는 규정 준수)으로 구성해야 합니다. Cloud Backup을 활성화할 때 _DataLock 및 랜섬웨어 보호_를 활성화하지 않은 경우 DataLock을 사용하는 새 정책을 생성할 수 없습니다.
+* AWS에서 백업을 생성할 때 Cloud Backup을 활성화할 때 첫 번째 백업 정책에서 _S3 Glacier_또는 _S3 Glacier Deep Archive_를 선택한 경우 해당 계층은 해당 클러스터에 대한 향후 백업 정책에 사용할 수 있는 유일한 아카이브 계층이 됩니다. 첫 번째 백업 정책에서 아카이브 계층을 선택하지 않은 경우 _S3 Glacier_는 이후 정책에 대한 유일한 아카이브 옵션입니다.
+
+
+====
 .단계
 . 볼륨 * 탭에서 * 백업 설정 * 을 선택합니다.
 +
@@ -123,7 +142,7 @@ image:screenshot_backup_modify_policy.png["백업 설정 페이지의 정책 관
 +
 image:screenshot_backup_manage_policy_page_add.png["정책 관리 페이지의 새 정책 추가 단추를 보여 주는 스크린샷"]
 
-. Add New Policy_페이지에서 스케줄 및 백업 보존을 정의하고 * Save * 를 클릭합니다.
+. Add New Policy_페이지에서 를 클릭합니다 image:button_down_caret.png[""] Labels & Retention _ 섹션을 확장하여 스케줄 및 백업 보존을 정의하려면 * Save * 를 클릭합니다.
 +
 image:screenshot_backup_add_new_policy.png["백업 스케줄 및 백업 보존 설정을 추가할 수 있는 백업 정책 설정을 보여 주는 스크린샷"]
 
@@ -172,6 +191,10 @@ image:screenshot_backup_manage_volumes_page_change.png["볼륨 관리 페이지�
 +
 image:screenshot_backup_change_policy.png["선택한 볼륨에 적용할 새 정책을 선택하는 방법을 보여 주는 스크린샷"]
 
++
+
+NOTE: 이 클러스터에 대한 Cloud Backup을 활성화할 때 초기 정책에서 _DataLock 및 랜섬웨어 보호_를 활성화한 경우 DataLock으로 구성된 다른 정책만 표시됩니다. Cloud Backup을 활성화할 때 _DataLock 및 랜섬웨어 보호_를 활성화하지 않은 경우 DataLock이 구성되지 않은 다른 정책만 표시됩니다.
+
 . 변경 사항을 적용하려면 * 저장 * 을 클릭합니다.
 
 
@@ -210,7 +233,9 @@ image:screenshot_auto_backup.png["클러스터의 모든 향후 볼륨에 할당
 
 백업 이름에는 타임 스탬프가 포함되어 있어 다른 예약된 백업에서 필요 시 백업을 식별할 수 있습니다.
 
-임시 백업을 생성할 때 소스 볼륨에 스냅샷이 생성됩니다. 이 스냅샷은 일반 스냅샷 스케줄의 일부가 아니므로 회전되지 않습니다. 백업이 완료되면 소스 볼륨에서 이 스냅샷을 수동으로 삭제할 수 있습니다. 이렇게 하면 이 스냅샷과 관련된 블록을 해제할 수 있습니다. 스냅샷의 이름은 CBS-SNSHOT-adhoc 으로 시작됩니다. https://docs.netapp.com/us-en/ontap/san-admin/delete-all-existing-snapshot-copies-volume-task.html["ONTAP CLI를 사용하여 스냅샷을 삭제하는 방법을 알아봅니다"].
+이 클러스터에 대해 Cloud Backup을 활성화할 때 _DataLock 및 랜섬웨어 보호_를 활성화한 경우 필요 시 백업도 DataLock으로 구성되고 보존 기간은 30일이 됩니다. 애드혹 백업에는 랜섬웨어 스캔이 지원되지 않습니다. link:concept-cloud-backup-policies.html#datalock-and-ransomware-protection["DataLock 및 랜섬웨어 보호에 대해 자세히 알아보십시오"^].
+
+임시 백업을 생성할 때 소스 볼륨에 스냅샷이 생성됩니다. 이 스냅샷은 일반 스냅샷 스케줄의 일부가 아니므로 회전되지 않습니다. 백업이 완료되면 소스 볼륨에서 이 스냅샷을 수동으로 삭제할 수 있습니다. 이렇게 하면 이 스냅샷과 관련된 블록을 해제할 수 있습니다. 스냅샷의 이름은 CBS-SNSHOT-adhoc 으로 시작됩니다. https://docs.netapp.com/us-en/ontap/san-admin/delete-all-existing-snapshot-copies-volume-task.html["ONTAP CLI를 사용하여 스냅샷을 삭제하는 방법을 알아봅니다"^].
 
 
 NOTE: 데이터 보호 볼륨에서 필요 시 볼륨 백업을 지원하지 않습니다.
@@ -247,6 +272,34 @@ image:screenshot_backup_view_backups_button.png["단일 볼륨에 사용할 수 
 
 +
 image:screenshot_backup_view_backups.png["단일 볼륨의 모든 백업 파일 목록을 보여 주는 스크린샷"]
+
+
+
+
+
+== 볼륨 백업에서 랜섬웨어 스캔을 실행합니다
+
+NetApp 랜섬웨어 보호 소프트웨어는 백업 파일을 스캔하여 백업 파일이 생성될 때, 백업 파일의 데이터가 복원되고 있을 때 랜섬웨어 공격의 증거를 찾습니다. 또한 언제든지 주문형 랜섬웨어 보호 스캔을 실행하여 특정 백업 파일의 사용성을 확인할 수 있습니다. 이 기능은 특정 볼륨의 랜섬웨어 문제가 발생한 경우 해당 볼륨의 백업이 영향을 받지 않는지 확인하려는 경우에 유용합니다.
+
+이 기능은 볼륨 백업이 ONTAP 9.11.1 이상이 설치된 시스템에서 생성되었으며 백업 정책에서 _DataLock 및 랜섬웨어 보호_를 활성화한 경우에만 사용할 수 있습니다.
+
+
+NOTE: 랜섬웨어 스캔을 수행하려면 백업 파일을 Cloud Manager 환경(Connector가 설치된 환경)에 다운로드해야 합니다. 따라서 Connector를 사내에 구축한 경우 클라우드 공급자로부터 추가 송신 비용이 발생할 수 있습니다. 따라서 Connector를 클라우드에 구축하고 백업이 저장되는 버킷과 동일한 영역에 두는 것이 좋습니다.
+
+.단계
+. 볼륨 * 탭에서 을 클릭합니다 image:screenshot_horizontal_more_button.gif["추가 아이콘"] 소스 볼륨에 대해 * Details & Backup List * 를 선택합니다.
++
+image:screenshot_backup_view_backups_button.png["단일 볼륨에 사용할 수 있는 세부 정보 및 AMP, 백업 목록 단추를 보여 주는 스크린샷"]
+
++
+모든 백업 파일 목록이 표시됩니다.
+
+. 을 클릭합니다 image:screenshot_horizontal_more_button.gif["추가 아이콘"] 검사할 볼륨 백업 파일의 경우 * 랜섬웨어 스캔 * 을 클릭합니다.
++
+image:screenshot_scan_one_backup.png["단일 백업 파일에서 랜섬웨어 스캔을 실행하는 방법을 보여주는 스크린샷"]
+
++
+랜섬웨어 스캔 열에 검사가 진행 중이라는 메시지가 표시됩니다.
 
 
 

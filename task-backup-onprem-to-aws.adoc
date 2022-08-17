@@ -190,7 +190,7 @@ IPspace 내의 모든 인터클러스터 LIF는 오브젝트 저장소에 대한
 
 
 .단계
-. 다음 S3 권한(최신 버전)이 있는지 확인합니다 https://mysupport.netapp.com/site/info/cloud-manager-policies["Cloud Manager 정책"^])는 Connector에 권한을 제공하는 IAM 역할의 일부입니다.
+. 다음 S3 권한(최신 버전)이 있는지 확인합니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html["Cloud Manager 정책"^])는 Connector에 권한을 제공하는 IAM 역할의 일부입니다.
 +
 [source, json]
 ----
@@ -216,6 +216,23 @@ IPspace 내의 모든 인터클러스터 LIF는 오브젝트 저장소에 대한
               "s3:GetBucketPolicy",
               "s3:PutBucketPublicAccessBlock",
               "s3:PutEncryptionConfiguration",
+              "s3:GetObjectVersionTagging",
+              "s3:GetBucketObjectLockConfiguration",
+              "s3:GetObjectVersionAcl",
+              "s3:PutObjectTagging",
+              "s3:DeleteObjectTagging",
+              "s3:GetObjectRetention",
+              "s3:DeleteObjectVersionTagging",
+              "s3:PutBucketObjectLockConfiguration",
+              "s3:ListBucketByTags",
+              "s3:DeleteObjectVersion",
+              "s3:GetObjectTagging",
+              "s3:PutBucketVersioning",
+              "s3:PutObjectVersionTagging",
+              "s3:GetBucketVersioning",
+              "s3:BypassGovernanceRetention",
+              "s3:PutObjectRetention",
+              "s3:GetObjectVersion",
               "athena:StartQueryExecution",
               "athena:GetQueryResults",
               "athena:GetQueryExecution",
@@ -233,7 +250,7 @@ IPspace 내의 모든 인터클러스터 LIF는 오브젝트 저장소에 대한
       },
 ----
 +
-버전 3.9.15 이상을 사용하여 Connector를 배포한 경우 이러한 권한은 이미 IAM 역할의 일부여야 합니다. 그렇지 않으면 누락된 권한을 추가해야 합니다. 특히 검색 및 복원에 필요한 "Athena" 및 "GLUE" 사용 권한이 있습니다. 를 참조하십시오 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 설명서: IAM 정책 편집"].
+버전 3.9.21 이상을 사용하여 Connector를 배포한 경우 이러한 권한은 이미 IAM 역할의 일부여야 합니다. 그렇지 않으면 누락된 권한을 추가해야 합니다. 특히 검색 및 복원에 필요한 "Athena" 및 "GLUE" 사용 권한이 있습니다. 를 참조하십시오 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 설명서: IAM 정책 편집"].
 
 . 서비스를 활성화하면 백업 마법사에서 액세스 키와 암호 키를 입력하라는 메시지가 표시됩니다. 이러한 자격 증명은 ONTAP 클러스터에 전달되므로 ONTAP는 S3 버킷으로 데이터를 백업 및 복원할 수 있습니다. 이를 위해서는 다음과 같은 권한을 가진 IAM 사용자를 생성해야 합니다.
 +
@@ -365,10 +382,14 @@ image:screenshot_backup_onprem_aws_networking.png["ONTAP 시스템에서 AWS S3�
 . 기본 정책에 사용할 백업 정책 세부 정보를 입력하고 * 다음 * 을 클릭합니다. 기존 정책을 선택하거나 각 섹션에 선택 항목을 입력하여 새 정책을 생성할 수 있습니다.
 +
 .. 기본 정책의 이름을 입력합니다. 이름을 변경할 필요가 없습니다.
-.. 백업 스케줄을 정의하고 보존할 백업 수를 선택합니다. link:concept-ontap-backup-to-cloud.html#customizable-backup-schedule-and-retention-settings-per-cluster["선택할 수 있는 기존 정책 목록을 봅니다"^].
-.. ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화하도록 선택할 수 있습니다. link:reference-aws-backup-tiers.html["아카이브 계층 사용에 대해 자세히 알아보십시오"].
+.. 백업 스케줄을 정의하고 보존할 백업 수를 선택합니다. link:concept-ontap-backup-to-cloud.html#customizable-backup-schedule-and-retention-settings["선택할 수 있는 기존 정책 목록을 봅니다"^].
+.. 선택적으로 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호할 수 있습니다. _DataLock_은 백업 파일이 수정되거나 삭제되지 않도록 보호하고, 백업 파일을 검색하여 백업 파일에서 랜섬웨어 공격의 증거를 찾습니다. link:concept-cloud-backup-policies.html#datalock-and-ransomware-protection["사용 가능한 DataLock 설정에 대해 자세히 알아보십시오"^].
+.. 선택적으로 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화할 수 있습니다. link:reference-aws-backup-tiers.html["아카이브 계층 사용에 대해 자세히 알아보십시오"^].
 +
 image:screenshot_backup_policy_aws.png["스케줄 및 백업 보존을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
+
++
+* 중요: * DataLock을 사용하려는 경우 Cloud Backup을 활성화할 때 첫 번째 정책에서 활성화해야 합니다.
 
 
 

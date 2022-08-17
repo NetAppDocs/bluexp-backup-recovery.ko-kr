@@ -26,8 +26,9 @@ Cloud Backup은 ONTAP 클러스터 데이터의 보호 및 장기 아카이브�
 
 * 데이터 볼륨의 독립적인 복사본을 저비용 오브젝트 스토리지로 백업합니다.
 * 클러스터의 모든 볼륨에 단일 백업 정책을 적용하거나 고유한 복구 지점 목표가 있는 볼륨에 다른 백업 정책을 할당합니다.
-* 백업 정책의 이름을 지정하여 각 정책이 어떤 용도로 사용되는지 쉽게 확인할 수 있습니다.
-* 비용 절감을 위해 오래된 백업 파일을 아카이브 스토리지에 계층화합니다(ONTAP 9.10.1 이상을 사용할 때 지원됨).
+* 변경 불가능한 백업 파일을 보존 기간 동안 잠가 있도록 만듭니다.
+* 백업 파일에서 랜섬웨어 공격을 검색하고 감염된 백업을 자동으로 제거/교체합니다.
+* 오래된 백업 파일을 아카이브 스토리지에 계층화하여 비용 절감
 * 클라우드에서 클라우드로, 사내 시스템에서 퍼블릭 또는 프라이빗 클라우드로 백업
 * Cloud Volumes ONTAP 시스템의 경우 백업이 다른 구독/계정 또는 다른 지역에 있을 수 있습니다.
 * 사용 중인 AES-256비트 암호화 유휴 및 TLS 1.2 HTTPS 연결로 백업 데이터를 보호합니다.
@@ -97,19 +98,32 @@ ONTAP 백업 파일에서 다음 작업 환경으로 볼륨 또는 개별 파일
 
 
 
+== 지원되는 볼륨
+
+Cloud Backup은 다음 유형의 볼륨을 지원합니다.
+
+* FlexVol 읽기-쓰기 볼륨
+* SnapMirror 데이터 보호(DP) 타겟 볼륨
+* SnapLock 엔터프라이즈 볼륨(ONTAP 9.11.1 이상 필요)
+
+
+FlexGroup 볼륨 및 SnapLock 규정 준수 볼륨은 현재 지원되지 않습니다.
+
+
+
 == 비용
 
 ONTAP 시스템에서 Cloud Backup을 사용할 경우 리소스 비용과 서비스 요금의 두 가지 유형이 있습니다.
 
 * 리소스 비용 *
 
-클라우드 공급자에게 오브젝트 스토리지 용량과 클라우드 내 가상 머신/인스턴스 실행에 대한 리소스 비용이 지급됩니다.
+클라우드 공급자에게 오브젝트 스토리지 용량과 백업 파일을 쓰고 읽는 데 필요한 리소스 비용이 지불됩니다.
 
 * 백업의 경우 클라우드 공급자에게 오브젝트 스토리지 비용을 지불하십시오.
 +
 Cloud Backup은 소스 볼륨의 스토리지 효율성을 유지하므로 데이터_after_ONTAP 효율성(중복제거 및 압축이 적용된 후 더 적은 양의 데이터)에 대한 클라우드 공급자 개체 스토리지 비용을 지불하게 됩니다.
 
-* 검색 및 복원을 사용한 볼륨 또는 파일 복원의 경우, 클라우드 공급자가 특정 리소스를 프로비저닝하며 검색 요청에 의해 스캔된 데이터 양과 관련된 TiB 비용이 있습니다.
+* 검색 및 복원을 사용한 볼륨 또는 파일 복원의 경우, 클라우드 공급자가 특정 리소스를 프로비저닝하며, 검색 요청에 의해 스캔된 데이터 양과 관련된 TiB 비용이 있습니다.
 +
 ifdef::aws[]
 
@@ -117,6 +131,16 @@ ifdef::aws[]
 ** AWS에서는 https://aws.amazon.com/athena/faqs/["아마존 애써나"^] 및 https://aws.amazon.com/glue/faqs/["AWS 글루"^] 리소스가 새로운 S3 버킷에 구축됩니다.
 +
 endif::aws[]
+
+
+
++
+ifdef::azure[]
+
++
+** Azure에서는 가 있습니다 https://azure.microsoft.com/en-us/services/synapse-analytics/?&ef_id=EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE:G:s&gclid=EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE["Azure Synapse 작업 공간"^] 및 https://azure.microsoft.com/en-us/services/storage/data-lake-storage/?&ef_id=EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE:G:s&gclid=EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE["Azure Data Lake Storage를 참조하십시오"^] 데이터를 저장 및 분석할 수 있도록 스토리지 계정에 프로비저닝됩니다.
++
+endif::azure[]
 
 
 
@@ -259,44 +283,7 @@ endif::gcp[]
 
 
 
-=== 지원되는 스토리지 클래스 또는 액세스 계층
-
-ifdef::aws[]
-
-* AWS에서는 백업이 _Standard_storage 클래스에서 시작되고 30일 후에 _Standard - Infrequent Access_storage 클래스로 전환됩니다.
-+
-클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 이전 백업을 _S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 계층화하도록 선택할 수 있습니다. link:reference-aws-backup-tiers.html["AWS 아카이브 스토리지에 대해 자세히 알아보십시오"^].
-
-
-
-endif::aws[]
-
-ifdef::azure[]
-
-* Azure에서 백업은 _Cool_access 계층과 연결됩니다.
-+
-클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 이전 백업을 _Azure Archive_storage에 계층화하도록 선택할 수 있습니다. link:reference-azure-backup-tiers.html["Azure 아카이브 스토리지에 대해 자세히 알아보십시오"^].
-
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
-* GCP에서 백업은 기본적으로 _Standard_storage 클래스와 연결됩니다.
-+
-또한 더 낮은 cost_Nearline_storage 클래스 또는 _Coldline_or_Archive_storage 클래스를 사용할 수 있습니다. Google 항목을 참조하십시오 link:https://cloud.google.com/storage/docs/storage-classes["스토리지 클래스"^] 스토리지 클래스 변경에 대한 자세한 내용은 를 참조하십시오.
-
-
-
-endif::gcp[]
-
-* StorageGRID에서 백업은 _Standard_storage 클래스와 연결됩니다.
-
-
-
-
-=== 클러스터당 사용자 지정 가능한 백업 스케줄 및 보존 설정
+=== 사용자 지정 가능한 백업 스케줄 및 보존 설정
 
 작업 환경에 Cloud Backup을 활성화하면 처음에 선택한 모든 볼륨이 사용자가 정의한 기본 백업 정책을 사용하여 백업됩니다. RPO(복구 지점 목표)가 다른 특정 볼륨에 서로 다른 백업 정책을 할당하려는 경우 해당 클러스터에 대한 추가 정책을 생성하고 백업이 활성화된 후 해당 정책을 다른 볼륨에 할당할 수 있습니다.
 
@@ -329,6 +316,70 @@ TIP: 데이터 보호 볼륨의 백업 보존 기간은 소스 SnapMirror 관계
 
 
 
+=== 백업 파일 보호 설정
+
+클러스터에서 ONTAP 9.11.1 이상을 사용하는 경우 삭제 및 랜섬웨어 공격으로부터 백업을 보호할 수 있습니다. 각 백업 정책은 _ 보존 기간 _ 에 특정 기간 동안 백업 파일에 적용할 수 있는 _ DataLock 및 랜섬웨어 방지 _ 에 대한 섹션을 제공합니다. _DataLock_은 백업 파일이 수정되거나 삭제되지 않도록 보호합니다. _랜섬웨어 방지_ 는 백업 파일을 스캔하여 백업 파일이 생성될 때 및 백업 파일의 데이터가 복원될 때 랜섬웨어 공격의 증거를 찾습니다.
+
+각 백업 정책에 대해 다음 설정 중에서 선택할 수 있습니다.
+
+* 없음. DataLock 보호 및 랜섬웨어 보호가 비활성화됩니다.
+* 엔터프라이즈. DataLock 모드는 특정 권한이 있는 사용자가 보존 기간 동안 백업 파일을 덮어쓰거나 삭제할 수 있는 _Enterprise_로 설정됩니다. 랜섬웨어 보호가 활성화됩니다.
+* 규정 준수: DataLock 모드는 보존 기간 동안 사용자가 백업 파일을 덮어쓰거나 삭제할 수 없는 _Compliance_로 설정됩니다. 랜섬웨어 보호가 활성화됩니다.
+
+
+보존 기간은 스케줄 보존 기간과 같으며 14일을 더한 값입니다. 예를 들어, _5_개의 복제본을 보존한 _weekly_backups는 각 백업 파일을 5주 동안 잠급니다. _6_복제본이 보존되는 _Monthly_backups는 각 백업 파일을 6개월 동안 잠급니다.
+
+현재 백업 대상이 Amazon S3일 때 지원을 사용할 수 있습니다. 다른 스토리지 제공업체 대상은 향후 릴리스에 추가될 예정입니다.
+
+
+TIP: 백업을 아카이브 스토리지로 계층화하는 경우 DataLock을 설정할 수 없습니다.
+
+을 참조하십시오 link:concept-cloud-backup-policies.html#datalock-and-ransomware-protection["DataLock 및 랜섬웨어 보호"^] DataLock 및 랜섬웨어 방지 작동 방법에 대한 자세한 내용은
+
+
+
+=== 이전 백업 파일용 아카이브 스토리지
+
+특정 클라우드 스토리지를 사용할 경우 특정 기간 동안 오래된 백업 파일을 보다 저렴한 스토리지 클래스/액세스 계층으로 이동할 수 있습니다. DataLock을 설정한 경우에는 아카이브 스토리지를 사용할 수 없습니다.
+
+ifdef::aws[]
+
+* AWS에서는 백업이 _Standard_storage 클래스에서 시작되고 30일 후에 _Standard - Infrequent Access_storage 클래스로 전환됩니다.
++
+클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 클라우드 백업 UI의 _S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. link:reference-aws-backup-tiers.html["AWS 아카이브 스토리지에 대해 자세히 알아보십시오"^].
+
++
+Cloud Backup을 활성화할 때 첫 번째 백업 정책에서 _S3 Glacier_또는 _S3 Glacier Deep Archive_를 선택한 경우 해당 계층은 해당 클러스터에 대한 향후 백업 정책에 사용할 수 있는 유일한 아카이브 계층이 됩니다. 첫 번째 백업 정책에서 아카이브 계층을 선택하지 않으면 _S3 Glacier_는 이후 정책에 대한 유일한 보관 옵션입니다.
+
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+* Azure에서 백업은 _Cool_access 계층과 연결됩니다.
++
+클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 클라우드 백업 UI의 _Azure Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. link:reference-azure-backup-tiers.html["Azure 아카이브 스토리지에 대해 자세히 알아보십시오"^].
+
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+* GCP에서 백업은 기본적으로 _Standard_storage 클래스와 연결됩니다.
++
+또한 더 낮은 cost_Nearline_storage 클래스 또는 _Coldline_or_Archive_storage 클래스를 사용할 수 있습니다. Google을 통해 이러한 다른 스토리지 클래스를 구성합니다. Google 항목을 참조하십시오 link:https://cloud.google.com/storage/docs/storage-classes["스토리지 클래스"^] 스토리지 클래스 변경에 대한 자세한 내용은 를 참조하십시오.
+
+
+
+endif::gcp[]
+
+* StorageGRID에서 백업은 _Standard_storage 클래스와 연결됩니다.
+
+
+
+
 == FabricPool 계층화 정책 고려 사항
 
 백업하는 볼륨이 FabricPool 애그리게이트에 있고 '없음' 이외의 할당된 정책이 있을 때 알아야 할 몇 가지 사항이 있습니다.
@@ -347,27 +398,23 @@ TIP: 데이터 보호 볼륨의 백업 보존 기간은 소스 SnapMirror 관계
 
 
 
-== 지원되는 볼륨
-
-Cloud Backup은 다음 유형의 볼륨을 지원합니다.
-
-* FlexVol 읽기-쓰기 볼륨
-* SnapMirror 데이터 보호(DP) 타겟 볼륨
-* SnapLock 엔터프라이즈 볼륨(ONTAP 9.11.1 이상 필요)
-
-
-FlexGroup 볼륨 및 SnapLock 규정 준수 볼륨은 현재 지원되지 않습니다.
-
-
-
 == 제한 사항
+
+다음은 향후 릴리스에서 해결될 알려진 문제입니다.
+
+* 복원 작업 중에 ONTAP 버전 9.10.1 이상을 실행하는 시스템에서 백업이 생성되었고 볼륨이 복원 중인 시스템에서 ONTAP 버전 9.10.0 이하를 실행하는 경우 시스템 중단 또는 일부 경우 복원이 실패합니다. 그러나 볼륨이 손상되었습니다.
+
+
+
+
+=== 백업 제한 사항
 
 * 이전 백업 파일을 아카이브 스토리지에 계층화하려면 클러스터에서 ONTAP 9.10.1 이상이 실행되고 있어야 합니다. 아카이브 스토리지에 있는 백업 파일에서 볼륨을 복원하려면 대상 클러스터에서 ONTAP 9.10.1 이상이 실행되고 있어야 합니다.
 * 정책에 할당된 볼륨이 없을 때 백업 정책을 생성하거나 편집할 때 유지되는 백업 수는 최대 1018개가 될 수 있습니다. 이 문제를 해결하려면 정책을 생성할 백업 수를 줄일 수 있습니다. 그런 다음 정책에 볼륨을 할당한 후 정책을 편집하여 최대 4000개의 백업을 생성할 수 있습니다.
-* DP(데이터 보호) 볼륨을 백업할 때 다음 SnapMirror 레이블과의 관계는 클라우드에 백업되지 않습니다.
+* 데이터 보호(DP) 볼륨 백업 시:
 +
-** app_consistent
-** ALL_SOURCE_SNSHOT
+** SnapMirror 레이블 'app_consistent' 및 'all_source_snapshot'과의 관계는 클라우드에 백업되지 않습니다.
+** 사용된 SnapMirror 레이블과 관계없이 SnapMirror 대상 볼륨에 스냅샷의 로컬 복사본을 생성하는 경우 이러한 스냅샷은 백업으로 클라우드로 이동하지 않습니다. 이때 Cloud Backup이 이를 백업하려면 소스 DP 볼륨에 원하는 레이블이 있는 스냅샷 정책을 생성해야 합니다.
 
 
 * SVM-DR 볼륨 백업은 다음 제한 사항으로 지원됩니다.
@@ -376,11 +423,11 @@ FlexGroup 볼륨 및 SnapLock 규정 준수 볼륨은 현재 지원되지 않습
 ** 볼륨에 적용된 스냅샷 정책은 매일, 매주, 매월 등 Cloud Backup에서 인식하는 정책 중 하나여야 합니다. 기본 "sm_created" 정책(* 미러 모든 스냅샷 * 에 사용됨) 가 인식되지 않으며 백업할 수 있는 볼륨 목록에 DP 볼륨이 표시되지 않습니다.
 
 
-* 지금 백업 * 버튼을 사용한 임시 볼륨 백업은 데이터 보호 볼륨에서 지원되지 않습니다.
+* 데이터 보호 볼륨에서 * 지금 백업 * 버튼을 사용한 임시 볼륨 백업이 지원되지 않습니다.
 * SM-BC 구성은 지원되지 않습니다.
 * MCC(MetroCluster) 백업은 ONTAP 2차 백업에서만 지원됩니다. MCC > SnapMirror > ONTAP > 클라우드 백업 > 오브젝트 스토리지.
 * ONTAP는 단일 볼륨에서 여러 오브젝트 저장소로 이루어진 SnapMirror 관계를 지원하지 않습니다. 따라서 Cloud Backup에서는 이 구성을 지원하지 않습니다.
-* 오브젝트 저장소의 WORM/Compliance 모드는 지원되지 않습니다.
+* 오브젝트 저장소의 WORM/Compliance 모드는 현재 Amazon S3에서만 지원됩니다.
 
 
 
