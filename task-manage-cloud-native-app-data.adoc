@@ -1,0 +1,162 @@
+---
+sidebar: sidebar 
+permalink: task-manage-cloud-native-app-data.html 
+keywords: manage, view backup, monitor jobs, monitor 
+summary: 백업 세부 정보를 보고 모든 작업의 상태를 모니터링합니다. 
+---
+= 클라우드 네이티브 애플리케이션 데이터의 보호 관리
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+
+
+== 작업을 모니터링합니다
+
+작업 환경에서 시작된 작업의 상태를 모니터링할 수 있습니다. 이렇게 하면 성공적으로 완료된 작업, 현재 진행 중인 작업 및 실패한 작업을 볼 수 있으므로 문제를 진단하고 해결할 수 있습니다.
+
+모든 작업 및 작업 상태의 목록을 볼 수 있습니다. 각 작업 또는 작업에는 고유한 ID와 상태가 있습니다. 상태는 다음과 같습니다.
+
+* 성공했습니다
+* 진행 중
+* 대기열에 있습니다
+* 경고
+* 실패했습니다
+
+
+* 단계 *
+
+. 백업 및 복원 * 을 클릭합니다.
+. 작업 모니터링 * 을 클릭합니다
++
+작업 이름을 클릭하여 해당 작업에 해당하는 세부 정보를 볼 수 있습니다. 특정 작업을 찾는 경우 다음을 수행할 수 있습니다.
+
++
+** 페이지 상단의 시간 선택기를 사용하여 특정 시간 범위의 작업을 봅니다
+** 검색 필드에 작업 이름의 일부를 입력합니다
+** 각 열 머리글의 필터를 사용하여 결과를 정렬합니다
+
+
+
+
+
+
+== 백업 세부 정보를 봅니다
+
+생성된 총 백업 수, 백업 생성에 사용되는 정책, 데이터베이스 버전 및 에이전트 ID를 볼 수 있습니다.
+
+. 백업 및 복원 * > * 응용 프로그램 * 을 클릭합니다.
+. 을 클릭합니다 image:icon-action.png["아이콘을 클릭하여 작업을 선택합니다"] 해당 응용 프로그램에 대해 * 세부 정보 보기 * 를 클릭합니다.
+
+
+
+IMPORTANT: 상담원 ID는 커넥터에 연결됩니다. Oracle 데이터베이스 호스트를 등록하는 동안 사용된 Connector가 더 이상 존재하지 않으면 새 Connector의 에이전트 ID가 다르기 때문에 해당 애플리케이션의 후속 백업이 실패합니다. 커넥터-업데이트 * API를 실행하여 에이전트 ID를 수정해야 합니다.
+
+
+
+== 커넥터 세부 정보를 업데이트합니다
+
+Oracle 데이터베이스 호스트를 등록하는 동안 사용된 커넥터가 더 이상 존재하지 않거나 AWS에서 손상된 경우 새 커넥터를 구축해야 합니다. 새 커넥터를 배포한 후에는 * connector-update * API를 실행하여 커넥터 세부 정보를 업데이트해야 합니다.
+
+[listing]
+----
+curl --location --request PATCH 'https://snapcenter.cloudmanager.cloud.netapp.com/api/oracle/databases/connector-update' \
+--header 'x-account-id: <CM account-id>' \
+--header 'x-agent-id: <connector Agent ID >' \
+--header 'Authorization: Bearer token' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"old_connector_id": "Old connector id that no longer exist",
+"new_connector_id": "New connector Id"
+}
+----
+커넥터 세부 정보를 업데이트한 후 Oracle 데이터베이스 호스트에 연결하고 다음 단계를 수행해야 합니다.
+
+. Oracle 데이터베이스 호스트에서 실행 중인 플러그인 정보를 가져옵니다. "rpm-qi netapp-snapcenter-plugin-oracle"
+. 플러그인을 제거합니다. 'SUDO/opt/NetApp/snapcenter/SPL/installation/plugins/uninstall'
+. 플러그인이 성공적으로 제거되었는지 확인합니다. "rpm-qi netapp-snapcenter-plugin-oracle"
+
+
+플러그인을 제거한 후 플러그인을 배포할 수 있습니다. link:reference-prereq-protect-cloud-native-app-data.html#deploy-snapcenter-plug-in-for-oracle["자세한 정보"].
+
+
+
+== CA 서명 인증서를 구성합니다
+
+환경에 추가 보안을 포함하려는 경우 CA 서명 인증서를 구성할 수 있습니다.
+
+
+
+=== 클라이언트 인증서 인증을 위해 CA 서명 인증서를 구성합니다
+
+커넥터는 자체 서명된 인증서를 사용하여 플러그인과 통신합니다. 자체 서명된 인증서는 설치 스크립트에 의해 키 저장소로 가져옵니다. 다음 단계를 수행하여 자체 서명된 인증서를 CA 서명 인증서로 바꿀 수 있습니다.
+
+* 필요한 것 *
+
+다음 명령을 실행하여 _<base_mount_path>_:'sudo docker 볼륨 ls | grep scs_cloud_volume | awk {'print$2'}|xargs sudo Docker 볼륨 검사 | grep 마운트 지점'을 가져올 수 있습니다
+
+* 단계 *
+
+. Connector에 로그인합니다.
+. Connector 가상 머신의 _<base_mount_path>/client/certificate_에 있는 기존 파일을 모두 삭제합니다.
+. CA 서명 인증서와 키 파일을 Connector 가상 머신의 _<base_mount_path>/client/certificate_에 복사합니다.
++
+파일 이름은 certificate.pem 및 key.pem 이어야 합니다. certificate.pem에는 중간 CA 및 루트 CA와 같은 전체 인증서 체인이 있어야 합니다.
+
+. name certificate.p12를 사용하여 인증서의 PKCS12 형식을 생성하고 _<base_mount_path>/client/certificate_에 유지합니다.
+. 모든 중간 CA 및 루트 CA에 대한 certificate.p12 및 인증서를 _/var/opt/snapcenter/spl/etc/_의 플러그인 호스트에 복사합니다.
+. 플러그인 호스트에 로그인합니다.
+. /var/opt/snapcenter/spl/etc_로 이동한 후 keytool 명령을 실행하여 certificate.p12 파일을 가져옵니다. keytool -v -importkeystore -srckeystore certificate.p12 -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype jks -srcstorephass SnapCenter -deststorephass SnapCenter -srcalalas agentcert -alias destagentcert -not프롬프트
+. 루트 CA 및 중간 인증서를 가져옵니다. 키 도구-가져오기-trustcacerts-keystore keystore.jks-storepass SnapCenter-alias trustedca-file<certificate.crt>
++
+
+NOTE: CertFile.crt는 루트 CA 및 중간 CA의 인증서를 나타냅니다.
+
+. SPL을 다시 시작합니다:'stemctl restart SPL'
+
+
+
+
+=== 플러그인의 서버 인증서에 대해 CA 서명 인증서를 구성합니다
+
+CA 인증서에는 Connector 가상 머신이 통신하는 Oracle 플러그인 호스트의 정확한 이름이 있어야 합니다.
+
+* 필요한 것 *
+
+다음 명령을 실행하여 _<base_mount_path>_:'sudo docker 볼륨 ls | grep scs_cloud_volume | awk {'print$2'}|xargs sudo Docker 볼륨 검사 | grep 마운트 지점'을 가져올 수 있습니다
+
+* 단계 *
+
+. 플러그인 호스트에서 다음 단계를 수행합니다.
++
+.. SPL의 keystore_/var/opt/snapcenter/SPL/etc_가 포함된 폴더로 이동합니다.
+.. alias_splkeystore_로 인증서와 키를 모두 포함하는 인증서의 PKCS12 형식을 만듭니다.
+.. CA 인증서를 추가합니다. 키 도구 - importkeystore - srckeystore <CertificatePathToImport> - srcstoretype pkcs12 - destkeystore keystore.jKS - deststoretype JKS-srcalias splkeystore - destalias splkeystore - not프롬프트
+.. 인증서를 확인합니다. 키툴-리스트-v-keystore keystore.jks
+.. SPL을 다시 시작합니다:'stemctl restart SPL'
+
+
+. 커넥터에서 다음 단계를 수행하십시오.
++
+.. 커넥터 에 비 루트 사용자로 로그인합니다.
+.. CA 인증서의 전체 체인을 _<base_mount_path>/server_에 있는 영구 볼륨에 복사합니다.
++
+서버 폴더가 없으면 만듭니다.
+
+.. cloudmanager_scs_cloud에 연결하고 _config.yml_에서 * enableCACert * 를 * true * 로 수정합니다. 'SUDO Docker Exec - cloudmanager_SCS_cloud SED-I's/enableCACert: false/enableCACert: true/g'/opt/NetApp/cloudmanager-SCS-cloud/config/config.yml'
+.. cloudmanager_scs_cloud 컨테이너를 다시 시작합니다. 'SUDO Docker restart cloudmanager_scs_cloud'를 선택합니다
+
+
+
+
+
+
+== REST API 액세스
+
+애플리케이션을 클라우드로 보호하는 REST API를 사용할 수 있습니다 https://snapcenter.cloudmanager.cloud.netapp.com/api-doc/["여기"].
+
+REST API에 액세스하려면 통합 인증이 있는 사용자 토큰을 얻어야 합니다. 사용자 토큰을 얻는 방법에 대한 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-automation/platform/create_user_token.html#create-a-user-token-with-federated-authentication["통합 인증을 사용하여 사용자 토큰을 생성합니다"].

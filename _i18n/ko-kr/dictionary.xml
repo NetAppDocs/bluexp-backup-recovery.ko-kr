@@ -2298,4 +2298,245 @@
   <block id="7600e0a33882cda0be97bd2356d39bbe" category="paragraph"><block ref="7600e0a33882cda0be97bd2356d39bbe" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1487a5e00d27aaaa91d1643104c20943" category="paragraph">랜섬웨어 스캔 열에 검사가 진행 중이라는 메시지가 표시됩니다.</block>
   <block id="b01329b7279f4fcf0943153819def90d" category="sidebar">클라우드 백업 정책 설정</block>
+  <block id="15471566ffb385e256937957990dd60d" category="section-title">2022년 8월 18일</block>
+  <block id="d583f1393e45db7abf2dbb15da48eaad" category="section-title">클라우드 네이티브 애플리케이션 데이터를 보호하기 위해 지원이 추가되었습니다</block>
+  <block id="d59048f21fd887ad520398ce677be586" category="inline-link">자세한 정보</block>
+  <block id="2593a2c9363d8a2c041c1dbe83f9c15d" category="paragraph">Cloud Backup for Applications는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. NetApp Cloud Manager에서 지원하는 Cloud Backup for Applications는 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다.<block ref="2ad7e7ba91bbada48f344044ccececc1" category="inline-link-rx"></block>.</block>
+  <block id="d1e18cf16b83a90a2911458097d3358c" category="summary">백업 세부 정보를 보고 모든 작업의 상태를 모니터링합니다.</block>
+  <block id="a0535e3da7a79865ac35aff6cbcd9919" category="doc">클라우드 네이티브 애플리케이션 데이터의 보호 관리</block>
+  <block id="4639d0e2e2909a747265c2f704128bca" category="section-title">작업을 모니터링합니다</block>
+  <block id="a5cae278ab84c15ead127cbc4d6b2fc5" category="paragraph">작업 환경에서 시작된 작업의 상태를 모니터링할 수 있습니다. 이렇게 하면 성공적으로 완료된 작업, 현재 진행 중인 작업 및 실패한 작업을 볼 수 있으므로 문제를 진단하고 해결할 수 있습니다.</block>
+  <block id="728798e20e00a4c55a8af203c396664a" category="paragraph">모든 작업 및 작업 상태의 목록을 볼 수 있습니다. 각 작업 또는 작업에는 고유한 ID와 상태가 있습니다. 상태는 다음과 같습니다.</block>
+  <block id="f74780adaddcb04bf72bf42279df012b" category="list-text">백업 및 복원 * 을 클릭합니다.</block>
+  <block id="2594a4aa0a4a9233f3cf8e1c4caa4a95" category="list-text">작업 모니터링 * 을 클릭합니다</block>
+  <block id="fe3d15e8bd4366923e66dfe06213a1c5" category="paragraph">작업 이름을 클릭하여 해당 작업에 해당하는 세부 정보를 볼 수 있습니다. 특정 작업을 찾는 경우 다음을 수행할 수 있습니다.</block>
+  <block id="e645e09bf2ae6466ce5a92513bf9c99b" category="section-title">백업 세부 정보를 봅니다</block>
+  <block id="2026cd9f3452451ebd9f1826ae957f07" category="paragraph">생성된 총 백업 수, 백업 생성에 사용되는 정책, 데이터베이스 버전 및 에이전트 ID를 볼 수 있습니다.</block>
+  <block id="8307ee93b8170aa8987b3d6f8e51aac8" category="admonition">상담원 ID는 커넥터에 연결됩니다. Oracle 데이터베이스 호스트를 등록하는 동안 사용된 Connector가 더 이상 존재하지 않으면 새 Connector의 에이전트 ID가 다르기 때문에 해당 애플리케이션의 후속 백업이 실패합니다. 커넥터-업데이트 * API를 실행하여 에이전트 ID를 수정해야 합니다.</block>
+  <block id="f9b1747cec7918dca1e5047effaf3259" category="section-title">커넥터 세부 정보를 업데이트합니다</block>
+  <block id="134a60e3938317ff562685b10b8fee90" category="paragraph">Oracle 데이터베이스 호스트를 등록하는 동안 사용된 커넥터가 더 이상 존재하지 않거나 AWS에서 손상된 경우 새 커넥터를 구축해야 합니다. 새 커넥터를 배포한 후에는 * connector-update * API를 실행하여 커넥터 세부 정보를 업데이트해야 합니다.</block>
+  <block id="2905997274c538c5d6fbdf755bc6d755" category="paragraph">커넥터 세부 정보를 업데이트한 후 Oracle 데이터베이스 호스트에 연결하고 다음 단계를 수행해야 합니다.</block>
+  <block id="c95619f13c61aceb9ca308ac5737d119" category="list-text">Oracle 데이터베이스 호스트에서 실행 중인 플러그인 정보를 가져옵니다. "rpm-qi netapp-snapcenter-plugin-oracle"</block>
+  <block id="2db8ac6fb57f3dfda7f67af0f01e9870" category="list-text">플러그인을 제거합니다. 'SUDO/opt/NetApp/snapcenter/SPL/installation/plugins/uninstall'</block>
+  <block id="84021a7592384dc15cd1c59ce7051645" category="list-text">플러그인이 성공적으로 제거되었는지 확인합니다. "rpm-qi netapp-snapcenter-plugin-oracle"</block>
+  <block id="204818d35e6544dbc49720fa428fc2b7" category="paragraph">플러그인을 제거한 후 플러그인을 배포할 수 있습니다. <block ref="7a9fe936bc0ede19b4e4e3b90573cf6b" category="inline-link-macro-rx"></block>.</block>
+  <block id="f713a5b618a13e567bd48c7c23bc1831" category="section-title">CA 서명 인증서를 구성합니다</block>
+  <block id="134db136339131109beaeb48cea408f5" category="paragraph">환경에 추가 보안을 포함하려는 경우 CA 서명 인증서를 구성할 수 있습니다.</block>
+  <block id="1be049720f3ffb604fc52816a938bb11" category="section-title">클라이언트 인증서 인증을 위해 CA 서명 인증서를 구성합니다</block>
+  <block id="dbb66d78c3928dbc0e61b7f884e7d152" category="paragraph">커넥터는 자체 서명된 인증서를 사용하여 플러그인과 통신합니다. 자체 서명된 인증서는 설치 스크립트에 의해 키 저장소로 가져옵니다. 다음 단계를 수행하여 자체 서명된 인증서를 CA 서명 인증서로 바꿀 수 있습니다.</block>
+  <block id="d428ebb7ac02e1484781b38a799a4f99" category="paragraph">* 필요한 것 *</block>
+  <block id="adf00ddb8543fe1ed45bb8de32ba885b" category="paragraph">다음 명령을 실행하여 _&lt;base_mount_path&gt;_:'sudo docker 볼륨 ls | grep scs_cloud_volume | awk {'print$2'}|xargs sudo Docker 볼륨 검사 | grep 마운트 지점'을 가져올 수 있습니다</block>
+  <block id="699212d80ab09d05f5a9a391baf6d544" category="list-text">Connector에 로그인합니다.</block>
+  <block id="1845b86db638eeab64b5ff3ab9dbc93c" category="list-text">Connector 가상 머신의 _&lt;base_mount_path&gt;/client/certificate_에 있는 기존 파일을 모두 삭제합니다.</block>
+  <block id="a56e5be369d447142981b8da49d7d841" category="list-text">CA 서명 인증서와 키 파일을 Connector 가상 머신의 _&lt;base_mount_path&gt;/client/certificate_에 복사합니다.</block>
+  <block id="267fab2c93ee78a5b7b7c5cd3347f95d" category="paragraph">파일 이름은 certificate.pem 및 key.pem 이어야 합니다. certificate.pem에는 중간 CA 및 루트 CA와 같은 전체 인증서 체인이 있어야 합니다.</block>
+  <block id="2efb3f1040cc3f0d3c2dd66f4495b045" category="list-text">name certificate.p12를 사용하여 인증서의 PKCS12 형식을 생성하고 _&lt;base_mount_path&gt;/client/certificate_에 유지합니다.</block>
+  <block id="6ae468147810acf5e01353e631db6d2e" category="list-text">모든 중간 CA 및 루트 CA에 대한 certificate.p12 및 인증서를 _/var/opt/snapcenter/spl/etc/_의 플러그인 호스트에 복사합니다.</block>
+  <block id="49bcc463a5065066b6e686b906f3e34e" category="list-text">플러그인 호스트에 로그인합니다.</block>
+  <block id="2ded4a2cc80040552b54bdd308ecb919" category="list-text">/var/opt/snapcenter/spl/etc_로 이동한 후 keytool 명령을 실행하여 certificate.p12 파일을 가져옵니다. keytool -v -importkeystore -srckeystore certificate.p12 -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype jks -srcstorephass SnapCenter -deststorephass SnapCenter -srcalalas agentcert -alias destagentcert -not프롬프트</block>
+  <block id="0444de9e3c28e6b65560b207e6ea6eb4" category="list-text">루트 CA 및 중간 인증서를 가져옵니다. 키 도구-가져오기-trustcacerts-keystore keystore.jks-storepass SnapCenter-alias trustedca-file&lt;certificate.crt&gt;</block>
+  <block id="0921a876e3fa3f2a29244d7daddce0fa" category="admonition">CertFile.crt는 루트 CA 및 중간 CA의 인증서를 나타냅니다.</block>
+  <block id="22dfbb640fee5a33dc6e592f121a4423" category="list-text">SPL을 다시 시작합니다:'stemctl restart SPL'</block>
+  <block id="e597c85c46a1bdddfd490c7ba2439138" category="section-title">플러그인의 서버 인증서에 대해 CA 서명 인증서를 구성합니다</block>
+  <block id="0b941bbfead62c679ca6504257b497f7" category="paragraph">CA 인증서에는 Connector 가상 머신이 통신하는 Oracle 플러그인 호스트의 정확한 이름이 있어야 합니다.</block>
+  <block id="b4d963286fa28cbb5370437141cd0168" category="list-text">플러그인 호스트에서 다음 단계를 수행합니다.</block>
+  <block id="7b852943c0907b3e2fc8ff580b6818ca" category="list-text">SPL의 keystore_/var/opt/snapcenter/SPL/etc_가 포함된 폴더로 이동합니다.</block>
+  <block id="7dc3629efca54d7a3c55707ca70b7456" category="list-text">alias_splkeystore_로 인증서와 키를 모두 포함하는 인증서의 PKCS12 형식을 만듭니다.</block>
+  <block id="f27e74c2f479d5c696c1f6493a57f9c3" category="list-text">CA 인증서를 추가합니다. 키 도구 - importkeystore - srckeystore &lt;CertificatePathToImport&gt; - srcstoretype pkcs12 - destkeystore keystore.jKS - deststoretype JKS-srcalias splkeystore - destalias splkeystore - not프롬프트</block>
+  <block id="12fd234da34dd31a3a662ea38cd44d31" category="list-text">인증서를 확인합니다. 키툴-리스트-v-keystore keystore.jks</block>
+  <block id="cb65bf79095d2a603886a95f598ed792" category="list-text">커넥터에서 다음 단계를 수행하십시오.</block>
+  <block id="a1aa9a792f7ca33ea1abf648a0ec7fdd" category="list-text">커넥터 에 비 루트 사용자로 로그인합니다.</block>
+  <block id="d1d5554a7a17586d4b526340b2b6eb45" category="list-text">CA 인증서의 전체 체인을 _&lt;base_mount_path&gt;/server_에 있는 영구 볼륨에 복사합니다.</block>
+  <block id="be7eb785752c931973f4e426afdaa737" category="paragraph">서버 폴더가 없으면 만듭니다.</block>
+  <block id="d435e298ecd3e81d33c28c2ac5aaa9cf" category="list-text">cloudmanager_scs_cloud에 연결하고 _config.yml_에서 * enableCACert * 를 * true * 로 수정합니다. 'SUDO Docker Exec - cloudmanager_SCS_cloud SED-I's/enableCACert: false/enableCACert: true/g'/opt/NetApp/cloudmanager-SCS-cloud/config/config.yml'</block>
+  <block id="beed6a355a0f3c2fec57e272c4df9a9b" category="list-text">cloudmanager_scs_cloud 컨테이너를 다시 시작합니다. 'SUDO Docker restart cloudmanager_scs_cloud'를 선택합니다</block>
+  <block id="56221c5b2b531b839a3cd5c7e9c9cd9f" category="section-title">REST API 액세스</block>
+  <block id="e9d91293c5b15aa3d5a1944f0f3de884" category="paragraph">애플리케이션을 클라우드로 보호하는 REST API를 사용할 수 있습니다<block ref="34be8f96bca8ea568f4cd28ef35bb6b3" category="inline-link-rx"></block>.</block>
+  <block id="4512b12288e7290cb279f814b15ba5dc" category="inline-link">통합 인증을 사용하여 사용자 토큰을 생성합니다</block>
+  <block id="8753ca0304fc4dd31beb83f4a57f7b41" category="paragraph">REST API에 액세스하려면 통합 인증이 있는 사용자 토큰을 얻어야 합니다. 사용자 토큰을 얻는 방법에 대한 자세한 내용은 을 참조하십시오<block ref="0eb587a835d0db317e25e938408a4ed2" category="inline-link-rx"></block>.</block>
+  <block id="4547c1343318e001ea786267b3cf7b84" category="summary">백업을 생성하기 전에 사전 요구 사항을 완료합니다.</block>
+  <block id="2b6b05a9503cc9277cb58c848aaebedb" category="paragraph">Cloud Manager에 액세스하고, Cloud Manager 계정을 만들고, 작업 환경과 커넥터를 만들고, Oracle용 SnapCenter 플러그인을 구축할 수 있어야 합니다.</block>
+  <block id="e9f869a1fe63e475451ec5f9939329d0" category="section-title">Cloud Manager에 액세스합니다</block>
+  <block id="63785c950a9f3cb1e82193ec1f7e49ee" category="inline-link-macro">NetApp Cloud Central에 가입하십시오</block>
+  <block id="5970bd5da21d70901770347c11bbaaaf" category="inline-link-macro">Cloud Manager에 로그인합니다</block>
+  <block id="0997707eec0eae6135d1ef326c72b2cc" category="paragraph">당신은 해야 한다 <block ref="dcf5e53b033259383f405d7eb45d19f3" category="inline-link-macro-rx"></block>, <block ref="183b44bd60add234aecf2ffe975eddd7" category="inline-link-macro-rx"></block>를 선택한 다음 를 설정합니다 <block ref="8a2a59f9ec508dc199624b6dfabe5c9f" category="inline-link-macro-rx"></block>.</block>
+  <block id="bea93ac0c50dbd01324ebd42ff666cd8" category="section-title">ONTAP 작업 환경을 위한 FSx를 생성합니다</block>
+  <block id="bf7ec532103402eaed4653738655f6ad" category="inline-link-macro">ONTAP용 Amazon FSx를 시작하십시오</block>
+  <block id="fdd19953ce3013e133d600a251e48a61" category="inline-link-macro">ONTAP 작업 환경을 위한 Amazon FSx를 생성하고 관리합니다</block>
+  <block id="231a24195067c2a2f27e2450ea7e64ed" category="paragraph">데이터베이스가 호스팅되는 ONTAP 작업 환경을 위한 Amazon FSx를 생성해야 합니다. 자세한 내용은 을 참조하십시오 <block ref="44e37fc8d2d76ee1d15cd4a20acb0e0e" category="inline-link-macro-rx"></block> 및 <block ref="0e7e3006696ac3877ee032d5edb264d7" category="inline-link-macro-rx"></block>.</block>
+  <block id="e55bd0bd62587a7135a26e431bf28961" category="paragraph">Cloud Manager 또는 AWS를 사용하여 NetApp FSx를 생성할 수 있습니다. AWS를 사용하여 생성한 경우 Cloud Manager에서 ONTAP 시스템용 FSx를 검색해야 합니다.</block>
+  <block id="94ee7072c2750da1997438a715efb7d4" category="section-title">커넥터를 작성합니다</block>
+  <block id="3b6afa275397b4b253570f5eabb9a2a1" category="paragraph">계정 관리자는 AWS에 Connector를 구축하여 Cloud Manager가 퍼블릭 클라우드 환경 내에서 리소스와 프로세스를 관리할 수 있도록 해야 합니다.</block>
+  <block id="669d0dea66a5583967d79cc40bcc2eeb" category="inline-link-macro">Cloud Manager에서 AWS에 커넥터 생성</block>
+  <block id="7929752d74ca66c9fd44a2ac7f86c9bd" category="paragraph">자세한 내용은 을 참조하십시오 <block ref="ec863d21fd023d992dac42777c6a3d19" category="inline-link-macro-rx"></block>.</block>
+  <block id="f6b8c8d4c527eaebdea85ded6d8cc15a" category="list-text">FSx 작업 환경과 Oracle 데이터베이스를 모두 관리하려면 동일한 커넥터를 사용해야 합니다.</block>
+  <block id="9f69e13234533744e815d263723a5cd0" category="list-text">FSx 작업 환경과 Oracle 데이터베이스가 동일한 VPC에 있는 경우 동일한 VPC에 커넥터를 배포할 수 있습니다.</block>
+  <block id="fafa58ae12f83200fd5e76519a291a56" category="list-text">FSx 작업 환경과 Oracle 데이터베이스가 서로 다른 VPC에 있는 경우:</block>
+  <block id="cf0a8805abc36f57c061b63fdb27c4af" category="list-text">FSx에 NAS(NFS) 워크로드가 구성되어 있는 경우 두 VPC 중 하나에 커넥터를 생성할 수 있습니다.</block>
+  <block id="4a2c2d38801ece7b96f22f796f2462e0" category="list-text">SAN 워크로드만 구성되어 있고 NAS(NFS) 워크로드를 사용할 계획이 없는 경우 FSx 시스템이 생성되는 VPC에 커넥터를 생성해야 합니다.</block>
+  <block id="ba6b286f0b29e48621c9d0bf4a77e627" category="admonition">NAS(NFS) 워크로드를 사용하려면 Oracle 데이터베이스 VPC와 FSx VPC 간에 전송 게이트웨이가 있어야 합니다. 부동 IP 주소인 NFS IP 주소는 전송 게이트웨이를 통해서만 다른 VPC에서 액세스할 수 있습니다. VPC를 피해서 유동 IP 주소에 액세스할 수 없습니다.</block>
+  <block id="7306372a8e221f9cbdc865504b72b173" category="paragraph">커넥터를 만든 후 * Canvas * &gt; * 작업 환경 추가 * 를 클릭하고 화면의 지시에 따라 작업 환경을 추가합니다. Oracle 데이터베이스 호스트 및 FSx 작업 환경에 대한 커넥터와 연결이 있는지 확인합니다. 커넥터는 FSx 작업 환경의 클러스터 관리 IP 주소에 연결할 수 있어야 합니다.</block>
+  <block id="b45b202ba2cef5a8e5349896310f7f9d" category="admonition">커넥터를 작성한 후 * 커넥터 &gt; 커넥터 관리 * 를 클릭하고 커넥터 이름을 선택한 다음 커넥터 ID를 복사합니다.</block>
+  <block id="5e61bf82718531b748f39eb54b38c9be" category="section-title">Oracle용 SnapCenter 플러그인 구축</block>
+  <block id="e3582eb6307d182c5a2887fd0369d1bd" category="paragraph">각 Oracle 데이터베이스 호스트에 Oracle용 SnapCenter 플러그인을 구축해야 합니다. Oracle 호스트에 SSH 키 기반 인증이 활성화되어 있는지 여부에 따라 플러그인 구축 방법 중 하나를 따를 수 있습니다.</block>
+  <block id="62dd90a4b8081cb4845caa73814d10a0" category="admonition">각 Oracle 데이터베이스 호스트에 Java 8이 설치되어 있고 JAVA_HOME 변수가 적절하게 설정되어 있는지 확인합니다.</block>
+  <block id="8bc030f1e919bad0129c5b3d55584aba" category="section-title">SSH 키 기반 인증을 사용한 플러그인 구축</block>
+  <block id="8e838fded7b6768a9db83ab9aae95068" category="paragraph">Oracle 호스트에 SSH 키 기반 인증이 설정되어 있는 경우 다음 단계를 수행하여 플러그인을 구축할 수 있습니다. 단계를 수행하기 전에 커넥터에 대한 SSH 연결이 활성화되어 있는지 확인합니다.</block>
+  <block id="d521743e97719d8ad5608d4bc9d5a2e7" category="list-text">커넥터 VM에 비 루트 사용자로 로그인합니다.</block>
+  <block id="da60bfd3c8edf7a67f3978209e164121" category="list-text">기본 마운트 경로를 가져옵니다. 'SUDO Docker 볼륨 ls | grep scs_cloud_volume | awk {'print$2'} | xargs sudo Docker 볼륨 검사 | grep mountpoint'</block>
+  <block id="b53dbefef323a5c9bc3bba42f6ed328f" category="list-text">플러그인을 배포하십시오.</block>
+  <block id="619078802916ca61a0299d0ee6490aa7" category="paragraph">'sudo&lt;base_mount_path&gt;/scripts/oracle_plugin_copy_and_install.sh -- host &lt;host_name&gt;--sshkey &lt;ssh_key_file&gt;--username &lt;user_name&gt;--port &lt;ssh_port&gt;--pluginport &lt;plugin_port&gt;--installdir &lt;install_dir&gt;'입니다</block>
+  <block id="d633b044fd8a9ca45f4d615327cbf109" category="list-text">host_name 은 Oracle 호스트의 이름이며 필수 매개 변수입니다.</block>
+  <block id="246e8001a4e784b85b078008797310ff" category="list-text">SSH_KEY_FILE은 Oracle 호스트에 연결하는 데 사용되는 SSH 키이며 필수 매개 변수입니다.</block>
+  <block id="6dfc5d97de9ba63a607347a005f0ae81" category="list-text">user_name: Oracle 호스트에 대한 SSH 권한이 있는 사용자로, 이 매개 변수는 선택 사항입니다. 기본값은 EC2-user입니다.</block>
+  <block id="3dbc2a858555e80cf398377571556499" category="list-text">SSH_PORT: Oracle 호스트의 SSH 포트이며 이는 선택적 매개 변수입니다. 기본값은 22입니다</block>
+  <block id="e5a8e97642efe29ef958c3cafde091c8" category="list-text">plugin_port: 플러그인에서 사용하는 포트로, 이 매개 변수는 선택 사항입니다. 기본값은 8145입니다</block>
+  <block id="5e0c9d9b775ad3565e6649bfa8ec9800" category="list-text">install_dir: 플러그인이 배포될 디렉터리이며 선택적 매개 변수입니다. 기본값은 /opt입니다.</block>
+  <block id="1f4958a9fbdaa34d782046987faf9553" category="paragraph">예: sudo/var/lib/docker/volumes/service-manager-2_cloudmanager_scs_cloud_volume/_data/scripts/oracle_plugin_copy_and_install.sh -- host xxx.xx.x.x -- sshkey/netapp-ssh.ppk</block>
+  <block id="19ce75ba7f615466dfa40bd305eda913" category="section-title">플러그인의 수동 배포</block>
+  <block id="1744dd19db9c80afac565572fb28289c" category="paragraph">Oracle 호스트에서 SSH 키 기반 인증이 활성화되지 않은 경우 다음 수동 단계를 수행하여 플러그인을 구축해야 합니다.</block>
+  <block id="e67d4d64b1a45fd340729c74de84b847" category="list-text">Connector VM에 로그인합니다.</block>
+  <block id="274f1ac526644b363a1660f91b59759a" category="list-text">SnapCenter Linux 호스트 플러그인 바이너리를 다운로드합니다. S UDO Docker Exec - IT cloudmanager_scs_cloud curl-X get <block ref="b6b73f503ca62442f11ad4b84cc2f0bc" category="inline-link-rx"></block></block>
+  <block id="5f46deee08d4b3d1d62d6ffaf5f1db1c" category="list-text">다운로드한 플러그인의 바이너리 경로를 가져옵니다. sudo ls &lt;base_mount_path&gt;$(sudo docker PS | grep-Po "cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin/snapcenter_linux_host_plugin_scs.bin'</block>
+  <block id="b63053825a0c4e3a09fd276fe30a743b" category="list-text">SCP 또는 다른 대체 방법을 사용하여 각 Oracle 데이터베이스 호스트에 _snapcenter_linux_host_plugin_scs.bin_을 복사합니다.</block>
+  <block id="24d579b70f755c08c217e309587abc2c" category="list-text">Oracle 데이터베이스 호스트에서 다음 명령을 실행하여 바이너리에 대한 실행 권한을 활성화합니다. 'chmod + x snapcenter_linux_host_plugin_scs.bin'</block>
+  <block id="c510a3598a8d1d8d28dc58297002b1f2" category="list-text">Oracle 플러그인을 루트 사용자로 구축합니다. (./snapcenter_linux_host_plugin_scs.bin - 나는 침묵을 지켰다</block>
+  <block id="e83ebe810e7607148882f52b5e3b71fd" category="list-text">플러그인 호스트의 커넥터 VM의 _/var/opt/snapcenter/spl/etc/_에서 _certificate.p12_from_&lt;base_mount_path&gt;/client/certificate/_path를 _ /var/opt/snapcenter/spl/etc/_로 복사합니다.</block>
+  <block id="7550e76395e0f500b3d970b6fa0ec73f" category="list-text">/var/opt/snapcenter/spl/etc_로 이동하고 keytool 명령을 실행하여 인증서를 가져옵니다. keytool -v -importkeystore -srckeystore certificate.p12 -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype jks -srcstorephass SnapCenter -deststorephass SnapCenter -srcalalas agentcert -alias destagentcert -not프롬프트</block>
+  <block id="c02273a1ac5db69a391d107c30235e7c" category="summary">정책을 할당하고 데이터베이스를 백업합니다.</block>
+  <block id="7e51ebaa71d2b6cbf4e46bba9bf8da43" category="doc">클라우드 네이티브 애플리케이션 데이터를 백업합니다</block>
+  <block id="4e7585fe5b33c787cec609e7fe6c85fb" category="paragraph">미리 구성된 정책을 할당하거나 정책을 생성한 다음 데이터베이스에 할당할 수 있습니다. 정책이 할당되면 정책에 정의된 일정에 따라 백업이 생성됩니다. 필요 시 백업을 생성할 수도 있습니다.</block>
+  <block id="6aa308344acc0039bf47948542fd4e82" category="admonition">Oracle용 ASM 디스크 그룹을 생성할 때 디스크 그룹 간에 공통 볼륨이 없는지 확인합니다. 각 디스크 그룹에는 전용 볼륨이 있어야 합니다.</block>
+  <block id="aeec20fb97ec5b367b439351c1c00204" category="list-text">응용 프로그램 페이지에서 정책을 사용하여 데이터베이스가 보호되지 않는 경우 * 정책 할당 * 을 클릭합니다.</block>
+  <block id="114872d03378e25021c3cc928e318e8a" category="paragraph">하나 이상의 정책을 사용하여 데이터베이스를 보호하는 경우 를 클릭하여 더 많은 정책을 할당할 수 있습니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> &gt; * 정책 할당 *.</block>
+  <block id="3c7ba9b9e3e6cc576a0786913d32d5df" category="list-text">정책을 선택하고 * Assign * 을 클릭합니다.</block>
+  <block id="098e4b45417a1ec0fafb90bed28e6424" category="paragraph">백업은 정책에 정의된 일정에 따라 생성됩니다.</block>
+  <block id="7ab4624b685848aa66b27397a83a5988" category="admonition">서비스 계정(_SnapCenter-account-&lt;account_id&gt;_)은 예약된 백업 작업을 실행하는 데 사용됩니다.</block>
+  <block id="c91ff5b89781f9b20673d63d2fbc4481" category="section-title">필요 시 백업을 생성합니다</block>
+  <block id="556daa2892e6c333b040f2f9ed98a222" category="paragraph">정책을 할당한 후 애플리케이션의 필요 시 백업을 생성할 수 있습니다.</block>
+  <block id="ca46a9979585fdf43309efe203535615" category="list-text">응용 프로그램 페이지에서 을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 응용 프로그램에 해당하는 을 클릭하고 * On-Demand Backup * 을 클릭합니다.</block>
+  <block id="7fd7a0a5300dbc1f2454a34738c54d80" category="list-text">응용 프로그램에 여러 정책이 할당된 경우 정책, 보존 값을 선택한 다음 * 백업 생성 * 을 클릭합니다.</block>
+  <block id="fad3dbbe9841f42de249b688f1d47a80" category="paragraph">* 자세한 정보 찾기 *</block>
+  <block id="52d2104ff7f549558d1d92a9a7a2a1a3" category="paragraph">큰 데이터베이스(250GB 이상)를 복원한 후 같은 데이터베이스에서 전체 온라인 백업을 수행하는 경우 다음 오류로 인해 작업이 실패할 수 있습니다.</block>
+  <block id="f1019737785319ac86fe55929c140c9b" category="paragraph">'상태 코드 500 실패, 오류 {\"오류\":{\"코드\":\"app_internal_error\", \"메시지\":\" 스냅샷을 만들지 못했습니다. 원인: 스냅샷이 백업한 클론으로 인해 스냅샷 작업이 허용되지 않습니다. 잠시 후에 다시 시도하십시오</block>
+  <block id="fe0a0332700b9a067272058245b48946" category="inline-link">스냅샷이 백업한 클론으로 인해 스냅샷 작업이 허용되지 않습니다</block>
+  <block id="d78d082537913dac6697dabddff374dc" category="paragraph">이 문제를 해결하는 방법에 대한 자세한 내용은 다음을 참조하십시오.<block ref="66c6329b50c8e15e4ce55612532f0653" category="inline-link-rx"></block>.</block>
+  <block id="a6c7c4de1c97d05aea18992c4dcc7774" category="summary">정책을 할당하고 백업을 생성할 애플리케이션을 검색합니다.</block>
+  <block id="b6a000d0b1cdbc32d0bef6d0258fa2f0" category="doc">응용 프로그램을 검색합니다</block>
+  <block id="b26de0535d797545cac86720fd096445" category="paragraph">호스트에서 데이터베이스를 검색하여 정책을 할당하고 백업을 생성해야 합니다.</block>
+  <block id="f0ddc428cd7c3cf4949f9edfb049cb33" category="list-text">ONTAP 작업 환경 및 커넥터용 FSx를 만들어야 합니다.</block>
+  <block id="5ff3ca14a716aed6cd7b9b8433daa620" category="list-text">커넥터가 ONTAP 작업 환경 및 Oracle 데이터베이스 호스트용 FSx에 연결되어 있는지 확인합니다.</block>
+  <block id="07ac90068ab0b822a2eb368ff5b4a890" category="list-text">Cloud Manager 사용자에게 "계정 관리자" 역할이 있는지 확인합니다.</block>
+  <block id="b284b4e1502b1e8b45eca415d2efe3b2" category="list-text">Oracle용 SnapCenter 플러그인을 구축해야 합니다. <block ref="7a9fe936bc0ede19b4e4e3b90573cf6b" category="inline-link-macro-rx"></block>.</block>
+  <block id="b86ebb4cc0bc3f74e54b9778132535d7" category="list-text">Cloud Manager UI에서 * 백업 및 복원 * &gt; * 응용 프로그램 * 을 클릭합니다.</block>
+  <block id="fe4137061bd2c33fe1c02ad6b9570b0e" category="list-text">응용 프로그램 검색을 클릭합니다.</block>
+  <block id="d20aa4d7347d2818451332f0d49b2253" category="list-text">Cloud Native * 를 선택하고 * Next * 를 클릭합니다.</block>
+  <block id="63000a0fa2dbdc9bced04917b9fb5014" category="paragraph">이 계정의 모든 사용자에 대해 예약된 데이터 보호 작업을 수행하기 위해 _SnapCenter 시스템_역할이 있는 서비스 계정이 생성됩니다.</block>
+  <block id="2f1527fabf6b15b2c246b08aca9ef8a4" category="list-text">서비스 계정을 보려면 * 계정 * &gt; * 계정 관리 * &gt; * 회원 * 을 클릭합니다.</block>
+  <block id="0e0ba396f0687ce7517d861db155fb10" category="admonition">서비스 계정(_SnapCenter-account-&lt;AccountID&gt;_)은 예약된 백업 작업을 실행하는 데 사용됩니다. 서비스 계정을 삭제해서는 안 됩니다.</block>
+  <block id="60b7fc487a9e8ffb8c92bd61f1e6f991" category="list-text">호스트 세부 정보 지정 페이지에서 Oracle 데이터베이스 호스트의 세부 정보를 입력하고 확인란을 선택하여 호스트에 플러그인이 설치되어 있는지 확인한 다음 * 검색 * 을 클릭합니다.</block>
+  <block id="0f450d6f93fc8c049d1423515f582f2d" category="list-text">호스트의 모든 데이터베이스를 표시합니다. 데이터베이스에 대한 OS 인증이 비활성화된 경우 * 구성 * 을 클릭하여 데이터베이스 인증을 구성해야 합니다. 자세한 내용은 을 참조하십시오 <block ref="eb69440615f98753d53a91f4eeab39c2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="3b8ee60b6a282d08697fd8cf49f22e98" category="list-text">애플리케이션 관리 * 를 클릭하고 * 추가 * 를 선택하여 새 호스트를 추가하고 * 새로 고침 * 을 선택하여 새 데이터베이스를 검색하고 * 제거 * 를 선택하여 데이터베이스 호스트를 제거합니다.</block>
+  <block id="16ed5cca317a8c59c781bc402c31999b" category="list-text">설정 * 을 클릭하고 * 정책 * 을 선택하여 미리 구성된 정책을 봅니다. 사전 구성된 정책을 검토하여 요구 사항에 맞게 정책을 편집하거나 새 정책을 생성할 수 있습니다.</block>
+  <block id="fd9cc0fdcc5cde5efec19c54d871da3a" category="section-title">Oracle 데이터베이스 자격 증명을 구성합니다</block>
+  <block id="94c3f93d78fcc4e31f273d4f220cd703" category="paragraph">Oracle 데이터베이스에서 데이터 보호 작업을 수행하는 데 사용되는 자격 증명을 구성해야 합니다.</block>
+  <block id="7809974cdd1cd4eb76ad1dcf91a3f425" category="list-text">데이터베이스에 대한 OS 인증이 비활성화된 경우 * 구성 * 을 클릭하여 데이터베이스 인증을 구성해야 합니다.</block>
+  <block id="f285aa5a9da3baa99905c087902b8e87" category="list-text">데이터베이스 설정 또는 ASM 설정 섹션에서 사용자 이름, 암호 및 포트 세부 정보를 지정합니다.</block>
+  <block id="8c204149f6ffccc490e6b851431463a6" category="paragraph">Oracle 사용자는 sysdba 권한을 가지고 ASM 사용자는 sysasm 권한을 가지고 있어야 합니다.</block>
+  <block id="3b5c5ae54533da138be94559c533a510" category="list-text">구성 * 을 클릭합니다.</block>
+  <block id="af4141cf3fb8179af4deac9547c01278" category="section-title">정책을 생성합니다</block>
+  <block id="91808c1a7549a55c53468ea4a50927d4" category="paragraph">사전 구성된 정책을 편집하지 않으려는 경우 정책을 생성할 수 있습니다.</block>
+  <block id="0afc66e0d31a963ebe19ebef4f887a60" category="list-text">응용 프로그램 페이지의 설정 드롭다운 목록에서 * 정책 * 을 선택합니다.</block>
+  <block id="ab899735d36938b4c6cb8edd18a222e5" category="list-text">Create policy * 를 클릭합니다.</block>
+  <block id="d14a88e73f059d5716e327a50ec863a3" category="list-text">정책 이름을 지정합니다.</block>
+  <block id="478ed3048c4d215862134df0ae0d59db" category="list-text">(선택 사항) 백업 이름의 형식을 편집합니다.</block>
+  <block id="241958803b06afbd6f6eb3ef7dbbe9d8" category="list-text">스케줄 및 보존 세부 정보를 지정합니다.</block>
+  <block id="f2a42a68e067e481d094b018459ef895" category="list-text">Create * 를 클릭합니다.</block>
+  <block id="2d60a7d5505e967af6be4b947aa60ea2" category="summary">NetApp Cloud Manager에서 지원하는 Cloud Backup for Applications는 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle ® 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다.</block>
+  <block id="eb5668f5c3459c84cc715cf197e7c91a" category="doc">클라우드 네이티브 애플리케이션 데이터 보호</block>
+  <block id="ab1b44a5ff1afc799f4afe758f73f4db" category="paragraph">Cloud Backup for Applications는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. NetApp Cloud Manager에서 지원하는 Cloud Backup for Applications는 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다.</block>
+  <block id="2d242bb36ec91b32005f9296ff03a912" category="section-title">있습니다</block>
+  <block id="5e106a25aff8402c9cb720536f4f9763" category="paragraph">Cloud Backup for Applications 아키텍처에는 다음과 같은 구성 요소가 포함되어 있습니다.</block>
+  <block id="1de5da66f12460beeb95e94fe3acf74c" category="list-text">Cloud Backup for Applications는 NetApp에서 SaaS 서비스로 호스팅하는 데이터 보호 서비스 세트이며 Cloud Manager SaaS 플랫폼을 기반으로 합니다.</block>
+  <block id="5aa6aa9ade143b785fa0243d0138a6b5" category="paragraph">NetApp 클라우드 스토리지에 상주하는 애플리케이션에 대해 데이터 보호 워크플로우를 조정합니다.</block>
+  <block id="ed5f69fb9dcefc7c8d1ea57498acc62d" category="list-text">Cloud Backup for Applications UI는 Cloud Manager UI와 통합되어 있습니다.</block>
+  <block id="64293a907ed741e8f0a2b7508ac14fb6" category="paragraph">Cloud Backup for Applications UI는 다양한 스토리지 및 데이터 관리 기능을 제공합니다.</block>
+  <block id="e632fbfcf1324b1d2160076cbffec929" category="list-text">Cloud Manager Connector는 클라우드 네트워크에서 실행되고 Oracle 데이터베이스 호스트에서 실행되는 Amazon FSx 스토리지 파일 시스템 및 Oracle용 SnapCenter 플러그인과 상호 작용하는 Cloud Manager의 구성 요소입니다.</block>
+  <block id="5c4f5775352fba72f33e34817f09707e" category="list-text">Oracle용 SnapCenter 플러그인은 각 Oracle 데이터베이스 호스트에서 실행되고 호스트에서 실행되는 Oracle 데이터베이스와 상호 작용하는 구성요소로서 데이터 보호 작업을 수행합니다.</block>
+  <block id="8fd81e906c023a2c3e318d13769fd642" category="inline-image-macro">Cloud Backup이 다양한 구성요소와 통신하는 방법을 보여주는 다이어그램</block>
+  <block id="c078c5cf04e16bf64233c82b0f994bcf" category="paragraph"><block ref="c078c5cf04e16bf64233c82b0f994bcf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="28749d90f4cd68e33b1b408d538e85ce" category="paragraph">모든 사용자 요청 시 Cloud Backup for Applications UI는 Cloud Manager SaaS와 통신하며, 요청 프로세스의 검증도 동일합니다. 요청이 백업 또는 복원과 같은 워크플로우를 실행하는 경우 SaaS 서비스는 워크플로우를 시작하고 필요한 경우 통화를 Cloud Manager Connector로 전달합니다. 그런 다음, Connector는 NetApp ONTAP용 Amazon FSx 및 Oracle용 SnapCenter 플러그인과 워크플로우 작업 실행에 함께 통신합니다.</block>
+  <block id="ce820eb6e1b6a8cd96fc07f753a32646" category="paragraph">Connector는 Oracle 데이터베이스와 동일한 VPC 또는 다른 데이터베이스에 구축할 수 있습니다. Connector와 Oracle 데이터베이스가 서로 다른 네트워크에 있는 경우 이러한 데이터베이스 간에 네트워크 연결을 설정해야 합니다.</block>
+  <block id="1f0b82560627b660c6c6958a1df834b8" category="section-title">지원되는 구성</block>
+  <block id="0f0f84cb9775a6f4ad6b4796bfcedfe9" category="list-text">운영 체제:</block>
+  <block id="70cfb8b329ca692c676669ef294b37c0" category="list-text">RHEL 7.5 이상 및 8.x</block>
+  <block id="0d9cfc701256d81666be8cc96e8482b8" category="list-text">OL 7.5 이상 및 8.x</block>
+  <block id="3a9b89e47751d4cfc28a55ca7c5efa97" category="list-text">스토리지 시스템: ONTAP용 Amazon FSx</block>
+  <block id="fc2b0bcc44ac9f8bef7ad04de353a902" category="list-text">스토리지 레이아웃: nfs v3 및 v4.1(dNFS 지원) 및 ASM(ASMFD, ASMLLib 및 ASMUdev)을 사용한 iSCSI</block>
+  <block id="477deb60a679be8d3ed7fc83c4ab4b80" category="list-text">애플리케이션: Oracle Standard 및 Oracle Enterprise – 독립 실행형(레거시 및 멀티 테넌트 – CDB 및 PDB)</block>
+  <block id="9a8f7463386e75f032fb3eacb8e8b03c" category="list-text">Oracle 버전: 12cR2, 18C 및 19c</block>
+  <block id="e277e42688a9f44945fa8c1919bab726" category="section-title">지원되는 기능</block>
+  <block id="24952b37ce88035adf02c3d53375aee0" category="list-text">Oracle 데이터베이스 자동 검색</block>
+  <block id="7758fa39945c61d871cb2e22cbfde4ac" category="list-text">NetApp ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스 백업</block>
+  <block id="a638d70a88de180abe34c16291fad0fe" category="list-text">전체(데이터 + 제어 + 아카이브 로그 파일) 백업</block>
+  <block id="f689f1139e089e78a96f2e9b69a62df4" category="list-text">필요 시 백업</block>
+  <block id="4384c9d45fd41e6afb3574ea75e591da" category="list-text">시스템 정의 또는 사용자 지정 정책을 기반으로 예약된 백업</block>
+  <block id="4daab712a81f483acc692f943dfe93d2" category="paragraph">정책에서 시간별, 일별, 주별 및 월별 등 다양한 예약 빈도를 지정할 수 있습니다.</block>
+  <block id="6e8413d03b75fe5c129c80ecf66704ec" category="list-text">정책을 기반으로 백업을 유지합니다</block>
+  <block id="e3252f42a980c18b105121b0076b45f4" category="list-text">지정된 백업에서 전체 Oracle 데이터베이스(데이터 파일 + 제어 파일)를 복원합니다</block>
+  <block id="be778790451ccfabb8b767b1ff36bbb6" category="list-text">지정된 백업에서만 데이터 파일 및 제어 파일을 복원합니다</block>
+  <block id="87f86331009f36ac6fc42b85e89dc536" category="list-text">SCN, 종료 시점, 사용 가능한 모든 로그 및 복구 옵션이 없을 때까지 Oracle 데이터베이스를 복구합니다</block>
+  <block id="60d9a229099000fec5710894db8b263b" category="list-text">백업 및 기타 작업 모니터링</block>
+  <block id="083c7158412d040e003ac1e9a9528d97" category="list-text">대시보드에 보호 요약 표시</block>
+  <block id="2dbc045edb5a2f6faf0c411d7f5f750f" category="list-text">이메일을 통해 알림 전송</block>
+  <block id="73dc94ffcc0a567690b7ed44ade89743" category="list-text">Oracle 버전 11g 및 21c는 지원하지 않습니다</block>
+  <block id="4f3dd1c11e04e3e830625603ea3a0656" category="list-text">에서는 백업에 대한 마운트, 클론, 카탈로그 및 검증 작업을 지원하지 않습니다</block>
+  <block id="9c1f3568b85ef3ac4da7fc528340d6ba" category="list-text">RAC 및 Data Guard에서 Oracle을 지원하지 않습니다</block>
+  <block id="1814ab6cc8fc9cc32c4f16d1da6094aa" category="list-text">백업 제한 사항:</block>
+  <block id="9be91e24e83b7b8d24aef393ff8a2381" category="list-text">에서는 온라인 데이터 또는 로그 전용 백업을 지원하지 않습니다</block>
+  <block id="d190910a195191d85f25127df0bbb86a" category="list-text">에서는 오프라인 백업을 지원하지 않습니다</block>
+  <block id="45f390722d9189860abe14e4e14ebb87" category="list-text">에서는 재귀 마운트 지점에 상주하는 Oracle 데이터베이스 백업을 지원하지 않습니다</block>
+  <block id="5a9da4bd1ffdd301898f827c866a6242" category="list-text">에서는 FSx 볼륨이 중복되어 있는 여러 ASM 디스크 그룹에 상주하는 Oracle 데이터베이스에 대한 정합성 보장 그룹 스냅샷을 지원하지 않습니다</block>
+  <block id="ce28a32d76b140c048ecb6813395af67" category="list-text">Oracle 데이터베이스가 ASM에 구성되어 있는 경우 SVM 이름이 FSx 시스템 전체에서 고유한지 확인합니다. FSx 시스템 간에 SVM 이름이 동일한 경우 이러한 SVM에 상주하는 Oracle 데이터베이스 백업도 지원되지 않습니다.</block>
+  <block id="a0ff33890b3fd2f4c96ec82fd7574fa7" category="list-text">복구 제한 사항:</block>
+  <block id="4ef14390cecf5f2e8db0ad715ba85c82" category="list-text">테이블스페이스 및 PDB 복원과 같은 세분화된 복원은 지원하지 않습니다</block>
+  <block id="f1efd5bb401cc568920943debec0ceaa" category="list-text">NAS 및 SAN 레이아웃에서 Oracle 데이터베이스의 데이터 이동 없는 복원만 지원합니다</block>
+  <block id="670750d3f8fb7d80a85c296423b52da5" category="list-text">에서는 SAN 레이아웃에서 제어 파일 또는 데이터 파일 + Oracle 데이터베이스 제어 파일의 복원만 지원하지 않습니다</block>
+  <block id="4984eae824218c2ee5b053a837308d1c" category="list-text">SAN 레이아웃에서 Oracle용 SnapCenter 플러그인이 ASM 디스크 그룹에서 Oracle 데이터 파일 이외의 외부 파일을 찾으면 복구 작업이 실패합니다. 외부 파일은 다음 유형 중 하나 이상이 될 수 있습니다.</block>
+  <block id="83f499a540b1323009c200d6f8cc9396" category="list-text">매개 변수</block>
+  <block id="dc647eb65e6711e155375218212b3964" category="list-text">암호</block>
+  <block id="9358ddcf018549ad07e3696f1dff8b4c" category="list-text">보관 로그</block>
+  <block id="bb139ed204a522e52c14c36896034ef9" category="list-text">온라인 로그</block>
+  <block id="84e9072345f79cd7577657ba68cc442b" category="list-text">ASM 매개 변수 파일입니다.</block>
+  <block id="64fe13c3daed1e3027d8bb4b94298917" category="paragraph">매개 변수, 암호 및 아카이브 로그 유형의 외부 파일을 재정의하려면 강제 데이터 이동 없이 복원 확인란을 선택해야 합니다.</block>
+  <block id="7315764c2569272b1e380ace938a3acf" category="admonition">다른 유형의 외부 파일이 있는 경우 복원 작업이 실패하고 데이터베이스를 복구할 수 없습니다. 다른 유형의 외부 파일이 있는 경우 복원 작업을 수행하기 전에 해당 파일을 삭제하거나 다른 위치로 이동해야 합니다.</block>
+  <block id="290277c5012b9ace7fefb7c22949f0d8" category="paragraph">알려진 문제로 인해 UI의 작업 페이지에 외부 파일이 있기 때문에 실패 메시지가 표시되지 않습니다. 문제의 원인을 알 수 있도록 SAN 사전 복원 단계 중에 오류가 발생한 경우 커넥터 로그를 확인하십시오.</block>
+  <block id="bc75c7043b8e7365f3c8207f2cc978cc" category="summary">데이터 파일, 제어 파일 또는 둘 모두를 복원한 다음 데이터베이스를 복구합니다.</block>
+  <block id="2f82b783d7870b8b5a512057018fe6a5" category="doc">클라우드 네이티브 애플리케이션 데이터를 복원합니다</block>
+  <block id="c48a955b9e2bd6b7c7d520e85a16d929" category="paragraph">데이터가 손실된 경우 데이터 파일, 제어 파일 또는 둘 모두를 복원한 다음 데이터베이스를 복구할 수 있습니다.</block>
+  <block id="878f99c91be407d0f28af03c6c58cc11" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 복원하려는 데이터베이스에 해당하는 * 세부 정보 보기 * 를 클릭합니다.</block>
+  <block id="0b666df245a6202aced91c7640467d2f" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 복원에 사용할 데이터 백업에 해당하는 항목을 선택하고 * 복원 * 을 클릭합니다.</block>
+  <block id="843aa7f2a542d8c13efb89db29c10118" category="list-text">복원 범위 섹션에서 다음 작업을 수행합니다.</block>
+  <block id="abad8f3214f3a57c46ff8ce273f3c2fa" category="paragraph">데이터 파일만 복구하려는 경우</block>
+  <block id="4bd405105ed225109f203541f762ba53" category="paragraph">모든 데이터 파일 * 을 선택합니다.</block>
+  <block id="5e3a6b0deb07b1f0d86f9fd4c25d5341" category="paragraph">컨트롤 파일만 복구하려는 경우</block>
+  <block id="2b027c3e8a91495aa95819b2d3c346af" category="paragraph">제어 파일 * 을 선택합니다</block>
+  <block id="e2409461f6ea701da10170dad92c38fc" category="paragraph">데이터 파일과 제어 파일을 모두 복원하려고 합니다</block>
+  <block id="d05b716bffd64ec8e96499377d58a7b2" category="paragraph">모든 데이터 파일 * 및 * 제어 파일 * 을 선택합니다.</block>
+  <block id="ad174c635135b0241d2c6d4374969f66" category="admonition">ASM 레이아웃의 iSCSI에는 제어 파일이나 제어 파일만 있는 데이터 파일의 복원이 지원되지 않습니다.</block>
+  <block id="7d2ceeaac74ba98c2f8e824aabd0befa" category="paragraph">강제 데이터 이동 없이 복원 * 확인란을 선택할 수도 있습니다.</block>
+  <block id="47834d28e751dd7e5975a028525b14e9" category="paragraph">데이터 파일 디스크 그룹의 spfile, 암호 파일 및 아카이브 로그 파일을 * 강제 데이터 복원 * 옵션으로 재정의합니다. 원본 위치 복원 강제 * 옵션을 선택한 경우 최신 백업을 사용해야 합니다.</block>
+  <block id="be7f025709fbae3f80cb8db551628640" category="list-text">복구 범위 섹션에서 다음 작업을 수행합니다.</block>
+  <block id="a536fe88f851033ec6d2f5f6c128564d" category="paragraph">시스템 변경 번호 * 까지 * 를 선택하고 SCN을 지정합니다.</block>
+  <block id="263cdfe5686f3877131daa2473fd6436" category="paragraph">특정 날짜 및 시간으로 복구하려는 경우</block>
+  <block id="763290a7946a18694b0c5a20d1e9772f" category="paragraph">선택한 복구 범위의 경우 * Archive Log Files Locations * 필드에서 복구에 필요한 아카이브 로그가 포함된 위치를 선택적으로 지정할 수 있습니다.</block>
+  <block id="1c4f2e7b048fcee5d429a4ba9afe4175" category="paragraph">복구 후 데이터베이스를 읽기-쓰기 모드로 열려면 이 확인란을 선택합니다.</block>
+  <block id="4b077d1c7e93e91ee6d4fb4a8eacdf33" category="list-text">다음 * 을 클릭하고 세부 정보를 검토합니다.</block>
+  <block id="357a35aedd0c37deb3a881df778a9bb4" category="list-text">복원 * 을 클릭합니다.</block>
+  <block id="4a5a82686ba9941f1667cdca6777b901" category="sidebar">애플리케이션 데이터 백업 및 복원</block>
+  <block id="084829803f52f86aee9d787cb2c3581d" category="sidebar">클라우드 네이티브 애플리케이션 데이터 백업 및 복원</block>
+  <block id="b5604ed88817894a6aea9dc218c45b8e" category="sidebar">클라우드 네이티브 애플리케이션 데이터 백업</block>
+  <block id="e8a9eeac14cf83695d7d066f82b9ba23" category="sidebar">클라우드에서 사내로 Oracle 데이터베이스 복원</block>
+  <block id="0affc637f33b3e47ec0c95c6c88db865" category="sidebar">SQL Server 데이터베이스를 클라우드에서 사내로 복원합니다</block>
+  <block id="3a3684473cd3bbadce768d553de06b92" category="sidebar">클라우드 네이티브 애플리케이션 데이터를 복원합니다</block>
 </blocks>
