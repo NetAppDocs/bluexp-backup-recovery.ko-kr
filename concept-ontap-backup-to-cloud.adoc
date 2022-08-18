@@ -305,7 +305,7 @@ endif::gcp[]
 
 | Netapp7YearsRetention | 30 | 53 | 84 | 167 
 |===
-ONTAP System Manager 또는 ONTAP CLI를 사용하여 클러스터에서 생성한 백업 보호 정책도 선택 사항으로 표시됩니다.
+ONTAP System Manager 또는 ONTAP CLI를 사용하여 클러스터에서 생성한 백업 보호 정책도 선택 사항으로 표시됩니다. 여기에는 사용자 지정 SnapMirror 레이블을 사용하여 만든 정책이 포함됩니다.
 
 범주 또는 간격에 대한 최대 백업 수에 도달하면 오래된 백업이 제거되므로 항상 최신 백업이 존재하므로 오래된 백업은 클라우드에서 공간을 차지하지 않습니다.
 
