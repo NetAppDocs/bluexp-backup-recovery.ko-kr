@@ -2466,7 +2466,6 @@
   <block id="fc2b0bcc44ac9f8bef7ad04de353a902" category="list-text">스토리지 레이아웃: nfs v3 및 v4.1(dNFS 지원) 및 ASM(ASMFD, ASMLLib 및 ASMUdev)을 사용한 iSCSI</block>
   <block id="477deb60a679be8d3ed7fc83c4ab4b80" category="list-text">애플리케이션: Oracle Standard 및 Oracle Enterprise – 독립 실행형(레거시 및 멀티 테넌트 – CDB 및 PDB)</block>
   <block id="9a8f7463386e75f032fb3eacb8e8b03c" category="list-text">Oracle 버전: 12cR2, 18C 및 19c</block>
-  <block id="e277e42688a9f44945fa8c1919bab726" category="section-title">지원되는 기능</block>
   <block id="24952b37ce88035adf02c3d53375aee0" category="list-text">Oracle 데이터베이스 자동 검색</block>
   <block id="7758fa39945c61d871cb2e22cbfde4ac" category="list-text">NetApp ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스 백업</block>
   <block id="a638d70a88de180abe34c16291fad0fe" category="list-text">전체(데이터 + 제어 + 아카이브 로그 파일) 백업</block>
@@ -2550,4 +2549,5 @@
   <block id="4171d78ae1a555db73fd760355ce3da1" category="paragraph">현재 사용 가능한 아카이브 계층이 없습니다.</block>
   <block id="2e5732b07b5a367d6ae6bf311bb4e064" category="paragraph">을 참조하십시오 <block ref="94012c1ab2bd0160a2654e7678395191" category="inline-link-macro-rx"></block> 사용 가능한 일정 옵션에 대한 자세한 내용은 를 참조하십시오.</block>
   <block id="330ec284275e2a903b785453c26a379b" category="paragraph">을 참조하십시오 <block ref="b960bc47dc855085c33b2bb2182e9e16" category="inline-link-macro-rx"></block> 이전 백업 파일 아카이빙에 대한 자세한 내용은 를 참조하십시오.</block>
+  <block id="7e7595ef438d9d19d857be29daa1e8d2" category="list-text">인터넷 HTTP 통신을 위해 프록시 서버를 사용하지 않고 커넥터를 구성해야 합니다 *. Connector에 대해 HTTP 프록시 서버를 구성한 경우 검색 및 바꾸기 기능을 사용할 수 없습니다.</block>
 </blocks>
