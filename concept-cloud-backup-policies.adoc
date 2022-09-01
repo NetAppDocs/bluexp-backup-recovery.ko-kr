@@ -149,7 +149,7 @@ DataLock은 _ Compliance_로 설정되어 있으며 보존 기간 동안 사용�
 
 * 클러스터는 ONTAP 9.11.1 이상을 실행해야 합니다
 * Cloud Manager 3.9.21 이상을 사용해야 합니다(현재 Connector를 클라우드에 배포해야 함).
-* AWS로 백업하려면 Connector에 권한을 제공하는 IAM 역할의 일부로 다음 S3 권한이 있어야 합니다.
+* AWS로 백업하려면 Connector에 권한을 제공하는 IAM 역할의 일부로 다음 S3 권한이 있어야 합니다. 이러한 리소스는 리소스 "arn:AWS:S3::NetApp-backup- *"의 "backupS3Policy" 섹션에 있습니다.
 +
 ** S3:GetObjectVersionTagging
 ** S3:GetBuckketObjectLockConfiguration
@@ -180,6 +180,9 @@ DataLock은 _ Compliance_로 설정되어 있으며 보존 기간 동안 사용�
 ** S3:GetObjectVersion
 +
 관리자가 엔터프라이즈 모드를 사용하여 잠긴 백업 파일을 덮어쓰기/삭제할 수 있도록 하려면 S3 권한 "S3:BypassGovernanceRetention"을 Cloud Manager 사용자 역할에 추가해야 합니다.
+
++
+https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html["필요한 권한을 복사하여 붙여넣을 수 있는 정책의 전체 JSON 형식을 봅니다"^].
 
 
 

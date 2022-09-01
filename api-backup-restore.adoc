@@ -52,6 +52,10 @@ curl --location --request POST 'https://netapp-cloud-account.auth0.com/oauth/tok
     "client_id": "Mu0V1ywgYteI6w1MbD15fKfVIUrNXGWC"
 }'
 ----
++
+
+NOTE: NetApp Cloud Central의 사용자 토큰에 만료일이 있습니다. API 응답에는 토큰이 만료되는 시점을 나타내는 "expires_in" 필드가 포함됩니다. 토큰을 새로 고치려면 이 API를 다시 호출해야 합니다.
+
 . NetApp Cloud Central 계정 ID를 받습니다.
 +
 [source, http]
@@ -179,13 +183,6 @@ curl --location --request GET 'https://cloudmanager.cloud.netapp.com/account/acc
     ]
 }
 ----
-.토큰이 만료되면 어떻게 해야 합니까?
-****
-NetApp Cloud Central의 사용자 토큰에 만료일이 있습니다. 토큰을 새로 고치려면 1단계에서 API를 다시 호출해야 합니다.
-
-API 응답에는 토큰이 만료되는 시점을 나타내는 "expires_in" 필드가 포함됩니다.
-
-****
 
 
 == API 참조입니다
