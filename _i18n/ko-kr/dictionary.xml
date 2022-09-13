@@ -2550,4 +2550,5 @@
   <block id="47161ef4ae449d43c829baee065648d2" category="paragraph"><block ref="63cdf6e3f2a869e9e35995fee340f32a" category="inline-link-rx"></block>.</block>
   <block id="9644265a314e497bc18814e1694c3d27" category="paragraph">다음 링크에서 새로 고침 토큰을 생성해야 합니다. https://services.cloud.netapp.com/refresh-token/. 새로 고침 토큰은 사용자 토큰을 생성하는 데 사용할 영숫자 문자열입니다.</block>
   <block id="777d6e4cc528ea2b29b7fc6903fb67a6" category="admonition">NetApp Cloud Central의 사용자 토큰에 만료일이 있습니다. API 응답에는 토큰이 만료되는 시점을 나타내는 "expires_in" 필드가 포함됩니다. 토큰을 새로 고치려면 이 API를 다시 호출해야 합니다.</block>
+  <block id="39d3d67728b58b0f9255268d852abfbe" category="admonition">Cloud Backup for Applications 인프라는 지역 내의 가용성 영역 장애에 대한 복원력을 제공합니다. 이제 새로운 지역으로 페일오버하여 지역 내 장애를 지원하며 이 페일오버에는 약 2시간의 다운타임이 발생합니다.</block>
 </blocks>
