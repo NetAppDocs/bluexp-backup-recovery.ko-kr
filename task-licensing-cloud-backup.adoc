@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-licensing-cloud-backup.html 
-keywords: license, licensing, install, updating license, paygo license, byol license, nlf, license generator, backup license, add backup license, update backup license 
-summary: '클라우드 공급자로부터 PAYGO(Pay-as-you-Go) 마켓플레이스 구독을 구입하거나 NetApp에서 BYOL(Bring-Your-Own-License)을 구입하여 Cloud Backup의 라이센스를 부여할 수 있습니다. 작업 환경에서 Cloud Backup을 활성화하고, 운영 데이터의 백업을 생성하고, 백업 데이터를 운영 시스템에 복원하려면 유효한 라이센스가 필요합니다.' 
+keywords: license, licensing, install, updating license, paygo license, byol license, nlf, license generator, backup license, add backup license, update backup license, annual 
+summary: 'PAYGO(Pay-as-you-Go) 또는 클라우드 공급자로부터 연간 시장 가입 서비스를 구입하거나 NetApp에서 BYOL(Bring-Your-Own-License)을 구입하여 Cloud Backup의 라이센스를 부여할 수 있습니다. 작업 환경에서 Cloud Backup을 활성화하고, 운영 데이터의 백업을 생성하고, 백업 데이터를 운영 시스템에 복원하려면 유효한 라이센스가 필요합니다.' 
 ---
 = Cloud Backup에 대한 라이센스 설정
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: '클라우드 공급자로부터 PAYGO(Pay-as-you-Go) 마켓플레이�
 
 
 [role="lead"]
-클라우드 공급자로부터 PAYGO(Pay-as-you-Go) 마켓플레이스 구독을 구입하거나 NetApp에서 BYOL(Bring-Your-Own-License)을 구입하여 Cloud Backup의 라이센스를 부여할 수 있습니다. 작업 환경에서 Cloud Backup을 활성화하고, 운영 데이터의 백업을 생성하고, 백업 데이터를 운영 시스템에 복원하려면 유효한 라이센스가 필요합니다.
+PAYGO(Pay-as-you-Go) 또는 클라우드 공급자로부터 연간 시장 가입 서비스를 구입하거나 NetApp에서 BYOL(Bring-Your-Own-License)을 구입하여 Cloud Backup의 라이센스를 부여할 수 있습니다. 작업 환경에서 Cloud Backup을 활성화하고, 운영 데이터의 백업을 생성하고, 백업 데이터를 운영 시스템에 복원하려면 유효한 라이센스가 필요합니다.
 
 추가 내용을 읽기 전에 몇 가지 참고 사항을 확인하십시오.
 
@@ -200,7 +200,7 @@ Cloud Backup 라이센스가 만료되기 전에 업데이트하여 데이터 �
 
 . Cloud Manager에서 라이센스를 자동으로 업데이트할 수 없는 경우(예: 어두운 사이트에 설치된 경우) 라이센스 파일을 수동으로 업로드해야 합니다.
 +
-.. 가능합니다 <<Obtain your Cloud Backup license file,NetApp Support 사이트에서 라이센스 파일을 받으십시오>>.
+.. 가능합니다  your Cloud Backup license file,NetApp Support 사이트에서 라이센스 파일을 받으십시오.
 .. Digital Wallet page_Data Services Licenses_탭에서 를 클릭합니다 image:screenshot_horizontal_more_button.gif["추가 아이콘"] 업데이트하는 서비스 일련 번호에 대해 * Update License * 를 클릭합니다.
 +
 image:screenshot_services_license_update1.png["특정 서비스에 대한 라이센스 업데이트 단추를 선택하는 스크린샷"]

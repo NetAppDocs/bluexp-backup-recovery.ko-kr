@@ -53,6 +53,8 @@ Cloud Backup은 볼륨 백업을 위한 DataLock 및 랜섬웨어 보호를 지�
 
 이 두 기능 모두 백업 파일을 보호하므로 소스 데이터에 대한 랜섬웨어 공격의 경우 언제든지 유효한 백업 파일을 사용하여 데이터를 복구할 수 있습니다. 백업을 일정 기간 동안 잠그고 유지해야 하는 특정 규정 요구 사항을 충족하는 것도 도움이 됩니다. DataLock 및 랜섬웨어 보호가 활성화되면 Cloud Backup 활성화에 따라 프로비저닝되는 클라우드 버킷에서 오브젝트 잠금 및 오브젝트 버전 관리가 활성화됩니다.
 
+이 기능은 소스 볼륨에 대한 보호 기능을 제공하지 않으며 해당 소스 볼륨의 백업에만 사용됩니다. NetApp 사용 https://cloud.netapp.com/ci-sde-plp-cloud-secure-info-trial?hsCtaTracking=fefadff4-c195-4b6a-95e3-265d8ce7c0cd%7Cb696fdde-c026-4007-a39e-5e986c4d27c6["Cloud Insights and Cloud Secure를 참조하십시오"^]또는 일부 를 누릅니다 https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ONTAP에서 제공하는 랜섬웨어 방지 보호"^] 소스 볼륨을 보호합니다.
+
 [CAUTION]
 ====
 * DataLock 및 랜섬웨어 보호를 사용하려는 경우 첫 번째 백업 정책을 생성하고 해당 클러스터에 대한 Cloud Backup을 활성화할 때 활성화해야 합니다.
@@ -66,7 +68,7 @@ Cloud Backup은 볼륨 백업을 위한 DataLock 및 랜섬웨어 보호를 지�
 
 DataLock은 백업 파일이 특정 기간 동안 수정 또는 삭제되지 않도록 보호합니다. 이 기능은 오브젝트 스토리지 공급자의 기술을 '오브젝트 잠금'에 사용합니다. 백업 파일이 잠기고 유지되는 기간을 DataLock 보존 기간이라고 합니다. 이 값은 사용자가 정의한 백업 정책 스케줄 및 보존 설정과 14일 버퍼를 기반으로 합니다. 30일 미만의 모든 DataLock 보존 정책은 최소 30일로 반올림됩니다.
 
-이전 백업은 백업 정책 보존 기간 이후가 아니라 DataLock 보존 기간이 만료된 후에 삭제됩니다.
+이전 백업은 백업 정책 보존 기간이 만료된 후가 아니라 DataLock 보존 기간이 만료된 후에 삭제됩니다.
 
 이 작동 방식에 대한 몇 가지 예를 살펴보겠습니다.
 
@@ -117,39 +119,47 @@ image:screenshot_datalock_ransomware_settings.png["백업 정책을 생성할 �
 +
 DataLock 보호 및 랜섬웨어 보호가 비활성화됩니다.
 
-* 엔터프라이즈
+* 거버넌스(StorageGRID에서는 사용할 수 없음)
 +
 DataLock은 특정 권한이 있는 사용자(link:concept-cloud-backup-policies.html#requirements["아래를 참조하십시오"])는 보존 기간 동안 백업 파일을 덮어쓰거나 삭제할 수 있습니다. 랜섬웨어 보호가 활성화됩니다.
 
 * 규정 준수
 +
-DataLock은 _ Compliance_로 설정되어 있으며 보존 기간 동안 사용자가 백업 파일을 덮어쓰거나 삭제할 수 없습니다. 랜섬웨어 보호가 활성화됩니다.
+DataLock은 보존 기간 동안 사용자가 백업 파일을 덮어쓰거나 삭제할 수 없는 _Compliance_mode로 설정됩니다. 랜섬웨어 보호가 활성화됩니다.
 
 
+
+
+NOTE: StorageGRID S3 오브젝트 잠금 기능은 규정 준수 모드에 해당하는 단일 데이터 잠금 모드를 제공합니다. 동일한 거버넌스 모드는 지원되지 않으므로 사용자는 보존 설정을 무시하거나, 보호된 백업을 덮어쓰거나, 백업을 삭제할 수 없습니다.
 
 
 
 === 지원되는 작업 환경 및 오브젝트 스토리지 공급자
 
-다음 퍼블릭 클라우드 공급자에서 오브젝트 스토리지를 사용할 때 다음 작업 환경에서 ONTAP 볼륨에서 DataLock 및 랜섬웨어 보호를 사용할 수 있습니다. 향후 릴리즈에서 퍼블릭 및 프라이빗 클라우드 공급자가 추가될 예정입니다.
+다음 퍼블릭 및 프라이빗 클라우드 공급자가 오브젝트 스토리지를 사용하는 경우, 다음과 같은 작업 환경에서 ONTAP 볼륨의 DataLock 및 랜섬웨어 보호를 활성화할 수 있습니다. 향후 릴리즈에서는 클라우드 공급자를 더 추가할 예정입니다.
 
 [cols="45,45"]
 |===
 | 소스 작업 환경 | 백업 파일 대상 ifdef::AWS[] 
 
 
-| AWS의 Cloud Volumes ONTAP | Amazon S3 endif::AWS [] ifdef::Azure []endif::Azure[]ifdef::GCP[]endif::GCP[]ifdef::AWS[] 
+| AWS의 Cloud Volumes ONTAP | Amazon S3 endif::AWS [] ifdef::Azure []endif::Azure []ifdef::GCP[]endif::GCP[] 
 
 
-| 사내 ONTAP 시스템 | Amazon S3 endif::AWS [] ifdef::Azure []endif::Azure []ifdef::GCP[]endif::GCP[] 
+| 사내 ONTAP 시스템 | ifdef::AWS[]Amazon S3 endif::AWS[]ifdef::Azure[]endif::Azure[]ifdef::GCP[]endif::GCP[]NetApp StorageGRID 
 |===
 
 
 === 요구 사항
 
 * 클러스터는 ONTAP 9.11.1 이상을 실행해야 합니다
-* Cloud Manager 3.9.21 이상을 사용해야 합니다(현재 Connector를 클라우드에 배포해야 함).
-* AWS로 백업하려면 Connector에 권한을 제공하는 IAM 역할의 일부로 다음 S3 권한이 있어야 합니다. 이러한 리소스는 리소스 "arn:AWS:S3::NetApp-backup- *"의 "backupS3Policy" 섹션에 있습니다.
+* Cloud Manager 3.9.21 이상을 사용해야 합니다
+
+
+ifdef::aws[]
+
+* AWS의 경우 Connector를 클라우드에 구축해야 합니다
+* 다음 S3 권한은 Connector에 권한을 제공하는 IAM 역할의 일부여야 합니다. 이러한 리소스는 리소스 "arn:AWS:S3::NetApp-backup- *"의 "backupS3Policy" 섹션에 있습니다.
 +
 ** S3:GetObjectVersionTagging
 ** S3:GetBuckketObjectLockConfiguration
@@ -179,11 +189,21 @@ DataLock은 _ Compliance_로 설정되어 있으며 보존 기간 동안 사용�
 ** S3:GetBucketLocation
 ** S3:GetObjectVersion
 +
-관리자가 엔터프라이즈 모드를 사용하여 잠긴 백업 파일을 덮어쓰기/삭제할 수 있도록 하려면 S3 권한 "S3:BypassGovernanceRetention"을 Cloud Manager 사용자 역할에 추가해야 합니다.
+"S3:BypassGovernanceRetention"은 관리 사용자가 Governance 모드를 사용하여 잠긴 백업 파일을 덮어쓰거나 삭제할 수 있도록 하려는 경우에만 추가해야 합니다.
 
 +
 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html["필요한 권한을 복사하여 붙여넣을 수 있는 정책의 전체 JSON 형식을 봅니다"^].
 
+
+
+
+
+endif::aws[]
+
+* StorageGRID의 경우:
++
+** Connector를 사내에 구축해야 합니다(인터넷 접속 유무에 관계없이 사이트에 설치할 수 있음).
+** DataLock 기능을 완벽하게 지원하려면 StorageGRID 11.6.0.3 이상이 필요합니다
 
 
 
@@ -193,7 +213,7 @@ https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aw
 === 제한 사항
 
 * 백업 정책에 아카이브 스토리지를 구성한 경우 DataLock 및 랜섬웨어 보호를 사용할 수 없습니다.
-* Cloud Backup(엔터프라이즈 또는 규정 준수)을 활성화할 때 선택하는 DataLock 옵션은 해당 클러스터의 모든 백업 정책에 사용해야 합니다. 단일 클러스터에서 엔터프라이즈 및 규정 준수 모드 잠금을 모두 사용할 수는 없습니다.
+* Cloud Backup을 활성화할 때 선택한 DataLock 옵션(Governance 또는 Compliance)은 해당 클러스터의 모든 백업 정책에 사용해야 합니다. 단일 클러스터에서는 거버넌스 및 규정 준수 모드 잠금을 모두 사용할 수 없습니다.
 * DataLock을 활성화하면 모든 볼륨 백업이 잠깁니다. 단일 클러스터에 대해 잠긴 볼륨 백업과 잠기지 않은 볼륨 백업을 혼합하여 사용할 수 없습니다.
 * DataLock 및 랜섬웨어 보호는 DataLock 및 랜섬웨어 보호가 활성화된 백업 정책을 사용하여 새 볼륨 백업에 적용됩니다. Cloud Backup을 활성화한 후에는 이 기능을 활성화할 수 없습니다.
 

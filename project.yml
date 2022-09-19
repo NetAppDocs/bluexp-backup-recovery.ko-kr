@@ -36,8 +36,6 @@ sidebar:
       url: "/task-licensing-cloud-backup.html"
     - title: 백업 및 복원 작업의 상태를 모니터링합니다
       url: "/task-monitor-backup-jobs.html"
-    - title: 클라우드 백업 정책 설정
-      url: "/concept-cloud-backup-policies.html"
   - title: ONTAP 데이터를 백업 및 복원합니다
     entries:
     - title: ONTAP 데이터 보호
@@ -129,17 +127,14 @@ sidebar:
     url: "/api-backup-restore.html"
   - title: 참조하십시오
     entries:
+    - title: 클라우드 백업 정책 설정
+      url: "/concept-cloud-backup-policies.html"
     - title: 지원되는 AWS 아카이브 스토리지 계층
       url: "/reference-aws-backup-tiers.html"
     - title: 지원되는 Azure 아카이브 액세스 계층
       url: "/reference-azure-backup-tiers.html"
-    - title: 교차 계정 및 교차 지역 구성
-      url: "/reference-cross-account.html"
-      entries:
-      - title: AWS에서 다중 계정 액세스를 위해 백업을 구성합니다
-        url: "/reference-backup-multi-account-aws.html"
-      - title: Azure에서 다중 계정 액세스를 위한 백업을 구성합니다
-        url: "/reference-backup-multi-account-azure.html"
+    - title: Azure에서 다중 계정 액세스를 위한 백업을 구성합니다
+      url: "/reference-backup-multi-account-azure.html"
   - title: 지식 및 지원
     entries:
     - title: 지원을 위해 등록하십시오
@@ -248,4 +243,4 @@ homepage:
 product-family:
   name: Cloud Manager
   repo: cloud-manager-family
-  sidebar_label: All Cloud Manager documentation
+  sidebar_label: 모든 Cloud Manager 설명서

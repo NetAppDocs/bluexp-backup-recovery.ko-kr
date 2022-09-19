@@ -18,6 +18,42 @@ Cloud Backup의 새로운 기능에 대해 알아보십시오.
 
 
 
+== 2022년 9월 19일
+
+
+
+=== StorageGRID 시스템의 백업 파일에 대해 DataLock 및 랜섬웨어 보호를 구성할 수 있습니다
+
+마지막 릴리즈에서는 Amazon S3 버킷에 저장된 백업에 대해 _DataLock 및 랜섬웨어 보호_가 도입되었습니다. 이 릴리즈는 StorageGRID 시스템에 저장된 백업 파일에 대한 지원을 확장합니다. 클러스터가 ONTAP 9.11.1 이상을 사용하고 있고 StorageGRID 시스템에서 버전 11.6.0.3 이상을 실행 중인 경우 이 새로운 백업 정책 옵션을 사용할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-cloud-backup-policies.html#datalock-and-ransomware-protection["DataLock 및 랜섬웨어 보호를 사용하여 백업을 보호하는 방법에 대해 자세히 알아보십시오"^].
+
+버전 3.9.22 이상의 소프트웨어가 있는 커넥터를 실행해야 합니다. Connector는 구내에 설치해야 하며 인터넷에 접속하거나 접속하지 않은 사이트에 설치할 수 있습니다.
+
+
+
+=== 이제 백업 파일에서 폴더 레벨 복구를 사용할 수 있습니다
+
+이제 해당 폴더(디렉토리 또는 공유)의 모든 파일에 액세스해야 하는 경우 백업 파일에서 폴더를 복원할 수 있습니다. 폴더 복원은 전체 볼륨을 복원하는 것보다 훨씬 효율적입니다. 이 기능은 Browse & Restore 메서드와 Search & Restore 메서드를 모두 사용하여 복원 작업에 사용할 수 있습니다. 현재 단일 폴더만 선택하고 복원할 수 있으며, 해당 폴더의 파일만 복원할 수 있습니다. 하위 폴더 또는 하위 폴더의 파일은 복원되지 않습니다.
+
+
+
+=== 이제 아카이브 스토리지로 이동한 백업에서 파일 레벨 복구를 사용할 수 있습니다
+
+과거에는 아카이브 저장소로 이동한 백업 파일(AWS 및 Azure만 해당)에서만 볼륨을 복원할 수 있었습니다. 이제 이러한 아카이빙된 백업 파일에서 개별 파일 및 폴더를 복원할 수 있습니다. 이 기능은 Browse & Restore 메서드와 Search & Restore 메서드를 모두 사용하여 복원 작업에 사용할 수 있습니다.
+
+
+
+=== 이제 파일 레벨 복구를 통해 원본 소스 파일을 덮어쓸 수 있습니다
+
+이전에는 원래 볼륨으로 복구된 파일이 항상 "Restore_<file_name>"이라는 접두사가 붙은 새 파일로 복원되었습니다. 이제 파일을 볼륨의 원래 위치로 복구할 때 원본 소스 파일을 덮어쓰도록 선택할 수 있습니다. 이 기능은 Browse & Restore 메서드와 Search & Restore 메서드를 모두 사용하여 복원 작업에 사용할 수 있습니다.
+
+
+
+=== 끌어서 놓기를 통해 클라우드 백업을 StorageGRID 시스템에 사용할 수 있습니다
+
+를 누릅니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-viewing-azure-blob.html["StorageGRID"^] 백업 대상은 Canvas에 작업 환경으로 있으며, 온-프레미스 ONTAP 작업 환경을 대상으로 끌어서 백업 설정 마법사를 시작할 수 있습니다.
+
+
+
 == 2022년 8월 18일
 
 
@@ -25,10 +61,6 @@ Cloud Backup의 새로운 기능에 대해 알아보십시오.
 === 클라우드 네이티브 애플리케이션 데이터를 보호하기 위해 지원이 추가되었습니다
 
 Cloud Backup for Applications는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. Cloud Manager 내에서 지원되는 Cloud Backup for Applications는 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다.https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-protect-cloud-app-data-to-cloud.html["자세한 정보"^].
-
-
-
-== 2022년 8월 16일
 
 
 
@@ -104,10 +136,6 @@ https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-o
 
 
 
-== 2022년 6월 8일
-
-
-
 === Cloud Backup for Virtual Machines 1.1.0이 현재 GA로 제공됩니다
 
 SnapCenter Plug-in for VMware vSphere를 Cloud Manager와 통합하면 가상 머신의 데이터를 보호할 수 있습니다. 데이터 저장소를 클라우드에 백업하고 VMware vSphere용 사내 SnapCenter 플러그인으로 가상 머신을 간편하게 복원할 수 있습니다.
@@ -131,7 +159,7 @@ S3 및 Blob 스토리지에서 파일 레벨 찾아보기 및 복원 작업에 �
 
 === Google Cloud 및 StorageGRID 스토리지에서 파일에 대한 찾아보기 및 복원 지원
 
-위에서 설명한 대로 Browse & Restore 작업에 대한 컨테이너가 추가되어 Google Cloud 및 StorageGRID 시스템에 저장된 백업 파일에서 파일 복원 작업을 수행할 수 있습니다. 이제 Browse & Restore를 사용하여 모든 퍼블릭 클라우드 공급자 및 StorageGRID에서 파일을 복원할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-restore-backups-ontap.html#restoring-ontap-data-using-browse-restore["ONTAP 백업에서 볼륨 및 파일을 복원하기 위해 Browse & amp; Restore를 사용하는 방법을 확인하십시오"].
+위에서 설명한 대로 Browse & Restore 작업에 대한 컨테이너가 추가되어 Google Cloud 및 StorageGRID 시스템에 저장된 백업 파일에서 파일 복원 작업을 수행할 수 있습니다. 이제 Browse & Restore를 사용하여 모든 퍼블릭 클라우드 공급자 및 StorageGRID에서 파일을 복원할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-restore-backups-ontap.html#restoring-ontap-data-using-browse-restore["ONTAP 백업에서 볼륨 및 파일을 복원하기 위해 Browse  amp; Restore를 사용하는 방법을 확인하십시오"].
 
 
 
@@ -341,88 +369,3 @@ link:task-manage-backups-ontap.html#creating-a-manual-volume-backup-at-any-time[
 
 
 === 이제 30,000개 이상의 파일이 있는 디렉토리에서 파일을 복원할 수 있습니다
-
-
-
-== 2021년 8월 1일
-
-
-
-=== Azure Blob에 대한 보안 백업을 위해 프라이빗 엔드포인트 연결을 정의하는 기능입니다
-
-온프레미스 ONTAP 시스템에서 Azure Blob으로 백업을 구성하는 경우 활성화 마법사에서 Azure 프라이빗 엔드포인트의 연결을 정의할 수 있습니다. 이를 통해 Azure Private Link가 지원되는 서비스에 개인 및 안전하게 연결하는 네트워크 인터페이스를 사용할 수 있습니다.
-
-
-
-=== 이제 시간별 백업 정책이 지원됩니다
-
-이 새로운 정책은 기존 일일, 주별 및 월별 정책에 추가됩니다. 시간별 백업 정책은 최소 RPO(복구 시점 목표)를 제공합니다.
-
-
-
-== 2021년 7월 7일
-
-
-
-=== 이제 다른 계정과 다른 지역을 사용하여 백업을 만들 수 있습니다
-
-이제 Cloud Backup을 사용하면 Cloud Volumes ONTAP 시스템에 사용 중인 계정/가입과 다른 계정/가입을 사용하여 백업을 생성할 수 있습니다. 또한 Cloud Volumes ONTAP 시스템이 배포된 영역과 다른 영역에 백업 파일을 만들 수도 있습니다.
-
-이 기능은 AWS 또는 Azure를 사용하는 경우, 기존 작업 환경에서 백업을 사용하도록 설정할 때만 사용할 수 있으며, 새로운 Cloud Volumes ONTAP 작업 환경을 생성할 때는 사용할 수 없습니다.
-
-
-
-=== 이제 데이터를 Azure Blob에 백업할 때 데이터 암호화에 사용할 자체 고객 관리 키를 선택할 수 있습니다
-
-추가 보안 및 제어를 위해 기본 Microsoft 관리 암호화 키를 사용하는 대신 활성화 마법사에서 데이터 암호화에 대해 고객이 관리하는 키를 직접 선택할 수 있습니다. 이 기능은 사내 ONTAP 시스템 또는 Azure의 Cloud Volumes ONTAP 시스템에서 백업을 구성할 때 사용할 수 있습니다.
-
-
-
-=== 이제 단일 파일 복원을 사용할 때 한 번에 최대 100개의 파일을 복원할 수 있습니다
-
-
-
-== 2021년 6월 7일
-
-
-
-=== ONTAP 9.8 이상을 사용할 때 DP 볼륨에 대해 제한 사항이 해제되었습니다
-
-데이터 보호(DP) 볼륨 백업에 대해 알려진 두 가지 제한 사항이 해결되었습니다.
-
-* 이전에는 다중 구간 백업은 SnapMirror 관계 유형이 Mirror-Vault 또는 Vault인 경우에만 작동했습니다. 이제 관계 유형이 MirrorAllSnapshots인 경우 백업을 수행할 수 있습니다.
-* 이제 Cloud Backup은 SnapMirror 정책에 구성된 한 백업에 레이블을 사용할 수 있습니다. 매일, 매주 또는 매월 이름이 있는 라벨을 요구하는 제한은 사라졌습니다.
-
-
-
-
-== 2021년 5월 5일
-
-
-
-=== 온프레미스 클러스터 데이터를 Google 클라우드 스토리지 또는 NetApp StorageGRID 시스템으로 백업합니다
-
-이제 사내 ONTAP 시스템에서 Google 클라우드 스토리지 또는 NetApp StorageGRID 시스템으로 백업을 생성할 수 있습니다. 을 참조하십시오 link:task-backup-onprem-to-gcp.html["Google Cloud Storage로 백업"^] 및 link:task-backup-onprem-private-cloud.html["StorageGRID에 백업 중입니다"^] 를 참조하십시오.
-
-
-
-=== 이제 System Manager를 사용하여 클라우드 백업 작업을 수행할 수 있습니다
-
-ONTAP 9.9.1의 새로운 기능을 사용하면 System Manager를 사용하여 사내 ONTAP 볼륨의 백업을 클라우드 백업을 통해 설정한 오브젝트 스토리지로 전송할 수 있습니다. link:https://docs.netapp.com/us-en/ontap/task_cloud_backup_data_using_cbs.html["System Manager를 사용하여 Cloud Backup을 사용하여 볼륨을 클라우드에 백업하는 방법을 알아보십시오."^]
-
-
-
-=== 몇 가지 향상된 기능을 통해 백업 정책이 개선되었습니다
-
-* 이제 일일, 주별 및 월별 백업을 조합하여 사용자 지정 정책을 생성합니다.
-* 백업 정책을 변경할 때 변경 사항은 원래 백업 정책을 사용하는 모든 볼륨에 대한 모든 새 백업 * 및 * 에 적용됩니다. 이전에는 새 볼륨 백업에만 변경 사항이 적용되었습니다.
-
-
-
-
-=== 기타 백업 및 복원 기능 향상
-
-* 백업 파일에 대한 클라우드 대상을 구성할 때 이제 Cloud Volumes ONTAP 시스템이 상주하는 지역이 아닌 다른 영역을 선택할 수 있습니다.
-* 단일 볼륨에 대해 생성할 수 있는 백업 파일 수가 1,019에서 4,000개로 증가했습니다.
-* 단일 볼륨에 대한 모든 백업 파일을 삭제하는 이전 기능 외에도 볼륨에 대해 하나의 백업 파일만 삭제하거나, 필요한 경우 전체 작업 환경에 대한 모든 백업 파일을 삭제할 수 있습니다.
-
