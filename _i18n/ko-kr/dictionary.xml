@@ -2368,7 +2368,6 @@
   <block id="8996e9eaff78ab540aab279a66de20ac" category="inline-xref">검색 및 amp;Restore를 사용하여 볼륨, 폴더 및 파일을 복원합니다</block>
   <block id="67e7c5cb86f955703ed9f6730af64fd6" category="list-text"><block ref="2695406f56a43b731bc71bc11df2f690" category="inline-xref-macro-rx"></block></block>
   <block id="3be60ab390e443d7cab393bf7054a58c" category="paragraph">볼륨, 폴더 또는 파일 복원을 시작하기 전에 복원할 볼륨의 이름, 볼륨이 있는 작업 환경의 이름 및 복원할 백업 파일의 대략적인 날짜를 알아야 합니다.</block>
-  <block id="8d9d448b48e22adaa71555def5359f09" category="paragraph">* 참고: * 복원하려는 볼륨의 백업 파일이 아카이브 스토리지(ONTAP 9.10.1부터 시작)에 있는 경우 복원 작업에 더 많은 시간이 소요되고 비용이 발생합니다. 또한 대상 클러스터는 볼륨 복원의 경우 ONTAP 9.10.1 이상, 폴더 또는 파일 복원의 경우 9.11.1을 실행해야 합니다.</block>
   <block id="7ff418ea3dd2acd8ae27ed509d08a48b" category="paragraph">ONTAP 백업 파일에서 다음 작업 환경으로 볼륨, 폴더 또는 개별 파일을 복원할 수 있습니다.</block>
   <block id="2e25696926fefd43b3529b13086c9690" category="cell">* 폴더 및 파일 복원 * ifdef::AWS[]</block>
   <block id="2e43b583329f5406f8eb83df6ec39874" category="admonition">백업 파일이 DataLock 및 랜섬웨어로 구성된 경우 폴더 또는 파일을 복원할 수 없습니다. 이 경우 백업 파일에서 전체 볼륨을 복원한 다음 필요한 파일에 액세스할 수 있습니다.</block>
@@ -2413,7 +2412,6 @@
   <block id="33de9caf9e73a2815b32070111ac99d4" category="list-text">복원 * 을 클릭하면 복원 작업의 진행률을 검토할 수 있도록 복원 대시보드로 돌아갑니다. 또한 * Job Monitoring * 탭을 클릭하여 복원 진행률을 확인할 수도 있습니다.</block>
   <block id="5b9c4d226a1b1a59e01d39143fab7e50" category="paragraph">검색 및 복원을 사용하여 ONTAP 백업 파일에서 볼륨, 폴더 또는 파일을 복원할 수 있습니다. 검색 및 복원을 사용하면 특정 공급자에 대해 클라우드 저장소에 저장된 모든 백업에서 특정 볼륨, 폴더 또는 파일을 검색한 다음 복구를 수행할 수 있습니다. 정확한 작업 환경 이름 또는 볼륨 이름을 알 필요가 없습니다. 모든 볼륨 백업 파일을 검색합니다.</block>
   <block id="ddc1dd6e781e5ceee9400e96abd01aca" category="paragraph">폴더 또는 파일을 원래 볼륨 위치, 동일한 작업 환경의 다른 볼륨 또는 동일한 클라우드 계정을 사용하는 다른 작업 환경으로 복원할 수 있습니다. 또한 온프레미스 ONTAP 시스템의 볼륨에 폴더 및 파일을 복원할 수 있습니다.</block>
-  <block id="148341a9f262dd2566a8d09962c50c13" category="paragraph">복원하려는 볼륨의 백업 파일이 아카이브 스토리지(ONTAP 9.10.1부터 사용 가능)에 있는 경우 복원 작업에 더 많은 시간이 소요되고 추가 비용이 발생합니다. 또한 대상 클러스터는 볼륨 복원의 경우 ONTAP 9.10.1 이상, 폴더 또는 파일 복원의 경우 9.11.1을 실행해야 합니다.</block>
   <block id="e1ddf1ac9e59a50d9ac5683a1d33e13a" category="cell">대상 작업 환경 ifdef::AWS[]</block>
   <block id="ea69bd234559eac714e5d0b94f7c07f5" category="list-text">검색 및 복원을 사용하려면 볼륨 데이터를 복원할 각 소스 작업 환경에서 "인덱싱"을 활성화해야 합니다. 따라서 인덱싱된 카탈로그를 통해 모든 볼륨의 백업 파일을 추적할 수 있습니다.</block>
   <block id="0b70b5c6f495c9936344b6df542ed0de" category="list-text">볼륨, 폴더 또는 파일의 검색 기준을 전체 또는 일부 볼륨 이름, 전체 파일 이름, 크기 범위, 생성 날짜 범위, 기타 검색 필터로 입력하고 * 검색 * 을 클릭합니다.</block>
@@ -2443,9 +2441,7 @@
   <block id="f2c9e54745387d4204d350aaf464ef16" category="paragraph">마지막 릴리즈에서는 Amazon S3 버킷에 저장된 백업에 대해 _DataLock 및 랜섬웨어 보호_가 도입되었습니다. 이 릴리즈는 StorageGRID 시스템에 저장된 백업 파일에 대한 지원을 확장합니다. 클러스터가 ONTAP 9.11.1 이상을 사용하고 있고 StorageGRID 시스템에서 버전 11.6.0.3 이상을 실행 중인 경우 이 새로운 백업 정책 옵션을 사용할 수 있습니다.<block ref="3f7eaa3e30bb5eb7a46ecb7c423ee7ad" category="inline-link-rx"></block>.</block>
   <block id="7db81221e474d169032014280bbe8e36" category="paragraph">버전 3.9.22 이상의 소프트웨어가 있는 커넥터를 실행해야 합니다. Connector는 구내에 설치해야 하며 인터넷에 접속하거나 접속하지 않은 사이트에 설치할 수 있습니다.</block>
   <block id="dfa4dbaa7b53b80d828eeac39da445d5" category="section-title">이제 백업 파일에서 폴더 레벨 복구를 사용할 수 있습니다</block>
-  <block id="44049ef063184610d2b3d1f901e33c6a" category="paragraph">이제 해당 폴더(디렉토리 또는 공유)의 모든 파일에 액세스해야 하는 경우 백업 파일에서 폴더를 복원할 수 있습니다. 폴더 복원은 전체 볼륨을 복원하는 것보다 훨씬 효율적입니다. 이 기능은 Browse &amp; Restore 메서드와 Search &amp; Restore 메서드를 모두 사용하여 복원 작업에 사용할 수 있습니다. 현재 단일 폴더만 선택하고 복원할 수 있으며, 해당 폴더의 파일만 복원할 수 있습니다. 하위 폴더 또는 하위 폴더의 파일은 복원되지 않습니다.</block>
   <block id="08c716b38dc966a670cdf75da8f3f86d" category="section-title">이제 아카이브 스토리지로 이동한 백업에서 파일 레벨 복구를 사용할 수 있습니다</block>
-  <block id="5a1b289592dc33da4fec4177e12f2abe" category="paragraph">과거에는 아카이브 저장소로 이동한 백업 파일(AWS 및 Azure만 해당)에서만 볼륨을 복원할 수 있었습니다. 이제 이러한 아카이빙된 백업 파일에서 개별 파일 및 폴더를 복원할 수 있습니다. 이 기능은 Browse &amp; Restore 메서드와 Search &amp; Restore 메서드를 모두 사용하여 복원 작업에 사용할 수 있습니다.</block>
   <block id="b0e03676724b8b6468356ef104a66e4f" category="section-title">이제 파일 레벨 복구를 통해 원본 소스 파일을 덮어쓸 수 있습니다</block>
   <block id="f3e2c168c189da079b62c6ff6558a640" category="paragraph">이전에는 원래 볼륨으로 복구된 파일이 항상 "Restore_&lt;file_name&gt;"이라는 접두사가 붙은 새 파일로 복원되었습니다. 이제 파일을 볼륨의 원래 위치로 복구할 때 원본 소스 파일을 덮어쓰도록 선택할 수 있습니다. 이 기능은 Browse &amp; Restore 메서드와 Search &amp; Restore 메서드를 모두 사용하여 복원 작업에 사용할 수 있습니다.</block>
   <block id="736c2dbf2aa9f4b08b97a4f719b3cf5e" category="section-title">끌어서 놓기를 통해 클라우드 백업을 StorageGRID 시스템에 사용할 수 있습니다</block>
@@ -2514,4 +2510,8 @@
   <block id="5a58de0e84e5db9ac743167d182029a5" category="section-title">작업 환경에 대한 클라우드 백업 비활성화 중</block>
   <block id="7d74a85f6ca999dc566f13bea483a788" category="paragraph">작업 환경에서 Cloud Backup을 비활성화하면 시스템의 각 볼륨에 대한 백업이 비활성화되고 볼륨을 복구하는 기능도 비활성화됩니다. 기존 백업은 삭제되지 않습니다. 이 작업 환경에서 백업 서비스의 등록을 취소하지 않습니다. 기본적으로 모든 백업 및 복원 작업을 일정 기간 동안 일시 중지할 수 있습니다.</block>
   <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">모든 Cloud Manager 설명서</block>
+  <block id="201e1c2515e9474bbcf720fb750a48c0" category="paragraph">이제 해당 폴더(디렉토리 또는 공유)의 모든 파일에 액세스해야 하는 경우 백업 파일에서 폴더를 복원할 수 있습니다. 폴더 복원은 전체 볼륨을 복원하는 것보다 훨씬 효율적입니다. 이 기능은 ONTAP 9.11.1 이상을 사용하는 경우 Browse &amp; Restore 메서드와 Search &amp; Restore 메서드를 모두 사용하여 복원 작업에 사용할 수 있습니다. 현재 단일 폴더만 선택하고 복원할 수 있으며, 해당 폴더의 파일만 복원할 수 있습니다. 하위 폴더 또는 하위 폴더의 파일은 복원되지 않습니다.</block>
+  <block id="092186aa28f6e357cce0ba979d549724" category="paragraph">과거에는 아카이브 스토리지(AWS 및 Azure만 해당)로 이동한 백업 파일의 볼륨만 복원할 수 있었습니다. 이제 이러한 아카이빙된 백업 파일에서 개별 파일을 복원할 수 있습니다. 이 기능은 ONTAP 9.11.1 이상을 사용하는 경우 Browse &amp; Restore 메서드와 Search &amp; Restore 메서드를 모두 사용하여 복원 작업에 사용할 수 있습니다.</block>
+  <block id="a82e38799f4647ec5a2bc71d39020ae3" category="paragraph">* 참고: * 복원하려는 볼륨의 백업 파일이 아카이브 스토리지(ONTAP 9.10.1부터 시작)에 있는 경우 복원 작업에 더 많은 시간이 소요되고 비용이 발생합니다. 또한 대상 클러스터는 볼륨 복원의 경우 ONTAP 9.10.1 이상, 파일 복원의 경우 9.11.1을 실행해야 합니다.</block>
+  <block id="550600f5b11e396f6d260ad4b5bad6b4" category="paragraph">복원하려는 볼륨의 백업 파일이 아카이브 스토리지(ONTAP 9.10.1부터 사용 가능)에 있는 경우 복원 작업에 더 많은 시간이 소요되고 추가 비용이 발생합니다. 또한 대상 클러스터는 볼륨 복원의 경우 ONTAP 9.10.1 이상, 파일 복원의 경우 9.11.1을 실행해야 합니다.</block>
 </blocks>
