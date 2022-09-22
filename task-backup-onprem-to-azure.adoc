@@ -145,6 +145,8 @@ Azure VNET 또는 구내에 이미 Connector가 배포되어 있는 경우 모�
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["구내에 커넥터 설치"^]
 
 
+Cloud Backup은 Connector가 사내 또는 다크 사이트에 설치되지 않고 클라우드에 구축된 경우에만 정부 클라우드 영역에서 지원됩니다.
+
 
 
 === 커넥터를 위한 네트워킹 준비
@@ -157,6 +159,7 @@ Azure VNET 또는 구내에 이미 Connector가 배포되어 있는 경우 모�
 ** 포트 443(HTTPS)을 통해 Cloud Backup Service에 아웃바운드 인터넷 연결
 ** Blob 개체 저장소에 대한 포트 443을 통한 HTTPS 연결
 ** 포트 443을 통해 ONTAP 클러스터 관리 LIF에 HTTPS로 연결합니다
+** Azure 및 Azure Government 배포에는 추가 인바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-azure.html["Azure의 커넥터 규칙"^] 를 참조하십시오.
 
 
 . Azure 스토리지에 VNET 프라이빗 엔드포인트를 설정합니다. 이 기능은 ONTAP 클러스터에서 VNET로 연결되는 ExpressRoute 또는 VPN 연결이 있고, 가상 프라이빗 네트워크(* 전용* 연결)에 유지하기 위해 Connector와 Blob 스토리지 간의 통신을 원하는 경우에 필요합니다.

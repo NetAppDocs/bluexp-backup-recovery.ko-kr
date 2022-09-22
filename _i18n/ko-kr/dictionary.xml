@@ -2515,4 +2515,10 @@
   <block id="550600f5b11e396f6d260ad4b5bad6b4" category="paragraph">복원하려는 볼륨의 백업 파일이 아카이브 스토리지(ONTAP 9.10.1부터 사용 가능)에 있는 경우 복원 작업에 더 많은 시간이 소요되고 추가 비용이 발생합니다. 또한 대상 클러스터는 볼륨 복원의 경우 ONTAP 9.10.1 이상, 파일 복원의 경우 9.11.1을 실행해야 합니다.</block>
   <block id="01fa460d0b4e6c77f9b145e51a76fbd6" category="paragraph">를 누릅니다<block ref="81ffc4823c79c3e10cfa644aead6e93c" category="inline-link-rx"></block> 백업 대상은 Canvas에 작업 환경으로 있으며, 온프레미스 ONTAP 작업 환경을 대상으로 끌어서 클라우드 백업 설정 마법사를 시작할 수 있습니다.</block>
   <block id="e90eafa7bd87aa0ac2eee6c1722ef9e4" category="list-text">BYOL 라이센스를 사용하는 경우 PAYGO 구독을 등록하는 것이 좋습니다. BYOL 라이센스에서 허용하는 것보다 더 많은 데이터를 백업하는 경우, 사용한 만큼만 지불하는 구독을 통해 백업을 계속 실행하므로 서비스가 중단되지 않습니다.</block>
+  <block id="14ec6f8e662a83e1b5c675a211b8b029" category="paragraph">Cloud Backup은 Connector가 사내 또는 다크 사이트에 설치되지 않고 클라우드에 구축된 경우에만 GovCloud 영역에서 지원됩니다.</block>
+  <block id="fd1958e5e74317f89c6c16bbca7d1446" category="inline-link">AWS의 커넥터 규칙</block>
+  <block id="56d39ecb5bf4d2ec753c12fbb0e00108" category="list-text">AWS 및 AWS GovCloud 배포에는 추가 인바운드 및 아웃바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오<block ref="74fb388667736bb2b34ea14720dd63e3" category="inline-link-rx"></block> 를 참조하십시오.</block>
+  <block id="ad016619a46ca8e0f75292c2c0d1a7a8" category="paragraph">Cloud Backup은 Connector가 사내 또는 다크 사이트에 설치되지 않고 클라우드에 구축된 경우에만 정부 클라우드 영역에서 지원됩니다.</block>
+  <block id="b445de53411a165e9c56da6430c38d59" category="inline-link">Azure의 커넥터 규칙</block>
+  <block id="f840409b357663e7b24e8296c05770a5" category="list-text">Azure 및 Azure Government 배포에는 추가 인바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오<block ref="e1893ebf6f9d2e927a13d052b78eec9f" category="inline-link-rx"></block> 를 참조하십시오.</block>
 </blocks>
