@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: task-register-snapcenter-server.html 
+keywords: SnapCenter Server, register 
+summary: SnapCenter 서버를 등록하려면 몇 단계를 완료하십시오. 
+---
+= SnapCenter 서버를 등록합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter Server 4.6 이상이 실행 중인 호스트는 SnapCenterAdmin 역할의 사용자만 등록할 수 있습니다. 여러 SnapCenter 서버 호스트를 등록할 수 있습니다.
+
+* 단계 *
+
+. Cloud Manager UI에서 * 백업 및 복원 * > * 응용 프로그램 * 을 클릭합니다.
+. 설정 * 드롭다운에서 * SnapCenter 서버 * 를 클릭합니다.
+. SnapCenter 서버 등록 * 을 클릭합니다.
+. 다음 세부 정보를 지정합니다.
++
+.. SnapCenter 서버 필드에서 SnapCenter 서버 호스트의 FQDN 또는 IP 주소를 지정합니다.
+.. 포트 필드에서 SnapCenter 서버가 실행 중인 포트 번호를 지정합니다.
++
+SnapCenter 서버와 클라우드 응용 프로그램 백업 간에 통신이 이루어지게 하려면 포트가 열려 있어야 합니다.
+
+.. 태그 필드에서 SnapCenter 서버에 태그를 지정할 사이트 이름, 도시 이름 또는 사용자 지정 이름을 지정합니다.
++
+태그는 쉼표로 구분됩니다.
+
+.. 사용자 이름 및 암호 필드에서 SnapCenterAdmin 역할을 가진 사용자의 자격 증명을 지정합니다.
+
+
+. Register * 를 클릭합니다.
+
+
+* 완료 후 *
+
+등록된 SnapCenter 서버 호스트를 사용하여 보호되는 모든 응용 프로그램을 보려면 * 백업 및 복원 * > * 응용 프로그램 * 을 클릭합니다.
+
+기본적으로 응용 프로그램은 매일 자정에 자동으로 검색됩니다. 응용 프로그램을 검색하도록 일정을 구성할 수 있습니다.
+
+
+NOTE: SQL Server 데이터베이스의 경우 응용 프로그램 이름 열에 _application_name(인스턴스 이름)_format 으로 이름이 표시됩니다.
+
+지원되는 응용 프로그램 및 해당 구성은 다음과 같습니다.
+
+* Oracle 데이터베이스:
++
+** 최소 1개의 일일, 주별 또는 월별 스케줄을 사용하여 생성된 전체 백업(데이터 + 로그
+** SAN, NFS, VMDK-SAN, VMDK-NFS 및 RDM
+
+
+* Microsoft SQL Server 데이터베이스:
++
+** 독립 실행형, 페일오버 클러스터 인스턴스, 가용성 그룹
+** 최소 1개의 일일, 주별 또는 월별 스케줄을 사용하여 생성된 전체 백업입니다
+** SAN, VMDK-SAN, VMDK-NFS 및 RDM
+
+
+* SAP HANA 데이터베이스:
++
+** 단일 컨테이너 1.x
+** 다중 데이터베이스 컨테이너 2.x
+** HANA 시스템 복제(HSR)
++
+기본 사이트와 보조 사이트 모두에 하나 이상의 백업이 있어야 합니다. 보조 장애로의 지연 페일오버 또는 사전 예방적 장애 조치를 수행할 수 있습니다.
+
+** HANA 바이너리, HANA 아카이브 로그 볼륨, HANA 공유 볼륨 등과 같은 NDV(Non-Data Volumes) 리소스
+
+
+
+
+다음 데이터베이스는 표시되지 않습니다.
+
+* 백업이 없는 데이터베이스입니다
+* 주문형 또는 시간별 정책만 있는 데이터베이스
+* NVMe에 상주하는 Oracle 데이터베이스
+

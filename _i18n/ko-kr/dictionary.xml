@@ -444,18 +444,14 @@
   <block id="0da172938aa3bca619803103b3df2ade" category="summary">Cloud Backup for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 사내 ONTAP에서 클라우드로 애플리케이션 정합성을 보장하는 스냅샷을 백업합니다.</block>
   <block id="18a6c204240510c87aba39d6d8b5d26b" category="doc">온프레미스 애플리케이션 데이터를 보호합니다</block>
   <block id="37383c5357fd4592db933b96a8b85497" category="paragraph">Cloud Backup for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 사내 ONTAP에서 클라우드로 애플리케이션 정합성을 보장하는 스냅샷을 백업할 수 있습니다. 필요한 경우 클라우드에서 사내 SnapCenter 서버로 복원할 수 있습니다.</block>
-  <block id="0defa64858999a59daec4b1d2f4347aa" category="admonition">SnapCenter 소프트웨어 4.6을 사용해야 합니다.</block>
   <block id="bc2c0309ab805c8d369345a992e020bd" category="paragraph">애플리케이션 데이터를 클라우드 서비스에 백업하기 전에 다음 요구 사항을 읽고 지원되는 구성이 있는지 확인합니다.</block>
   <block id="c3ce6809be6bdc67ae978395484d0585" category="list-text">ONTAP 9.8 이상</block>
   <block id="c6549239974f1da437beed516ee043bd" category="list-text">Cloud Manager 3.9</block>
-  <block id="d9b867faa03f263db1a1aef0d342b990" category="list-text">SnapCenter 서버 4.6</block>
   <block id="f3753469514d2cda99cee390aa2bf172" category="list-text">SnapCenter 서버에서 응용 프로그램당 하나 이상의 백업을 사용할 수 있어야 합니다</block>
   <block id="61f9980bdbfc26a31c724b0711e0c9d7" category="list-text">SnapCenter에서 Cloud Manager의 클라우드 백업 애플리케이션 정책과 레이블 또는 레이블이 없는 일별, 주별 또는 월별 정책 하나 이상</block>
   <block id="c895d0010b397b55778718d6ccc26b78" category="inline-image-macro">Cloud Backup이 백업 파일이 있는 사내 애플리케이션 및 대상 스토리지와 통신하는 방법을 보여주는 다이어그램입니다.</block>
   <block id="bc983d441473b5c9a47c39b5fb57e53f" category="paragraph"><block ref="bc983d441473b5c9a47c39b5fb57e53f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1fb0ab1ae08802d159d677b839bdb6bd" category="section-title">보호 정책</block>
-  <block id="ab8aa891de41102b90b60a6695c93b2b" category="paragraph">Cloud Backup for Applications에 정의된 정책 중 하나를 사용하여 애플리케이션 데이터를 클라우드에 백업해야 합니다.</block>
-  <block id="5f8883ca1df3713b11a27ff48f310b27" category="admonition">사용자 지정 정책은 지원되지 않습니다.</block>
   <block id="002f7378a5fcfc2f66cfea851a7fd5f4" category="cell">정책 이름</block>
   <block id="b021df6aac4654c454f46c77646e745f" category="cell">라벨</block>
   <block id="dfa56cb0ff8ac0e7087134a3d7e1f39d" category="cell">보존 값</block>
@@ -470,8 +466,6 @@
   <block id="f76a9390149b62241c42efed985a431a" category="paragraph">10년 월간 LTR</block>
   <block id="9030e39f00132d583da4122532e509e9" category="paragraph">매월</block>
   <block id="da4fb5c6e93e74d3df8527599fa62642" category="paragraph">120</block>
-  <block id="08feef3c93d2bc4677f8d07fbaa7c6e0" category="paragraph">이러한 정책의 레이블 및 보존 값은 정책이 애플리케이션과 연결될 때까지 REST API를 사용하여 수정할 수 있습니다. 하나의 정책만 응용 프로그램에 연결할 수 있고 한 번 연결된 경우에는 연결을 해제할 수 없습니다.</block>
-  <block id="aac966fa2e345d5aec1dfee10ddf8e83" category="paragraph">클라우드 백업 for Applications 정책 외에도, 애플리케이션 데이터를 클라우드에 백업하려면 적어도 하나의 SnapCenter 정책도 필요합니다.</block>
   <block id="87ccee1471ec33aac8d0152747a90731" category="summary">Cloud Backup은 하나의 Azure 아카이브 액세스 계층 및 대부분의 영역을 지원합니다.</block>
   <block id="834584c768066ae32da6d93ce603642d" category="doc">Azure 아카이브 계층 및 복원 검색 시간</block>
   <block id="9da75d0f7d40b078d43b7554f93291a7" category="section-title">Cloud Backup에 지원되는 Azure Blob 액세스 계층</block>
@@ -693,12 +687,9 @@
   <block id="073db3a1088dabed85a0b9e458290ffe" category="summary">정책과 백업을 볼 수 있습니다. 데이터베이스, 정책 또는 리소스 그룹의 변경에 따라 Cloud Manager UI에서 업데이트를 새로 고칠 수 있습니다.</block>
   <block id="d2107ef674d9474576deedf431042a37" category="doc">애플리케이션 보호 관리</block>
   <block id="b7e23f2fbc84fffbedf563f644b8df93" category="section-title">정책을 봅니다</block>
-  <block id="e4150c5e7f08e683f115597274438525" category="paragraph">사전 구성된 기본 정책을 모두 볼 수 있습니다. 각 정책에 대해 연결된 모든 Cloud Backup for Applications 정책과 모든 관련 애플리케이션이 나열됩니다.</block>
   <block id="8faad9c03119805d80b61715eb7b8c93" category="list-text">백업 및 복원 * &gt; * 응용 프로그램 * 을 클릭합니다.</block>
   <block id="8a53d8d9bdff689ff4cea2f3d55f43de" category="list-text">설정 * 드롭다운에서 * 정책 * 을 클릭합니다.</block>
   <block id="8bdf078d3946fd5743d8283e1dda131b" category="list-text">세부 정보를 보려는 정책에 해당하는 * 세부 정보 보기 * 를 클릭합니다.</block>
-  <block id="29f909b6270a39b26c10105317a7e1e2" category="paragraph">연결된 Cloud Backup for Applications 정책과 모든 애플리케이션이 나열됩니다.</block>
-  <block id="fa1fa3aa4a308712f868f24290d1b2c4" category="admonition">Cloud Backup for Applications 정책은 삭제할 수 없습니다.</block>
   <block id="186767ddfa4a5b30e2b4a7d5eb5fce25" category="inline-link">SnapCenter 소프트웨어 cmdlet 참조 가이드</block>
   <block id="ba3a5c62da437b3b4c145ebaab697c6c" category="paragraph">Get-SmResources SnapCenter cmdlet을 실행하여 클라우드 확장 SnapCenter 정책을 볼 수도 있습니다. cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 Get-Help command_name을 실행하여 얻을 수 있습니다. 또는 을 참조할 수도 있습니다<block ref="30086a18cf21b3d909c213d70f40a693" category="inline-link-rx"></block>.</block>
   <block id="168d35838d683733c740a323264bac1d" category="section-title">클라우드에서 백업 보기</block>
@@ -787,8 +778,6 @@
   <block id="85a2ad69bad082451b7411021cbb2271" category="list-text">백업을 위해 Google Cloud Storage 버킷을 생성할 Google Cloud Project 및 지역을 선택하고 * Next * 를 클릭합니다.</block>
   <block id="437c2bff9e94c6e982529b9d2ef1cd3c" category="paragraph">Project에는 미리 정의된 스토리지 관리자 역할이 있는 서비스 계정이 있어야 합니다.</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">법적 고지</block>
-  <block id="4940124e8487cb4ea36f1511a195cf66" category="inline-link-macro">Cloud Manager 3.9에 대한 고지 사항</block>
-  <block id="c069fcc68c5dfa73ccc99924c836cae9" category="list-text"><block ref="c069fcc68c5dfa73ccc99924c836cae9" category="inline-link-macro-rx"></block></block>
   <block id="72999cd653b12474752fb77bab9691e3" category="inline-link-macro">Cloud Backup에 대한 알림</block>
   <block id="75be9a02506771b87be972c89707f0d4" category="list-text"><block ref="75be9a02506771b87be972c89707f0d4" category="inline-link-macro-rx"></block></block>
   <block id="0b6eb60ffffdbd69e169beb358d8dd44" category="inline-link-macro">단일 파일 복원에 대한 고지 사항</block>
@@ -959,7 +948,6 @@
   <block id="356a014d650e5ff75127d5c7f8512c9b" category="list-text">복원하려는 데이터베이스에 해당하는 * View Details * 를 클릭하고 * Restore * 를 클릭합니다.</block>
   <block id="1dbebac3a4764e845f4bce351937d6b4" category="list-text">복원 유형 페이지에서 다음 작업을 수행합니다.</block>
   <block id="5fece95e369981cd56f2f39bd68e7428" category="list-text">전체 데이터베이스와 함께 제어 파일을 복원하려면 * 제어 파일 * 을 선택합니다.</block>
-  <block id="8c3518e0223eba2a595a920ea1fa79f3" category="list-text">복원 및 복구에 필요한 경우 * 데이터베이스 상태 변경 * 을 선택하여 복원 및 복구 작업을 수행하는 데 필요한 상태로 데이터베이스의 상태를 변경합니다.</block>
   <block id="4254dbd260949ca6f5ee8ef29a3dc68f" category="paragraph">상위 데이터베이스에서 하위 데이터베이스까지의 다양한 상태는 열기, 마운트, 시작 및 종료입니다. 데이터베이스가 더 높은 상태에 있지만 복원 작업을 수행하려면 상태를 더 낮은 상태로 변경해야 하는 경우 이 확인란을 선택해야 합니다. 데이터베이스가 더 낮은 상태에 있지만 복원 작업을 수행하려면 상태를 더 높은 상태로 변경해야 하는 경우 확인란을 선택하지 않아도 데이터베이스 상태가 자동으로 변경됩니다.</block>
   <block id="e4602b24fbe5e3160ce64aa6ae40879b" category="paragraph">데이터베이스가 열려 있는 상태이고 복구를 위해 데이터베이스가 마운트된 상태여야 하는 경우 이 확인란을 선택한 경우에만 데이터베이스 상태가 변경됩니다.</block>
   <block id="2365d9113b1bc87e6269c4e30fec989f" category="list-text">복구 범위 페이지에서 다음 작업을 수행합니다.</block>
@@ -1007,11 +995,8 @@
   <block id="7fd7cfcd645e3badd19eeb02d6cb785e" category="list-text">데이터베이스를 읽기 전용 모드로 전환하려면 * 읽기 전용 모드 및 사용 가능 * 을 선택합니다.</block>
   <block id="1a75ffaf366e9a6a2ae845f891c957dd" category="paragraph">이 옵션은 커밋되지 않은 트랜잭션을 수행하지 않지만 복구 효과를 되돌릴 수 있도록 실행 취소된 작업을 대기 파일에 저장합니다.</block>
   <block id="415de6abf64e1b79451322907edcbcc2" category="paragraph">Undo directory(디렉터리 실행 취소) 옵션이 활성화된 경우 더 많은 트랜잭션 로그가 복원됩니다. 트랜잭션 로그의 복원 작업이 실패한 경우 변경 내용을 롤백할 수 있습니다. 자세한 내용은 SQL Server 설명서를 참조하십시오.</block>
-  <block id="d3f11bee5b2dea925005aed52309cde7" category="summary">ONTAP에서 클라우드 서비스로 애플리케이션 데이터를 백업하려면 몇 가지 단계를 완료하십시오.</block>
   <block id="b5cf194caf973a23140a69fe0080c97a" category="doc">사내 애플리케이션 데이터를 클라우드에 백업</block>
-  <block id="06760aea54de2c6ef0c12b19d036bae7" category="paragraph">Cloud Backup for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 ONTAP에서 클라우드로 애플리케이션 데이터를 백업할 수 있습니다.</block>
   <block id="aa7d3e24c9aefdb463576ad781882e4a" category="section-title">SnapCenter 서버를 등록합니다</block>
-  <block id="48d72cd16a4ca569e29532624a0b868d" category="paragraph">SnapCenter 서버 4.6이 실행 중인 호스트는 SnapCenterAdmin 역할을 가진 사용자만 등록할 수 있습니다. 여러 SnapCenter 서버 호스트를 등록할 수 있지만, 일단 등록하면 SnapCenter 서버 호스트를 제거할 수 없습니다.</block>
   <block id="0e4fb16657a8e26179d9104487074adc" category="list-text">SnapCenter 서버 등록 * 을 클릭합니다.</block>
   <block id="12f2045076b291561318e5d9855f26de" category="list-text">다음 세부 정보를 지정합니다.</block>
   <block id="a2b72916d92415d160f146588d422003" category="list-text">SnapCenter 서버 필드에서 SnapCenter 서버 호스트의 FQDN 또는 IP 주소를 지정합니다.</block>
@@ -1023,24 +1008,16 @@
   <block id="9909e23ede42f2318acada35ac10bd3e" category="list-text">Register * 를 클릭합니다.</block>
   <block id="a2635d75789f249837881cc5136979e1" category="paragraph">* 완료 후 *</block>
   <block id="8774a1166fd7ecb018d0ca8dd0c10ff6" category="paragraph">등록된 SnapCenter 서버 호스트를 사용하여 보호되는 모든 응용 프로그램을 보려면 * 백업 및 복원 * &gt; * 응용 프로그램 * 을 클릭합니다.</block>
-  <block id="59f7c801508748e6c53ef687718def8f" category="admonition">SQL Server 데이터베이스의 경우 Application Name 열에 _application_name(호스트 이름)_format으로 이름이 표시됩니다. 이름을 _application_name(호스트 이름)_format으로 입력하여 검색하면 SQL Server 데이터베이스 세부 정보가 표시되지 않습니다.</block>
   <block id="424576c2dbd9f28977d41eb04b50cbe2" category="paragraph">지원되는 응용 프로그램 및 해당 구성은 다음과 같습니다.</block>
-  <block id="39190b063efcdc2e1947ed3e876425de" category="list-text">Oracle 데이터베이스: 최소 1일, 주별 또는 월별 스케줄을 사용하여 생성된 전체 백업(데이터 + 로그)</block>
   <block id="4a72f37f045ebb34bb24555675861538" category="list-text">Microsoft SQL Server 데이터베이스:</block>
   <block id="3d88c173f74b0d8fb61154f0c64b5d27" category="list-text">독립 실행형, 페일오버 클러스터 인스턴스, 가용성 그룹</block>
   <block id="579ccfb911c4dbe3a52bc9d928fc14c0" category="list-text">최소 1개의 일일, 주별 또는 월별 스케줄을 사용하여 생성된 전체 백업입니다</block>
-  <block id="487e6dc2628eb1389961ff68d0517270" category="paragraph">다음 Oracle 및 SQL Server 데이터베이스는 표시되지 않습니다.</block>
   <block id="bbe7ceb379a1e3ea24ab8bde605209a3" category="list-text">백업이 없는 데이터베이스입니다</block>
   <block id="6403145bf43147af29b8d8774cbc49b2" category="list-text">주문형 또는 시간별 정책만 있는 데이터베이스</block>
-  <block id="bb1d96f302d5344f464aba06b9abf5c5" category="list-text">RDM 또는 VMDK에 상주하는 데이터베이스입니다</block>
-  <block id="55e3bdb562658c45577a90ead27db0ad" category="section-title">애플리케이션 데이터를 백업합니다</block>
-  <block id="f8cc7f50b6243d3da7c4c3d9bc4238b0" category="paragraph">단일 정책을 사용하여 하나 이상의 애플리케이션을 클라우드에 동시에 보호할 수 있습니다. 기본 사전 스캔 정책만 할당하여 애플리케이션을 보호할 수 있습니다.</block>
   <block id="931bb1e79f5cc1150b8f8963e0372a78" category="admonition">Cloud Manager GUI를 사용하는 경우 한 번에 하나의 애플리케이션만 보호할 수 있습니다. 그러나 REST API를 사용하는 경우 여러 애플리케이션을 동시에 보호할 수 있습니다.</block>
-  <block id="baba47264acf044a305d822dd760d502" category="paragraph">SQL Server 인스턴스를 보호하는 경우 해당 인스턴스에 있는 해당 데이터베이스의 모든 볼륨에 대해 클라우드 보호가 구성됩니다. SQL Server 가용성 그룹을 보호하는 경우 해당 가용성 그룹에 있는 데이터베이스의 모든 볼륨에 대해 클라우드 보호가 구성됩니다. 그러나 백업 기본 설정에 따라 해당 볼륨에서 스냅샷이 복사됩니다.</block>
   <block id="f3f150537e8aa89ec04ac4e8202bd62f" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 응용 프로그램에 해당하는 을 클릭하고 * 백업 활성화 * 를 클릭합니다.</block>
   <block id="e3999860c64cf7a6d0ff9b3f2bffe174" category="list-text">작업 환경을 추가합니다.</block>
   <block id="0b2aaaaf834876ea478a04625aa349a5" category="paragraph">애플리케이션이 실행되고 있는 SVM을 호스팅하는 ONTAP 클러스터를 구성합니다. 애플리케이션 중 하나에 대한 작업 환경을 추가한 후 동일한 ONTAP 클러스터에 있는 다른 모든 애플리케이션에 다시 사용할 수 있습니다.</block>
-  <block id="6c0c785531145e018331062da53e0ee1" category="list-text">SVM을 선택하고 작업 환경 추가를 클릭합니다.</block>
   <block id="802c64cb5f599956d1d7617720a88498" category="list-text">작업 환경 추가 마법사에서 다음을 수행합니다.</block>
   <block id="a5337ca6f4f13937f5768cad8a3da3e8" category="list-text">ONTAP 클러스터의 IP 주소를 지정합니다.</block>
   <block id="74530be68401a15b7ea1d28131ab97bc" category="list-text">관리자 자격 증명을 지정합니다.</block>
@@ -1265,7 +1242,6 @@
   <block id="5559993f6f3050a853326203c63f7ed0" category="cell">퍼블릭 클라우드 및 로컬 스냅샷 복사본에서 결과를 찾습니다</block>
   <block id="2ebbc61b9bf1d65389010d4baeb388c1" category="list-text">Kubernetes 클러스터를 Cloud Manager 작업 환경으로 발견했습니다.<block ref="9f26112087077321f30a8a9a55bedf44" category="inline-link-rx"></block>.</block>
   <block id="e63547e1b25be3f2854e3f50cbc53e4c" category="paragraph">가능합니다 <block ref="aa20de8329f0af2f510902910d29f0be" category="inline-link-macro-rx"></block>. 또한 가능합니다 <block ref="091cc4395662354f7a5868ee2318ef97" category="inline-link-macro-rx"></block> GCP(동일한 지역)의 동일한 또는 다른 Kubernetes 클러스터의 새 볼륨으로.</block>
-  <block id="15541295bd26cb0dbcc3c3b8b86b0ea9" category="admonition">작업 환경 세부 정보가 업데이트될 때까지 진행해서는 안 됩니다. 작업 환경 세부 정보를 업데이트하는 데 최대 30분이 걸릴 수 있습니다. 30분 후 마법사를 닫고 1단계에서 다시 시도하여 작업 환경 세부 정보를 확인해야 합니다. 작업 환경 세부 정보가 업데이트되지 않은 경우 다시 시도한 후 올바른 작업 환경을 추가했는지 확인하십시오.</block>
   <block id="a7aea8698166f2ca86f6eca652031639" category="list-text">Trident는 클러스터에 설치해야 하며 Trident 버전은 21.1 이상이어야 합니다. 을 참조하십시오<block ref="efafd7c7be663b6b746c03d24d88023f" category="inline-link-rx"></block> 또는<block ref="23a633d2f31911781b4c35e0d8f7c8b9" category="inline-link-rx"></block>.</block>
   <block id="40ff48613d00df6a5c5543aa0140c38b" category="paragraph"><block ref="40ff48613d00df6a5c5543aa0140c38b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="14f3ef2e312755e7942bb9d424acba3a" category="paragraph">Cloud Backup for Applications에 대한 자세한 내용은 다음을 참조하십시오.</block>
@@ -1283,7 +1259,6 @@
   <block id="74cc281b8e4c7e949e92e69bf209421f" category="summary">작업 환경에서 시작한 백업 및 복원 작업의 상태를 모니터링할 수 있습니다. 이렇게 하면 성공적으로 완료된 작업, 현재 진행 중인 작업 및 실패한 작업을 볼 수 있으므로 문제를 진단하고 해결할 수 있습니다.</block>
   <block id="5fd6f798208daa9906f9880884735da2" category="paragraph">지속적인 백업 작업과 같은 시스템 시작 작업은 * 작업 모니터링 * 탭에 반영되지 않습니다. 사용자 시작 작업만 표시됩니다.</block>
   <block id="7a48560852ec8ed04802b3b0c1192f24" category="paragraph">모든 백업 및 복원 작업 목록과 현재 상태를 볼 수 있습니다. 여기에는 Cloud Volumes ONTAP, 온프레미스 ONTAP, 애플리케이션 및 Kubernetes 시스템 운영이 포함됩니다. 각 작업 또는 작업에는 고유한 ID와 상태가 있습니다. 상태는 다음과 같습니다.</block>
-  <block id="3f69cf45a57ed5ec31eab750cc861f13" category="paragraph">다음 비디오에서는 데이터베이스 보호에 대한 간단한 단계별 안내를 보여 줍니다.</block>
   <block id="aeaeee19a7c393222e407a525cf01991" category="section-title">NSS 계정을 추가합니다</block>
   <block id="de2241fea60d98698faaa196ff73ee80" category="paragraph">지원 대시보드를 이용하면 모든 NetApp Support 사이트 계정을 단일 위치에서 추가 및 관리할 수 있습니다.</block>
   <block id="5be2593b5948f30a15179a32daa73ee2" category="inline-link">1인 등록</block>
@@ -1703,7 +1678,6 @@
   <block id="8602e5067e45157858fdce13f2d722c5" category="paragraph"><block ref="00d667b43393b5baa7f260d36e9ea7c9" category="inline-link-macro-rx"></block>.</block>
   <block id="740aabdace3792e528d0a385bbafa58c" category="paragraph">를 누릅니다<block ref="88ca6566bf61e897964d34c4a123e1db" category="inline-image-macro-rx" type="image"></block></block>
   <block id="30ba145ee7f6cbe8143b7b5e07c516fe" category="paragraph">+ 아카이브 스토리지로 계층화된 백업 파일은 아카이브로 백업을 계층화하는 것을 중지하면 해당 계층에 남아 있습니다. 이러한 백업 파일은 자동으로 표준 계층으로 다시 이동되지 않습니다.</block>
-  <block id="0a215d6790086862e8e2eca1f4aef9d2" category="paragraph">Oracle 및 Microsoft SQL 애플리케이션 데이터를 사내 ONTAP 시스템에서 다음 클라우드 공급자로 백업할 수 있습니다.</block>
   <block id="6beccc67ff905f7da0b29dece26b0485" category="list-text">Amazon Web Services에서 직접 지원합니다</block>
   <block id="1668ca1bd914c1d847f23b491319ac91" category="list-text">Microsoft Azure를 참조하십시오</block>
   <block id="53ebd529678afade9a8cc550535c4832" category="admonition">리소스 그룹의 이름을 선택하려면 * Cloud Volumes ONTAP 배포 시 * 클라우드 백업을 비활성화합니다. 의 단계를 따릅니다 <block ref="518f1876d7249067cbf504987e6e7dc3" category="inline-xref-macro-rx"></block> Cloud Backup을 활성화하고 리소스 그룹을 선택합니다.</block>
@@ -2521,4 +2495,124 @@
   <block id="ad016619a46ca8e0f75292c2c0d1a7a8" category="paragraph">Cloud Backup은 Connector가 사내 또는 다크 사이트에 설치되지 않고 클라우드에 구축된 경우에만 정부 클라우드 영역에서 지원됩니다.</block>
   <block id="b445de53411a165e9c56da6430c38d59" category="inline-link">Azure의 커넥터 규칙</block>
   <block id="f840409b357663e7b24e8296c05770a5" category="list-text">Azure 및 Azure Government 배포에는 추가 인바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오<block ref="e1893ebf6f9d2e927a13d052b78eec9f" category="inline-link-rx"></block> 를 참조하십시오.</block>
+  <block id="2eeb194bf5c17f3408edda6fb4570318" category="summary">ONTAP에서 Azure로 애플리케이션 데이터를 백업하려면 몇 가지 단계를 완료하십시오.</block>
+  <block id="007849ce4500e0ef940d682709a64c87" category="doc">사내 애플리케이션 데이터를 Microsoft Azure에 백업합니다</block>
+  <block id="10955ddc73ebe91eec2159d47e64bbae" category="paragraph">Cloud Backup for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 ONTAP에서 Microsoft Azure로 애플리케이션 데이터를 백업할 수 있습니다.</block>
+  <block id="119bbd90cf306c9fdb87aee95a51d816" category="paragraph">단일 정책을 사용하여 하나 이상의 애플리케이션을 클라우드에 동시에 보호할 수 있습니다.</block>
+  <block id="0e0a0b730150ab18d2f69b65245c64a3" category="list-text">SVM을 선택하고 * 작업 환경 추가 * 를 클릭합니다.</block>
+  <block id="0338fa74556c30bb5b0f61729477209e" category="list-text">클라우드 공급자로 * Microsoft Azure * 를 선택합니다.</block>
+  <block id="3ec390de7db5c59f007c717fb9aa2dac" category="list-text">IP 공간을 지정합니다.</block>
+  <block id="3cae1e7b0c1139a170789e9cf32899f8" category="list-text">아카이브 계층을 선택합니다.</block>
+  <block id="e710c6d8124609e30a4a7712947c1e16" category="paragraph">이 작업은 일회성 작업이므로 나중에 설정할 수 없으므로 보관 계층을 설정하는 것이 좋습니다.</block>
+  <block id="d14a27b37d19411318313c75f11baf13" category="inline-link">Cloud Manager에 대한 알림</block>
+  <block id="8f4eecef1c8abf547a153a1486d48ab2" category="list-text"><block ref="8f4eecef1c8abf547a153a1486d48ab2" category="inline-link-rx"></block></block>
+  <block id="23959c4b9349bcd5e832610f8a4c21b5" category="summary">ONTAP에서 AWS로 애플리케이션 데이터를 백업하려면 몇 가지 단계를 완료하십시오.</block>
+  <block id="a398d70f425729872aae3dc2d3e8feb1" category="doc">사내 애플리케이션 데이터를 Amazon Web Services에 백업합니다</block>
+  <block id="3d6b0bb6d82393ce2315f777d806431e" category="paragraph">클라우드 백업 for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 ONTAP의 애플리케이션 데이터를 Amazon Web Services로 백업할 수 있습니다.</block>
+  <block id="e101aace9ab89472a4fdfde41fce9f4e" category="list-text">클라우드 공급자로 * Amazon Web Services * 를 선택합니다.</block>
+  <block id="53abd7822662a93e6bc58b003f475f63" category="summary">SnapCenter 서버를 등록하려면 몇 단계를 완료하십시오.</block>
+  <block id="6a08a60eb0e1154985f01ad3910ea19c" category="paragraph">SnapCenter Server 4.6 이상이 실행 중인 호스트는 SnapCenterAdmin 역할의 사용자만 등록할 수 있습니다. 여러 SnapCenter 서버 호스트를 등록할 수 있습니다.</block>
+  <block id="64ff69ee9593378d2c9472c37a03ada3" category="paragraph">기본적으로 응용 프로그램은 매일 자정에 자동으로 검색됩니다. 응용 프로그램을 검색하도록 일정을 구성할 수 있습니다.</block>
+  <block id="3b644027e5052c8dfc7017975352dbab" category="admonition">SQL Server 데이터베이스의 경우 응용 프로그램 이름 열에 _application_name(인스턴스 이름)_format 으로 이름이 표시됩니다.</block>
+  <block id="7566851f40372b59a37ca20ab49ac524" category="list-text">Oracle 데이터베이스:</block>
+  <block id="307702335ec628104af8eabe163ed840" category="list-text">최소 1개의 일일, 주별 또는 월별 스케줄을 사용하여 생성된 전체 백업(데이터 + 로그</block>
+  <block id="13b3735b7864b01d01da7477dc85d233" category="list-text">SAN, NFS, VMDK-SAN, VMDK-NFS 및 RDM</block>
+  <block id="93c6c9abd65a6423c75682e7387ccf3f" category="list-text">SAN, VMDK-SAN, VMDK-NFS 및 RDM</block>
+  <block id="fb66f7ade737c443afa34f7ca637f09c" category="list-text">SAP HANA 데이터베이스:</block>
+  <block id="0a66eba030aa21dc33775b41bb05bef2" category="list-text">단일 컨테이너 1.x</block>
+  <block id="5d900c7791f0b4e13331bc25bb512e41" category="list-text">다중 데이터베이스 컨테이너 2.x</block>
+  <block id="d7b51d3528b43ec99abf32071c46598f" category="list-text">HANA 시스템 복제(HSR)</block>
+  <block id="054ebf0caef5f8ff3451668858653117" category="paragraph">기본 사이트와 보조 사이트 모두에 하나 이상의 백업이 있어야 합니다. 보조 장애로의 지연 페일오버 또는 사전 예방적 장애 조치를 수행할 수 있습니다.</block>
+  <block id="4a0aa541ca6173a725ef17e920bc4470" category="list-text">HANA 바이너리, HANA 아카이브 로그 볼륨, HANA 공유 볼륨 등과 같은 NDV(Non-Data Volumes) 리소스</block>
+  <block id="0903f4728cd0540dea2a76942b2b0ce9" category="paragraph">다음 데이터베이스는 표시되지 않습니다.</block>
+  <block id="2f9bbcca9b6763c9b97b7fc28f8b1855" category="list-text">NVMe에 상주하는 Oracle 데이터베이스</block>
+  <block id="37e05e9fe4c5bdfc4b0de270214165cd" category="summary">SAP HANA 및 Oracle 백업을 지정된 데이터베이스에 마운트할 수 있습니다</block>
+  <block id="f806b720158d764a443413aa5a9a658d" category="doc">애플리케이션 백업을 마운트합니다</block>
+  <block id="20b6ee768aae1dad4f52822794ef22b3" category="paragraph">SnapCenter는 대체 호스트에 대한 Oracle 및 HANA 백업 복원을 지원하지 않습니다. 따라서 Cloud Backup for Applications를 사용하면 Oracle 및 HANA 백업을 지정된 호스트에 마운트할 수 있습니다.</block>
+  <block id="7c176ddea482778cb5ba129251e95a0e" category="inline-link-macro">기본 작업 환경의 IP 공간을 설정합니다</block>
+  <block id="f6a7ee3325b83cf5374e8579bf34cf67" category="paragraph">보조 스토리지에서 객체 저장소로 이동한 백업을 마운트하려면 운영 작업 환경 세부 정보를 추가하고 IP 공간을 설정해야 합니다. 자세한 내용은 을 참조하십시오 <block ref="e02b8a08c7642873f6aa3b3d230cfbe4" category="inline-link-macro-rx"></block>.</block>
+  <block id="939f2d392cf3c053138a7886bce3b67c" category="list-text">필터 기준 필드에서 * 유형 * 을 선택하고 드롭다운에서 * SAP HANA * 또는 * Oracle * 을 선택합니다.</block>
+  <block id="1f585f145f271e757924a10173abfa9a" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 보호된 응용 프로그램에 해당하는 * 세부 정보 보기 * 를 선택합니다.</block>
+  <block id="b8dceecbf6473264df0fee99aa880aa8" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 백업에 해당하는 항목을 선택하고 * Mount * 를 선택합니다.</block>
+  <block id="03d405c84bfe0e1a6364e500af6864b1" category="list-text">다음 중 하나를 지정합니다.</block>
+  <block id="fdc2ea7704fffb183409c208a25be1fd" category="list-text">NAS 환경의 경우 객체 저장소에서 복구된 대체 볼륨을 내보낼 호스트의 FQDN 또는 IP 주소를 지정합니다.</block>
+  <block id="54c482133cb8d6602c8502f3a5e8636a" category="list-text">SAN 환경의 경우 오브젝트 저장소에서 복원된 대체 볼륨의 LUN이 매핑될 호스트의 이니시에이터를 지정합니다.</block>
+  <block id="b246bdcdbe3bb4be2767d81ceabaa7c3" category="list-text">대체 볼륨 이름에 추가할 접미사를 지정합니다.</block>
+  <block id="86013e4eb67d3b4efa98a69c18999663" category="list-text">스냅샷이 아카이브 스토리지에 있는 경우 아카이브 스토리지에서 데이터를 검색하는 우선 순위를 지정합니다.</block>
+  <block id="8ece1a3075cf82b4a6288d5a36855ff2" category="list-text">Mount * 를 클릭합니다.</block>
+  <block id="6fe9780b0385ecd858c3941911a2e883" category="paragraph">이 작업은 지정된 호스트에 있는 스토리지만 마운트합니다. 파일 시스템을 수동으로 마운트하고 데이터베이스를 불러와야 합니다. 대체 볼륨을 사용한 후 스토리지 관리자는 ONTAP 클러스터에서 볼륨을 삭제할 수 있습니다.</block>
+  <block id="7a3492bffc26e95ce3669b39a1f14422" category="inline-link">TR-4667: SnapCenter를 사용하여 SAP HANA 시스템 복제 및 클론 작업 자동화</block>
+  <block id="a53c24ea75123fb92d916ca3c6592e08" category="paragraph">SAP HANA 데이터베이스를 가져오는 방법에 대한 자세한 내용은 다음을 참조하십시오.<block ref="d89e94a6aaf703375bdbc4104c3e8227" category="inline-link-rx"></block>.</block>
+  <block id="4a5026c08880a6cd747242fa16385aec" category="admonition">기본을 통한 보조 백업 복구가 지원됩니다.</block>
+  <block id="c4b2754c24325b7485882003d0c5d85a" category="admonition">SFR(단일 파일 복원)은 지원되지 않습니다.</block>
+  <block id="acf994e4904e0990a43c8101030dd5e7" category="paragraph">2차 스토리지에서 오브젝트 저장소로 이동한 백업을 복원하려면 1차 작업 환경 세부 정보를 추가하고 IP 공간을 설정해야 합니다. 자세한 내용은 을 참조하십시오 <block ref="e02b8a08c7642873f6aa3b3d230cfbe4" category="inline-link-macro-rx"></block>.</block>
+  <block id="39a39a3d5651d922f580216bf9d45b85" category="list-text">복구 및 복구 작업을 수행하는 데 필요한 상태로 데이터베이스의 상태를 변경하려면 * 데이터베이스 상태 * 를 선택합니다.</block>
+  <block id="7acc08861d4ed79ef851580e5f995af3" category="list-text">스냅샷이 아카이브 스토리지에 있는 경우 아카이브 스토리지에서 데이터를 복원하는 우선 순위를 지정합니다.</block>
+  <block id="e832ac1a52df9e5be90655bbbb8f4288" category="section-title">2022년 9월 30일</block>
+  <block id="89d500a3ace67f6d47edb61231336589" category="section-title">애플리케이션의 클라우드 백업 개선</block>
+  <block id="2e73884f73c53eee3aea96494fd4ff16" category="list-text">Google Cloud Provider(GCP) 및 StorageGRID를 지원하여 애플리케이션 정합성 보장 스냅샷을 백업합니다</block>
+  <block id="f617da6b50728500642eb376ab97b6f4" category="list-text">사용자 지정 정책을 생성합니다</block>
+  <block id="eaec67d5f8f719a2f05b5ded5dc4ce60" category="list-text">아카이브 스토리지 지원</block>
+  <block id="37976e53c610f9f37f8310aaacc3323e" category="list-text">SAP HANA 애플리케이션 백업</block>
+  <block id="bd3468a6ecb625b121385bd7f39c67e1" category="list-text">VMware 환경에 있는 Oracle 및 SQL 애플리케이션을 백업합니다</block>
+  <block id="a0f2b147a9c0eb0f8a59efd52556c7a2" category="list-text">사내 2차 스토리지에서 애플리케이션을 백업합니다</block>
+  <block id="c05b61fb3f1a201cd787a5c713ee2461" category="list-text">백업을 비활성화합니다</block>
+  <block id="40cfdc443f8536e4e751b21f465246d7" category="list-text">SnapCenter 서버 등록을 취소합니다</block>
+  <block id="e75ce95021f32383e6a928c1b242bc34" category="section-title">가상 머신용 Cloud Backup의 향상된 기능</block>
+  <block id="46a34c0c1ccc14eb217db2e715c43df6" category="list-text">하나 이상의 데이터 저장소를 백업하기 위해 StorageGRID를 지원합니다</block>
+  <block id="ef53758645eb4a736d45c89bc0f0f03d" category="admonition">중요: 기본을 통한 보조 백업 복구가 지원됩니다.</block>
+  <block id="c921edcd8b1c4265c566fc8d2ce4a9b5" category="paragraph">Cloud Manager UI에서 다른 작업을 수행하여 애플리케이션 보호를 관리할 수 있습니다.</block>
+  <block id="0265cbdb76704489ac9a7bbcaed7a2fd" category="paragraph">모든 정책을 볼 수 있습니다. 이러한 각 정책에 대해 세부 정보를 볼 때 연결된 모든 애플리케이션이 나열됩니다.</block>
+  <block id="548ac4488bc12e098791c3b365f344a8" category="paragraph">연결된 애플리케이션이 나열됩니다.</block>
+  <block id="fc85f5d8f0ed03c661f1f9db3972b018" category="admonition">응용 프로그램과 연결된 정책은 편집하거나 삭제할 수 없습니다.</block>
+  <block id="73c43b8b0d9e0b68dac6c6ffb29419df" category="list-text">SAP HANA 데이터베이스의 경우 각 백업의 데이터 백업 및 종료 날짜만 나열됩니다. 백업을 선택하고 마운트 작업을 수행할 수 있습니다.</block>
+  <block id="00ee72b37f44d1aa703da6770529f465" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> SnapCenter 서버에 해당하는 * 등록 취소 * 를 클릭합니다.</block>
+  <block id="2b34c38dda168481090a8622ff2c1712" category="paragraph">보조 스토리지에서 객체 저장소로 이동한 백업을 복구하거나 마운트하려면 운영 작업 환경 세부 정보를 추가하고 IP 공간을 설정해야 합니다.</block>
+  <block id="d0badf3ec6806846f5e8c09b2d17916a" category="list-text">Cloud Manager UI에서 * Canvas * &gt; * 작업 환경 추가 * 를 클릭합니다.</block>
+  <block id="06e3a8b8802d9b7d6de822c69b78b532" category="list-text">기본 작업 환경 세부 정보를 지정하고 * 추가 * 를 클릭합니다.</block>
+  <block id="045b8f4fa7c5c6b0b66dee919bc47804" category="list-text">백업 및 복원 * &gt; * 볼륨 * 을 클릭합니다.</block>
+  <block id="c7087e755792869dcff756ce6d7b1738" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 임의의 볼륨에 대해 * Details * 를 클릭합니다.</block>
+  <block id="d4badf7460fbe89af7d282991c4e0764" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 백업에 해당되며 * Restore * 를 클릭합니다.</block>
+  <block id="dc97342ac8274a03738ec4722f6ac22c" category="list-text">마법사에서 새로 추가된 운영 작업 환경을 대상으로 선택합니다.</block>
+  <block id="4a938aa86ba9c09b265a5dc95f09a99c" category="summary">ONTAP에서 GCP로 애플리케이션 데이터를 백업하기 위한 몇 가지 단계를 완료합니다.</block>
+  <block id="e7626d40bde0cb9f25e876222f0bb5fc" category="doc">사내 애플리케이션 데이터를 StorageGRID에 백업합니다</block>
+  <block id="2ddb9baf1865f05a1baf4eac6cea72c4" category="paragraph">클라우드 백업 for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 ONTAP에서 StorageGRID로 애플리케이션 데이터를 백업할 수 있습니다.</block>
+  <block id="588f7b73c2097f4262c5a26678a85f36" category="paragraph">단일 정책을 사용하여 하나 이상의 애플리케이션을 StorageGRID로 동시에 보호할 수 있습니다.</block>
+  <block id="3c129ae4117659984e8ff0ffd5717f67" category="paragraph">데이터를 StorageGRID에 백업할 때 Connector를 사내에서 사용할 수 있어야 합니다. 새 커넥터를 설치하거나 현재 선택한 커넥터가 내부에 있는지 확인해야 합니다. 커넥터는 인터넷에 접속하거나 접속하지 않고 사이트에 설치할 수 있습니다.</block>
+  <block id="59a3f2ec9c1e69a907655f1e19a09af2" category="inline-link-macro">StorageGRID용 커넥터를 작성합니다</block>
+  <block id="1806359058903db4df45ce103a9946d5" category="paragraph">자세한 내용은 을 참조하십시오 <block ref="af7b391f127d97d1c0df069f7e4831fa" category="inline-link-macro-rx"></block>.</block>
+  <block id="6c5cc1315b69c8256bbc33cf47a5a7ab" category="list-text">StorageGRID * 를 선택합니다.</block>
+  <block id="e4f27df637464ead79d45fbf616da778" category="list-text">StorageGRID 서버의 FQDN과 StorageGRID 서버가 실행 중인 포트를 지정합니다.</block>
+  <block id="8e9f3213cd82bd04250d546c82ac9bcc" category="paragraph">FQDN:port 형식으로 세부 정보를 입력합니다.</block>
+  <block id="da490d8bb350d1ff5d204e7bdf4b2c7d" category="list-text">Access Key 필드에서 키를 지정합니다.</block>
+  <block id="2eccdae60857b53f97fd58344a87c912" category="list-text">암호 키 필드에 암호를 지정합니다.</block>
+  <block id="c50fb53b4416ee77cca5964869eb7313" category="paragraph">온프레미스 ONTAP 시스템에서 Amazon Web Services, Microsoft Azure, Google Cloud 및 StorageGRID로 Oracle, Microsoft SQL 및 SAP HANA 애플리케이션 데이터를 백업할 수 있습니다.</block>
+  <block id="7de0faf266e13fc4fb95e2e3b3f92770" category="admonition">SnapCenter 소프트웨어 4.6 이상을 사용해야 합니다.</block>
+  <block id="351f25e3e7fc628f73a433013b9820a6" category="list-text">SnapCenter 서버 4.6 이상 다음 기능을 사용하려면 SnapCenter 서버 4.7을 사용해야 합니다.</block>
+  <block id="40a593f0986fe870ba02d32e411a2b0d" category="list-text">사내 보조 스토리지에서 백업 보호</block>
+  <block id="972409cf66d07489b16470afa9a8721a" category="list-text">SAP HANA 애플리케이션 보호</block>
+  <block id="0dbe1d2fb09bf62a540d7c669b09c09b" category="list-text">VMware 환경에 있는 Oracle 및 SQL 애플리케이션 보호</block>
+  <block id="4ff9f79b41bbc3b25bc2217ecbbf3632" category="list-text">백업을 마운트합니다</block>
+  <block id="cabbb1ff97c94098b2df5921e1e3a187" category="list-text">백업을 비활성화합니다</block>
+  <block id="29959df44aa132d91a14a42aae1e4be3" category="list-text">SnapCenter 서버 등록을 취소합니다</block>
+  <block id="6b0dd047f807e93274e1f2e25e9b2a57" category="admonition">Cloud Backup for Applications는 FQDN 또는 IP 주소를 사용하여 추가된 SVM에 있는 애플리케이션 보호를 지원하지 않습니다.</block>
+  <block id="29d7639a0c7b9ce1eeb1a132409265c0" category="paragraph">다음 이미지는 클라우드로 백업할 때의 각 구성 요소와 이러한 구성 요소 간에 준비해야 하는 연결을 보여 줍니다.</block>
+  <block id="908a0e47cd03ccd04955cb93b0d41ef4" category="paragraph">다음 이미지는 StorageGRID에 백업할 때의 각 구성 요소와 이러한 구성 요소 간에 준비해야 하는 연결을 보여 줍니다.</block>
+  <block id="cba6a24686804eb1d7fea3608588a013" category="doc">온프레미스 애플리케이션 데이터를 Google Cloud에 백업합니다</block>
+  <block id="73b1edb53fa203c2e4cd95bda6e13351" category="paragraph">Cloud Backup for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 ONTAP에서 Google Cloud로 애플리케이션 데이터를 백업할 수 있습니다.</block>
+  <block id="fa860b204216c5fc8423fbeb3cc0cb75" category="list-text">클라우드 공급자로 * Google Cloud Platform * 을 선택합니다.</block>
+  <block id="511e1b14d4a83c658fb7834ec40ec44b" category="list-text">Google Cloud Storage 버킷을 백업용으로 생성할 Google Cloud Project를 선택합니다.</block>
+  <block id="fa0f3e6189a17df2b37f1f89872dbee4" category="list-text">Google Cloud Access Key 필드에서 키를 지정합니다.</block>
+  <block id="3ee34b7fd8f9ec35694f9ada246e9a7b" category="list-text">Google Cloud Secret Key 필드에서 암호를 지정합니다.</block>
+  <block id="5f1ca0dc5a7a1c5b872ab6837d27232f" category="summary">사전 구성된 정책을 사용하거나 사용자 고유의 정책을 만들어 애플리케이션을 보호합니다.</block>
+  <block id="8a4528cef726e4e36a30d918236162fc" category="doc">응용 프로그램을 백업하는 정책을 만듭니다</block>
+  <block id="484afcea82814f5fe85e74e6007b321a" category="paragraph">사전 구성된 정책 중 하나를 사용하거나 사용자 지정 정책을 생성하여 애플리케이션 데이터를 클라우드에 백업할 수 있습니다. 사전 구성된 정책을 편집하지 않으려는 경우 정책을 생성할 수 있습니다.</block>
+  <block id="9277f475e08326320a5de6bbf7d46b79" category="paragraph">사전 구성된 정책은 다음과 같습니다.</block>
+  <block id="d25a033ca2c7e38b92faa1b51d470cd4" category="list-text">설정 드롭다운에서 * 정책 * &gt; * 정책 생성 * 을 클릭합니다.</block>
+  <block id="6c643a108a881a4245932f23d7c76c22" category="list-text">정책 세부 정보 섹션에서 정책 이름을 지정합니다.</block>
+  <block id="9f6b1aa82322cc4f853fe0fe7c532ff0" category="list-text">보존 섹션에서 보존 유형 중 하나를 선택하고 보존할 백업 수를 지정합니다.</block>
+  <block id="db2205364549e4c4841dc9b5d66f62a3" category="list-text">백업 스토리지 소스로 운영 또는 2차 를 선택합니다.</block>
+  <block id="81fedcf72bda3098b5ab523c2f40b979" category="list-text">(선택 사항) 비용 최적화를 위해 일정 일 후에 오브젝트 저장소에서 아카이브 스토리지로 백업을 이동하려면 * Tier Backups to Archival * 확인란을 선택합니다.</block>
+  <block id="ce5717a5ac194f2c014f6deb6616dbb5" category="paragraph">ONTAP 9.10.1 이상 및 Amazon Web Services 또는 Azure를 클라우드 공급자로 사용하는 경우에만 오브젝트 저장소에서 아카이브 스토리지로 백업을 이동할 수 있습니다. 각 클라우드 공급자에 대해 아카이브 액세스 계층을 구성해야 합니다.</block>
+  <block id="8fcec94b164f3e6b67e681668273f11f" category="paragraph">사용자 지정된 정책을 편집, 복사 및 삭제할 수 있습니다.</block>
 </blocks>
