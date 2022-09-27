@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: task-register-snapCenter-plug-in-for-vmware-vsphere.html 
+keywords: register, registration, SnapCenter Plug-in for VMware vSphere 
+summary: Cloud Manager에서 VMware vSphere용 SnapCenter 플러그인을 등록합니다. 
+---
+= VMware vSphere용 SnapCenter 플러그인을 등록합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager에서 VMware vSphere용 SnapCenter 플러그인을 등록하여 데이터 저장소와 가상 머신을 Cloud Manager에 표시해야 합니다. 관리 액세스 권한이 있는 사용자만 VMware vSphere용 SnapCenter 플러그인을 등록할 수 있습니다.
+
+
+NOTE: VMware vSphere용 SnapCenter 플러그인을 여러 개 등록할 수 있습니다. 그러나 일단 등록하면 VMware vSphere용 SnapCenter 플러그인을 제거할 수 없습니다.
+
+.단계
+. Cloud Manager UI에서 * 백업 및 복원 * > * 가상 머신 * 을 클릭합니다.
+. 설정 * 드롭다운에서 * SnapCenter Plug-in for VMware vSphere * 를 클릭합니다.
+. VMware vSphere * 용 SnapCenter 플러그인 등록 을 클릭합니다.
+. 다음 세부 정보를 지정합니다.
++
+.. VMware vSphere용 SnapCenter 플러그인 필드에서 VMware vSphere용 SnapCenter 플러그인의 FQDN 또는 IP 주소를 지정합니다.
+.. 포트 필드에서 VMware vSphere용 SnapCenter 플러그인이 실행되고 있는 포트 번호를 지정합니다.
++
+VMware vSphere용 SnapCenter 플러그인과 가상 머신용 클라우드 백업 간에 통신이 가능하도록 포트가 열려 있어야 합니다.
+
+.. 사용자 이름 및 암호 필드에서 관리자 역할을 가진 사용자의 자격 증명을 지정합니다.
+
+
+. Register * 를 클릭합니다.
+
+
+* 완료 후 *
+
+등록된 VMware vSphere용 SnapCenter 플러그인을 사용하여 보호할 수 있는 모든 데이터 저장소와 가상 머신을 보려면 * 백업 및 복원 > 가상 머신 * 을 클릭합니다.
