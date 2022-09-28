@@ -324,7 +324,6 @@
   <block id="0e8f3fb260ced5550398e677e8e16659" category="cell">Azure의 Cloud Volumes ONTAP</block>
   <block id="c373a9aa878db8431d1195796e8e6695" category="cell">Google의 Cloud Volumes ONTAP</block>
   <block id="04769aee9bd2927c5587bd92b56cca85" category="cell">사내 ONTAP 시스템</block>
-  <block id="5359990fe520094f026c7db90ea69230" category="paragraph">ONTAP 백업 파일에서 다음 작업 환경으로 볼륨 또는 개별 파일을 복원할 수 있습니다.</block>
   <block id="faa0833cd581ba985bc7c1435b239823" category="cell">백업 파일</block>
   <block id="13afab58626a9721d363115ba16e409c" category="cell">* 위치 *</block>
   <block id="5bf0ec987a44f9a72eb5b422ea39344f" category="cell">* 볼륨 복원 *</block>
@@ -1152,9 +1151,7 @@
   <block id="5afde787e060c3a96f34f757eb507404" category="sidebar">Kubernetes 클러스터를 Amazon S3에 연결</block>
   <block id="3ef08bbbf058b2bc6a87e3ff1ceecd81" category="sidebar">Azure Blob에 대한 Kubernetes 클러스터</block>
   <block id="d5513ddfa26c41caaba3c021a29dbe45" category="sidebar">Kubernetes 클러스터를 Google Cloud로</block>
-  <block id="5f7f9901c41dce1630530dafbee078c8" category="sidebar">백업 파일에서 데이터를 복원합니다</block>
   <block id="e2f83fe82d1e819ed299851d4da320ce" category="sidebar">ONTAP 볼륨을 복원합니다</block>
-  <block id="2b980d17552ec9aa65743e3930cf53cb" category="sidebar">ONTAP 파일을 복원합니다</block>
   <block id="09653b9c7955d4792895fbf1fcaa6ad6" category="sidebar">Kubernetes 볼륨 복원</block>
   <block id="4c371e6c984a858ae1f9d8d607a2cfd4" category="sidebar">ONTAP 백업 파일을 관리합니다</block>
   <block id="c88c557dd4e62b29bc87fc433d1738c6" category="sidebar">볼륨 백업을 설정 및 해제합니다</block>
@@ -1572,7 +1569,6 @@
   <block id="0959a2f5eff65303771c49363a01d789" category="cell">Azure Blob endif::Azure []ifdef::GCP[]</block>
   <block id="c0b279eeed106351906f95aa546f2ffa" category="cell">Google Cloud 스토리지 엔디프::GCP[]</block>
   <block id="45258f319fcdf104df4058c07c21ef2e" category="cell">ifdef::AWS[]Amazon S3 endif::AWS[]ifdef::Azure[]Azure Blob endif::Azure[]ifdef::GCP[]Google Cloud Storage endif:GCP[]NetApp StorageGRID</block>
-  <block id="5ea51d13d3e392d52aa5c1c4bd7d5e09" category="cell">* 파일 복원 * ifdef::AWS[]</block>
   <block id="bc7aa7434d0ca9752e2c02b4ffee9953" category="cell">Cloud Volumes ONTAP in AWS on-premises ONTAP system endif::AWS[]ifdef::Azure[]</block>
   <block id="b97f160a229c063bdce958beafa0f695" category="cell">Azure 사내 ONTAP 시스템의 Cloud Volumes ONTAP endif::Azure []ifdef::GCP[]</block>
   <block id="a9f8eef7fdd18a9397fd96b661adbbf3" category="cell">Google 사내 ONTAP 시스템의 Cloud Volumes ONTAP::GCP []</block>
@@ -2440,7 +2436,6 @@
   <block id="6176afad6a7761beffa9af008f2ae633" category="inline-link">빠른 데모 보기</block>
   <block id="a9840ddd0211114f18d80718c08ddb05" category="paragraph"><block ref="a9840ddd0211114f18d80718c08ddb05" category="inline-link-rx"></block></block>
   <block id="cd2965bfeacaceb11394002abe013260" category="summary">PAYGO(Pay-as-you-Go) 또는 클라우드 공급자로부터 연간 시장 가입 서비스를 구입하거나 NetApp에서 BYOL(Bring-Your-Own-License)을 구입하여 Cloud Backup의 라이센스를 부여할 수 있습니다. 작업 환경에서 Cloud Backup을 활성화하고, 운영 데이터의 백업을 생성하고, 백업 데이터를 운영 시스템에 복원하려면 유효한 라이센스가 필요합니다.</block>
-  <block id="3bd6fb8c012d3c55be34dc4f82895451" category="paragraph">필요한 경우 백업에서 전체 _volume_, 폴더 또는 하나 이상의 _files_를 동일하거나 다른 작업 환경으로 복원할 수 있습니다.</block>
   <block id="ca636232aaf17fe5d8fef3b105b4363c" category="list-text">볼륨, 폴더 또는 개별 파일을 소스 시스템 또는 다른 시스템으로 복원합니다.</block>
   <block id="ead18a75e8ad08c3fd02c4ded3f53521" category="list-text">단일 파일 복원을 위한 개별 폴더 및 파일을 선택할 수 있는 탐색 가능 및 검색 가능한 파일 카탈로그입니다.</block>
   <block id="b05129b87daa8f26e20ce7f835876ea3" category="list-text">오브젝트 저장소의 WORM/규정 준수 모드는 현재 Amazon S3 및 StorageGRID에서만 지원됩니다. 이를 DataLock 기능이라고 합니다.</block>
@@ -2663,4 +2658,8 @@
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">이 과정에서 NetApp이 연락을 드릴 것입니다. 신규 사용자를 위한 일회성 온보딩 연습입니다.</block>
   <block id="cc7175a084ebd6e004cb2c751c162569" category="paragraph">NetApp Support 사이트 계정이 있으면 Cloud Manager로 이동하여 향후 등록을 위해 이 NSS 계정을 추가할 수 있습니다.</block>
   <block id="2d96aa84884717fd77e4906d82c73ddc" category="section-title">2022년 9월 28일</block>
+  <block id="d45e0847841b73f9b8082d6a7bc89f24" category="paragraph">필요한 경우 백업에서 전체 _volume_, _folder_ 또는 하나 이상의 _files_ 를 동일하거나 다른 작업 환경으로 복원할 수 있습니다.</block>
+  <block id="262efb8db11032d91af39217fa610e82" category="paragraph">ONTAP 백업 파일에서 다음 작업 환경으로 볼륨, 폴더 또는 개별 파일을 복원할 수 있습니다.</block>
+  <block id="5a885bd71d1142c7d1b89fcfcf197a41" category="sidebar">ONTAP 백업 파일에서 데이터를 복원합니다</block>
+  <block id="ba9a6951ecf97e593c2140f66a8574bf" category="sidebar">ONTAP 볼륨에서 파일 및 폴더를 복구합니다</block>
 </blocks>
