@@ -145,7 +145,7 @@ Azure VNET 또는 구내에 이미 Connector가 배포되어 있는 경우 모�
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["구내에 커넥터 설치"^]
 
 
-Cloud Backup은 Connector가 사내 또는 다크 사이트에 설치되지 않고 클라우드에 구축된 경우에만 정부 클라우드 영역에서 지원됩니다.
+Connector가 온프레미스나 어두운 사이트에 설치되어 있지 않고 클라우드에 배포된 경우 Azure Government 지역에서는 Cloud Backup이 지원됩니다. 또한 Azure Marketplace에서 Connector를 배포해야 합니다. Cloud Manager SaaS 웹 사이트에서는 정부 지역에 Connector를 구축할 수 없습니다. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-launching-azure-mktp.html["Azure Government 지역에서 Connector를 만드는 방법을 알아보십시오"].
 
 
 
