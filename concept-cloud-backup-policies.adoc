@@ -14,13 +14,13 @@ summary: 이 문서에서는 Cloud Backup의 백업 정책 구성 설정에 대�
 
 
 [role="lead"]
-이 문서에서는 Cloud Backup의 백업 정책 구성 설정에 대해 설명합니다.
+이 문서에서는 Cloud Backup Service를 사용할 때 사내 ONTAP 시스템 및 Cloud Volumes ONTAP 시스템에 대한 백업 정책 구성 설정에 대해 설명합니다.
 
 
 
 == 백업 스케줄
 
-Cloud Backup을 사용하면 각 작업 환경에 대해 고유한 스케줄로 여러 백업 정책을 생성할 수 있습니다. RPO(복구 시점 목표)가 다른 볼륨에 서로 다른 백업 정책을 할당할 수 있습니다.
+Cloud Backup을 사용하면 각 작업 환경(클러스터)에 대해 고유한 스케줄로 여러 백업 정책을 생성할 수 있습니다. RPO(복구 시점 목표)가 다른 볼륨에 서로 다른 백업 정책을 할당할 수 있습니다.
 
 각 백업 정책은 백업 파일에 적용할 수 있는 _Labels & Retention_ 섹션을 제공합니다.
 
@@ -28,10 +28,10 @@ image:screenshot_backup_schedule_settings.png["백업 정책을 생성할 때의
 
 스케줄에는 Label 및 Retention 값의 두 가지 부분이 있습니다.
 
-* 레이블 * 은 볼륨에서 백업 파일이 생성되는 빈도를 정의합니다. 다음 유형의 라벨 중에서 선택할 수 있습니다.
+* 레이블 * 은 볼륨에서 백업 파일이 생성(또는 업데이트)되는 빈도를 정의합니다. 다음 유형의 라벨 중에서 선택할 수 있습니다.
 +
 ** hourly *, * daily *, * weekly *, * monthly *, * monthly *, * monthly *, * hourly * 중 하나 또는 그 조합을 선택할 수 있습니다. 및 * 연간 * 기간.
-** 3개월, 1년 및 7년 동안 백업 및 보존을 제공하는 시스템 정의 정책 중 하나를 선택할 수 있습니다.
+** 3개월, 1년 또는 7년 동안 백업 및 보존을 제공하는 시스템 정의 정책 중 하나를 선택할 수 있습니다.
 ** ONTAP System Manager 또는 ONTAP CLI를 사용하여 클러스터에서 맞춤형 백업 보호 정책을 생성한 경우 해당 정책 중 하나를 선택할 수 있습니다.
 
 
@@ -41,8 +41,8 @@ image:screenshot_backup_schedule_settings.png["백업 정책을 생성할 때의
 예를 들어 7 * weekly * 및 12 * monthly * 백업을 생성하는 백업 정책을 생성한다고 가정해 보겠습니다.
 
 * 매주 및 매월 볼륨에 대한 백업 파일이 생성됩니다
-* 8번째 주에 첫 번째 주별 백업이 8번째 주에 대한 주별 백업으로 대체됩니다(최대 7개의 주별 백업 유지).
-* 13번째 달에는 첫 번째 월별 백업이 13개월 동안의 월별 백업으로 대체됩니다(최대 12개의 월별 백업 유지).
+* 8번째 주에 첫 번째 주별 백업이 제거되고 8번째 주에 대한 새 주별 백업이 추가됩니다(최대 7개의 주별 백업 유지).
+* 13번째 달에는 첫 번째 월별 백업이 제거되고 13번째 달의 새 월별 백업이 추가됩니다(최대 12개의 월별 백업 유지).
 
 
 
@@ -72,11 +72,11 @@ DataLock은 백업 파일이 특정 기간 동안 수정 또는 삭제되지 않
 
 이 작동 방식에 대한 몇 가지 예를 살펴보겠습니다.
 
-* 12개의 보존 기간을 사용하여 월별 백업 스케줄을 생성하는 경우 백업이 삭제되기 전 12개월(14일 이상) 동안 잠깁니다(다음 백업 파일로 대체).
+* 12개의 보존 기간을 사용하여 월별 백업 스케줄을 생성하는 경우 각 백업은 삭제하기 전에 12개월(14일 추가) 동안 잠깁니다.
 * 매일 30회, 매주 7회, 12회 월별 백업을 생성하는 백업 정책을 생성하는 경우 3회의 잠금 보존 기간이 있습니다. "30일" 백업은 44일(30일 + 14일 버퍼) 동안 유지되고 "7주" 백업은 9주(7주 + 14일) 동안 보존되며 "12개월" 백업은 12개월(14일 추가)동안 보존됩니다.
-* 24개의 보존 기간을 사용하여 시간별 백업 일정을 생성하는 경우 24시간 동안 백업이 잠겨있는 것으로 생각할 수 있습니다. 그러나 이 기간이 최소 30일 미만이므로 각 백업은 44일(30일 + 14일 버퍼) 동안 잠기고 보존됩니다.
+* 24개의 보존 기간을 사용하여 시간별 백업 일정을 생성하는 경우 백업이 24시간 동안 잠겨 있다고 생각할 수 있습니다. 그러나 이 기간이 최소 30일 미만이므로 각 백업은 44일(30일 + 14일 버퍼) 동안 잠기고 보존됩니다.
 +
-이 마지막 사례에서는 각 백업 파일이 44일 동안 잠겨 있는 경우, 일반적으로 1시간/24시간 보존 정책으로 보존되는 것보다 더 많은 백업 파일이 포함됩니다. 일반적으로 Cloud Backup은 25번째 백업 파일을 생성한 후 가장 오래된 백업을 삭제하여 최대 보존 한도를 24로 유지합니다(정책에 따라). DataLock 보존 설정은 이 경우 백업 정책의 정책 보존 설정을 재정의합니다. 이 경우 백업 파일이 개체 저장소에 장기간 저장되므로 스토리지 비용이 영향을 받을 수 있습니다.
+이 마지막 사례에서는 각 백업 파일이 44일 동안 잠겨 있는 경우, 일반적으로 1시간/24시간 보존 정책으로 보존되는 것보다 더 많은 백업 파일이 포함됩니다. 일반적으로 Cloud Backup은 25번째 백업 파일을 생성할 때 가장 오래된 백업을 삭제하여 최대 보존 한도를 24로 유지합니다(정책에 따라). DataLock 보존 설정은 이 경우 백업 정책의 정책 보존 설정을 재정의합니다. 이 경우 백업 파일이 개체 저장소에 장기간 저장되므로 스토리지 비용이 영향을 받을 수 있습니다.
 
 
 
@@ -90,7 +90,7 @@ DataLock은 백업 파일이 특정 기간 동안 수정 또는 삭제되지 않
 
 * 백업 파일이 생성된 경우
 +
-클라우드 스토리지에 처음 기록될 때는 백업 파일에 대해 검사가 수행되지 않고 다음 백업 파일이 기록될 때 수행됩니다. 예를 들어 화요일의 주별 백업 스케줄이 설정되어 있는 경우 14일 화요일에 백업이 생성됩니다. 그리고 화요일에 또 다른 백업이 생성됩니다. 랜섬웨어 스캔은 현재 14번째 백업 파일에서 실행됩니다.
+클라우드 스토리지에 처음 기록될 때는 백업 파일에 대해 검사가 수행되지 않지만 * next * 백업 파일이 기록될 때는 검사가 수행됩니다. 예를 들어 화요일의 주별 백업 스케줄이 설정되어 있는 경우 14일 화요일에 백업이 생성됩니다. 그리고 화요일에 또 다른 백업이 생성됩니다. 랜섬웨어 스캔은 현재 14번째 백업 파일에서 실행됩니다.
 
 * 백업 파일에서 데이터를 복원하려고 할 때
 +
@@ -130,7 +130,7 @@ DataLock은 보존 기간 동안 사용자가 백업 파일을 덮어쓰거나 �
 
 
 
-NOTE: StorageGRID S3 오브젝트 잠금 기능은 규정 준수 모드에 해당하는 단일 데이터 잠금 모드를 제공합니다. 동일한 거버넌스 모드는 지원되지 않으므로 사용자는 보존 설정을 무시하거나, 보호된 백업을 덮어쓰거나, 백업을 삭제할 수 없습니다.
+NOTE: StorageGRID S3 오브젝트 잠금 기능은 규정 준수 모드에 해당하는 단일 데이터 잠금 모드를 제공합니다. 동일한 거버넌스 모드는 지원되지 않으므로 사용자는 보존 설정을 무시하거나, 보호된 백업을 덮어쓰거나, 잠긴 백업을 삭제할 수 없습니다.
 
 
 
@@ -138,7 +138,7 @@ NOTE: StorageGRID S3 오브젝트 잠금 기능은 규정 준수 모드에 해�
 
 다음 퍼블릭 및 프라이빗 클라우드 공급자가 오브젝트 스토리지를 사용하는 경우, 다음과 같은 작업 환경에서 ONTAP 볼륨의 DataLock 및 랜섬웨어 보호를 활성화할 수 있습니다. 향후 릴리즈에서는 클라우드 공급자를 더 추가할 예정입니다.
 
-[cols="45,45"]
+[cols="50,50"]
 |===
 | 소스 작업 환경 | 백업 파일 대상 ifdef::AWS[] 
 
@@ -158,41 +158,45 @@ NOTE: StorageGRID S3 오브젝트 잠금 기능은 규정 준수 모드에 해�
 
 ifdef::aws[]
 
-* AWS의 경우 Connector를 클라우드에 구축해야 합니다
-* 다음 S3 권한은 Connector에 권한을 제공하는 IAM 역할의 일부여야 합니다. 이러한 리소스는 리소스 "arn:AWS:S3::NetApp-backup- *"의 "backupS3Policy" 섹션에 있습니다.
+* AWS의 경우:
 +
-** S3:GetObjectVersionTagging
-** S3:GetBuckketObjectLockConfiguration
-** S3:GetObjectVersionAcl
-** S3:PutObjectTagging
-** S3:DeleteObject 를 선택합니다
-** S3:삭제 ObjectTagging
-** S3:GetObjectRetention
-** S3:DeleteObjectVersionTagging
-** S3:PutObject
-** S3:GetObject
-** S3:PutBucketObjectLockConfiguration
-** S3:GetLifecycleConfiguration
-** S3:ListBucketByTags
-** S3:GetBucketTagging
-** S3:DeleteObjectVersion
-** S3:목록 BuckketVersions
-** S3:목록 버킷
-** S3: PutBucketTagging
-** S3:GetObjectTagging
-** S3: PutBucketVersioning
-** S3:PutObjectVersionTagging
-** S3:GetBucketVersioning
-** S3:GetBuckketAcl
-** S3:BypassGovernanceRetention
-** S3:PutObjectRetention
-** S3:GetBucketLocation
-** S3:GetObjectVersion
+** Connector는 클라우드에 배포해야 합니다
+** 다음 S3 권한은 Connector에 권한을 제공하는 IAM 역할의 일부여야 합니다. 이러한 리소스는 리소스 "arn:AWS:S3::NetApp-backup- *"의 "backupS3Policy" 섹션에 있습니다.
++
+*** S3:GetObjectVersionTagging
+*** S3:GetBuckketObjectLockConfiguration
+*** S3:GetObjectVersionAcl
+*** S3:PutObjectTagging
+*** S3:DeleteObject 를 선택합니다
+*** S3:삭제 ObjectTagging
+*** S3:GetObjectRetention
+*** S3:DeleteObjectVersionTagging
+*** S3:PutObject
+*** S3:GetObject
+*** S3:PutBucketObjectLockConfiguration
+*** S3:GetLifecycleConfiguration
+*** S3:ListBucketByTags
+*** S3:GetBucketTagging
+*** S3:DeleteObjectVersion
+*** S3:목록 BuckketVersions
+*** S3:목록 버킷
+*** S3: PutBucketTagging
+*** S3:GetObjectTagging
+*** S3: PutBucketVersioning
+*** S3:PutObjectVersionTagging
+*** S3:GetBucketVersioning
+*** S3:GetBuckketAcl
+*** S3:BypassGovernanceRetention
+*** S3:PutObjectRetention
+*** S3:GetBucketLocation
+*** S3:GetObjectVersion
 +
 "S3:BypassGovernanceRetention"은 관리 사용자가 Governance 모드를 사용하여 잠긴 백업 파일을 덮어쓰거나 삭제할 수 있도록 하려는 경우에만 추가해야 합니다.
 
 +
 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html["필요한 권한을 복사하여 붙여넣을 수 있는 정책의 전체 JSON 형식을 봅니다"^].
+
+
 
 
 
@@ -234,7 +238,7 @@ ifdef::aws[]
 
 * AWS에서는 백업이 _Standard_storage 클래스에서 시작되고 30일 후에 _Standard - Infrequent Access_storage 클래스로 전환됩니다.
 +
-클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 클라우드 백업 UI의 _S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. link:reference-aws-backup-tiers.html["AWS 아카이브 스토리지에 대해 자세히 알아보십시오"^].
+클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 이전 백업을 _S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 계층화하도록 선택할 수 있습니다. link:reference-aws-backup-tiers.html["AWS 아카이브 스토리지에 대해 자세히 알아보십시오"^].
 
 +
 Cloud Backup을 활성화할 때 첫 번째 백업 정책에서 _S3 Glacier_또는 _S3 Glacier Deep Archive_를 선택한 경우 해당 계층은 해당 클러스터에 대한 향후 백업 정책에 사용할 수 있는 유일한 아카이브 계층이 됩니다. 첫 번째 백업 정책에서 아카이브 계층을 선택하지 않으면 _S3 Glacier_는 이후 정책에 대한 유일한 보관 옵션입니다.
@@ -247,7 +251,7 @@ ifdef::azure[]
 
 * Azure에서 백업은 _Cool_access 계층과 연결됩니다.
 +
-클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 클라우드 백업 UI의 _Azure Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. link:reference-azure-backup-tiers.html["Azure 아카이브 스토리지에 대해 자세히 알아보십시오"^].
+클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 이전 백업을 _Azure Archive_storage에 계층화하도록 선택할 수 있습니다. link:reference-azure-backup-tiers.html["Azure 아카이브 스토리지에 대해 자세히 알아보십시오"^].
 
 
 

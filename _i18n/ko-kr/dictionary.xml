@@ -1725,7 +1725,6 @@
   <block id="19b05e78d3464eff3a0a4847f0b66324" category="list-text">GCP를 사용할 경우 NetApp에서 프라이빗 제안을 요청하고, Cloud Backup 활성화 중에 Google Cloud Marketplace에서 가입할 때 계획을 선택할 수 있습니다.</block>
   <block id="cf6d8dee9b177c1138ae0ee4e07dc2f3" category="inline-link-macro">연간 계약을 설정하는 방법에 대해 알아봅니다</block>
   <block id="cc0eb7dbb8893977120a22b09b8c4ca0" category="paragraph"><block ref="f5d5ae39791d9eaf9e8591b7cfcc3b96" category="inline-link-macro-rx"></block>.</block>
-  <block id="7fc2834f67e497ab1b49f283ea0500e6" category="paragraph">작업 환경에 Cloud Backup을 활성화하면 처음에 선택한 모든 볼륨이 사용자가 정의한 기본 백업 정책을 사용하여 백업됩니다. RPO(복구 지점 목표)가 다른 특정 볼륨에 서로 다른 백업 정책을 할당하려는 경우 해당 클러스터에 대한 추가 정책을 생성하고 백업이 활성화된 후 해당 정책을 다른 볼륨에 할당할 수 있습니다.</block>
   <block id="c47b9175ecebbf21ca2cd87a3a34dc85" category="paragraph">모든 볼륨의 시간별, 일별, 주별, 월별 및 연도별 백업을 조합하여 선택할 수 있습니다. 또한 3개월, 1년 및 7년 동안 백업 및 보존을 제공하는 시스템 정의 정책 중 하나를 선택할 수도 있습니다. 이러한 정책은 다음과 같습니다.</block>
   <block id="952a500aaf6d2c5ad8514e3fa5bd6474" category="paragraph">범주 또는 간격에 대한 최대 백업 수에 도달하면 오래된 백업이 제거되므로 항상 최신 백업이 존재하므로 오래된 백업은 클라우드에서 공간을 차지하지 않습니다.</block>
   <block id="6cc30d6c33bfc4f65037828783c2a89d" category="paragraph">Cloud Backup은 다음 유형의 볼륨을 지원합니다.</block>
@@ -1890,19 +1889,14 @@
   <block id="b376676c4c1945b60563d3f5ea93e159" category="summary">이 문서에서는 Cloud Backup의 백업 정책 구성 설정에 대해 설명합니다.</block>
   <block id="f06685f05a46539219fb2db68c9ade26" category="doc">클라우드 백업 정책 구성 설정</block>
   <block id="1ac86f6dd27abfcb13588ec9dff9ba2a" category="section-title">백업 스케줄</block>
-  <block id="47af5e4e96b94681a1fda003140d66de" category="paragraph">Cloud Backup을 사용하면 각 작업 환경에 대해 고유한 스케줄로 여러 백업 정책을 생성할 수 있습니다. RPO(복구 시점 목표)가 다른 볼륨에 서로 다른 백업 정책을 할당할 수 있습니다.</block>
   <block id="4c2b90bc53de152e23fccbce641ea19e" category="paragraph">각 백업 정책은 백업 파일에 적용할 수 있는 _Labels &amp; Retention_ 섹션을 제공합니다.</block>
   <block id="154eb228b3f63f7705fe329177ea16b6" category="inline-image-macro">백업 정책을 생성할 때의 백업 일정 설정 스크린샷</block>
   <block id="38175fe10c317ca778ce56abf9d3ff3f" category="paragraph"><block ref="38175fe10c317ca778ce56abf9d3ff3f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dca086ae01946b6cf950f1291d93aac6" category="paragraph">스케줄에는 Label 및 Retention 값의 두 가지 부분이 있습니다.</block>
-  <block id="2b98372cf63d6e1e40baa5a92732edd0" category="list-text">레이블 * 은 볼륨에서 백업 파일이 생성되는 빈도를 정의합니다. 다음 유형의 라벨 중에서 선택할 수 있습니다.</block>
   <block id="5a35ddef63d61c71445e13d3c9588a2d" category="list-text">hourly *, * daily *, * weekly *, * monthly *, * monthly *, * monthly *, * hourly * 중 하나 또는 그 조합을 선택할 수 있습니다. 및 * 연간 * 기간.</block>
-  <block id="72ed362887dfa09e979a0265f8247124" category="list-text">3개월, 1년 및 7년 동안 백업 및 보존을 제공하는 시스템 정의 정책 중 하나를 선택할 수 있습니다.</block>
   <block id="c3453b6163eafb5ced9753c1ce3419e7" category="list-text">ONTAP System Manager 또는 ONTAP CLI를 사용하여 클러스터에서 맞춤형 백업 보호 정책을 생성한 경우 해당 정책 중 하나를 선택할 수 있습니다.</block>
   <block id="61b862400cd7156cb725e12fe1947d88" category="list-text">retention * 값은 각 레이블(기간)의 백업 파일 수를 정의합니다. 범주 또는 간격에서 최대 백업 수에 도달하면 오래된 백업이 제거되므로 항상 최신 백업이 유지됩니다. 또한, 폐기된 백업이 클라우드에서 공간을 차지하지 않기 때문에 스토리지 비용이 절감됩니다.</block>
   <block id="292f9f5eb65ebf40fd71fda6e8b093e7" category="list-text">매주 및 매월 볼륨에 대한 백업 파일이 생성됩니다</block>
-  <block id="b5cdfa0edd5a8bb432fe066f8fbcb82f" category="list-text">8번째 주에 첫 번째 주별 백업이 8번째 주에 대한 주별 백업으로 대체됩니다(최대 7개의 주별 백업 유지).</block>
-  <block id="f229fe4211204b2ac0e2c6733e936325" category="list-text">13번째 달에는 첫 번째 월별 백업이 13개월 동안의 월별 백업으로 대체됩니다(최대 12개의 월별 백업 유지).</block>
   <block id="23433a4a1c369f850662f43bac40d8ae" category="section-title">DataLock 및 랜섬웨어 보호</block>
   <block id="3960b74bd00136bf9d473cf143876ec1" category="paragraph">Cloud Backup은 볼륨 백업을 위한 DataLock 및 랜섬웨어 보호를 지원합니다. 이러한 기능을 사용하여 백업 파일을 잠그고 검색하여 백업 파일에서 잠재적인 랜섬웨어를 감지할 수 있습니다. 이 설정은 클러스터에 대한 볼륨 백업에 대한 추가 보호를 원할 때 백업 정책에 정의할 수 있는 선택적 설정입니다.</block>
   <block id="6c73c9d6c177001ef79643ba7b341c9e" category="list-text">DataLock 및 랜섬웨어 보호를 사용하려는 경우 첫 번째 백업 정책을 생성하고 해당 클러스터에 대한 Cloud Backup을 활성화할 때 활성화해야 합니다.</block>
@@ -1910,15 +1904,10 @@
   <block id="921b747c1abfd997d26a273c0b62011b" category="section-title">DataLock이란 무엇입니까</block>
   <block id="dfb62b997a26ac6f842b39091a92428a" category="paragraph">DataLock은 백업 파일이 특정 기간 동안 수정 또는 삭제되지 않도록 보호합니다. 이 기능은 오브젝트 스토리지 공급자의 기술을 '오브젝트 잠금'에 사용합니다. 백업 파일이 잠기고 유지되는 기간을 DataLock 보존 기간이라고 합니다. 이 값은 사용자가 정의한 백업 정책 스케줄 및 보존 설정과 14일 버퍼를 기반으로 합니다. 30일 미만의 모든 DataLock 보존 정책은 최소 30일로 반올림됩니다.</block>
   <block id="f6494bde8c5d58e1a40bf174c8083f96" category="paragraph">이 작동 방식에 대한 몇 가지 예를 살펴보겠습니다.</block>
-  <block id="19606e2b227c881953690cfcbb2621ad" category="list-text">12개의 보존 기간을 사용하여 월별 백업 스케줄을 생성하는 경우 백업이 삭제되기 전 12개월(14일 이상) 동안 잠깁니다(다음 백업 파일로 대체).</block>
   <block id="4f326e1a4453cc79600c1df4374d2c22" category="list-text">매일 30회, 매주 7회, 12회 월별 백업을 생성하는 백업 정책을 생성하는 경우 3회의 잠금 보존 기간이 있습니다. "30일" 백업은 44일(30일 + 14일 버퍼) 동안 유지되고 "7주" 백업은 9주(7주 + 14일) 동안 보존되며 "12개월" 백업은 12개월(14일 추가)동안 보존됩니다.</block>
-  <block id="74e291c59b5337829d6b959b562110ba" category="list-text">24개의 보존 기간을 사용하여 시간별 백업 일정을 생성하는 경우 24시간 동안 백업이 잠겨있는 것으로 생각할 수 있습니다. 그러나 이 기간이 최소 30일 미만이므로 각 백업은 44일(30일 + 14일 버퍼) 동안 잠기고 보존됩니다.</block>
-  <block id="d9d4ba4e9716540e097a3623daaf1962" category="paragraph">이 마지막 사례에서는 각 백업 파일이 44일 동안 잠겨 있는 경우, 일반적으로 1시간/24시간 보존 정책으로 보존되는 것보다 더 많은 백업 파일이 포함됩니다. 일반적으로 Cloud Backup은 25번째 백업 파일을 생성한 후 가장 오래된 백업을 삭제하여 최대 보존 한도를 24로 유지합니다(정책에 따라). DataLock 보존 설정은 이 경우 백업 정책의 정책 보존 설정을 재정의합니다. 이 경우 백업 파일이 개체 저장소에 장기간 저장되므로 스토리지 비용이 영향을 받을 수 있습니다.</block>
   <block id="57f10edfffe2adcbce7ee7a76dc7702f" category="section-title">랜섬웨어 보호란 무엇입니까</block>
-  <block id="cad8a645661899cd5a1b0a948cae91fd" category="paragraph">랜섬웨어 차단 기능은 백업 파일을 검사하여 랜섬웨어 공격의 증거를 찾습니다. 랜섬웨어 공격 탐지 작업은 체크섬 비교를 통해 수행됩니다. 잠재적인 랜섬웨어가 백업 파일에서 이전 백업 파일과 비교하여 식별되면, 최신 백업 파일이 랜섬웨어 공격의 징후를 보이지 않는 최신 백업 파일로 대체됩니다. (랜섬웨어 공격이 발생한 것으로 확인된 파일은 교체후 1일 후에 삭제됩니다.)</block>
   <block id="6178bb3c1b6a8af3ec3a7000d38df00e" category="paragraph">랜섬웨어 스캔은 백업 및 복원 프로세스의 3지점에서 수행됩니다.</block>
   <block id="74fdca54d2260fb26943ee68a4de7888" category="list-text">백업 파일이 생성된 경우</block>
-  <block id="07b31f5674c57b8903c6b15b2144b514" category="paragraph">클라우드 스토리지에 처음 기록될 때는 백업 파일에 대해 검사가 수행되지 않고 다음 백업 파일이 기록될 때 수행됩니다. 예를 들어 화요일의 주별 백업 스케줄이 설정되어 있는 경우 14일 화요일에 백업이 생성됩니다. 그리고 화요일에 또 다른 백업이 생성됩니다. 랜섬웨어 스캔은 현재 14번째 백업 파일에서 실행됩니다.</block>
   <block id="f656e9389b65beefa5f22506a262c68a" category="list-text">백업 파일에서 데이터를 복원하려고 할 때</block>
   <block id="d71c7fafb5eead8d41c2869b8c551f6a" category="paragraph">백업 파일에서 데이터를 복원하기 전에 스캔을 실행하도록 선택하거나 이 검사를 건너뛸 수 있습니다.</block>
   <block id="826c19d01b527f2701cc3460b9c889de" category="list-text">수동</block>
@@ -1974,7 +1963,6 @@
   <block id="f5ef24e218bb7a52732b62958bb89c68" category="list-text">백업 파일에서 랜섬웨어 공격을 검색하고 감염된 백업을 자동으로 제거/교체합니다.</block>
   <block id="3f28b1a3a0b3b6c8294e56323ec13e18" category="list-text">오래된 백업 파일을 아카이브 스토리지에 계층화하여 비용 절감</block>
   <block id="fe66ea47b1e195d0a8f311d62ee027d8" category="paragraph">클라우드 공급자에게 오브젝트 스토리지 용량과 백업 파일을 쓰고 읽는 데 필요한 리소스 비용이 지불됩니다.</block>
-  <block id="ea7f0ec7b7c9b030700a4f123edfd3eb" category="list-text">검색 및 복원을 사용한 볼륨 또는 파일 복원의 경우, 클라우드 공급자가 특정 리소스를 프로비저닝하며, 검색 요청에 의해 스캔된 데이터 양과 관련된 TiB 비용이 있습니다.</block>
   <block id="8006ced8739173ca22ba2b0d83f53268" category="inline-link">Azure Synapse 작업 공간</block>
   <block id="31f9c16bc3570a56499294176c354ee7" category="inline-link">Azure Data Lake Storage를 참조하십시오</block>
   <block id="82ba9e045163c7c72098c50671704351" category="list-text">Azure에서는 가 있습니다<block ref="a3ff4de37e7a195a145416e9f02577ac" category="inline-link-rx"></block> 및<block ref="47b506e6a2508a9b210c02fa89bbdc24" category="inline-link-rx"></block> 데이터를 저장 및 분석할 수 있도록 스토리지 계정에 프로비저닝됩니다.</block>
@@ -1985,7 +1973,6 @@
   <block id="136194d46b42cb1f4c0ffea5b134879e" category="list-text">엔터프라이즈. DataLock 모드는 특정 권한이 있는 사용자가 보존 기간 동안 백업 파일을 덮어쓰거나 삭제할 수 있는 _Enterprise_로 설정됩니다. 랜섬웨어 보호가 활성화됩니다.</block>
   <block id="b0e2bacf658f248f5b3198bb6ec3cf68" category="list-text">규정 준수: DataLock 모드는 보존 기간 동안 사용자가 백업 파일을 덮어쓰거나 삭제할 수 없는 _Compliance_로 설정됩니다. 랜섬웨어 보호가 활성화됩니다.</block>
   <block id="307f506933fa37350a3739584fc7749a" category="paragraph">보존 기간은 스케줄 보존 기간과 같으며 14일을 더한 값입니다. 예를 들어, _5_개의 복제본을 보존한 _weekly_backups는 각 백업 파일을 5주 동안 잠급니다. _6_복제본이 보존되는 _Monthly_backups는 각 백업 파일을 6개월 동안 잠급니다.</block>
-  <block id="5d9fc27df9d43a3f4819efb43ba8f23a" category="paragraph">현재 백업 대상이 Amazon S3일 때 지원을 사용할 수 있습니다. 다른 스토리지 제공업체 대상은 향후 릴리스에 추가될 예정입니다.</block>
   <block id="668420eb25c0657fa1ed103061b132a1" category="admonition">백업을 아카이브 스토리지로 계층화하는 경우 DataLock을 설정할 수 없습니다.</block>
   <block id="e4d473c7eaa0d5a17a8380f5a1f05a7e" category="paragraph">을 참조하십시오 <block ref="6fd60dcfbd658d3c6de952e2d3164749" category="inline-link-macro-rx"></block> DataLock 및 랜섬웨어 방지 작동 방법에 대한 자세한 내용은</block>
   <block id="648e07eb3f255382cd68dd1ee61b6561" category="section-title">이전 백업 파일용 아카이브 스토리지</block>
@@ -2417,16 +2404,13 @@
   <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">에서 비기술 케이스를 제출하십시오<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
   <block id="aa254718f2c52dc147bfd8f98b0c4840" category="inline-link">Cloud Insights and Cloud Secure를 참조하십시오</block>
   <block id="86fef274eb09e789513af0922e579b5a" category="inline-link">ONTAP에서 제공하는 랜섬웨어 방지 보호</block>
-  <block id="f27beac3d097dd791847516307a68045" category="paragraph">이 기능은 소스 볼륨에 대한 보호 기능을 제공하지 않으며 해당 소스 볼륨의 백업에만 사용됩니다. NetApp 사용<block ref="2e57621b97dadc1cef3dd80d75e83676" category="inline-link-rx"></block>또는 일부 를 누릅니다<block ref="086d55e347fe71de47923b356a73187b" category="inline-link-rx"></block> 소스 볼륨을 보호합니다.</block>
   <block id="dc52d5a83e31ec66da3344056a4e4e39" category="paragraph">이전 백업은 백업 정책 보존 기간이 만료된 후가 아니라 DataLock 보존 기간이 만료된 후에 삭제됩니다.</block>
   <block id="49a6926ab95494c4de6e1f26bab7e4d5" category="list-text">거버넌스(StorageGRID에서는 사용할 수 없음)</block>
   <block id="4e828df72a865dff97ed752d2c9c8307" category="paragraph">DataLock은 특정 권한이 있는 사용자(<block ref="6091ac16b06103b3d1b14d6f408bb364" category="inline-link-macro-rx"></block>)는 보존 기간 동안 백업 파일을 덮어쓰거나 삭제할 수 있습니다. 랜섬웨어 보호가 활성화됩니다.</block>
   <block id="5a080c775e60ee1f55b487821cc05ac3" category="paragraph">DataLock은 보존 기간 동안 사용자가 백업 파일을 덮어쓰거나 삭제할 수 없는 _Compliance_mode로 설정됩니다. 랜섬웨어 보호가 활성화됩니다.</block>
-  <block id="2d950277b1c4175f1241fd34170e963f" category="admonition">StorageGRID S3 오브젝트 잠금 기능은 규정 준수 모드에 해당하는 단일 데이터 잠금 모드를 제공합니다. 동일한 거버넌스 모드는 지원되지 않으므로 사용자는 보존 설정을 무시하거나, 보호된 백업을 덮어쓰거나, 백업을 삭제할 수 없습니다.</block>
   <block id="189baba290165c9a7ddf7f3c3ec05a6a" category="paragraph">다음 퍼블릭 및 프라이빗 클라우드 공급자가 오브젝트 스토리지를 사용하는 경우, 다음과 같은 작업 환경에서 ONTAP 볼륨의 DataLock 및 랜섬웨어 보호를 활성화할 수 있습니다. 향후 릴리즈에서는 클라우드 공급자를 더 추가할 예정입니다.</block>
   <block id="12ffabaafd850d6e279869bb1cd0b7c8" category="cell">ifdef::AWS[]Amazon S3 endif::AWS[]ifdef::Azure[]endif::Azure[]ifdef::GCP[]endif::GCP[]NetApp StorageGRID</block>
   <block id="de45b13527319d3765cb25daa45622e5" category="list-text">Cloud Manager 3.9.21 이상을 사용해야 합니다</block>
-  <block id="57eabf5a162d469521b2a0fa9368dd35" category="list-text">AWS의 경우 Connector를 클라우드에 구축해야 합니다</block>
   <block id="46651d9c49a465cb6fa5e07cd6981948" category="list-text">다음 S3 권한은 Connector에 권한을 제공하는 IAM 역할의 일부여야 합니다. 이러한 리소스는 리소스 "arn:AWS:S3::NetApp-backup- *"의 "backupS3Policy" 섹션에 있습니다.</block>
   <block id="709168c65e2b4e5806ef96ffe25ed710" category="paragraph">"S3:BypassGovernanceRetention"은 관리 사용자가 Governance 모드를 사용하여 잠긴 백업 파일을 덮어쓰거나 삭제할 수 있도록 하려는 경우에만 추가해야 합니다.</block>
   <block id="a0cfa687d678b7bdaa6e05ad4367a96d" category="list-text">StorageGRID의 경우:</block>
@@ -2438,7 +2422,6 @@
   <block id="cd2965bfeacaceb11394002abe013260" category="summary">PAYGO(Pay-as-you-Go) 또는 클라우드 공급자로부터 연간 시장 가입 서비스를 구입하거나 NetApp에서 BYOL(Bring-Your-Own-License)을 구입하여 Cloud Backup의 라이센스를 부여할 수 있습니다. 작업 환경에서 Cloud Backup을 활성화하고, 운영 데이터의 백업을 생성하고, 백업 데이터를 운영 시스템에 복원하려면 유효한 라이센스가 필요합니다.</block>
   <block id="ca636232aaf17fe5d8fef3b105b4363c" category="list-text">볼륨, 폴더 또는 개별 파일을 소스 시스템 또는 다른 시스템으로 복원합니다.</block>
   <block id="ead18a75e8ad08c3fd02c4ded3f53521" category="list-text">단일 파일 복원을 위한 개별 폴더 및 파일을 선택할 수 있는 탐색 가능 및 검색 가능한 파일 카탈로그입니다.</block>
-  <block id="b05129b87daa8f26e20ce7f835876ea3" category="list-text">오브젝트 저장소의 WORM/규정 준수 모드는 현재 Amazon S3 및 StorageGRID에서만 지원됩니다. 이를 DataLock 기능이라고 합니다.</block>
   <block id="e831d27edb715928e8204ce285611618" category="section-title">파일 및 폴더 복원 제한 사항</block>
   <block id="79ec871c574dbe9adf17973bdb4bf029" category="paragraph">특별히 호출되지 않는 한 검색 및 복원과 찾아보기 및 복원 방법 모두에 이러한 제한 사항이 적용됩니다.</block>
   <block id="7a6f7d393f4de35501272976e1ba9e03" category="list-text">찾아보기 및 복원, 검색 및 복원은 한 번에 하나의 폴더를 복원할 수 있습니다.</block>
@@ -2662,4 +2645,25 @@
   <block id="262efb8db11032d91af39217fa610e82" category="paragraph">ONTAP 백업 파일에서 다음 작업 환경으로 볼륨, 폴더 또는 개별 파일을 복원할 수 있습니다.</block>
   <block id="5a885bd71d1142c7d1b89fcfcf197a41" category="sidebar">ONTAP 백업 파일에서 데이터를 복원합니다</block>
   <block id="ba9a6951ecf97e593c2140f66a8574bf" category="sidebar">ONTAP 볼륨에서 파일 및 폴더를 복구합니다</block>
+  <block id="855a635321caeb08d8525de5eea56651" category="list-text">검색 및 복원을 사용하여 데이터를 복원하는 경우 클라우드 공급자가 특정 리소스를 프로비저닝하며, 검색 요청에 의해 스캔된 데이터 양과 관련된 TiB 비용이 있습니다. (이러한 리소스는 Browse &amp; Restore에 필요하지 않습니다.)</block>
+  <block id="c03019f9be2cb226dc19ca939f4d2a98" category="paragraph">작업 환경에 Cloud Backup을 활성화하면 처음에 선택한 모든 볼륨이 사용자가 정의한 기본 백업 정책을 사용하여 백업됩니다. RPO(복구 지점 목표)가 서로 다른 특정 볼륨에 서로 다른 백업 정책을 할당하려면 해당 클러스터에 대한 추가 정책을 생성한 다음 Cloud Backup이 활성화된 후 다른 볼륨에 해당 정책을 할당할 수 있습니다.</block>
+  <block id="887b3715a8c6b9f979173f9bb78db138" category="paragraph">현재 백업 대상이 Amazon S3 또는 NetApp StorageGRID인 경우 지원을 받을 수 있습니다. 다른 스토리지 제공업체 대상은 향후 릴리스에 추가될 예정입니다.</block>
+  <block id="eec8499000c8f659d98df740f918b905" category="list-text">오브젝트 저장소의 WORM/규정 준수 모드는 현재 Amazon S3 및 StorageGRID에서만 지원됩니다. 이를 DataLock 기능이라고 하며 Cloud Backup 설정을 사용하여 관리해야 합니다.</block>
+  <block id="5116aee7e891450dd457789d0b3857e4" category="paragraph">이 문서에서는 Cloud Backup Service를 사용할 때 사내 ONTAP 시스템 및 Cloud Volumes ONTAP 시스템에 대한 백업 정책 구성 설정에 대해 설명합니다.</block>
+  <block id="f576f81f502b655c924b76cc045e8946" category="paragraph">Cloud Backup을 사용하면 각 작업 환경(클러스터)에 대해 고유한 스케줄로 여러 백업 정책을 생성할 수 있습니다. RPO(복구 시점 목표)가 다른 볼륨에 서로 다른 백업 정책을 할당할 수 있습니다.</block>
+  <block id="3b190b83ddc2ee9e610caa6dc209fbaf" category="list-text">레이블 * 은 볼륨에서 백업 파일이 생성(또는 업데이트)되는 빈도를 정의합니다. 다음 유형의 라벨 중에서 선택할 수 있습니다.</block>
+  <block id="42f0dfacb9775e138cb12f277162bec2" category="list-text">3개월, 1년 또는 7년 동안 백업 및 보존을 제공하는 시스템 정의 정책 중 하나를 선택할 수 있습니다.</block>
+  <block id="cc52989062051281d16ab44b8c24cbef" category="list-text">8번째 주에 첫 번째 주별 백업이 제거되고 8번째 주에 대한 새 주별 백업이 추가됩니다(최대 7개의 주별 백업 유지).</block>
+  <block id="1d7733f94633408426a8b5de97f97f13" category="list-text">13번째 달에는 첫 번째 월별 백업이 제거되고 13번째 달의 새 월별 백업이 추가됩니다(최대 12개의 월별 백업 유지).</block>
+  <block id="105cf1dd74d7a9079245d031f91df8b0" category="paragraph">이 기능은 소스 볼륨에 대한 보호 기능을 제공하지 않으며 해당 소스 볼륨의 백업에만 사용됩니다. NetApp 사용<block ref="2e57621b97dadc1cef3dd80d75e83676" category="inline-link-rx"></block>또는 일부 를 누릅니다<block ref="086d55e347fe71de47923b356a73187b" category="inline-link-rx"></block> 소스 볼륨을 보호합니다.</block>
+  <block id="f88d31c8fba76a471a02f0b65a9ac963" category="list-text">12개의 보존 기간을 사용하여 월별 백업 스케줄을 생성하는 경우 각 백업은 삭제하기 전에 12개월(14일 추가) 동안 잠깁니다.</block>
+  <block id="bf7c437191fdcde55e7d7e2fc049c230" category="list-text">24개의 보존 기간을 사용하여 시간별 백업 일정을 생성하는 경우 백업이 24시간 동안 잠겨 있다고 생각할 수 있습니다. 그러나 이 기간이 최소 30일 미만이므로 각 백업은 44일(30일 + 14일 버퍼) 동안 잠기고 보존됩니다.</block>
+  <block id="681e74daf8a2c7a6316ddee6727d3b7f" category="paragraph">이 마지막 사례에서는 각 백업 파일이 44일 동안 잠겨 있는 경우, 일반적으로 1시간/24시간 보존 정책으로 보존되는 것보다 더 많은 백업 파일이 포함됩니다. 일반적으로 Cloud Backup은 25번째 백업 파일을 생성할 때 가장 오래된 백업을 삭제하여 최대 보존 한도를 24로 유지합니다(정책에 따라). DataLock 보존 설정은 이 경우 백업 정책의 정책 보존 설정을 재정의합니다. 이 경우 백업 파일이 개체 저장소에 장기간 저장되므로 스토리지 비용이 영향을 받을 수 있습니다.</block>
+  <block id="e81b2d9a99c319820fe2a1d0b0d7f2bf" category="paragraph">랜섬웨어 차단 기능은 백업 파일을 검사하여 랜섬웨어 공격의 증거를 찾습니다. 랜섬웨어 공격 탐지 작업은 체크섬 비교를 통해 수행됩니다. 잠재적인 랜섬웨어가 백업 파일에서 이전 백업 파일과 비교하여 식별되면, 최신 백업 파일이 랜섬웨어 공격의 징후를 보이지 않는 최신 백업 파일로 대체됩니다. (랜섬웨어 공격이 발생한 것으로 확인된 파일은 교체후 1일 후에 삭제됩니다.)</block>
+  <block id="c545a26c4ed6190e3a8c71826161a528" category="paragraph">클라우드 스토리지에 처음 기록될 때는 백업 파일에 대해 검사가 수행되지 않지만 * next * 백업 파일이 기록될 때는 검사가 수행됩니다. 예를 들어 화요일의 주별 백업 스케줄이 설정되어 있는 경우 14일 화요일에 백업이 생성됩니다. 그리고 화요일에 또 다른 백업이 생성됩니다. 랜섬웨어 스캔은 현재 14번째 백업 파일에서 실행됩니다.</block>
+  <block id="e3ab630e3f610a8213d19aed9bf024c4" category="admonition">StorageGRID S3 오브젝트 잠금 기능은 규정 준수 모드에 해당하는 단일 데이터 잠금 모드를 제공합니다. 동일한 거버넌스 모드는 지원되지 않으므로 사용자는 보존 설정을 무시하거나, 보호된 백업을 덮어쓰거나, 잠긴 백업을 삭제할 수 없습니다.</block>
+  <block id="83933361b1e2abf7e7f406666cc9c104" category="list-text">AWS의 경우:</block>
+  <block id="f8a98c701370ca7b2e41192ca7baaa6b" category="list-text">Connector는 클라우드에 배포해야 합니다</block>
+  <block id="d82ac33ca1171e71de283e404129a0c4" category="paragraph">클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 이전 백업을 _S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 계층화하도록 선택할 수 있습니다. <block ref="f7fa7b0a9e810d8c500bcf785a34f359" category="inline-link-macro-rx"></block>.</block>
+  <block id="3dfe42849739012935ae4b966fa89d76" category="paragraph">클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 이전 백업을 _Azure Archive_storage에 계층화하도록 선택할 수 있습니다. <block ref="2f91ed687cd1d1d6d8235865263a43ff" category="inline-link-macro-rx"></block>.</block>
 </blocks>
