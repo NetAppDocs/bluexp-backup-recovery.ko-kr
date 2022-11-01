@@ -48,7 +48,6 @@
   <block id="91e06e9a9ef97681b798e2e5e007ba97" category="paragraph">다음 단계를 따라 빠르게 시작하거나 나머지 섹션을 아래로 스크롤하여 자세한 내용을 확인하십시오.</block>
   <block id="9637543697c707cfc64db2a64d650753" category="list-title">span class="image"&gt;&lt;img src=<block ref="0c3becc25d95e48b9ca863002a042824" category="inline-link-rx"></block> Alt="One"&gt;&lt;/span&gt; 구성에 대한 지원을 확인합니다</block>
   <block id="e845620e391b62ad3163cdb0e100a862" category="inline-link">ONTAP 클러스터 검색</block>
-  <block id="03e597a4d3dae0f47981d38f398f6c69" category="list-text">온프레미스 클러스터를 검색한 후 Cloud Manager의 작업 환경에 추가했습니다. 을 참조하십시오<block ref="04e8e773ac6637419158f2743860946e" category="inline-link-rx"></block> 를 참조하십시오.</block>
   <block id="cd7ad775c6b0bdc8bd593887e2e1b7fc" category="list-text">클러스터에서 ONTAP 9.7P5 이상이 실행 중입니다.</block>
   <block id="95fb96b977a1d58e839b707e064c5588" category="list-text">클러스터에는 SnapMirror 라이센스가 있으며, 이 라이센스는 프리미엄 번들 또는 데이터 보호 번들의 일부로 포함됩니다.</block>
   <block id="08c19771a6ca4c9d29ee89345a0e2d51" category="list-text">클러스터에는 Blob 저장소 및 커넥터에 대한 필수 네트워크 연결이 있어야 합니다.</block>
@@ -71,7 +70,6 @@
   <block id="455299fd2e4b438ff8661df0bfd1cace" category="paragraph">다음 이미지는 각 구성 요소와 이러한 구성 요소 간에 준비해야 하는 연결을 보여 줍니다.</block>
   <block id="362e1fd025fbc54170675a786630faff" category="inline-image-macro">Cloud Backup이 소스 시스템 및 백업 파일이 있는 대상 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다.</block>
   <block id="5c611511bb6c7851d2e8d2dda1c92506" category="section-title">ONTAP 클러스터 준비</block>
-  <block id="226b317dc3b32fad613074ad133752ab" category="paragraph">볼륨 데이터 백업을 시작하려면 Cloud Manager에서 사내 ONTAP 클러스터를 검색해야 합니다.</block>
   <block id="b020365bc471630c977d9fcc2c5ea1d1" category="inline-link">클러스터를 검색하는 방법에 대해 알아보십시오</block>
   <block id="6ff483ff43e1d1341ed8bca213a5d6c2" category="paragraph"><block ref="781159370dedb574e61a716048070385" category="inline-link-rx"></block>.</block>
   <block id="1b6bc3125f482fcbcf029c833aea1290" category="list-text">ONTAP 요구 사항</block>
@@ -156,9 +154,7 @@
   <block id="833c2c211a541e50ad94433664e4b5c1" category="cell">Google 클라우드 스토리지</block>
   <block id="7f6251364178ee7f1986855ac72962ca" category="cell">Google의 Kubernetes 클러스터</block>
   <block id="eb44d853b15fc4a7d1e4ecb8635a4318" category="section-title">Kubernetes 백업 파일에서 볼륨 복원</block>
-  <block id="32ffb699c26c43863b169ad8442c061a" category="paragraph">백업 파일에서 영구 볼륨을 복구할 때 Cloud Manager는 백업의 데이터를 사용하여 _new_volume을 생성합니다. 동일한 Kubernetes 클러스터의 볼륨이나 소스 Kubernetes 클러스터와 같은 클라우드 계정에 있는 다른 Kubernetes 클러스터로 데이터를 복원할 수 있습니다.</block>
   <block id="9e51c0639d22c4c11b03e788221b4ec7" category="paragraph">시작하기 전에 복원하려는 볼륨의 이름과 새로 복구된 볼륨을 생성하는 데 사용할 백업 파일의 날짜를 알아야 합니다.</block>
-  <block id="6ee39efc4fb08cd4c1676924758279de" category="list-text">백업 및 복원 * 서비스를 선택합니다.</block>
   <block id="f7c8f83692a4eab213a0cf7d3c7c9133" category="list-text">Kubernetes * 탭을 클릭하면 Kubernetes 대시보드가 표시됩니다.</block>
   <block id="b7af34a4e3b220774dbc0e1ab60525ba" category="inline-image-macro">백업되는 모든 Kubernetes 클러스터 및 볼륨 목록이 포함된 Kubernetes 대시보드 스크린샷</block>
   <block id="f27dc7aa48ba95864dcbd7f9f3031d81" category="paragraph"><block ref="f27dc7aa48ba95864dcbd7f9f3031d81" category="inline-image-macro-rx" type="image"></block></block>
@@ -172,7 +168,6 @@
   <block id="b0a429e0b4e29ba8c4663344e7f975b7" category="paragraph"><block ref="b0a429e0b4e29ba8c4663344e7f975b7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="deebe20d8ec4d92056f6c34b725c7b9e" category="list-text">복원 * 을 클릭하면 복원 작업의 진행률을 검토할 수 있도록 Kubernetes 대시보드로 돌아갑니다.</block>
   <block id="643bebce825ea67b068c39a60d1feb7d" category="inline-link-macro">이 새 볼륨에 대한 백업 설정을 관리합니다</block>
-  <block id="31b5619342b6faee573176d88fa46de5" category="paragraph">Cloud Manager는 선택한 백업을 기반으로 Kubernetes 클러스터에 새 볼륨을 생성합니다. 가능합니다 <block ref="81f106b2aba35048d2bf0e6225895d07" category="inline-link-macro-rx"></block> 필요에 따라.</block>
   <block id="07c2ea1cc6b7f654f42d3f074f3c13f4" category="summary">Cloud Volumes ONTAP에서 Azure Blob 저장소로 데이터 백업을 시작하려면 몇 가지 단계를 완료하십시오.</block>
   <block id="f6c96f9db00475dfd6c371ca50af3d5b" category="doc">Azure Blob 저장소에 Cloud Volumes ONTAP 데이터 백업</block>
   <block id="2433628c53fed80ea9d352a1bcd9ce45" category="paragraph">다음 단계를 따라 빠르게 시작하거나 나머지 섹션으로 스크롤하여 자세한 내용을 확인하십시오.</block>
@@ -224,14 +219,11 @@
   <block id="a9719b40ac1cc40ef3fda03d4222bfe1" category="summary">몇 가지 단계를 완료하여 EKS Kubernetes 클러스터의 영구 볼륨에서 Amazon S3 스토리지로의 데이터 백업을 시작하십시오.</block>
   <block id="3b6e95e672031eae644a9bc637b96e34" category="doc">Kubernetes 영구 볼륨 데이터를 Amazon S3에 백업</block>
   <block id="0283ffd414dda4c4df96a67e5bbd1de6" category="list-title">span class="image"&gt;&lt;img src=<block ref="0c3becc25d95e48b9ca863002a042824" category="inline-link-rx"></block> Alt="One"&gt;&lt;/span&gt; 사전 요구 사항 검토</block>
-  <block id="2bf0b1f3011edcfbe3a58609173fc32a" category="list-text">Kubernetes 클러스터를 Cloud Manager 작업 환경으로 발견했습니다.</block>
   <block id="4dc2b6ffe2a8551a28338aad583b68af" category="list-text">Trident는 클러스터에 설치해야 하며 Trident 버전은 21.1 이상이어야 합니다.</block>
   <block id="02543ab70b7092fcd0b9252d0337c79a" category="list-text">백업하려는 영구 체적을 생성하는 데 사용되는 모든 PVC는 "snapshotPolicy(스냅샷 정책)"를 "default(기본값)"로 설정해야 합니다.</block>
   <block id="e3cbbf46a38a7810b06b73af7fc91cf1" category="list-text">클러스터는 백엔드 스토리지를 위해 AWS에서 Cloud Volumes ONTAP를 사용해야 합니다.</block>
   <block id="19591c0673cc7e18e4bade20109403dd" category="list-text">Cloud Volumes ONTAP 시스템에서 ONTAP 9.7P5 이상을 실행해야 합니다.</block>
   <block id="77f3b81e1d7c5ed627835fb76acd97c6" category="inline-link">AWS 연간 계약</block>
-  <block id="d76af3fd99bc3d655a1c7ebb39340b6f" category="inline-link">Cloud Manager 정책</block>
-  <block id="6ee68d17c80af83ada8e74c09db7bc18" category="list-text">Cloud Manager Connector에 사용 권한을 제공하는 IAM 역할에는 최신 의 S3 권한이 포함됩니다<block ref="0dc063d42cd9e31c0e2c7df9df595c9f" category="inline-link-rx"></block>.</block>
   <block id="0c7f0afaa23dac8678c19baffe80abdb" category="paragraph">작업 환경을 선택하고 오른쪽 패널에서 백업 및 복원 서비스 옆에 있는 * 활성화 * 를 클릭한 다음 설정 마법사를 따릅니다.</block>
   <block id="0d82ae6c682f20707bf865b71d8af8de" category="inline-image-macro">백업 스케줄 및 보존 기간을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷</block>
   <block id="5cbc65b517e089e57645ea9def3f7d87" category="paragraph"><block ref="5cbc65b517e089e57645ea9def3f7d87" category="inline-image-macro-rx" type="image"></block></block>
@@ -257,7 +249,6 @@
   <block id="af7680d24e7ce67fad6006c6fc467b53" category="list-text">지원되는 AWS 영역</block>
   <block id="59c7b4956dc02f5c1e4eac787464a0a2" category="list-text">Cloud Backup은 모든 AWS 지역에서 지원됩니다<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>.</block>
   <block id="1b132f8325705f3dc0afb743012c7e89" category="list-text">AWS 백업 권한이 필요합니다</block>
-  <block id="8da8dca97f2535e00b0b47888864b2c1" category="list-text">Cloud Manager에 사용 권한을 제공하는 IAM 역할에는 최신 버전의 S3 권한이 포함되어야 합니다<block ref="0dc063d42cd9e31c0e2c7df9df595c9f" category="inline-link-rx"></block>.</block>
   <block id="bf882df1c9cc332899e615e1a7a670e7" category="paragraph">다음은 정책의 특정 S3 사용 권한입니다.</block>
   <block id="ab86b1cad22bd1380ddb3b57261bd301" category="inline-image-macro">작업 환경을 선택한 후 사용할 수 있는 Cloud Backup Settings(클라우드 백업 설정) 버튼을 보여 주는 스크린샷</block>
   <block id="87d2505adff85578a0201502dc5b2436" category="paragraph"><block ref="87d2505adff85578a0201502dc5b2436" category="inline-image-macro-rx" type="image"></block></block>
@@ -352,24 +343,16 @@
   <block id="09c7ee4be0db4e9240de27e931212553" category="inline-link-macro">선불 종량제 구독을 설정하는 방법을 알아보십시오</block>
   <block id="13dbf2396212f27f4ed228794c13aab3" category="paragraph"><block ref="18ef702a22368a8691d9e75de2c9af13" category="inline-link-macro-rx"></block>.</block>
   <block id="fce5aebaf837d23e27b8a9d6a54a6467" category="section-title">각자 보유한 라이센스를 가지고 오시기 바랍니다</block>
-  <block id="e16a54724535e5ca80b7bd9cdc34c0cb" category="inline-link">Cloud Manager 계정</block>
-  <block id="72a8e3c445f54a8d00cbfd21bc6cb130" category="paragraph">Cloud Manager Digital Wallet 페이지에 입력한 일련 번호를 통해 서비스를 활성화할 수 있습니다. 두 제한 중 하나에 도달하면 라이센스를 갱신해야 합니다. Backup BYOL 라이센스는 와 관련된 모든 소스 시스템에 적용됩니다<block ref="2dc87f4e9d0582da785b906aa7c5f318" category="inline-link-rx"></block>.</block>
   <block id="fa24c33f6d9b710b74d3f95ce0efeab9" category="paragraph"><block ref="47744e5312ce42ad8130a5365d7fb0d0" category="inline-link-macro-rx"></block>.</block>
   <block id="50b80798372065ac20ad628faaa584d9" category="section-title">Cloud Backup의 작동 방식</block>
   <block id="aaf08f028a79c27dca25c9e5f3b23cb9" category="paragraph">Cloud Volumes ONTAP 또는 사내 ONTAP 시스템에서 클라우드 백업을 활성화하면 서비스가 데이터의 전체 백업을 수행합니다. 볼륨 스냅샷은 백업 이미지에 포함되지 않습니다. 초기 백업 후에는 모든 추가 백업이 증분 백업되므로 변경된 블록과 새 블록만 백업됩니다. 이렇게 하면 네트워크 트래픽이 최소로 유지됩니다.</block>
-  <block id="d24b08b6d338e2d3aa57e3fe9baf4547" category="paragraph">대부분의 경우 모든 백업 작업에 Cloud Manager UI를 사용합니다. 그러나 ONTAP 9.9.1부터 ONTAP 시스템 관리자를 사용하여 사내 ONTAP 클러스터의 볼륨 백업 작업을 시작할 수 있습니다.<block ref="b4b04e1b4b3140ad1e0e3c0a94c9c848" category="inline-link-rx"></block></block>
   <block id="ca40824cdffa55341f62ec1a50b529d3" category="admonition">백업 파일을 관리하거나 변경하기 위해 클라우드 제공업체 환경에서 직접 수행한 작업은 파일을 손상시킬 수 있으며 지원되지 않는 구성을 초래할 수 있습니다.</block>
   <block id="60d1f390b363130bf24d5d9d598fdaf5" category="paragraph">다음 이미지는 각 구성 요소 간의 관계를 보여줍니다.</block>
   <block id="47a3cfa320df46c8c8f90a83132cd7c6" category="inline-image-macro">Cloud Backup이 소스 시스템의 볼륨 및 백업 파일이 있는 대상 오브젝트 스토리지와 통신하는 방법을 보여주는 다이어그램입니다.</block>
   <block id="d8a8881779a15e8eb6bec6b61a2390a2" category="paragraph"><block ref="d8a8881779a15e8eb6bec6b61a2390a2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="57739bc049ff58f3d3db6f5281e84b85" category="section-title">백업이 상주하는 위치입니다</block>
-  <block id="7c2011c4bacd659d86c5344d8817e247" category="paragraph">백업 복사본은 Cloud Manager에서 클라우드 계정에 만드는 오브젝트 저장소에 저장됩니다. 클러스터/작업 환경당 하나의 오브젝트 저장소가 있으며 Cloud Manager에서는 오브젝트 저장소의 이름을 "NetApp-backup-clusteruuid"로 지정합니다. 이 오브젝트 저장소를 삭제하지 마십시오.</block>
   <block id="e6c344acbe141c46bf8617b9d43d0c2f" category="inline-link">Amazon S3 블록 공용 액세스 기능입니다</block>
-  <block id="b3dd97b859614e9d76031e49f4f3b79b" category="list-text">AWS에서 Cloud Manager는 를 지원합니다<block ref="b38667957fcdf9b9da65b213e7fb2492" category="inline-link-rx"></block> S3 버킷에서.</block>
   <block id="33bfcd052df4f75c25d08493f7b03ba3" category="inline-link">BLOB 데이터에 대한 공개 액세스를 차단합니다</block>
-  <block id="c31693309d8c6fd7db1904b3b6bfb708" category="list-text">Azure에서 Cloud Manager는 Blob 컨테이너용 스토리지 계정이 있는 새 리소스 그룹 또는 기존 리소스 그룹을 사용합니다. 클라우드 관리자<block ref="a7068b8d2b60241ce77a1051f3a66ed5" category="inline-link-rx"></block> 기본적으로 사용됩니다.</block>
-  <block id="88aa5bcf4573b30395aa7dd6268b8189" category="list-text">GCP에서 Cloud Manager는 Google Cloud Storage 버킷을 위한 스토리지 계정이 있는 신규 또는 기존 프로젝트를 사용합니다.</block>
-  <block id="c0539309f0acc603fe8d899b0ac9ddd2" category="list-text">StorageGRID에서 Cloud Manager는 오브젝트 저장소 버킷에 기존 스토리지 계정을 사용합니다.</block>
   <block id="0ffe269c15947de90e5a4b619d7ca448" category="inline-link-macro">작업 환경에 대한 클라우드 백업 등록을 취소합니다</block>
   <block id="7622af43e4e3394bd59ceb6c4f0fcc42" category="paragraph">향후 클러스터의 대상 오브젝트 저장소를 변경하려면 가 필요합니다 <block ref="0bfe7090d4e181ee447797eef30bc55c" category="inline-link-macro-rx"></block>를 선택한 다음 새로운 클라우드 공급자 정보를 사용하여 Cloud Backup을 설정합니다.</block>
   <block id="bff292a0ddf8b8d46b8403039c6c25e1" category="section-title">지원되는 스토리지 클래스 또는 액세스 계층</block>
@@ -421,8 +404,6 @@
   <block id="aff054320cc08565199d39e32a9acfcb" category="list-text">MCC(MetroCluster) 백업은 ONTAP 2차 백업에서만 지원됩니다. MCC &gt; SnapMirror &gt; ONTAP &gt; 클라우드 백업 &gt; 오브젝트 스토리지.</block>
   <block id="6488e4b9eef53ffd6c9cc6103d98e9fa" category="list-text">ONTAP는 단일 볼륨에서 여러 오브젝트 저장소로 이루어진 SnapMirror 관계를 지원하지 않습니다. 따라서 Cloud Backup에서는 이 구성을 지원하지 않습니다.</block>
   <block id="5f5966e9da5716290dfc2b88ceeb2217" category="list-text">복원 중인 파일은 대상 볼륨의 언어와 동일한 언어를 사용해야 합니다. 언어가 동일하지 않으면 오류 메시지가 나타납니다.</block>
-  <block id="1553a2b337f69cb4e2878126a9158d14" category="list-text">서로 다른 서브넷에서 서로 다른 클라우드 관리자와 동일한 계정을 사용하는 경우 파일 레벨 복원이 지원되지 않습니다.</block>
-  <block id="45905824646346222e779ba345f6254b" category="summary">Cloud Backup은 데이터의 보호 및 장기 아카이브를 위한 백업 및 복원 기능을 제공하는 Cloud Manager 작업 환경을 위한 서비스입니다. 백업은 자동으로 생성되어 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 저장됩니다.</block>
   <block id="e386c51e8b46e9dad6f19dc36fbfc831" category="doc">Cloud Backup에 대해 자세히 알아보십시오</block>
   <block id="1619bac39deaef2fc2adb60633af222f" category="paragraph">필요한 경우 백업에서 전체 _volume_을 동일하거나 다른 작업 환경으로 복원할 수 있습니다. ONTAP 데이터를 백업할 때 또는 백업에서 하나 이상의 _files_를 동일하거나 다른 작업 환경으로 복원하도록 선택할 수도 있습니다.</block>
   <block id="b8d82fc8540bcb0b292930e59ebdd4dd" category="inline-link-macro">Cloud Backup에 대해 자세히 알아보십시오</block>
@@ -440,14 +421,10 @@
   <block id="ac252743de820aac9183d9f76d4bed67" category="inline-link">NetApp 계정</block>
   <block id="3ce3233955186ca42fd073f31c7b98aa" category="paragraph">백업 복사본은 와 연결됩니다<block ref="5c84ace7b3e4263476ddf0c264272cee" category="inline-link-rx"></block> 커넥터가 있는 위치.</block>
   <block id="20c092d8421a998d3ac6aa33a55628ba" category="paragraph">동일한 NetApp 계정에 여러 커넥터가 있는 경우 각 커넥터는 동일한 백업 목록을 표시합니다. 여기에는 Cloud Volumes ONTAP 및 다른 커넥터의 온-프레미스 ONTAP 인스턴스와 연결된 백업이 포함됩니다.</block>
-  <block id="0da172938aa3bca619803103b3df2ade" category="summary">Cloud Backup for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 사내 ONTAP에서 클라우드로 애플리케이션 정합성을 보장하는 스냅샷을 백업합니다.</block>
   <block id="18a6c204240510c87aba39d6d8b5d26b" category="doc">온프레미스 애플리케이션 데이터를 보호합니다</block>
-  <block id="37383c5357fd4592db933b96a8b85497" category="paragraph">Cloud Backup for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 사내 ONTAP에서 클라우드로 애플리케이션 정합성을 보장하는 스냅샷을 백업할 수 있습니다. 필요한 경우 클라우드에서 사내 SnapCenter 서버로 복원할 수 있습니다.</block>
   <block id="bc2c0309ab805c8d369345a992e020bd" category="paragraph">애플리케이션 데이터를 클라우드 서비스에 백업하기 전에 다음 요구 사항을 읽고 지원되는 구성이 있는지 확인합니다.</block>
   <block id="c3ce6809be6bdc67ae978395484d0585" category="list-text">ONTAP 9.8 이상</block>
-  <block id="c6549239974f1da437beed516ee043bd" category="list-text">Cloud Manager 3.9</block>
   <block id="f3753469514d2cda99cee390aa2bf172" category="list-text">SnapCenter 서버에서 응용 프로그램당 하나 이상의 백업을 사용할 수 있어야 합니다</block>
-  <block id="61f9980bdbfc26a31c724b0711e0c9d7" category="list-text">SnapCenter에서 Cloud Manager의 클라우드 백업 애플리케이션 정책과 레이블 또는 레이블이 없는 일별, 주별 또는 월별 정책 하나 이상</block>
   <block id="c895d0010b397b55778718d6ccc26b78" category="inline-image-macro">Cloud Backup이 백업 파일이 있는 사내 애플리케이션 및 대상 스토리지와 통신하는 방법을 보여주는 다이어그램입니다.</block>
   <block id="bc983d441473b5c9a47c39b5fb57e53f" category="paragraph"><block ref="bc983d441473b5c9a47c39b5fb57e53f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="002f7378a5fcfc2f66cfea851a7fd5f4" category="cell">정책 이름</block>
@@ -602,7 +579,6 @@
   <block id="6aa300e24ddf3ee5a99bbb1cf5bb4a72" category="inline-link-macro">자세한 내용을 보려면 여기를 클릭하십시오</block>
   <block id="f49fe4c56999dcc895c26b71ec63e34f" category="section-title">2022년 2월 14일</block>
   <block id="963d2836c97952a191ac974f0e9b5e67" category="inline-link-macro">클러스터에 대한 새 백업 정책을 생성하고 이를 선택한 볼륨에 할당하는 방법을 알아보십시오</block>
-  <block id="e239caf739c8a0f59aa2ff963f94dcd3" category="paragraph">과거에는 Cloud Backup을 활성화한 후 작업 환경에서 생성된 새 볼륨을 수동으로 백업 정책을 적용해야 했습니다. 이제 Cloud Manager, System Manager, CLI 또는 API에서 볼륨이 생성되었는지에 관계없이 Cloud Backup은 볼륨을 검색하고 선택한 백업 정책을 기본 정책으로 적용합니다.</block>
   <block id="b702b8a648700d54afccce0b8de7766a" category="paragraph">이 옵션은 새 작업 환경에서 백업을 설정하거나 기존 작업 환경의 _Manage Volumes_페이지에서 백업을 설정할 때 사용할 수 있습니다.</block>
   <block id="7a99d9487fc9540fa7bee7c2eb717413" category="inline-link-macro">작업 모니터 사용 방법을 참조하십시오</block>
   <block id="586301717819197e24001cac47efdaaa" category="section-title">2022년 1월 2일</block>
@@ -615,7 +591,6 @@
   <block id="b5c8a322e1974db22259a3266a467868" category="inline-link-macro">AWS S3 아카이빙 스토리지 클래스</block>
   <block id="28adc803d48e2bb3e36e538080dfaa7f" category="inline-link-macro">Azure Blob 아카이브 액세스 계층</block>
   <block id="d1ddbe1a2b846fcb593cc918a3e89011" category="paragraph">클러스터에서 ONTAP 9.10.1 이상이 실행 중이고 AWS 또는 Azure 클라우드 스토리지를 사용 중인 경우 백업을 아카이브 스토리지에 계층화할 수 있습니다. 에 대한 자세한 내용을 참조하십시오 <block ref="81a47028e5300e8284480e386f5c858b" category="inline-link-macro-rx"></block> 및 <block ref="dcf621b23bcce9bd9dd0dcef7d3820cf" category="inline-link-macro-rx"></block>.</block>
-  <block id="6ce8a3f44b004fcf6550446a48ff963f" category="paragraph">Cloud Backup에 대한 BYOL 라이센스는 Cloud Backup Licenses 탭에서 Cloud Manager Digital Wallet의 Data Services Licenses 탭으로 이동했습니다.</block>
   <block id="ab2ccc498a90c5f6b10b5303b9c5aeb0" category="paragraph">불필요한 대용량 백업 파일을 삭제하거나 백업 파일 크기를 비교하여 악성 소프트웨어 공격으로 인해 발생할 수 있는 비정상적인 백업 파일을 확인할 수 있는 경우에 유용합니다.</block>
   <block id="6c92285fa6d3e827b198d120ea3ac674" category="inline-link">여기</block>
   <block id="6cafa6353a950cc8e48d24ad8242894f" category="paragraph">총 소유 비용 계산기는 Cloud Backup의 총 소유 비용을 파악하고 이러한 비용을 기존 백업 솔루션과 비교하고 잠재적인 절감 효과를 추정하는 데 도움이 됩니다. 확인해 보십시오<block ref="267ef58c9e8a275651a89e967489b2ea" category="inline-link-rx"></block>.</block>
@@ -633,7 +608,6 @@
   <block id="7b2f31b90fe1c2cc33a52233c1925df3" category="list-text">대기열에 있습니다</block>
   <block id="0eaadb4fcb48a0a0ed7bc9868be9fbaa" category="list-text">경고</block>
   <block id="d7c8c85bf79bbe1b7188497c32c3b0ca" category="list-text">실패했습니다</block>
-  <block id="e2f127fe5484a7289c7f95957589a034" category="list-text">백업 및 복원 * 탭을 클릭합니다.</block>
   <block id="49e34b28c9e9b61ed97b385f257f46fe" category="list-text">Job Monitoring * 탭을 클릭합니다.</block>
   <block id="fdb4a732f867f813a90fc7fb3a9bd9ea" category="inline-image-macro">Job Monitoring 대시보드의 백업 및 복원 작업을 보여 주는 스크린샷</block>
   <block id="6a0946e9e6df1feca77ae10577f6057c" category="paragraph"><block ref="6a0946e9e6df1feca77ae10577f6057c" category="inline-image-macro-rx" type="image"></block></block>
@@ -664,7 +638,6 @@
   <block id="0ea4b8f8e49e76c407dc92eef3ef1c15" category="inline-link">자신의 암호화 키를 사용하는 방법을 알아봅니다</block>
   <block id="c405c27a75a970faab6a45d722272f0e" category="list-text">기본 Amazon S3 암호화 키를 사용하거나 AWS 계정에서 직접 고객 관리 키를 선택하여 데이터 암호화를 관리할지 여부를 결정합니다. <block ref="bc512376b7a797d916a8cc982884f1f3" category="inline-link-rx"></block>)를 클릭합니다.</block>
   <block id="dcff3c249c7fb676fe0af82644445673" category="paragraph"><block ref="dcff3c249c7fb676fe0af82644445673" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ce21e7ae4271271294ccbf54c8fd6864" category="summary">NetApp은 다양한 방법으로 Cloud Manager를 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다. 지원 등록에는 웹 티켓팅을 통한 원격 기술 지원이 포함됩니다.</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">도움을 받으십시오</block>
   <block id="e4eb771c510e3febaca5aa81f1155f85" category="doc">사내 ONTAP 데이터를 Amazon S3에 백업</block>
   <block id="180e97e259921e464d68cd76825f9337" category="paragraph">몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Amazon S3 스토리지로의 데이터 백업을 시작하십시오.</block>
@@ -682,19 +655,15 @@
   <block id="6a214193b7d4e0d357a02a60f0b08db3" category="list-text">백업을 저장하는 데 사용되는 AWS 계정, AWS 액세스 키 및 비밀 키</block>
   <block id="747f0efebd1dba208c83630552f97a6d" category="list-text">백업이 저장될 AWS 영역입니다.</block>
   <block id="da6211c797a89720b6883bacdc774e98" category="list-text">필요에 따라 이전에 구성한 AWS PrivateLink를 사용할지 여부를 선택합니다.<block ref="4b288ecb11624923e7ee69f96a59c546" category="inline-link-rx"></block>.</block>
-  <block id="073db3a1088dabed85a0b9e458290ffe" category="summary">정책과 백업을 볼 수 있습니다. 데이터베이스, 정책 또는 리소스 그룹의 변경에 따라 Cloud Manager UI에서 업데이트를 새로 고칠 수 있습니다.</block>
   <block id="d2107ef674d9474576deedf431042a37" category="doc">애플리케이션 보호 관리</block>
   <block id="b7e23f2fbc84fffbedf563f644b8df93" category="section-title">정책을 봅니다</block>
-  <block id="8faad9c03119805d80b61715eb7b8c93" category="list-text">백업 및 복원 * &gt; * 응용 프로그램 * 을 클릭합니다.</block>
   <block id="8a53d8d9bdff689ff4cea2f3d55f43de" category="list-text">설정 * 드롭다운에서 * 정책 * 을 클릭합니다.</block>
   <block id="8bdf078d3946fd5743d8283e1dda131b" category="list-text">세부 정보를 보려는 정책에 해당하는 * 세부 정보 보기 * 를 클릭합니다.</block>
   <block id="186767ddfa4a5b30e2b4a7d5eb5fce25" category="inline-link">SnapCenter 소프트웨어 cmdlet 참조 가이드</block>
   <block id="ba3a5c62da437b3b4c145ebaab697c6c" category="paragraph">Get-SmResources SnapCenter cmdlet을 실행하여 클라우드 확장 SnapCenter 정책을 볼 수도 있습니다. cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 Get-Help command_name을 실행하여 얻을 수 있습니다. 또는 을 참조할 수도 있습니다<block ref="30086a18cf21b3d909c213d70f40a693" category="inline-link-rx"></block>.</block>
   <block id="168d35838d683733c740a323264bac1d" category="section-title">클라우드에서 백업 보기</block>
-  <block id="6e2470d2336ec89c15da11ce424e5cfc" category="paragraph">Cloud Manager UI에서 클라우드의 백업을 볼 수 있습니다.</block>
   <block id="c33fc98cec373e6cbd63a467d0d4c31d" category="inline-image-macro">아이콘을 클릭하여 작업을 선택합니다</block>
   <block id="cce0c57f1dd3c02ce23659f1d60e084c" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 해당 응용 프로그램에 대해 * 세부 정보 보기 * 를 클릭합니다.</block>
-  <block id="b2be35a59313e7a322883441a21dd541" category="admonition">백업이 나열되는 데 걸리는 시간은 ONTAP의 기본 복제 일정(최대 1시간) 및 Cloud Manager(최대 6시간)에 따라 다릅니다.</block>
   <block id="4e0ddf87f033265118429dabe5e3bfe5" category="list-text">Oracle 데이터베이스의 경우 데이터 및 로그 백업, 각 백업에 대한 SCN 번호, 각 백업에 대한 종료 날짜가 모두 나열됩니다. 데이터 백업만 선택하고 데이터베이스를 온-프레미스 SnapCenter 서버로 복원할 수 있습니다.</block>
   <block id="bfc776a7bcfd64bdb79a1cc9129389b5" category="list-text">Microsoft SQL Server 데이터베이스의 경우 각 백업의 전체 백업과 종료 날짜만 나열됩니다. 백업을 선택하고 데이터베이스를 온-프레미스 SnapCenter 서버로 복원할 수 있습니다.</block>
   <block id="a672484b07770478c08aee11ae96c45c" category="list-text">Microsoft SQL Server 인스턴스의 경우 백업이 표시되지 않고 해당 인스턴스 아래에 있는 데이터베이스만 나열됩니다.</block>
@@ -712,7 +681,6 @@
   <block id="58e48a591ad113fee6bebca56bf5adf6" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 응용 프로그램에 해당하는 을 클릭하고 * 보호 새로 고침 * 을 클릭합니다.</block>
   <block id="d65dcf19e9eda758238d835f23a69642" category="section-title">작업을 모니터링합니다</block>
   <block id="b1312d814f0038daf6064ba4f2b58e06" category="paragraph">모든 클라우드 백업 작업에 대한 작업이 생성됩니다. 각 작업의 일부로 수행되는 모든 작업과 모든 하위 작업을 모니터링할 수 있습니다.</block>
-  <block id="6c1a50069f1ef4f1854810c9d90b5b14" category="list-text">백업 및 복원 * &gt; * 작업 모니터링 * 을 클릭합니다.</block>
   <block id="faaa9a060b63aacd7addee167c6e8a89" category="paragraph">작업을 시작하면 작업이 시작되었다는 창이 나타납니다. 링크를 클릭하여 작업을 모니터링할 수 있습니다.</block>
   <block id="01bfab2b240fd3d6c6cdf0568c743360" category="list-text">각 하위 작업의 하위 작업 및 상태를 보려면 기본 작업을 클릭합니다.</block>
   <block id="a5996295dff80ec054089a5c1929ceca" category="section-title">CA 인증서를 구성합니다</block>
@@ -762,7 +730,6 @@
   <block id="060608d5af817469fe3cc22ee36ca553" category="list-text">* 위치 선택 *: * Google Cloud Platform * 을 선택합니다.</block>
   <block id="d5f13d82755531fdc681865fff2d3f92" category="list-text">* 유형 선택 *: * Cloud Volumes ONTAP * (단일 노드 또는 고가용성)를 선택합니다.</block>
   <block id="dacc52cb03715d4004f6cc9b88c289ac" category="list-text">* 상세 정보 및 자격 증명 *: 다음 정보를 입력합니다.</block>
-  <block id="102708298bd15a75a34631c0194d3fda" category="list-text">프로젝트 편집 * 을 클릭하고 사용하려는 프로젝트가 기본 프로젝트(Cloud Manager가 있는 프로젝트)와 다른 경우 새 프로젝트를 선택합니다.</block>
   <block id="0989eed0926dd1577e8052dd320d24ce" category="list-text">클러스터 이름을 지정합니다.</block>
   <block id="6474605531ce5899e6cc527bb6a90146" category="list-text">서비스 계정 * 스위치를 활성화하고 사전 정의된 스토리지 관리자 역할이 있는 서비스 계정을 선택합니다. 이 작업은 백업 및 계층화를 활성화하는 데 필요합니다.</block>
   <block id="584d89a37ed619f9fa6a7c08dfa76e62" category="list-text">자격 증명을 지정합니다.</block>
@@ -895,7 +862,6 @@
   <block id="042e2868bd27cf0f2d07239f80a976dd" category="list-text">ONTAP 버전은 9.8 이상이어야 합니다.</block>
   <block id="6f0cd96277bd61a1a3f4c2504033ded7" category="list-text">볼륨이 상주하는 스토리지 VM(SVM)에는 데이터 LIF가 구성되어 있어야 합니다.</block>
   <block id="5aa886d067197e66c77587733a464d79" category="list-text">볼륨에 NFS가 활성화되어 있어야 합니다.</block>
-  <block id="53e3083bf92bb9f766800dcd25d97335" category="list-text">SVM에서 SnapDiff RPC 서버를 활성화해야 합니다. 작업 환경에서 인덱싱을 활성화하면 Cloud Manager가 이 작업을 자동으로 수행합니다.</block>
   <block id="b08d607bff755a82c8c9d9351d968b4a" category="list-text">AWS 요구사항:</block>
   <block id="4c633b18d08cc2b8986282359ac32e3f" category="section-title">검색 및 복원 프로세스</block>
   <block id="1bf27db2b6cddc0bbfeb50bd92d954d2" category="inline-link">아마존 Athena 대화형 쿼리 서비스</block>
@@ -941,7 +907,6 @@
   <block id="3d20155cd1c7d94c87e13305eebbe0a3" category="doc">Oracle 데이터베이스를 복원합니다</block>
   <block id="8c4d58a2cfb3c40508fe4d8936b05fdd" category="paragraph">Oracle 데이터베이스는 동일한 SnapCenter 서버 호스트, 동일한 SVM 또는 동일한 데이터베이스 호스트에만 복원할 수 있습니다. RAC 데이터베이스의 경우 백업이 생성된 사내 노드에 데이터가 복구됩니다.</block>
   <block id="093c813823c463b6495f1ab6601f3c1a" category="paragraph">제어 파일 복원이 있는 전체 데이터베이스만 지원됩니다. 아카이브 로그가 AFS에 없는 경우 복구에 필요한 아카이브 로그가 포함된 위치를 지정해야 합니다.</block>
-  <block id="ba8dfd83df5d2e0b81afe1a4bdb5edfd" category="list-text">Cloud Manager UI에서 * 백업 및 복원 * &gt; * 응용 프로그램 * 을 클릭합니다.</block>
   <block id="8377760bcd9824d8b414e96454b1f639" category="list-text">필터 기준 * 필드에서 필터 * 유형 * 을 선택하고 드롭다운에서 * Oracle * 을 선택합니다.</block>
   <block id="356a014d650e5ff75127d5c7f8512c9b" category="list-text">복원하려는 데이터베이스에 해당하는 * View Details * 를 클릭하고 * Restore * 를 클릭합니다.</block>
   <block id="1dbebac3a4764e845f4bce351937d6b4" category="list-text">복원 유형 페이지에서 다음 작업을 수행합니다.</block>
@@ -1011,7 +976,6 @@
   <block id="579ccfb911c4dbe3a52bc9d928fc14c0" category="list-text">최소 1개의 일일, 주별 또는 월별 스케줄을 사용하여 생성된 전체 백업입니다</block>
   <block id="bbe7ceb379a1e3ea24ab8bde605209a3" category="list-text">백업이 없는 데이터베이스입니다</block>
   <block id="6403145bf43147af29b8d8774cbc49b2" category="list-text">주문형 또는 시간별 정책만 있는 데이터베이스</block>
-  <block id="931bb1e79f5cc1150b8f8963e0372a78" category="admonition">Cloud Manager GUI를 사용하는 경우 한 번에 하나의 애플리케이션만 보호할 수 있습니다. 그러나 REST API를 사용하는 경우 여러 애플리케이션을 동시에 보호할 수 있습니다.</block>
   <block id="f3f150537e8aa89ec04ac4e8202bd62f" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 응용 프로그램에 해당하는 을 클릭하고 * 백업 활성화 * 를 클릭합니다.</block>
   <block id="e3999860c64cf7a6d0ff9b3f2bffe174" category="list-text">작업 환경을 추가합니다.</block>
   <block id="0b2aaaaf834876ea478a04625aa349a5" category="paragraph">애플리케이션이 실행되고 있는 SVM을 호스팅하는 ONTAP 클러스터를 구성합니다. 애플리케이션 중 하나에 대한 작업 환경을 추가한 후 동일한 ONTAP 클러스터에 있는 다른 모든 애플리케이션에 다시 사용할 수 있습니다.</block>
@@ -1035,10 +999,8 @@
   <block id="b0137435ab1e749e6671cc7b4442746b" category="inline-link">가격 세부 정보는 Cloud Manager Marketplace 오퍼링을 참조하십시오</block>
   <block id="fbc4dcdcbcf0da9900a5e2aee88197c9" category="list-text">AWS:<block ref="2958bbf3239ebfcd2df7adc813da750e" category="inline-link-rx"></block>.</block>
   <block id="669ab104fde662cae95c3d512827defe" category="list-text">Azure(Azure):<block ref="d72981df84ff531bf20e612d5459f673" category="inline-link-rx"></block>.</block>
-  <block id="aa6e381a2e925e1ef4225ff8af689116" category="paragraph">이 옵션을 사용하려면 Cloud Volumes ONTAP 작업 환경을 생성할 때 연간 계약을 설정하고 Cloud Manager에서 AWS 마켓플레이스를 구독하라는 메시지를 표시합니다.</block>
   <block id="289fa4183a5f21ffa309508c3b1534c5" category="section-title">Cloud Backup BYOL 라이센스 사용</block>
   <block id="70af97100aa32faf0090b5c729f50df0" category="paragraph">NetApp에서 제공하는 자체 라이센스는 1년, 2년 또는 3년간 제공됩니다. 백업 중인 소스 ONTAP 볼륨의 논리적 사용 용량(_before_any 효율성)으로 계산되어 보호하는 데이터에 대해서만 비용을 지불하면 됩니다. 이 용량을 FETB(Front-End Terabytes)라고도 합니다.</block>
-  <block id="1bdb5964b1e1151098850bdd005ded43" category="paragraph">Cloud Backup BYOL 라이센스가 없는 경우 Cloud Manager 오른쪽 아래에 있는 채팅 아이콘을 클릭하여 라이센스를 구입하십시오.</block>
   <block id="583571647e284c9fed0a15301f155dba" category="section-title">Cloud Backup 라이센스 파일을 얻습니다</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp Support 사이트</block>
   <block id="80c4b6e3dfa1d4f33033585b7c74e7e9" category="list-text">에 로그인합니다<block ref="fcc52edac3ce57829c48ee35d97a295d" category="inline-link-rx"></block> 시스템 &gt; 소프트웨어 라이센스 * 를 클릭합니다.</block>
@@ -1046,39 +1008,29 @@
   <block id="5190e9ec018f5e661ec4b31ff1b34423" category="inline-image-macro">일련 번호로 검색한 후 라이센스 테이블을 보여 주는 스크린샷</block>
   <block id="193bccfc2cf277cad00678895e527b35" category="paragraph"><block ref="193bccfc2cf277cad00678895e527b35" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a6cfac773f21906007a8ddf407596067" category="list-text">라이센스 키 * 열에서 * NetApp 라이센스 파일 가져오기 * 를 클릭합니다.</block>
-  <block id="fa468db90f03e95a4dac09262c027968" category="list-text">Cloud Manager 계정 ID(지원 사이트에서 테넌트 ID라고 함)를 입력하고 * 제출 * 을 클릭하여 라이센스 파일을 다운로드합니다.</block>
   <block id="56273f3344c87fabbf5196fba9816fff" category="inline-image-macro">테넌트 ID를 입력한 다음 제출을 클릭하여 라이센스 파일을 다운로드할 수 있는 라이센스 가져오기 대화 상자가 표시된 스크린샷</block>
   <block id="7ca3a83129f844a42c263755a0fa4a32" category="paragraph"><block ref="7ca3a83129f844a42c263755a0fa4a32" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="630b1746cba34ee88564bdc613bf0b35" category="paragraph">Cloud Manager 상단의 * Account * (계정 *) 드롭다운을 선택한 다음 계정 옆의 * Manage Account * 를 클릭하여 Cloud Manager 계정 ID를 찾을 수 있습니다. 계정 ID는 개요 탭에 있습니다.</block>
   <block id="2dceb661fa854be21d691bb6890b19ed" category="section-title">Cloud Backup BYOL 라이센스를 계정에 추가</block>
-  <block id="5b12ddc59d99f0b26682068b9afe510f" category="paragraph">NetApp 계정에 대한 Cloud Backup 라이센스를 구입한 후 Cloud Manager에 라이센스를 추가해야 합니다.</block>
   <block id="ea9a2b9ac34c9aab133f21aa5b67976e" category="list-text">라이선스 추가 * 를 클릭합니다.</block>
   <block id="c1b2dc0798d3960e25b8a12c751f53ec" category="list-text">Add License_대화 상자에서 라이센스 정보를 입력하고 * Add License * 를 클릭합니다.</block>
   <block id="cb365723ea49a8e0727d9887fcd819ad" category="list-text">백업 라이센스 일련 번호가 있고 NSS 계정을 알고 있는 경우 * 일련 번호 입력 * 옵션을 선택하고 해당 정보를 입력합니다.</block>
-  <block id="f154773445f5f4ed354ad1d6b1458de0" category="inline-link">NSS 계정을 Cloud Manager에 추가합니다</block>
-  <block id="f1532eb975cadb53a7b9ac3d19205000" category="paragraph">드롭다운 목록에서 NetApp Support 사이트 계정을 사용할 수 없는 경우<block ref="6ee42390f038b7658fb8dfbbc6c21b14" category="inline-link-rx"></block>.</block>
   <block id="b91c77235ab93af32b475ca05ffa1ab2" category="inline-image-macro">Cloud Backup BYOL 라이센스를 추가하는 페이지를 보여 주는 스크린샷</block>
   <block id="78364824176e311173787bc994b841d4" category="paragraph"><block ref="78364824176e311173787bc994b841d4" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="40628dc1a3d5f90ad5b224a66553710f" category="paragraph">Cloud Manager에서 라이센스를 추가하여 Cloud Backup을 활성화합니다.</block>
   <block id="3c3b919341c99cadc0fffe035e29b5f0" category="section-title">Cloud Backup BYOL 라이센스 업데이트</block>
   <block id="a274f4d4670213a9045ce258c6c56b80" category="inline-link">알림</block>
   <block id="07cbe2ff704ff30b6f3ca7e91297e4fd" category="paragraph">라이센스가 부여된 기간이 만료일에 가까워지고 있거나 라이센스가 부여된 용량이 한도에 도달한 경우 백업 UI에서 알림을 받게 됩니다. 이 상태는 Digital Wallet 페이지와 에도 표시됩니다<block ref="2011e54262643b9060a004b0df801155" category="inline-link-rx"></block>.</block>
   <block id="89ec6475bcd2a52ce9ca1c8fa843339e" category="inline-image-macro">Digital Wallet 페이지에 만료 중인 라이센스를 보여 주는 스크린샷.</block>
   <block id="b16535eaa5694c59eb7ff71777c5cd59" category="paragraph"><block ref="b16535eaa5694c59eb7ff71777c5cd59" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0610d6a0d5b019d242dcba568ff5a30c" category="paragraph">Cloud Backup 라이센스가 만료되기 전에 업데이트하여 데이터 백업 및 복원 기능에 중단이 발생하지 않도록 할 수 있습니다.</block>
-  <block id="4c4e11102c4a5605e31bb1f8c1eacf19" category="list-text">Cloud Manager의 오른쪽 아래에 있는 채팅 아이콘을 클릭하거나 지원 팀에 문의하여 특정 일련 번호에 대한 Cloud Backup 라이센스 기간 연장 또는 추가 용량을 요청하십시오.</block>
-  <block id="2c03e04d86836c39240387af58347149" category="paragraph">라이센스 비용을 지불하고 NetApp Support 사이트에 등록된 Cloud Manager는 Digital Wallet의 라이센스를 자동으로 업데이트하며, 데이터 서비스 라이센스 페이지에는 변경 사항이 5~10분 안에 반영됩니다.</block>
   <block id="b2b168bd64a341a85c749cb61bba40cb" category="inline-xref">NetApp Support 사이트에서 라이센스 파일을 받으십시오</block>
   <block id="7b46f8498e7e640e89cf46f3638c9c87" category="list-text">가능합니다 <block ref="c45c4605dd048b13a9751ade254a9716" category="inline-xref-macro-rx"></block>.</block>
   <block id="f0542d3d118535e2d706a4502f615735" category="list-text">Digital Wallet page_Data Services Licenses_탭에서 를 클릭합니다 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 업데이트하는 서비스 일련 번호에 대해 * Update License * 를 클릭합니다.</block>
   <block id="3ce750f001c2369e23b68f3210d9f100" category="inline-image-macro">특정 서비스에 대한 라이센스 업데이트 단추를 선택하는 스크린샷</block>
   <block id="9d37072f5a1b76b16e647a14826ade70" category="paragraph"><block ref="9d37072f5a1b76b16e647a14826ade70" category="inline-image-macro-rx" type="image"></block></block>
   <block id="41e921305ae1b027e5d364af4a2a9df2" category="list-text">Update License_page에서 라이센스 파일을 업로드하고 * Update License * 를 클릭합니다.</block>
-  <block id="8b6d9fc98cf6358f318792bfa2363fa9" category="paragraph">Cloud Manager는 Cloud Backup을 계속 활성화할 수 있도록 라이센스를 업데이트합니다.</block>
   <block id="7d3786abf2ebb473a5ba70b680734525" category="section-title">BYOL 라이센스 고려사항</block>
   <block id="7425d5f89a4e332992c97c91d4ed6317" category="list-text">백업이 라이센스 용량의 80%에 도달한 경우 제한에 도달하면 다시 한 번 백업을 수행합니다</block>
   <block id="d8ea74d0bc0e6f3c5be22312a953d7fb" category="list-text">라이센스가 만료되기 30일 전에 라이센스가 만료되고 라이센스가 만료되면 다시 만료됩니다</block>
-  <block id="e8c240ac70f9e6acaa6b979acb3be469" category="paragraph">이러한 경고가 표시되면 Cloud Manager 인터페이스 오른쪽 아래에 있는 채팅 아이콘을 사용하여 라이센스를 갱신하십시오.</block>
   <block id="b02a15fbd7729c5f87ea7b28e29e6fd5" category="list-text">사용 중인 계정에 마켓플레이스 계정이 있는 경우 백업 서비스가 계속 실행되지만 PAYGO 라이센스 모델로 이전됩니다. 백업이 사용 중인 용량에 대한 비용이 청구됩니다.</block>
   <block id="1fc1233733d1833b4337f4dc4a0d2a4f" category="inline-link-macro">Cloud Backup 라이센스를 업데이트하는 방법</block>
   <block id="6bf80475cfcaeeaa5036e79e644302f5" category="summary">몇 가지 단계를 완료하여 GKE Kubernetes 클러스터의 영구 볼륨에서 Google Cloud 스토리지로 데이터 백업을 시작하십시오.</block>
@@ -1107,7 +1059,6 @@
   <block id="37695f2c0158d2d30558c2d20892077d" category="list-text">백업 설정 페이지에서 _ 을(를) 클릭합니다 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 백업 서비스의 등록을 취소하려는 작업 환경의 경우 * 등록 취소 * 를 선택합니다.</block>
   <block id="e5df9ae2e68ee55688688cf3c2915421" category="summary">Cloud Backup은 데이터의 보호 및 장기 아카이브를 위한 백업 및 복원 기능을 제공합니다.</block>
   <block id="846099e77083903f32f72c0e2156c3c5" category="doc">Cloud Backup 설명서</block>
-  <block id="3c10116b37b407ac79092a38ffb292e4" category="summary">NetApp 기술 지원으로 지원 케이스를 생성하기 전에 NetApp Support 사이트 계정을 Cloud Manager에 추가한 다음 지원을 위해 등록해야 합니다.</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">지원을 위해 등록하십시오</block>
   <block id="76cc4d7d39e779cc966a6cb01a3b17aa" category="sidebar">Cloud Backup 문서</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">릴리스 정보</block>
@@ -1163,8 +1114,6 @@
   <block id="de00c1e27be1485dd099e4cd2aaa554d" category="sidebar">백업을 삭제합니다</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">블로그 커뮤니티</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 커뮤니티</block>
-  <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central 블로그</block>
-  <block id="cc81b1698333ba727fd5bde305c3cf08" category="sidebar">Cloud Central 사용 사례</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">클라우드 웨비나</block>
   <block id="aec3f107e722aa43f3d2fe7191720a9c" category="paragraph">작업 환경을 선택하고 오른쪽 패널에서 백업 및 복원 서비스 옆에 있는 * 활성화 &gt; 볼륨 백업 * 을 클릭한 다음 설정 마법사를 따릅니다.</block>
   <block id="86a833c12958f07575d29f3d5d9926a6" category="paragraph"><block ref="e36987e16d256e466a9acd794b4b3498" category="inline-image-macro-rx" type="image"></block></block>
@@ -1185,7 +1134,6 @@
   <block id="2cfe9659cdef6b61005a35e5ad1c7305" category="paragraph">여러 파일을 선택하면 모든 파일이 선택한 동일한 대상 볼륨으로 복원됩니다. 따라서 파일을 다른 볼륨으로 복원하려면 복원 프로세스를 여러 번 실행해야 합니다.</block>
   <block id="c87406bc7afbf4c1491aba5c6a89782b" category="paragraph">또한 검색 작업을 통해 ONTAP 볼륨에 대한 모든 로컬 스냅샷 복사본을 확인합니다. 로컬 스냅샷 복사본에서 데이터를 복원하는 것이 백업 파일에서 복원하는 것보다 빠르고 비용이 적게 들 수 있으므로 스냅샷에서 데이터를 복원할 수 있습니다. Canvas의 볼륨 세부 정보 페이지에서 스냅샷을 새 볼륨으로 복원할 수 있습니다.</block>
   <block id="bd0f4c161a252516fc5ca2f8121fe5d5" category="paragraph">백업 파일에서 볼륨을 복원하면 Cloud Backup은 백업의 데이터를 사용하여 _new_volume을 생성합니다. 원래 작업 환경에서 데이터를 볼륨으로 복원하거나 소스 작업 환경과 동일한 클라우드 계정에 있는 다른 작업 환경으로 복원할 수 있습니다. 또한, 볼륨을 온프레미스 ONTAP 시스템으로 복원할 수 있습니다.</block>
-  <block id="304d9d83f13c0db0869bfb712e405713" category="paragraph">이전에 구성한 Connector와 함께 Cloud Backup을 이미 사용하고 있는 경우, 이제 Athena 및 Glue 권한을 Cloud Manager 사용자 역할에 추가해야 합니다. 새로운 항목이므로 검색 및 복원에 필요합니다.</block>
   <block id="dea8c22fb34052b0f4a9a5e32405ef9a" category="paragraph">검색 결과 페이지에는 검색 기준과 일치하는 파일 또는 볼륨이 있는 모든 위치가 표시됩니다.</block>
   <block id="dd69890bcf98aded30cef2070bda977a" category="list-text">볼륨 또는 파일을 복원하는 데 사용할 위치에 대한 모든 백업 보기 * 를 클릭한 다음 사용할 실제 백업 파일에서 * 복원 * 을 클릭합니다.</block>
   <block id="a5f3075b4c4502f059b907dc8ace2fb6" category="paragraph">작업 환경의 볼륨 크기와 클라우드의 백업 파일 수에 따라 초기 인덱싱 프로세스에 최대 1시간이 걸릴 수 있습니다. 그 이후에는 운영 환경에 영향을 미치지 않고 매시간 업데이트되며, 지속적으로 변경될 수 있습니다.</block>
@@ -1195,7 +1143,6 @@
   <block id="3cd2144b0298f62cd528d18dc975c0ec" category="list-text">에 가입했습니다<block ref="98d4a0895eea9c88efbf5ab4a5fd7d0d" category="inline-link-rx"></block>또는 을(를) 구입한 경우 <block ref="ffeae9fe9c2c70b1456fd5a26459ab0c" category="inline-link-macro-rx"></block> Cloud Backup BYOL 라이센스는 NetApp에서 제공</block>
   <block id="4a746b0a727e0ade1ea06ab02a265e09" category="paragraph">Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. <block ref="47744e5312ce42ad8130a5365d7fb0d0" category="inline-link-macro-rx"></block>.</block>
   <block id="88a02dc2d0f86fd4395dc4542805e76b" category="list-text">에 가입했습니다<block ref="f210bc7c758e9ef0d000392aaf5a4cb5" category="inline-link-rx"></block>, 및<block ref="564c46d47e4fef703ab2a0ee02042ed6" category="inline-link-rx"></block>또는 을(를) 구입한 경우 <block ref="ae025f92701c4e4e5ee318b9155a4737" category="inline-link-macro-rx"></block> Cloud Backup BYOL 라이센스는 NetApp에서 제공</block>
-  <block id="08d651ca7cc9bcb3df90e453cb9cee53" category="list-text">Kubernetes 클러스터를 Cloud Manager 작업 환경으로 발견했습니다.<block ref="b008743209457997d1cdda737bb04357" category="inline-link-rx"></block>.</block>
   <block id="6b0c75410e611c90f61766c508b79740" category="paragraph">가능합니다 <block ref="aa20de8329f0af2f510902910d29f0be" category="inline-link-macro-rx"></block>. 또한 가능합니다 <block ref="091cc4395662354f7a5868ee2318ef97" category="inline-link-macro-rx"></block> 같은 지역(AWS)의 동일한 또는 다른 Kubernetes 클러스터에서 새 볼륨으로.</block>
   <block id="13f4833f14110af4cb2943f6ee04ec0c" category="inline-link">아마존 애써나</block>
   <block id="d27c79824b42388962acf60cbd3cac6a" category="inline-link">AWS 글루</block>
@@ -1229,10 +1176,8 @@
   <block id="5df1a01f60413040610674725b32f285" category="list-text">에 가입했습니다<block ref="ae8f064f2fed74765b33e522bc6c41fc" category="inline-link-rx"></block>또는 을(를) 구입한 경우 <block ref="ffeae9fe9c2c70b1456fd5a26459ab0c" category="inline-link-macro-rx"></block> Cloud Backup BYOL 라이센스는 NetApp에서 제공</block>
   <block id="cbc540ff279c66e1f0e285002a107926" category="list-text">Cloud Backup PAYGO 라이센스의 경우, 를 통한 구독<block ref="92655de6fae7d07ed3897ce19d51b88d" category="inline-link-rx"></block> Cloud Backup을 활성화하기 전에 가 필요합니다. Cloud Backup에 대한 청구는 이 구독을 통해 이루어집니다.<block ref="2dcb14e4aff486ad01ca943b2718d3a3" category="inline-link-rx"></block>.</block>
   <block id="c1d703bdf53bad5718c774b5ba1504f9" category="paragraph">StorageGRID는 다음 요구 사항을 충족해야 합니다. 를 참조하십시오<block ref="a9591d68f190d64ce21caf15a77d51e9" category="inline-link-rx"></block> 를 참조하십시오.</block>
-  <block id="3e19f65259b291185c71923ab2706352" category="list-text">Kubernetes 클러스터를 Cloud Manager 작업 환경으로 발견했습니다.<block ref="fe9c905e0ac5679eb2b5a96bea671a0a" category="inline-link-rx"></block>.</block>
   <block id="45dcf6622abb43241222865addb2141d" category="paragraph">가능합니다 <block ref="aa20de8329f0af2f510902910d29f0be" category="inline-link-macro-rx"></block>. 또한 가능합니다 <block ref="091cc4395662354f7a5868ee2318ef97" category="inline-link-macro-rx"></block> Azure(동일한 지역)의 동일한 또는 다른 Kubernetes 클러스터에서 새 볼륨으로.</block>
   <block id="5559993f6f3050a853326203c63f7ed0" category="cell">퍼블릭 클라우드 및 로컬 스냅샷 복사본에서 결과를 찾습니다</block>
-  <block id="2ebbc61b9bf1d65389010d4baeb388c1" category="list-text">Kubernetes 클러스터를 Cloud Manager 작업 환경으로 발견했습니다.<block ref="9f26112087077321f30a8a9a55bedf44" category="inline-link-rx"></block>.</block>
   <block id="e63547e1b25be3f2854e3f50cbc53e4c" category="paragraph">가능합니다 <block ref="aa20de8329f0af2f510902910d29f0be" category="inline-link-macro-rx"></block>. 또한 가능합니다 <block ref="091cc4395662354f7a5868ee2318ef97" category="inline-link-macro-rx"></block> GCP(동일한 지역)의 동일한 또는 다른 Kubernetes 클러스터의 새 볼륨으로.</block>
   <block id="a7aea8698166f2ca86f6eca652031639" category="list-text">Trident는 클러스터에 설치해야 하며 Trident 버전은 21.1 이상이어야 합니다. 을 참조하십시오<block ref="efafd7c7be663b6b746c03d24d88023f" category="inline-link-rx"></block> 또는<block ref="23a633d2f31911781b4c35e0d8f7c8b9" category="inline-link-rx"></block>.</block>
   <block id="40ff48613d00df6a5c5543aa0140c38b" category="paragraph"><block ref="40ff48613d00df6a5c5543aa0140c38b" category="inline-image-macro-rx" type="image"></block></block>
@@ -1241,17 +1186,14 @@
   <block id="ef3b2f715336b2a637c8e6704ee4bf21" category="list-text"><block ref="ef3b2f715336b2a637c8e6704ee4bf21" category="inline-link-rx"></block></block>
   <block id="02f724fd5f12a11414bbb1d866d83955" category="inline-link">애플리케이션을 위한 클라우드 백업</block>
   <block id="c1838894b610d8946ffa3203fa32c67c" category="list-text"><block ref="c1838894b610d8946ffa3203fa32c67c" category="inline-link-rx"></block></block>
-  <block id="9c7b811f2948c46d550484ab6f6ea2bf" category="list-text">클라우드 공급자의 Cloud Volumes ONTAP 시스템 시장에서 PAYGO(Pay-as-you-Go) 구독을 이미 구독한 경우 클라우드 백업도 자동으로 구독됩니다. 다시 가입하지 않아도 됩니다.</block>
   <block id="31f730de563a8876975a231ee55bc4d7" category="list-text">온프레미스 ONTAP 데이터를 StorageGRID에 백업할 경우 BYOL 라이센스가 필요하지만 클라우드 공급자의 스토리지 공간에는 비용이 들지 않습니다.</block>
   <block id="c776759ca58ab152a9abc5e0b4f7ae66" category="list-text">Cloud Volumes ONTAP 데이터와 사내 ONTAP 데이터를 백업할 수 있는 '클라우드 백업' 계획</block>
-  <block id="f3ec604659866873c6f12a7b82b426c9" category="paragraph">이 옵션을 사용하려면 마켓플레이스 페이지에서 구독을 설정한 다음<block ref="f1f7c973fce685b876017d26d677c721" category="inline-link-rx"></block>. Cloud Manager에서 AWS 자격 증명에 활성 구독을 하나만 할당할 수 있으므로 이 연간 계약 가입을 통해 Cloud Volumes ONTAP 시스템에 대한 비용을 지불해야 합니다.</block>
   <block id="5f0364e373bcb99c02ad1b8359683908" category="inline-link">Cloud Volumes ONTAP 라이센스 항목을 참조하십시오</block>
   <block id="277d325469c77a8ce02855d7ea5c8b1a" category="list-text">Cloud Volumes ONTAP와 클라우드 백업을 번들로 제공할 수 있는 "CVO Professional" 계획. 여기에는 이 라이센스에 대해 청구된 Cloud Volumes ONTAP 볼륨에 대한 무제한 백업이 포함됩니다(백업 용량은 라이센스에 포함되지 않음).</block>
   <block id="798aac57a47adfaf930d9def9b4bbe02" category="paragraph">를 참조하십시오<block ref="d58b2dbf2a4616ceca06f8773ed8f738" category="inline-link-rx"></block> 이 라이센스 옵션에 대해 자세히 알아보십시오.</block>
   <block id="74cc281b8e4c7e949e92e69bf209421f" category="summary">작업 환경에서 시작한 백업 및 복원 작업의 상태를 모니터링할 수 있습니다. 이렇게 하면 성공적으로 완료된 작업, 현재 진행 중인 작업 및 실패한 작업을 볼 수 있으므로 문제를 진단하고 해결할 수 있습니다.</block>
   <block id="5fd6f798208daa9906f9880884735da2" category="paragraph">지속적인 백업 작업과 같은 시스템 시작 작업은 * 작업 모니터링 * 탭에 반영되지 않습니다. 사용자 시작 작업만 표시됩니다.</block>
   <block id="7a48560852ec8ed04802b3b0c1192f24" category="paragraph">모든 백업 및 복원 작업 목록과 현재 상태를 볼 수 있습니다. 여기에는 Cloud Volumes ONTAP, 온프레미스 ONTAP, 애플리케이션 및 Kubernetes 시스템 운영이 포함됩니다. 각 작업 또는 작업에는 고유한 ID와 상태가 있습니다. 상태는 다음과 같습니다.</block>
-  <block id="0046efb3377274ff3215d4b30269809e" category="list-text">Cloud Manager 콘솔의 오른쪽 상단에서 도움말 아이콘을 클릭하고 * 지원 * 을 선택합니다.</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">도움말 메뉴의 스크린샷으로, 여기에서 지원은 첫 번째 옵션입니다</block>
   <block id="868d9aa88f16ea923af1d15eac5d2647" category="paragraph"><block ref="868d9aa88f16ea923af1d15eac5d2647" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d17d6b5dafebab6b7659da8850737e70" category="list-text">NSS 관리 &gt; NSS 계정 추가 * 를 클릭합니다.</block>
@@ -1271,21 +1213,15 @@
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈 소스</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
-  <block id="51719eefc68685ac0e2a11057a44b8be" category="paragraph">NetApp은 다양한 방법으로 Cloud Manager 및 클라우드 서비스를 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다. 지원 등록에는 웹 티켓팅을 통한 원격 기술 지원이 포함됩니다.</block>
   <block id="07d41912a6ab6b97216f8cf89e93205c" category="section-title">자체 지원</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">이 옵션은 하루 24시간, 주 7일 동안 무료로 사용할 수 있습니다.</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">기술 자료</block>
   <block id="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="list-text"><block ref="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="inline-link-rx"></block></block>
-  <block id="76b571fb5edea1c1994fa0ff01f7b1e2" category="paragraph">Cloud Manager 기술 자료를 검색하여 문제를 해결할 수 있는 유용한 문서를 찾습니다.</block>
   <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">커뮤니티</block>
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
-  <block id="7f3490343cad8dc3bfdb72dd5d957e8d" category="paragraph">Cloud Manager 커뮤니티에 가입하여 진행 중인 토론을 팔로우하거나 새 토론을 만들어보십시오.</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">문서화</block>
-  <block id="3c313458d6e15dd2c4336e47118d0a8f" category="paragraph">현재 보고 있는 Cloud Manager 문서입니다.</block>
   <block id="80b1b0d2b1ebf2b3cba2d25759801afd" category="list-text">mailto:ng-cloudmanager-feedback@netapp.com [피드백 이메일]</block>
-  <block id="bff60abbc46aceed0f73a3a4f6cfb123" category="paragraph">저희는 귀하의 의견을 소중하게 생각합니다. 클라우드 관리자 개선에 도움이 되는 피드백을 제출해 주십시오.</block>
   <block id="0659d428df833a806e29e65e632d380a" category="section-title">NetApp 지원</block>
-  <block id="6c08c57e382a25a778455184cd9b1a4a" category="list-text">Cloud Manager에서 * 도움말 &gt; 지원 * 을 클릭합니다.</block>
   <block id="f5052c65917d7341726235d4d4941461" category="list-text">기술 지원 아래에서 사용 가능한 옵션 중 하나를 선택합니다.</block>
   <block id="81969fba3b1e12a70534522b9022414a" category="list-text">GCP:<block ref="147346444c5c295040eb98e543f1f294" category="inline-link-rx"></block>.</block>
   <block id="2d0d225e73f16b3d6a3fd87e23385c8e" category="paragraph">사내 ONTAP 시스템에서 Google 클라우드 스토리지로 백업을 구성할 때 두 가지 연결 방법을 사용할 수 있습니다.</block>
@@ -1295,7 +1231,6 @@
   <block id="6faac2bde2c603b5020744e34c3b1561" category="paragraph"><block ref="d9d72c889e6f6edab2e44fef9632d7d0" category="inline-xref-macro-rx"></block></block>
   <block id="e4f1f56a3ef3efdb69f573c54e373407" category="inline-xref">Connector를 생성하는 방법과 필요한 네트워크 설정을 정의하는 방법을 참조하십시오.</block>
   <block id="547ff9b6a5e6f25a471ff36aabad9172" category="paragraph"><block ref="955ce6b96fd48d62c162b65277148f6a" category="inline-xref-macro-rx"></block></block>
-  <block id="aba3af0142718cdcd318e58a13cac0e0" category="paragraph">Cloud Manager에서 ONTAP 클러스터를 검색하고, 클러스터가 최소 요구사항을 충족하는지 확인하고, 클러스터가 AWS S3에 연결할 수 있도록 네트워크 설정을 사용자 지정합니다.</block>
   <block id="6ac7a4162c2e3c973c8dcb8ad3493ff7" category="inline-xref">사내 ONTAP 클러스터를 준비하는 방법을 알아보십시오.</block>
   <block id="499fc037a59ef7c075fdde4e7b0311d1" category="paragraph"><block ref="0293805a32fb419ae9403f81b2c4ce54" category="inline-xref-macro-rx"></block></block>
   <block id="ec5fd71f14fddb1ee3f48a5fd3a21922" category="inline-xref">AWS S3 환경을 ONTAP 백업 수신 준비 상태로 만드는 방법을 알아보십시오.</block>
@@ -1308,12 +1243,9 @@
   <block id="e0e3556797f60e28e9764edb1e90829b" category="list-text">공용 연결 - 공용 S3 끝점을 사용하여 ONTAP 시스템을 AWS S3에 직접 연결합니다.</block>
   <block id="c00f71153c1c02168311396c4ac129f0" category="list-text">비공개 연결 - VPN 또는 AWS Direct Connect를 사용하여 전용 IP 주소를 사용하는 VPC 엔드포인트 인터페이스를 통해 트래픽을 라우팅합니다.</block>
   <block id="ea97cc2428a460eae122a94c68a8b16a" category="section-title">커넥터를 준비합니다</block>
-  <block id="54f5743f88e60d1c4f6d28ddce6523c9" category="paragraph">Cloud Manager Connector는 Cloud Manager 기능을 위한 기본 소프트웨어입니다. ONTAP 데이터를 백업하고 복원하려면 커넥터가 필요합니다.</block>
   <block id="929d25665bc92d22cf4a79265248dd36" category="section-title">커넥터 네트워킹 요구 사항</block>
   <block id="db41e7a8de9567fec002e93320c428ad" category="inline-xref">VPC 엔드포인트 인터페이스를 설정하는 방법을 확인하십시오.</block>
   <block id="aa8387a4bff8defdb2d4c5777a1bf540" category="section-title">ONTAP 클러스터를 준비합니다</block>
-  <block id="c5fe798394fdf9d90bcf14b0e01b5dda" category="section-title">Cloud Manager에서 ONTAP 클러스터를 검색합니다</block>
-  <block id="7e7c991226da8981bccabf973fe2eba0" category="paragraph">볼륨 데이터 백업을 시작하려면 Cloud Manager에서 사내 ONTAP 클러스터를 검색해야 합니다. 클러스터를 추가하려면 클러스터 관리 IP 주소와 admin 사용자 계정의 암호를 알아야 합니다.</block>
   <block id="66aa360897a3e9eeca6d5cd1ad876df5" category="list-text">클러스터는 Connector에서 클러스터 관리 LIF로 인바운드 HTTPS 연결을 필요로 합니다.</block>
   <block id="b3351de0bd12665c9ae1483f66b4c092" category="list-text">인터클러스터 LIF는 백업할 볼륨을 호스팅하는 각 ONTAP 노드에 필요합니다. 이러한 인터클러스터 LIF는 오브젝트 저장소에 액세스할 수 있어야 합니다.</block>
   <block id="ba19de110cf302cad348741e35238b97" category="paragraph">클러스터는 백업 및 복원 작업을 위해 클러스터 간 LIF에서 Amazon S3 스토리지로의 포트 443을 통한 아웃바운드 HTTPS 연결을 시작합니다. ONTAP는 오브젝트 스토리지 간에 데이터를 읽고 씁니다. 오브젝트 스토리지는 결코 시작할 수 없으며 단지 반응합니다.</block>
@@ -1334,11 +1266,9 @@
   <block id="e4ba209f1e83c31c97d006aab1897e1d" category="list-text">서비스를 활성화하면 백업 마법사에서 액세스 키와 암호 키를 입력하라는 메시지가 표시됩니다. 이러한 자격 증명은 ONTAP 클러스터에 전달되므로 ONTAP는 S3 버킷으로 데이터를 백업 및 복원할 수 있습니다. 이를 위해서는 다음과 같은 권한을 가진 IAM 사용자를 생성해야 합니다.</block>
   <block id="c2217bd93d297ddc08ba3a9c93fb29aa" category="list-text">Amazon VPC 콘솔 또는 명령줄을 사용하여 인터페이스 엔드포인트 구성을 생성합니다.<block ref="4b288ecb11624923e7ee69f96a59c546" category="inline-link-rx"></block>.</block>
   <block id="4adab5b6b391c43cf0cfd73c09d5bdf8" category="inline-xref">백업 정책에서 S3 권한을 추가합니다</block>
-  <block id="c68e08ee2b5be8ff44e713441b6aa84d" category="list-text">Cloud Manager Connector와 연결된 보안 그룹 구성을 수정합니다. 정책을 "사용자 지정"("전체 액세스"에서)으로 변경해야 하며 반드시 다음을 수행해야 합니다 <block ref="52cd24ecfd99d5b16a10d03c54f9d16b" category="inline-xref-macro-rx"></block> 앞서 설명한 것처럼.</block>
   <block id="39bab378d876d4ae9f917360ff7b633a" category="list-text">AWS 콘솔에서 엔드포인트의 DNS 이름을 가져옵니다.</block>
   <block id="51cca00855dd27ddbb729c64d6988680" category="inline-image-macro">AWS 콘솔에서 VPC 엔드포인트의 DNS 이름 스크린샷</block>
   <block id="63c7ff1056127bdaee465b05c7c83d3c" category="paragraph"><block ref="63c7ff1056127bdaee465b05c7c83d3c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="31b738479d7d16ff849ac312f5649e77" category="inline-link">Cloud Manager Connector를 호스팅하는 VM에 로그인합니다</block>
   <block id="b11703e578eba56af91d25ee75ec1594" category="list-text">이 명령의 출력에서 S3 인증서(BEGIN /end certificate 태그 사이에 있는 모든 데이터)를 복사합니다.</block>
   <block id="042284b067b431d7d21168a5ada6e448" category="list-text">ONTAP 클러스터 CLI에 로그인하여 다음 명령을 사용하여 복사한 인증서를 적용합니다(자체 스토리지 VM 이름 대체).</block>
   <block id="d0285b972453920d44e9bfc537f86825" category="section-title">클라우드 백업 활성화</block>
@@ -1387,7 +1317,6 @@
   <block id="ecd035ede918d91432ba5203669d96bd" category="paragraph"><block ref="7226e404226609d8e6a7fa892651e74a" category="inline-link-rx"></block>.</block>
   <block id="15949a792d77a6efb31116510902270f" category="paragraph">과거에는 클러스터의 모든 볼륨에 단일 백업 정책만 할당할 수 있었습니다. 이제 단일 클러스터에 대해 여러 백업 정책을 생성하고 여러 볼륨에 서로 다른 정책을 적용할 수 있습니다. <block ref="d267d345a84c274cd28fdecc1282029a" category="inline-link-macro-rx"></block>.</block>
   <block id="9d20a5735dc25af92271eea8fa797bf7" category="paragraph">백업 정책 변경 또는 백업 삭제와 같이 여러 볼륨에 대해 작업을 시작한 경우 작업 모니터를 사용하면 모든 볼륨에서 작업이 완료된 시점을 확인할 수 있습니다. <block ref="41d368101275ff882313a6db3fc29812" category="inline-link-macro-rx"></block>.</block>
-  <block id="b351469605d6fc51446d64c987712622" category="list-text">Cloud Backup BYOL(Bring-Your-Own-License)은 Cloud Manager 계정과 연결된 모든 시스템에서 사용할 수 있는 부동 라이센스입니다. 따라서 기존 BYOL 라이센스에서 충분한 백업 용량을 제공하는 경우 다른 BYOL 라이센스를 구입할 필요가 없습니다.</block>
   <block id="06f4f0c37c85d486f9483a22638942f5" category="inline-link-macro">Cloud Backup 사용과 관련된 비용에 대해 자세히 알아보십시오.</block>
   <block id="786b925e8c87b89de1141cc6a2423443" category="paragraph"><block ref="786b925e8c87b89de1141cc6a2423443" category="inline-link-macro-rx"></block></block>
   <block id="5ef05167488611c5bd4ff0f410595ce4" category="section-title">30일 무료 평가판</block>
@@ -1396,9 +1325,6 @@
   <block id="ce44a83ef01104d10c3b40c524f48e17" category="paragraph">무료 평가판이 종료되면 중단 없이 PAYGO 구독으로 자동 전환됩니다. Cloud Backup을 계속 사용하지 않기로 결정한 경우 <block ref="e812824661796763896bfeca014ff2ba" category="inline-link-macro-rx"></block> 평가판 사용 기간이 끝나기 전에는 요금이 부과되지 않습니다.</block>
   <block id="9fddc1f9c7fd56a9a852b0bd4cd2e8e7" category="paragraph">사용한 만큼만 지불하는 용량제 방식을 사용하면 클라우드 공급업체에 오브젝트 스토리지 비용을 지불하고, NetApp 백업 라이센스 비용을 단일 정액제로 지불할 수 있습니다. 무료 평가판을 가지고 있거나 BYOL(Bring Your Own License)을 사용하는 경우에도 가입해야 합니다.</block>
   <block id="5dc6dbc6bf59ab9248858dd70d7de4d1" category="paragraph">다음 링크를 사용하여 클라우드 공급자 마켓플레이스에서 Cloud Backup을 구독하십시오.</block>
-  <block id="8125ab0e8c7375023a4420d3e570708b" category="paragraph">Cloud Manager의 Digital Wallet 페이지를 사용하여 BYOL 라이센스를 관리할 수 있습니다. Digital Wallet에서 새 라이센스를 추가하고, 기존 라이센스를 업데이트하고, 라이센스 상태를 볼 수 있습니다.</block>
-  <block id="43a056c8e6cdddf737749ea07de7740e" category="paragraph">Cloud Backup 라이센스를 구입한 후에는 Cloud Backup 일련 번호 및 NSS 계정을 입력하거나 NLF 라이센스 파일을 업로드하여 Cloud Manager에서 라이센스를 활성화합니다. 아래 단계에서는 NLF 라이센스 파일을 가져오는 방법을 보여 줍니다(해당 방법을 사용하려는 경우).</block>
-  <block id="106194cae742927c7b68ec1a5fb5d9b4" category="paragraph">Cloud Backup BYOL 라이센스를 사용하는 경우, 백업하는 모든 데이터의 크기가 용량 제한에 근접하거나 라이센스 만료 날짜가 임박한 경우 Cloud Manager에서 사용자 인터페이스에 경고를 표시합니다. 다음과 같은 경고가 표시됩니다.</block>
   <block id="1c13d659a0c62fc2dcf4332ea8957263" category="paragraph">BYOL 라이센스가 만료되면 다음 두 가지 상황이 발생할 수 있습니다.</block>
   <block id="5b517e301694c9f9491db430482b4297" category="list-text">사용 중인 계정에 마켓플레이스 계정이 없는 경우 백업 서비스가 계속 실행되지만 경고가 계속 표시됩니다.</block>
   <block id="d279d008f3f2141ce1fc250d370bf6a9" category="paragraph">PAYGO 라이센스로 전환된 시스템은 자동으로 BYOL 라이센스로 돌아갑니다. 라이센스 없이 실행 중이던 시스템에서는 경고가 표시되지 않습니다.</block>
@@ -1426,10 +1352,7 @@
   <block id="78ddc9a4c494e093508a21d4121b452e" category="paragraph">백업 파일에서 운영 시스템으로 데이터를 복원하려면 유효한 Cloud Backup 라이센스가 필요합니다.</block>
   <block id="7676f4eb0750d027aaf39357e74a6f0a" category="cell">퍼블릭 및 프라이빗 클라우드 전체에서 결과 검색</block>
   <block id="c6df30fd69d443c5f65257f03e22d182" category="cell">추가 클라우드 공급자 리소스가 필요하지 않습니다</block>
-  <block id="246d8b6990d4cfbdfb599ce9f7af8191" category="list-text">Cloud Manager에 권한을 제공하는 사용자 역할에 특정 Amazon Athena, AWS Glue 및 AWS S3 권한을 추가해야 합니다. <block ref="172464504974bed7b77dd155db5fb92b" category="inline-link-macro-rx"></block>.</block>
   <block id="2bb068da3540e8034049c29306ef2a17" category="list-text">Google Cloud 요구사항:</block>
-  <block id="29870bce1cf974368407d0daba8b2f6b" category="list-text">Cloud Manager에 권한을 제공하는 사용자 역할에 특정 Google BigQuery 권한을 추가해야 합니다. <block ref="1401fe87dc595535076f05f545f8275e" category="inline-link-macro-rx"></block>.</block>
-  <block id="779fbac7d632038ff841eec53ff68d5d" category="paragraph">이전에 구성한 Connector와 함께 Cloud Backup을 이미 사용하고 있는 경우 지금 BigQuery 권한을 Cloud Manager 사용자 역할에 추가해야 합니다. 새로운 항목이므로 검색 및 복원에 필요합니다.</block>
   <block id="3793247d55ecb643a716dc72373dfb6a" category="paragraph">이 기능을 활성화하면 Cloud Backup은 SVM에서 볼륨에 대해 SnapDiff v3을 활성화하고 다음 작업을 수행합니다.</block>
   <block id="7f55f1ead15a67b08eea9e732f6ed59d" category="list-text">AWS에 저장된 백업의 경우 새로운 S3 버킷과 을 프로비저닝합니다<block ref="d5a117e0ffd0e43cc6657792905f20d6" category="inline-link-rx"></block> 및<block ref="101f211ea2a04b6a9a7d1de9342390c3" category="inline-link-rx"></block>.</block>
   <block id="1febcfde465ce9cfbf21c08aa17b6a2b" category="paragraph">백업에 대한 Amazon S3 대상이 Canvas에서 작업 환경으로 존재하는 경우 Kubernetes 클러스터를 Amazon S3 작업 환경으로 끌어서 설정 마법사를 시작할 수 있습니다.</block>
@@ -1437,7 +1360,6 @@
   <block id="152ce4fa26eb65e8e96a262e60518c22" category="paragraph"><block ref="152ce4fa26eb65e8e96a262e60518c22" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b0484e1bec383e6b588abfcbce01d8a7" category="list-text">"새 볼륨 자동 백업..." 확인란을 선택하고 새 볼륨에 적용할 백업 정책을 선택한 다음 * 저장 * 을 클릭합니다.</block>
   <block id="66aafc10059faefcfba7f2cfc427bba5" category="paragraph"><block ref="66aafc10059faefcfba7f2cfc427bba5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7c393b904fd78ca1a97c1c3d93e8427f" category="paragraph">이제 이 백업 정책은 Cloud Manager, System Manager 또는 ONTAP CLI를 사용하여 이 작업 환경에서 생성된 모든 새 볼륨에 적용됩니다.</block>
   <block id="34654042ecfc4226d89a0eec5901d43e" category="inline-link">ONTAP CLI를 사용하여 스냅샷을 삭제하는 방법을 알아봅니다</block>
   <block id="03a5b9815bb473e6f4be8d24abee633a" category="list-text">Browse &amp; Restore는 한 번에 최대 100개의 개별 파일을 복원할 수 있습니다.</block>
   <block id="83e93965854a9ee03d55a2d15f2e8dc7" category="list-text">Search &amp; Restore는 한 번에 하나의 파일을 복원할 수 있습니다.</block>
@@ -1458,25 +1380,19 @@
   <block id="55082684c888abf218793c0bd2f3b5e4" category="paragraph">표준 공용 인터넷 연결을 사용하려는 경우 모든 권한은 Connector에 의해 설정되며 다른 작업은 필요하지 않습니다. 이 연결 유형은 에 나와 있습니다 <block ref="b1224f75874af139b1e7a51a1da970e9" category="inline-link-macro-rx"></block>.</block>
   <block id="7cb65d7424b08922f4902800ae6b79d0" category="inline-link-macro">두 번째 다이어그램</block>
   <block id="ca301c03d4c5ce91946df8b15f3dbe5f" category="paragraph">사내 데이터 센터에서 VPC로 인터넷을 통해 보다 안전하게 연결하려면 백업 활성화 마법사에서 AWS PrivateLink 연결을 선택하는 옵션이 있습니다. VPN 또는 AWS Direct Connect를 사용하여 프라이빗 IP 주소를 사용하는 VPC 엔드포인트 인터페이스를 통해 사내 시스템을 연결하려는 경우 필요합니다. 이 연결 유형은 에 나와 있습니다 <block ref="0f7afb920fb200721cfd6111e33f99d4" category="inline-link-macro-rx"></block>.</block>
-  <block id="9494561b819165d9f1e8e339562e316d" category="list-text">VPC S3 엔드포인트에서 인증서를 가져옵니다. 당신은 이렇게 합니다<block ref="0617c2fce5134dbc852516af04fe18ee" category="inline-link-rx"></block> 다음 명령을 실행합니다. 엔드포인트의 DNS 이름을 입력할 때 "*"를 대체하여 "bucket"을 앞에 추가합니다.</block>
   <block id="35902f649443d8dd6c5f04595fff3035" category="paragraph">Cloud Backup을 활성화한 후 Kubernetes 클러스터에 새로운 영구 볼륨을 추가한 경우에는 이전에 해당 볼륨에 대한 백업을 구성해야 했습니다. 이제 새로 생성된 볼륨에 자동으로 적용되는 정책을 선택할 수 있습니다. 이 옵션은 새 Kubernetes 클러스터에 대한 Cloud Backup을 활성화할 때 설정 마법사에서 사용할 수 있습니다.</block>
   <block id="afd87a86d8a5973d91f3fcc4e85c719f" category="section-title">Cloud Backup for Virtual Machines 1.1.0이 현재 GA로 제공됩니다</block>
-  <block id="f1567e25bd3a491ec53134f59ea7cea7" category="paragraph">SnapCenter Plug-in for VMware vSphere를 Cloud Manager와 통합하면 가상 머신의 데이터를 보호할 수 있습니다. 데이터 저장소를 클라우드에 백업하고 VMware vSphere용 사내 SnapCenter 플러그인으로 가상 머신을 간편하게 복원할 수 있습니다.</block>
   <block id="db46ba2f888d41e44da25c2d8c1f406d" category="summary">데이터 저장소와 가상 머신을 보고 VMware vSphere 인스턴스용 SnapCenter 플러그인을 편집할 수 있습니다.</block>
   <block id="880521c077c3d9130e51f737ddd86b15" category="doc">가상 시스템 보호 관리</block>
-  <block id="3dea1ab8ef5c1f9d8be4e192694f4eda" category="paragraph">데이터를 백업 및 복원하기 전에 정책, 데이터 저장소 및 가상 시스템을 볼 수 있습니다. 데이터베이스, 정책 또는 리소스 그룹의 변경에 따라 Cloud Manager UI에서 업데이트를 새로 고칠 수 있습니다.</block>
   <block id="20fa0d77fdaa3a45a8f87701c0342e8b" category="paragraph">사전 구성된 기본 정책을 모두 볼 수 있습니다. 각 정책에 대해 세부 정보를 볼 때 연결된 모든 Cloud Backup for Virtual Machines 정책과 연결된 모든 가상 머신이 나열됩니다.</block>
-  <block id="cacf5a65afb2740f7b7eea2375db4d1b" category="list-text">백업 및 복원 &gt; 가상 시스템 * 을 클릭합니다.</block>
   <block id="0eaea88f7ff41f67b59dccbcf68165fd" category="paragraph">관련 Cloud Backup for Virtual Machines 정책과 모든 가상 머신이 나열됩니다.</block>
   <block id="c592537d7c4342754740fa8b36640686" category="section-title">데이터 저장소 및 가상 머신을 봅니다</block>
   <block id="3fad99d665e8244fc38412e798c501af" category="paragraph">등록된 VMware vSphere용 SnapCenter 플러그인을 사용하여 보호되는 데이터 저장소 및 가상 머신이 표시됩니다.</block>
   <block id="78166ce4ccceeedfbf6aeb8682851072" category="paragraph">* 이 작업에 대한 정보 *</block>
   <block id="6b0050118b87748ccc2e6422181d4463" category="list-text">NFS 데이터 저장소만 표시됩니다.</block>
   <block id="4a60f4a892ee2b36c77a92d2aa8f7a15" category="list-text">SnapCenter Plug-in for VMware vSphere에서 하나 이상의 백업이 성공한 데이터 저장소만 표시됩니다.</block>
-  <block id="b465deeb69e36d63e03f7051f878a92d" category="list-text">Cloud Manager UI에서 * 백업 및 복원 * &gt; * 가상 머신 * &gt; * 설정 * &gt; * SnapCenter Plug-in for VMware vSphere * 를 클릭합니다.</block>
   <block id="21d67fc25940b8b3b749e37ad8e29e79" category="list-text">데이터 저장소 및 가상 머신을 보려는 VMware vSphere용 SnapCenter 플러그인을 클릭합니다.</block>
   <block id="b4aa547260f4fe266f03ec3a845576a5" category="section-title">VMware vSphere용 SnapCenter 플러그인을 편집합니다</block>
-  <block id="ed806e2cce658c6725869517d91c4932" category="paragraph">Cloud Manager에서 VMware vSphere용 SnapCenter 플러그인의 세부 정보를 편집할 수 있습니다</block>
   <block id="65e94d24e7bbe43abc97d317024d0fcd" category="list-text">을 클릭하고 * 편집 * 을 선택합니다</block>
   <block id="de272c17799e442dfec66612b8e9058b" category="list-text">필요에 따라 세부 정보를 수정합니다</block>
   <block id="4cc186df234138a57b2e8c5d8e5f7f8d" category="list-text">저장 * 을 클릭합니다.</block>
@@ -1487,15 +1403,12 @@
   <block id="f9d6d89e14fa868377d75b60a21b7841" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 가상 머신을 호스팅하는 VMware vSphere용 SnapCenter 플러그인에 해당하는 * Refresh * 를 클릭합니다.</block>
   <block id="048b394365a250ed3a53a1b28e83733e" category="paragraph">새로운 변경 사항이 검색됩니다.</block>
   <block id="3e99ccad833881d9a8aeec4e2665baae" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 데이터 저장소에 해당하는 * Refresh Protection * 을 클릭하여 변경 사항에 대한 클라우드 보호를 활성화합니다.</block>
-  <block id="bbbaf82896842e907feabc7ba91e68b5" category="list-text">백업 및 복원 &gt; 작업 모니터링 * 을 클릭합니다.</block>
   <block id="529795f55723488071425500df0ff5d6" category="summary">클라우드에서 가상 머신을 사내 SnapCenter로 복구할 수 있습니다.</block>
   <block id="70861b61c8a43f84ddd14a22316ee5af" category="doc">클라우드에서 가상 머신을 복구합니다</block>
   <block id="f88ada8e94660fca714cd251aa019028" category="paragraph">클라우드에서 가상 머신을 사내 vCenter로 복구할 수 있습니다. 백업이 수행된 위치와 정확히 동일한 위치로 복구됩니다. 다른 대체 위치에 백업을 복원할 수 없습니다. 데이터 저장소 또는 VM 보기에서 가상 머신을 복구할 수 있습니다.</block>
   <block id="d464a140825c1e9f8813a3b52ebddc03" category="admonition">데이터 저장소 간에 확장되는 가상 시스템은 복구할 수 없습니다.</block>
   <block id="b4851e92b19af0c5c82447fc0937709d" category="inline-link-macro">요구 사항</block>
   <block id="1344fa03cfc0e1e9c9a94eebf3e3c1a9" category="paragraph">를 모두 충족했는지 확인합니다 <block ref="a5bf58fdc6833048fad2d714a6e89f9c" category="inline-link-macro-rx"></block> 가상 머신을 클라우드에서 복구하기 전에</block>
-  <block id="47c414628aeaee4f21cf0f968923cd62" category="list-text">Cloud Manager에서 * 백업 및 복원 * &gt; * 가상 머신 * &gt; * SnapCenter Plug-in for VMware vSphere * 를 클릭하고 가상 머신을 복구할 VMware vSphere * 용 SnapCenter 플러그인을 선택합니다.</block>
-  <block id="ba26d8297d09a35c1a83c9b66fc8f0e9" category="admonition">소스 가상 머신이 다른 위치(vMotion)로 이동되고 사용자가 Cloud Manager에서 해당 가상 머신의 복구를 트리거하면 가상 머신이 백업이 수행된 원래 소스 위치로 복구됩니다.</block>
   <block id="d97e3ee694bea96c30606b68a9d786db" category="list-text">데이터 저장소에서 복구하려면 다음을 따르십시오.</block>
   <block id="ceb4a235a226f19c172c9cf7c46d00dc" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 복원하려는 데이터 저장소에 해당하는 * View Details * 를 클릭합니다.</block>
   <block id="a03a09176193c264d8dcbdcb8f2f9043" category="list-text">복원하려는 백업에 해당하는 * 복원 * 을 클릭합니다.</block>
@@ -1506,16 +1419,12 @@
   <block id="42387e1cb260fd1fb8624acde3767841" category="paragraph">백업이 수행된 위치와 동일한 위치로 VM이 복구됩니다.</block>
   <block id="9a0c42190771559c2a8da5fac845d24d" category="admonition">를 모두 충족했는지 확인합니다 <block ref="a5bf58fdc6833048fad2d714a6e89f9c" category="inline-link-macro-rx"></block> 클라우드에 데이터 저장소를 백업하기 전에.</block>
   <block id="8f2653c5938080ffdd57904f850bc430" category="section-title">VMware vSphere용 SnapCenter 플러그인을 등록합니다</block>
-  <block id="908b804c1d5eb33816dbfe2d033e3e43" category="paragraph">Cloud Manager에서 VMware vSphere용 SnapCenter 플러그인을 등록하여 데이터 저장소와 가상 머신을 Cloud Manager에 표시해야 합니다. 관리 액세스 권한이 있는 사용자만 VMware vSphere용 SnapCenter 플러그인을 등록할 수 있습니다.</block>
   <block id="8129ec59f397c5afc10f7d884869f8a5" category="admonition">VMware vSphere용 SnapCenter 플러그인을 여러 개 등록할 수 있습니다. 그러나 일단 등록하면 VMware vSphere용 SnapCenter 플러그인을 제거할 수 없습니다.</block>
-  <block id="d03248b995d99977502081ed2dc6be57" category="list-text">Cloud Manager UI에서 * 백업 및 복원 * &gt; * 가상 머신 * 을 클릭합니다.</block>
   <block id="4e5b953e1349e67f48dba9317bba75d3" category="list-text">VMware vSphere * 용 SnapCenter 플러그인 등록 을 클릭합니다.</block>
   <block id="d530421284e594531ff677ce26aca840" category="list-text">VMware vSphere용 SnapCenter 플러그인 필드에서 VMware vSphere용 SnapCenter 플러그인의 FQDN 또는 IP 주소를 지정합니다.</block>
   <block id="0db60886ecbee2c8ae4b0a650b7ef422" category="list-text">포트 필드에서 VMware vSphere용 SnapCenter 플러그인이 실행되고 있는 포트 번호를 지정합니다.</block>
   <block id="4eb88f79049bc78204f8659b66b7b655" category="list-text">사용자 이름 및 암호 필드에서 관리자 역할을 가진 사용자의 자격 증명을 지정합니다.</block>
-  <block id="a5f2332b8c4899ab96469750896f3abd" category="paragraph">등록된 VMware vSphere용 SnapCenter 플러그인을 사용하여 보호할 수 있는 모든 데이터 저장소와 가상 머신을 보려면 * 백업 및 복원 &gt; 가상 머신 * 을 클릭합니다.</block>
   <block id="1d419e3005bf4974f6070bbb53e5816f" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 백업하려는 데이터 저장소에 대해 * Activate Backup * 를 클릭합니다.</block>
-  <block id="2b0057ced0fbbcb82bd3aeddd916912e" category="paragraph">Cloud Manager에서 검색할 ONTAP 클러스터를 구성하여 데이터 저장소를 백업합니다. 데이터 저장소 중 하나에 작업 환경을 추가한 후 동일한 ONTAP 클러스터에 상주하는 다른 모든 데이터 저장소에 다시 사용할 수 있습니다.</block>
   <block id="925e322b8ed2bad21cf3391e5e93df0a" category="list-text">SVM에 해당하는 * 작업 환경 추가 * 를 클릭합니다.</block>
   <block id="73f07eefb51e62cc902b672233bd4977" category="list-text">ONTAP 클러스터 사용자의 자격 증명을 지정합니다.</block>
   <block id="0b6515b0d85be4c32021431c5119a675" category="list-text">AWS 액세스 키 필드에서 데이터 암호화에 대한 키를 지정합니다.</block>
@@ -1525,9 +1434,7 @@
   <block id="97bfb69bf5a1d719c6265b922436bbaa" category="doc">가상 시스템 데이터 보호</block>
   <block id="bf12440e355f2cc41683d5da523c5fce" category="paragraph">클라우드 서비스에 데이터 저장소 및 가상 머신 백업을 시작하기 전에 다음 요구 사항을 읽고 지원되는 구성이 있는지 확인하십시오.</block>
   <block id="d511399444cf864b695600d159b7c93b" category="list-text">VMware vSphere 4.6P1 이상용 SnapCenter 플러그인</block>
-  <block id="2d65c0d587a717a1de564ac474c18bc8" category="list-text">Cloud Manager 3.9 이상</block>
   <block id="bff3cdd2fd5f993f3bc3fbbd3c43fb30" category="list-text">VMware vSphere 4.6P1용 SnapCenter 플러그인에서 하나 이상의 백업을 수행해야 합니다.</block>
-  <block id="0c827a1221e7770d3ee8c7de2bb9a3f8" category="list-text">SnapCenter Plug-in for VMware vSphere에서 Cloud Manager의 Cloud Backup for Virtual Machines 정책에 대한 레이블 또는 레이블이 없는 상태로 최소 1일, 매주 또는 매월 정책을 구현합니다.</block>
   <block id="9c2d7e78a68e18061466c4c12001d828" category="list-text">사전 구성된 정책의 경우 VMware vSphere 및 클라우드용 SnapCenter 플러그인의 데이터 저장소에 대한 스케줄 계층이 동일해야 합니다.</block>
   <block id="ad747f24f06324c9bc58eeaa274f014a" category="list-text">FlexGroup 볼륨 백업 및 복구는 지원되지 않으므로 데이터 저장소에 FlexGroup 볼륨이 없는지 확인합니다.</block>
   <block id="d4e9a319924f580f8d8c025f39e06dc3" category="list-text">암호화된 볼륨 복원이 지원되지 않으므로 암호화된 볼륨이 없는지 확인합니다.</block>
@@ -1595,11 +1502,9 @@
   <block id="6f1f68c4600a11c04b4d3eaa5313820c" category="list-text">NetApp Cloud Central에서 사용자 토큰을 얻습니다.</block>
   <block id="8006289517e097344c5132b125d48612" category="list-text">NetApp Cloud Central 계정 ID를 받습니다.</block>
   <block id="80e7fa6f7ec235f2ec73e616228b4d5a" category="paragraph">이 API는 다음과 같은 응답을 반환합니다. [0].[accountPublicId] * 에서 출력을 구문 분석하여 계정 ID를 검색할 수 있습니다.</block>
-  <block id="b3bf0eaed051ad833a0c7b63ac0f2118" category="list-text">Cloud Manager 커넥터 ID가 포함된 x-agent-id를 얻습니다.</block>
   <block id="b3080cdc3d4f3f5baa6015e73aeff8f4" category="paragraph">이 API는 다음과 같은 응답을 반환합니다. occm.[0].[agent].[AGENTID] * 의 출력을 구문 분석하여 에이전트 ID를 검색할 수 있습니다.</block>
   <block id="b62dbbecd6533f9627427d34160e7d75" category="section-title">API 사용 예</block>
   <block id="5f1680fbed66bdfc227917827cf94d6b" category="paragraph">다음 예에서는 Azure 클라우드의 East-US-2 영역에서 일별, 시간별, 주별 레이블이 설정되고 보관 기간이 180일로 설정된 새 정책을 사용하여 작업 환경에서 백업을 활성화하는 API 호출을 보여 줍니다. 이 옵션은 작업 환경에서만 백업을 활성화하지만 볼륨은 백업되지 않습니다. ""자동 백업 사용": true를 선택하면 시스템에 이미 있는 모든 볼륨이 백업되고 이후 볼륨이 추가됩니다.</block>
-  <block id="d5d102436513dca0dc1b7ccf3b2ebd36" category="paragraph">Cloud Central 계정 ID "account-DpTFcxN3", Cloud Manager Connector ID "iZwFFeVCZjWnzGlw8RgD0QNANZvpP7IClients" 및 사용자 토큰 "BEARER UJHbGciOiJSUZSUI1NiSXinSXinS4UCJUCJUCJUXYUXUXUXUXUXYUXYUXUXUXYUXYUX4CJUXYUX4CJUXYUC4UXUXYUXYUXYUXYUXYUXYUXYUXYUX4CJUXY</block>
   <block id="8243464aa42a67375338d8b893252d77" category="listing-title">응답은 모니터링할 수 있는 작업 ID입니다.</block>
   <block id="7b029d80356dba73932cd4b67641ab73" category="listing-title">응답을 모니터링합니다.</block>
   <block id="b6c768315d9228aa5e18b2250a18a10e" category="listing-title">응답.</block>
@@ -1681,18 +1586,13 @@
   <block id="9fe942ae01924dd657ce7f1996246cc6" category="section-title">인터넷 연결이 없는 사이트에 대한 지원</block>
   <block id="012009e84c36a8660d26e3a3201d2fe9" category="list-text">인터넷 액세스(다크 사이트)가 없는 사이트에 Connector가 설치된 경우 검색 및 복원을 사용하여 파일 수준 복원이 지원되지 않습니다.</block>
   <block id="2deb7493de6dd6e8fd3126d72d730f68" category="cell">어두운 사이트에서는 지원되지 않습니다</block>
-  <block id="540ca524a7005910a6d9020f7c627d95" category="paragraph">인터넷에 액세스할 수 없는 사내 사이트에서 Cloud Backup을 실행 중인 경우, 즉 오프라인 사내 사이트의 호스트에 Cloud Manager Connector를 배포했다면 인터넷에 연결된 시스템에서 라이센스 파일을 얻어야 합니다. 일련 번호 및 NSS 계정을 사용하여 라이센스를 활성화하는 것은 오프라인(다크 사이트) 설치에 사용할 수 없습니다.</block>
   <block id="664bf8c6e31ba8a710f5213d1874cd18" category="list-text">백업 라이센스 파일이 있는 경우(어두운 사이트에 설치할 때 필요) * 라이센스 파일 업로드 * 옵션을 선택하고 메시지에 따라 파일을 첨부합니다.</block>
-  <block id="5db79377894ec784205c3c0fad010171" category="list-text">Cloud Manager에서 라이센스를 자동으로 업데이트할 수 없는 경우(예: 어두운 사이트에 설치된 경우) 라이센스 파일을 수동으로 업로드해야 합니다.</block>
-  <block id="665ddb058923583228dc01a98438f1fa" category="paragraph">BYOL 구독을 갱신하면 Cloud Manager에서 라이센스를 자동으로 업데이트합니다. Cloud Manager가 보안 인터넷 연결을 통해 라이센스 파일에 액세스할 수 없는 경우(예: 어두운 사이트에 설치된 경우) 직접 파일을 얻고 Cloud Manager에 수동으로 업로드할 수 있습니다. 자세한 내용은 을 참조하십시오 <block ref="797e48816191a5b3cd21a6c146b072f1" category="inline-link-macro-rx"></block>.</block>
   <block id="d4e2be367ddcfb2b47d5711136446363" category="section-title">2022년 6월 14일</block>
   <block id="dd16b8804cbc8afa6e2f6deb9acf5bcf" category="section-title">인터넷에 연결되지 않은 사이트에서 사내 ONTAP 클러스터 데이터를 백업하는 데 지원이 추가되었습니다</block>
-  <block id="6f5c7024f5953e20be33f1c72e8d5f4a" category="paragraph">사내 ONTAP 클러스터가 인터넷 액세스가 연결되지 않은 사이트에 있는 경우, 다크 사이트 또는 오프라인 사이트라고도 합니다. 이제 Cloud Backup을 사용하여 볼륨 데이터를 동일한 사이트에 있는 NetApp StorageGRID 시스템에 백업할 수 있습니다. 이 기능을 사용하려면 Cloud Manager Connector(버전 3.9.19 이상)도 오프라인 사이트에 배포해야 합니다.</block>
   <block id="6f44a1bf2246f054fd573ae9473909b6" category="inline-link">오프라인 사이트에 커넥터를 설치하는 방법을 알아봅니다</block>
   <block id="826610554423c9dc8481da631ccae8be" category="inline-link">오프라인 사이트에서 ONTAP 데이터를 StorageGRID에 백업하는 방법을 알아봅니다</block>
   <block id="824ce1955c2b2d5f91cb80c86545d639" category="paragraph"><block ref="eb618b89294e80d594faecbc4641afee" category="inline-link-rx"></block>.<block ref="f39d73248b535226c2e16237e43ff2d0" category="inline-link-rx"></block>.</block>
   <block id="0a0c24e7fef8cd9bcb19d6db19987b93" category="paragraph">이전에 클라우드 복원 인스턴스/VM을 사용한 경우 자동으로 제거됩니다. Cloud Backup 프로세스는 모든 이전 Cloud Restore 인스턴스를 삭제하기 위해 하루에 한 번 실행됩니다. 이 변경 사항은 완전히 투명하게 나타납니다. 데이터에는 영향을 주지 않으며 백업 또는 복원 작업이 변경되지 않습니다.</block>
-  <block id="7d3723a161203e59b756ce8e77114fc0" category="admonition">Cloud Manager Connector를 클라우드의 정부 지역 또는 인터넷에 액세스할 수 없는 사이트(어두운 사이트)에 구축하면 Cloud Backup은 ONTAP 시스템의 백업 및 복원 작업만 지원합니다. 이러한 대체 구축 방법을 사용할 때 Cloud Backup은 Kubernetes 클러스터, 애플리케이션 또는 가상 시스템의 백업 및 복원 작업을 지원하지 않습니다.</block>
   <block id="f213760e51bc9d7895aab74f2fba377c" category="paragraph">기본 정책은 매일 볼륨을 백업하고 각 볼륨의 최근 30개 백업 복사본을 유지합니다. 시간별, 일별, 주별, 월별 또는 연도별 백업으로 변경, 또는 더 많은 옵션을 제공하는 시스템 정의 정책 중 하나를 선택합니다. 보존할 백업 복사본의 수를 변경할 수도 있습니다.</block>
   <block id="2da5030b3f916979a53299b49c96a213" category="paragraph">다음 다이어그램에서는 * public connection * 메서드와 구성 요소 간에 준비해야 하는 연결을 보여 줍니다. 사내에 설치한 Connector나 Google Cloud Platform VPC에 구축한 Connector를 사용할 수 있습니다.</block>
   <block id="e48ce03e2bde71049d742a96c5698f33" category="inline-image-macro">Cloud Backup이 클러스터의 볼륨 및 백업 파일이 있는 Google Cloud 스토리지와 공용 연결을 통해 통신하는 방법을 보여주는 다이어그램입니다.</block>
@@ -1740,14 +1640,12 @@
   <block id="42a0fcc08cab0bf2248dfca3aecd8ec9" category="list-text">백업 정책의 이름을 지정하여 보다 자세한 설명이 포함된 텍스트를 사용하여 정책을 식별할 수 있습니다.</block>
   <block id="81631218cb28b1a163189c4aebeb5b6e" category="paragraph"><block ref="10a22265366b4a7cf695c35ca14547db" category="inline-link-macro-rx"></block>.</block>
   <block id="41cb49a16b097520a48e2141982170fe" category="paragraph">이제 일부 또는 전체 볼륨 이름, 일부 또는 전체 파일 이름, 크기 범위 및 추가 검색 필터를 통해 * 모든 ONTAP 백업 파일 * 에서 볼륨 또는 파일을 검색할 수 있습니다. 이 방법은 어떤 클러스터나 볼륨이 데이터의 소스인지 잘 모르면 복원하려는 데이터를 찾을 수 있는 새로운 방법입니다. <block ref="3e575c236f27ae49c244d24621c1b57f" category="inline-link-macro-rx"></block>.</block>
-  <block id="cc19ce08481602a2005d8a0cb018c27b" category="list-text">Cloud Manager의 왼쪽 탐색 메뉴에서 * 백업 및 복원 * 을 클릭합니다.</block>
   <block id="de76148f38881d048b0371c5472a1c65" category="list-text">연간 백업은 1월 1일 자정 직후에 시작됩니다.</block>
   <block id="c04e9a5a6565b2a7f08b4191d93602f6" category="inline-link">이러한 용량 기반 라이센스 패키지에 대해 자세히 알아보십시오</block>
   <block id="15117a805dc21b83a72d3b993a76f167" category="paragraph"><block ref="0b3d0999528dc9bb1b2a5ebd17f87563" category="inline-link-rx"></block>.</block>
   <block id="66145e361f72b54aa011f59d543dfb08" category="section-title">연간 계약을 사용합니다</block>
   <block id="264c1c7d3f4ee3cdcffedb80d7ffdb90" category="paragraph">연간 계약을 구매하여 Cloud Backup 연간 비용 지불</block>
   <block id="2ad823c02fc1acdb11ec531ccd53e0f5" category="paragraph">AWS를 사용할 경우 에서 2개의 연간 계약을 얻을 수 있습니다<block ref="7e9391e5068ba3345180f0de3723960c" category="inline-link-rx"></block> Cloud Volumes ONTAP 및 사내 ONTAP 시스템: 1년, 2년 또는 3년 조건으로 제공됩니다.</block>
-  <block id="ebfefcd98f010a948a1d7251ef132972" category="list-text">Cloud Manager의 왼쪽 탐색 메뉴에서 * Digital Wallet * 을 클릭한 다음 * Data Services Licenses * 탭을 선택합니다.</block>
   <block id="fa151cd4e924318c49ae962dc9172d21" category="paragraph">AWS VPC 또는 사내에 Connector가 이미 구축되어 있는 경우 모두 설정됩니다. 그렇지 않은 경우 ONTAP 데이터를 AWS S3 스토리지에 백업하기 위한 커넥터를 생성해야 합니다. 또한 AWS S3에 연결할 수 있도록 커넥터의 네트워크 설정을 사용자 지정해야 합니다.</block>
   <block id="376da794bc45a0b27e3c757018f00f1c" category="paragraph">다음 다이어그램에서는 * public connection * 메서드와 구성 요소 간에 준비해야 하는 연결을 보여 줍니다. 사내에 설치한 Connector나 AWS VPC에 구축한 Connector를 사용할 수 있습니다.</block>
   <block id="2a0c0bd6978fb77b6428f0b072f37443" category="inline-image-macro">Cloud Backup이 퍼블릭 연결을 통해 백업 파일이 있는 클러스터 및 AWS S3 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다.</block>
@@ -1770,14 +1668,11 @@
   <block id="a2ff0bc78d093861138e916ba1b7cc8b" category="inline-link-macro">Azure 포털에 로그인하고 두 구독을 연결합니다</block>
   <block id="0cb51e6ed7c689efeebeb6de708d8e58" category="list-text">기본적으로 백업은 Cloud Volumes ONTAP 시스템에 사용되는 것과 동일한 구독을 사용하여 생성됩니다. 백업에 다른 Azure 구독을 사용하려면 을(를) 사용해야 합니다 <block ref="9054d8fd2617d522cb8cc52a346f8430" category="inline-link-macro-rx"></block>.</block>
   <block id="1f1d430741bc6a0e3ed24dea15d600e3" category="paragraph">백업에 다른 Azure 구독을 사용하려면 을(를) 사용해야 합니다 <block ref="9054d8fd2617d522cb8cc52a346f8430" category="inline-link-macro-rx"></block>.</block>
-  <block id="6c82d791a5e7452f52c38a42d7b61c10" category="summary">Cloud Backup을 사용하면 소스 Cloud Volumes ONTAP 볼륨이 있는 위치와 다른 Azure 계정에 백업 파일을 생성할 수 있습니다. 이 파일은 Cloud Manager Connector가 있는 계정과 다릅니다.</block>
   <block id="da7bc8de90297f74e7e43d559d6f8a4c" category="doc">Azure에서 다중 계정 액세스에 대한 백업을 구성합니다</block>
-  <block id="8429269282ffb8b1977a5b2d128d65ca" category="paragraph">클라우드 백업을 사용하면 소스 Cloud Volumes ONTAP 볼륨이 상주하는 위치와 다른 Azure 계정에서 백업 파일을 생성할 수 있습니다. 이 두 계정 모두 Cloud Manager Connector가 있는 계정과 다를 수 있습니다.</block>
   <block id="08fb1651cbfdb11878b475347705c01b" category="inline-link">Azure Blob 저장소에 Cloud Volumes ONTAP 데이터 백업</block>
   <block id="2a4ac893df9780b6108621896c9bfc7b" category="paragraph">이 단계는 사용자가 있을 때만 필요합니다<block ref="e74b3b06a2a8c2ff7fa54388adf98ac9" category="inline-link-rx"></block>.</block>
   <block id="f9a8974587711b80f51f844aef1e99df" category="paragraph">아래 단계에 따라 이러한 방법으로 구성을 설정하기만 하면 됩니다.</block>
   <block id="7effdaab63f2a455255267b1c45a602d" category="section-title">계정 간 VNET 피어링을 설정합니다</block>
-  <block id="2b8c0900fecf2fde6ad819b17c34d231" category="paragraph">클라우드 관리자가 다른 계정/지역에서 Cloud Volumes ONTAP 시스템을 관리하도록 하려면 VNET 피어링을 설정해야 합니다. 스토리지 계정 접속에 VNET 피어링이 필요하지 않습니다.</block>
   <block id="7be5dff9f26dd0cfb7e5896d6142d4c7" category="list-text">Azure 포털에 로그인하고 집에서 가상 네트워크를 선택합니다.</block>
   <block id="24d6ea8c256f982be40d4e8e87a36c2c" category="list-text">구독 1로 사용 중인 가입을 선택하고 피어링을 설정할 VNET를 클릭합니다.</block>
   <block id="010f020ec46dae654334c56b074681e9" category="paragraph"><block ref="010f020ec46dae654334c56b074681e9" category="inline-image-macro-rx" type="image"></block></block>
@@ -1800,7 +1695,6 @@
   <block id="1da2c465a0473c669ecf45690f9c77f8" category="list-text">저장소 계정 &gt; 네트워킹 &gt; 개인 끝점 연결로 이동하고 * + 개인 끝점 * 을 클릭합니다.</block>
   <block id="ab018e3a2da472dd06615e08149c8ae2" category="paragraph"><block ref="ab018e3a2da472dd06615e08149c8ae2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2e0fccb2492335abb1bf03e7895e57b1" category="list-text">개인 Endpoint_Basics_페이지에서 다음을 수행합니다.</block>
-  <block id="47575dd43ad40803f135818d9b3c43fb" category="list-text">구독 2(Cloud Manager Connector와 Cloud Volumes ONTAP 시스템이 배포된 위치)와 리소스 그룹을 선택합니다.</block>
   <block id="dcf7853e5720d1d4006d6354680dfca5" category="list-text">끝점 이름을 입력합니다.</block>
   <block id="8632ba911e67cd674d7aa46e9c33ca03" category="list-text">영역을 선택합니다.</block>
   <block id="8de80de63c22bf5501105fe1221042c7" category="paragraph"><block ref="8de80de63c22bf5501105fe1221042c7" category="inline-image-macro-rx" type="image"></block></block>
@@ -1826,13 +1720,11 @@
   <block id="b4f571ad8c9a525beb5cb8da26f64fef" category="list-text"><block ref="b4f571ad8c9a525beb5cb8da26f64fef" category="inline-link-rx"></block></block>
   <block id="a3caba4397a73eb091b3374d44a36510" category="list-text">Azure 스토리지에 VNET 프라이빗 엔드포인트를 설정합니다. 이 기능은 ONTAP 클러스터에서 VNET로 연결되는 ExpressRoute 또는 VPN 연결이 있고, 가상 프라이빗 네트워크(* 전용* 연결)에 유지하기 위해 Connector와 Blob 스토리지 간의 통신을 원하는 경우에 필요합니다.</block>
   <block id="37c606e486cf867317024daab096d5c7" category="sidebar">Azure에서 다중 계정 액세스를 위한 백업을 구성합니다</block>
-  <block id="3d4496d9d3224917e9bc6712e9746eb2" category="paragraph">클라우드 백업은 인터넷에 연결되지 않은 사이트("오프라인" 또는 "다크" 사이트라고도 함)에서 로컬 사내 ONTAP 시스템의 볼륨 데이터를 로컬 NetApp StorageGRID 시스템으로 백업하는 데 사용할 수 있습니다. 이 구성에서는 볼륨 및 파일 복구도 모두 지원됩니다. 이 경우 어두운 사이트에 Cloud Manager Connector(최소 버전 3.9.20)를 배포해야 합니다. 을 참조하십시오 <block ref="14e7f2dcf692810422b10a89547f7ac5" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="9aa87cabc3c16ccfd72ed13e9e2a189c" category="list-text">ONTAP 클러스터는 백업 및 복원 작업을 위해 인터클러스터 LIF에서 StorageGRID 게이트웨이 노드에 대한 사용자 지정 포트를 통한 HTTPS 연결을 시작합니다. 백업 설정 중에 포트를 구성할 수 있습니다.</block>
   <block id="92a508a0037c85cca367ecb3e92a0fde" category="list-text">포트 443을 통해 StorageGRID 게이트웨이 노드에 대한 HTTPS 연결</block>
   <block id="24e6e2f6171b43a847fe194a9a9b5cd0" category="inline-link">글로벌 파일 캐시</block>
   <block id="e5078960df05e3b097ebed6ba78c2f45" category="paragraph">Azure를 사용하는 경우 NetApp 세일즈 담당자에게 연간 계약을 구매하도록 문의하십시오. 이 계약은 Azure 마켓플레이스에서 프라이빗 오퍼로 제공됩니다. NetApp이 프라이빗 오퍼를 공유하면 Cloud Backup 활성화 중에 Azure 마켓플레이스에서 구독할 때 연간 계획을 선택할 수 있습니다.</block>
   <block id="3ae134636b7b1d4b2b9cc5b9e9bfeb40" category="paragraph">GCP를 사용할 경우 NetApp 세일즈 담당자에게 연간 계약을 구매할 것을 문의하십시오. 이 계약은 Google Cloud Marketplace에서 프라이빗 오퍼로 제공됩니다. NetApp이 프라이빗 오퍼를 공유하면 Cloud Backup 활성화 중에 Google Cloud 마켓플레이스를 구독할 때 연간 계획을 선택할 수 있습니다.</block>
-  <block id="89c0cece94d31a7950d0783c151bf351" category="admonition">Cloud Backup 기능은 Cloud Manager Connector에 내장되어 있습니다. 인터넷에 연결되지 않은 사이트에 설치한 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 <block ref="4b505ef59fae088b7538ff8d53b204e9" category="inline-link-macro-rx"></block> 각 Cloud Backup 릴리즈의 새로운 기능을 보려면 ~ 단계를 따르십시오<block ref="9f7f6f7d33dac6a99bb8b7e121fd2054" category="inline-link-rx"></block> 새 기능을 사용하려는 경우</block>
   <block id="92b61176075059ecdabd92837adf7da4" category="paragraph">백업에 대한 StorageGRID 대상이 Canvas에서 작업 환경으로 존재하는 경우 클러스터를 StorageGRID 작업 환경으로 끌어서 설치 마법사를 시작할 수 있습니다.</block>
   <block id="ebea53a8d7bf996062062169f43ef628" category="list-text">백업 스케줄을 정의하고 보존할 백업 수를 선택합니다. <block ref="67a34cd7549e2904a063387c005adbcb" category="inline-link-macro-rx"></block>.</block>
   <block id="8ba72b12d7e5af78d9fb1775475b4e58" category="cell">볼륨 및 파일 복원은 Amazon S3, Azure Blob 및 Google Cloud에 저장된 백업 파일과 함께 작동합니다</block>
@@ -1843,8 +1735,6 @@
   <block id="906f805e3d9bd713d4fc930bd763eca9" category="list-text">Azure 요구사항:</block>
   <block id="ad21a85e531f324768ed107500147c11" category="inline-link">이 리소스 공급자를 구독에 등록하는 방법을 확인하십시오</block>
   <block id="6a50b735b65723537bd33702bf6551aa" category="list-text">Azure Synapse Analytics 리소스 공급자를 구독에 등록해야 합니다.<block ref="66e7a06283e2f9b1945c2e3b539d5c17" category="inline-link-rx"></block>. 리소스 공급자를 등록하려면 구독 * 소유자 * 또는 * 참가자 * 여야 합니다.</block>
-  <block id="6a2dc7376733e521f488a0f6392c3228" category="list-text">특정 Azure Synapse Workspace 및 Data Lake Storage 계정 권한을 Cloud Manager에 제공하는 사용자 역할에 추가해야 합니다. <block ref="3f613adb79f1db61c1db3e20329cd95a" category="inline-link-macro-rx"></block>.</block>
-  <block id="f28284c40f14c71a677f89cc22bfc5a0" category="paragraph">과거에 구성한 커넥터와 함께 Cloud Backup을 이미 사용하고 있다면 지금 Cloud Manager 사용자 역할에 Azure Synapse Workspace 및 Data Lake Storage 계정 권한을 추가해야 합니다. 새로운 항목이므로 검색 및 복원에 필요합니다.</block>
   <block id="1a57137c00ac13558ef22f60c946d8b3" category="list-text">Azure에 저장된 백업의 경우 Azure Synapse 작업 공간과 Data Lake 파일 시스템을 작업 공간 데이터를 저장할 컨테이너로 프로비저닝합니다.</block>
   <block id="5f98181f93bdb66aed67b6ec6ca0e6a1" category="section-title">검색 및 복원은 이제 Azure Blob의 백업 파일에서 지원됩니다</block>
   <block id="3cc0a32f0024bbcc0e74c0ca7c01b4ca" category="paragraph">이제 Azure Blob 저장소에 백업 파일을 저장하는 사용자가 볼륨 및 파일을 복원하는 검색 및 복원 방법을 사용할 수 있습니다.<block ref="2505b78b897ef0dc1c5d1783874239f2" category="inline-link-rx"></block>.</block>
@@ -1857,7 +1747,6 @@
   <block id="c386ae49c48be8bcc2fbd19ab4807c0a" category="section-title">끌어서 놓기를 통해 Cloud Backup을 Azure Blob 및 Google Cloud Storage로 이동할 수 있습니다</block>
   <block id="b6f2e1a880ce20ab3d1039056746fa33" category="paragraph">이 기능은 Amazon S3 버킷에 이미 존재합니다.</block>
   <block id="e11804ac7111d8333d8a21998f8f8824" category="paragraph">Cloud Backup을 활성화할 때 첫 번째 백업 정책에서 _S3 Glacier_또는 _S3 Glacier Deep Archive_를 선택한 경우 해당 계층은 해당 클러스터에 대한 향후 백업 정책에 사용할 수 있는 유일한 아카이브 계층이 됩니다. 첫 번째 백업 정책에서 아카이브 계층을 선택하지 않으면 _S3 Glacier_는 이후 정책에 대한 유일한 보관 옵션입니다.</block>
-  <block id="3978794209bf6e3d46ed93af65d2069d" category="list-text">다음 S3 권한(최신 버전)이 있는지 확인합니다<block ref="8653992cee34401962fde5d56183ca3b" category="inline-link-rx"></block>)는 Connector에 권한을 제공하는 IAM 역할의 일부입니다.</block>
   <block id="a6b870bb5171cb2d515fffc98b581212" category="paragraph">버전 3.9.21 이상을 사용하여 Connector를 배포한 경우 이러한 권한은 이미 IAM 역할의 일부여야 합니다. 그렇지 않으면 누락된 권한을 추가해야 합니다. 특히 검색 및 복원에 필요한 "Athena" 및 "GLUE" 사용 권한이 있습니다. 를 참조하십시오<block ref="484fb6182b52563a51349e6fb7cb2cb6" category="inline-link-rx"></block>.</block>
   <block id="5434b58cc632a508fca184ec8cb34294" category="inline-link-macro">사용 가능한 DataLock 설정에 대해 자세히 알아보십시오</block>
   <block id="f9fb067e87a469d33f2c1b6dec021ae0" category="list-text">선택적으로 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호할 수 있습니다. _DataLock_은 백업 파일이 수정되거나 삭제되지 않도록 보호하고, 백업 파일을 검색하여 백업 파일에서 랜섬웨어 공격의 증거를 찾습니다. <block ref="a1590ca0a57c2e20ed40ac0f3384a5af" category="inline-link-macro-rx"></block>.</block>
@@ -1910,7 +1799,6 @@
   <block id="d71c7fafb5eead8d41c2869b8c551f6a" category="paragraph">백업 파일에서 데이터를 복원하기 전에 스캔을 실행하도록 선택하거나 이 검사를 건너뛸 수 있습니다.</block>
   <block id="826c19d01b527f2701cc3460b9c889de" category="list-text">수동</block>
   <block id="7b574572d2ae18c60d429c285a8984b9" category="paragraph">언제든지 온디맨드로 랜섬웨어 보호 스캔을 실행하여 특정 백업 파일의 상태를 확인할 수 있습니다. 이 기능은 특정 볼륨의 랜섬웨어 문제가 발생한 경우 해당 볼륨의 백업이 영향을 받지 않는지 확인하려는 경우에 유용합니다.</block>
-  <block id="00bff0a01358d16a7b45463949263317" category="admonition">랜섬웨어 스캔을 수행하려면 백업 파일을 Cloud Manager 환경(Connector가 설치된 환경)에 다운로드해야 합니다. 따라서 Connector를 사내에 구축한 경우 클라우드 공급자로부터 추가 송신 비용이 발생할 수 있습니다. 따라서 Connector를 클라우드에 구축하고 백업이 저장되는 버킷과 동일한 영역에 두는 것이 좋습니다.</block>
   <block id="a69e1d2ca1fe7554b8e9cdd1437253dd" category="section-title">DataLock 및 랜섬웨어 보호 설정</block>
   <block id="58fa00d803b45e7110c889dedfeefaef" category="paragraph">각 백업 정책은 백업 파일에 적용할 수 있는 _DataLock 및 랜섬웨어 방지_ 섹션을 제공합니다.</block>
   <block id="ec9cd099f847d3f19e5340c41e969f9b" category="inline-image-macro">백업 정책을 생성할 때의 DataLock 및 랜섬웨어 보호 설정 스크린샷</block>
@@ -1956,7 +1844,6 @@
   <block id="c10d430cabc016bc8e5ceddffda78379" category="list-text">Cloud Volumes ONTAP와 클라우드 백업을 번들로 제공할 수 있는 "CVO Professional" 패키지입니다. 여기에는 라이센스를 사용하는 Cloud Volumes ONTAP 시스템에 대한 무제한 백업이 포함됩니다(백업 용량은 라이센스 용량에 포함되지 않음). 이 옵션을 사용하면 사내 ONTAP 데이터를 백업할 수 없습니다.</block>
   <block id="8ec0d0dc8da544226cc9d382f2505c92" category="list-text">"CVO Edge Cache" 패키지는 "CVO Professional" 패키지와 동일한 기능을 제공하지만 에 대한 지원도 포함합니다<block ref="475d408daeaf0424668ce650296169bb" category="inline-link-rx"></block>. Cloud Volumes ONTAP 시스템에서 3TiB의 프로비저닝된 각 용량에 대해 하나의 글로벌 파일 캐시 에지 시스템을 구축할 수 있습니다. 이 옵션은 Azure 마켓플레이스를 통해서만 사용할 수 있으며, 온프레미스 ONTAP 데이터를 백업할 수 없습니다.</block>
   <block id="e19c54a7cf194baf456409469eef4cef" category="list-text">Cloud Volumes ONTAP와 클라우드 백업을 번들로 제공할 수 있는 "CVO Professional" 계획. 여기에는 라이센스를 사용하는 Cloud Volumes ONTAP 시스템에 대한 무제한 백업이 포함됩니다(백업 용량은 라이센스 용량에 포함되지 않음). 이 옵션을 사용하면 사내 ONTAP 데이터를 백업할 수 없습니다.</block>
-  <block id="f82ad9b74dd26eb2563c74a59b1bc529" category="paragraph">BYOL Cloud Backup 라이센스는 Cloud Manager 계정과 연결된 모든 시스템에서 전체 용량을 공유하는 부동 라이센스입니다. ONTAP 시스템의 경우 백업하려는 볼륨에 대해 CLI 명령 'volume show-fields logical-used-by-AFS'를 실행하여 필요한 용량을 대략적으로 계산할 수 있습니다.</block>
   <block id="80f19a6a4baa774910df9b4583a11c2e" category="list-text">변경 불가능한 백업 파일을 보존 기간 동안 잠가 있도록 만듭니다.</block>
   <block id="f5ef24e218bb7a52732b62958bb89c68" category="list-text">백업 파일에서 랜섬웨어 공격을 검색하고 감염된 백업을 자동으로 제거/교체합니다.</block>
   <block id="3f28b1a3a0b3b6c8294e56323ec13e18" category="list-text">오래된 백업 파일을 아카이브 스토리지에 계층화하여 비용 절감</block>
@@ -1986,7 +1873,6 @@
   <block id="c73aeadbe74d06b3eebf4d0a5f283344" category="list-text">SnapMirror 레이블 'app_consistent' 및 'all_source_snapshot'과의 관계는 클라우드에 백업되지 않습니다.</block>
   <block id="fc67d9698234eb37a3aee3e7929f04f9" category="list-text">사용된 SnapMirror 레이블과 관계없이 SnapMirror 대상 볼륨에 스냅샷의 로컬 복사본을 생성하는 경우 이러한 스냅샷은 백업으로 클라우드로 이동하지 않습니다. 이때 Cloud Backup이 이를 백업하려면 소스 DP 볼륨에 원하는 레이블이 있는 스냅샷 정책을 생성해야 합니다.</block>
   <block id="ff65f252d2a0aa40e634cf2ad7eaa2d3" category="list-text">데이터 보호 볼륨에서 * 지금 백업 * 버튼을 사용한 임시 볼륨 백업이 지원되지 않습니다.</block>
-  <block id="d419e49a366c436245ca56a829c069f7" category="list-text">Cloud Manager에 사용 권한을 제공하는 IAM 역할에는 최신 버전의 S3 권한이 포함되어야 합니다<block ref="8653992cee34401962fde5d56183ca3b" category="inline-link-rx"></block>.</block>
   <block id="f9f784798392e12769fac127e94ef591" category="paragraph">버전 3.9.21 이상을 사용하여 Connector를 배포한 경우 이러한 권한은 이미 IAM 역할의 일부여야 합니다. 그렇지 않으면 누락된 권한을 추가해야 합니다. 특히 검색 및 복원에 필요하므로 "Athena" 및 "GLUE" 권한이 필요합니다.</block>
   <block id="e83377d046e6ba641ad164b4cb484f6d" category="list-text">선택적으로 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화할 수 있습니다. <block ref="58f01ad9ea7ce8fd23147681b9f27af7" category="inline-link-macro-rx"></block>.</block>
   <block id="dd68fd5c7a1e10fdd40ade208c331ce3" category="summary">백업 일정을 변경하고, 새 백업 정책을 만들고, 볼륨 백업을 활성화/비활성화하고, 백업을 삭제하는 등 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다.</block>
@@ -2018,7 +1904,6 @@
   <block id="4639d0e2e2909a747265c2f704128bca" category="section-title">작업을 모니터링합니다</block>
   <block id="a5cae278ab84c15ead127cbc4d6b2fc5" category="paragraph">작업 환경에서 시작된 작업의 상태를 모니터링할 수 있습니다. 이렇게 하면 성공적으로 완료된 작업, 현재 진행 중인 작업 및 실패한 작업을 볼 수 있으므로 문제를 진단하고 해결할 수 있습니다.</block>
   <block id="728798e20e00a4c55a8af203c396664a" category="paragraph">모든 작업 및 작업 상태의 목록을 볼 수 있습니다. 각 작업 또는 작업에는 고유한 ID와 상태가 있습니다. 상태는 다음과 같습니다.</block>
-  <block id="f74780adaddcb04bf72bf42279df012b" category="list-text">백업 및 복원 * 을 클릭합니다.</block>
   <block id="2594a4aa0a4a9233f3cf8e1c4caa4a95" category="list-text">작업 모니터링 * 을 클릭합니다</block>
   <block id="fe3d15e8bd4366923e66dfe06213a1c5" category="paragraph">작업 이름을 클릭하여 해당 작업에 해당하는 세부 정보를 볼 수 있습니다. 특정 작업을 찾는 경우 다음을 수행할 수 있습니다.</block>
   <block id="e645e09bf2ae6466ce5a92513bf9c99b" category="section-title">백업 세부 정보를 봅니다</block>
@@ -2066,27 +1951,17 @@
   <block id="4512b12288e7290cb279f814b15ba5dc" category="inline-link">통합 인증을 사용하여 사용자 토큰을 생성합니다</block>
   <block id="8753ca0304fc4dd31beb83f4a57f7b41" category="paragraph">REST API에 액세스하려면 통합 인증이 있는 사용자 토큰을 얻어야 합니다. 사용자 토큰을 얻는 방법에 대한 자세한 내용은 을 참조하십시오<block ref="0eb587a835d0db317e25e938408a4ed2" category="inline-link-rx"></block>.</block>
   <block id="4547c1343318e001ea786267b3cf7b84" category="summary">백업을 생성하기 전에 사전 요구 사항을 완료합니다.</block>
-  <block id="2b6b05a9503cc9277cb58c848aaebedb" category="paragraph">Cloud Manager에 액세스하고, Cloud Manager 계정을 만들고, 작업 환경과 커넥터를 만들고, Oracle용 SnapCenter 플러그인을 구축할 수 있어야 합니다.</block>
-  <block id="e9f869a1fe63e475451ec5f9939329d0" category="section-title">Cloud Manager에 액세스합니다</block>
-  <block id="63785c950a9f3cb1e82193ec1f7e49ee" category="inline-link-macro">NetApp Cloud Central에 가입하십시오</block>
-  <block id="5970bd5da21d70901770347c11bbaaaf" category="inline-link-macro">Cloud Manager에 로그인합니다</block>
-  <block id="0997707eec0eae6135d1ef326c72b2cc" category="paragraph">당신은 해야 한다 <block ref="dcf5e53b033259383f405d7eb45d19f3" category="inline-link-macro-rx"></block>, <block ref="183b44bd60add234aecf2ffe975eddd7" category="inline-link-macro-rx"></block>를 선택한 다음 를 설정합니다 <block ref="8a2a59f9ec508dc199624b6dfabe5c9f" category="inline-link-macro-rx"></block>.</block>
   <block id="bea93ac0c50dbd01324ebd42ff666cd8" category="section-title">ONTAP 작업 환경을 위한 FSx를 생성합니다</block>
   <block id="bf7ec532103402eaed4653738655f6ad" category="inline-link-macro">ONTAP용 Amazon FSx를 시작하십시오</block>
   <block id="fdd19953ce3013e133d600a251e48a61" category="inline-link-macro">ONTAP 작업 환경을 위한 Amazon FSx를 생성하고 관리합니다</block>
   <block id="231a24195067c2a2f27e2450ea7e64ed" category="paragraph">데이터베이스가 호스팅되는 ONTAP 작업 환경을 위한 Amazon FSx를 생성해야 합니다. 자세한 내용은 을 참조하십시오 <block ref="44e37fc8d2d76ee1d15cd4a20acb0e0e" category="inline-link-macro-rx"></block> 및 <block ref="0e7e3006696ac3877ee032d5edb264d7" category="inline-link-macro-rx"></block>.</block>
-  <block id="e55bd0bd62587a7135a26e431bf28961" category="paragraph">Cloud Manager 또는 AWS를 사용하여 NetApp FSx를 생성할 수 있습니다. AWS를 사용하여 생성한 경우 Cloud Manager에서 ONTAP 시스템용 FSx를 검색해야 합니다.</block>
   <block id="94ee7072c2750da1997438a715efb7d4" category="section-title">커넥터를 작성합니다</block>
-  <block id="3b6afa275397b4b253570f5eabb9a2a1" category="paragraph">계정 관리자는 AWS에 Connector를 구축하여 Cloud Manager가 퍼블릭 클라우드 환경 내에서 리소스와 프로세스를 관리할 수 있도록 해야 합니다.</block>
-  <block id="669d0dea66a5583967d79cc40bcc2eeb" category="inline-link-macro">Cloud Manager에서 AWS에 커넥터 생성</block>
-  <block id="7929752d74ca66c9fd44a2ac7f86c9bd" category="paragraph">자세한 내용은 을 참조하십시오 <block ref="ec863d21fd023d992dac42777c6a3d19" category="inline-link-macro-rx"></block>.</block>
   <block id="f6b8c8d4c527eaebdea85ded6d8cc15a" category="list-text">FSx 작업 환경과 Oracle 데이터베이스를 모두 관리하려면 동일한 커넥터를 사용해야 합니다.</block>
   <block id="9f69e13234533744e815d263723a5cd0" category="list-text">FSx 작업 환경과 Oracle 데이터베이스가 동일한 VPC에 있는 경우 동일한 VPC에 커넥터를 배포할 수 있습니다.</block>
   <block id="fafa58ae12f83200fd5e76519a291a56" category="list-text">FSx 작업 환경과 Oracle 데이터베이스가 서로 다른 VPC에 있는 경우:</block>
   <block id="cf0a8805abc36f57c061b63fdb27c4af" category="list-text">FSx에 NAS(NFS) 워크로드가 구성되어 있는 경우 두 VPC 중 하나에 커넥터를 생성할 수 있습니다.</block>
   <block id="4a2c2d38801ece7b96f22f796f2462e0" category="list-text">SAN 워크로드만 구성되어 있고 NAS(NFS) 워크로드를 사용할 계획이 없는 경우 FSx 시스템이 생성되는 VPC에 커넥터를 생성해야 합니다.</block>
   <block id="ba6b286f0b29e48621c9d0bf4a77e627" category="admonition">NAS(NFS) 워크로드를 사용하려면 Oracle 데이터베이스 VPC와 FSx VPC 간에 전송 게이트웨이가 있어야 합니다. 부동 IP 주소인 NFS IP 주소는 전송 게이트웨이를 통해서만 다른 VPC에서 액세스할 수 있습니다. VPC를 피해서 유동 IP 주소에 액세스할 수 없습니다.</block>
-  <block id="7306372a8e221f9cbdc865504b72b173" category="paragraph">커넥터를 만든 후 * Canvas * &gt; * 작업 환경 추가 * 를 클릭하고 화면의 지시에 따라 작업 환경을 추가합니다. Oracle 데이터베이스 호스트 및 FSx 작업 환경에 대한 커넥터와 연결이 있는지 확인합니다. 커넥터는 FSx 작업 환경의 클러스터 관리 IP 주소에 연결할 수 있어야 합니다.</block>
   <block id="b45b202ba2cef5a8e5349896310f7f9d" category="admonition">커넥터를 작성한 후 * 커넥터 &gt; 커넥터 관리 * 를 클릭하고 커넥터 이름을 선택한 다음 커넥터 ID를 복사합니다.</block>
   <block id="5e61bf82718531b748f39eb54b38c9be" category="section-title">Oracle용 SnapCenter 플러그인 구축</block>
   <block id="e3582eb6307d182c5a2887fd0369d1bd" category="paragraph">각 Oracle 데이터베이스 호스트에 Oracle용 SnapCenter 플러그인을 구축해야 합니다. Oracle 호스트에 SSH 키 기반 인증이 활성화되어 있는지 여부에 따라 플러그인 구축 방법 중 하나를 따를 수 있습니다.</block>
@@ -2137,9 +2012,7 @@
   <block id="b26de0535d797545cac86720fd096445" category="paragraph">호스트에서 데이터베이스를 검색하여 정책을 할당하고 백업을 생성해야 합니다.</block>
   <block id="f0ddc428cd7c3cf4949f9edfb049cb33" category="list-text">ONTAP 작업 환경 및 커넥터용 FSx를 만들어야 합니다.</block>
   <block id="5ff3ca14a716aed6cd7b9b8433daa620" category="list-text">커넥터가 ONTAP 작업 환경 및 Oracle 데이터베이스 호스트용 FSx에 연결되어 있는지 확인합니다.</block>
-  <block id="07ac90068ab0b822a2eb368ff5b4a890" category="list-text">Cloud Manager 사용자에게 "계정 관리자" 역할이 있는지 확인합니다.</block>
   <block id="b284b4e1502b1e8b45eca415d2efe3b2" category="list-text">Oracle용 SnapCenter 플러그인을 구축해야 합니다. <block ref="7a9fe936bc0ede19b4e4e3b90573cf6b" category="inline-link-macro-rx"></block>.</block>
-  <block id="b86ebb4cc0bc3f74e54b9778132535d7" category="list-text">Cloud Manager UI에서 * 백업 및 복원 * &gt; * 응용 프로그램 * 을 클릭합니다.</block>
   <block id="fe4137061bd2c33fe1c02ad6b9570b0e" category="list-text">응용 프로그램 검색을 클릭합니다.</block>
   <block id="d20aa4d7347d2818451332f0d49b2253" category="list-text">Cloud Native * 를 선택하고 * Next * 를 클릭합니다.</block>
   <block id="63000a0fa2dbdc9bced04917b9fb5014" category="paragraph">이 계정의 모든 사용자에 대해 예약된 데이터 보호 작업을 수행하기 위해 _SnapCenter 시스템_역할이 있는 서비스 계정이 생성됩니다.</block>
@@ -2163,20 +2036,14 @@
   <block id="478ed3048c4d215862134df0ae0d59db" category="list-text">(선택 사항) 백업 이름의 형식을 편집합니다.</block>
   <block id="241958803b06afbd6f6eb3ef7dbbe9d8" category="list-text">스케줄 및 보존 세부 정보를 지정합니다.</block>
   <block id="f2a42a68e067e481d094b018459ef895" category="list-text">Create * 를 클릭합니다.</block>
-  <block id="2d60a7d5505e967af6be4b947aa60ea2" category="summary">NetApp Cloud Manager에서 지원하는 Cloud Backup for Applications는 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle ® 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다.</block>
   <block id="eb5668f5c3459c84cc715cf197e7c91a" category="doc">클라우드 네이티브 애플리케이션 데이터 보호</block>
-  <block id="ab1b44a5ff1afc799f4afe758f73f4db" category="paragraph">Cloud Backup for Applications는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. NetApp Cloud Manager에서 지원하는 Cloud Backup for Applications는 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다.</block>
   <block id="2d242bb36ec91b32005f9296ff03a912" category="section-title">있습니다</block>
   <block id="5e106a25aff8402c9cb720536f4f9763" category="paragraph">Cloud Backup for Applications 아키텍처에는 다음과 같은 구성 요소가 포함되어 있습니다.</block>
-  <block id="1de5da66f12460beeb95e94fe3acf74c" category="list-text">Cloud Backup for Applications는 NetApp에서 SaaS 서비스로 호스팅하는 데이터 보호 서비스 세트이며 Cloud Manager SaaS 플랫폼을 기반으로 합니다.</block>
   <block id="5aa6aa9ade143b785fa0243d0138a6b5" category="paragraph">NetApp 클라우드 스토리지에 상주하는 애플리케이션에 대해 데이터 보호 워크플로우를 조정합니다.</block>
-  <block id="ed5f69fb9dcefc7c8d1ea57498acc62d" category="list-text">Cloud Backup for Applications UI는 Cloud Manager UI와 통합되어 있습니다.</block>
   <block id="64293a907ed741e8f0a2b7508ac14fb6" category="paragraph">Cloud Backup for Applications UI는 다양한 스토리지 및 데이터 관리 기능을 제공합니다.</block>
-  <block id="e632fbfcf1324b1d2160076cbffec929" category="list-text">Cloud Manager Connector는 클라우드 네트워크에서 실행되고 Oracle 데이터베이스 호스트에서 실행되는 Amazon FSx 스토리지 파일 시스템 및 Oracle용 SnapCenter 플러그인과 상호 작용하는 Cloud Manager의 구성 요소입니다.</block>
   <block id="5c4f5775352fba72f33e34817f09707e" category="list-text">Oracle용 SnapCenter 플러그인은 각 Oracle 데이터베이스 호스트에서 실행되고 호스트에서 실행되는 Oracle 데이터베이스와 상호 작용하는 구성요소로서 데이터 보호 작업을 수행합니다.</block>
   <block id="8fd81e906c023a2c3e318d13769fd642" category="inline-image-macro">Cloud Backup이 다양한 구성요소와 통신하는 방법을 보여주는 다이어그램</block>
   <block id="c078c5cf04e16bf64233c82b0f994bcf" category="paragraph"><block ref="c078c5cf04e16bf64233c82b0f994bcf" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="28749d90f4cd68e33b1b408d538e85ce" category="paragraph">모든 사용자 요청 시 Cloud Backup for Applications UI는 Cloud Manager SaaS와 통신하며, 요청 프로세스의 검증도 동일합니다. 요청이 백업 또는 복원과 같은 워크플로우를 실행하는 경우 SaaS 서비스는 워크플로우를 시작하고 필요한 경우 통화를 Cloud Manager Connector로 전달합니다. 그런 다음, Connector는 NetApp ONTAP용 Amazon FSx 및 Oracle용 SnapCenter 플러그인과 워크플로우 작업 실행에 함께 통신합니다.</block>
   <block id="ce820eb6e1b6a8cd96fc07f753a32646" category="paragraph">Connector는 Oracle 데이터베이스와 동일한 VPC 또는 다른 데이터베이스에 구축할 수 있습니다. Connector와 Oracle 데이터베이스가 서로 다른 네트워크에 있는 경우 이러한 데이터베이스 간에 네트워크 연결을 설정해야 합니다.</block>
   <block id="1f0b82560627b660c6c6958a1df834b8" category="section-title">지원되는 구성</block>
   <block id="0f0f84cb9775a6f4ad6b4796bfcedfe9" category="list-text">운영 체제:</block>
@@ -2249,7 +2116,6 @@
   <block id="e8a9eeac14cf83695d7d066f82b9ba23" category="sidebar">클라우드에서 사내로 Oracle 데이터베이스 복원</block>
   <block id="0affc637f33b3e47ec0c95c6c88db865" category="sidebar">SQL Server 데이터베이스를 클라우드에서 사내로 복원합니다</block>
   <block id="3a3684473cd3bbadce768d553de06b92" category="sidebar">클라우드 네이티브 애플리케이션 데이터를 복원합니다</block>
-  <block id="82aa9a316dbbb378e25972999e35a45b" category="paragraph">Cloud Backup for Applications는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. Cloud Manager 내에서 지원되는 Cloud Backup for Applications는 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다.<block ref="5774010e75c0af5301ef0cfe74198590" category="inline-link-rx"></block>.</block>
   <block id="e7f0bd203723dde56c408349b772431e" category="paragraph">Cloud Backup은 이제 랜섬웨어 세이프 백업에 대한 오브젝트 잠금을 지원합니다. 클러스터가 ONTAP 9.11.1 이상을 사용하고 있고 백업 대상이 Amazon S3인 경우, _DataLock 및 랜섬웨어 보호_라는 새로운 백업 정책 옵션을 사용할 수 있습니다. DataLock은 백업 파일의 수정 또는 삭제를 방지하고, 랜섬웨어 방지 기능은 백업 파일을 검사하여 백업 파일에 대한 랜섬웨어 공격의 증거를 찾습니다.<block ref="3f7eaa3e30bb5eb7a46ecb7c423ee7ad" category="inline-link-rx"></block>.</block>
   <block id="4a13f748ffea2bf384ee164062e7e17f" category="paragraph">이 기능을 사용하려면 커넥터 역할에 추가 권한이 필요합니다. 버전 3.9.21 소프트웨어를 사용하여 배포된 Connector에는 이러한 권한이 포함되어 있습니다. 이전 릴리스를 사용하여 Connector를 배포한 경우 사용 권한을 수동으로 추가해야 합니다.<block ref="b51546833a3c96ab5b8c4e49b196cd94" category="inline-link-rx"></block>.</block>
   <block id="9fa4d73f6f3d752a69adeebba1959edb" category="section-title">이제 Cloud Backup은 사용자 지정 SnapMirror 레이블을 사용하여 생성된 정책을 지원합니다</block>
@@ -2288,7 +2154,6 @@
   <block id="92e7e64290ff37f2ae2bd9287b6710b0" category="list-text">선택적으로 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호_를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호할 수 있습니다. _DataLock_은 백업 파일이 수정되거나 삭제되지 않도록 보호하고, 백업 파일을 검색하여 백업 파일에서 랜섬웨어 공격의 증거를 찾습니다. <block ref="a1590ca0a57c2e20ed40ac0f3384a5af" category="inline-link-macro-rx"></block>.</block>
   <block id="642c6cdace2b813772c203eeab710f8a" category="summary">백업은 클라우드 계정의 오브젝트 저장소에 저장되므로 특정 시점에서 데이터를 복원할 수 있습니다. 백업 파일에서 전체 ONTAP 볼륨을 복원하거나, 몇 개의 파일만 복원해야 하는 경우 백업 파일에서 폴더 또는 개별 파일을 복원할 수 있습니다.</block>
   <block id="7ada527d1dd84b409531cc41597f383e" category="paragraph">원래 작업 환경의 볼륨, 동일한 클라우드 계정을 사용하는 다른 작업 환경의 볼륨 또는 온프레미스 ONTAP 시스템의 볼륨으로 * 폴더 * 를 복원할 수 있습니다.</block>
-  <block id="467e633cdbe44becb6fee7ae0cb76925" category="paragraph">Restore Dashboard를 사용하여 볼륨, 폴더 및 파일 복원 작업을 수행할 수 있습니다. Cloud Manager의 왼쪽 탐색 메뉴에서 * Backup &amp; Restore * 를 클릭한 다음 * Restore * 탭을 클릭하여 Restore Dashboard에 액세스합니다. 을 클릭할 수도 있습니다 <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> &gt; * 서비스 패널의 백업 및 복원 서비스에서 복원 대시보드 보기 * 를 선택합니다.</block>
   <block id="33db5b42d69afb61eeb2827297155200" category="paragraph">일반적으로, 최근 주나 월로부터 특정 볼륨, 폴더 또는 파일을 복원해야 할 때 _Browse &amp; Restore_가 더 낫습니다. 파일의 이름과 위치, 파일의 마지막 상태가 양호한 날짜를 알고 있어야 합니다. _Search &amp; Restore_ 는 일반적으로 볼륨, 폴더 또는 파일을 복원해야 할 때 더 낫지만 정확한 이름, 해당 볼륨이 있는 볼륨 또는 양호한 상태로 마지막으로 만들어진 날짜를 기억하지 못합니다.</block>
   <block id="d04e8ed2daf2cfbac4df96c77bda4638" category="cell">폴더 스타일 구조를 탐색하여 단일 백업 파일 내에서 볼륨, 폴더 또는 파일을 찾습니다</block>
   <block id="7a035a915239cf76211880a31a8e3764" category="cell">전체 또는 일부 볼륨 이름, 전체 폴더/파일 이름, 크기 범위 및 추가 검색 필터를 사용하여 * 모든 백업 파일 * 에서 볼륨, 폴더 또는 파일을 검색합니다</block>
@@ -2379,14 +2244,10 @@
   <block id="caa02466e2a6c1c2c13139fe55b7aaab" category="list-text">정품 인증 마법사에서 기본 Microsoft 관리 암호화 키를 사용하는 대신 고객이 관리하는 키를 사용하여 데이터를 암호화할 수 있습니다. 이 경우 Azure 가입, 키 저장소 이름 및 키가 필요합니다.<block ref="50f2f49feb0afd07f1969b5faf2ca775" category="inline-link-rx"></block>.</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">위의 자체 지원 옵션 외에도 NetApp 지원 전문가와 협력하여 지원을 활성화한 이후의 모든 문제를 해결할 수 있습니다.</block>
   <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">지원 등록 방법을 알아보십시오</block>
-  <block id="09651e14b46d7e8697d32de90d0deacb" category="paragraph">케이스 생성 * 기능을 사용하려면 먼저 Cloud Manager 계정 ID 일련 번호(예: 960xxxx) NetApp 포함 <block ref="3349e4b3d05f646f2f1421bee7c2ad26" category="inline-link-macro-rx"></block>.</block>
   <block id="383133cb6f7207b1c65c3ace94aa5e95" category="list-text">전화로 통화하려면 * 전화 * 를 클릭하십시오. 전화를 걸 수 있는 전화 번호가 나열된 netapp.com 페이지로 연결됩니다.</block>
   <block id="bf5bc6ab0f95f17f4e98c9d766b8c11d" category="list-text">케이스 생성 * 을 클릭하여 NetApp 지원 전문가와 함께 티켓을 엽니다.</block>
   <block id="b53e0a259f4a0c8e7da80d6c94e26c84" category="list-text">* NetApp Support 사이트 계정 *: 지원 케이스를 여는 사람과 관련된 해당 NSS 계정을 선택합니다. 이 담당자는 아래에 제공된 추가 이메일 외에 NetApp에 연락할 수 있는 기본 담당자가 됩니다.</block>
-  <block id="ec65cc87efda54741062da1fce99ff76" category="paragraph">NSS 계정이 표시되지 않으면 Cloud Manager의 지원 섹션 내의 * NSS 관리 * 탭으로 이동하여 해당 계정을 추가할 수 있습니다.</block>
-  <block id="b3144caf7d928b7954447c757b3ed77b" category="list-text">* 서비스 *: 문제와 관련된 서비스를 선택합니다. 예를 들어, Cloud Manager가 서비스 내의 워크플로우 또는 기능과 관련된 기술 지원 문제를 해결할 수 있는 경우에 해당합니다.</block>
   <block id="2e50c5f85523f0aba9ff2db10f18279c" category="list-text">* 작업 환경 *: 스토리지에 적용 가능한 경우 * Cloud Volumes ONTAP * 또는 * On-Premise * 를 선택한 다음 관련 작업 환경을 선택합니다.</block>
-  <block id="1e38219c106fb9d07d173c027b8911c7" category="paragraph">작업 환경 목록은 서비스의 상단 배너에서 선택한 Cloud Manager 계정, 작업 공간 및 커넥터의 범위 내에 있습니다.</block>
   <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">* 케이스 우선 순위 *: 케이스의 우선 순위를 선택합니다. 우선 순위는 낮음, 중간, 높음 또는 긴급입니다.</block>
   <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">이러한 우선 순위에 대한 자세한 내용을 보려면 필드 이름 옆에 있는 정보 아이콘 위로 마우스를 가져갑니다.</block>
   <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">* 문제 설명 * : 해당 오류 메시지 또는 수행한 문제 해결 단계를 포함하여 문제에 대한 자세한 설명을 제공합니다.</block>
@@ -2397,7 +2258,6 @@
   <block id="04e15da1deae9568b4dcda64fbb0c8d5" category="paragraph">지원 케이스 내역을 보려면 * 설정 &gt; 일정 * 을 클릭하고 "지원 케이스 생성"이라는 이름의 작업을 찾습니다. 오른쪽 끝에 있는 버튼을 사용하여 작업을 확장하여 세부 정보를 볼 수 있습니다.</block>
   <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">케이스를 생성하려고 할 때 다음과 같은 오류 메시지가 나타날 수 있습니다.</block>
   <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">"선택한 서비스에 대해 케이스를 생성할 권한이 없습니다."</block>
-  <block id="148f13242c3e296dc276821cdc574921" category="paragraph">이 오류는 NSS 계정과 연결된 레코드 회사가 Cloud Manager 계정 일련 번호( 960xxxx) 또는 작동 환경 일련 번호 케이스 생성 * 양식 상단의 NSS 계정 목록을 확인하여 올바른 일치 항목을 찾거나 다음 옵션 중 하나를 사용하여 지원을 요청할 수 있습니다.</block>
   <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">제품 내 채팅을 사용합니다</block>
   <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">에서 비기술 케이스를 제출하십시오<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
   <block id="aa254718f2c52dc147bfd8f98b0c4840" category="inline-link">Cloud Insights and Cloud Secure를 참조하십시오</block>
@@ -2408,7 +2268,6 @@
   <block id="5a080c775e60ee1f55b487821cc05ac3" category="paragraph">DataLock은 보존 기간 동안 사용자가 백업 파일을 덮어쓰거나 삭제할 수 없는 _Compliance_mode로 설정됩니다. 랜섬웨어 보호가 활성화됩니다.</block>
   <block id="189baba290165c9a7ddf7f3c3ec05a6a" category="paragraph">다음 퍼블릭 및 프라이빗 클라우드 공급자가 오브젝트 스토리지를 사용하는 경우, 다음과 같은 작업 환경에서 ONTAP 볼륨의 DataLock 및 랜섬웨어 보호를 활성화할 수 있습니다. 향후 릴리즈에서는 클라우드 공급자를 더 추가할 예정입니다.</block>
   <block id="12ffabaafd850d6e279869bb1cd0b7c8" category="cell">ifdef::AWS[]Amazon S3 endif::AWS[]ifdef::Azure[]endif::Azure[]ifdef::GCP[]endif::GCP[]NetApp StorageGRID</block>
-  <block id="de45b13527319d3765cb25daa45622e5" category="list-text">Cloud Manager 3.9.21 이상을 사용해야 합니다</block>
   <block id="46651d9c49a465cb6fa5e07cd6981948" category="list-text">다음 S3 권한은 Connector에 권한을 제공하는 IAM 역할의 일부여야 합니다. 이러한 리소스는 리소스 "arn:AWS:S3::NetApp-backup- *"의 "backupS3Policy" 섹션에 있습니다.</block>
   <block id="709168c65e2b4e5806ef96ffe25ed710" category="paragraph">"S3:BypassGovernanceRetention"은 관리 사용자가 Governance 모드를 사용하여 잠긴 백업 파일을 덮어쓰거나 삭제할 수 있도록 하려는 경우에만 추가해야 합니다.</block>
   <block id="a0cfa687d678b7bdaa6e05ad4367a96d" category="list-text">StorageGRID의 경우:</block>
@@ -2426,14 +2285,10 @@
   <block id="782c6055cb81fe84321782b22e61294a" category="list-text">백업 파일이 아카이브 스토리지에 있는 경우 개별 폴더를 복원할 수 없습니다.</block>
   <block id="2e47b96ebcc91dcfee6b5804d47d3820" category="list-text">AWS에서 Cloud Volumes ONTAP 9.7P5 이상을 실행하고 있습니다.</block>
   <block id="7ed26bbb75f4d5a15f22c2e06ce64775" category="list-text">기본적으로 백업은 Cloud Volumes ONTAP 시스템에 사용되는 계정과 동일한 계정을 사용하여 생성됩니다. 백업에 다른 AWS 계정을 사용하려면 다음을 수행해야 합니다.</block>
-  <block id="c04ad475ab164a3dd61ad6aa2b1896e8" category="list-text">Cloud Manager에서 대상 AWS 계정 자격 증명을 추가합니다</block>
-  <block id="4bd22989b4f564cd5eddaf279aa19fa8" category="list-text">Cloud Manager에 권한을 제공하는 IAM 역할에 "S3:PutBuckPolicy" 권한을 추가합니다</block>
-  <block id="35c166570b01fefe282a2125ffa42130" category="paragraph">백업에 다른 AWS 계정을 사용하려면 Cloud Manager에서 대상 AWS 계정 자격 증명을 추가하고 Cloud Manager에 권한을 제공하는 IAM 역할에 "S3:PutBuckPolicy" 권한을 추가해야 합니다.</block>
   <block id="315fa9b600d5877a548fb6493014cdc0" category="list-text">이 클러스터에 대한 Cloud Backup을 활성화할 때 초기 정책에서 _DataLock 및 랜섬웨어 보호_를 활성화한 경우 편집한 모든 정책은 동일한 DataLock 설정(거버넌스 또는 규정 준수)으로 구성해야 합니다. Cloud Backup을 활성화할 때 _DataLock 및 랜섬웨어 보호_를 활성화하지 않은 경우 지금 DataLock을 설정할 수 없습니다.</block>
   <block id="147ea6861d62ba04b46cbb346ad32a93" category="list-text">이 클러스터에 대한 Cloud Backup을 활성화할 때 초기 정책에서 _DataLock 및 랜섬웨어 보호_를 활성화한 경우, 생성한 추가 정책을 동일한 DataLock 설정(거버넌스 또는 규정 준수)으로 구성해야 합니다. Cloud Backup을 활성화할 때 _DataLock 및 랜섬웨어 보호_를 활성화하지 않은 경우 DataLock을 사용하는 새 정책을 생성할 수 없습니다.</block>
   <block id="5a58de0e84e5db9ac743167d182029a5" category="section-title">작업 환경에 대한 클라우드 백업 비활성화 중</block>
   <block id="7d74a85f6ca999dc566f13bea483a788" category="paragraph">작업 환경에서 Cloud Backup을 비활성화하면 시스템의 각 볼륨에 대한 백업이 비활성화되고 볼륨을 복구하는 기능도 비활성화됩니다. 기존 백업은 삭제되지 않습니다. 이 작업 환경에서 백업 서비스의 등록을 취소하지 않습니다. 기본적으로 모든 백업 및 복원 작업을 일정 기간 동안 일시 중지할 수 있습니다.</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">모든 Cloud Manager 설명서</block>
   <block id="201e1c2515e9474bbcf720fb750a48c0" category="paragraph">이제 해당 폴더(디렉토리 또는 공유)의 모든 파일에 액세스해야 하는 경우 백업 파일에서 폴더를 복원할 수 있습니다. 폴더 복원은 전체 볼륨을 복원하는 것보다 훨씬 효율적입니다. 이 기능은 ONTAP 9.11.1 이상을 사용하는 경우 Browse &amp; Restore 메서드와 Search &amp; Restore 메서드를 모두 사용하여 복원 작업에 사용할 수 있습니다. 현재 단일 폴더만 선택하고 복원할 수 있으며, 해당 폴더의 파일만 복원할 수 있습니다. 하위 폴더 또는 하위 폴더의 파일은 복원되지 않습니다.</block>
   <block id="092186aa28f6e357cce0ba979d549724" category="paragraph">과거에는 아카이브 스토리지(AWS 및 Azure만 해당)로 이동한 백업 파일의 볼륨만 복원할 수 있었습니다. 이제 이러한 아카이빙된 백업 파일에서 개별 파일을 복원할 수 있습니다. 이 기능은 ONTAP 9.11.1 이상을 사용하는 경우 Browse &amp; Restore 메서드와 Search &amp; Restore 메서드를 모두 사용하여 복원 작업에 사용할 수 있습니다.</block>
   <block id="a82e38799f4647ec5a2bc71d39020ae3" category="paragraph">* 참고: * 복원하려는 볼륨의 백업 파일이 아카이브 스토리지(ONTAP 9.10.1부터 시작)에 있는 경우 복원 작업에 더 많은 시간이 소요되고 비용이 발생합니다. 또한 대상 클러스터는 볼륨 복원의 경우 ONTAP 9.10.1 이상, 파일 복원의 경우 9.11.1을 실행해야 합니다.</block>
@@ -2446,18 +2301,14 @@
   <block id="f840409b357663e7b24e8296c05770a5" category="list-text">Azure 및 Azure Government 배포에는 추가 인바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오<block ref="e1893ebf6f9d2e927a13d052b78eec9f" category="inline-link-rx"></block> 를 참조하십시오.</block>
   <block id="2eeb194bf5c17f3408edda6fb4570318" category="summary">ONTAP에서 Azure로 애플리케이션 데이터를 백업하려면 몇 가지 단계를 완료하십시오.</block>
   <block id="007849ce4500e0ef940d682709a64c87" category="doc">사내 애플리케이션 데이터를 Microsoft Azure에 백업합니다</block>
-  <block id="10955ddc73ebe91eec2159d47e64bbae" category="paragraph">Cloud Backup for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 ONTAP에서 Microsoft Azure로 애플리케이션 데이터를 백업할 수 있습니다.</block>
   <block id="119bbd90cf306c9fdb87aee95a51d816" category="paragraph">단일 정책을 사용하여 하나 이상의 애플리케이션을 클라우드에 동시에 보호할 수 있습니다.</block>
   <block id="0e0a0b730150ab18d2f69b65245c64a3" category="list-text">SVM을 선택하고 * 작업 환경 추가 * 를 클릭합니다.</block>
   <block id="0338fa74556c30bb5b0f61729477209e" category="list-text">클라우드 공급자로 * Microsoft Azure * 를 선택합니다.</block>
   <block id="3ec390de7db5c59f007c717fb9aa2dac" category="list-text">IP 공간을 지정합니다.</block>
   <block id="3cae1e7b0c1139a170789e9cf32899f8" category="list-text">아카이브 계층을 선택합니다.</block>
   <block id="e710c6d8124609e30a4a7712947c1e16" category="paragraph">이 작업은 일회성 작업이므로 나중에 설정할 수 없으므로 보관 계층을 설정하는 것이 좋습니다.</block>
-  <block id="d14a27b37d19411318313c75f11baf13" category="inline-link">Cloud Manager에 대한 알림</block>
-  <block id="8f4eecef1c8abf547a153a1486d48ab2" category="list-text"><block ref="8f4eecef1c8abf547a153a1486d48ab2" category="inline-link-rx"></block></block>
   <block id="23959c4b9349bcd5e832610f8a4c21b5" category="summary">ONTAP에서 AWS로 애플리케이션 데이터를 백업하려면 몇 가지 단계를 완료하십시오.</block>
   <block id="a398d70f425729872aae3dc2d3e8feb1" category="doc">사내 애플리케이션 데이터를 Amazon Web Services에 백업합니다</block>
-  <block id="3d6b0bb6d82393ce2315f777d806431e" category="paragraph">클라우드 백업 for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 ONTAP의 애플리케이션 데이터를 Amazon Web Services로 백업할 수 있습니다.</block>
   <block id="e101aace9ab89472a4fdfde41fce9f4e" category="list-text">클라우드 공급자로 * Amazon Web Services * 를 선택합니다.</block>
   <block id="53abd7822662a93e6bc58b003f475f63" category="summary">SnapCenter 서버를 등록하려면 몇 단계를 완료하십시오.</block>
   <block id="6a08a60eb0e1154985f01ad3910ea19c" category="paragraph">SnapCenter Server 4.6 이상이 실행 중인 호스트는 SnapCenterAdmin 역할의 사용자만 등록할 수 있습니다. 여러 SnapCenter 서버 호스트를 등록할 수 있습니다.</block>
@@ -2498,7 +2349,6 @@
   <block id="39a39a3d5651d922f580216bf9d45b85" category="list-text">복구 및 복구 작업을 수행하는 데 필요한 상태로 데이터베이스의 상태를 변경하려면 * 데이터베이스 상태 * 를 선택합니다.</block>
   <block id="7acc08861d4ed79ef851580e5f995af3" category="list-text">스냅샷이 아카이브 스토리지에 있는 경우 아카이브 스토리지에서 데이터를 복원하는 우선 순위를 지정합니다.</block>
   <block id="89d500a3ace67f6d47edb61231336589" category="section-title">애플리케이션의 클라우드 백업 개선</block>
-  <block id="2e73884f73c53eee3aea96494fd4ff16" category="list-text">Google Cloud Provider(GCP) 및 StorageGRID를 지원하여 애플리케이션 정합성 보장 스냅샷을 백업합니다</block>
   <block id="f617da6b50728500642eb376ab97b6f4" category="list-text">사용자 지정 정책을 생성합니다</block>
   <block id="eaec67d5f8f719a2f05b5ded5dc4ce60" category="list-text">아카이브 스토리지 지원</block>
   <block id="37976e53c610f9f37f8310aaacc3323e" category="list-text">SAP HANA 애플리케이션 백업</block>
@@ -2509,22 +2359,18 @@
   <block id="e75ce95021f32383e6a928c1b242bc34" category="section-title">가상 머신용 Cloud Backup의 향상된 기능</block>
   <block id="46a34c0c1ccc14eb217db2e715c43df6" category="list-text">하나 이상의 데이터 저장소를 백업하기 위해 StorageGRID를 지원합니다</block>
   <block id="ef53758645eb4a736d45c89bc0f0f03d" category="admonition">중요: 기본을 통한 보조 백업 복구가 지원됩니다.</block>
-  <block id="c921edcd8b1c4265c566fc8d2ce4a9b5" category="paragraph">Cloud Manager UI에서 다른 작업을 수행하여 애플리케이션 보호를 관리할 수 있습니다.</block>
   <block id="0265cbdb76704489ac9a7bbcaed7a2fd" category="paragraph">모든 정책을 볼 수 있습니다. 이러한 각 정책에 대해 세부 정보를 볼 때 연결된 모든 애플리케이션이 나열됩니다.</block>
   <block id="548ac4488bc12e098791c3b365f344a8" category="paragraph">연결된 애플리케이션이 나열됩니다.</block>
   <block id="fc85f5d8f0ed03c661f1f9db3972b018" category="admonition">응용 프로그램과 연결된 정책은 편집하거나 삭제할 수 없습니다.</block>
   <block id="73c43b8b0d9e0b68dac6c6ffb29419df" category="list-text">SAP HANA 데이터베이스의 경우 각 백업의 데이터 백업 및 종료 날짜만 나열됩니다. 백업을 선택하고 마운트 작업을 수행할 수 있습니다.</block>
   <block id="00ee72b37f44d1aa703da6770529f465" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> SnapCenter 서버에 해당하는 * 등록 취소 * 를 클릭합니다.</block>
   <block id="2b34c38dda168481090a8622ff2c1712" category="paragraph">보조 스토리지에서 객체 저장소로 이동한 백업을 복구하거나 마운트하려면 운영 작업 환경 세부 정보를 추가하고 IP 공간을 설정해야 합니다.</block>
-  <block id="d0badf3ec6806846f5e8c09b2d17916a" category="list-text">Cloud Manager UI에서 * Canvas * &gt; * 작업 환경 추가 * 를 클릭합니다.</block>
   <block id="06e3a8b8802d9b7d6de822c69b78b532" category="list-text">기본 작업 환경 세부 정보를 지정하고 * 추가 * 를 클릭합니다.</block>
-  <block id="045b8f4fa7c5c6b0b66dee919bc47804" category="list-text">백업 및 복원 * &gt; * 볼륨 * 을 클릭합니다.</block>
   <block id="c7087e755792869dcff756ce6d7b1738" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 임의의 볼륨에 대해 * Details * 를 클릭합니다.</block>
   <block id="d4badf7460fbe89af7d282991c4e0764" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 백업에 해당되며 * Restore * 를 클릭합니다.</block>
   <block id="dc97342ac8274a03738ec4722f6ac22c" category="list-text">마법사에서 새로 추가된 운영 작업 환경을 대상으로 선택합니다.</block>
   <block id="4a938aa86ba9c09b265a5dc95f09a99c" category="summary">ONTAP에서 GCP로 애플리케이션 데이터를 백업하기 위한 몇 가지 단계를 완료합니다.</block>
   <block id="e7626d40bde0cb9f25e876222f0bb5fc" category="doc">사내 애플리케이션 데이터를 StorageGRID에 백업합니다</block>
-  <block id="2ddb9baf1865f05a1baf4eac6cea72c4" category="paragraph">클라우드 백업 for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 ONTAP에서 StorageGRID로 애플리케이션 데이터를 백업할 수 있습니다.</block>
   <block id="588f7b73c2097f4262c5a26678a85f36" category="paragraph">단일 정책을 사용하여 하나 이상의 애플리케이션을 StorageGRID로 동시에 보호할 수 있습니다.</block>
   <block id="3c129ae4117659984e8ff0ffd5717f67" category="paragraph">데이터를 StorageGRID에 백업할 때 Connector를 사내에서 사용할 수 있어야 합니다. 새 커넥터를 설치하거나 현재 선택한 커넥터가 내부에 있는지 확인해야 합니다. 커넥터는 인터넷에 접속하거나 접속하지 않고 사이트에 설치할 수 있습니다.</block>
   <block id="59a3f2ec9c1e69a907655f1e19a09af2" category="inline-link-macro">StorageGRID용 커넥터를 작성합니다</block>
@@ -2534,7 +2380,6 @@
   <block id="8e9f3213cd82bd04250d546c82ac9bcc" category="paragraph">FQDN:port 형식으로 세부 정보를 입력합니다.</block>
   <block id="da490d8bb350d1ff5d204e7bdf4b2c7d" category="list-text">Access Key 필드에서 키를 지정합니다.</block>
   <block id="2eccdae60857b53f97fd58344a87c912" category="list-text">암호 키 필드에 암호를 지정합니다.</block>
-  <block id="c50fb53b4416ee77cca5964869eb7313" category="paragraph">온프레미스 ONTAP 시스템에서 Amazon Web Services, Microsoft Azure, Google Cloud 및 StorageGRID로 Oracle, Microsoft SQL 및 SAP HANA 애플리케이션 데이터를 백업할 수 있습니다.</block>
   <block id="7de0faf266e13fc4fb95e2e3b3f92770" category="admonition">SnapCenter 소프트웨어 4.6 이상을 사용해야 합니다.</block>
   <block id="351f25e3e7fc628f73a433013b9820a6" category="list-text">SnapCenter 서버 4.6 이상 다음 기능을 사용하려면 SnapCenter 서버 4.7을 사용해야 합니다.</block>
   <block id="40a593f0986fe870ba02d32e411a2b0d" category="list-text">사내 보조 스토리지에서 백업 보호</block>
@@ -2547,7 +2392,6 @@
   <block id="29d7639a0c7b9ce1eeb1a132409265c0" category="paragraph">다음 이미지는 클라우드로 백업할 때의 각 구성 요소와 이러한 구성 요소 간에 준비해야 하는 연결을 보여 줍니다.</block>
   <block id="908a0e47cd03ccd04955cb93b0d41ef4" category="paragraph">다음 이미지는 StorageGRID에 백업할 때의 각 구성 요소와 이러한 구성 요소 간에 준비해야 하는 연결을 보여 줍니다.</block>
   <block id="cba6a24686804eb1d7fea3608588a013" category="doc">온프레미스 애플리케이션 데이터를 Google Cloud에 백업합니다</block>
-  <block id="73b1edb53fa203c2e4cd95bda6e13351" category="paragraph">Cloud Backup for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 ONTAP에서 Google Cloud로 애플리케이션 데이터를 백업할 수 있습니다.</block>
   <block id="fa860b204216c5fc8423fbeb3cc0cb75" category="list-text">클라우드 공급자로 * Google Cloud Platform * 을 선택합니다.</block>
   <block id="511e1b14d4a83c658fb7834ec40ec44b" category="list-text">Google Cloud Storage 버킷을 백업용으로 생성할 Google Cloud Project를 선택합니다.</block>
   <block id="fa0f3e6189a17df2b37f1f89872dbee4" category="list-text">Google Cloud Access Key 필드에서 키를 지정합니다.</block>
@@ -2566,43 +2410,28 @@
   <block id="c420a910c4e7f566035c5d1b7b8aafc4" category="paragraph">데이터 저장소를 Amazon Web Services S3, Microsoft Azure Blob 및 StorageGRID에 백업할 수 있습니다.</block>
   <block id="0ec24d208e5df8843f6524b944c450f6" category="summary">사내 ONTAP에서 AWS로 데이터 저장소를 백업합니다.</block>
   <block id="1d5ad62b9217b4a3f085f517534f40bb" category="doc">Amazon Web Services에 데이터 저장소를 백업합니다</block>
-  <block id="4d14c89c6829025e6961739f67adb3b2" category="paragraph">SnapCenter Plug-in for VMware vSphere를 Cloud Manager와 통합하여 하나 이상의 데이터 저장소를 Amazon Web Services에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
   <block id="52405c4e62742959f93902e51bb72d0b" category="list-text">Amazon Web Services * 를 선택하여 클라우드 공급자로 구성합니다.</block>
   <block id="210360badd0de9b811d995dd73e39d33" category="summary">사내 ONTAP에서 Azure로 데이터 저장소를 백업합니다.</block>
   <block id="32d2b45dd98e36ad888d7156b4532053" category="doc">Microsoft Azure에 데이터 저장소를 백업합니다</block>
-  <block id="1db14c245026451badaa18ea629908ac" category="paragraph">SnapCenter Plug-in for VMware vSphere를 Cloud Manager와 통합하여 하나 이상의 데이터 저장소를 Microsoft Azure에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
   <block id="8a8bca40b3d548c634cd73d37e5a630c" category="list-text">Microsoft Azure * 를 선택하여 클라우드 공급자로 구성합니다.</block>
   <block id="cf12172bd966bafd91b1daeef9357fe8" category="summary">사내 ONTAP에서 StorageGRID로 데이터 저장소를 백업합니다.</block>
   <block id="ba7b66b996d8928df996e4fd4fffa4a4" category="doc">StorageGRID에 데이터 저장소를 백업합니다</block>
-  <block id="8cc3c787b878714882ebb903aea632ec" category="paragraph">SnapCenter Plug-in for VMware vSphere를 Cloud Manager와 통합하여 하나 이상의 데이터 저장소를 StorageGRID에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
   <block id="cf4e6e70123f43cdec5ffd93f792c083" category="list-text">스토리지 서버 IP를 지정합니다.</block>
   <block id="10303a499a9e21a77e6dad69618c622b" category="list-text">액세스 키와 비밀 키를 선택합니다.</block>
   <block id="fe8f95b60b7c4092ce03adfbb31e89b4" category="doc">가상 머신을 백업하는 정책을 생성합니다</block>
-  <block id="d5b610f68fa011302b80020480862b25" category="paragraph">정책을 생성하거나 Cloud Manager에서 제공되는 다음 사전 정의된 정책 중 하나를 사용할 수 있습니다.</block>
   <block id="43852dc1e0c3229284688eb4c01dfef0" category="paragraph">미리 정의된 정책을 편집하지 않으려면 정책을 만들어야 합니다.</block>
   <block id="0ef51421739da7017b4d3decc1813f4a" category="list-text">가상 머신 페이지의 설정 드롭다운 목록에서 * 정책 * 을 선택합니다.</block>
   <block id="05f2a09d30545d0cfce1840fb01af78f" category="paragraph">기본적으로 백업 소스는 기본으로 선택됩니다.</block>
-  <block id="df66edfead273223d70ca57560d01593" category="summary">Cloud Manager에서 VMware vSphere용 SnapCenter 플러그인을 등록합니다.</block>
   <block id="a0ba49a69c26d4de1afcac95ba435828" category="paragraph">VMware vSphere용 SnapCenter 플러그인과 가상 머신용 클라우드 백업 간에 통신이 가능하도록 포트가 열려 있어야 합니다.</block>
-  <block id="d1a9582568e79d0f7df77bf8db0c78c2" category="paragraph">NetApp 기술 지원으로 지원 케이스를 생성하기 전에 NetApp Support 사이트(NSS) 계정을 Cloud Manager에 추가한 다음 지원을 등록해야 합니다.</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">지원 등록 개요</block>
   <block id="192054ad7601240a3e8be54cc5cc548e" category="paragraph">지원 권한을 활성화하려면 두 가지 형태의 등록이 있습니다.</block>
-  <block id="e84e72c56ec69ee05b16bee368f2f4cb" category="list-text">Cloud Manager 계정 ID 지원 구독 등록(Cloud Manager의 지원 리소스 페이지에 있는 20자리 960xxxxxxxxx 일련 번호)</block>
-  <block id="86d34aa6dedf863c0a4ff5e293c1ec79" category="paragraph">이 ID는 Cloud Manager 내의 모든 서비스에 대한 단일 지원 구독 ID로 사용됩니다. 각 Cloud Manager 계정 레벨 지원 구독을 등록해야 합니다.</block>
   <block id="55ff64467cd508971910145ab5d6b3b8" category="list-text">클라우드 공급자 마켓플레이스의 구독과 연결된 Cloud Volumes ONTAP 일련 번호 등록(20자리 909201xxxxxxxx 일련 번호)</block>
-  <block id="dbea8abd63832b9ce98fbfac8dbb8c15" category="paragraph">이러한 일련 번호를 일반적으로 _PAYGO 일련 번호_라고 하며 Cloud Volumes ONTAP 구축 시 Cloud Manager에서 생성됩니다.</block>
-  <block id="a9e835b028baaab9d917fafc714e25a5" category="paragraph">두 유형의 제품 번호를 등록하면 지원 티켓 열기, 자동 케이스 생성 및 Active IQ 등의 기능을 사용할 수 있습니다.</block>
   <block id="98bc603dcb6d5a57d540b13b541fa41a" category="paragraph">등록 방법은 신규 고객인지, 기존 고객인지 또는 파트너인지에 따라 다릅니다.</block>
   <block id="e5646198d2e01aab2cec9ef946f9c53a" category="list-text">기존 고객 또는 파트너</block>
-  <block id="60791d56f45a3f9f1287510b65d323df" category="paragraph">기존 NetApp 고객 또는 파트너는 NSS(NetApp Support 사이트) SSO 계정을 사용하여 위에서 이러한 등록을 수행할 수 있습니다. 지원 대시보드에서 Cloud Manager는 NSS 계정을 추가할 수 있는 * NSS 관리 * 페이지를 제공합니다. NSS 계정을 추가하면 Cloud Manager에서 자동으로 이러한 일련 번호를 등록합니다.</block>
   <block id="4e6af37fb81d50483d832d4de6e2b26a" category="inline-xref">NSS 계정을 추가하는 방법에 대해 알아봅니다</block>
-  <block id="32e82838df6d3ab4de32d996ebbe98cd" category="paragraph"><block ref="27c44e31a17502f2e9a25a83f2f37696" category="inline-xref-macro-rx"></block>.</block>
   <block id="1c91f3adc957364cb01d33e100ee1ea3" category="list-text">NetApp이 처음입니다</block>
-  <block id="bcce750f51c727121c6fa1fb7d2c91f8" category="paragraph">NetApp이 처음인 파트너는 NetApp의 지원 등록 사이트에서 Cloud Manager 계정 ID 일련 번호를 한 번 등록해야 합니다. 이 등록을 완료하고 새 NSS 계정을 만들면 Cloud Manager에서 이 계정을 사용하여 앞으로 자동 등록할 수 있습니다.</block>
   <block id="00fc9d0c515c69ea2c368521453d982e" category="inline-xref">NetApp에 등록하는 방법을 알아보십시오</block>
   <block id="97454ce87333f7ebd50ee38b8126fb39" category="paragraph"><block ref="37544f11913357c4e8c8a4ec607ae247" category="inline-xref-macro-rx"></block>.</block>
-  <block id="f6c4c1e9625a13b1b4d06a8f53f2ccfd" category="section-title">NSS 계정을 Cloud Manager에 추가합니다</block>
-  <block id="0bfa39d13bc65474a81520ace129413d" category="paragraph">이러한 작업을 통해 Cloud Manager는 NSS 계정을 사용하여 라이선스 다운로드, 소프트웨어 업그레이드 확인 및 향후 지원 등록과 같은 작업을 수행할 수 있습니다.</block>
   <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">다음 사항에 유의하십시오.</block>
   <block id="0f0a0d646a020cf3a65ce82ada4cfb01" category="list-text">계정은 고객 수준 계정이어야 합니다(게스트 또는 임시 계정이 아님).</block>
   <block id="1dcb63fd55c4d22e87cb32275b8cc808" category="inline-image-macro">세 개의 가로 점으로 구성된 아이콘</block>
@@ -2611,8 +2440,6 @@
   <block id="ad56c7289bc13dcf4f78c285f7f03878" category="section-title">NetApp에 등록</block>
   <block id="f1bac79c2c71fbd93863b9fbd718094c" category="paragraph">NetApp 지원에 등록하는 방법은 NetApp Support 사이트(NSS) 계정이 이미 있는지 여부에 따라 다릅니다.</block>
   <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">NSS 계정이 있는 기존 고객</block>
-  <block id="d4b6092976537c153c496a428098980c" category="paragraph">NSS 계정을 가진 NetApp 고객은 Cloud Manager를 통해 지원을 위해 등록하기만 하면 됩니다.</block>
-  <block id="c9d4df035d54072bb393bd27f6769cc7" category="list-text">아직 추가하지 않은 경우 NSS 계정을 Cloud Manager에 추가합니다.</block>
   <block id="819aff12752b7e6a1828e755c7664de7" category="list-text">Resources * 페이지에서 * Register for Support * 를 클릭합니다.</block>
   <block id="e8a3d9970b8fc1d92caaf33d9e116bd4" category="inline-image-macro">계정 일련 번호 및 지원 등록 옵션을 보여 주는 스크린샷</block>
   <block id="113f9cd7bac6f4faa6b8d58e3e099a8e" category="paragraph"><block ref="113f9cd7bac6f4faa6b8d58e3e099a8e" category="inline-image-macro-rx" type="image"></block></block>
@@ -2635,7 +2462,6 @@
   <block id="03413baeca1ff7222737d8ce299bd4e8" category="list-text">이메일 내에서 작업을 확인합니다.</block>
   <block id="201080500e946070a2e4873042507c77" category="paragraph">확인 시 NetApp에 요청이 제출되고 NetApp Support 사이트 계정을 만들 것을 권장합니다.</block>
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">이 과정에서 NetApp이 연락을 드릴 것입니다. 신규 사용자를 위한 일회성 온보딩 연습입니다.</block>
-  <block id="cc7175a084ebd6e004cb2c751c162569" category="paragraph">NetApp Support 사이트 계정이 있으면 Cloud Manager로 이동하여 향후 등록을 위해 이 NSS 계정을 추가할 수 있습니다.</block>
   <block id="2d96aa84884717fd77e4906d82c73ddc" category="section-title">2022년 9월 28일</block>
   <block id="d45e0847841b73f9b8082d6a7bc89f24" category="paragraph">필요한 경우 백업에서 전체 _volume_, _folder_ 또는 하나 이상의 _files_ 를 동일하거나 다른 작업 환경으로 복원할 수 있습니다.</block>
   <block id="262efb8db11032d91af39217fa610e82" category="paragraph">ONTAP 백업 파일에서 다음 작업 환경으로 볼륨, 폴더 또는 개별 파일을 복원할 수 있습니다.</block>
@@ -2663,11 +2489,186 @@
   <block id="d82ac33ca1171e71de283e404129a0c4" category="paragraph">클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 이전 백업을 _S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 계층화하도록 선택할 수 있습니다. <block ref="f7fa7b0a9e810d8c500bcf785a34f359" category="inline-link-macro-rx"></block>.</block>
   <block id="3dfe42849739012935ae4b966fa89d76" category="paragraph">클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 이전 백업을 _Azure Archive_storage에 계층화하도록 선택할 수 있습니다. <block ref="2f91ed687cd1d1d6d8235865263a43ff" category="inline-link-macro-rx"></block>.</block>
   <block id="541b5050a50a0e3040c978cd339ac40f" category="inline-link">AWS GovCloud 영역에서 Connector를 구축하는 방법을 알아보십시오</block>
-  <block id="3a93813464b52092578b75c490a315d3" category="paragraph">Cloud Backup은 Connector가 사내 또는 다크 사이트에 설치되지 않고 클라우드에 구축된 GovCloud 지역에서 지원됩니다. 또한 AWS Marketplace에서 Connector를 구축해야 합니다. Cloud Manager SaaS 웹 사이트에서는 정부 지역에 Connector를 구축할 수 없습니다.<block ref="8b836e33a466c00dcf60eebb57972847" category="inline-link-rx"></block>.</block>
   <block id="50f6114c76c0178ff63cce6c4efbb5bc" category="inline-link">Azure Government 지역에서 Connector를 만드는 방법을 알아보십시오</block>
-  <block id="73e80c85d0469fdbf73937e3b2fc2017" category="paragraph">Connector가 온프레미스나 어두운 사이트에 설치되어 있지 않고 클라우드에 배포된 경우 Azure Government 지역에서는 Cloud Backup이 지원됩니다. 또한 Azure Marketplace에서 Connector를 배포해야 합니다. Cloud Manager SaaS 웹 사이트에서는 정부 지역에 Connector를 구축할 수 없습니다.<block ref="9758449d9191108f8c90137ecdba7919" category="inline-link-rx"></block>.</block>
   <block id="77bdda0b5be7d2725f2b5941d74db0e2" category="paragraph">지원 대시보드를 통해 NetApp Support 사이트 계정을 추가하고 관리하여 Cloud Manager와 함께 사용할 수 있습니다.</block>
   <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">고객 수준 계정이 있는 경우 하나 이상의 NSS 계정을 추가할 수 있습니다.</block>
   <block id="4fde72c535fd0cd463dbeb49347cdfae" category="list-text">파트너 또는 리셀러 계정이 있는 경우 NSS 계정을 하나 이상 추가할 수 있지만 고객 수준 계정과 함께 추가할 수는 없습니다.</block>
   <block id="d0a875b745f9b38ce0c00471ccf26254" category="list-text">비공개 연결 - VPN 또는 Google Cloud Interconnect를 사용하고 사설 IP 주소를 사용하는 전용 Google Access 인터페이스를 통해 트래픽을 라우팅합니다.</block>
+  <block id="dac3cac56101d31900414dafe82d7447" category="summary">Cloud Backup은 데이터의 보호 및 장기 아카이브를 위한 백업 및 복원 기능을 제공하는 BlueXP 작업 환경을 위한 서비스입니다. 백업은 자동으로 생성되어 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 저장됩니다.</block>
+  <block id="334d532e95c8088dda41b2e55290b233" category="paragraph">Cloud Backup은 데이터의 보호 및 장기 아카이브를 위한 백업 및 복원 기능을 제공하는 BlueXP(이전의 Cloud Manager) 작업 환경을 위한 서비스입니다. 백업은 자동으로 생성되어 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 저장됩니다.</block>
+  <block id="2ddfbc4337478fa7bf2a7b36bae29f25" category="admonition">BlueXP Connector가 클라우드의 정부 지역 또는 인터넷 액세스가 없는 사이트(어두운 사이트)에 구축된 경우 클라우드 백업은 ONTAP 시스템의 백업 및 복원 작업만 지원합니다. 이러한 대체 구축 방법을 사용할 때 Cloud Backup은 Kubernetes 클러스터, 애플리케이션 또는 가상 시스템의 백업 및 복원 작업을 지원하지 않습니다.</block>
+  <block id="ac66cfcf395ec1521c28c0c64a6aac63" category="paragraph">대부분의 경우 모든 백업 작업에 BlueXP UI를 사용합니다. 그러나 ONTAP 9.9.1부터 ONTAP 시스템 관리자를 사용하여 사내 ONTAP 클러스터의 볼륨 백업 작업을 시작할 수 있습니다.<block ref="b4b04e1b4b3140ad1e0e3c0a94c9c848" category="inline-link-rx"></block></block>
+  <block id="bf2b1bf7aed8d75654bb42a8a53d6a96" category="paragraph">백업 복사본은 BlueXP가 클라우드 계정에 생성하는 객체 저장소에 저장됩니다. 클러스터/작업 환경당 하나의 오브젝트 저장소가 있으며 BlueXP에서는 오브젝트 저장소의 이름을 "NetApp-backup-clusteruuid"로 지정합니다. 이 오브젝트 저장소를 삭제하지 마십시오.</block>
+  <block id="e33931549f252451d72b5664ade6ecf0" category="list-text">AWS에서 BlueXP는 를 활성화합니다<block ref="b38667957fcdf9b9da65b213e7fb2492" category="inline-link-rx"></block> S3 버킷에서.</block>
+  <block id="4dee49a9c46b2664e49d7142dc11104d" category="list-text">Azure에서 BlueXP는 Blob 컨테이너용 저장소 계정이 있는 새 리소스 그룹 또는 기존 리소스 그룹을 사용합니다. BlueXP<block ref="a7068b8d2b60241ce77a1051f3a66ed5" category="inline-link-rx"></block> 기본적으로 사용됩니다.</block>
+  <block id="59cbb06daac31886728833270d8bf9a2" category="list-text">GCP에서 BlueXP는 Google Cloud Storage 버킷의 스토리지 계정이 있는 신규 또는 기존 프로젝트를 사용합니다.</block>
+  <block id="800de79585a9dadbf8cf5d2e105d09bb" category="list-text">StorageGRID에서 BlueXP는 오브젝트 저장소 버킷에 기존 저장소 계정을 사용합니다.</block>
+  <block id="065c13346a6a1b4ec88ebda80e48a910" category="inline-link">BlueXP 계정</block>
+  <block id="0dd9786a3d42804eeebb54b2f3e11edd" category="paragraph">BlueXP Digital Wallet 페이지에 입력한 일련 번호를 통해 서비스를 활성화할 수 있습니다. 두 제한 중 하나에 도달하면 라이센스를 갱신해야 합니다. Backup BYOL 라이센스는 와 관련된 모든 소스 시스템에 적용됩니다<block ref="52a8d8c521fd6d51982efde4bc1bb1fd" category="inline-link-rx"></block>.</block>
+  <block id="ea8bcfb1baf19f84e4a5e1f8a744b022" category="list-text">BlueXP 메뉴에서 * 보호 &gt; 백업 및 복구 * 를 선택합니다.</block>
+  <block id="80f3857389d2de912aa3cfd4a9fbb27d" category="list-text">클라우드 공급자의 Cloud Volumes ONTAP 시스템 마켓플레이스에서 PAYGO(Pay-as-you-Go) 구독을 이미 구독한 경우 클라우드 백업도 자동으로 구독됩니다. 다시 가입하지 않아도 됩니다.</block>
+  <block id="e66bae0055d9428a61a61db11c4623d0" category="list-text">Cloud Backup BYOL(Bring-Your-Own-License)은 BlueXP 계정과 연결된 모든 시스템에서 사용할 수 있는 부동 라이센스입니다. 따라서 기존 BYOL 라이센스에서 충분한 백업 용량을 제공하는 경우 다른 BYOL 라이센스를 구입할 필요가 없습니다.</block>
+  <block id="58916e7720d1539d3ab208d053e7dd1d" category="paragraph">이 옵션을 사용하려면 마켓플레이스 페이지에서 구독을 설정한 다음<block ref="f1f7c973fce685b876017d26d677c721" category="inline-link-rx"></block>. 또한 BlueXP의 AWS 자격 증명에 활성 서브스크립션을 하나만 할당할 수 있으므로 이 연간 계약 가입을 통해 Cloud Volumes ONTAP 시스템에 대한 비용을 지불해야 합니다.</block>
+  <block id="d24c531f67e59e16184a6f74c9a59f91" category="paragraph">이 옵션을 사용하려면 Cloud Volumes ONTAP 작업 환경을 생성할 때 연간 계약을 설정하고 BlueXP에서 AWS 마켓플레이스에 가입하라는 메시지를 표시합니다.</block>
+  <block id="7126ec3331a470b07cded52f67bfd805" category="paragraph">BYOL Cloud Backup 라이센스는 BlueXP 계정과 연결된 모든 시스템에서 전체 용량을 공유하는 부동 라이센스입니다. ONTAP 시스템의 경우 CLI 명령을 실행하여 필요한 용량을 대략적으로 계산할 수 있습니다<block ref="2a47fed7b3c4b7d59e03f10c018cf5cc" prefix=" " category="inline-code"></block> 백업할 볼륨에 대해 선택합니다.</block>
+  <block id="a57b97b02a3dfa4ca7fd84410c51aad8" category="paragraph">Cloud Backup BYOL 라이센스가 없는 경우 BlueXP 오른쪽 하단의 채팅 아이콘을 클릭하여 라이센스를 구입하십시오.</block>
+  <block id="aa64d3ab005dc0bda0aad02472aaa320" category="paragraph">BlueXP의 Digital Wallet 페이지를 사용하여 BYOL 라이센스를 관리합니다. Digital Wallet에서 새 라이센스를 추가하고, 기존 라이센스를 업데이트하고, 라이센스 상태를 볼 수 있습니다.</block>
+  <block id="5ca5b0f6a1af438f45a939c86141d219" category="paragraph">Cloud Backup 라이센스를 구입한 후에는 Cloud Backup 일련 번호 및 NSS 계정을 입력하거나 NLF 라이센스 파일을 업로드하여 BlueXP에서 라이센스를 활성화합니다. 아래 단계에서는 NLF 라이센스 파일을 가져오는 방법을 보여 줍니다(해당 방법을 사용하려는 경우).</block>
+  <block id="68b5b627fd0a1cf6a2f20d41952cdbc0" category="paragraph">인터넷에 액세스할 수 없는 사내 사이트에서 클라우드 백업을 실행하는 경우, 즉 오프라인 온-프레미스 사이트의 호스트에 BlueXP Connector를 배포했다면 인터넷에 연결된 시스템에서 라이센스 파일을 얻어야 합니다. 일련 번호 및 NSS 계정을 사용하여 라이센스를 활성화하는 것은 오프라인(다크 사이트) 설치에 사용할 수 없습니다.</block>
+  <block id="f68bf28051d836364652b5a91d1bcd3a" category="list-text">BlueXP 계정 ID(지원 사이트에서 테넌트 ID라고 함)를 입력하고 * 제출 * 을 클릭하여 라이센스 파일을 다운로드합니다.</block>
+  <block id="257ff1df6b80ed0bf9b3463d53be79f9" category="paragraph">BlueXP의 상단에서 * 계정 * 드롭다운을 선택한 다음 계정 옆의 * 계정 관리 * 를 클릭하여 BlueXP 계정 ID를 찾을 수 있습니다. 계정 ID는 개요 탭에 있습니다.</block>
+  <block id="e91c712688e1c7eaaff8ecd9c1793fd1" category="paragraph">NetApp 계정에 대한 Cloud Backup 라이센스를 구입한 후에는 BlueXP에 라이센스를 추가해야 합니다.</block>
+  <block id="8d080a0104c2b8b29f5fc2be913926af" category="list-text">BlueXP 메뉴에서 * Governance &gt; Digital Wallet * 을 클릭한 다음 * Data Services Licenses * 탭을 선택합니다.</block>
+  <block id="bae190eec3db4a0dd635ae72756acde8" category="inline-link">NSS 계정을 BlueXP에 추가합니다</block>
+  <block id="fc76651edf85f11e6b8f2a81226ab59d" category="paragraph">드롭다운 목록에서 NetApp Support 사이트 계정을 사용할 수 없는 경우<block ref="6d9745cd4f1d60b55f06aef4c5cb6ec4" category="inline-link-rx"></block>.</block>
+  <block id="1eeb50135782e499de62f2f1b7353113" category="paragraph">BlueXP는 클라우드 백업이 활성화되도록 라이센스를 추가합니다.</block>
+  <block id="32bf11cde2dbd078082c92163d1b13a2" category="list-text">BlueXP의 오른쪽 하단에 있는 채팅 아이콘을 클릭하거나 지원 부서에 문의하여 특정 일련 번호에 대한 Cloud Backup 라이센스 기간 연장 또는 추가 용량을 요청합니다.</block>
+  <block id="8061535eb5e8bab52c4a8a0fdc119d14" category="paragraph">라이센스 비용을 지불하고 NetApp Support 사이트에 등록한 후 BlueXP는 디지털 지갑의 라이센스를 자동으로 업데이트하고 데이터 서비스 라이센스 페이지에 변경 내용이 5-10분 내에 반영됩니다.</block>
+  <block id="cc51ebad1f268690053194c8639d1a75" category="list-text">BlueXP에서 라이센스를 자동으로 업데이트할 수 없는 경우(예: 어두운 사이트에 설치된 경우) 라이센스 파일을 수동으로 업로드해야 합니다.</block>
+  <block id="64b20da9f2712a23cbb87b6e6cf3a42c" category="paragraph">BlueXP는 클라우드 백업이 계속 활성화되도록 라이센스를 업데이트합니다.</block>
+  <block id="db848f2bee427409295348412d616aa3" category="paragraph">Cloud Backup BYOL 라이센스를 사용하는 경우, 백업하는 모든 데이터의 크기가 용량 제한에 근접하거나 라이센스 만료 날짜가 임박한 경우 BlueXP에서 사용자 인터페이스에 경고를 표시합니다. 다음과 같은 경고가 표시됩니다.</block>
+  <block id="379dea20c8734742bd3f9c78de134135" category="paragraph">이러한 경고가 표시되면 BlueXP 인터페이스 오른쪽 아래에 있는 채팅 아이콘을 사용하여 라이센스를 갱신하십시오.</block>
+  <block id="9fc1be8d0764e53bbb66688f813cad22" category="paragraph">BYOL 가입을 갱신하면 BlueXP에서 라이센스를 자동으로 업데이트합니다. BlueXP가 보안 인터넷 연결(예: 어두운 사이트에 설치된 경우)을 통해 라이센스 파일에 액세스할 수 없는 경우 직접 파일을 얻고 BlueXP에 수동으로 업로드할 수 있습니다. 자세한 내용은 을 참조하십시오 <block ref="797e48816191a5b3cd21a6c146b072f1" category="inline-link-macro-rx"></block>.</block>
+  <block id="1fdc9d2d6f254f32143c31bdb680c25a" category="paragraph">BlueXP에서 ONTAP 클러스터를 검색하고, 클러스터가 최소 요구 사항을 충족하는지 확인하고, 클러스터가 AWS S3에 연결될 수 있도록 네트워크 설정을 사용자 지정합니다.</block>
+  <block id="2568e9dfbf799a7f4514c6421cdd6535" category="paragraph">BlueXP 커넥터는 BlueXP 기능을 위한 주요 소프트웨어입니다. ONTAP 데이터를 백업하고 복원하려면 커넥터가 필요합니다.</block>
+  <block id="e128d050327b1f9fca47adf39d86ac09" category="paragraph">Cloud Backup은 Connector가 사내 또는 다크 사이트에 설치되지 않고 클라우드에 구축된 GovCloud 지역에서 지원됩니다. 또한 AWS Marketplace에서 Connector를 구축해야 합니다. BlueXP SaaS 웹 사이트에서 정부 지역에 Connector를 배포할 수 없습니다.<block ref="8b836e33a466c00dcf60eebb57972847" category="inline-link-rx"></block>.</block>
+  <block id="44ead0e70e856f32d3afe2f909f3fbe2" category="section-title">BlueXP에서 ONTAP 클러스터를 검색합니다</block>
+  <block id="b8d5e07bc0e2420adf3ba2b4c875d337" category="paragraph">볼륨 데이터 백업을 시작하기 전에 BlueXP에서 온-프레미스 ONTAP 클러스터를 검색해야 합니다. 클러스터를 추가하려면 클러스터 관리 IP 주소와 admin 사용자 계정의 암호를 알아야 합니다.</block>
+  <block id="a7c7bd193740210990d86811ef377b56" category="inline-link">BlueXP 정책</block>
+  <block id="ba3bf3919e519d351085ac724a9accf7" category="list-text">다음 S3 권한(최신 버전)이 있는지 확인합니다<block ref="7dfaeab02b2622441821b715f9d8495a" category="inline-link-rx"></block>)는 Connector에 권한을 제공하는 IAM 역할의 일부입니다.</block>
+  <block id="f59bbb6de7b8eafb6ccb2f617135ff84" category="list-text">BlueXP 커넥터와 관련된 보안 그룹 구성을 수정합니다. 정책을 "사용자 지정"("전체 액세스"에서)으로 변경해야 하며 반드시 다음을 수행해야 합니다 <block ref="52cd24ecfd99d5b16a10d03c54f9d16b" category="inline-xref-macro-rx"></block> 앞서 설명한 것처럼.</block>
+  <block id="667b744af05e085368d150edc4b8a344" category="inline-link">BlueXP Connector를 호스팅하는 VM에 로그인합니다</block>
+  <block id="53580765f208bf3a21b9b94ab077bfb1" category="list-text">VPC S3 엔드포인트에서 인증서를 가져옵니다. 당신은 이렇게 합니다<block ref="baa295d957d2e86c0ec7224e7ed425da" category="inline-link-rx"></block> 다음 명령을 실행합니다. 엔드포인트의 DNS 이름을 입력할 때 "*"를 대체하여 "bucket"을 앞에 추가합니다.</block>
+  <block id="2b14caad1da58289b8b246f9d0893626" category="paragraph">클라우드 백업 for Applications를 BlueXP 및 온프레미스 SnapCenter와 통합하여 ONTAP에서 StorageGRID로 애플리케이션 데이터를 백업할 수 있습니다.</block>
+  <block id="082d5ccb608f0cf092aeae75a4386a23" category="admonition">BlueXP GUI를 사용하는 경우 한 번에 하나의 애플리케이션만 보호할 수 있습니다. 그러나 REST API를 사용하는 경우 여러 애플리케이션을 동시에 보호할 수 있습니다.</block>
+  <block id="0bd54f980c8a7dce1758331f8faad8aa" category="list-text">BlueXP UI에서 * 보호 * &gt; * 백업 및 복구 * &gt; * 응용 프로그램 * 을 클릭합니다.</block>
+  <block id="3076e05ef0a28e2da5f8c86ac3edee73" category="summary">클라우드 백업을 사용하면 소스 Cloud Volumes ONTAP 볼륨이 있는 위치와 다른 Azure 계정에 백업 파일을 생성할 수 있습니다. 이는 BlueXP Connector가 있는 계정과 다릅니다.</block>
+  <block id="f612562aae4c77544f90a68f934a4643" category="paragraph">클라우드 백업을 사용하면 소스 Cloud Volumes ONTAP 볼륨이 상주하는 위치와 다른 Azure 계정에서 백업 파일을 생성할 수 있습니다. 또한 두 계정은 BlueXP Connector가 있는 계정과 다를 수 있습니다.</block>
+  <block id="29e89229775aefede67526b03124356e" category="paragraph">BlueXP에서 다른 계정/지역의 Cloud Volumes ONTAP 시스템을 관리하려면 VNET 피어링을 설정해야 합니다. 스토리지 계정 접속에 VNET 피어링이 필요하지 않습니다.</block>
+  <block id="39f30cdd2630386fa4f3ba56e107c2fd" category="list-text">가입 2(BlueXP 커넥터 및 Cloud Volumes ONTAP 시스템이 배포된 위치)와 리소스 그룹을 선택합니다.</block>
+  <block id="5e9c68a306632190e5fdfb7db87750f9" category="list-text">온-프레미스 클러스터를 발견하고 BlueXP의 작업 환경에 추가했습니다. 을 참조하십시오<block ref="04e8e773ac6637419158f2743860946e" category="inline-link-rx"></block> 를 참조하십시오.</block>
+  <block id="f14bda54277879b5d5f51fa405834285" category="paragraph">볼륨 데이터 백업을 시작하기 전에 BlueXP에서 온-프레미스 ONTAP 클러스터를 검색해야 합니다.</block>
+  <block id="48b0bfd3649cb51640d3b2b726ccd1b0" category="admonition">BlueXP 커넥터에는 클라우드 백업 기능이 내장되어 있습니다. 인터넷에 연결되지 않은 사이트에 설치한 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 <block ref="4b505ef59fae088b7538ff8d53b204e9" category="inline-link-macro-rx"></block> 각 Cloud Backup 릴리즈의 새로운 기능을 보려면 ~ 단계를 따르십시오<block ref="9f7f6f7d33dac6a99bb8b7e121fd2054" category="inline-link-rx"></block> 새 기능을 사용하려는 경우</block>
+  <block id="4222162492898e3a8b9e4698a4abb67a" category="paragraph">SnapCenter Plug-in for VMware vSphere와 BlueXP를 통합하여 하나 이상의 데이터 저장소를 Amazon 웹 서비스에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
+  <block id="a9bb4a4ebd2695e50a673d0b706564b1" category="list-text">BlueXP UI에서 * 보호 * &gt; * 백업 및 복구 * &gt; * 가상 머신 * 을 클릭합니다.</block>
+  <block id="abe7d23d1826e9db79e6c78593403413" category="paragraph">BlueXP에서 검색할 ONTAP 클러스터를 구성하여 데이터 저장소를 백업합니다. 데이터 저장소 중 하나에 작업 환경을 추가한 후 동일한 ONTAP 클러스터에 상주하는 다른 모든 데이터 저장소에 다시 사용할 수 있습니다.</block>
+  <block id="1e32c2329234deef7077d261aa8b2501" category="paragraph">SnapCenter Plug-in for VMware vSphere를 BlueXP(이전의 Cloud Manager)와 통합하여 가상 시스템의 데이터를 보호할 수 있습니다. 데이터 저장소를 클라우드에 백업하고 VMware vSphere용 사내 SnapCenter 플러그인으로 가상 머신을 간편하게 복원할 수 있습니다.</block>
+  <block id="52764b554e9bba6804ede67b5b8f970e" category="list-text">BlueXP 3.9 이상</block>
+  <block id="54b9cf78f57f81918b174b7e67507098" category="list-text">SnapCenter Plug-in for VMware vSphere에서 BlueXP의 Cloud Backup for Virtual Machines 정책과 레이블 또는 레이블이 없는 일일, 주별 또는 월별 정책을 하나 이상 지원합니다.</block>
+  <block id="3e6a014c15570f7f51f7fcdad349babc" category="summary">정책과 백업을 볼 수 있습니다. 데이터베이스, 정책 또는 리소스 그룹의 변경에 따라 BlueXP UI에서 업데이트를 새로 고칠 수 있습니다.</block>
+  <block id="bc297099626ec7a9aaf08998c859562c" category="paragraph">BlueXP UI와 다른 작업을 수행하여 응용 프로그램 보호를 관리할 수 있습니다.</block>
+  <block id="d4073377354088504201b6621befe095" category="list-text">백업 및 복구 * &gt; * 응용 프로그램 * 을 클릭합니다.</block>
+  <block id="5f6926750c6dd8a22b3997020614fae5" category="paragraph">BlueXP UI에서 클라우드에 있는 백업을 볼 수 있습니다.</block>
+  <block id="645e4d561d3334f79db1d5872e333d77" category="admonition">백업이 나열되는 데 걸리는 시간은 ONTAP의 기본 복제 일정(최대 1시간) 및 BlueXP(최대 6시간)에 따라 다릅니다.</block>
+  <block id="f52be7ce52e18a98dacf4e0ce5a03e37" category="list-text">백업 및 복구 * &gt; * 작업 모니터링 * 을 클릭합니다.</block>
+  <block id="3fa157c6400d7df8708dc8dc19c3f683" category="list-text">BlueXP UI에서 * 스토리지 * &gt; * Canvas * &gt; * 내 작업 환경 * &gt; * 작업 환경 추가 * 를 클릭합니다.</block>
+  <block id="a94d342447edb8e81cc8ccc12eeb1d59" category="list-text">백업 및 복구 * &gt; * 볼륨 * 을 클릭합니다.</block>
+  <block id="243263104c829e77835d632f591230d5" category="summary">NetApp 기술 지원 팀과 지원 케이스를 생성하기 전에 NetApp Support 사이트 계정을 BlueXP에 추가한 다음 지원 등록을 해야 합니다.</block>
+  <block id="8bf30fadf784022b073adb9233678a71" category="paragraph">NetApp 기술 지원 팀의 지원 케이스를 생성하기 전에 NetApp Support 사이트(NSS) 계정을 BlueXP에 추가한 다음 지원 등록을 해야 합니다.</block>
+  <block id="2322ca552c2b0ebe090c8485519246a8" category="list-text">BlueXP 계정 ID 지원 가입 등록(BlueXP의 지원 리소스 페이지에 있는 20자리 960xxxxxxxxx 일련 번호)</block>
+  <block id="23fdcbefa6d9cd877be7ceb7a18bb936" category="paragraph">이는 BlueXP 내의 모든 서비스에 대한 단일 지원 가입 ID의 역할을 합니다. 각 BlueXP 계정 수준 지원 구독을 등록해야 합니다.</block>
+  <block id="67dbdeb11e22ea7def810bade59ce818" category="paragraph">이러한 일련 번호는 일반적으로 _PAYGO 일련 번호_라고 하며 Cloud Volumes ONTAP 배포 시 BlueXP에서 생성됩니다.</block>
+  <block id="9d4125dc88bb9db6eb4be939905761ce" category="paragraph">두 가지 유형의 일련 번호를 등록하면 지원 티켓 열기와 자동 케이스 생성 등의 기능을 사용할 수 있습니다.</block>
+  <block id="76928f97884b4332b83c5be9b99d93d3" category="paragraph">기존 NetApp 고객 또는 파트너는 NSS(NetApp Support 사이트) SSO 계정을 사용하여 위에서 이러한 등록을 수행할 수 있습니다. 지원 대시보드에서 BlueXP는 NSS 계정을 추가할 수 있는 * NSS 관리 * 페이지를 제공합니다. NSS 계정을 추가하면 BlueXP에서 이러한 일련 번호를 자동으로 등록합니다.</block>
+  <block id="8d80298f51b7ff2da78e26e60195c7a3" category="paragraph"><block ref="cbec7c1a4a2acff5e84457dd449ac01d" category="inline-xref-macro-rx"></block>.</block>
+  <block id="679f2cae4657f177cc89458d49c97e5f" category="paragraph">NetApp이 처음인 파트너는 NetApp의 지원 등록 사이트에서 BlueXP 계정 ID 일련 번호를 한 번 등록해야 합니다. 이 등록을 완료하고 새 NSS 계정을 만들면 BlueXP에서 이 계정을 사용하여 앞으로 자동 등록할 수 있습니다.</block>
+  <block id="a92ec860f505b318fd0f0eba6165d607" category="section-title">BlueXP에 NSS 계정을 추가합니다</block>
+  <block id="1afe19576f77bb0073c93359ed2cbb18" category="list-text">BlueXP 콘솔의 오른쪽 상단에서 도움말 아이콘을 클릭하고 * 지원 * 을 선택합니다.</block>
+  <block id="cbc6cc3bb022583403171b447b2a962c" category="paragraph">이러한 작업을 통해 BlueXP는 NSS 계정을 사용하여 라이선스 다운로드, 소프트웨어 업그레이드 확인 및 향후 지원 등록과 같은 작업을 수행할 수 있습니다.</block>
+  <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">NSS 계정을 가지고 있는 NetApp 고객은 BlueXP를 통해 지원을 받기 위해 등록하기만 하면 됩니다.</block>
+  <block id="25b94e7b58140f12be91fa8fd935fa59" category="list-text">아직 추가하지 않은 경우 NSS 계정을 BlueXP에 추가합니다.</block>
+  <block id="5226d4ec1f4f81b740cbbd27635b441f" category="list-text">위에 사용된 BlueXP 계정 일련 번호(960xxxx)를 일련 번호 필드에 복사해야 합니다. 이렇게 하면 계정 처리 속도가 빨라집니다.</block>
+  <block id="1c0e45ef07d0dbc13ca2394d5e285fd7" category="paragraph">NetApp Support 사이트 계정이 있으면 BlueXP로 이동하여 나중에 등록하기 위해 이 NSS 계정을 추가할 수 있습니다.</block>
+  <block id="c9df4195a305212ffd7b56d24f67129d" category="summary">NetApp은 다양한 방법으로 BlueXP를 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다. 지원 등록에는 웹 티켓팅을 통한 원격 기술 지원이 포함됩니다.</block>
+  <block id="7c5661ab6b39ee901cea00a6e7020a49" category="paragraph">NetApp은 다양한 방법으로 BlueXP 및 클라우드 서비스를 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다. 지원 등록에는 웹 티켓팅을 통한 원격 기술 지원이 포함됩니다.</block>
+  <block id="9a3db1abe5491d0eb9bb5d125981356c" category="paragraph">문제를 해결하는 데 도움이 되는 문서를 찾으려면 BlueXP 기술 자료를 검색하십시오.</block>
+  <block id="00c5fef3bb9d593ae96bf5d2ee60354a" category="paragraph">BlueXP 커뮤니티에 가입하여 진행 중인 토론을 팔로우하거나 새 토론을 만드십시오.</block>
+  <block id="a4a6c2ea0078252eac2d74ef3e6c917c" category="paragraph">현재 보고 있는 BlueXP 문서입니다.</block>
+  <block id="6702efec14563f45f1ee2f8c613b8ad8" category="paragraph">저희는 귀하의 의견을 소중하게 생각합니다. BlueXP 개선에 도움이 되는 피드백을 제출하십시오.</block>
+  <block id="1012a287397c66025d7748edf06a36e2" category="paragraph">케이스 생성* 기능을 사용하려면 먼저 BlueXP 계정 ID 일련 번호( 960xxxx) NetApp 포함 <block ref="3349e4b3d05f646f2f1421bee7c2ad26" category="inline-link-macro-rx"></block>.</block>
+  <block id="6254a4afeeb76765a127fe74d31c1b3d" category="list-text">BlueXP에서 * 도움말 &gt; 지원 * 을 클릭합니다.</block>
+  <block id="d950fb930d7f7e6bfdda1b91b4639a02" category="paragraph">NSS 계정이 표시되지 않으면 BlueXP의 지원 섹션에서 * NSS 관리 * 탭으로 이동하여 추가할 수 있습니다.</block>
+  <block id="d63bf50426f4c712554faec55b30c548" category="list-text">* 서비스 *: 문제와 관련된 서비스를 선택합니다. 예를 들어, 서비스 내의 워크플로우 또는 기능과 관련된 기술 지원 문제에 해당하는 BlueXP를 예로 들 수 있습니다.</block>
+  <block id="aa996e20900197b0ea41485ada083d8c" category="paragraph">작업 환경 목록은 서비스의 상단 배너에서 선택한 BlueXP 계정, 작업 영역 및 커넥터의 범위 내에 있습니다.</block>
+  <block id="fa6b601b2fb4e3e5c7b466ecb8bd70ac" category="paragraph">이 오류는 NSS 계정과 연결된 레코드 회사가 BlueXP 계정 일련 번호( 960xxxx) 또는 작동 환경 일련 번호 케이스 생성 * 양식 상단의 NSS 계정 목록을 확인하여 올바른 일치 항목을 찾거나 다음 옵션 중 하나를 사용하여 지원을 요청할 수 있습니다.</block>
+  <block id="628fb9e7ced847c110ddd7ef8f1c7362" category="paragraph">클라우드 백업 for Applications를 BlueXP 및 온프레미스 SnapCenter와 통합하여 ONTAP에서 Amazon Web Services로 애플리케이션 데이터를 백업할 수 있습니다.</block>
+  <block id="068e918014ac9eb5e356de3a0a621d15" category="summary">BlueXP에서 VMware vSphere용 SnapCenter 플러그인을 등록합니다.</block>
+  <block id="6425eb8dd63509a5d1228d5f87438934" category="paragraph">BlueXP에서 표시할 데이터 저장소 및 가상 시스템에 대해 BlueXP의 VMware vSphere용 SnapCenter 플러그인을 등록해야 합니다. 관리 액세스 권한이 있는 사용자만 VMware vSphere용 SnapCenter 플러그인을 등록할 수 있습니다.</block>
+  <block id="3a41597d5116718fb24622669197f3e8" category="paragraph">VMware vSphere용 등록된 SnapCenter 플러그인을 사용하여 보호할 수 있는 모든 데이터 저장소와 가상 머신을 보려면 * 백업 및 복구 * &gt; * 가상 머신 * 을 클릭합니다.</block>
+  <block id="d4f4c5ccc817cf84f5825246d829cabe" category="list-text">Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다.</block>
+  <block id="fbd33db6168b024f7fb941bc669aa81a" category="list-text">Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다.<block ref="9f26112087077321f30a8a9a55bedf44" category="inline-link-rx"></block>.</block>
+  <block id="1be407627e654d1b34c73a6957ef3afb" category="paragraph">Restore Dashboard를 사용하여 볼륨, 폴더 및 파일 복원 작업을 수행할 수 있습니다. BlueXP 메뉴에서 * 백업 및 복구 * 를 클릭한 다음 * 복원 * 탭을 클릭하여 복원 대시보드에 액세스합니다. 을 클릭할 수도 있습니다 <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> &gt; * 서비스 패널의 백업 및 복원 서비스에서 복원 대시보드 보기 * 를 선택합니다.</block>
+  <block id="466b90fa557f0884965a272b2e01ec39" category="list-text">SVM에서 SnapDiff RPC 서버를 활성화해야 합니다. BlueXP는 작업 환경에서 인덱싱을 활성화할 때 이 작업을 자동으로 수행합니다.</block>
+  <block id="7dbea888521fb9c4360764add4f59e05" category="list-text">BlueXP에 권한을 제공하는 사용자 역할에 특정 Amazon Athena, AWS Glue 및 AWS S3 권한을 추가해야 합니다. <block ref="172464504974bed7b77dd155db5fb92b" category="inline-link-macro-rx"></block>.</block>
+  <block id="03ee3f0eead5f2b738977ac3926782b1" category="paragraph">이전에 구성한 Connector와 함께 Cloud Backup을 이미 사용하고 있다면 지금 BlueXP 사용자 역할에 Athena 및 Glue 권한을 추가해야 합니다. 새로운 항목이므로 검색 및 복원에 필요합니다.</block>
+  <block id="97b5e4c408de2e312a0b1fc4e2535f1f" category="list-text">BlueXP에 권한을 제공하는 사용자 역할에 특정 Azure Synapse Workspace 및 Data Lake Storage 계정 권한을 추가해야 합니다. <block ref="3f613adb79f1db61c1db3e20329cd95a" category="inline-link-macro-rx"></block>.</block>
+  <block id="ed1a69b750cb694ed724bc2c1447f5d7" category="paragraph">과거에 구성한 Connector로 Cloud Backup을 이미 사용하고 있다면 지금 BlueXP 사용자 역할에 Azure Synapse Workspace 및 Data Lake Storage 계정 권한을 추가해야 합니다. 새로운 항목이므로 검색 및 복원에 필요합니다.</block>
+  <block id="a6e5e96ba9eebf564c1d0ef4d770658f" category="list-text">BlueXP에 권한을 제공하는 사용자 역할에 특정 Google BigQuery 권한을 추가해야 합니다. <block ref="1401fe87dc595535076f05f545f8275e" category="inline-link-macro-rx"></block>.</block>
+  <block id="8a0b3def9f0e476db975754e72ab3c91" category="paragraph">이전에 구성한 Connector와 함께 클라우드 백업을 이미 사용하고 있다면 지금 BlueXP 사용자 역할에 BigQuery 권한을 추가해야 합니다. 새로운 항목이므로 검색 및 복원에 필요합니다.</block>
+  <block id="532c5a08ea04f1e8333532034c9ce816" category="paragraph">BlueXP에 액세스하고, BlueXP 계정을 만들고, 작업 환경과 커넥터를 만들고, Oracle용 SnapCenter 플러그인을 구축해야 합니다.</block>
+  <block id="1a21a1a2d4f828ab8b7b8e03358484e8" category="section-title">BlueXP에 액세스합니다</block>
+  <block id="035e6d59b1caedb3017d4559881471b2" category="inline-link-macro">NetApp BlueXP 웹 사이트에 등록하십시오</block>
+  <block id="253b7edb57d157e0cff45ddb9e389aa4" category="inline-link-macro">BlueXP에 로그인합니다</block>
+  <block id="ab26432294c471f0aa2bb50434ef5822" category="paragraph">당신은 해야 한다 <block ref="f8ff5153376f519ebb8fe9e2c5ab9cd8" category="inline-link-macro-rx"></block>, <block ref="9f5c210a6685dd250338a699e76589de" category="inline-link-macro-rx"></block>를 선택한 다음 를 설정합니다 <block ref="8a2a59f9ec508dc199624b6dfabe5c9f" category="inline-link-macro-rx"></block>.</block>
+  <block id="21465eddb0676f3918f9041ef059c735" category="paragraph">BlueXP 또는 AWS를 사용하여 NetApp FSx를 생성할 수 있습니다. AWS를 사용하여 생성한 경우 BlueXP에서 ONTAP 시스템용 FSx를 검색해야 합니다.</block>
+  <block id="91381cdaf1cff61a625d6355a34abc10" category="paragraph">계정 관리자는 AWS에 Connector를 구축하여 BlueXP가 퍼블릭 클라우드 환경 내의 리소스와 프로세스를 관리할 수 있도록 해야 합니다.</block>
+  <block id="71e064246e91e058534eb9c47cbeadcf" category="inline-link-macro">BlueXP에서 AWS에 커넥터 생성</block>
+  <block id="d15bab64d8286860a0c772cefded5f73" category="paragraph">자세한 내용은 을 참조하십시오 <block ref="3fdf2a62e687b222e52b805dde381364" category="inline-link-macro-rx"></block>.</block>
+  <block id="b724f76260140d552e6e5de152846536" category="paragraph">커넥터를 만든 후 * Storage * &gt; * Canvas * &gt; * My Working Environments * &gt; * Add Working Environment * 를 클릭하고 화면의 지시에 따라 작업 환경을 추가합니다. Oracle 데이터베이스 호스트 및 FSx 작업 환경에 대한 커넥터와 연결이 있는지 확인합니다. 커넥터는 FSx 작업 환경의 클러스터 관리 IP 주소에 연결할 수 있어야 합니다.</block>
+  <block id="4f72fd7ca712acaf47fd9055c7bd40b5" category="list-text">BlueXP UI에서 * 보호 * &gt; * 백업 및 복구 * &gt; * 가상 머신 * &gt; * VMware vSphere * 용 SnapCenter 플러그인을 클릭하고 가상 머신을 복구할 VMware vSphere * 용 SnapCenter 플러그인을 선택합니다.</block>
+  <block id="fcbd686b41684a3ab6f265cc8de940c9" category="admonition">소스 가상 머신이 다른 위치(vMotion)로 이동되고 사용자가 BlueXP에서 해당 가상 머신의 복구를 트리거하면 가상 머신이 백업이 수행된 원래 소스 위치로 복구됩니다.</block>
+  <block id="4c1e6a15b11a1e2752116c662fede79c" category="summary">NetApp BlueXP에서 지원되는 클라우드 백업 은 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle ® 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다.</block>
+  <block id="39c8615de00d42ec2d97f08241575483" category="paragraph">Cloud Backup for Applications는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. NetApp BlueXP(formerlt Cloud Manager)에서 지원되는 Cloud Backup for Applications는 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다.</block>
+  <block id="c50c64e55455dd7f429be9192a7ad6a2" category="list-text">Cloud Backup for Applications는 NetApp에서 SaaS 서비스로 호스팅하는 데이터 보호 서비스 세트로, BlueXP SaaS 플랫폼을 기반으로 합니다.</block>
+  <block id="c942722bc0e73e01d3d202c22535adb7" category="list-text">Cloud Backup for Applications UI는 BlueXP UI와 통합되어 있습니다.</block>
+  <block id="2a69bdfb7c47a37bcaa300a79a3edcdb" category="list-text">BlueXP Connector는 클라우드 네트워크에서 실행되고 Oracle 데이터베이스 호스트에서 실행되는 Amazon FSx 스토리지 파일 시스템 및 Oracle용 SnapCenter 플러그인과 상호 작용하는 BlueXP의 구성 요소입니다.</block>
+  <block id="b48ac281f41818a7c46c37cd8f01ddff" category="paragraph">사용자가 시작한 요청의 경우 Cloud Backup for Applications UI는 요청 프로세스의 유효성을 검사할 때 BlueXP SaaS와 통신합니다. 백업 또는 복원과 같은 워크플로를 실행하도록 요청하는 경우 SaaS 서비스는 워크플로를 시작하고 필요한 경우 통화를 BlueXP Connector로 전달합니다. 그런 다음, Connector는 NetApp ONTAP용 Amazon FSx 및 Oracle용 SnapCenter 플러그인과 워크플로우 작업 실행에 함께 통신합니다.</block>
+  <block id="a5b772253a9d1fda45a73acd0ba63f08" category="paragraph">이제 이 백업 정책은 BlueXP, 시스템 관리자 또는 ONTAP CLI를 사용하여 이 작업 환경에서 생성된 모든 새 볼륨에 적용됩니다.</block>
+  <block id="344c10c4954bccab612b8dcf9b357678" category="admonition">랜섬웨어 스캔을 수행하려면 백업 파일을 BlueXP 환경(Connector가 설치된 환경)에 다운로드해야 합니다. 따라서 Connector를 사내에 구축한 경우 클라우드 공급자로부터 추가 송신 비용이 발생할 수 있습니다. 따라서 Connector를 클라우드에 구축하고 백업이 저장되는 버킷과 동일한 영역에 두는 것이 좋습니다.</block>
+  <block id="033f9aa227c492833c2f1af28d01f134" category="list-text">BlueXP 3.9.21 이상을 사용해야 합니다</block>
+  <block id="a8db6f5de8da7da9d3f1b9e9e4dfc251" category="list-text">BlueXP 커넥터 ID가 포함된 x-agent-id를 얻습니다.</block>
+  <block id="83c68586638f4e55d561e773a706553c" category="paragraph">여기서는 Cloud Central 계정 ID "account-DpTFcxN3", BlueXP 커넥터 ID "iZwFFeVCZjWnzGlw8RgD0QNANZvpP7IClients" 및 사용자 토큰 "BEARER UJHbGciOiJSUZSUZSUI1NiSXinSXI5XIMUCJUCJUCJUXUXUXYUXUXUXUXUXUXYUXYUXYUXYUXUXUXUXUXYUC4C4CJUXYUXYUXYUXYUXYUXYUXUXUXYUXYU</block>
+  <block id="6c5b6689ac55433faa02a7b00a324c53" category="list-text">Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다.<block ref="fe9c905e0ac5679eb2b5a96bea671a0a" category="inline-link-rx"></block>.</block>
+  <block id="d23034ecc8c41806d59e0a80e72171aa" category="paragraph">클라우드 백업은 인터넷에 연결되지 않은 사이트("오프라인" 또는 "다크" 사이트라고도 함)에서 로컬 사내 ONTAP 시스템의 볼륨 데이터를 로컬 NetApp StorageGRID 시스템으로 백업하는 데 사용할 수 있습니다. 이 구성에서는 볼륨 및 파일 복구도 모두 지원됩니다. 이 경우 어두운 사이트에 BlueXP 커넥터(최소 버전 3.9.20)를 배포해야 합니다. 을 참조하십시오 <block ref="14e7f2dcf692810422b10a89547f7ac5" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="011682c1cb2ab599a543ee540e04e7e0" category="list-text">서로 다른 서브넷에 있는 서로 다른 BlueXP 시스템에서 동일한 계정을 사용하는 경우 파일 수준 복원이 지원되지 않습니다.</block>
+  <block id="a9a7c21d19460612824de1c633d55427" category="list-text">권한이 있는 BlueXP Connector를 제공하는 IAM 역할에는 최신 버전의 S3 권한이 포함됩니다<block ref="ff3f0e305ab9e473aa2748fcb96c0189" category="inline-link-rx"></block>.</block>
+  <block id="573518a0624b344f3aa3e5e07e70b661" category="list-text">BlueXP에서 대상 AWS 계정 자격 증명을 추가합니다</block>
+  <block id="b13f342aeeb9fa567a657e2fd0bd5c0f" category="list-text">BlueXP에 권한을 제공하는 IAM 역할에 "S3:PutBucketPolicy" 권한을 추가합니다</block>
+  <block id="de91611ef7d87d7277497c9a2076d470" category="list-text">권한을 BlueXP에 제공하는 IAM 역할에는 최신 S3 권한이 포함되어야 합니다<block ref="7dfaeab02b2622441821b715f9d8495a" category="inline-link-rx"></block>.</block>
+  <block id="a19d5942606ceb898ad022661f6f64ae" category="paragraph">백업에 다른 AWS 계정을 사용하려면 BlueXP에서 대상 AWS 계정 자격 증명을 추가하고 BlueXP에 사용 권한을 제공하는 IAM 역할에 "S3:PutBucketPolicy" 권한을 추가해야 합니다.</block>
+  <block id="ddbe1a27c8679d52220657402cc89453" category="paragraph">데이터를 백업 및 복원하기 전에 정책, 데이터 저장소 및 가상 시스템을 볼 수 있습니다. 데이터베이스, 정책 또는 리소스 그룹의 변경에 따라 BlueXP UI에서 업데이트를 새로 고칠 수 있습니다.</block>
+  <block id="9330e7377c5511f70bfc35493714892a" category="list-text">BlueXP UI에서 * 보호 * &gt; * 백업 및 복구 * &gt; * 가상 머신 * &gt; * 설정 * &gt; * SnapCenter Plug-in for VMware vSphere * 를 클릭합니다.</block>
+  <block id="397eff7534de85acb7b12957a905e293" category="paragraph">BlueXP에서 VMware vSphere용 SnapCenter 플러그인의 세부 정보를 편집할 수 있습니다</block>
+  <block id="8fc5a6acddf8678dc2c340b6dfae42a9" category="list-text">백업 및 복구 * &gt; * 가상 머신 * 을 클릭합니다.</block>
+  <block id="2b36d2f46a4c7d47c05352e78b2ebe53" category="doc">온프레미스 애플리케이션 데이터를 Google Cloud Platform으로 백업합니다</block>
+  <block id="7a497013d67b1778c79772f53b72e376" category="paragraph">클라우드 백업 for Applications를 BlueXP 및 온프레미스 SnapCenter와 통합하여 ONTAP에서 Google 클라우드 플랫폼으로 애플리케이션 데이터를 백업할 수 있습니다.</block>
+  <block id="6377d35d48dc41c64b0bc564bd70b156" category="summary">클라우드 백업 for Applications를 BlueXP 및 사내 SnapCenter와 통합하여 사내 ONTAP에서 클라우드에 이르기까지 애플리케이션 정합성을 보장하는 스냅샷을 백업합니다.</block>
+  <block id="e045b743710ac143d9dfab9ccaa12d74" category="paragraph">클라우드 백업 for Applications를 BlueXP(이전의 Cloud Manager) 및 사내 SnapCenter와 통합하여 사내 ONTAP에서 클라우드에 이르기까지 애플리케이션 정합성을 보장하는 스냅샷을 백업할 수 있습니다. 필요한 경우 클라우드에서 사내 SnapCenter 서버로 복원할 수 있습니다.</block>
+  <block id="ded90f27fe65ac910c74189d47b689e7" category="paragraph">온프레미스 ONTAP 시스템에서 Amazon Web Services, Microsoft Azure, Google Cloud Platform 및 StorageGRID로 Oracle, Microsoft SQL 및 SAP HANA 애플리케이션 데이터를 백업할 수 있습니다.</block>
+  <block id="d8091897da3095df0c466b9affaf9f6b" category="list-text">BlueXP 3.9</block>
+  <block id="a202549441953b34c628ace4b1179eef" category="list-text">BlueXP의 클라우드 백업 애플리케이션 정책과 레이블 또는 동일한 레이블이 없는 SnapCenter에서 최소 1일, 1주 또는 1개월 이상의 정책을 사용할 수 있습니다.</block>
+  <block id="dc2f305c54bc6989c91413415c2c57b6" category="paragraph">VMware vSphere용 SnapCenter 플러그인을 BlueXP와 통합하여 하나 이상의 데이터 저장소를 StorageGRID에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
+  <block id="b4866a33463f80d02c65e0910ff4b146" category="paragraph">정책을 만들거나 BlueXP에서 사용할 수 있는 다음 미리 정의된 정책 중 하나를 사용할 수 있습니다.</block>
+  <block id="3d26bd9a2ddd1ce955560891c5295360" category="paragraph">Connector가 온프레미스나 어두운 사이트에 설치되어 있지 않고 클라우드에 배포된 경우 Azure Government 지역에서는 Cloud Backup이 지원됩니다. 또한 Azure Marketplace에서 Connector를 배포해야 합니다. BlueXP SaaS 웹 사이트에서 정부 지역에 Connector를 배포할 수 없습니다.<block ref="9758449d9191108f8c90137ecdba7919" category="inline-link-rx"></block>.</block>
+  <block id="600d7e7677b89e9499d2f4c0988c0755" category="paragraph">클라우드 백업 for Applications를 BlueXP 및 사내 SnapCenter와 통합하여 ONTAP에서 Microsoft Azure로 애플리케이션 데이터를 백업할 수 있습니다.</block>
+  <block id="ca8f6fdf6612f39d01c4ba19ddfa9742" category="list-text">BlueXP 사용자에게 "계정 관리자" 역할이 있는지 확인합니다.</block>
+  <block id="dde3633e0a5a544672a1883098aec957" category="list-text">백업 및 복구 * 를 클릭합니다.</block>
+  <block id="0d547969bfaddaa4d8899f36a0bf6cfb" category="paragraph">백업 파일에서 영구 볼륨을 복원하면 BlueXP에서 백업의 데이터를 사용하여 _new_volume을 생성합니다. 동일한 Kubernetes 클러스터의 볼륨이나 소스 Kubernetes 클러스터와 같은 클라우드 계정에 있는 다른 Kubernetes 클러스터로 데이터를 복원할 수 있습니다.</block>
+  <block id="7d91e132484d9507cb6d69fd88250e33" category="paragraph">BlueXP는 선택한 백업을 기반으로 Kubernetes 클러스터에 새 볼륨을 생성합니다. 가능합니다 <block ref="81f106b2aba35048d2bf0e6225895d07" category="inline-link-macro-rx"></block> 필요에 따라.</block>
+  <block id="317b69f3380634b0bc0612de54205fbc" category="list-text">프로젝트 편집 * 을 클릭하고 사용하려는 프로젝트가 기본 프로젝트(커넥터 위치)와 다른 경우 새 프로젝트를 선택합니다.</block>
+  <block id="2622e674b3c7dc032fe079b44d6b5ede" category="list-text">권한이 있는 BlueXP Connector를 제공하는 IAM 역할에는 최신 버전의 S3 권한이 포함됩니다<block ref="7dfaeab02b2622441821b715f9d8495a" category="inline-link-rx"></block>.</block>
+  <block id="91e227517267fea3ffdbb117f9de554a" category="list-text">Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다.<block ref="b008743209457997d1cdda737bb04357" category="inline-link-rx"></block>.</block>
+  <block id="ddb2145ba96507afdc3bec7ae412c714" category="list-text">권한을 BlueXP에 제공하는 IAM 역할에는 최신 S3 권한이 포함되어야 합니다<block ref="ff3f0e305ab9e473aa2748fcb96c0189" category="inline-link-rx"></block>.</block>
+  <block id="206a435abd7cd4811fdc6eb74ac46545" category="paragraph">SnapCenter Plug-in for VMware vSphere와 BlueXP를 통합하여 하나 이상의 데이터 저장소를 Microsoft Azure에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
+  <block id="ef63a877f0594c057f824f4327169a39" category="list-text">Google Cloud Platform(GCP) 및 StorageGRID를 지원하여 애플리케이션 정합성 보장 스냅샷을 백업합니다</block>
+  <block id="3f3ac5f6857788bfe6b27f406afcffa5" category="paragraph">Cloud Backup for Applications는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. BlueXP에서 활성화된 애플리케이션용 클라우드 백업은 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스의 효율적이고 애플리케이션 정합성이 보장되는 정책 기반 백업 및 복원을 제공합니다.<block ref="5774010e75c0af5301ef0cfe74198590" category="inline-link-rx"></block>.</block>
+  <block id="314d64b29803a4017e18c95e19a18a09" category="paragraph">사내 ONTAP 클러스터가 인터넷 액세스가 연결되지 않은 사이트에 있는 경우, 다크 사이트 또는 오프라인 사이트라고도 합니다. 이제 Cloud Backup을 사용하여 볼륨 데이터를 동일한 사이트에 있는 NetApp StorageGRID 시스템에 백업할 수 있습니다. 이 기능을 사용하려면 BlueXP 커넥터(버전 3.9.19 이상)도 오프라인 사이트에 배포해야 합니다.</block>
+  <block id="a1bf67f5d2f66348eff06c9dbdb7636d" category="paragraph">VMware vSphere용 SnapCenter 플러그인을 BlueXP와 통합하여 가상 시스템의 데이터를 보호할 수 있습니다. 데이터 저장소를 클라우드에 백업하고 VMware vSphere용 사내 SnapCenter 플러그인으로 가상 머신을 간편하게 복원할 수 있습니다.</block>
+  <block id="f464a9820cae6a24053ca10aad54bbb6" category="paragraph">과거에는 Cloud Backup을 활성화한 후 작업 환경에서 생성된 새 볼륨을 수동으로 백업 정책을 적용해야 했습니다. 이제 볼륨이 BlueXP, System Manager, CLI 또는 API에서 생성되었는지에 관계없이 Cloud Backup은 볼륨을 검색하고 기본 정책으로 선택한 백업 정책을 적용합니다.</block>
+  <block id="bc40ad8bde426b31489df30cd5aa9e82" category="paragraph">Cloud Backup의 BYOL 라이센스는 Cloud Backup Licenses 탭에서 BlueXP Digital Wallet의 Data Services Licenses 탭으로 이동했습니다.</block>
+  <block id="c95623cd0395d5a6bb6105b9d32f197b" category="inline-link">BlueXP에 대한 고지 사항</block>
+  <block id="e8a6d0f19a957eac14b9917a6c92899b" category="list-text"><block ref="e8a6d0f19a957eac14b9917a6c92899b" category="inline-link-rx"></block></block>
+  <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXP 블로그</block>
+  <block id="e4f8a35ee8df8b5c247f6e3286e42891" category="sidebar">BlueXP 활용 사례</block>
+  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">모든 BlueXP 설명서</block>
 </blocks>

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-backup-multi-account-azure.html 
 keywords: microsoft azure, azure, regions, blob, multiple accounts, multiple regions, backup 
-summary: Cloud Backup을 사용하면 소스 Cloud Volumes ONTAP 볼륨이 있는 위치와 다른 Azure 계정에 백업 파일을 생성할 수 있습니다. 이 파일은 Cloud Manager Connector가 있는 계정과 다릅니다. 
+summary: 클라우드 백업을 사용하면 소스 Cloud Volumes ONTAP 볼륨이 있는 위치와 다른 Azure 계정에 백업 파일을 생성할 수 있습니다. 이는 BlueXP Connector가 있는 계정과 다릅니다. 
 ---
 = Azure에서 다중 계정 액세스에 대한 백업을 구성합니다
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Cloud Backup을 사용하면 소스 Cloud Volumes ONTAP 볼륨이 있�
 
 
 [role="lead"]
-클라우드 백업을 사용하면 소스 Cloud Volumes ONTAP 볼륨이 상주하는 위치와 다른 Azure 계정에서 백업 파일을 생성할 수 있습니다. 이 두 계정 모두 Cloud Manager Connector가 있는 계정과 다를 수 있습니다.
+클라우드 백업을 사용하면 소스 Cloud Volumes ONTAP 볼륨이 상주하는 위치와 다른 Azure 계정에서 백업 파일을 생성할 수 있습니다. 또한 두 계정은 BlueXP Connector가 있는 계정과 다를 수 있습니다.
 
 이 단계는 사용자가 있을 때만 필요합니다 https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-to-azure.html["Azure Blob 저장소에 Cloud Volumes ONTAP 데이터 백업"^].
 
@@ -24,7 +24,7 @@ summary: Cloud Backup을 사용하면 소스 Cloud Volumes ONTAP 볼륨이 있�
 
 == 계정 간 VNET 피어링을 설정합니다
 
-클라우드 관리자가 다른 계정/지역에서 Cloud Volumes ONTAP 시스템을 관리하도록 하려면 VNET 피어링을 설정해야 합니다. 스토리지 계정 접속에 VNET 피어링이 필요하지 않습니다.
+BlueXP에서 다른 계정/지역의 Cloud Volumes ONTAP 시스템을 관리하려면 VNET 피어링을 설정해야 합니다. 스토리지 계정 접속에 VNET 피어링이 필요하지 않습니다.
 
 . Azure 포털에 로그인하고 집에서 가상 네트워크를 선택합니다.
 . 구독 1로 사용 중인 가입을 선택하고 피어링을 설정할 VNET를 클릭합니다.
@@ -103,7 +103,7 @@ image:screenshot_azure_networking1.png[""]
 
 . 개인 Endpoint_Basics_페이지에서 다음을 수행합니다.
 +
-** 구독 2(Cloud Manager Connector와 Cloud Volumes ONTAP 시스템이 배포된 위치)와 리소스 그룹을 선택합니다.
+** 가입 2(BlueXP 커넥터 및 Cloud Volumes ONTAP 시스템이 배포된 위치)와 리소스 그룹을 선택합니다.
 ** 끝점 이름을 입력합니다.
 ** 영역을 선택합니다.
 +

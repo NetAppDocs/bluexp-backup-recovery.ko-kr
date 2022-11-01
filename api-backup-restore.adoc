@@ -74,7 +74,7 @@ Header:
 ----
 [{"accountPublicId":"account-i6vJXvZW","accountName":"rashidn","isSaas":true,"isGov":false,"isPrivatePreviewEnabled":false,"is3rdPartyServicesEnabled":false,"accountSerial":"96064469711530003565","userRole":"Role-1"}………
 ----
-. Cloud Manager 커넥터 ID가 포함된 x-agent-id를 얻습니다.
+. BlueXP 커넥터 ID가 포함된 x-agent-id를 얻습니다.
 +
 [source, http]
 ----
@@ -101,7 +101,7 @@ Header:
 
 다음 예에서는 Azure 클라우드의 East-US-2 영역에서 일별, 시간별, 주별 레이블이 설정되고 보관 기간이 180일로 설정된 새 정책을 사용하여 작업 환경에서 백업을 활성화하는 API 호출을 보여 줍니다. 이 옵션은 작업 환경에서만 백업을 활성화하지만 볼륨은 백업되지 않습니다. ""자동 백업 사용": true를 선택하면 시스템에 이미 있는 모든 볼륨이 백업되고 이후 볼륨이 추가됩니다.
 
-Cloud Central 계정 ID "account-DpTFcxN3", Cloud Manager Connector ID "iZwFFeVCZjWnzGlw8RgD0QNANZvpP7IClients" 및 사용자 토큰 "BEARER UJHbGciOiJSUZSUI1NiSXinSXinS4UCJUCJUCJUXYUXUXUXUXUXYUXYUXUXUXYUXYUX4CJUXYUX4CJUXYUC4UXUXYUXYUXYUXYUXYUXYUXYUXYUX4CJUXY
+여기서는 Cloud Central 계정 ID "account-DpTFcxN3", BlueXP 커넥터 ID "iZwFFeVCZjWnzGlw8RgD0QNANZvpP7IClients" 및 사용자 토큰 "BEARER UJHbGciOiJSUZSUZSUI1NiSXinSXI5XIMUCJUCJUCJUXUXUXYUXUXUXUXUXUXYUXYUXYUXYUXUXUXUXUXYUC4C4CJUXYUXYUXYUXYUXYUXYUXUXUXYUXYU
 
 [source, http]
 ----

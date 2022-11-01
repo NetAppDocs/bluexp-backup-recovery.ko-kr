@@ -26,7 +26,7 @@ summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP에서 Amazon S3�
 * AWS에서 Cloud Volumes ONTAP 9.7P5 이상을 실행하고 있습니다.
 * 백업이 위치할 스토리지 공간에 대한 유효한 클라우드 공급자 가입이 있습니다.
 * 에 가입했습니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["Cloud Manager Marketplace 백업 오퍼링"], 및 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS 연간 계약"]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"] Cloud Backup BYOL 라이센스는 NetApp에서 제공
-* Cloud Manager Connector에 사용 권한을 제공하는 IAM 역할에는 최신 의 S3 권한이 포함됩니다 https://mysupport.netapp.com/site/info/cloud-manager-policies["Cloud Manager 정책"^].
+* 권한이 있는 BlueXP Connector를 제공하는 IAM 역할에는 최신 버전의 S3 권한이 포함됩니다 https://mysupport.netapp.com/site/info/cloud-manager-policies["BlueXP 정책"^].
 
 
 .span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png"[] Alt="Two"></span>새 시스템이나 기존 시스템에서 클라우드 백업 사용
@@ -82,13 +82,13 @@ Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 
 다른 AWS 계정에서 백업을 생성하기 위해 필요한 설정:: 기본적으로 백업은 Cloud Volumes ONTAP 시스템에 사용되는 계정과 동일한 계정을 사용하여 생성됩니다. 백업에 다른 AWS 계정을 사용하려면 다음을 수행해야 합니다.
 +
 --
-* Cloud Manager에서 대상 AWS 계정 자격 증명을 추가합니다
-* Cloud Manager에 권한을 제공하는 IAM 역할에 "S3:PutBuckPolicy" 권한을 추가합니다
+* BlueXP에서 대상 AWS 계정 자격 증명을 추가합니다
+* BlueXP에 권한을 제공하는 IAM 역할에 "S3:PutBucketPolicy" 권한을 추가합니다
 
 
 --
 데이터 암호화에 대해 고객이 관리하는 키를 사용하는 데 필요한 정보입니다:: 기본 Amazon S3 암호화 키를 사용하는 대신 활성화 마법사에서 데이터 암호화에 대해 고객이 관리하는 키를 직접 선택할 수 있습니다. 이 경우 암호화 관리 키가 이미 설정되어 있어야 합니다. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-kms.html["자신의 키를 사용하는 방법을 확인하십시오"^].
-AWS 권한이 필요합니다:: Cloud Manager에 사용 권한을 제공하는 IAM 역할에는 최신 버전의 S3 권한이 포함되어야 합니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html["Cloud Manager 정책"^].
+AWS 권한이 필요합니다:: 권한을 BlueXP에 제공하는 IAM 역할에는 최신 S3 권한이 포함되어야 합니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html["BlueXP 정책"^].
 +
 --
 다음은 정책의 특정 사용 권한입니다.
@@ -197,7 +197,7 @@ image:screenshot_backup_cvo_enable.png["작업 환경을 선택한 후 사용할
 +
 .. 백업을 저장하는 데 사용되는 AWS 계정입니다. 이 계정은 Cloud Volumes ONTAP 시스템이 상주하는 계정과 다를 수 있습니다.
 +
-백업에 다른 AWS 계정을 사용하려면 Cloud Manager에서 대상 AWS 계정 자격 증명을 추가하고 Cloud Manager에 권한을 제공하는 IAM 역할에 "S3:PutBuckPolicy" 권한을 추가해야 합니다.
+백업에 다른 AWS 계정을 사용하려면 BlueXP에서 대상 AWS 계정 자격 증명을 추가하고 BlueXP에 사용 권한을 제공하는 IAM 역할에 "S3:PutBucketPolicy" 권한을 추가해야 합니다.
 
 .. 백업이 저장될 영역입니다. 이 영역은 Cloud Volumes ONTAP 시스템이 있는 지역과 다를 수 있습니다.
 .. 기본 Amazon S3 암호화 키를 사용하거나 AWS 계정에서 직접 고객 관리 키를 선택하여 데이터 암호화를 관리할지 여부를 결정합니다. (https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-kms.html["자신의 암호화 키를 사용하는 방법을 알아봅니다"])를 클릭합니다.

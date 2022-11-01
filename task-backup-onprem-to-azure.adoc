@@ -25,7 +25,7 @@ summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Azure Bl
 다음 단계를 따라 빠르게 시작하거나 나머지 섹션을 아래로 스크롤하여 자세한 내용을 확인하십시오.
 
 .span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png"[] Alt="One"></span> 구성에 대한 지원을 확인합니다
-* 온프레미스 클러스터를 검색한 후 Cloud Manager의 작업 환경에 추가했습니다. 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["ONTAP 클러스터 검색"^] 를 참조하십시오.
+* 온-프레미스 클러스터를 발견하고 BlueXP의 작업 환경에 추가했습니다. 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["ONTAP 클러스터 검색"^] 를 참조하십시오.
 +
 ** 클러스터에서 ONTAP 9.7P5 이상이 실행 중입니다.
 ** 클러스터에는 SnapMirror 라이센스가 있으며, 이 라이센스는 프리미엄 번들 또는 데이터 보호 번들의 일부로 포함됩니다.
@@ -90,7 +90,7 @@ image:diagram_cloud_backup_onprem_azure_private.png["Cloud Backup이 클러스�
 
 === ONTAP 클러스터 준비
 
-볼륨 데이터 백업을 시작하려면 Cloud Manager에서 사내 ONTAP 클러스터를 검색해야 합니다.
+볼륨 데이터 백업을 시작하기 전에 BlueXP에서 온-프레미스 ONTAP 클러스터를 검색해야 합니다.
 
 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["클러스터를 검색하는 방법에 대해 알아보십시오"^].
 
@@ -145,7 +145,7 @@ Azure VNET 또는 구내에 이미 Connector가 배포되어 있는 경우 모�
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["구내에 커넥터 설치"^]
 
 
-Connector가 온프레미스나 어두운 사이트에 설치되어 있지 않고 클라우드에 배포된 경우 Azure Government 지역에서는 Cloud Backup이 지원됩니다. 또한 Azure Marketplace에서 Connector를 배포해야 합니다. Cloud Manager SaaS 웹 사이트에서는 정부 지역에 Connector를 구축할 수 없습니다. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-launching-azure-mktp.html["Azure Government 지역에서 Connector를 만드는 방법을 알아보십시오"].
+Connector가 온프레미스나 어두운 사이트에 설치되어 있지 않고 클라우드에 배포된 경우 Azure Government 지역에서는 Cloud Backup이 지원됩니다. 또한 Azure Marketplace에서 Connector를 배포해야 합니다. BlueXP SaaS 웹 사이트에서 정부 지역에 Connector를 배포할 수 없습니다. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-launching-azure-mktp.html["Azure Government 지역에서 Connector를 만드는 방법을 알아보십시오"].
 
 
 

@@ -32,7 +32,7 @@ summary: 작업 환경에서 시작한 백업 및 복원 작업의 상태를 모
 
 
 .단계
-. 백업 및 복원 * 탭을 클릭합니다.
+. BlueXP 메뉴에서 * 보호 > 백업 및 복구 * 를 선택합니다.
 . Job Monitoring * 탭을 클릭합니다.
 +
 image:screenshot_backup_job_monitor.png["Job Monitoring 대시보드의 백업 및 복원 작업을 보여 주는 스크린샷"]

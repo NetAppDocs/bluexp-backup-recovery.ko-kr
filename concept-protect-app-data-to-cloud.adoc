@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: concept-protect-app-data-to-cloud.html 
-keywords: backing up, back up, backup, backup application data, Azure, Amazon Web services, Cloud Backup, Oracle database, Microsoft SQL Server database, policy, requirements, SAP HANA database 
-summary: Cloud Backup for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 사내 ONTAP에서 클라우드로 애플리케이션 정합성을 보장하는 스냅샷을 백업합니다. 
+keywords: backing up, back up, backup, backup application data, Azure, Amazon Web services, Cloud Backup, Oracle database, Microsoft SQL Server database, policy, requirements, SAP HANA database, Cloud Manager, BlueXP 
+summary: 클라우드 백업 for Applications를 BlueXP 및 사내 SnapCenter와 통합하여 사내 ONTAP에서 클라우드에 이르기까지 애플리케이션 정합성을 보장하는 스냅샷을 백업합니다. 
 ---
 = 온프레미스 애플리케이션 데이터를 보호합니다
 :hardbreaks:
@@ -14,9 +14,9 @@ summary: Cloud Backup for Applications를 Cloud Manager 및 사내 SnapCenter와
 
 
 [role="lead"]
-Cloud Backup for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 사내 ONTAP에서 클라우드로 애플리케이션 정합성을 보장하는 스냅샷을 백업할 수 있습니다. 필요한 경우 클라우드에서 사내 SnapCenter 서버로 복원할 수 있습니다.
+클라우드 백업 for Applications를 BlueXP(이전의 Cloud Manager) 및 사내 SnapCenter와 통합하여 사내 ONTAP에서 클라우드에 이르기까지 애플리케이션 정합성을 보장하는 스냅샷을 백업할 수 있습니다. 필요한 경우 클라우드에서 사내 SnapCenter 서버로 복원할 수 있습니다.
 
-온프레미스 ONTAP 시스템에서 Amazon Web Services, Microsoft Azure, Google Cloud 및 StorageGRID로 Oracle, Microsoft SQL 및 SAP HANA 애플리케이션 데이터를 백업할 수 있습니다.
+온프레미스 ONTAP 시스템에서 Amazon Web Services, Microsoft Azure, Google Cloud Platform 및 StorageGRID로 Oracle, Microsoft SQL 및 SAP HANA 애플리케이션 데이터를 백업할 수 있습니다.
 
 
 NOTE: SnapCenter 소프트웨어 4.6 이상을 사용해야 합니다.
@@ -34,7 +34,7 @@ Cloud Backup for Applications에 대한 자세한 내용은 다음을 참조하�
 애플리케이션 데이터를 클라우드 서비스에 백업하기 전에 다음 요구 사항을 읽고 지원되는 구성이 있는지 확인합니다.
 
 * ONTAP 9.8 이상
-* Cloud Manager 3.9
+* BlueXP 3.9
 * SnapCenter 서버 4.6 이상 다음 기능을 사용하려면 SnapCenter 서버 4.7을 사용해야 합니다.
 +
 ** 사내 보조 스토리지에서 백업 보호
@@ -46,7 +46,7 @@ Cloud Backup for Applications에 대한 자세한 내용은 다음을 참조하�
 
 
 * SnapCenter 서버에서 응용 프로그램당 하나 이상의 백업을 사용할 수 있어야 합니다
-* SnapCenter에서 Cloud Manager의 클라우드 백업 애플리케이션 정책과 레이블 또는 레이블이 없는 일별, 주별 또는 월별 정책 하나 이상
+* BlueXP의 클라우드 백업 애플리케이션 정책과 레이블 또는 동일한 레이블이 없는 SnapCenter에서 최소 1일, 1주 또는 1개월 이상의 정책을 사용할 수 있습니다.
 
 
 

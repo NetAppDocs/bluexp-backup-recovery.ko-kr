@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-prereq-protect-cloud-native-app-data.html 
-keywords: Cloud Manager, FSx for ONTAP, working environment, Connector, AWS, deploy Oracle plug-in 
+keywords: Cloud Manager, FSx for ONTAP, working environment, Connector, AWS, deploy Oracle plug-in, BlueXP 
 summary: 백업을 생성하기 전에 사전 요구 사항을 완료합니다. 
 ---
 = 필수 구성 요소
@@ -14,13 +14,13 @@ summary: 백업을 생성하기 전에 사전 요구 사항을 완료합니다.
 
 
 [role="lead"]
-Cloud Manager에 액세스하고, Cloud Manager 계정을 만들고, 작업 환경과 커넥터를 만들고, Oracle용 SnapCenter 플러그인을 구축할 수 있어야 합니다.
+BlueXP에 액세스하고, BlueXP 계정을 만들고, 작업 환경과 커넥터를 만들고, Oracle용 SnapCenter 플러그인을 구축해야 합니다.
 
 
 
-== Cloud Manager에 액세스합니다
+== BlueXP에 액세스합니다
 
-당신은 해야 한다 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-signing-up.html["NetApp Cloud Central에 가입하십시오"], link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Cloud Manager에 로그인합니다"]를 선택한 다음 를 설정합니다 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-setting-up-netapp-accounts.html["NetApp 계정"].
+당신은 해야 한다 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-signing-up.html["NetApp BlueXP 웹 사이트에 등록하십시오"], link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["BlueXP에 로그인합니다"]를 선택한 다음 를 설정합니다 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-setting-up-netapp-accounts.html["NetApp 계정"].
 
 
 
@@ -28,15 +28,15 @@ Cloud Manager에 액세스하고, Cloud Manager 계정을 만들고, 작업 환�
 
 데이터베이스가 호스팅되는 ONTAP 작업 환경을 위한 Amazon FSx를 생성해야 합니다. 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/start/task-getting-started-fsx.html["ONTAP용 Amazon FSx를 시작하십시오"] 및 link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html["ONTAP 작업 환경을 위한 Amazon FSx를 생성하고 관리합니다"].
 
-Cloud Manager 또는 AWS를 사용하여 NetApp FSx를 생성할 수 있습니다. AWS를 사용하여 생성한 경우 Cloud Manager에서 ONTAP 시스템용 FSx를 검색해야 합니다.
+BlueXP 또는 AWS를 사용하여 NetApp FSx를 생성할 수 있습니다. AWS를 사용하여 생성한 경우 BlueXP에서 ONTAP 시스템용 FSx를 검색해야 합니다.
 
 
 
 == 커넥터를 작성합니다
 
-계정 관리자는 AWS에 Connector를 구축하여 Cloud Manager가 퍼블릭 클라우드 환경 내에서 리소스와 프로세스를 관리할 수 있도록 해야 합니다.
+계정 관리자는 AWS에 Connector를 구축하여 BlueXP가 퍼블릭 클라우드 환경 내의 리소스와 프로세스를 관리할 수 있도록 해야 합니다.
 
-자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["Cloud Manager에서 AWS에 커넥터 생성"].
+자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["BlueXP에서 AWS에 커넥터 생성"].
 
 * FSx 작업 환경과 Oracle 데이터베이스를 모두 관리하려면 동일한 커넥터를 사용해야 합니다.
 * FSx 작업 환경과 Oracle 데이터베이스가 동일한 VPC에 있는 경우 동일한 VPC에 커넥터를 배포할 수 있습니다.
@@ -52,7 +52,7 @@ NOTE: NAS(NFS) 워크로드를 사용하려면 Oracle 데이터베이스 VPC와 
 
 
 
-커넥터를 만든 후 * Canvas * > * 작업 환경 추가 * 를 클릭하고 화면의 지시에 따라 작업 환경을 추가합니다. Oracle 데이터베이스 호스트 및 FSx 작업 환경에 대한 커넥터와 연결이 있는지 확인합니다. 커넥터는 FSx 작업 환경의 클러스터 관리 IP 주소에 연결할 수 있어야 합니다.
+커넥터를 만든 후 * Storage * > * Canvas * > * My Working Environments * > * Add Working Environment * 를 클릭하고 화면의 지시에 따라 작업 환경을 추가합니다. Oracle 데이터베이스 호스트 및 FSx 작업 환경에 대한 커넥터와 연결이 있는지 확인합니다. 커넥터는 FSx 작업 환경의 클러스터 관리 IP 주소에 연결할 수 있어야 합니다.
 
 
 IMPORTANT: 커넥터를 작성한 후 * 커넥터 > 커넥터 관리 * 를 클릭하고 커넥터 이름을 선택한 다음 커넥터 ID를 복사합니다.

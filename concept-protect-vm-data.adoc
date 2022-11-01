@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-protect-vm-data.html 
-keywords: protect virtual machines, vm, policy, policies, backup back up, restore, SnapCenter Plug-in 
+keywords: protect virtual machines, vm, policy, policies, backup back up, restore, SnapCenter Plug-in, Cloud Manager, BlueXP 
 summary: 가상 시스템의 데이터 보호에 대해 자세히 알아보고 다양한 정책을 이해하십시오. 
 ---
 = 가상 시스템 데이터 보호
@@ -14,7 +14,7 @@ summary: 가상 시스템의 데이터 보호에 대해 자세히 알아보고 �
 
 
 [role="lead"]
-SnapCenter Plug-in for VMware vSphere를 Cloud Manager와 통합하면 가상 머신의 데이터를 보호할 수 있습니다. 데이터 저장소를 클라우드에 백업하고 VMware vSphere용 사내 SnapCenter 플러그인으로 가상 머신을 간편하게 복원할 수 있습니다.
+SnapCenter Plug-in for VMware vSphere를 BlueXP(이전의 Cloud Manager)와 통합하여 가상 시스템의 데이터를 보호할 수 있습니다. 데이터 저장소를 클라우드에 백업하고 VMware vSphere용 사내 SnapCenter 플러그인으로 가상 머신을 간편하게 복원할 수 있습니다.
 
 데이터 저장소를 Amazon Web Services S3, Microsoft Azure Blob 및 StorageGRID에 백업할 수 있습니다.
 
@@ -26,9 +26,9 @@ SnapCenter Plug-in for VMware vSphere를 Cloud Manager와 통합하면 가상 �
 
 * VMware vSphere 4.6P1 이상용 SnapCenter 플러그인
 * ONTAP 9.8 이상
-* Cloud Manager 3.9 이상
+* BlueXP 3.9 이상
 * VMware vSphere 4.6P1용 SnapCenter 플러그인에서 하나 이상의 백업을 수행해야 합니다.
-* SnapCenter Plug-in for VMware vSphere에서 Cloud Manager의 Cloud Backup for Virtual Machines 정책에 대한 레이블 또는 레이블이 없는 상태로 최소 1일, 매주 또는 매월 정책을 구현합니다.
+* SnapCenter Plug-in for VMware vSphere에서 BlueXP의 Cloud Backup for Virtual Machines 정책과 레이블 또는 레이블이 없는 일일, 주별 또는 월별 정책을 하나 이상 지원합니다.
 * 사전 구성된 정책의 경우 VMware vSphere 및 클라우드용 SnapCenter 플러그인의 데이터 저장소에 대한 스케줄 계층이 동일해야 합니다.
 * FlexGroup 볼륨 백업 및 복구는 지원되지 않으므로 데이터 저장소에 FlexGroup 볼륨이 없는지 확인합니다.
 * 암호화된 볼륨 복원이 지원되지 않으므로 암호화된 볼륨이 없는지 확인합니다.

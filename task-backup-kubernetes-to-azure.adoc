@@ -23,7 +23,7 @@ summary: 몇 가지 단계를 완료하여 AKS Kubernetes 클러스터의 영구
 다음 단계를 따라 빠르게 시작하거나 나머지 섹션으로 스크롤하여 자세한 내용을 확인하십시오.
 
 .span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png"[] Alt="One"></span> 사전 요구 사항 검토
-* Kubernetes 클러스터를 Cloud Manager 작업 환경으로 발견했습니다.
+* Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다.
 +
 ** Trident는 클러스터에 설치해야 하며 Trident 버전은 21.1 이상이어야 합니다.
 ** 백업하려는 영구 체적을 생성하는 데 사용되는 모든 PVC는 "snapshotPolicy(스냅샷 정책)"를 "default(기본값)"로 설정해야 합니다.
@@ -65,7 +65,7 @@ image:diagram_cloud_backup_k8s_cvo_azure.png["Cloud Backup이 소스 시스템 �
 Kubernetes 클러스터 요구사항::
 +
 --
-* Kubernetes 클러스터를 Cloud Manager 작업 환경으로 발견했습니다. https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-kubernetes-discover-azure.html["Kubernetes 클러스터를 검색하는 방법을 알아보십시오"^].
+* Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다. https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-kubernetes-discover-azure.html["Kubernetes 클러스터를 검색하는 방법을 알아보십시오"^].
 * Trident는 클러스터에 설치해야 하며 Trident 버전은 21.1 이상이어야 합니다. 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-trident.html["Trident 설치 방법"^] 또는 https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-trident.html["Trident 버전을 업그레이드하는 방법"^].
 * 클러스터는 '백엔드 스토리지'를 위해 Azure에서 Cloud Volumes ONTAP를 사용해야 합니다.
 * Cloud Volumes ONTAP 시스템은 Kubernetes 클러스터와 같은 Azure 지역에 있어야 하며 ONTAP 9.7P5 이상을 실행해야 합니다(ONTAP 9.8P11 이상 권장).
