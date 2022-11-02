@@ -26,7 +26,7 @@ summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP에서 Amazon S3�
 * AWS에서 Cloud Volumes ONTAP 9.7P5 이상을 실행하고 있습니다.
 * 백업이 위치할 스토리지 공간에 대한 유효한 클라우드 공급자 가입이 있습니다.
 * 에 가입했습니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["Cloud Manager Marketplace 백업 오퍼링"], 및 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS 연간 계약"]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"] Cloud Backup BYOL 라이센스는 NetApp에서 제공
-* 권한이 있는 BlueXP Connector를 제공하는 IAM 역할에는 최신 버전의 S3 권한이 포함됩니다 https://mysupport.netapp.com/site/info/cloud-manager-policies["BlueXP 정책"^].
+* 권한이 있는 BlueXP Connector를 제공하는 IAM 역할에는 최신 버전의 S3 권한이 포함됩니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html["BlueXP 정책"^].
 
 
 .span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png"[] Alt="Two"></span>새 시스템이나 기존 시스템에서 클라우드 백업 사용
@@ -48,6 +48,9 @@ image:screenshot_backup_provider_settings_aws.png["Cloud Volumes ONTAP 시스템
 
 [role="quick-margin-para"]
 백업은 기본적으로 S3 Standard 스토리지에 저장됩니다. 클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화하도록 선택할 수 있습니다.
+
+[role="quick-margin-para"]
+선택적으로 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호할 수 있습니다. link:concept-cloud-backup-policies.html["사용 가능한 클라우드 백업 정책 구성 설정에 대해 자세히 알아보십시오"^].
 
 [role="quick-margin-para"]
 image:screenshot_backup_policy_aws.png["백업 스케줄 및 보존 기간을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
@@ -83,7 +86,7 @@ Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 
 +
 --
 * BlueXP에서 대상 AWS 계정 자격 증명을 추가합니다
-* BlueXP에 권한을 제공하는 IAM 역할에 "S3:PutBucketPolicy" 권한을 추가합니다
+* BlueXP Connector에 사용 권한을 제공하는 IAM 역할에 "S3:PutBucketPolicy" 및 "S3:PutBucketOwnershipControls" 권한을 추가합니다
 
 
 --
@@ -116,6 +119,7 @@ AWS 권한이 필요합니다:: 권한을 BlueXP에 제공하는 IAM 역할에�
                 "s3:GetBucketAcl",
                 "s3:GetBucketPolicy",
                 "s3:PutBucketPolicy",
+                "s3:PutBucketOwnershipControls"
                 "s3:PutBucketPublicAccessBlock",
                 "s3:PutEncryptionConfiguration",
                 "s3:GetObjectVersionTagging",
@@ -177,8 +181,6 @@ image:screenshot_backup_to_gcp.png["에는 작업 환경 마법사의 클라우�
 
 Cloud Backup은 시스템에서 활성화되어 매일 볼륨을 백업하며 최근 30개의 백업 복사본을 보존합니다.
 
-가능합니다 link:task-manage-backups-ontap.html["볼륨에 대한 백업을 시작 및 중지하거나 백업 일정을 변경합니다"^]. 또한 가능합니다 link:task-restore-backups-ontap.html["백업 파일에서 전체 볼륨 또는 개별 파일을 복원합니다"^] AWS의 Cloud Volumes ONTAP 시스템 또는 사내 ONTAP 시스템으로 전환
-
 
 
 == 기존 시스템에서 Cloud Backup 활성화
@@ -197,7 +199,7 @@ image:screenshot_backup_cvo_enable.png["작업 환경을 선택한 후 사용할
 +
 .. 백업을 저장하는 데 사용되는 AWS 계정입니다. 이 계정은 Cloud Volumes ONTAP 시스템이 상주하는 계정과 다를 수 있습니다.
 +
-백업에 다른 AWS 계정을 사용하려면 BlueXP에서 대상 AWS 계정 자격 증명을 추가하고 BlueXP에 사용 권한을 제공하는 IAM 역할에 "S3:PutBucketPolicy" 권한을 추가해야 합니다.
+백업에 다른 AWS 계정을 사용하려면 BlueXP에서 대상 AWS 계정 자격 증명을 추가하고 "S3:PutBucketPolicy" 및 "S3:PutBucketOwnershipControls" 권한을 BlueXP에 제공하는 IAM 역할에 추가해야 합니다.
 
 .. 백업이 저장될 영역입니다. 이 영역은 Cloud Volumes ONTAP 시스템이 있는 지역과 다를 수 있습니다.
 .. 기본 Amazon S3 암호화 키를 사용하거나 AWS 계정에서 직접 고객 관리 키를 선택하여 데이터 암호화를 관리할지 여부를 결정합니다. (https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-kms.html["자신의 암호화 키를 사용하는 방법을 알아봅니다"])를 클릭합니다.
@@ -220,19 +222,27 @@ image:screenshot_backup_policy_aws.png["스케줄 및 백업 보존을 선택할
 
 
 
-. Select Volumes(볼륨 선택) 페이지의 기본 백업 정책을 사용하여 백업할 볼륨을 선택합니다. 특정 볼륨에 서로 다른 백업 정책을 할당하려는 경우 추가 정책을 생성하여 나중에 해당 볼륨에 적용할 수 있습니다.
+. 볼륨 선택 페이지에서 정의된 백업 정책을 사용하여 백업할 볼륨을 선택합니다. 특정 볼륨에 서로 다른 백업 정책을 할당하려는 경우 추가 정책을 생성하여 나중에 해당 볼륨에 적용할 수 있습니다.
++
+** 나중에 추가된 모든 기존 볼륨과 볼륨을 백업하려면 "Back up all existing and future volumes..." 확인란을 선택합니다. 모든 볼륨이 백업되고 새 볼륨에 대해 백업을 사용하도록 설정할 필요가 없도록 이 옵션을 사용하는 것이 좋습니다.
+** 기존 볼륨만 백업하려면 제목 행(image:button_backup_all_volumes.png[""])를 클릭합니다.
+** 개별 볼륨을 백업하려면 각 볼륨에 대한 확인란을 선택합니다(image:button_backup_1_volume.png[""])를 클릭합니다.
 +
 image:screenshot_backup_select_volumes.png["백업할 볼륨을 선택하는 스크린샷"]
 
-+
-** 모든 볼륨을 백업하려면 제목 행(image:button_backup_all_volumes.png[""])를 클릭합니다.
-** 개별 볼륨을 백업하려면 각 볼륨에 대한 확인란을 선택합니다(image:button_backup_1_volume.png[""])를 클릭합니다.
+** 이 작업 환경에서 선택한 백업 일정 레이블(예: 일별, 주별 등)과 일치하는 볼륨의 로컬 스냅샷 복사본이 있는 경우 "기존 스냅샷 복사본을 오브젝트 스토리지로 백업 복사본으로 내보내기"라는 추가 프롬프트가 표시됩니다. 볼륨에 대한 완벽한 보호를 위해 모든 기록 스냅샷을 백업 파일로 오브젝트 스토리지에 복제하려면 이 확인란을 선택합니다.
 
 
-. 나중에 추가된 모든 볼륨에 백업을 사용하려면 "Automatically back up future volumes..." 확인란을 선택하기만 하면 됩니다. 이 설정을 비활성화하면 이후 볼륨에 대해 백업을 수동으로 활성화해야 합니다.
 . 백업 활성화 * 를 클릭하면 선택한 각 볼륨의 초기 백업이 시작됩니다.
 
 
-Cloud Backup은 선택한 각 볼륨의 초기 백업을 시작하고, 백업 상태를 모니터링할 수 있도록 Volume Backup Dashboard가 표시됩니다.
+S3 버킷은 입력한 S3 액세스 키와 비밀 키로 표시된 서비스 계정에 자동으로 생성되며 백업 파일은 여기에 저장됩니다. 백업 상태를 모니터링할 수 있도록 볼륨 백업 대시보드가 표시됩니다. 을 사용하여 백업 및 복원 작업의 상태를 모니터링할 수도 있습니다 link:task-monitor-backup-jobs.html["작업 모니터링 패널"^].
 
-가능합니다 link:task-manage-backups-ontap.html["볼륨에 대한 백업을 시작 및 중지하거나 백업 일정을 변경합니다"^]. 또한 가능합니다 link:task-restore-backups-ontap.html["백업 파일에서 전체 볼륨 또는 개별 파일을 복원합니다"^] AWS의 Cloud Volumes ONTAP 시스템 또는 사내 ONTAP 시스템으로 전환
+
+
+== 다음 단계
+
+* 가능합니다 link:task-manage-backups-ontap.html["백업 파일 및 백업 정책을 관리합니다"^]. 여기에는 백업 시작 및 중지, 백업 삭제, 백업 스케줄 추가 및 변경 등이 포함됩니다.
+* 가능합니다 link:task-manage-backup-settings-ontap.html["클러스터 레벨 백업 설정을 관리합니다"^]. 여기에는 ONTAP가 클라우드 스토리지에 액세스하는 데 사용하는 스토리지 키 변경, 백업을 오브젝트 스토리지에 업로드하는 데 사용할 수 있는 네트워크 대역폭 변경, 이후 볼륨에 대한 자동 백업 설정 변경 등이 포함됩니다.
+* 또한 가능합니다 link:task-restore-backups-ontap.html["백업 파일에서 볼륨, 폴더 또는 개별 파일을 복원합니다"^] AWS의 Cloud Volumes ONTAP 시스템 또는 사내 ONTAP 시스템으로 전환
+

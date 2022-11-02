@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-backup-onprem-to-azure.html 
-keywords: backing up, back up, backup, backup on-prem ontap, on-premises, back up volumes, cloud backup, azure, azure blob 
+keywords: backing up, back up, backup, backup on-prem ontap, on-premises, back up volumes, cloud backup, azure, azure blob, government 
 summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Azure Blob 저장소로 데이터 백업을 시작하십시오. 
 ---
 = 온프레미스 ONTAP 데이터를 Azure Blob 저장소에 백업
@@ -58,7 +58,7 @@ image:screenshot_backup_onprem_azure_networking.png["ONTAP 시스템에서 Azure
 기본 정책은 매일 볼륨을 백업하고 각 볼륨의 최근 30개 백업 복사본을 유지합니다. 시간별, 일별, 주별, 월별 또는 연도별 백업으로 변경, 또는 더 많은 옵션을 제공하는 시스템 정의 정책 중 하나를 선택합니다. 보존할 백업 복사본의 수를 변경할 수도 있습니다.
 
 [role="quick-margin-para"]
-기본적으로 백업은 Cool 액세스 계층에 저장됩니다. 클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 Azure 아카이브 스토리지에 백업을 계층화하도록 선택할 수 있습니다.
+기본적으로 백업은 Cool 액세스 계층에 저장됩니다. 클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 Azure 아카이브 스토리지에 백업을 계층화하도록 선택할 수 있습니다. link:concept-cloud-backup-policies.html["사용 가능한 클라우드 백업 정책 구성 설정에 대해 자세히 알아보십시오"^].
 
 [role="quick-margin-para"]
 image:screenshot_backup_policy_azure.png["백업 스케줄 및 보존 기간을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
@@ -143,9 +143,11 @@ Azure VNET 또는 구내에 이미 Connector가 배포되어 있는 경우 모�
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["커넥터 시작하기"^]
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html["Azure에 커넥터 설치"^]
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["구내에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-launching-azure-mktp.html["Azure Government 지역에 커넥터 설치"^]
++
+Connector가 온프레미스에 설치되어 있지 않고 클라우드에 배포된 경우 Azure Government 지역에서는 Cloud Backup이 지원됩니다. 또한 Azure Marketplace에서 Connector를 배포해야 합니다. BlueXP SaaS 웹 사이트에서 정부 지역에 Connector를 배포할 수 없습니다.
 
 
-Connector가 온프레미스나 어두운 사이트에 설치되어 있지 않고 클라우드에 배포된 경우 Azure Government 지역에서는 Cloud Backup이 지원됩니다. 또한 Azure Marketplace에서 Connector를 배포해야 합니다. BlueXP SaaS 웹 사이트에서 정부 지역에 Connector를 배포할 수 없습니다. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-launching-azure-mktp.html["Azure Government 지역에서 Connector를 만드는 방법을 알아보십시오"].
 
 
 
@@ -292,21 +294,27 @@ image:screenshot_backup_policy_azure.png["스케줄 및 백업 보존을 선택�
 
 
 
-. Select Volumes(볼륨 선택) 페이지의 기본 백업 정책을 사용하여 백업할 볼륨을 선택합니다. 특정 볼륨에 서로 다른 백업 정책을 할당하려는 경우 추가 정책을 생성하여 나중에 해당 볼륨에 적용할 수 있습니다.
+. 볼륨 선택 페이지에서 정의된 백업 정책을 사용하여 백업할 볼륨을 선택합니다. 특정 볼륨에 서로 다른 백업 정책을 할당하려는 경우 추가 정책을 생성하여 나중에 해당 볼륨에 적용할 수 있습니다.
 +
-** 모든 볼륨을 백업하려면 제목 행(image:button_backup_all_volumes.png[""])를 클릭합니다.
+** 나중에 추가된 모든 기존 볼륨과 볼륨을 백업하려면 "Back up all existing and future volumes..." 확인란을 선택합니다. 모든 볼륨이 백업되고 새 볼륨에 대해 백업을 사용하도록 설정할 필요가 없도록 이 옵션을 사용하는 것이 좋습니다.
+** 기존 볼륨만 백업하려면 제목 행(image:button_backup_all_volumes.png[""])를 클릭합니다.
 ** 개별 볼륨을 백업하려면 각 볼륨에 대한 확인란을 선택합니다(image:button_backup_1_volume.png[""])를 클릭합니다.
 +
 image:screenshot_backup_select_volumes.png["백업할 볼륨을 선택하는 스크린샷"]
 
+** 이 작업 환경에서 선택한 백업 일정 레이블(예: 일별, 주별 등)과 일치하는 볼륨의 로컬 스냅샷 복사본이 있는 경우 "기존 스냅샷 복사본을 오브젝트 스토리지로 백업 복사본으로 내보내기"라는 추가 프롬프트가 표시됩니다. 볼륨에 대한 완벽한 보호를 위해 모든 기록 스냅샷을 백업 파일로 오브젝트 스토리지에 복제하려면 이 확인란을 선택합니다.
 
-
-+
-나중에 추가된 모든 볼륨에 백업을 사용하려면 "Automatically back up future volumes..." 확인란을 선택하기만 하면 됩니다. 이 설정을 비활성화하면 이후 볼륨에 대해 백업을 수동으로 활성화해야 합니다.
 
 . 백업 활성화 * 를 클릭하면 Cloud Backup이 볼륨의 초기 백업을 시작합니다.
 
 
-Cloud Backup은 선택한 각 볼륨의 초기 백업을 시작하고, 백업 상태를 모니터링할 수 있도록 Volume Backup Dashboard가 표시됩니다.
+Blob 저장소 컨테이너는 입력한 리소스 그룹에 자동으로 생성되며 백업 파일은 여기에 저장됩니다. 백업 상태를 모니터링할 수 있도록 볼륨 백업 대시보드가 표시됩니다. 을 사용하여 백업 및 복원 작업의 상태를 모니터링할 수도 있습니다 link:task-monitor-backup-jobs.html["작업 모니터링 패널"^].
 
-가능합니다 link:task-manage-backups-ontap.html["볼륨에 대한 백업을 시작 및 중지하거나 백업 일정을 변경합니다"^]. 또한 가능합니다 link:task-restore-backups-ontap.html["백업 파일에서 전체 볼륨 또는 개별 파일을 복원합니다"^] Azure의 Cloud Volumes ONTAP 시스템 또는 사내 ONTAP 시스템으로 데이터를 이동합니다.
+
+
+== 다음 단계
+
+* 가능합니다 link:task-manage-backups-ontap.html["백업 파일 및 백업 정책을 관리합니다"^]. 여기에는 백업 시작 및 중지, 백업 삭제, 백업 스케줄 추가 및 변경 등이 포함됩니다.
+* 가능합니다 link:task-manage-backup-settings-ontap.html["클러스터 레벨 백업 설정을 관리합니다"^]. 여기에는 백업을 객체 저장소에 업로드하는 데 사용할 수 있는 네트워크 대역폭 변경, 이후 볼륨에 대한 자동 백업 설정 변경 등이 포함됩니다.
+* 또한 가능합니다 link:task-restore-backups-ontap.html["백업 파일에서 볼륨, 폴더 또는 개별 파일을 복원합니다"^] Azure의 Cloud Volumes ONTAP 시스템 또는 사내 ONTAP 시스템으로 데이터를 이동합니다.
+

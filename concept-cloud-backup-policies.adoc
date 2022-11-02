@@ -45,6 +45,8 @@ image:screenshot_backup_schedule_settings.png["백업 정책을 생성할 때의
 * 13번째 달에는 첫 번째 월별 백업이 제거되고 13번째 달의 새 월별 백업이 추가됩니다(최대 12개의 월별 백업 유지).
 
 
+연간 백업은 객체 스토리지로 전송된 후 소스 시스템에서 자동으로 삭제됩니다. 이 기본 동작은 변경할 수 있습니다 link:task-manage-backup-settings-ontap#change-whether-yearly-snapshots-are-removed-from-the-source-system["고급 설정 페이지에서 선택합니다"] 작업 환경을 위한
+
 
 
 == DataLock 및 랜섬웨어 보호

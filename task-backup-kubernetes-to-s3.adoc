@@ -126,7 +126,7 @@ spec:
 
 
 --
-라이센스 요구 사항:: Cloud Backup PAYGO 라이센스의 경우, Cloud Volumes ONTAP 및 클라우드 백업을 구축할 수 있는 AWS 마켓플레이스에서 Cloud Manager 구독을 지원합니다. 다음 작업을 수행해야 합니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["이 Cloud Manager 구독을 신청하십시오"^] Cloud Backup을 활성화하기 전에, Cloud Backup에 대한 청구는 이 구독을 통해 이루어집니다.
+라이센스 요구 사항:: Cloud Backup PAYGO 라이센스의 경우, Cloud Volumes ONTAP 및 클라우드 백업을 구축할 수 있는 AWS Marketplace에서 구독을 사용할 수 있습니다. 다음 작업을 수행해야 합니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["이 Cloud Manager 구독을 신청하십시오"^] Cloud Backup을 활성화하기 전에, Cloud Backup에 대한 청구는 이 구독을 통해 이루어집니다.
 +
 --
 Cloud Volumes ONTAP 데이터와 사내 ONTAP 데이터를 모두 백업할 수 있는 연간 계약이 체결되어 있으면 에 가입해야 합니다 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS 마켓플레이스 페이지를 참조하십시오"^] 그리고 나서 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-aws-accounts.html["가입 정보를 AWS 자격 증명과 연결합니다"^].
