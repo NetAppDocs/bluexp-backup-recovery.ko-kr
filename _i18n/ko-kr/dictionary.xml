@@ -2644,7 +2644,6 @@
   <block id="8fa9fc7dcc8c23904d4a616698a7a223" category="paragraph">Job Monitoring* 탭에서 모든 백업 및 복원 작업과 현재 상태의 목록을 볼 수 있습니다. 여기에는 Cloud Volumes ONTAP, 온프레미스 ONTAP, 애플리케이션, 가상 머신 및 Kubernetes 시스템의 운영이 포함됩니다. 각 작업 또는 작업에는 고유한 ID와 상태가 있습니다. 상태는 다음과 같습니다.</block>
   <block id="505a83f220c02df2f85c3810cd9ceb38" category="list-text">성공</block>
   <block id="e26263e363fecef775843a8d72ae75f8" category="paragraph">특정 작업을 찾는 경우 다음을 수행할 수 있습니다.</block>
-  <block id="b4c7b1f52d0a6c15993076d79d22628c" category="list-text">특정 기간 동안 작업을 보려면 페이지 상단의 시간 선택기를 사용하십시오</block>
   <block id="d9adc9312afedb38a2612892c29f9ec2" category="list-text">각 열 머리글의 필터를 사용하여 결과를 정렬합니다. 예를 들어, "워크로드" 열에 대한 필터를 사용하면 다음 범주로 작업을 볼 수 있습니다.</block>
   <block id="3919b07e397df4ea5f1ccc5ad0f35b8a" category="list-text">볼륨(Cloud Volumes ONTAP 및 온프레미스 ONTAP 볼륨)</block>
   <block id="1ddf333c6654f7f89c739dddfb4cc429" category="list-text">응용 프로그램</block>
@@ -2657,10 +2656,6 @@
   <block id="b58d9a206bdb4f66bef72d876e8c275e" category="section-title">알림 센터를 사용하여 백업 및 복원 알림을 검토합니다</block>
   <block id="40da6f1400e45d080a97992a6a539894" category="inline-image-macro">알림 벨</block>
   <block id="01d7db5ac182c0b2dc523448e4c1a34b" category="paragraph">알림 센터는 사용자가 시작한 백업 및 복원 작업의 진행 상황을 추적하여 작업이 성공했는지 여부를 확인할 수 있습니다. ( 를 클릭하여 알림을 표시할 수 있습니다<block ref="df7c8a71ca3da4359e40e121f18f87b9" category="inline-image-macro-rx" type="image"></block>)를 클릭합니다. 또한 시스템에 로그인하지 않은 경우에도 중요한 시스템 작업을 알 수 있도록 이메일로 알림을 보내도록 BlueXP를 구성할 수 있습니다.</block>
-  <block id="9d06bbee27c7c52aee4ed8f45598a47e" category="paragraph">현재 e-메일 알림을 트리거하는 세 가지 이벤트가 있습니다.</block>
-  <block id="0f217a680c2fae12a2aef1605523e63b" category="list-text">백업 활성화 실패</block>
-  <block id="bd05c05b26ad99e0b7734e77c6615dbc" category="list-text">복원 실패</block>
-  <block id="0d1bc1ce0ffc15450740c0c168790109" category="list-text">애드혹(필요 시) 백업 실패</block>
   <block id="cef1c38108b72f8eb8fba5c231923d9c" category="paragraph">기본적으로 BlueXP 계정 관리자는 모든 "중요" 및 "권장 사항" 경고에 대한 이메일을 받게 됩니다. 다른 모든 사용자와 수신자는 기본적으로 알림 이메일을 수신하지 않도록 구성되어 있습니다. NetApp 클라우드 계정의 일부인 BlueXP 사용자나 백업 및 복원 활동을 알아야 하는 다른 수신자에게 이메일을 보낼 수 있습니다.</block>
   <block id="a1c41906d0e1e81a4ce819d12975d647" category="paragraph">클라우드 백업 e-메일 경고를 수신하려면 알림 유형 "Critical" 및 "Error"를 선택해야 합니다.</block>
   <block id="44d4deb8868ac8159ee85f4a8e68725c" category="inline-link">알림 센터 및 백업 및 복원 작업에 대한 알림 이메일을 보내는 방법에 대해 자세히 알아보십시오</block>
@@ -2715,7 +2710,6 @@
   <block id="aa561ba34fe652162fed2a07f12593c1" category="list-text">백업을 객체 저장소에 업로드하기 위해 할당된 네트워크 대역폭을 변경합니다</block>
   <block id="11fdb6dde8ff715d780c091b4866b526" category="list-text">아카이브 스토리지 클래스 변경(AWS만 해당)</block>
   <block id="54ccc53455625170e0d9225f1d12c305" category="list-text">이후 볼륨에 대한 자동 백업 설정 및 정책 변경</block>
-  <block id="da83f4088cfea6a8c07863d1dd3a06f0" category="list-text">초기 기본 백업 파일에 기간별 스냅샷 복사본이 포함되는지 여부를 변경합니다</block>
   <block id="90262b49b516aea0770d54c5389860ab" category="list-text">소스 시스템에서 "연간" 스냅샷을 제거할지 여부를 변경합니다</block>
   <block id="0b1dbe1ca2e686301ad63250cc03207d" category="section-title">클러스터 레벨 백업 설정을 봅니다</block>
   <block id="ed0a9603eb52469e5089b682941c8579" category="paragraph">각 작업 환경에 대한 클러스터 레벨 백업 설정을 볼 수 있습니다.</block>
@@ -2737,7 +2731,6 @@
   <block id="69f49af99be101331b7adf45a31d1ff9" category="section-title">오브젝트 스토리지에 연결된 ONTAP IPspace 변경</block>
   <block id="6e1bb784e48dbc68cd86c7478f6a1d16" category="paragraph">오브젝트 스토리지에 연결된 ONTAP IPspace를 변경할 수 있습니다. 이 옵션은 사내 ONTAP 시스템에서만 데이터를 백업할 때 사용할 수 있으며 Cloud Volumes ONTAP 시스템에서는 사용할 수 없습니다.</block>
   <block id="fe2348305cb832db0607d4941ba06ff1" category="paragraph">볼륨 데이터를 오브젝트 스토리지에 능동적으로 백업하는 시스템에서는 이 옵션을 사용할 수 없습니다. 온-프레미스 ONTAP 시스템에서 백업을 처음 활성화할 때 잘못된 IPspace를 선택한 경우에만 사용해야 합니다.</block>
-  <block id="2ec8522fb627c9277002b72183b02c88" category="paragraph">사내 ONTAP 시스템에서 클라우드 공급자로 데이터 백업을 위한 시작 설명서를 참조하여 새 IPspace에 맞게 ONTAP 구성이 올바르게 구성되었는지 확인합니다. 예를 들면 다음과 같습니다.</block>
   <block id="7a81527905d341365c1c48c1c2df82f7" category="list-text">인터클러스터 LIF는 백업할 볼륨을 호스팅하는 각 ONTAP 노드에 필요합니다.</block>
   <block id="b61284a9f89e31d7eca6523e6a26baf1" category="list-text">LIF는 ONTAP이 오브젝트 스토리지에 연결하는 데 사용해야 하는 IPspace와 연결되어야 합니다.</block>
   <block id="8373574988dfec20642b8146055e60ea" category="list-text">노드의 인터클러스터 LIF가 오브젝트 저장소에 액세스할 수 있어야 합니다.</block>
@@ -2746,10 +2739,8 @@
   <block id="7782aa7e3e532fc975c4c9fd409a0cd1" category="paragraph"><block ref="7782aa7e3e532fc975c4c9fd409a0cd1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9f4a0a8969226290161358177e49f679" category="paragraph">새 IPspace를 선택하고 * 적용 * 을 클릭하기만 하면 됩니다. 그 후에는 해당 IPspace의 애그리게이트로 백업할 볼륨을 선택할 수 있습니다.</block>
   <block id="5fb03dafd6274ec459f4ae7b73182f44" category="section-title">백업을 객체 저장소에 업로드하는 데 사용할 수 있는 네트워크 대역폭을 변경합니다</block>
-  <block id="8a75fbddacee811141e1743b04ce7747" category="paragraph">작업 환경에 대한 클라우드 백업을 활성화하면 기본적으로 ONTAP는 무제한의 대역폭을 사용하여 작업 환경에서 오브젝트 스토리지로 데이터를 전송할 수 있습니다. 전송 중에 사용되는 네트워크 대역폭의 양을 조절해야 하는 경우 최대 전송 속도로 1 ~ 1,000 Mbps 사이의 값을 선택할 수 있습니다.</block>
   <block id="1f93761cc5827e33d0eab0b81e59533a" category="inline-image-macro">고급 설정 페이지의 최대 전송 속도 항목 스크린샷</block>
   <block id="b6b92ac68c60c85a484c906db8777124" category="paragraph"><block ref="b6b92ac68c60c85a484c906db8777124" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="74cc52c7c289df31888fc04f6bdb8413" category="paragraph">라디오 버튼 * Unlimited * (무제한 *)를 선택하여 제한이 없음을 나타내거나 * Limited * (제한 *) 라디오 버튼을 선택하고 사용할 수 있는 최대 대역폭을 입력합니다.</block>
   <block id="0e90335213cfc4fed49846f4e44e57d3" category="section-title">아카이브 스토리지 클래스를 변경합니다</block>
   <block id="8d45cbf2cc7abced70e253acc8c53957" category="paragraph">백업 파일이 특정 기간(일반적으로 30일 이상) 동안 저장된 경우 사용되는 아카이브 스토리지 클래스를 변경하려면 여기에서 변경할 수 있습니다. 아카이브 스토리지를 사용하는 모든 백업 정책은 이 새로운 스토리지 클래스를 사용하도록 즉시 변경됩니다.</block>
   <block id="5028cfaccc8708e90dc537ae32bd3cf2" category="paragraph">이 옵션은 Amazon S3에 백업 파일을 쓸 때 사내 ONTAP 및 Cloud Volumes ONTAP 시스템(ONTAP 9.10.1 이상 사용)에서 사용할 수 있습니다.</block>
@@ -2767,8 +2758,6 @@
   <block id="82bdb7270f3d2ffc39f1a3ee094d5e8a" category="paragraph"><block ref="82bdb7270f3d2ffc39f1a3ee094d5e8a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8c6367e42cd8d2e09365265f2ef8621b" category="paragraph">이 백업 정책이 활성화되면 BlueXP, 시스템 관리자, ONTAP CLI 또는 API를 사용하여 이 작업 환경에서 생성된 모든 새 볼륨에 적용됩니다.</block>
   <block id="260734931fc90337787f8eab9f95f6af" category="section-title">기간별 스냅샷 복사본을 백업 파일로 내보낼 것인지 여부를 변경합니다</block>
-  <block id="27c37010bd2f00bedab738367c01ec45" category="paragraph">이 작업 환경에서 사용 중인 백업 일정 레이블과 일치하는 볼륨에 대한 로컬 스냅샷 복사본이 있는 경우(예: 매일, 매주 등) 이러한 기존 스냅샷을 오브젝트 스토리지로 백업 파일로 내보낼 수 있습니다. 따라서 이전 스냅샷 복사본을 기본 백업 복사본으로 이동하여 클라우드에서 백업을 초기화할 수 있습니다.</block>
-  <block id="8f3eb38987d6f48885d716830b4c0240" category="paragraph">이 옵션은 데이터 보호(DP) 볼륨에서 지원되지 않습니다.</block>
   <block id="e1260315a439b823ca53a44a12cdbed4" category="inline-image-macro">고급 설정 페이지의 기존 스냅샷 복사본 내보내기 항목 스크린샷</block>
   <block id="4c55333e1e917a54978d32ab7a324b08" category="paragraph"><block ref="4c55333e1e917a54978d32ab7a324b08" category="inline-image-macro-rx" type="image"></block></block>
   <block id="51a3a396e404f898f2e45dad30b6b1da" category="paragraph">기존 스냅샷 복사본을 내보내을지 여부를 선택하고 * 적용 * 을 클릭합니다.</block>
@@ -2811,4 +2800,20 @@
   <block id="95bdcffb51de388c8d204ebc69a73e61" category="section-title">AWS 교차 계정 백업 기능이 향상되었습니다</block>
   <block id="ae3795f53c6086a9639e4652dbff318b" category="paragraph">소스 볼륨에 사용 중인 것과 다른 Cloud Volumes ONTAP 계정을 백업에 사용하려면 BlueXP에서 대상 AWS 계정 자격 증명을 추가해야 하며, BlueXP에 사용 권한을 제공하는 IAM 역할에 "S3:PutBucketPolicy" 및 "S3:PutnerOwshipControls" 권한을 추가해야 합니다. 이전에는 AWS 콘솔에서 여러 설정을 구성해야 했습니다. 이제는 더 이상 그렇게 할 필요가 없습니다.</block>
   <block id="ef88ffe6f484bdfc25f97445be29df28" category="sidebar">클러스터 레벨 백업 설정을 관리합니다</block>
+  <block id="749775c831a251b1841492d6cd64446b" category="paragraph">이 스크린샷은 기본 열/필드 머리글을 보여줍니다. 를 클릭할 수 있습니다 <block ref="835a7e197f8f78cae39058ebe9f7b1c4" category="inline-image-macro-rx" type="image"></block> 열 머리글을 표시하거나 숨기려면 또는 "사용자 이름" 및 "유형"에 대해 두 개의 추가 제목을 추가합니다.</block>
+  <block id="9596c723878bfc4072c4881a7877ce59" category="list-text">특정 기간 동안 작업을 보려면 페이지 왼쪽 상단의 시간 선택기를 사용합니다</block>
+  <block id="8c8d15cbcb23d4d9a941a520eed8f594" category="list-text">특정 상태에 대해 * 작업 보기 * 를 클릭합니다(예: "실패" 아래에서 실패한 작업만 보기)</block>
+  <block id="aa72dffd28e8e8bc6bede04c2bfb9b8a" category="paragraph">현재 e-메일 알림을 트리거하는 네 가지 이벤트가 있습니다.</block>
+  <block id="86adb6c119fde87f974199cf61935f54" category="list-text">작업 환경에서 Cloud Backup을 활성화하지 못했습니다</block>
+  <block id="17d0a830cae7a9ee38e63d4d74257685" category="list-text">클라우드 백업 복원 작업이 실패했습니다</block>
+  <block id="4a4cfe5483874f73014159f5baca5462" category="list-text">애드혹(주문형) 볼륨 백업이 실패했습니다</block>
+  <block id="01c236efa847517aec154a45e404d759" category="list-text">잠재적인 랜섬웨어 공격은 시스템에서 탐지됩니다</block>
+  <block id="30dae49f6de63e85b78b96b2080bb0bb" category="paragraph">소스 볼륨을 반드시 삭제할 필요는 없습니다. 볼륨에 대한 백업 관계를 삭제하고 소스 볼륨을 유지할 수 있습니다. 이 경우 나중에 볼륨에 대해 백업을 "활성화"할 수 있습니다. 이 경우에도 원래 기본 백업 복사본이 계속 사용됩니다. 새 기본 백업 복사본이 생성되어 클라우드로 내보내지지 않습니다. 백업 관계를 다시 활성화하면 볼륨에 기본 백업 정책이 할당됩니다.</block>
+  <block id="495f64bce7d9d754a435527baf769353" category="paragraph">이 기능은 시스템에서 ONTAP 9.12.1 이상을 실행하는 경우에만 사용할 수 있습니다.</block>
+  <block id="228129642e2d421577991251a19c55f5" category="list-text">이후 볼륨에 대한 초기 기본 백업 파일에 기간별 스냅샷 복사본이 포함되는지 여부를 변경합니다</block>
+  <block id="886fd7da3e081fa21e258a3d2c55adaa" category="paragraph">사내 ONTAP 시스템에서 특정 클라우드 공급자로 데이터를 백업하는 방법은 시작 설명서를 참조하여 새 IPspace에 맞게 ONTAP 설정이 올바르게 구성되었는지 확인하십시오. 예를 들면 다음과 같습니다.</block>
+  <block id="12ada5b9617c3b45c33107e57c89ecb9" category="paragraph">작업 환경에 대해 클라우드 백업을 활성화하면 기본적으로 ONTAP는 무제한 대역폭을 사용하여 작업 환경의 볼륨에서 오브젝트 스토리지로 백업 데이터를 전송할 수 있습니다. 백업 트래픽이 일반 사용자 워크로드에 영향을 주는 경우 전송 중에 사용되는 네트워크 대역폭의 양을 조절할 수 있습니다. 최대 전송 속도로 1에서 1,000 Mbps 사이의 값을 선택할 수 있습니다.</block>
+  <block id="057d6c600d485e4ee55de2a7a7001dc5" category="paragraph">제한된 * 라디오 버튼을 선택하고 사용할 수 있는 최대 대역폭을 입력하거나 * 무제한 * 을 선택하여 제한이 없음을 나타냅니다.</block>
+  <block id="45d792202c91671265c4a5c1b4b44f68" category="paragraph">이 작업 환경(예: 매일, 매주 등)에서 사용 중인 백업 일정 레이블과 일치하는 볼륨에 대한 로컬 스냅샷 복사본이 있는 경우 이러한 기존 스냅샷을 백업 파일로 오브젝트 스토리지로 내보낼 수 있습니다. 따라서 이전 스냅샷 복사본을 기본 백업 복사본으로 이동하여 클라우드에서 백업을 초기화할 수 있습니다.</block>
+  <block id="6e5adfd3f87f76739bd90a17c2764063" category="paragraph">이 옵션은 새 볼륨의 새 백업 파일에만 적용되며 데이터 보호(DP) 볼륨에서는 지원되지 않습니다.</block>
 </blocks>
