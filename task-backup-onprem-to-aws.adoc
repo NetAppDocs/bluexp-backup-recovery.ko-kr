@@ -168,9 +168,9 @@ IPspace 내의 모든 인터클러스터 LIF는 오브젝트 저장소에 대한
 
 == 라이센스 요구 사항을 확인합니다
 
-* 클러스터에 Cloud Backup을 활성화하려면 먼저 AWS에서 PAYGO(Pay-as-you-Go) Cloud Manager Marketplace 오퍼링을 구독하거나 NetApp에서 Cloud Backup BYOL 라이센스를 구입하여 활성화해야 합니다. 이러한 라이센스는 사용자 계정용이며 여러 시스템에서 사용할 수 있습니다.
+* 클러스터에 대한 Cloud Backup을 활성화하려면 먼저 AWS에서 PAYGO(Pay-as-you-Go) BlueXP Marketplace 오퍼링을 구독하거나 NetApp에서 Cloud Backup BYOL 라이센스를 구입하여 활성화해야 합니다. 이러한 라이센스는 사용자 계정용이며 여러 시스템에서 사용할 수 있습니다.
 +
-** Cloud Backup PAYGO 라이센스의 경우 에 대한 구독이 필요합니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Cloud Manager Marketplace 오퍼링"^] 를 사용하여 Cloud Backup을 선택합니다. Cloud Backup에 대한 청구는 이 구독을 통해 이루어집니다.
+** Cloud Backup PAYGO 라이센스의 경우 에 대한 구독이 필요합니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS BlueXP Marketplace 오퍼링"^] 를 사용하여 Cloud Backup을 선택합니다. Cloud Backup에 대한 청구는 이 구독을 통해 이루어집니다.
 ** Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"].
 
 
@@ -376,7 +376,7 @@ image:screenshot_backup_provider_settings_aws.png["ONTAP 시스템에서 AWS S3�
 
 
 
-. 계정에 대한 기존 Cloud Backup 라이센스가 없는 경우 이 시점에서 사용할 충전 방법 유형을 선택하라는 메시지가 표시됩니다. AWS에서 PAYGO(Pay-as-you-Go) Cloud Manager Marketplace 오퍼링을 구독하거나(또는 구독을 여러 개 선택한 경우) NetApp에서 Cloud Backup BYOL 라이센스를 구입하여 활성화할 수 있습니다. link:task-licensing-cloud-backup.html["Cloud Backup 라이센스를 설정하는 방법에 대해 알아보십시오."]
+. 계정에 대한 기존 Cloud Backup 라이센스가 없는 경우 이 시점에서 사용할 충전 방법 유형을 선택하라는 메시지가 표시됩니다. AWS에서 PAYGO(Pay-as-you-Go) BlueXP Marketplace 오퍼링을 구독하거나(또는 구독을 여러 개 선택한 경우) NetApp에서 Cloud Backup BYOL 라이센스를 구입하여 활성화할 수 있습니다. link:task-licensing-cloud-backup.html["Cloud Backup 라이센스를 설정하는 방법에 대해 알아보십시오."]
 . 네트워킹 세부 정보를 입력하고 * 다음 * 을 클릭합니다.
 +
 .. 백업할 볼륨이 상주하는 ONTAP 클러스터의 IPspace 이 IPspace용 인터클러스터 LIF는 아웃바운드 인터넷 액세스를 가져야 합니다.

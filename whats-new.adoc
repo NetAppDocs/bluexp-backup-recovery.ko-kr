@@ -36,7 +36,7 @@ Cloud Backup의 새로운 기능에 대해 알아보십시오.
 
 
 
-=== 이메일 또는 알림 센터에서 Cloud Backup 경고를 받도록 지원이 추가되었습니다
+=== 이메일 및 알림 센터에서 Cloud Backup 경고를 받도록 지원이 추가되었습니다
 
 Cloud Backup이 BlueXP 알림 서비스에 통합되었습니다. BlueXP 메뉴 표시줄에서 알림 표시를 클릭하여 Cloud Backup 알림을 표시할 수 있습니다. 또한 시스템에 로그인하지 않은 경우에도 중요한 시스템 작업을 알 수 있도록 이메일로 알림을 보내도록 BlueXP를 구성할 수 있습니다. 이 이메일은 백업 및 복원 작업을 알아야 하는 모든 수신자에게 보낼 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-monitor-backup-jobs.html#use-the-job-monitor-to-view-backup-and-restore-job-status["자세히 알아보기"].
 
@@ -59,11 +59,11 @@ https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-manage-backup-se
 
 
 
-=== 이제 온-프레미스 Connector를 사용할 때 검색 및 복원을 사용하여 공용 클라우드에서 백업 파일을 복원할 수 있습니다
+=== 이제 온-프레미스 Connector를 사용할 때 검색 및 복원을 사용하여 백업 파일을 복원할 수 있습니다
 
-이전 릴리즈에서는 Connector가 사내에 구축될 때 퍼블릭 클라우드에 백업 파일을 생성하기 위한 지원이 추가되었습니다. 이 릴리즈에서는 검색 및 복원을 사용하여 Connector가 사내에 구축된 Amazon S3 또는 Azure Blob에서 백업을 복원할 수 있도록 지원이 계속 제공됩니다.
+이전 릴리즈에서는 Connector가 사내에 구축될 때 퍼블릭 클라우드에 백업 파일을 생성하기 위한 지원이 추가되었습니다. 이 릴리즈에서는 검색 및 복원을 사용하여 Connector가 사내에 구축된 Amazon S3 또는 Azure Blob에서 백업을 복원할 수 있도록 지원이 계속 제공됩니다. 검색 및 복원은 StorageGRID 시스템에서 온-프레미스 ONTAP 시스템으로 백업을 복원할 수도 있습니다.
 
-현재 Google Cloud Storage에서 백업을 복원하려면 검색 및 복원을 사용할 때 Google Cloud Platform에 Connector를 구축해야 합니다. 검색 및 복원은 StorageGRID 시스템에서 지원되지 않습니다. 이 경우 찾아보기 및 복원을 사용해야 합니다.
+현재 Google Cloud Storage에서 백업을 복원하려면 검색 및 복원을 사용할 때 Google Cloud Platform에 Connector를 구축해야 합니다.
 
 
 

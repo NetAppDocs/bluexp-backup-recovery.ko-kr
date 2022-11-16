@@ -65,21 +65,21 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensin
 
 ifdef::aws[]
 
-* AWS: https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["가격 세부 정보는 Cloud Manager Marketplace 오퍼링을 참조하십시오"^].
+* AWS: https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["가격 세부 정보는 BlueXP Marketplace 오퍼링으로 이동하십시오"^].
 
 
 endif::aws[]
 
 ifdef::azure[]
 
-* Azure(Azure): https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["가격 세부 정보는 Cloud Manager Marketplace 오퍼링을 참조하십시오"^].
+* Azure(Azure): https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["가격 세부 정보는 BlueXP Marketplace 오퍼링으로 이동하십시오"^].
 
 
 endif::azure[]
 
 ifdef::gcp[]
 
-* GCP: https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["가격 세부 정보는 Cloud Manager Marketplace 오퍼링을 참조하십시오"^].
+* GCP: https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["가격 세부 정보는 BlueXP Marketplace 오퍼링으로 이동하십시오"^].
 
 
 endif::gcp[]

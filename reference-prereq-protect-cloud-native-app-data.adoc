@@ -20,7 +20,7 @@ BlueXP에 액세스하고, BlueXP 계정을 만들고, 작업 환경과 커넥�
 
 == BlueXP에 액세스합니다
 
-당신은 해야 한다 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-signing-up.html["NetApp BlueXP 웹 사이트에 등록하십시오"], link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["BlueXP에 로그인합니다"]를 선택한 다음 를 설정합니다 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-setting-up-netapp-accounts.html["NetApp 계정"].
+당신은 해야 한다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["BlueXP에 로그인합니다"^]를 선택한 다음 를 설정합니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-setting-up-netapp-accounts.html["NetApp 계정"^].
 
 
 

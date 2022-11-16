@@ -25,7 +25,7 @@ Cloud Volumes ONTAP에서 Azure Blob 저장소로 데이터 백업을 시작하�
 .span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png"[] Alt="One"></span> 구성에 대한 지원을 확인합니다
 * Azure에서 Cloud Volumes ONTAP 9.7P5 이상을 실행하고 있습니다.
 * 백업이 위치할 스토리지 공간에 대한 유효한 클라우드 공급자 가입이 있습니다.
-* 에 가입했습니다 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Cloud Manager Marketplace 백업 오퍼링"^]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"^] Cloud Backup BYOL 라이센스는 NetApp에서 제공
+* 에 가입했습니다 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["BlueXP Marketplace 백업 서비스"^]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"^] Cloud Backup BYOL 라이센스는 NetApp에서 제공
 
 
 .span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png"[] Alt="Two"></span>새 시스템이나 기존 시스템에서 클라우드 백업 사용

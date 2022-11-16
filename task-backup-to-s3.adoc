@@ -25,7 +25,7 @@ summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP에서 Amazon S3�
 .span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png"[] Alt="One"></span> 구성에 대한 지원을 확인합니다
 * AWS에서 Cloud Volumes ONTAP 9.7P5 이상을 실행하고 있습니다.
 * 백업이 위치할 스토리지 공간에 대한 유효한 클라우드 공급자 가입이 있습니다.
-* 에 가입했습니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["Cloud Manager Marketplace 백업 오퍼링"], 및 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS 연간 계약"]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"] Cloud Backup BYOL 라이센스는 NetApp에서 제공
+* 에 가입했습니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["BlueXP Marketplace 백업 서비스"], 및 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS 연간 계약"]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"] Cloud Backup BYOL 라이센스는 NetApp에서 제공
 * 권한이 있는 BlueXP Connector를 제공하는 IAM 역할에는 최신 버전의 S3 권한이 포함됩니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html["BlueXP 정책"^].
 
 
@@ -69,7 +69,7 @@ S3에 볼륨을 백업하기 전에 다음 요구 사항을 읽고 지원되는 
 image:diagram_cloud_backup_cvo_aws.png["Cloud Backup이 소스 시스템 및 백업 파일이 있는 대상 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다."]
 
 지원되는 ONTAP 버전:: ONTAP 9.7P5 이상, ONTAP 9.8P13 이상 권장
-라이센스 요구 사항:: Cloud Backup PAYGO 라이센스의 경우, Cloud Volumes ONTAP 및 클라우드 백업을 구축할 수 있는 AWS 마켓플레이스에서 Cloud Manager 구독을 지원합니다. 다음 작업을 수행해야 합니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["이 Cloud Manager 구독을 신청하십시오"^] Cloud Backup을 활성화하기 전에, Cloud Backup에 대한 청구는 이 구독을 통해 이루어집니다.
+라이센스 요구 사항:: Cloud Backup PAYGO 라이센스의 경우, Cloud Volumes ONTAP 및 클라우드 백업을 구축할 수 있는 AWS 마켓플레이스에서 BlueXP 구독을 사용할 수 있습니다. 다음 작업을 수행해야 합니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["이 BlueXP 구독을 신청하십시오"^] Cloud Backup을 활성화하기 전에, Cloud Backup에 대한 청구는 이 구독을 통해 이루어집니다.
 +
 --
 Cloud Volumes ONTAP 데이터와 사내 ONTAP 데이터를 모두 백업할 수 있는 연간 계약이 체결되어 있으면 에 가입해야 합니다 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS 마켓플레이스 페이지를 참조하십시오"^] 그리고 나서 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-aws-accounts.html["가입 정보를 AWS 자격 증명과 연결합니다"^].

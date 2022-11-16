@@ -53,7 +53,7 @@ image:screenshot_restore_dashboard.png["Browse  amp; Restore 또는 Search  amp;
 | 폴더 스타일 구조를 탐색하여 단일 백업 파일 내에서 볼륨, 폴더 또는 파일을 찾습니다 | 전체 또는 일부 볼륨 이름, 전체 폴더/파일 이름, 크기 범위 및 추가 검색 필터를 사용하여 * 모든 백업 파일 * 에서 볼륨, 폴더 또는 파일을 검색합니다 
 
 
-| 볼륨 및 파일 복원은 Amazon S3, Azure Blob, Google Cloud 및 NetApp StorageGRID에 저장된 백업 파일과 함께 작동합니다. | 볼륨 및 파일 복원은 Amazon S3, Azure Blob 및 Google Cloud에 저장된 백업 파일과 함께 작동합니다 
+| 볼륨 및 파일 복원은 Amazon S3, Azure Blob, Google Cloud 및 NetApp StorageGRID에 저장된 백업 파일과 함께 작동합니다 | 볼륨 및 파일 복원은 Amazon S3, Azure Blob, Google Cloud 및 NetApp StorageGRID에 저장된 백업 파일과 함께 작동합니다 
 
 
 | 인터넷에 액세스할 수 없는 사이트의 StorageGRID에서 볼륨, 폴더 및 파일을 복원합니다 | 어두운 사이트에서는 지원되지 않습니다 
@@ -119,12 +119,36 @@ ONTAP 백업 파일에서 다음 작업 환경으로 볼륨, 폴더 또는 개�
 | Azure Blob | Azure 사내 ONTAP 시스템의 Cloud Volumes ONTAP | Azure 사내 ONTAP 시스템의 Cloud Volumes ONTAP endif::Azure []ifdef::GCP[] 
 
 
-| Google 클라우드 스토리지 | Google 사내 ONTAP 시스템의 Cloud Volumes ONTAP | Google의 Cloud Volumes ONTAP(^1^) 온프레미스 ONTAP 시스템(^1^) 엔디프::GCP[] 
+| Google 클라우드 스토리지 | Google 사내 ONTAP 시스템의 Cloud Volumes ONTAP | Google 사내 ONTAP 시스템의 Cloud Volumes ONTAP::GCP [] 
 
 
 | NetApp StorageGRID를 참조하십시오 | 사내 ONTAP 시스템 | 사내 ONTAP 시스템 
 |===
-(^1^) _ 이(가) 지원을 받으려면 커넥터를 Google Cloud Platform VPC에 배포해야 합니다. _
+찾아보기 및 복원의 경우 커넥터를 다음 위치에 설치할 수 있습니다.
+
+ifdef::aws[]
+
+* Amazon S3의 경우 Connector를 AWS 또는 사내에 구현할 수 있습니다
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+* Azure Blob의 경우 Connector를 Azure 또는 사내에 배포할 수 있습니다
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+* Google 클라우드 스토리지의 경우 Connector를 Google Cloud Platform VPC에 구축해야 합니다
+
+
+endif::gcp[]
+
+* StorageGRID의 경우 커넥터를 사내에 구축해야 합니다
+
 
 "사내 ONTAP 시스템"을 지칭할 때 FAS, AFF 및 ONTAP Select 시스템이 포함됩니다.
 
@@ -277,7 +301,7 @@ image:diagram_browse_restore_file.png["Browse  amp; Restore를 사용하여 파�
 
 
 
-==== 찾아보기 및 복원을 사용하여 폴더 및 파일을 복원합니다
+==== 폴더 및 파일 복원 중
 
 ONTAP 볼륨 백업에서 폴더 또는 파일을 볼륨으로 복원하려면 다음 단계를 수행하십시오. 폴더 또는 파일을 복원하는 데 사용할 볼륨 이름과 백업 파일 날짜를 알아야 합니다. 이 기능은 Live Browsing을 사용하여 각 백업 파일 내의 디렉터리 및 파일 목록을 볼 수 있습니다.
 
@@ -442,10 +466,33 @@ ONTAP 백업 파일에서 다음 작업 환경으로 볼륨, 폴더 또는 개�
 | Google 클라우드 스토리지 | Google 사내 ONTAP 시스템의 Cloud Volumes ONTAP::GCP [] 
 
 
-| NetApp StorageGRID를 참조하십시오 | 현재 지원되지 않습니다 
+| NetApp StorageGRID를 참조하십시오 | 사내 ONTAP 시스템 
 |===
+검색 및 복원의 경우 커넥터를 다음 위치에 설치할 수 있습니다.
 
-TIP: 검색 및 복원의 경우 Amazon S3 또는 Azure Blob에서 백업을 복원할 때 Connector를 클라우드 공급자 또는 사내에 배포할 수 있습니다. Google Cloud Storage에서 백업을 복원할 때 Connector를 클라우드에 구축해야 합니다.
+ifdef::aws[]
+
+* Amazon S3의 경우 Connector를 AWS 또는 사내에 구현할 수 있습니다
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+* Azure Blob의 경우 Connector를 Azure 또는 사내에 배포할 수 있습니다
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+* Google 클라우드 스토리지의 경우 Connector를 Google Cloud Platform VPC에 구축해야 합니다
+
+
+endif::gcp[]
+
+* StorageGRID의 경우 인터넷 연결을 사용하여 커넥터를 사내에 구축해야 합니다
+
 
 "사내 ONTAP 시스템"을 지칭할 때 FAS, AFF 및 ONTAP Select 시스템이 포함됩니다.
 
@@ -507,6 +554,20 @@ ifdef::gcp[]
 
 endif::gcp[]
 
+* StorageGRID 요구 사항:
++
+구성에 따라 검색 및 복원을 구현하는 방법에는 두 가지가 있습니다.
+
++
+** 계정에 클라우드 공급자 자격 증명이 없으면 인덱싱된 카탈로그 정보가 Connector에 저장됩니다.
+** 있는 경우 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-accounts-aws.html["AWS 자격 증명"^] 또는 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-accounts-azure.html["Azure 자격 증명"^] 어카운트의 경우 인덱싱된 카탈로그는 클라우드에 구축된 Connector와 마찬가지로 클라우드 공급자에 저장됩니다.
++
+이 구축을 사용할 때는 위의 AWS 및 Azure 요구사항을 참조하십시오. 온-프레미스 Connector를 사용하는 경우에도 Connector 사용 권한과 클라우드 공급자 리소스 모두에 대해 클라우드 공급자 요구 사항이 충족되어야 합니다.
+
+
+
+
+
 
 
 === 검색 및 복원 프로세스
@@ -556,6 +617,9 @@ ifdef::gcp[]
 
 
 endif::gcp[]
+
+* StorageGRID에 저장된 백업의 경우 커넥터 또는 클라우드 공급자 환경에 공간을 프로비저닝합니다.
+
 
 작업 환경에 대해 인덱싱이 이미 활성화되어 있는 경우 다음 섹션으로 이동하여 데이터를 복원합니다.
 
@@ -634,6 +698,9 @@ ifdef::gcp[]
 
 
 endif::gcp[]
+
+* StorageGRID에서 복구할 때 StorageGRID 서버의 FQDN과 ONTAP이 StorageGRID과의 HTTPS 통신에 사용해야 하는 포트를 입력하고, 오브젝트 스토리지에 액세스하는 데 필요한 액세스 키 및 비밀 키, 대상 볼륨이 있는 ONTAP 클러스터의 IPspace를 입력합니다.
+
 
 볼륨, 폴더 또는 파일이 복원되고 복구 작업의 진행률을 검토할 수 있도록 복구 대시보드로 돌아갑니다. 또한 * Job Monitoring * 탭을 클릭하여 복원 진행률을 확인할 수도 있습니다.
 

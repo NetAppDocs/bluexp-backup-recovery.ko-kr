@@ -32,7 +32,7 @@ summary: 몇 가지 단계를 완료하여 AKS Kubernetes 클러스터의 영구
 
 
 * 백업이 위치할 스토리지 공간에 대한 유효한 클라우드 공급자 가입이 있습니다.
-* 에 가입했습니다 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Cloud Manager Marketplace 백업 오퍼링"^]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"^] Cloud Backup BYOL 라이센스는 NetApp에서 제공
+* 에 가입했습니다 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["BlueXP Marketplace 백업 서비스"^]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"^] Cloud Backup BYOL 라이센스는 NetApp에서 제공
 
 
 [role="quick-margin-para"]
@@ -171,4 +171,4 @@ image:screenshot_backup_select_volumes_k8s.png["백업할 영구 볼륨을 선�
 
 Kubernetes 대시보드가 표시되므로 백업 상태를 모니터링할 수 있습니다.
 
-가능합니다 link:task-managing-backups-kubernetes.html["볼륨에 대한 백업을 시작 및 중지하거나 백업 일정을 변경합니다"^]. 또한 가능합니다 link:task-restore-backups-kubernetes.html#restoring-volumes-from-a-kubernetes-backup-file["백업 파일에서 전체 볼륨을 복원합니다"^] Azure(동일한 지역)의 동일한 또는 다른 Kubernetes 클러스터에서 새 볼륨으로.
+가능합니다 link:task-manage-backups-kubernetes.html["볼륨에 대한 백업을 시작 및 중지하거나 백업 일정을 변경합니다"^]. 또한 가능합니다 link:task-restore-backups-kubernetes.html#restoring-volumes-from-a-kubernetes-backup-file["백업 파일에서 전체 볼륨을 복원합니다"^] Azure(동일한 지역)의 동일한 또는 다른 Kubernetes 클러스터에서 새 볼륨으로.
