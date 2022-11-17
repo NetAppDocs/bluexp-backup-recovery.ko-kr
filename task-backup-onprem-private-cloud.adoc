@@ -43,10 +43,10 @@ summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템의 데이터�
 
 
 [role="quick-margin-para"]
-작업 환경을 선택하고 오른쪽 패널에서 백업 및 복원 서비스 옆에 있는 * 활성화 > 볼륨 백업 * 을 클릭한 다음 설정 마법사를 따릅니다.
+작업 환경을 선택하고 오른쪽 패널에서 백업 및 복구 서비스 옆에 있는 * 활성화 > 볼륨 백업 * 을 클릭한 다음 설정 마법사를 따릅니다.
 
 [role="quick-margin-para"]
-image:screenshot_backup_onprem_enable.png["작업 환경을 선택한 후 사용할 수 있는 백업 및 앰프, 복원 활성화 버튼이 표시된 스크린샷"]
+image:screenshot_backup_onprem_enable.png["작업 환경을 선택한 후 사용할 수 있는 백업 및 복구 활성화 버튼이 표시된 스크린샷"]
 
 [role="quick-margin-para"]
 공급자로 StorageGRID를 선택하고 StorageGRID 서버 및 S3 테넌트 계정 세부 정보를 입력합니다. 또한 볼륨이 상주하는 ONTAP 클러스터에서 IPspace를 지정해야 합니다.
@@ -209,12 +209,12 @@ TIP: StorageGRID에 파일을 백업할 때는 PAYGO 라이센스가 지원되�
 사내 작업 환경에서 언제든지 직접 Cloud Backup을 사용할 수 있습니다.
 
 .단계
-. Canvas에서 온-프레미스 작업 환경을 선택하고 오른쪽 패널의 백업 및 복원 서비스 옆에 있는 * 활성화 > 볼륨 백업 * 을 클릭합니다.
+. Canvas에서 온-프레미스 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 > 볼륨 백업 * 을 클릭합니다.
 +
 백업에 대한 StorageGRID 대상이 Canvas에서 작업 환경으로 존재하는 경우 클러스터를 StorageGRID 작업 환경으로 끌어서 설치 마법사를 시작할 수 있습니다.
 
 +
-image:screenshot_backup_onprem_enable.png["작업 환경을 선택한 후 사용할 수 있는 백업 및 앰프, 복원 활성화 버튼이 표시된 스크린샷"]
+image:screenshot_backup_onprem_enable.png["작업 환경을 선택한 후 사용할 수 있는 백업 및 복구 활성화 버튼이 표시된 스크린샷"]
 
 . 공급자로 * StorageGRID * 를 선택하고 * 다음 * 을 클릭한 후 공급자 세부 정보를 입력합니다.
 +

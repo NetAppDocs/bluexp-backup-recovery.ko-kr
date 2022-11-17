@@ -53,7 +53,6 @@
   <block id="08c19771a6ca4c9d29ee89345a0e2d51" category="list-text">클러스터에는 Blob 저장소 및 커넥터에 대한 필수 네트워크 연결이 있어야 합니다.</block>
   <block id="c6ec39d27710723c8e240515b4b8d58e" category="list-text">Connector는 Blob 저장소 및 클러스터에 대한 필수 네트워크 연결과 필요한 권한이 있어야 합니다.</block>
   <block id="4f7dddcefc072dbdfbfc21f597fc974b" category="list-text">백업이 위치할 오브젝트 스토리지 공간에 대한 유효한 Azure 구독이 있습니다.</block>
-  <block id="0f7e4422c0388f7a13cf4e817e63f2d4" category="inline-image-macro">작업 환경을 선택한 후 사용할 수 있는 백업 및 앰프, 복원 활성화 버튼이 표시된 스크린샷</block>
   <block id="4eca8ae29d6382b6861e8829b6bf68ae" category="paragraph">공급자로서 Microsoft Azure를 선택한 다음 공급자 세부 정보를 입력합니다. 백업을 생성할 Azure 가입 및 지역을 선택해야 합니다. 기본 Microsoft 관리 암호화 키를 사용하는 대신 데이터 암호화에 대해 고객이 관리하는 키를 직접 선택할 수도 있습니다.</block>
   <block id="ff770750d70b14ff6900cb0710825fe9" category="inline-image-macro">온프레미스 클러스터에서 Azure Blob 저장소로 볼륨을 백업할 때의 클라우드 공급자 세부 정보를 보여 주는 스크린샷</block>
   <block id="2693919e968f9faed51d6bab8e6770a8" category="paragraph"><block ref="2693919e968f9faed51d6bab8e6770a8" category="inline-image-macro-rx" type="image"></block></block>
@@ -170,7 +169,6 @@
   <block id="e44764e5848db6ece6d5d4bce23a85b7" category="inline-link-macro">활성화합니다</block>
   <block id="06961ecc6d719092b3168e75418b9081" category="list-title">span class="image"&gt;&lt;img src=<block ref="c9bdd0fd7d7224adcf67691b15f15281" category="inline-link-rx"></block> Alt="Two"&gt;&lt;/span&gt;새 시스템이나 기존 시스템에서 클라우드 백업 사용</block>
   <block id="23dbb22134961553d5b555f78c0d3634" category="list-text">새 시스템: 작업 환경 마법사에서 기본적으로 클라우드 백업이 설정됩니다. 옵션을 활성 상태로 유지해야 합니다.</block>
-  <block id="04529f354acdfe691445d3569ef8a386" category="list-text">기존 시스템: 작업 환경을 선택하고 오른쪽 패널의 백업 및 복원 서비스 옆에 있는 * 활성화 * 를 클릭한 다음 설정 마법사를 따릅니다.</block>
   <block id="349aacf34fe910f8311f5e6632477d74" category="inline-image-macro">작업 환경을 선택한 후 사용할 수 있는 Cloud Backup Enable 버튼을 보여 주는 스크린샷</block>
   <block id="753281f374303af4a583f563f4ce575f" category="paragraph"><block ref="753281f374303af4a583f563f4ce575f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f3e86c6d5e3056f3aed2f891ef4894b3" category="paragraph">공급자 구독 및 지역을 선택하고 새 리소스 그룹을 만들지 기존 리소스 그룹을 사용할지 여부를 선택합니다. 또한 기본 Microsoft 관리 암호화 키를 사용하는 대신 고객이 관리하는 데이터 암호화 키를 직접 선택할 수도 있습니다.</block>
@@ -203,7 +201,6 @@
   <block id="9aff5640d34c572b8d027282423e14ad" category="paragraph">Cloud Backup은 시스템에서 활성화되어 매일 볼륨을 백업하며 최근 30개의 백업 복사본을 보존합니다.</block>
   <block id="01834a746a71480e802ae7d289130f5f" category="section-title">기존 시스템에서 Cloud Backup 활성화</block>
   <block id="fce772fe3b335af9256c38cbd82a5b4f" category="paragraph">작업 환경에서 바로 언제든지 Cloud Backup을 사용할 수 있습니다.</block>
-  <block id="a9f4aa88b99fa4227e7e220d4178efb0" category="list-text">작업 환경을 선택하고 오른쪽 패널에서 백업 및 복원 서비스 옆에 있는 * 활성화 * 를 클릭합니다.</block>
   <block id="6b7ef72a61eee61912495d7bebd324ad" category="list-text">제공업체 세부 정보를 선택하고 * 다음 * 을 클릭합니다.</block>
   <block id="74c4b858feda3c891671448871a9278e" category="list-text">백업을 저장하는 데 사용되는 Azure 구독입니다. 이는 Cloud Volumes ONTAP 시스템이 있는 가입과 다를 수 있습니다.</block>
   <block id="36a61c42aee1e6b2824cb7660d384c7e" category="list-text">백업이 저장될 영역입니다. 이 영역은 Cloud Volumes ONTAP 시스템이 있는 지역과 다를 수 있습니다.</block>
@@ -217,7 +214,6 @@
   <block id="e3cbbf46a38a7810b06b73af7fc91cf1" category="list-text">클러스터는 백엔드 스토리지를 위해 AWS에서 Cloud Volumes ONTAP를 사용해야 합니다.</block>
   <block id="19591c0673cc7e18e4bade20109403dd" category="list-text">Cloud Volumes ONTAP 시스템에서 ONTAP 9.7P5 이상을 실행해야 합니다.</block>
   <block id="77f3b81e1d7c5ed627835fb76acd97c6" category="inline-link">AWS 연간 계약</block>
-  <block id="0c7f0afaa23dac8678c19baffe80abdb" category="paragraph">작업 환경을 선택하고 오른쪽 패널에서 백업 및 복원 서비스 옆에 있는 * 활성화 * 를 클릭한 다음 설정 마법사를 따릅니다.</block>
   <block id="0d82ae6c682f20707bf865b71d8af8de" category="inline-image-macro">백업 스케줄 및 보존 기간을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷</block>
   <block id="5cbc65b517e089e57645ea9def3f7d87" category="paragraph"><block ref="5cbc65b517e089e57645ea9def3f7d87" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6da925233b9932574b8fe9e01984bc5b" category="paragraph">Select Volumes 페이지에서 백업할 볼륨을 식별합니다. S3 버킷은 Cloud Volumes ONTAP 시스템과 동일한 AWS 계정 및 지역에 자동으로 생성되며 백업 파일은 여기에 저장됩니다.</block>
@@ -598,7 +594,6 @@
   <block id="3c732a45d08f4f62fa9958b025556655" category="list-text">각 열 머리글의 필터를 사용하여 결과를 정렬합니다</block>
   <block id="9608aa854ca5f36a89549c7fae2a8010" category="summary">몇 가지 단계를 완료하여 Cloud Volumes ONTAP에서 Amazon S3로 데이터 백업을 시작하십시오.</block>
   <block id="9d811f8ab4335c82eeb7d1477874bc1c" category="doc">Cloud Volumes ONTAP 데이터를 Amazon S3에 백업</block>
-  <block id="f71507fa6e86d3ceb6c020ceecbc168e" category="paragraph"><block ref="bc06eb48f0db3d8e7788c48ff11e1fe7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a7d695b3eb756754aec11a762e124dbb" category="paragraph">AWS 계정 및 백업을 생성할 지역을 선택합니다. 기본 Amazon S3 암호화 키를 사용하는 대신 데이터 암호화에 대해 자체 고객 관리 키를 선택할 수도 있습니다.</block>
   <block id="9c9310d7ed198614b0a3e0a92ad1c650" category="inline-image-macro">Cloud Volumes ONTAP 시스템에서 AWS S3로 볼륨을 백업할 때의 클라우드 공급자 세부 정보를 보여 주는 스크린샷</block>
   <block id="2e55947acce19a1b031ffc930cb8520c" category="paragraph"><block ref="2e55947acce19a1b031ffc930cb8520c" category="inline-image-macro-rx" type="image"></block></block>
@@ -1089,14 +1084,10 @@
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">블로그 커뮤니티</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 커뮤니티</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">클라우드 웨비나</block>
-  <block id="aec3f107e722aa43f3d2fe7191720a9c" category="paragraph">작업 환경을 선택하고 오른쪽 패널에서 백업 및 복원 서비스 옆에 있는 * 활성화 &gt; 볼륨 백업 * 을 클릭한 다음 설정 마법사를 따릅니다.</block>
-  <block id="86a833c12958f07575d29f3d5d9926a6" category="paragraph"><block ref="e36987e16d256e466a9acd794b4b3498" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5bf0ca4cfe23ac32e3d45a286b91b311" category="list-text">Canvas에서 작업 환경을 선택하고 오른쪽 패널의 백업 및 복원 서비스 옆에 있는 * 활성화 &gt; 볼륨 백업 * 을 클릭합니다.</block>
   <block id="ecc9f3e43779256709f6205768b035dc" category="paragraph">Cloud Backup은 용량제 모델로 소비 기반 라이센스를 제공합니다. 클라우드 공급자의 마켓플레이스를 구독한 후, 백업된 데이터의 경우 GiB당 비용을 지불하면 됩니다. 이러한 데이터를 미리 지불할 필요가 없습니다. 클라우드 공급자가 월별 요금을 청구합니다.</block>
   <block id="cedae03e22c7bb2c103685dfa74cddab" category="paragraph">BYOL은 1TiB 단위로 기간 기반(12, 24 또는 36개월) _ 및 _ 용량 기반 예를 들어, 1년, 최대 용량(10TiB)에 대해 서비스 사용을 위해 NetApp에 비용을 지불합니다.</block>
   <block id="ea002f9386d9cd059f69c6d59dbea06c" category="list-text">Kubernetes 영구 볼륨의 백업 및 복원 <block ref="03139d1d874301f535e307718cfea817" category="inline-link-macro-rx"></block>.</block>
   <block id="7a6c8511ba9b6f1392c7f34fbd81508d" category="list-text">클라우드 백업 for Applications를 사용하여 사내 ONTAP에서 클라우드로 애플리케이션 정합성을 보장하는 스냅샷을 백업합니다. <block ref="0cae341dd31c4bfca67f66dd24fe06e1" category="inline-link-macro-rx"></block>.</block>
-  <block id="286fb390ea5475a1fa125d5aade554a0" category="list-text">Canvas에서 온-프레미스 작업 환경을 선택하고 오른쪽 패널의 백업 및 복원 서비스 옆에 있는 * 활성화 &gt; 볼륨 백업 * 을 클릭합니다.</block>
   <block id="983a4e7f5913304ec713a249baf7be47" category="section-title">2022년 3월 3일</block>
   <block id="f61163b681442ac500a8018c87241770" category="section-title">2021년 11월 28일</block>
   <block id="efaa7c999dedec2704fc2db580ad4967" category="section-title">2021년 11월 5일</block>
@@ -1193,7 +1184,6 @@
   <block id="499fc037a59ef7c075fdde4e7b0311d1" category="paragraph"><block ref="0293805a32fb419ae9403f81b2c4ce54" category="inline-xref-macro-rx"></block></block>
   <block id="ec5fd71f14fddb1ee3f48a5fd3a21922" category="inline-xref">AWS S3 환경을 ONTAP 백업 수신 준비 상태로 만드는 방법을 알아보십시오.</block>
   <block id="94ef8c88d53d721a37930e0ad90fc657" category="paragraph">선택적으로 기본 Amazon S3 암호화 키를 사용하는 대신 데이터 암호화에 대해 자체적인 사용자 정의 관리 키를 설정할 수 있습니다. <block ref="7cfd3dfde247971381059dc97a351faf" category="inline-xref-macro-rx"></block></block>
-  <block id="79b318611bba9affb629965e88dcf62b" category="paragraph">작업 환경을 선택하고 오른쪽 패널에서 백업 및 복원 서비스 옆에 있는 * 활성화 &gt; 볼륨 백업 * 을 클릭합니다. 그런 다음 설정 마법사를 따라 기본 백업 정책 및 유지할 백업 수를 정의하고 백업할 볼륨을 선택합니다.</block>
   <block id="ba9093635f6e9d60bbff09735ad72b6e" category="inline-xref">볼륨에서 Cloud Backup을 활성화하는 방법을 확인하십시오.</block>
   <block id="ad7a6cf32a5461024f14972d798a688b" category="paragraph"><block ref="5d35df220f587f652680125ea9a857c6" category="inline-xref-macro-rx"></block></block>
   <block id="75cd84ee546dcf1d1f4a18d8b35fef23" category="section-title">연결 옵션에 대한 네트워크 다이어그램</block>
@@ -1530,13 +1520,10 @@
   <block id="824ce1955c2b2d5f91cb80c86545d639" category="paragraph"><block ref="eb618b89294e80d594faecbc4641afee" category="inline-link-rx"></block>.<block ref="f39d73248b535226c2e16237e43ff2d0" category="inline-link-rx"></block>.</block>
   <block id="0a0c24e7fef8cd9bcb19d6db19987b93" category="paragraph">이전에 클라우드 복원 인스턴스/VM을 사용한 경우 자동으로 제거됩니다. Cloud Backup 프로세스는 모든 이전 Cloud Restore 인스턴스를 삭제하기 위해 하루에 한 번 실행됩니다. 이 변경 사항은 완전히 투명하게 나타납니다. 데이터에는 영향을 주지 않으며 백업 또는 복원 작업이 변경되지 않습니다.</block>
   <block id="f213760e51bc9d7895aab74f2fba377c" category="paragraph">기본 정책은 매일 볼륨을 백업하고 각 볼륨의 최근 30개 백업 복사본을 유지합니다. 시간별, 일별, 주별, 월별 또는 연도별 백업으로 변경, 또는 더 많은 옵션을 제공하는 시스템 정의 정책 중 하나를 선택합니다. 보존할 백업 복사본의 수를 변경할 수도 있습니다.</block>
-  <block id="2da5030b3f916979a53299b49c96a213" category="paragraph">다음 다이어그램에서는 * public connection * 메서드와 구성 요소 간에 준비해야 하는 연결을 보여 줍니다. 사내에 설치한 Connector나 Google Cloud Platform VPC에 구축한 Connector를 사용할 수 있습니다.</block>
   <block id="e48ce03e2bde71049d742a96c5698f33" category="inline-image-macro">Cloud Backup이 클러스터의 볼륨 및 백업 파일이 있는 Google Cloud 스토리지와 공용 연결을 통해 통신하는 방법을 보여주는 다이어그램입니다.</block>
   <block id="b806ce964b6e551d9c84a09a8415f4cb" category="paragraph"><block ref="b806ce964b6e551d9c84a09a8415f4cb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0fdd9aff892c716bd065e719f11a6380" category="paragraph">다음 다이어그램에서는 * private connection * 메서드와 구성 요소 간에 준비해야 하는 연결을 보여 줍니다. 사내에 설치한 Connector나 Google Cloud Platform VPC에 구축한 Connector를 사용할 수 있습니다.</block>
   <block id="003facd7f31c0fd7dac15a48dbce6ccc" category="inline-image-macro">Cloud Backup이 클러스터의 볼륨 및 백업 파일이 있는 Google Cloud 스토리지와 프라이빗 연결을 통해 통신하는 방법을 보여주는 다이어그램입니다.</block>
   <block id="4b831201269c6366ac22eccdcf44893f" category="paragraph"><block ref="4b831201269c6366ac22eccdcf44893f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="57a0831535e37c8a0f395d2fc9fe5673" category="paragraph">이미 Google Cloud Platform VPC 또는 사내에 Connector를 구축한 경우 원하는 대로 설정됩니다. 그렇지 않은 경우 이러한 위치 중 하나에서 커넥터를 생성하여 ONTAP 데이터를 Google Cloud 스토리지에 백업해야 합니다. 다른 클라우드 공급자에 배포된 Connector는 사용할 수 없습니다.</block>
   <block id="1c52fe530613f90d476d439dbca6d53e" category="inline-link">GCP에 커넥터 설치</block>
   <block id="a792c7e75bcc7cf7d82f87b63cbca477" category="list-text"><block ref="a792c7e75bcc7cf7d82f87b63cbca477" category="inline-link-rx"></block></block>
   <block id="c434332bb7ea2d6636a3d41a262f1e7e" category="inline-link">구내에 커넥터 설치</block>
@@ -2517,7 +2504,6 @@
   <block id="3a41597d5116718fb24622669197f3e8" category="paragraph">VMware vSphere용 등록된 SnapCenter 플러그인을 사용하여 보호할 수 있는 모든 데이터 저장소와 가상 머신을 보려면 * 백업 및 복구 * &gt; * 가상 머신 * 을 클릭합니다.</block>
   <block id="d4f4c5ccc817cf84f5825246d829cabe" category="list-text">Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다.</block>
   <block id="fbd33db6168b024f7fb941bc669aa81a" category="list-text">Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다.<block ref="9f26112087077321f30a8a9a55bedf44" category="inline-link-rx"></block>.</block>
-  <block id="1be407627e654d1b34c73a6957ef3afb" category="paragraph">Restore Dashboard를 사용하여 볼륨, 폴더 및 파일 복원 작업을 수행할 수 있습니다. BlueXP 메뉴에서 * 백업 및 복구 * 를 클릭한 다음 * 복원 * 탭을 클릭하여 복원 대시보드에 액세스합니다. 을 클릭할 수도 있습니다 <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> &gt; * 서비스 패널의 백업 및 복원 서비스에서 복원 대시보드 보기 * 를 선택합니다.</block>
   <block id="466b90fa557f0884965a272b2e01ec39" category="list-text">SVM에서 SnapDiff RPC 서버를 활성화해야 합니다. BlueXP는 작업 환경에서 인덱싱을 활성화할 때 이 작업을 자동으로 수행합니다.</block>
   <block id="7dbea888521fb9c4360764add4f59e05" category="list-text">BlueXP에 권한을 제공하는 사용자 역할에 특정 Amazon Athena, AWS Glue 및 AWS S3 권한을 추가해야 합니다. <block ref="172464504974bed7b77dd155db5fb92b" category="inline-link-macro-rx"></block>.</block>
   <block id="03ee3f0eead5f2b738977ac3926782b1" category="paragraph">이전에 구성한 Connector와 함께 Cloud Backup을 이미 사용하고 있다면 지금 BlueXP 사용자 역할에 Athena 및 Glue 권한을 추가해야 합니다. 새로운 항목이므로 검색 및 복원에 필요합니다.</block>
@@ -2799,8 +2785,6 @@
   <block id="d1bf7f840fa5b89e3ec98ec94dcf9f3c" category="list-text">계정에 클라우드 공급자 자격 증명이 없으면 인덱싱된 카탈로그 정보가 Connector에 저장됩니다.</block>
   <block id="2c4eed705dd3e0adf6e7194858d8dff7" category="inline-link">AWS 자격 증명</block>
   <block id="71cf9cd60037f691ceec3200a6f0acf1" category="inline-link">Azure 자격 증명</block>
-  <block id="6445304f5c4a3bb92efbc96ef3b1df25" category="list-text">있는 경우<block ref="c58d3a84f39ad7966453b4e8b820285d" category="inline-link-rx"></block> 또는<block ref="d94ab38ae083fd6e134dadfa3fe446cb" category="inline-link-rx"></block> 어카운트의 경우 인덱싱된 카탈로그는 클라우드에 구축된 Connector와 마찬가지로 클라우드 공급자에 저장됩니다.</block>
-  <block id="2031747e0b5483baa08de17237ea9da5" category="paragraph">이 구축을 사용할 때는 위의 AWS 및 Azure 요구사항을 참조하십시오. 온-프레미스 Connector를 사용하는 경우에도 Connector 사용 권한과 클라우드 공급자 리소스 모두에 대해 클라우드 공급자 요구 사항이 충족되어야 합니다.</block>
   <block id="ed77c9fb4fb9e8b7732cbf982dea2036" category="list-text">StorageGRID에 저장된 백업의 경우 커넥터 또는 클라우드 공급자 환경에 공간을 프로비저닝합니다.</block>
   <block id="c39a8c8b1202471a2fce8fdd3c4867d3" category="paragraph">당신은 해야 한다<block ref="43f8a47ebf7ff2837137c71011d4fdfe" category="inline-link-rx"></block>를 선택한 다음 를 설정합니다<block ref="4aa1c3f57d195559cab186a77b7b9ae0" category="inline-link-rx"></block>.</block>
   <block id="401c5fad36fd7e91c67f706848e47eda" category="paragraph">Cloud Backup for Applications는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. NetApp BlueXP(이전의 Cloud Manager)에서 지원되는 Cloud Backup for Applications는 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다.</block>
@@ -2828,6 +2812,23 @@
   <block id="314873f7f9cbbfc51c38cb71e24aeb24" category="paragraph">가능합니다 <block ref="547d123be3159c364b1c9ac7f7ffe3ae" category="inline-link-macro-rx"></block>. 또한 가능합니다 <block ref="091cc4395662354f7a5868ee2318ef97" category="inline-link-macro-rx"></block> 같은 지역(AWS)의 동일한 또는 다른 Kubernetes 클러스터에서 새 볼륨으로.</block>
   <block id="d977c6f6b61d0f35299ae86a391a8a57" category="section-title">이메일 및 알림 센터에서 Cloud Backup 경고를 받도록 지원이 추가되었습니다</block>
   <block id="49b6fd5ed6bda6ec09a46ece6a679207" category="section-title">이제 온-프레미스 Connector를 사용할 때 검색 및 복원을 사용하여 백업 파일을 복원할 수 있습니다</block>
-  <block id="2bcad5b21af9172c1d623bc274dbe4c1" category="paragraph">이전 릴리즈에서는 Connector가 사내에 구축될 때 퍼블릭 클라우드에 백업 파일을 생성하기 위한 지원이 추가되었습니다. 이 릴리즈에서는 검색 및 복원을 사용하여 Connector가 사내에 구축된 Amazon S3 또는 Azure Blob에서 백업을 복원할 수 있도록 지원이 계속 제공됩니다. 검색 및 복원은 StorageGRID 시스템에서 온-프레미스 ONTAP 시스템으로 백업을 복원할 수도 있습니다.</block>
   <block id="18cddedef625cde24d34d1b2bb64fb96" category="paragraph">현재 Google Cloud Storage에서 백업을 복원하려면 검색 및 복원을 사용할 때 Google Cloud Platform에 Connector를 구축해야 합니다.</block>
+  <block id="bc0ef10c26a6549996d0bd4e075f461a" category="paragraph">작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * Enable &gt; Backup Volumes * 를 클릭합니다. 그런 다음 설정 마법사를 따라 기본 백업 정책 및 유지할 백업 수를 정의하고 백업할 볼륨을 선택합니다.</block>
+  <block id="6828b5717b1b3a0ef9548889b22c28ca" category="list-text">Canvas에서 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 &gt; 볼륨 백업 * 을 클릭합니다.</block>
+  <block id="fa9aedfbd090cc455f29e39672cf1f08" category="inline-image-macro">작업 환경을 선택한 후 사용할 수 있는 백업 및 복구 활성화 버튼이 표시된 스크린샷</block>
+  <block id="74114a9d5fb598f989fbea69f3e7ff23" category="paragraph"><block ref="74114a9d5fb598f989fbea69f3e7ff23" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5e6e5001c09086412f1ce2bb20f10dee" category="paragraph">작업 환경을 선택하고 오른쪽 패널에서 백업 및 복구 서비스 옆에 있는 * 활성화 &gt; 볼륨 백업 * 을 클릭한 다음 설정 마법사를 따릅니다.</block>
+  <block id="d86c77ac117fc0eef32cc353c3f13121" category="list-text">Canvas에서 온-프레미스 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 &gt; 볼륨 백업 * 을 클릭합니다.</block>
+  <block id="15290d6f131f18fd0426a19c82dc1328" category="paragraph">작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 * 를 클릭한 다음 설정 마법사를 따릅니다.</block>
+  <block id="49912178a2257abdcbca7d537c5669ea" category="list-text">작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 * 를 클릭합니다.</block>
+  <block id="3097e59a53ffca14aab4fe9ebf8be1ed" category="paragraph">Restore Dashboard를 사용하여 볼륨, 폴더 및 파일 복원 작업을 수행할 수 있습니다. BlueXP 메뉴에서 * 백업 및 복구 * 를 클릭한 다음 * 복원 * 탭을 클릭하여 복원 대시보드에 액세스합니다. 을 클릭할 수도 있습니다 <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> &gt; * 서비스 패널의 백업 및 복구 서비스에서 복구 대시보드 보기 * 를 선택합니다.</block>
+  <block id="74bd719b13624aeb842a19616fb1cfad" category="list-text">있는 경우<block ref="c58d3a84f39ad7966453b4e8b820285d" category="inline-link-rx"></block> 또는<block ref="d94ab38ae083fd6e134dadfa3fe446cb" category="inline-link-rx"></block> 어카운트의 경우 인덱싱된 카탈로그는 클라우드에 구축된 Connector와 마찬가지로 클라우드 공급자에 저장됩니다. (두 자격 증명이 모두 있는 경우 기본적으로 AWS가 선택됩니다.)</block>
+  <block id="b2cb452ce46a05694081545067d5ddb6" category="paragraph">온-프레미스 Connector를 사용하는 경우에도 Connector 사용 권한과 클라우드 공급자 리소스 모두에 대해 클라우드 공급자 요구 사항이 충족되어야 합니다. 이 구축을 사용할 때는 위의 AWS 및 Azure 요구사항을 참조하십시오.</block>
+  <block id="00272bcd9328ed0a71ab7722645682bd" category="list-text">기존 시스템: 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 * 를 클릭한 다음 설치 마법사를 따릅니다.</block>
+  <block id="b8ec7451d278a232ac753f3d02c39cb2" category="paragraph"><block ref="b8ec7451d278a232ac753f3d02c39cb2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2cc8b747af3c0ee9d2485056484fa546" category="paragraph">다음 다이어그램에서는 * public connection * 메서드와 구성 요소 간에 준비해야 하는 연결을 보여 줍니다. Connector는 Google Cloud Platform VPC에 구축해야 합니다.</block>
+  <block id="a1a1b18c2d1bda9a72e2c8ae3e17a916" category="paragraph">다음 다이어그램에서는 * private connection * 메서드와 구성 요소 간에 준비해야 하는 연결을 보여 줍니다. Connector는 Google Cloud Platform VPC에 구축해야 합니다.</block>
+  <block id="1051251a1e8bfaf35e7edcc258449429" category="paragraph">Google Cloud Platform VPC에 이미 Connector를 구축한 경우 원하는 대로 설정할 수 있습니다. 그렇지 않은 경우 해당 위치에 커넥터를 생성하여 ONTAP 데이터를 Google Cloud 스토리지에 백업해야 합니다. 다른 클라우드 공급자 또는 사내에 구축된 Connector는 사용할 수 없습니다.</block>
+  <block id="04046a0bf61601fe18bb99cd37aa5ea8" category="paragraph">클라우드 백업 "검색 및 복원" 기능을 사용하려면 Connector 역할에 특정 권한이 있어야 Google Cloud BigQuery 서비스에 액세스할 수 있습니다. 아래 사용 권한을 확인하고 정책을 수정해야 하는 경우 단계를 따릅니다.</block>
+  <block id="8f6062f059e26f94975a36f6a5efcc4b" category="paragraph">이전 릴리즈에서는 Connector가 사내에 구축될 때 퍼블릭 클라우드에 백업 파일을 생성하기 위한 지원이 추가되었습니다. 이 릴리즈에서는 검색 및 복원을 사용하여 Connector가 사내에 구축된 Amazon S3 또는 Azure Blob에서 백업을 복원할 수 있도록 지원이 계속 제공됩니다. 또한 검색 및 복원 기능은 StorageGRID 시스템에서 온-프레미스 ONTAP 시스템으로 지금 백업을 복원할 수 있도록 지원합니다.</block>
 </blocks>

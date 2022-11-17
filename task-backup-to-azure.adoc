@@ -30,7 +30,7 @@ Cloud Volumes ONTAP에서 Azure Blob 저장소로 데이터 백업을 시작하�
 
 .span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png"[] Alt="Two"></span>새 시스템이나 기존 시스템에서 클라우드 백업 사용
 * 새 시스템: 작업 환경 마법사에서 기본적으로 클라우드 백업이 설정됩니다. 옵션을 활성 상태로 유지해야 합니다.
-* 기존 시스템: 작업 환경을 선택하고 오른쪽 패널의 백업 및 복원 서비스 옆에 있는 * 활성화 * 를 클릭한 다음 설정 마법사를 따릅니다.
+* 기존 시스템: 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 * 를 클릭한 다음 설치 마법사를 따릅니다.
 +
 image:screenshot_backup_cvo_enable.png["작업 환경을 선택한 후 사용할 수 있는 Cloud Backup Enable 버튼을 보여 주는 스크린샷"]
 
@@ -160,7 +160,7 @@ Cloud Backup은 시스템에서 활성화되어 매일 볼륨을 백업하며 �
 작업 환경에서 바로 언제든지 Cloud Backup을 사용할 수 있습니다.
 
 .단계
-. 작업 환경을 선택하고 오른쪽 패널에서 백업 및 복원 서비스 옆에 있는 * 활성화 * 를 클릭합니다.
+. 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 * 를 클릭합니다.
 +
 백업에 대한 Azure Blob 대상이 Canvas에 작업 환경으로 존재하는 경우 클러스터를 Azure Blob 작업 환경으로 끌어서 설치 마법사를 시작할 수 있습니다.
 
