@@ -22,7 +22,8 @@ summary: 몇 가지 단계를 완료하여 AKS Kubernetes 클러스터의 영구
 
 다음 단계를 따라 빠르게 시작하거나 나머지 섹션으로 스크롤하여 자세한 내용을 확인하십시오.
 
-.span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png"[] Alt="One"></span> 사전 요구 사항 검토
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1개"] 사전 요구 사항을 검토합니다
+[role="quick-margin-list"]
 * Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다.
 +
 ** Trident는 클러스터에 설치해야 하며 Trident 버전은 21.1 이상이어야 합니다.
@@ -35,18 +36,21 @@ summary: 몇 가지 단계를 완료하여 AKS Kubernetes 클러스터의 영구
 * 에 가입했습니다 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["BlueXP Marketplace 백업 서비스"^]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"^] Cloud Backup BYOL 라이센스는 NetApp에서 제공
 
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 기존 Kubernetes 클러스터에서 Cloud Backup을 활성화합니다
 [role="quick-margin-para"]
 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 * 를 클릭한 다음 설정 마법사를 따릅니다.
 
 [role="quick-margin-para"]
 image:screenshot_backup_cvo_enable.png["작업 환경을 선택한 후 사용할 수 있는 Cloud Backup Enable 버튼을 보여 주는 스크린샷"]
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["세 가지"] 백업 정책을 정의합니다
 [role="quick-margin-para"]
 기본 정책은 매일 볼륨을 백업하고 각 볼륨의 최근 30개 백업 복사본을 유지합니다. 시간별, 일별, 주별 또는 월별 백업으로 변경하거나 더 많은 옵션을 제공하는 시스템 정의 정책 중 하나를 선택합니다. 보존할 백업 복사본의 수를 변경할 수도 있습니다.
 
 [role="quick-margin-para"]
 image:screenshot_backup_policy_k8s_azure.png["백업 스케줄 및 보존 기간을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"] 백업할 볼륨을 선택합니다
 [role="quick-margin-para"]
 Select Volumes 페이지에서 백업할 볼륨을 식별합니다. 백업 파일은 Cloud Volumes ONTAP 시스템과 동일한 Azure 가입 및 지역을 사용하는 Blob 컨테이너에 저장됩니다.
 
@@ -167,8 +171,10 @@ image:screenshot_backup_select_volumes_k8s.png["백업할 영구 볼륨을 선�
 . 백업 활성화 * 를 클릭하면 선택한 각 볼륨의 초기 백업이 시작됩니다.
 
 
+.결과
 백업 파일은 Cloud Volumes ONTAP 시스템과 동일한 Azure 가입 및 지역을 사용하는 Blob 컨테이너에 저장됩니다.
 
 Kubernetes 대시보드가 표시되므로 백업 상태를 모니터링할 수 있습니다.
 
+.다음 단계
 가능합니다 link:task-manage-backups-kubernetes.html["볼륨에 대한 백업을 시작 및 중지하거나 백업 일정을 변경합니다"^]. 또한 가능합니다 link:task-restore-backups-kubernetes.html#restoring-volumes-from-a-kubernetes-backup-file["백업 파일에서 전체 볼륨을 복원합니다"^] Azure(동일한 지역)의 동일한 또는 다른 Kubernetes 클러스터에서 새 볼륨으로.

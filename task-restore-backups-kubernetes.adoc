@@ -66,4 +66,5 @@ image:screenshot_restore_k8s_volume.png["영구 볼륨이 복원될 대상 정�
 . 복원 * 을 클릭하면 복원 작업의 진행률을 검토할 수 있도록 Kubernetes 대시보드로 돌아갑니다.
 
 
+.결과
 BlueXP는 선택한 백업을 기반으로 Kubernetes 클러스터에 새 볼륨을 생성합니다. 가능합니다 link:task-manage-backups-kubernetes.html["이 새 볼륨에 대한 백업 설정을 관리합니다"] 필요에 따라.

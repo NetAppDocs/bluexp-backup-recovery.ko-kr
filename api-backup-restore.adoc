@@ -34,7 +34,7 @@ Cloud Backup Service에는 8개의 끝점 범주가 정의되어 있습니다.
 
 Cloud Backup API를 시작하려면 사용자 토큰, Cloud Central 계정 ID 및 Cloud Connector ID를 얻어야 합니다.
 
-API 호출을 할 때 권한 부여 헤더에 사용자 토큰을 추가하고 x-agent-id 헤더에 클라우드 커넥터 ID를 추가합니다. API에서 Cloud Central 계정 ID를 사용해야 합니다.
+API 호출을 할 때 권한 부여 헤더에 사용자 토큰을 추가하고 x-agent-id 헤더에 Cloud Connector ID를 추가합니다. API에서 Cloud Central 계정 ID를 사용해야 합니다.
 
 .단계
 . NetApp Cloud Central에서 사용자 토큰을 얻습니다.
@@ -99,9 +99,10 @@ Header:
 
 == API 사용 예
 
-다음 예에서는 Azure 클라우드의 East-US-2 영역에서 일별, 시간별, 주별 레이블이 설정되고 보관 기간이 180일로 설정된 새 정책을 사용하여 작업 환경에서 백업을 활성화하는 API 호출을 보여 줍니다. 이 옵션은 작업 환경에서만 백업을 활성화하지만 볼륨은 백업되지 않습니다. ""자동 백업 사용": true를 선택하면 시스템에 이미 있는 모든 볼륨이 백업되고 이후 볼륨이 추가됩니다.
+다음 예에서는 Azure 클라우드의 East-US-2 영역에서 일별, 시간별, 주별 레이블이 설정되고 보관 기간이 180일로 설정된 새 정책을 사용하여 작업 환경에서 백업을 활성화하는 API 호출을 보여 줍니다. 이 옵션은 작업 환경에서만 백업을 활성화하지만 볼륨은 백업되지 않습니다. "auto-backup-enabled"를 선택하는 경우: true를 선택하면 시스템에 이미 있는 모든 볼륨이 백업되고 이후 볼륨이 추가됩니다.
 
-여기서는 Cloud Central 계정 ID "account-DpTFcxN3", BlueXP 커넥터 ID "iZwFFeVCZjWnzGlw8RgD0QNANZvpP7IClients" 및 사용자 토큰 "BEARER UJHbGciOiJSUZSUZSUI1NiSXinSXI5XIMUCJUCJUCJUXUXUXYUXUXUXUXUXUXYUXYUXYUXYUXUXUXUXUXYUC4C4CJUXYUXYUXYUXYUXYUXYUXUXUXYUXYU
+.API 요청
+Cloud Central 계정 ID를 사용하고 있음을 알 수 있습니다 `account-DpTFcxN3`, BlueXP 커넥터 ID `iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients`, 및 사용자 토큰 `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rSXlPVFUzUWpZek1E…y6nyhBjwkeMwHc4ValobjUmju2x0xUH48g` 명령을 입력합니다.
 
 [source, http]
 ----
