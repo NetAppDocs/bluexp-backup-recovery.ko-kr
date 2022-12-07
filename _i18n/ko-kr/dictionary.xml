@@ -1407,10 +1407,6 @@
   <block id="cddd2b11445e1c8453ea0da106dab7a6" category="list-text">단일 파일 레벨 복원(SFR)</block>
   <block id="d9a2a68e5e36f917b84ad2543b9d7eb9" category="list-text">작업 환경</block>
   <block id="cb59b87e00d11222bfd9159d0d23836f" category="section-title">시작하기</block>
-  <block id="cb8eae28208af8da6d1790f12f05d13a" category="paragraph">Cloud Backup API를 시작하려면 사용자 토큰, Cloud Central 계정 ID 및 Cloud Connector ID를 얻어야 합니다.</block>
-  <block id="6f1f68c4600a11c04b4d3eaa5313820c" category="list-text">NetApp Cloud Central에서 사용자 토큰을 얻습니다.</block>
-  <block id="8006289517e097344c5132b125d48612" category="list-text">NetApp Cloud Central 계정 ID를 받습니다.</block>
-  <block id="80e7fa6f7ec235f2ec73e616228b4d5a" category="paragraph">이 API는 다음과 같은 응답을 반환합니다. [0].[accountPublicId] * 에서 출력을 구문 분석하여 계정 ID를 검색할 수 있습니다.</block>
   <block id="b3080cdc3d4f3f5baa6015e73aeff8f4" category="paragraph">이 API는 다음과 같은 응답을 반환합니다. occm.[0].[agent].[AGENTID] * 의 출력을 구문 분석하여 에이전트 ID를 검색할 수 있습니다.</block>
   <block id="b62dbbecd6533f9627427d34160e7d75" category="section-title">API 사용 예</block>
   <block id="8243464aa42a67375338d8b893252d77" category="listing-title">응답은 모니터링할 수 있는 작업 ID입니다.</block>
@@ -1754,8 +1750,6 @@
   <block id="c81ea6f9f60a10281bd1aa698a50e3e7" category="paragraph">클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 클라우드 백업 UI의 _S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. <block ref="f7fa7b0a9e810d8c500bcf785a34f359" category="inline-link-macro-rx"></block>.</block>
   <block id="e978c3a1389a8a8755aae6236e595807" category="paragraph">Cloud Backup을 활성화할 때 첫 번째 백업 정책에서 _S3 Glacier_또는 _S3 Glacier Deep Archive_를 선택한 경우 해당 계층은 해당 클러스터에 대한 향후 백업 정책에 사용할 수 있는 유일한 아카이브 계층이 됩니다. 첫 번째 백업 정책에서 아카이브 계층을 선택하지 않으면 _S3 Glacier_는 이후 정책에 대한 유일한 보관 옵션입니다.</block>
   <block id="c370775a8bc883ada27fec0c9380c141" category="paragraph">클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 클라우드 백업 UI의 _Azure Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. <block ref="2f91ed687cd1d1d6d8235865263a43ff" category="inline-link-macro-rx"></block>.</block>
-  <block id="081b49cd285a64a7dc21891cb3b85f4e" category="paragraph">다음은 향후 릴리스에서 해결될 알려진 문제입니다.</block>
-  <block id="edd8bdf579117f85e813a9cfb5e571e1" category="list-text">복원 작업 중에 ONTAP 버전 9.10.1 이상을 실행하는 시스템에서 백업이 생성되었고 볼륨이 복원 중인 시스템에서 ONTAP 버전 9.10.0 이하를 실행하는 경우 시스템 중단 또는 일부 경우 복원이 실패합니다. 그러나 볼륨이 손상되었습니다.</block>
   <block id="c84ee35eef49d3ea170dc5583bae97eb" category="section-title">백업 제한 사항</block>
   <block id="dd717dd6a5197fd72bf9aae1e454dd3e" category="list-text">데이터 보호(DP) 볼륨 백업 시:</block>
   <block id="c73aeadbe74d06b3eebf4d0a5f283344" category="list-text">SnapMirror 레이블 'app_consistent' 및 'all_source_snapshot'과의 관계는 클라우드에 백업되지 않습니다.</block>
@@ -2023,7 +2017,6 @@
   <block id="7b2b7c08da06dd437ae98c50b4ace20f" category="inline-link">필요한 권한을 복사하여 붙여넣을 수 있는 정책의 전체 JSON 형식을 봅니다</block>
   <block id="47161ef4ae449d43c829baee065648d2" category="paragraph"><block ref="63cdf6e3f2a869e9e35995fee340f32a" category="inline-link-rx"></block>.</block>
   <block id="9644265a314e497bc18814e1694c3d27" category="paragraph">다음 링크에서 새로 고침 토큰을 생성해야 합니다. https://services.cloud.netapp.com/refresh-token/. 새로 고침 토큰은 사용자 토큰을 생성하는 데 사용할 영숫자 문자열입니다.</block>
-  <block id="777d6e4cc528ea2b29b7fc6903fb67a6" category="admonition">NetApp Cloud Central의 사용자 토큰에 만료일이 있습니다. API 응답에는 토큰이 만료되는 시점을 나타내는 "expires_in" 필드가 포함됩니다. 토큰을 새로 고치려면 이 API를 다시 호출해야 합니다.</block>
   <block id="39d3d67728b58b0f9255268d852abfbe" category="admonition">Cloud Backup for Applications 인프라는 지역 내의 가용성 영역 장애에 대한 복원력을 제공합니다. 이제 새로운 지역으로 페일오버하여 지역 내 장애를 지원하며 이 페일오버에는 약 2시간의 다운타임이 발생합니다.</block>
   <block id="da101cda60f537d813b60a33b665c8f8" category="paragraph">공급자로 StorageGRID를 선택하고 StorageGRID 서버 및 S3 테넌트 계정 세부 정보를 입력합니다. 또한 볼륨이 상주하는 ONTAP 클러스터에서 IPspace를 지정해야 합니다.</block>
   <block id="80b09eca2711141a189a78c7b481d5cb" category="list-text">ONTAP 9.7P5 이상, ONTAP 9.8P13 이상 권장</block>
@@ -2340,7 +2333,6 @@
   <block id="855a635321caeb08d8525de5eea56651" category="list-text">검색 및 복원을 사용하여 데이터를 복원하는 경우 클라우드 공급자가 특정 리소스를 프로비저닝하며, 검색 요청에 의해 스캔된 데이터 양과 관련된 TiB 비용이 있습니다. (이러한 리소스는 Browse &amp; Restore에 필요하지 않습니다.)</block>
   <block id="c03019f9be2cb226dc19ca939f4d2a98" category="paragraph">작업 환경에 Cloud Backup을 활성화하면 처음에 선택한 모든 볼륨이 사용자가 정의한 기본 백업 정책을 사용하여 백업됩니다. RPO(복구 지점 목표)가 서로 다른 특정 볼륨에 서로 다른 백업 정책을 할당하려면 해당 클러스터에 대한 추가 정책을 생성한 다음 Cloud Backup이 활성화된 후 다른 볼륨에 해당 정책을 할당할 수 있습니다.</block>
   <block id="887b3715a8c6b9f979173f9bb78db138" category="paragraph">현재 백업 대상이 Amazon S3 또는 NetApp StorageGRID인 경우 지원을 받을 수 있습니다. 다른 스토리지 제공업체 대상은 향후 릴리스에 추가될 예정입니다.</block>
-  <block id="eec8499000c8f659d98df740f918b905" category="list-text">오브젝트 저장소의 WORM/규정 준수 모드는 현재 Amazon S3 및 StorageGRID에서만 지원됩니다. 이를 DataLock 기능이라고 하며 Cloud Backup 설정을 사용하여 관리해야 합니다.</block>
   <block id="5116aee7e891450dd457789d0b3857e4" category="paragraph">이 문서에서는 Cloud Backup Service를 사용할 때 사내 ONTAP 시스템 및 Cloud Volumes ONTAP 시스템에 대한 백업 정책 구성 설정에 대해 설명합니다.</block>
   <block id="f576f81f502b655c924b76cc045e8946" category="paragraph">Cloud Backup을 사용하면 각 작업 환경(클러스터)에 대해 고유한 스케줄로 여러 백업 정책을 생성할 수 있습니다. RPO(복구 시점 목표)가 다른 볼륨에 서로 다른 백업 정책을 할당할 수 있습니다.</block>
   <block id="3b190b83ddc2ee9e610caa6dc209fbaf" category="list-text">레이블 * 은 볼륨에서 백업 파일이 생성(또는 업데이트)되는 빈도를 정의합니다. 다음 유형의 라벨 중에서 선택할 수 있습니다.</block>
@@ -2900,10 +2892,7 @@
   <block id="0d1c0309cd5a222639167f043ad2659c" category="inline-link-macro">Google 아카이브 스토리지 사용에 대해 자세히 알아보십시오</block>
   <block id="ca8f2417237c1ca946e8895448c8a806" category="paragraph"><block ref="0ebbe78b3d1a38928eec5f9d045a7c89" category="inline-link-macro-rx"></block>. (ONTAP 9.12.1 필요)</block>
   <block id="273a0c18ae7ae64c7f1016a71ed51d1e" category="paragraph">+ 아카이브 스토리지로 계층화된 백업 파일은 아카이브로 백업을 계층화하는 것을 중지하면 해당 계층에 남아 있습니다. 이러한 백업 파일은 자동으로 표준 계층으로 다시 이동되지 않습니다. 새 볼륨 백업만 표준 계층에 상주합니다.</block>
-  <block id="702200e406214ec2d341f851f3e5e0b0" category="paragraph">API 호출을 할 때 권한 부여 헤더에 사용자 토큰을 추가하고 x-agent-id 헤더에 Cloud Connector ID를 추가합니다. API에서 Cloud Central 계정 ID를 사용해야 합니다.</block>
-  <block id="ef852916d56255b8dc79b6f7e695865f" category="paragraph">다음 예에서는 Azure 클라우드의 East-US-2 영역에서 일별, 시간별, 주별 레이블이 설정되고 보관 기간이 180일로 설정된 새 정책을 사용하여 작업 환경에서 백업을 활성화하는 API 호출을 보여 줍니다. 이 옵션은 작업 환경에서만 백업을 활성화하지만 볼륨은 백업되지 않습니다. "auto-backup-enabled"를 선택하는 경우: true를 선택하면 시스템에 이미 있는 모든 볼륨이 백업되고 이후 볼륨이 추가됩니다.</block>
   <block id="7d9faab09c1d85e60360dfca30ab77cc" category="paragraph-title">API 요청</block>
-  <block id="91d8ce7a0dd4ae47d0a99b9912f413a7" category="paragraph">Cloud Central 계정 ID를 사용하고 있음을 알 수 있습니다<block ref="50deb7e0fbc66ff8a640c6692b57f062" prefix=" " category="inline-code"></block>, BlueXP 커넥터 ID<block ref="4c8927d7befc11ec79983636b1168c7e" prefix=" " category="inline-code"></block>, 및 사용자 토큰<block ref="4def1da2868e8cb4ae96d8dc41f88f59" prefix=" " category="inline-code"></block> 명령을 입력합니다.</block>
   <block id="c57b731ee494dd2c5422da75f8283d02" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 시스템에서 Cloud Backup을 활성화합니다</block>
   <block id="4c9a0feab9499a53c704c9db0adc3926" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 클라우드 공급자를 선택하고 공급자 세부 정보를 입력합니다</block>
   <block id="3b39c09e2f4aebd9e4dafe73f9fdeabe" category="paragraph">백업은 기본적으로 표준 스토리지에 저장됩니다. 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 Google 아카이브 스토리지에 백업을 계층화하도록 선택할 수 있습니다. <block ref="87ffafedb97d3b50ea58ef296117bbac" category="inline-link-macro-rx"></block>.</block>
@@ -2957,4 +2946,15 @@
   <block id="373e31603b5a78ab3bc84cbe57c892b5" category="paragraph">각 백업 정책은 백업 파일에 적용할 수 있는 _Archival Policy_에 대한 섹션을 제공합니다.</block>
   <block id="0776412162b9ad0d387bbf818146d659" category="sidebar">지원되는 Google 아카이브 스토리지 계층</block>
   <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">새로운 기능</block>
+  <block id="442630401ddd0f14988d739183c35505" category="list-text">오브젝트 저장소의 WORM/규정 준수 모드는 현재 Amazon S3 및 StorageGRID에서만 지원됩니다. 이를 DataLock 기능이라고 하며 Cloud Backup 설정을 사용하여 관리해야 합니다.</block>
+  <block id="b2ff0fb046b03e40e599f1561ed5ebd3" category="list-text">FlexGroup 볼륨에서 FlexVol 볼륨으로 또는 FlexVol 볼륨을 FlexGroup 볼륨으로 복원하는 것은 지원되지 않습니다.</block>
+  <block id="c911798e68210cf43e7a5a85f31ebebe" category="paragraph">클라우드 백업 API를 시작하려면 사용자 토큰, BlueXP 계정 ID 및 BlueXP 커넥터 ID를 얻어야 합니다.</block>
+  <block id="30bc6b6cbbb254a1299f2544d8a09731" category="paragraph">API 호출을 할 때 인증 헤더에 사용자 토큰을 추가하고 X-agent-id 헤더에 BlueXP 커넥터 ID를 추가합니다. API에서 BlueXP 계정 ID를 사용해야 합니다.</block>
+  <block id="710f97f519c3a0c08777096972387f3c" category="list-text">NetApp BlueXP 웹 사이트에서 사용자 토큰을 받으십시오.</block>
+  <block id="061a5fbf692c14aa8949bc11c7758ccb" category="admonition">BlueXP 웹 사이트의 사용자 토큰에 만료 날짜가 있습니다. API 응답에는 토큰이 만료되는 시점을 나타내는 "expires_in" 필드가 포함됩니다. 토큰을 새로 고치려면 이 API를 다시 호출해야 합니다.</block>
+  <block id="8ce9552d4501ab462ee2bb5bc9e6477c" category="list-text">BlueXP 계정 ID를 얻습니다.</block>
+  <block id="8249fee34290d25027be632b8f27da68" category="paragraph">이 API는 다음과 같은 응답을 반환합니다. [0].[accountPublicId] * 에서 출력을 구문 분석하여 계정 ID를 검색할 수 있습니다.</block>
+  <block id="3d230e49f0e908474dc66b75f9fe1a42" category="paragraph">다음 예에서는 Azure 클라우드의 East-US-2 영역에서 일별, 시간별, 주별 레이블이 설정된 새 정책이 있는 작업 환경에서 Cloud Backup을 활성화하는 API 호출을 보여 줍니다. 이때 Azure 클라우드의 East-US-2 영역에서는 Archive After Days가 180일로 설정됩니다. 이렇게 하면 작업 환경에서만 백업할 수 있지만 볼륨은 백업되지 않습니다.</block>
+  <block id="f8d12ed26ccbabf790e2b8039b322046" category="paragraph">"자동 백업 사용":"참"을 선택하면 시스템에 이미 있는 모든 볼륨이 백업되고 이후 볼륨도 백업됩니다.</block>
+  <block id="056e3b6ecd6329a08267381680ade8b7" category="paragraph">BlueXP 계정 ID를 사용하는 것을 확인할 수 있습니다<block ref="50deb7e0fbc66ff8a640c6692b57f062" prefix=" " category="inline-code"></block>, BlueXP 커넥터 ID<block ref="4c8927d7befc11ec79983636b1168c7e" prefix=" " category="inline-code"></block>, 및 사용자 토큰<block ref="4def1da2868e8cb4ae96d8dc41f88f59" prefix=" " category="inline-code"></block> 명령을 입력합니다.</block>
 </blocks>
