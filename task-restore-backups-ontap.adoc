@@ -41,7 +41,7 @@ image:screenshot_restore_dashboard.png["Browse  amp; Restore 또는 Search  amp;
 
 == Browse & Restore와 Search & Restore 비교
 
-일반적으로, 최근 주나 월로부터 특정 볼륨, 폴더 또는 파일을 복원해야 할 때 _Browse & Restore_가 더 낫습니다. 파일의 이름과 위치, 파일의 마지막 상태가 양호한 날짜를 알고 있어야 합니다. _Search & Restore_ 는 일반적으로 볼륨, 폴더 또는 파일을 복원해야 할 때 더 낫지만 정확한 이름, 해당 볼륨이 있는 볼륨 또는 양호한 상태로 마지막으로 만들어진 날짜를 기억하지 못합니다.
+일반적으로, 최근 주나 월로부터 특정 볼륨, 폴더 또는 파일을 복원해야 할 때 _Browse & Restore_가 더 낫습니다. 파일의 이름과 위치, 파일의 마지막 상태가 양호한 날짜를 알고 있어야 합니다. 일반적으로 볼륨, 폴더 또는 파일을 복원해야 할 때 검색 및 복원 _ 이(가) 더 좋지만 정확한 이름, 해당 볼륨이 있는 볼륨 또는 상태가 양호한 마지막 날짜를 기억하지 못합니다.
 
 이 표에서는 두 가지 방법을 비교합니다.
 
@@ -113,16 +113,19 @@ ONTAP 백업 파일에서 다음 작업 환경으로 볼륨, 폴더 또는 개�
 
 [cols="50,50"]
 |===
-| 백업 파일 위치 대상 작업 환경 ifdef::aws [ ] | Amazon S3 
+| 백업 파일 위치 | 대상 작업 환경 ifdef::AWS[] 
 
 
-| Cloud Volumes ONTAP in AWS on-premises ONTAP system endif::AWS[]ifdef::Azure[] | Azure Blob 
+| Amazon S3 | Cloud Volumes ONTAP in AWS on-premises ONTAP system endif::AWS[]ifdef::Azure[] 
 
 
-| Azure 사내 ONTAP 시스템의 Cloud Volumes ONTAP endif::Azure []ifdef::GCP[] | Google 클라우드 스토리지 
+| Azure Blob | Azure 사내 ONTAP 시스템의 Cloud Volumes ONTAP endif::Azure []ifdef::GCP[] 
 
 
-| Google 사내 ONTAP 시스템의 Cloud Volumes ONTAP::GCP [] | NetApp StorageGRID를 참조하십시오 
+| Google 클라우드 스토리지 | Google 사내 ONTAP 시스템의 Cloud Volumes ONTAP::GCP [] 
+
+
+| NetApp StorageGRID를 참조하십시오 | 사내 ONTAP 시스템 
 |===
 찾아보기 및 복원의 경우 커넥터를 다음 위치에 설치할 수 있습니다.
 

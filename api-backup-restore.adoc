@@ -16,16 +16,17 @@ summary: 웹 UI를 통해 사용할 수 있는 Cloud Backup 기능도 RESTful AP
 [role="lead"]
 웹 UI를 통해 사용할 수 있는 Cloud Backup 기능은 RESTful API를 통해서도 사용할 수 있습니다.
 
-Cloud Backup Service에는 8개의 끝점 범주가 정의되어 있습니다.
+Cloud Backup에는 9가지 유형의 엔드포인트가 정의되어 있습니다.
 
-* 백업
-* 카탈로그
-* 클라우드
-* 있습니다
-* 라이센스
-* 복원
-* 단일 파일 레벨 복원(SFR)
-* 작업 환경
+* 백업 - 클라우드 및 사내 리소스의 백업 작업을 관리하고 백업 데이터의 세부 정보를 검색합니다
+* 카탈로그 - 쿼리를 기반으로 파일에 대한 인덱싱된 카탈로그 검색을 관리합니다(검색 및 복원).
+* 클라우드 - BlueXP에서 다양한 클라우드 공급자 리소스에 대한 정보를 검색합니다
+* 작업 - BlueXP 데이터베이스의 작업 세부 정보 항목을 관리합니다
+* 라이센스 - BlueXP에서 작업 환경의 라이센스 유효성을 검색합니다
+* 랜섬웨어 스캔 - 특정 백업 파일에서 랜섬웨어 스캔을 시작합니다
+* 복원 - 볼륨 및 파일 수준 복원 작업을 수행할 수 있습니다
+* SFR - 단일 파일 레벨 복구 작업을 위해 백업 파일에서 파일을 검색합니다(찾아보기 및 복원).
+* 작업 환경 - 백업 정책을 관리하고 작업 환경과 연결된 대상 객체 저장소를 구성합니다
 
 
 
@@ -60,7 +61,7 @@ NOTE: BlueXP 웹 사이트의 사용자 토큰에 만료 날짜가 있습니다.
 +
 [source, http]
 ----
-GET 'https://cloudmanager.cloud.netapp.com/tenancy/account' -H 'authority: cloudmanager.cloud.netapp.com'
+GET 'https://api.bluexp.netapp.com/tenancy/account' -H 'authority: api.bluexp.netapp.com'
 Header:
 -H 'accept: application/json'
 -H 'accept-language: en-GB,en;q=0.9'
@@ -108,7 +109,7 @@ BlueXP 계정 ID를 사용하는 것을 확인할 수 있습니다 `account-DpTF
 
 [source, http]
 ----
-curl --location --request POST 'https://cloudmanager.cloud.netapp.com/account/account-DpTFcxN3/providers/cloudmanager_cbs/api/v3/backup/working-environment/VsaWorkingEnvironment-99hPYEgk' \
+curl --location --request POST 'https://api.bluexp.netapp.com/account/account-DpTFcxN3/providers/cloudmanager_cbs/api/v3/backup/working-environment/VsaWorkingEnvironment-99hPYEgk' \
 --header 'x-agent-id: iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
@@ -150,7 +151,7 @@ curl --location --request POST 'https://cloudmanager.cloud.netapp.com/account/ac
 .응답을 모니터링합니다.
 [source, http]
 ----
-curl --location --request GET 'https://cloudmanager.cloud.netapp.com/account/account-DpTFcxN3/providers/cloudmanager_cbs/api/v1/job/1b34b6f6-8f43-40fb-9a52-485b0dfe893a' \
+curl --location --request GET 'https://api.bluexp.netapp.com/account/account-DpTFcxN3/providers/cloudmanager_cbs/api/v1/job/1b34b6f6-8f43-40fb-9a52-485b0dfe893a' \
 --header 'x-agent-id: iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
