@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-restore-cloud-native-app-data.html 
-keywords: cloud native, application data, restore, data files, control files, recovery 
+permalink: task-restore-cloud-native-oracle-data.html 
+keywords: cloud native, application data, restore, data files, control files, recovery, Cloud Manager, BlueXP, Oracle database, Oracle 
 summary: 데이터 파일, 제어 파일 또는 둘 모두를 복원한 다음 데이터베이스를 복구합니다. 
 ---
-= 클라우드 네이티브 애플리케이션 데이터를 복원합니다
+= 클라우드 네이티브 Oracle 데이터베이스를 복원합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -15,6 +15,11 @@ summary: 데이터 파일, 제어 파일 또는 둘 모두를 복원한 다음 �
 
 [role="lead"]
 데이터가 손실된 경우 데이터 파일, 제어 파일 또는 둘 모두를 복원한 다음 데이터베이스를 복구할 수 있습니다.
+
+* 필요한 것 *
+
+Oracle 21c 데이터베이스가 시작 상태인 경우 복원 작업이 실패합니다. 데이터베이스를 성공적으로 복원하려면 다음을 실행해야 합니다.
+`cp -f <ORACLE_HOME>/jdbc/lib/ojdbc8.jar /opt/NetApp/snapcenter/spl/plugins/sco/lib ojdbc8-8.jar`
 
 * 단계 *
 
@@ -54,7 +59,18 @@ NOTE: ASM 레이아웃의 iSCSI에는 제어 파일이나 제어 파일만 있�
 강제 데이터 이동 없이 복원 * 확인란을 선택할 수도 있습니다.
 
 +
-데이터 파일 디스크 그룹의 spfile, 암호 파일 및 아카이브 로그 파일을 * 강제 데이터 복원 * 옵션으로 재정의합니다. 원본 위치 복원 강제 * 옵션을 선택한 경우 최신 백업을 사용해야 합니다.
+SAN 레이아웃에서 Oracle용 SnapCenter 플러그인이 ASM 디스크 그룹에서 Oracle 데이터 파일 이외의 외부 파일을 찾으면 연결 및 복사 복원 방법이 수행됩니다. 외부 파일은 다음 유형 중 하나 이상이 될 수 있습니다.
+
++
+** 매개 변수
+** 암호
+** 보관 로그
+** 온라인 로그
+** ASM 매개 변수 파일입니다.
++
+강제 데이터 이동 없이 복원 * 옵션은 매개 변수, 암호 및 아카이브 로그 유형의 외부 파일을 재정의합니다. 원본 위치 복원 강제 * 옵션을 선택한 경우 최신 백업을 사용해야 합니다.
+
+
 
 . 복구 범위 섹션에서 다음 작업을 수행합니다.
 +
@@ -97,4 +113,15 @@ No recovery * 를 선택합니다.
 
 . 다음 * 을 클릭하고 세부 정보를 검토합니다.
 . 복원 * 을 클릭합니다.
+
+
+
+
+== 제한 사항
+
+* 테이블스페이스 및 PDB 복원과 같은 세분화된 복원은 지원하지 않습니다
+* 일부 디스크 그룹에 외부 파일이 포함된 경우 원본 위치 복원 방법과 연결 및 복사 복원 방법이 모두 사용됩니다. 그러나 동시에 두 방법을 모두 사용하여 복원을 수행하는 것은 지원되지 않으며 복원 작업이 실패합니다. 데이터베이스가 마운트된 상태로 남아 있으므로 데이터베이스를 수동으로 열기 상태로 전환해야 합니다.
++
+알려진 문제로 인해 UI의 작업 페이지에 외부 파일이 있기 때문에 실패 메시지가 표시되지 않습니다. 문제의 원인을 알 수 있도록 SAN 사전 복원 단계 중에 오류가 발생한 경우 커넥터 로그를 확인하십시오.
+
 

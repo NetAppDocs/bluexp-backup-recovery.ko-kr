@@ -14,7 +14,7 @@ summary: ONTAP에서 GCP로 애플리케이션 데이터를 백업하기 위한 
 
 
 [role="lead"]
-클라우드 백업 for Applications를 BlueXP 및 온프레미스 SnapCenter와 통합하여 ONTAP에서 Google 클라우드 플랫폼으로 애플리케이션 데이터를 백업할 수 있습니다.
+Cloud Backup for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 ONTAP에서 Google Cloud Platform으로 애플리케이션 데이터를 백업할 수 있습니다.
 
 단일 정책을 사용하여 하나 이상의 애플리케이션을 클라우드에 동시에 보호할 수 있습니다.
 

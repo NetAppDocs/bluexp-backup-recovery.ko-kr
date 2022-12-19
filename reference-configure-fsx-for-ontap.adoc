@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: reference-configure-fsx-for-ontap.html 
+keywords: Cloud Manager, FSx for ONTAP, working environment, Connector, BlueXP 
+summary: ONTAP 작업 환경 및 커넥터용 FSx를 생성합니다 
+---
+= ONTAP에 대해 FSx를 구성합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP 작업 환경 및 커넥터용 FSx를 만들어야 합니다.
+
+
+
+== ONTAP 작업 환경을 위한 FSx를 생성합니다
+
+데이터베이스가 호스팅되는 ONTAP 작업 환경을 위한 Amazon FSx를 생성해야 합니다. 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/start/task-getting-started-fsx.html["ONTAP용 Amazon FSx를 시작하십시오"] 및 link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html["ONTAP 작업 환경을 위한 Amazon FSx를 생성하고 관리합니다"].
+
+BlueXP 또는 AWS를 사용하여 NetApp FSx를 생성할 수 있습니다. AWS를 사용하여 생성한 경우 BlueXP에서 ONTAP 시스템용 FSx를 검색해야 합니다.
+
+
+
+== 커넥터를 작성합니다
+
+계정 관리자는 AWS에 Connector를 구축하여 BlueXP가 퍼블릭 클라우드 환경 내의 리소스와 프로세스를 관리할 수 있도록 해야 합니다.
+
+자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["BlueXP에서 AWS에 커넥터 생성"].
+
+* FSx 작업 환경과 Oracle 데이터베이스를 모두 관리하려면 동일한 커넥터를 사용해야 합니다.
+* FSx 작업 환경과 Oracle 데이터베이스가 동일한 VPC에 있는 경우 동일한 VPC에 커넥터를 배포할 수 있습니다.
+* FSx 작업 환경과 Oracle 데이터베이스가 서로 다른 VPC에 있는 경우:
++
+** FSx에 NAS(NFS) 워크로드가 구성되어 있는 경우 두 VPC 중 하나에 커넥터를 생성할 수 있습니다.
+** SAN 워크로드만 구성되어 있고 NAS(NFS) 워크로드를 사용할 계획이 없는 경우 FSx 시스템이 생성되는 VPC에 커넥터를 생성해야 합니다.
++
+
+NOTE: NAS(NFS) 워크로드를 사용하려면 Oracle 데이터베이스 VPC와 FSx VPC 간에 전송 게이트웨이가 있어야 합니다. 부동 IP 주소인 NFS IP 주소는 전송 게이트웨이를 통해서만 다른 VPC에서 액세스할 수 있습니다. VPC를 피해서 유동 IP 주소에 액세스할 수 없습니다.
+
+
+
+
+
+커넥터를 만든 후 * Storage * > * Canvas * > * My Working Environments * > * Add Working Environment * 를 클릭하고 화면의 지시에 따라 작업 환경을 추가합니다. Oracle 데이터베이스 호스트 및 FSx 작업 환경에 대한 커넥터와 연결이 있는지 확인합니다. 커넥터는 FSx 작업 환경의 클러스터 관리 IP 주소에 연결할 수 있어야 합니다.
+
+
+IMPORTANT: 커넥터를 작성한 후 * 커넥터 > 커넥터 관리 * 를 클릭하고 커넥터 이름을 선택한 다음 커넥터 ID를 복사합니다.

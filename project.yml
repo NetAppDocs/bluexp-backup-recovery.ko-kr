@@ -83,9 +83,9 @@ sidebar:
       url: "/task-manage-backups-kubernetes.html"
     - title: Kubernetes 백업에서 복원합니다
       url: "/task-restore-backups-kubernetes.html"
-  - title: 애플리케이션 데이터 백업 및 복원
+  - title: 애플리케이션 데이터 보호
     entries:
-    - title: 사내 애플리케이션 데이터를 백업 및 복원합니다
+    - title: 사내 애플리케이션 데이터 보호
       entries:
       - title: 온프레미스 애플리케이션 데이터를 보호합니다
         url: "/concept-protect-app-data-to-cloud.html"
@@ -106,7 +106,7 @@ sidebar:
         url: "/task-backup-app-data-to-storagegrid.html"
       - title: 애플리케이션 보호 관리
         url: "/task-manage-app-backups.html"
-      - title: 애플리케이션 데이터를 복원합니다
+      - title: 온프레미스 애플리케이션 데이터를 복원합니다
         entries:
         - title: Oracle 데이터베이스를 복원합니다
           url: "/task-restore-oracle-data.html"
@@ -114,22 +114,55 @@ sidebar:
           url: "/task-restore-sql-data.html"
       - title: 애플리케이션 백업을 마운트합니다
         url: "/task-mount-app-backup.html"
-    - title: 클라우드 네이티브 애플리케이션 데이터 백업 및 복원
+    - title: 클라우드 네이티브 애플리케이션 데이터 보호
       entries:
       - title: 클라우드 네이티브 애플리케이션 데이터 보호
         url: "/concept-protect-cloud-app-data-to-cloud.html"
-      - title: 필수 구성 요소
-        url: "/reference-prereq-protect-cloud-native-app-data.html"
       - title: 클라우드 네이티브 애플리케이션 데이터 백업
         entries:
-        - title: 응용 프로그램을 검색합니다
-          url: "/task-discover-applications.html"
-        - title: 클라우드 네이티브 애플리케이션 데이터를 백업합니다
-          url: "/task-backup-cloud-native-app-data.html"
+        - title: 클라우드 네이티브 Oracle 데이터베이스 백업
+          entries:
+          - title: BlueXP에 액세스합니다
+            url: "/reference-access-bluexp.html"
+          - title: ONTAP에 대해 FSx를 구성합니다
+            url: "/reference-configure-fsx-for-ontap.html"
+          - title: Cloud Volumes ONTAP를 구성합니다
+            url: "/reference-configure-cloud-volumes-ontap.html"
+          - title: 호스트를 추가하고 Oracle 데이터베이스를 검색합니다
+            url: "/task-add-host-discover-oracle-databases.html"
+          - title: Oracle 데이터베이스를 백업합니다
+            url: "/task-backup-cloud-native-oracle-data.html"
+        - title: 클라우드 네이티브 SAP HANA 데이터베이스 백업
+          entries:
+          - title: BlueXP에 액세스합니다
+            flavor: azure
+            url: "/reference-access-bluexp.html"
+          - title: Azure NetApp Files를 구성합니다
+            flavor: azure
+            url: "/reference-configure-azure-netapp-files.html"
+          - title: SAP HANA용 SnapCenter 플러그인 구축
+            flavor: azure
+            url: "/task-deploy-snapcenter-plugin-for-sap-hana.html"
+          - title: SAP HANA 데이터베이스 백업
+            flavor: azure
+            url: "/task-backup-cloud-native-sap-hana-data.html"
+      - title: 클라우드 네이티브 애플리케이션 데이터를 복원합니다
+        entries:
+        - title: 클라우드 네이티브 Oracle 데이터베이스를 복원합니다
+          url: "/task-restore-cloud-native-oracle-data.html"
+        - title: 클라우드 네이티브 SAP HANA 데이터베이스 복원
+          flavor: azure
+          url: "/task-restore-cloud-native-sap-hana-data.html"
+      - title: 클라우드 네이티브 애플리케이션 데이터의 클론 복제
+        entries:
+        - title: 클라우드 네이티브 Oracle 데이터베이스 클론
+          entries:
+          - title: 클론 개념 및 요구 사항
+            url: "/concept-clone-cloud-native-oracle-concepts.html"
+          - title: 클라우드 네이티브 Oracle 데이터베이스 클론
+            url: "/task-clone-cloud-native-oracle-data.html"
       - title: 클라우드 네이티브 애플리케이션 데이터의 보호 관리
         url: "/task-manage-cloud-native-app-data.html"
-      - title: 클라우드 네이티브 애플리케이션 데이터를 복원합니다
-        url: "/task-restore-cloud-native-app-data.html"
   - title: 가상 머신 데이터 백업 및 복원
     entries:
     - title: 가상 머신 데이터 보호
@@ -144,6 +177,9 @@ sidebar:
     - title: Microsoft Azure에 데이터 저장소를 백업합니다
       flavor: azure
       url: "/task-backup-vm-data-to-azure.html"
+    - title: 데이터 저장소를 Google Cloud Platform으로 백업합니다
+      flavor: gcp
+      url: "/task-backup-vm-data-to-gcp.html"
     - title: StorageGRID에 데이터 저장소를 백업합니다
       url: "/task-backup-vm-data-to-storagegrid.html"
     - title: 가상 머신 보호 관리
@@ -217,7 +253,7 @@ homepage:
     - title: Kubernetes 클러스터를 Google Cloud로
       url: task-backup-kubernetes-to-gcp.html
       flavor: gcp
-  - title: 애플리케이션 데이터 백업 및 복원
+  - title: 애플리케이션 데이터 보호
     links:
     - title: 사내 애플리케이션 데이터를 Amazon Web Services에 백업합니다
       flavor: aws
@@ -230,14 +266,10 @@ homepage:
       url: "/task-backup-app-data-to-gcp.html"
     - title: 사내 애플리케이션 데이터를 StorageGRID에 백업합니다
       url: "/task-backup-app-data-to-storagegrid.html"
-    - title: 클라우드에서 사내로 Oracle 데이터베이스 복원
-      url: task-restore-oracle-data.html
-    - title: SQL Server 데이터베이스를 클라우드에서 사내로 복원합니다
-      url: task-restore-sql-data.html
-    - title: 클라우드 네이티브 애플리케이션 데이터 백업
-      url: task-backup-cloud-native-app-data.html
-    - title: 클라우드 네이티브 애플리케이션 데이터를 복원합니다
-      url: task-restore-cloud-native-app-data.html
+    - title: 클라우드 네이티브 Oracle 데이터베이스 백업
+      url: task-backup-cloud-native-oracle-data.html
+    - title: 클라우드 네이티브 SAP HANA 데이터베이스 백업
+      url: task-backup-cloud-native-sap-hana-data.html
   - title: 가상 머신 데이터 백업 및 복원
     links:
     - title: Amazon Web Services에 데이터 저장소를 백업합니다
@@ -246,6 +278,9 @@ homepage:
     - title: Microsoft Azure에 데이터 저장소를 백업합니다
       flavor: azure
       url: "/task-backup-vm-data-to-azure.html"
+    - title: 데이터 저장소를 Google Cloud Platform으로 백업합니다
+      flavor: gcp
+      url: "/task-backup-vm-data-to-gcp.html"
     - title: StorageGRID에 데이터 저장소를 백업합니다
       url: "/task-backup-vm-data-to-storagegrid.html"
     - title: 클라우드에서 가상 머신을 복구합니다

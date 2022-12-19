@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: concept-protect-cloud-app-data-to-cloud.html 
-keywords: backing up, back up, backup, backup application data, Amazon EC2, Amazon Web services, Amazon FSx, Cloud Backup, Oracle database, requirements, prerequisites, Cloud Manager, BlueXP 
-summary: NetApp BlueXP에서 지원되는 클라우드 백업 은 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle ® 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다. 
+keywords: backing up, back up, backup, backup application data, Amazon EC2, Amazon Web services, Amazon FSx, Cloud Backup, Oracle database, requirements, prerequisites, Cloud Volumes ONTAP, Cloud Manager, BlueXP 
+summary: BlueXP는 NetApp ONTAP 또는 Cloud Volumes ONTAP용 Amazon FSx에 상주하는 Oracle ® 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다. 
 ---
 = 클라우드 네이티브 애플리케이션 데이터 보호
 :hardbreaks:
@@ -14,7 +14,11 @@ summary: NetApp BlueXP에서 지원되는 클라우드 백업 은 NetApp ONTAP�
 
 
 [role="lead"]
-Cloud Backup for Applications는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. NetApp BlueXP(이전의 Cloud Manager)에서 지원되는 Cloud Backup for Applications는 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다.
+Cloud Backup for Applications는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. BlueXP(이전의 Cloud Manager) 내에서 활성화된 Cloud Backup for Applications는 다음과 같은 애플리케이션에 대해 효율적이고 일관된 정책 기반 보호 기능을 제공합니다.
+
+* NetApp ONTAP 및 Cloud Volumes ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스입니다
+* Azure NetApp Files(ANF)에 상주하는 SAP HANA 시스템
+
 
 
 
@@ -26,32 +30,35 @@ Cloud Backup for Applications 아키텍처에는 다음과 같은 구성 요소�
 +
 NetApp 클라우드 스토리지에 상주하는 애플리케이션에 대해 데이터 보호 워크플로우를 조정합니다.
 
-* Cloud Backup for Applications UI는 BlueXP UI와 통합되어 있습니다.
+* BlueXP UI에서 Cloud Backup for Applications UI에 액세스할 수 있습니다.
 +
-Cloud Backup for Applications UI는 다양한 스토리지 및 데이터 관리 기능을 제공합니다.
+Cloud Backup for Applications UI는 애플리케이션을 위한 데이터 보호 기능을 제공합니다.
 
-* BlueXP Connector는 클라우드 네트워크에서 실행되고 Oracle 데이터베이스 호스트에서 실행되는 Amazon FSx 스토리지 파일 시스템 및 Oracle용 SnapCenter 플러그인과 상호 작용하는 BlueXP의 구성 요소입니다.
-* Oracle용 SnapCenter 플러그인은 각 Oracle 데이터베이스 호스트에서 실행되고 호스트에서 실행되는 Oracle 데이터베이스와 상호 작용하는 구성요소로서 데이터 보호 작업을 수행합니다.
-+
+* BlueXP Connector는 사용자의 클라우드 네트워크에서 실행되며 스토리지 시스템 및 애플리케이션별 플러그인과 상호 작용하는 구성 요소입니다.
+* 애플리케이션별 플러그인은 각 애플리케이션 호스트에서 실행되며 데이터 보호 작업을 수행하는 동안 호스트에서 실행 중인 데이터베이스와 상호 작용하는 구성 요소입니다.
+
+
 다음 이미지는 각 구성 요소와 이러한 구성 요소 간에 준비해야 하는 연결을 보여 줍니다.
 
-+
-image:diagram_nativecloud_backup_app.png["Cloud Backup이 다양한 구성요소와 통신하는 방법을 보여주는 다이어그램"]
+image:diagram_nativecloud_backup_app.png["각 구성 요소와 연결을 준비하는 방법을 보여주는 다이어그램"]
 
-+
-사용자가 시작한 요청의 경우 Cloud Backup for Applications UI는 요청 프로세스의 유효성을 검사할 때 BlueXP SaaS와 통신합니다. 백업 또는 복원과 같은 워크플로를 실행하도록 요청하는 경우 SaaS 서비스는 워크플로를 시작하고 필요한 경우 통화를 BlueXP Connector로 전달합니다. 그런 다음, Connector는 NetApp ONTAP용 Amazon FSx 및 Oracle용 SnapCenter 플러그인과 워크플로우 작업 실행에 함께 통신합니다.
+사용자가 시작한 요청의 경우 Cloud Backup for Applications UI는 요청 프로세스의 유효성을 검사할 때 BlueXP SaaS와 통신합니다. 요청이 백업, 복원 또는 클론과 같은 워크플로우를 실행하는 경우 SaaS 서비스는 워크플로우를 시작하고 필요한 경우 통화를 BlueXP Connector로 전달합니다. 그런 다음 Connector는 워크플로우 작업을 실행하는 과정에서 스토리지 시스템 및 애플리케이션별 플러그인과 통신합니다.
 
-+
-Connector는 Oracle 데이터베이스와 동일한 VPC 또는 다른 데이터베이스에 구축할 수 있습니다. Connector와 Oracle 데이터베이스가 서로 다른 네트워크에 있는 경우 이러한 데이터베이스 간에 네트워크 연결을 설정해야 합니다.
+커넥터는 애플리케이션 또는 다른 애플리케이션과 동일한 VPC 또는 VNET에 구축할 수 있습니다. 커넥터와 응용 프로그램이 서로 다른 네트워크에 있는 경우 이들 간에 네트워크 연결을 설정해야 합니다.
 
 
+NOTE: 단일 BlueXP 커넥터는 여러 스토리지 시스템 및 여러 애플리케이션 플러그인과 통신할 수 있습니다. Connector와 애플리케이션 호스트 간에 연결이 있는 경우 애플리케이션을 관리하려면 단일 커넥터가 필요합니다.
 
 
-IMPORTANT: Cloud Backup for Applications 인프라는 지역 내의 가용성 영역 장애에 대한 복원력을 제공합니다. 이제 새로운 지역으로 페일오버하여 지역 내 장애를 지원하며 이 페일오버에는 약 2시간의 다운타임이 발생합니다.
+IMPORTANT: Cloud Backup for Applications SaaS 인프라는 지역 내의 가용성 영역 장애에 대한 복원력을 제공합니다. 새로운 지역으로 페일오버하여 지역 내 장애를 지원하며 이 페일오버에는 약 2시간의 다운타임이 발생합니다.
 
 
 
-== 지원되는 구성
+== Oracle 데이터베이스 보호
+
+
+
+=== 지원되는 구성
 
 * 운영 체제:
 +
@@ -59,18 +66,32 @@ IMPORTANT: Cloud Backup for Applications 인프라는 지역 내의 가용성 �
 ** OL 7.5 이상 및 8.x
 
 
-* 스토리지 시스템: ONTAP용 Amazon FSx
-* 스토리지 레이아웃: nfs v3 및 v4.1(dNFS 지원) 및 ASM(ASMFD, ASMLLib 및 ASMUdev)을 사용한 iSCSI
-* 애플리케이션: Oracle Standard 및 Oracle Enterprise – 독립 실행형(레거시 및 멀티 테넌트 – CDB 및 PDB)
-* Oracle 버전: 12cR2, 18C 및 19c
+* 스토리지 시스템:
++
+** ONTAP용 Amazon FSx
+** Cloud Volumes ONTAP
+
+
+* 스토리지 레이아웃:
++
+** NFS v3 및 v4.1(dNFS 포함)
+** iSCSI with ASM(ASMFD, ASMLib 및 ASMUDEV)
+
+
+* 데이터베이스 레이아웃: Oracle Standard 및 Oracle Enterprise Standalone(레거시 및 멀티 테넌트 CDB 및 PDB)
+* 데이터베이스 버전: 12cR2, 18C, 19c 및 21c
 
 
 
 
-== 피처
+=== 피처
+
+* 호스트 추가 및 플러그인 구축
++
+플러그인을 수동으로 배포하거나 스크립트를 사용하거나 자동으로 배포할 수 있습니다.
 
 * Oracle 데이터베이스 자동 검색
-* NetApp ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스 백업
+* Oracle 데이터베이스 백업
 +
 ** 전체(데이터 + 제어 + 아카이브 로그 파일) 백업
 ** 필요 시 백업
@@ -84,51 +105,83 @@ IMPORTANT: Cloud Backup for Applications 인프라는 지역 내의 가용성 �
 * 지정된 백업에서 전체 Oracle 데이터베이스(데이터 파일 + 제어 파일)를 복원합니다
 * 지정된 백업에서만 데이터 파일 및 제어 파일을 복원합니다
 * SCN, 종료 시점, 사용 가능한 모든 로그 및 복구 옵션이 없을 때까지 Oracle 데이터베이스를 복구합니다
-* 백업 및 기타 작업 모니터링
+* 소스 또는 대체 타겟 호스트에서 Oracle 데이터베이스 클론 생성
++
+** 기본 원클릭 클론
+** 사용자 지정 클론 사양 파일을 사용한 고급 클론 생성
+** 클론 엔터티 이름은 자동으로 생성되거나 소스와 동일할 수 있습니다
+** 클론 계층 보기
+** 복제된 데이터베이스를 삭제하는 중입니다
+
+
+* 백업, 복원, 클론 및 기타 작업 모니터링
 * 대시보드에 보호 요약 표시
 * 이메일을 통해 알림 전송
 
 
 
 
-== 제한 사항
+=== 제한 사항
 
-* Oracle 버전 11g 및 21c는 지원하지 않습니다
-* 에서는 백업에 대한 마운트, 클론, 카탈로그 및 검증 작업을 지원하지 않습니다
+* Oracle 11g를 지원하지 않습니다
+* 에서는 백업에 대한 마운트, 카탈로그 및 검증 작업을 지원하지 않습니다
 * RAC 및 Data Guard에서 Oracle을 지원하지 않습니다
-* 백업 제한 사항:
+* Cloud Volumes ONTAP HA의 경우 네트워크 인터페이스 IP 중 하나만 사용됩니다. IP 연결이 끊기거나 IP에 액세스할 수 없는 경우 작업이 실패합니다.
+* NetApp ONTAP 또는 Cloud Volumes ONTAP용 Amazon FSx의 네트워크 인터페이스 IP 주소는 BlueXP 계정 및 지역에서 고유해야 합니다.
+
+
+
+
+== SAP HANA 데이터베이스 보호
+
+
+
+=== 지원되는 구성
+
+* 운영 체제:
 +
-** 에서는 온라인 데이터 또는 로그 전용 백업을 지원하지 않습니다
-** 에서는 오프라인 백업을 지원하지 않습니다
-** 에서는 재귀 마운트 지점에 상주하는 Oracle 데이터베이스 백업을 지원하지 않습니다
-** 에서는 FSx 볼륨이 중복되어 있는 여러 ASM 디스크 그룹에 상주하는 Oracle 데이터베이스에 대한 정합성 보장 그룹 스냅샷을 지원하지 않습니다
-** Oracle 데이터베이스가 ASM에 구성되어 있는 경우 SVM 이름이 FSx 시스템 전체에서 고유한지 확인합니다. FSx 시스템 간에 SVM 이름이 동일한 경우 이러한 SVM에 상주하는 Oracle 데이터베이스 백업도 지원되지 않습니다.
+** RHEL 7.5 이상, SAP HANA 인증 8.x 플랫폼
+** SLES 12 SP5 이상 및 15 SPX 플랫폼은 SAP HANA 인증을 받았습니다
 
 
-* 복구 제한 사항:
+* 스토리지 시스템: Azure NetApp Files(ANF)
+* 스토리지 레이아웃: 데이터 및 로그의 경우 Azure는 NFSv4.1만 지원합니다.
+* 데이터베이스 레이아웃:
 +
-** 테이블스페이스 및 PDB 복원과 같은 세분화된 복원은 지원하지 않습니다
-** NAS 및 SAN 레이아웃에서 Oracle 데이터베이스의 데이터 이동 없는 복원만 지원합니다
-** 에서는 SAN 레이아웃에서 제어 파일 또는 데이터 파일 + Oracle 데이터베이스 제어 파일의 복원만 지원하지 않습니다
-** SAN 레이아웃에서 Oracle용 SnapCenter 플러그인이 ASM 디스크 그룹에서 Oracle 데이터 파일 이외의 외부 파일을 찾으면 복구 작업이 실패합니다. 외부 파일은 다음 유형 중 하나 이상이 될 수 있습니다.
+** 단일 컨테이너 버전 1.0SPS12
+** SAP HANA 다중 테넌트 데이터베이스 컨테이너(MDC) 2.0SPS4, 2.0SPS5, 2.0SPS6, 단일 또는 다중 테넌트 포함
+** SAP HANA 단일 호스트 시스템, SAP HANA 다중 호스트 시스템(대기 호스트 없음), HANA 시스템 복제
+
+
+* 데이터베이스 호스트의 SAP HANA 플러그인
+
+
+
+
+=== 피처
+
+* SAP HANA 시스템을 수동으로 추가합니다
+* SAP HANA 데이터베이스 백업
 +
-*** 매개 변수
-*** 암호
-*** 보관 로그
-*** 온라인 로그
-*** ASM 매개 변수 파일입니다.
+** 필요 시 백업(파일 기반 및 스냅샷 복사본 기반)
+** 시스템 정의 또는 사용자 지정 정책을 기반으로 예약된 백업
 +
-매개 변수, 암호 및 아카이브 로그 유형의 외부 파일을 재정의하려면 강제 데이터 이동 없이 복원 확인란을 선택해야 합니다.
+정책에서 시간별, 일별, 주별 및 월별 등 다양한 예약 빈도를 지정할 수 있습니다.
 
-+
-
-NOTE: 다른 유형의 외부 파일이 있는 경우 복원 작업이 실패하고 데이터베이스를 복구할 수 없습니다. 다른 유형의 외부 파일이 있는 경우 복원 작업을 수행하기 전에 해당 파일을 삭제하거나 다른 위치로 이동해야 합니다.
-
-+
-알려진 문제로 인해 UI의 작업 페이지에 외부 파일이 있기 때문에 실패 메시지가 표시되지 않습니다. 문제의 원인을 알 수 있도록 SAN 사전 복원 단계 중에 오류가 발생한 경우 커넥터 로그를 확인하십시오.
+** HANA 시스템 복제(HSR) 인식
 
 
+* 정책을 기반으로 백업을 유지합니다
+* 지정된 백업에서 전체 SAP HANA 데이터베이스를 복원하는 중입니다
+* HANA 비 데이터 볼륨 및 글로벌 비 데이터 볼륨 백업 및 복원
+* Prescript 및 PostScript는 백업 및 복원 작업에 환경 변수 사용을 지원합니다
+* 사전 종료 옵션을 사용하여 실패 시나리오에 대한 작업 계획을 작성합니다
 
 
 
+
+=== 제한 사항
+
+* HSR 구성의 경우 2노드 HSR만 지원됩니다(1개의 기본 및 1개의 보조).
+* 복원 작업 중에 PS가 실패할 경우 잔상이 트리거되지 않습니다
 

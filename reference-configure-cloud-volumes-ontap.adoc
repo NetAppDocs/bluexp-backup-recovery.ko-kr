@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: reference-configure-cloud-volumes-ontap.html 
+keywords: Cloud Manager, Cloud Volumes ONTAP, working environment, Connector, BlueXP 
+summary: Cloud Volumes ONTAP 작업 환경과 커넥터를 작성합니다 
+---
+= Cloud Volumes ONTAP를 구성합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP 작업 환경과 커넥터를 작성해야 합니다.
+
+
+
+== Cloud Volumes ONTAP 작업 환경을 생성합니다
+
+기존 Cloud Volumes ONTAP 시스템을 검색하고 BlueXP에 추가할 수 있습니다. 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-adding-systems.html["기존 Cloud Volumes ONTAP 시스템을 BlueXP에 추가"].
+
+
+
+== 커넥터를 작성합니다
+
+클라우드 환경을 위한 Cloud Volumes ONTAP를 몇 가지 단계로 시작할 수 있습니다. 자세한 내용은 다음 중 하나를 참조하십시오.
+
+* link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["AWS에서 Cloud Volumes ONTAP를 빠르게 시작합니다"]
+* link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-azure.html["Azure에서 Cloud Volumes ONTAP를 빠르게 시작합니다"]
+* link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html["Google Cloud에서 Cloud Volumes ONTAP를 빠르게 시작합니다"]
+
+
+동일한 커넥터를 사용하여 CVO 작업 환경과 Oracle 데이터베이스를 모두 관리해야 합니다.
+
+* CVO 작업 환경과 Oracle 데이터베이스가 동일한 VPC 또는 VNET에 있는 경우 동일한 VPC 또는 VNET에 커넥터를 구축할 수 있습니다.
+* CVO 작업 환경과 Oracle 데이터베이스가 서로 다른 VPC 또는 VNets에 있는 경우 VPC 또는 VNets를 피어링해야 합니다.
+

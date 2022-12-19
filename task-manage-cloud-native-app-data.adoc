@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-manage-cloud-native-app-data.html 
-keywords: manage, view backup, monitor jobs, monitor 
+keywords: manage, view backup, monitor jobs, monitor, Cloud Manager, BlueXP 
 summary: 백업 세부 정보를 보고 모든 작업의 상태를 모니터링합니다. 
 ---
 = 클라우드 네이티브 애플리케이션 데이터의 보호 관리
@@ -45,6 +45,14 @@ summary: 백업 세부 정보를 보고 모든 작업의 상태를 모니터링�
 
 
 
+== 감사 데이터
+
+API를 직접 실행하거나 UI를 사용하여 Cloud Backup for Applications의 외부에서 노출된 API 중 하나에 API 호출을 수행하는 경우 헤더, 역할, 요청 본문 등의 요청 세부 정보가 API 정보는 BlueXP 타임라인에 기록되고 감사 항목은 타임라인에 영구적으로 유지됩니다. API 호출의 상태 및 오류 응답도 작업 완료 후 감사합니다. 작업과 같은 비동기 API 응답의 경우 작업 ID도 응답의 일부로 기록됩니다.
+
+Cloud Backup for Applications는 호스트 IP, 요청 본문, 작업 이름, 트리거된 항목, 일부 헤더, API의 작동 상태를 확인할 수 있습니다.
+
+
+
 == 백업 세부 정보를 봅니다
 
 생성된 총 백업 수, 백업 생성에 사용되는 정책, 데이터베이스 버전 및 에이전트 ID를 볼 수 있습니다.
@@ -54,34 +62,40 @@ summary: 백업 세부 정보를 보고 모든 작업의 상태를 모니터링�
 
 
 
-IMPORTANT: 상담원 ID는 커넥터에 연결됩니다. Oracle 데이터베이스 호스트를 등록하는 동안 사용된 Connector가 더 이상 존재하지 않으면 새 Connector의 에이전트 ID가 다르기 때문에 해당 애플리케이션의 후속 백업이 실패합니다. 커넥터-업데이트 * API를 실행하여 에이전트 ID를 수정해야 합니다.
+IMPORTANT: 상담원 ID는 커넥터에 연결됩니다. SAP HANA 호스트를 등록하는 동안 사용된 커넥터가 더 이상 존재하지 않으면 새 Connector의 에이전트 ID가 다르기 때문에 해당 애플리케이션의 후속 백업이 실패합니다. 호스트에서 커넥터 ID를 수정해야 합니다.
 
 
 
-== 커넥터 세부 정보를 업데이트합니다
+== 클론을 삭제합니다
 
-Oracle 데이터베이스 호스트를 등록하는 동안 사용된 커넥터가 더 이상 존재하지 않거나 AWS에서 손상된 경우 새 커넥터를 구축해야 합니다. 새 커넥터를 배포한 후에는 * connector-update * API를 실행하여 커넥터 세부 정보를 업데이트해야 합니다.
+더 이상 필요하지 않은 경우 클론을 삭제할 수 있습니다.
+
+. 을 클릭합니다 image:button_plus_sign_square.png["아이콘을 클릭하여 작업을 선택합니다"] Filter by * 옆에 * Clone options * > * Clone Parents * 를 선택합니다.
+. 을 클릭합니다 image:icon-action.png["아이콘을 클릭하여 작업을 선택합니다"] 해당 응용 프로그램에 대해 * 세부 정보 보기 * 를 클릭합니다.
+. 데이터베이스 세부 정보 페이지에서 을 클릭합니다 image:button_plus_sign_square.png["아이콘을 클릭하여 작업을 선택합니다"] Filter by * 옆의 * Clone * 을 선택합니다.
+. 을 클릭합니다 image:icon-action.png["아이콘을 클릭하여 작업을 선택합니다"] 삭제할 클론에 대해 * Delete * 를 클릭합니다.
+. (선택 사항) * 강제 삭제 * 확인란을 선택합니다.
+
+
+
+
+== SAP HANA 데이터베이스 호스트에 대한 커넥터 세부 정보를 업데이트합니다
+
+응용 프로그램 호스트를 등록하는 동안 사용된 커넥터가 더 이상 존재하지 않거나 손상된 경우 새 커넥터를 배포해야 합니다. 새 커넥터를 배포한 후에는 * connector-update * API를 실행하여 이전 커넥터를 사용하여 등록된 모든 호스트의 커넥터 세부 정보를 업데이트해야 합니다.
 
 [listing]
 ----
-curl --location --request PATCH 'https://snapcenter.cloudmanager.cloud.netapp.com/api/oracle/databases/connector-update' \
+curl --location --request PATCH
+'https://snapcenter.cloudmanager.cloud.netapp.com/api/saphana/hosts/connector/update' \
 --header 'x-account-id: <CM account-id>' \
---header 'x-agent-id: <connector Agent ID >' \
 --header 'Authorization: Bearer token' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"old_connector_id": "Old connector id that no longer exist",
+"old_connector_id": "Old connector id that no longer exists",
 "new_connector_id": "New connector Id"
 }
 ----
-커넥터 세부 정보를 업데이트한 후 Oracle 데이터베이스 호스트에 연결하고 다음 단계를 수행해야 합니다.
-
-. Oracle 데이터베이스 호스트에서 실행 중인 플러그인 정보를 가져옵니다. "rpm-qi netapp-snapcenter-plugin-oracle"
-. 플러그인을 제거합니다. 'SUDO/opt/NetApp/snapcenter/SPL/installation/plugins/uninstall'
-. 플러그인이 성공적으로 제거되었는지 확인합니다. "rpm-qi netapp-snapcenter-plugin-oracle"
-
-
-플러그인을 제거한 후 플러그인을 배포할 수 있습니다. link:reference-prereq-protect-cloud-native-app-data.html#deploy-snapcenter-plug-in-for-oracle["자세한 정보"].
+모든 호스트에 SAP HANA용 SnapCenter 플러그인이 설치되어 실행 중이며 새 커넥터에서 모두 연결할 수 있는 경우 커넥터 세부 정보가 성공적으로 업데이트됩니다.
 
 
 
@@ -123,7 +137,7 @@ NOTE: CertFile.crt는 루트 CA 및 중간 CA의 인증서를 나타냅니다.
 
 === 플러그인의 서버 인증서에 대해 CA 서명 인증서를 구성합니다
 
-CA 인증서에는 Connector 가상 머신이 통신하는 Oracle 플러그인 호스트의 정확한 이름이 있어야 합니다.
+CA 인증서에는 Connector 가상 머신이 통신하는 플러그인 호스트의 정확한 이름이 있어야 합니다.
 
 * 필요한 것 *
 
