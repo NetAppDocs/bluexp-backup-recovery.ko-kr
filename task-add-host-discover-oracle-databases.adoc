@@ -58,31 +58,6 @@ summary: 각 Oracle 데이터베이스 호스트에 Oracle용 SnapCenter 플러�
 
 
 
-=== 플러그인을 수동으로 구축합니다
-
-Oracle 호스트에서 SSH 키 기반 인증이 활성화되지 않은 경우 다음 수동 단계를 수행하여 플러그인을 구축해야 합니다.
-
-* 단계 *
-
-. Connector VM에 로그인합니다.
-. SnapCenter Linux 호스트 플러그인 바이너리를 다운로드합니다. S UDO Docker Exec - IT cloudmanager_scs_cloud curl-X get 'http://127.0.0.1/deploy/downloadLinuxPlugin'`[]
-. 기본 마운트 경로를 가져옵니다. 'SUDO Docker 볼륨 ls | grep scs_cloud_volume | awk {'print$2'} | xargs sudo Docker 볼륨 검사 | grep mountpoint'
-. 다운로드한 플러그인의 바이너리 경로를 가져옵니다. sudo ls <base_mount_path>$(sudo docker PS | grep-Po "cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin/snapcenter_linux_host_plugin_scs.bin'
-. SCP 또는 다른 대체 방법을 사용하여 각 Oracle 데이터베이스 호스트에 _snapcenter_linux_host_plugin_scs.bin_을 복사합니다.
-+
-snapcenter_linux_host_plugin_scs.bin_은 루트가 아닌 사용자가 액세스할 수 있는 위치에 복사해야 합니다.
-
-. 루트가 아닌 사용자 계정을 사용하여 Oracle 데이터베이스 호스트에 로그인하고 다음 명령을 실행하여 바이너리에 대한 실행 권한을 활성화합니다.
-`chmod +x snapcenter_linux_host_plugin_scs.bin`
-. Oracle 플러그인을 sudo non-root 사용자로 구축합니다.
-`./snapcenter_linux_host_plugin_scs.bin -i silent -DSPL_USER=<non-root-user>`
-. 플러그인 호스트의 커넥터 VM의 _/var/opt/snapcenter/spl/etc/_에서 _certificate.p12_from_<base_mount_path>/client/certificate/_path를 _ /var/opt/snapcenter/spl/etc/_로 복사합니다.
-. /var/opt/snapcenter/spl/etc_로 이동하고 keytool 명령을 실행하여 인증서를 가져옵니다. keytool -v -importkeystore -srckeystore certificate.p12 -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype jks -srcstorephass SnapCenter -deststorephass SnapCenter -srcalalas agentcert -alias destagentcert -not프롬프트
-. SPL을 다시 시작합니다:'stemctl restart SPL'
-
-
-
-
 === 스크립트를 사용하여 플러그인을 배포합니다
 
 비 루트 사용자에 대해 Oracle 호스트에서 SSH 키 기반 인증을 사용하는 경우 다음 단계를 수행하여 플러그인을 구축할 수 있습니다. 단계를 수행하기 전에 커넥터에 대한 SSH 연결이 활성화되어 있는지 확인합니다.
@@ -106,6 +81,31 @@ snapcenter_linux_host_plugin_scs.bin_은 루트가 아닌 사용자가 액세스
 
 예를 들면 다음과 같습니다.
 `sudo /var/lib/docker/volumes/service-manager-2_cloudmanager_scs_cloud_volume/_data/scripts/oracle_plugin_copy_and_install.sh --host xxx.xx.x.x --sshkey /keys/netapp-ssh.ppk`
+
+
+
+=== 플러그인을 수동으로 구축합니다
+
+Oracle 호스트에서 SSH 키 기반 인증이 활성화되지 않은 경우 다음 수동 단계를 수행하여 플러그인을 구축해야 합니다.
+
+* 단계 *
+
+. Connector VM에 로그인합니다.
+. SnapCenter Linux 호스트 플러그인 바이너리를 다운로드합니다. S UDO Docker Exec - IT cloudmanager_scs_cloud curl-X get 'http://127.0.0.1/deploy/downloadLinuxPlugin'`[]
+. 기본 마운트 경로를 가져옵니다. 'SUDO Docker 볼륨 ls | grep scs_cloud_volume | awk {'print$2'} | xargs sudo Docker 볼륨 검사 | grep mountpoint'
+. 다운로드한 플러그인의 바이너리 경로를 가져옵니다. sudo ls <base_mount_path>$(sudo docker PS | grep-Po "cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin/snapcenter_linux_host_plugin_scs.bin'
+. SCP 또는 다른 대체 방법을 사용하여 각 Oracle 데이터베이스 호스트에 _snapcenter_linux_host_plugin_scs.bin_을 복사합니다.
++
+snapcenter_linux_host_plugin_scs.bin_은 루트가 아닌 사용자가 액세스할 수 있는 위치에 복사해야 합니다.
+
+. 루트가 아닌 사용자 계정을 사용하여 Oracle 데이터베이스 호스트에 로그인하고 다음 명령을 실행하여 바이너리에 대한 실행 권한을 활성화합니다.
+`chmod +x snapcenter_linux_host_plugin_scs.bin`
+. Oracle 플러그인을 sudo non-root 사용자로 구축합니다.
+`./snapcenter_linux_host_plugin_scs.bin -i silent -DSPL_USER=<non-root-user>`
+. 플러그인 호스트의 커넥터 VM의 _/var/opt/snapcenter/spl/etc/_에서 _certificate.p12_from_<base_mount_path>/client/certificate/_path를 _ /var/opt/snapcenter/spl/etc/_로 복사합니다.
+. /var/opt/snapcenter/spl/etc_로 이동하고 keytool 명령을 실행하여 인증서를 가져옵니다. keytool -v -importkeystore -srckeystore certificate.p12 -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype jks -srcstorephass SnapCenter -deststorephass SnapCenter -srcalalas agentcert -alias destagentcert -not프롬프트
+. SPL을 다시 시작합니다:'stemctl restart SPL'
+
 
 
 

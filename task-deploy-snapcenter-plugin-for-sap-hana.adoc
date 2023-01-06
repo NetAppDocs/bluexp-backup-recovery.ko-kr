@@ -29,9 +29,9 @@ NOTE: 각 SAP HANA 데이터베이스 호스트에 Java 11(64비트) Oracle Java
 
 . Connector VM에 로그인합니다.
 . Linux 호스트 플러그인 바이너리를 다운로드합니다.
-`sudo docker exec -it cloudmanager_scs_cloud curl -X GET 'http://127.0.0.1/deploy/downloadLinuxPlugin'``
+`sudo docker exec -it cloudmanager_scs_cloud curl -X GET 'http://127.0.0.1/deploy/downloadLinuxPlugin'`
 . 기본 마운트 경로를 가져옵니다. 'SUDO Docker 볼륨 ls | grep scs_cloud_volume | awk {'print$2'} | xargs sudo Docker 볼륨 검사 | grep mountpoint'
-. 에서 행 1을 16으로 복사합니다 `oracle_checksum_scs.txt`` 파일 위치 `base_mount_path/version/sc-linux-host-plugin/`
+. 에서 행 1을 16으로 복사합니다 `oracle_checksum_scs.txt` 파일 위치 `base_mount_path/version/sc-linux-host-plugin/`
 . SAP HANA 데이터베이스 호스트에 로그인하고 다음 단계를 수행합니다.
 +
 .. 루트가 아닌 사용자 계정, 개인 키 쌍을 만들고 권한을 할당합니다.
@@ -39,34 +39,6 @@ NOTE: 각 SAP HANA 데이터베이스 호스트에 Java 11(64비트) Oracle Java
 +
 위의 줄에서 <LINUXUSER>를 만든 루트가 아닌 사용자로 바꾸고 visualod 유틸리티에 저장합니다.
 
-
-
-
-
-
-
-== 플러그인을 수동으로 구축합니다
-
-HANA 호스트에 SSH 키 기반 인증이 설정되어 있지 않은 경우 다음 수동 단계를 수행하여 플러그인을 구축해야 합니다.
-
-* 단계 *
-
-. Connector VM에 로그인합니다.
-. Linux 호스트 플러그인 바이너리를 다운로드합니다.
-`# sudo docker exec -it cloudmanager_scs_cloud curl -X GET 'http://127.0.0.1/deploy/downloadLinuxPlugin'``
-. 기본 마운트 경로를 가져옵니다.
-`sudo docker volume ls | grep scs_cloud_volume | awk {'print $2'} | xargs sudo docker volume inspect | grep Mountpoint``
-. 다운로드한 플러그인의 바이너리 경로를 가져옵니다.
-`sudo ls <base_mount_path> $(sudo docker ps|grep -Po "cloudmanager_scs_cloud:.*? "|sed -e 's/ *$//'|cut -f2 -d":")/sc-linux-host-plugin/snapcenter_linux_host_plugin_scs.bin``
-. 복사 `snapcenter_linux_host_plugin_scs.bin`` 각 SAP HANA 데이터베이스 호스트에 SCP 또는 다른 대체 방법을 사용합니다.
-. SAP HANA 데이터베이스 호스트에서 다음 명령을 실행하여 바이너리에 대한 실행 권한을 설정합니다.
-`chmod +x snapcenter_linux_host_plugin_scs.bin`
-. sudo non-root 사용자로 SAP HANA 플러그인을 구축합니다.``./snapcenter_linux_host_plugin_scs.bin -i silent -DSPL_USER=<non-root-user>``
-. 복사 플러그인 호스트에서
-+
-.. '/var/opt/snapcenter/spl/etc로 이동합니다`` and execute the keytool command to import the certificate.
-`keytool -v -importkeystore -srckeystore certificate.p12 -srcstoretype PKCS12 -destkeystore keystore.jks -deststoretype JKS -srcstorepass snapcenter -deststorepass snapcenter -srcalias agentcert -destalias agentcert -noprompt``
-.. SPL 다시 시작: `systemctl restart spl``
 
 
 
@@ -91,6 +63,33 @@ HANA 호스트에 SSH 키 기반 인증이 설정되어 있는 경우 다음 단
 ** SSH_PORT: HANA 호스트의 SSH 포트이며, 이는 선택적 매개 변수입니다. 기본값은 22입니다.
 ** plugin_port: 플러그인에서 사용하는 포트로, 이 매개 변수는 선택 사항입니다. 기본값은 8145입니다.
 ** install_dir: 플러그인이 배포될 디렉토리이며 선택적 매개 변수입니다. 기본값은 /opt입니다.
+
+
+
+
+
+
+== 플러그인을 수동으로 구축합니다
+
+HANA 호스트에 SSH 키 기반 인증이 설정되어 있지 않은 경우 다음 수동 단계를 수행하여 플러그인을 구축해야 합니다.
+
+* 단계 *
+
+. Connector VM에 로그인합니다.
+. Linux 호스트 플러그인 바이너리를 다운로드합니다.
+`# sudo docker exec -it cloudmanager_scs_cloud curl -X GET 'http://127.0.0.1/deploy/downloadLinuxPlugin'`
+. 기본 마운트 경로를 가져옵니다. 'SUDO Docker 볼륨 ls | grep scs_cloud_volume | awk {'print$2'} | xargs sudo Docker 볼륨 검사 | grep mountpoint'
+. 다운로드한 플러그인의 바이너리 경로를 가져옵니다. sudo ls <base_mount_path>$(sudo docker PS | grep-Po "cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin/snapcenter_linux_host_plugin_scs.bin'
+. 복사 `snapcenter_linux_host_plugin_scs.bin` 각 SAP HANA 데이터베이스 호스트에 SCP 또는 다른 대체 방법을 사용합니다.
+. SAP HANA 데이터베이스 호스트에서 다음 명령을 실행하여 바이너리에 대한 실행 권한을 설정합니다.
+`chmod +x snapcenter_linux_host_plugin_scs.bin`
+. sudo non-root 사용자로 SAP HANA 플러그인을 구축합니다.
+`./snapcenter_linux_host_plugin_scs.bin -i silent -DSPL_USER=<non-root-user>`
+. 복사 `certificate.p12` 보낸 사람 `<base_mount_path>/client/certificate/` 커넥터 VM의 경로 `/var/opt/snapcenter/spl/etc/` 플러그인 호스트에서
++
+.. 로 이동합니다 `/var/opt/snapcenter/spl/etc` 키 도구 명령을 실행하여 인증서를 가져옵니다.
+`keytool -v -importkeystore -srckeystore certificate.p12 -srcstoretype PKCS12 -destkeystore keystore.jks -deststoretype JKS -srcstorepass snapcenter -deststorepass snapcenter -srcalias agentcert -destalias agentcert -noprompt`
+.. SPL을 다시 시작합니다:'stemctl restart SPL'
 
 
 
