@@ -198,6 +198,8 @@ sidebar:
       url: "/reference-azure-backup-tiers.html"
     - title: 지원되는 Google 아카이브 스토리지 계층
       url: "/reference-google-backup-tiers.html"
+    - title: 어두운 사이트에서 Cloud Backup 데이터베이스를 백업합니다
+      url: "/reference-backup-cbs-db-in-dark-site.html"
     - title: Azure에서 다중 계정 액세스를 위한 백업을 구성합니다
       url: "/reference-backup-multi-account-azure.html"
   - title: 지식 및 지원

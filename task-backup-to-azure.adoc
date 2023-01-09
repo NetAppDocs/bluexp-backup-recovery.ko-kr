@@ -24,7 +24,7 @@ Cloud Volumes ONTAP에서 Azure Blob 저장소로 데이터 백업을 시작하�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1개"] 구성에 대한 지원을 확인합니다
 [role="quick-margin-list"]
-* Azure에서 Cloud Volumes ONTAP 9.7P5 이상을 실행하고 있습니다.
+* Azure에서 Cloud Volumes ONTAP 9.7P5 이상을 실행 중입니다(ONTAP 9.8P13 이상 권장).
 * 백업이 위치할 스토리지 공간에 대한 유효한 클라우드 공급자 가입이 있습니다.
 * 에 가입했습니다 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["BlueXP Marketplace 백업 서비스"^]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"^] Cloud Backup BYOL 라이센스는 NetApp에서 제공
 
@@ -116,9 +116,11 @@ Azure Synapse Analytics 리소스 공급자를 구독에 등록해야 합니다.
 "Microsoft.Synapse/register/action",
 "Microsoft.Synapse/checkNameAvailability/action",
 "Microsoft.Synapse/workspaces/operationStatuses/read",
+"Microsoft.Synapse/workspaces/firewallRules/write",
 "Microsoft.Synapse/workspaces/firewallRules/read",
 "Microsoft.Synapse/workspaces/replaceAllIpFirewallRules/action",
-"Microsoft.Synapse/workspaces/operationResults/read"
+"Microsoft.Synapse/workspaces/operationResults/read",
+"Microsoft.Synapse/workspaces/privateEndpointConnectionsApproval/action"
 ----
 +
 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html["정책의 전체 JSON 형식을 봅니다"^]
