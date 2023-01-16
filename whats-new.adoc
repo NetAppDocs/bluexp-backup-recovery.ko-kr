@@ -473,19 +473,3 @@ GKE 클러스터에 NetApp Astra Trident가 설치되어 있고 Cloud Volumes ON
 === 새 작업 모니터를 사용하여 모든 백업 및 복원 작업의 진행 상태를 확인할 수 있습니다
 
 백업 정책 변경 또는 백업 삭제와 같이 여러 볼륨에 대해 작업을 시작한 경우 작업 모니터를 사용하면 모든 볼륨에서 작업이 완료된 시점을 확인할 수 있습니다. link:task-monitor-backup-jobs.html["작업 모니터 사용 방법을 참조하십시오"].
-
-
-
-== 2022년 1월 2일
-
-
-
-=== AKS Kubernetes 클러스터에서 Azure Blob 스토리지로 영구 볼륨을 백업할 수 있습니다
-
-AKS 클러스터에 NetApp Astra Trident가 설치되어 있고 Azure용 Cloud Volumes ONTAP를 클러스터용 백엔드 스토리지로 사용하는 경우, Azure Blob 스토리지간에 볼륨을 백업 및 복원할 수 있습니다. link:task-backup-kubernetes-to-azure.html["자세한 내용을 보려면 여기를 클릭하십시오"].
-
-
-
-=== 업계 표준에 더욱 부합하도록 이번 릴리스에서 Cloud Backup Service 요금이 변경되었습니다
-
-백업 파일의 크기에 따라 NetApp의 용량을 지불하는 대신, 현재 백업 중인 소스 ONTAP 볼륨의 논리적 사용 용량(ONTAP 효율성 이전)을 기준으로 계산한, 보호하는 데이터에 대해서만 비용을 지불하면 됩니다. 이 용량을 FETB(Front-End Terabytes)라고도 합니다.

@@ -463,7 +463,6 @@
   <block id="2bfa980473a5e104b4ba06a383a064c8" category="paragraph"><block ref="2bfa980473a5e104b4ba06a383a064c8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c7a220fc58ccea879a68f706ca98ac0c" category="list-text">변경 사항을 적용하려면 * 저장 * 을 클릭합니다.</block>
   <block id="8764d766d622ae40812776b15d742a79" category="inline-xref">백업을 삭제합니다</block>
-  <block id="1cdf12d909faca3295263dc58dc5d4b8" category="paragraph">* 참고: * 볼륨이 백업되지 않도록 하는 경우 클라우드 공급자가 백업이 사용하는 용량에 대한 객체 스토리지 비용을 계속 청구합니다 <block ref="e2e48247dd6dcee2daca407937463dc9" category="inline-xref-macro-rx"></block>.</block>
   <block id="ad7037225e1a7db97ed58953b9110f81" category="section-title">새 백업 정책 추가</block>
   <block id="c0cad1a6c15f5188e53bda023704429c" category="paragraph">작업 환경에 Cloud Backup을 활성화하면 처음에 선택한 모든 볼륨이 사용자가 정의한 기본 백업 정책을 사용하여 백업됩니다. RPO(복구 지점 목표)가 다른 특정 볼륨에 서로 다른 백업 정책을 할당하려면 해당 클러스터에 대한 추가 정책을 생성한 다음 해당 정책을 다른 볼륨에 할당할 수 있습니다.</block>
   <block id="35ca84c9ac716ce66e06cc6b1cf45a92" category="inline-xref">해당 작업 환경의 볼륨에 정책을 적용합니다</block>
@@ -547,9 +546,6 @@
   <block id="963d2836c97952a191ac974f0e9b5e67" category="inline-link-macro">클러스터에 대한 새 백업 정책을 생성하고 이를 선택한 볼륨에 할당하는 방법을 알아보십시오</block>
   <block id="b702b8a648700d54afccce0b8de7766a" category="paragraph">이 옵션은 새 작업 환경에서 백업을 설정하거나 기존 작업 환경의 _Manage Volumes_페이지에서 백업을 설정할 때 사용할 수 있습니다.</block>
   <block id="7a99d9487fc9540fa7bee7c2eb717413" category="inline-link-macro">작업 모니터 사용 방법을 참조하십시오</block>
-  <block id="586301717819197e24001cac47efdaaa" category="section-title">2022년 1월 2일</block>
-  <block id="8b0675f2bcc5bb7f00dbceec71509372" category="paragraph">AKS 클러스터에 NetApp Astra Trident가 설치되어 있고 Azure용 Cloud Volumes ONTAP를 클러스터용 백엔드 스토리지로 사용하는 경우, Azure Blob 스토리지간에 볼륨을 백업 및 복원할 수 있습니다. <block ref="dedf276821ed6d29dbf4b6c6ac7e23c3" category="inline-link-macro-rx"></block>.</block>
-  <block id="8f26fba202051bdab8552c6642789714" category="paragraph">백업 파일의 크기에 따라 NetApp의 용량을 지불하는 대신, 현재 백업 중인 소스 ONTAP 볼륨의 논리적 사용 용량(ONTAP 효율성 이전)을 기준으로 계산한, 보호하는 데이터에 대해서만 비용을 지불하면 됩니다. 이 용량을 FETB(Front-End Terabytes)라고도 합니다.</block>
   <block id="6c92285fa6d3e827b198d120ea3ac674" category="inline-link">여기</block>
   <block id="ee0db59fec59c2b3e6c6583a61bf12b6" category="doc">백업 및 복원 작업의 상태를 모니터링합니다</block>
   <block id="30ae8fff8898dc197acd49d9c0797d20" category="list-text">성공했습니다</block>
@@ -1072,8 +1068,6 @@
   <block id="57ccb73ee63efac047dc0eeebb63f5a1" category="section-title">이제 단일 클러스터의 개별 볼륨에 백업 정책을 할당할 수 있습니다</block>
   <block id="81bbbb41117b46d39dbcf4b7db2f1e38" category="section-title">새 옵션을 사용하면 새로 생성된 볼륨에 기본 백업 정책을 자동으로 적용할 수 있습니다</block>
   <block id="739f8a5ac1453fdcd33ce781cd333914" category="section-title">새 작업 모니터를 사용하여 모든 백업 및 복원 작업의 진행 상태를 확인할 수 있습니다</block>
-  <block id="3d83253385058dc12afb77a2f730e4c2" category="section-title">AKS Kubernetes 클러스터에서 Azure Blob 스토리지로 영구 볼륨을 백업할 수 있습니다</block>
-  <block id="14c8359231c23d6f5c54ca5cd66b7645" category="section-title">업계 표준에 더욱 부합하도록 이번 릴리스에서 Cloud Backup Service 요금이 변경되었습니다</block>
   <block id="cd1b53810620b8c77681a96dd010c21c" category="list-text">Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. <block ref="47744e5312ce42ad8130a5365d7fb0d0" category="inline-link-macro-rx"></block>.</block>
   <block id="cbc540ff279c66e1f0e285002a107926" category="list-text">Cloud Backup PAYGO 라이센스의 경우, 를 통한 구독<block ref="92655de6fae7d07ed3897ce19d51b88d" category="inline-link-rx"></block> Cloud Backup을 활성화하기 전에 가 필요합니다. Cloud Backup에 대한 청구는 이 구독을 통해 이루어집니다.<block ref="2dcb14e4aff486ad01ca943b2718d3a3" category="inline-link-rx"></block>.</block>
   <block id="c1d703bdf53bad5718c774b5ba1504f9" category="paragraph">StorageGRID는 다음 요구 사항을 충족해야 합니다. 를 참조하십시오<block ref="a9591d68f190d64ce21caf15a77d51e9" category="inline-link-rx"></block> 를 참조하십시오.</block>
@@ -2369,7 +2363,6 @@
   <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXP 블로그</block>
   <block id="e4f8a35ee8df8b5c247f6e3286e42891" category="sidebar">BlueXP 활용 사례</block>
   <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">모든 BlueXP 설명서</block>
-  <block id="58ba7a61ebb07a1d7ec3d3aac8a698c7" category="paragraph"><block ref="2557c337dfecad402162dac53d872fb6" category="inline-link-rx"></block>.</block>
   <block id="dbb5638e73887ef4301df1c7b10993df" category="inline-link">AWS GovCloud 지역에 커넥터 설치</block>
   <block id="9ead7424c07e39075bc88d26cf29486d" category="list-text"><block ref="9ead7424c07e39075bc88d26cf29486d" category="inline-link-rx"></block></block>
   <block id="74af27074013d973d4d84d17e513984c" category="paragraph">Cloud Backup은 Connector가 온프레미스에 설치되어 있지 않고 클라우드에 구축된 경우 GovCloud 지역에서 지원됩니다. 또한 AWS Marketplace에서 Connector를 구축해야 합니다. BlueXP SaaS 웹 사이트에서 정부 지역에 Connector를 배포할 수 없습니다.</block>
@@ -3444,4 +3437,7 @@
   <block id="b1e78dfdd8adc3005cff56ffd24b2af1" category="inline-xref">이 기능에 맞게 시스템을 구성하는 방법을 확인하십시오</block>
   <block id="57e477fd9dd6f84cb8ac24711869c4f5" category="list-text">클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 11.3 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일 후에 이전 백업을 AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 계층화할 수 있습니다. <block ref="c2797d22435b48dabeada89d48523cd9" category="inline-xref-macro-rx"></block>.</block>
   <block id="8b1fecd8a08d1d10ad201653d8d4088f" category="sidebar">어두운 사이트에서 Cloud Backup 데이터베이스를 백업합니다</block>
+  <block id="fe3f1bd257c4451d8f8bcbf9a1a58d34" category="paragraph"><block ref="1247b899b5e6800d8fd9e850903ad55a" category="inline-link-rx"></block>.</block>
+  <block id="275b9b785d71f45bb8f134005ece056a" category="paragraph">* 참고: * 볼륨이 백업되지 않도록 하는 경우 클라우드 공급자가 백업이 사용하는 용량에 대한 객체 스토리지 비용에 대해 계속해서 비용을 부과합니다 <block ref="e2e48247dd6dcee2daca407937463dc9" category="inline-xref-macro-rx"></block>.</block>
+  <block id="46fb0ddeabbcb2b9784add28928cfe7a" category="paragraph">볼륨에 적용할 정책이 이미 있어야 합니다.</block>
 </blocks>
