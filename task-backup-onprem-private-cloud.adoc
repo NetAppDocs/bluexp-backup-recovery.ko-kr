@@ -216,7 +216,7 @@ Connector가 인터넷에 연결되지 않은 사이트에 설치된 경우 Clou
 * StorageGRID가 11.3 이상을 사용해야 합니다
 * StorageGRID는 이어야 합니다 https://docs.netapp.com/us-en/cloud-manager-storagegrid/task-discover-storagegrid.html["BlueXP Canvas에서 검색되고 사용할 수 있습니다"^]
 * 현재 아카이브 스토리지는 AWS S3 스토리지 클래스에서만 지원됩니다. AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화하도록 선택할 수 있습니다. link:reference-aws-backup-tiers.html["AWS 아카이브 계층에 대해 자세히 알아보십시오"^].
-* 백업이 위치할 스토리지 공간에 대한 AWS S3 구독을 신청해야 합니다.
+* 백업이 위치할 스토리지 공간을 위해 Amazon S3 계정을 등록해야 합니다.
 
 
 --

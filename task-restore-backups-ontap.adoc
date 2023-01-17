@@ -56,7 +56,7 @@ image:screenshot_restore_dashboard.png["Browse  amp; Restore 또는 Search  amp;
 | 볼륨 및 파일 복원은 Amazon S3, Azure Blob, Google Cloud 및 NetApp StorageGRID에 저장된 백업 파일과 함께 작동합니다 | 볼륨 및 파일 복원은 Amazon S3, Azure Blob, Google Cloud 및 NetApp StorageGRID에 저장된 백업 파일과 함께 작동합니다 
 
 
-| 인터넷에 액세스할 수 없는 사이트의 StorageGRID에서 볼륨, 폴더 및 파일을 복원합니다 | 어두운 사이트에서는 지원되지 않습니다 
+| 인터넷에 액세스할 수 없는 사이트의 StorageGRID에서 볼륨, 폴더 및 파일을 복원합니다 | 인터넷에 액세스할 수 없는 사이트의 StorageGRID에서 볼륨, 폴더 및 파일을 복원합니다 
 
 
 | 이름이 바뀌거나 삭제된 파일은 처리하지 않습니다 | 새로 생성/삭제/이름 변경된 디렉토리와 새로 생성/삭제/이름 변경된 파일을 처리합니다 
@@ -150,7 +150,7 @@ ifdef::gcp[]
 
 endif::gcp[]
 
-* StorageGRID의 경우 커넥터를 사내에 구축해야 합니다
+* StorageGRID의 경우 인터넷 액세스 유무에 관계없이 커넥터를 사내에 구축해야 합니다
 
 
 "사내 ONTAP 시스템"을 지칭할 때 FAS, AFF 및 ONTAP Select 시스템이 포함됩니다.
@@ -505,7 +505,7 @@ ifdef::gcp[]
 
 endif::gcp[]
 
-* StorageGRID의 경우 인터넷 연결을 사용하여 커넥터를 사내에 구축해야 합니다
+* StorageGRID의 경우 인터넷 액세스 유무에 관계없이 커넥터를 사내에 구축해야 합니다
 
 
 "사내 ONTAP 시스템"을 지칭할 때 FAS, AFF 및 ONTAP Select 시스템이 포함됩니다.
@@ -574,6 +574,7 @@ endif::gcp[]
 
 +
 ** 계정에 클라우드 공급자 자격 증명이 없으면 인덱싱된 카탈로그 정보가 Connector에 저장됩니다.
+** 어두운 사이트에서 Connector를 사용하는 경우 인덱싱된 카탈로그 정보는 Connector에 저장됩니다(Connector 버전 3.9.25 이상 필요).
 ** 있는 경우 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-accounts-aws.html["AWS 자격 증명"^] 또는 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-accounts-azure.html["Azure 자격 증명"^] 어카운트의 경우 인덱싱된 카탈로그는 클라우드에 구축된 Connector와 마찬가지로 클라우드 공급자에 저장됩니다. (두 자격 증명이 모두 있는 경우 기본적으로 AWS가 선택됩니다.)
 +
 온-프레미스 Connector를 사용하는 경우에도 Connector 사용 권한과 클라우드 공급자 리소스 모두에 대해 클라우드 공급자 요구 사항이 충족되어야 합니다. 이 구축을 사용할 때는 위의 AWS 및 Azure 요구사항을 참조하십시오.
