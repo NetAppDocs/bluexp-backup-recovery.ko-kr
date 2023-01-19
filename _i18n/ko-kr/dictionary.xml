@@ -2359,7 +2359,6 @@
   <block id="c95623cd0395d5a6bb6105b9d32f197b" category="inline-link">BlueXP에 대한 고지 사항</block>
   <block id="e8a6d0f19a957eac14b9917a6c92899b" category="list-text"><block ref="e8a6d0f19a957eac14b9917a6c92899b" category="inline-link-rx"></block></block>
   <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXP 블로그</block>
-  <block id="e4f8a35ee8df8b5c247f6e3286e42891" category="sidebar">BlueXP 활용 사례</block>
   <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">모든 BlueXP 설명서</block>
   <block id="dbb5638e73887ef4301df1c7b10993df" category="inline-link">AWS GovCloud 지역에 커넥터 설치</block>
   <block id="9ead7424c07e39075bc88d26cf29486d" category="list-text"><block ref="9ead7424c07e39075bc88d26cf29486d" category="inline-link-rx"></block></block>
@@ -2785,7 +2784,6 @@
   <block id="bbc08f31565cf18b34651c7d285d9911" category="list-text">작업 - BlueXP 데이터베이스의 작업 세부 정보 항목을 관리합니다</block>
   <block id="24a0195c713a5929a91f430eefb31465" category="list-text">라이센스 - BlueXP에서 작업 환경의 라이센스 유효성을 검색합니다</block>
   <block id="f3e008a63710b1317b4340caf4a574bd" category="list-text">랜섬웨어 스캔 - 특정 백업 파일에서 랜섬웨어 스캔을 시작합니다</block>
-  <block id="383364de1ac57828a17c795ac72c6b9c" category="list-text">복원 - 볼륨 및 파일 수준 복원 작업을 수행할 수 있습니다</block>
   <block id="50091c079ab0009fa21807b8bbc81cfd" category="list-text">SFR - 단일 파일 레벨 복구 작업을 위해 백업 파일에서 파일을 검색합니다(찾아보기 및 복원).</block>
   <block id="96fa87fed0ba1143a920c3c8d44c8754" category="list-text">작업 환경 - 백업 정책을 관리하고 작업 환경과 연결된 대상 객체 저장소를 구성합니다</block>
   <block id="73358bf2a9d2d2c32dbbab5b76681d7f" category="section-title">필요한 커넥터 아웃바운드 인터넷 액세스 엔드포인트 변경</block>
@@ -3352,9 +3350,7 @@
   <block id="b17d2155a07524d0e8a3d1eb73a257c3" category="section-title">StorageGRID 시스템에서 이전 백업 파일을 AWS S3 아카이브 스토리지로 이동 가능</block>
   <block id="76592785cd14862cf74d11289e50ed92" category="paragraph">이제 StorageGRID 시스템의 이전 백업 파일을 AWS S3의 아카이브 스토리지로 계층화할 수 있습니다. 이를 통해 StorageGRID 시스템의 공간을 절약하고, 이전 백업 파일에 저렴한 스토리지 클래스를 사용하여 비용을 절감할 수 있습니다. AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화하도록 선택할 수 있습니다.</block>
   <block id="ec9614a46239aa59499c4a94e919963a" category="inline-link">자세히 알아보기</block>
-  <block id="481c6a107a47fcbb610d4e79b7d8bc01" category="paragraph">이 기능은 클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 시스템에서 11.3 이상을 사용하는 경우 사용할 수 있습니다.<block ref="ba1010a667c53f122912d421bb932c28" category="inline-link-rx"></block>.</block>
   <block id="5baabb9bbca503ea382779d0fce7e9c5" category="section-title">Google Cloud에서 데이터 암호화를 위한 자체 고객 관리 키를 선택할 수 있습니다</block>
-  <block id="d42d3ab595b05475b681bcec25a25c6b" category="paragraph">ONTAP 시스템에서 Google 클라우드 스토리지로 데이터를 백업할 때 이제 Google에서 관리하는 기본 암호화 키를 사용하는 대신 활성화 마법사에서 데이터 암호화에 대해 고객이 관리하는 키를 직접 선택할 수 있습니다. 먼저 고객이 관리하는 암호화 키를 설정한 다음 Cloud Backup을 활성화할 때 세부 정보를 입력합니다.</block>
   <block id="b9395c2030b2a8ad48d31ad52bd9f6e9" category="section-title">Google Cloud Storage에서 백업을 생성하는 서비스 계정에 더 이상 "스토리지 관리자" 역할이 필요하지 않습니다</block>
   <block id="d7cf6019b64afefeee4361ce4c22ce30" category="inline-link">백업을 위해 Google Cloud Storage를 준비하는 방법을 알아보십시오</block>
   <block id="121b4934193e6ec77a35338afd1028bb" category="paragraph">이전 릴리즈에서는 Cloud Backup이 Google Cloud Storage 버킷에 액세스할 수 있도록 서비스 계정에 "Storage Admin" 역할이 필요했습니다. 이제 서비스 계정에 할당할 수 있는 권한이 축소된 사용자 지정 역할을 만들 수 있습니다.<block ref="cdc0823dc4910df979845484c27cfc1d" category="inline-link-rx"></block>.</block>
@@ -3414,7 +3410,6 @@
   <block id="f8436f6242c5e270dd0e25a1a05d34a4" category="inline-link-macro">어두운 사이트에서 Cloud Backup 데이터를 백업하는 방법을 알아보십시오</block>
   <block id="02bf1c0a02190999eeab71bbe7fff71c" category="paragraph">Connector가 인터넷에 연결되지 않은 사이트에 설치된 경우 Cloud Backup 구성 데이터의 로컬 백업을 정기적으로 생성하는 것이 좋습니다. <block ref="07f517d916bbf45a47c5d9dc6a000920" category="inline-link-macro-rx"></block>.</block>
   <block id="89d604768fdd7e6fda1e2bdb512ac56e" category="section-title">이전 백업 파일을 퍼블릭 클라우드 스토리지에 아카이빙하기 위한 준비 중</block>
-  <block id="483f68b62cb5a3e5d608257045622894" category="paragraph">오래된 백업 파일을 아카이브 스토리지에 계층화하면 필요하지 않은 백업에 저렴한 스토리지 클래스를 사용하여 비용을 절감할 수 있습니다. StorageGRID은 아카이빙 스토리지를 제공하지 않는 사내(프라이빗 클라우드) 솔루션이지만 기존의 백업 파일을 퍼블릭 클라우드 아카이브 스토리지로 이동할 수 있습니다.</block>
   <block id="9da2e088609ab78eb6aa7a0ffe0637b3" category="list-text">클러스터가 ONTAP 9.12.1 이상을 사용하고 있어야 합니다</block>
   <block id="7bbe58a850cc71a0ff06edd40213c29c" category="list-text">StorageGRID가 11.3 이상을 사용해야 합니다</block>
   <block id="170d42742a62bce031fc4ab2cfd0c056" category="inline-link">BlueXP Canvas에서 검색되고 사용할 수 있습니다</block>
@@ -3437,9 +3432,23 @@
   <block id="3c6238f54517e5cf7923ae4c33a5eff9" category="list-text">StorageGRID의 경우 인터넷 액세스 유무에 관계없이 커넥터를 사내에 구축해야 합니다</block>
   <block id="cd1cceb157b5982d899b66d18217af64" category="list-text">어두운 사이트에서 Connector를 사용하는 경우 인덱싱된 카탈로그 정보는 Connector에 저장됩니다(Connector 버전 3.9.25 이상 필요).</block>
   <block id="e083799711dc9b588bbb440525564506" category="section-title">인터넷 액세스 없이 사이트에서 검색 및 복원을 사용하여 데이터를 복원할 수 있도록 지원이 추가되었습니다</block>
-  <block id="7582bcce7533bd53ab590d04904ea75b" category="paragraph">인터넷에 액세스할 수 없는 사이트의 ONTAP 클러스터 데이터를 StorageGRID으로 백업하는 경우(다크 사이트 또는 오프라인 사이트라고도 함), 이제 검색 및 복원 옵션을 사용하여 필요한 경우 데이터를 복원할 수 있습니다. 이 기능을 사용하려면 BlueXP 커넥터(버전 3.9.25 이상)가 오프라인 사이트에 배포되어야 합니다.</block>
   <block id="c9ec78264dce9938676b736265201e28" category="inline-link">검색 및 amp; 복원을 사용하여 ONTAP 데이터를 복원하는 방법을 확인하십시오</block>
   <block id="74aacc002c6d6d85e9786012bf71af08" category="paragraph"><block ref="fbe0ce057e5d8013a227c4cb944242a5" category="inline-link-rx"></block>.<block ref="eb618b89294e80d594faecbc4641afee" category="inline-link-rx"></block>.</block>
   <block id="4f60787e5fe87ac0aa425be67237edec" category="list-text">FlexGroup 볼륨 백업은 아카이브 스토리지로 이동하거나 DataLock 및 랜섬웨어 보호를 사용할 수 없습니다.</block>
   <block id="1f973e0276bdcc7629141de9466f59f2" category="list-text">오브젝트 저장소의 WORM/규정 준수 모드는 현재 Amazon S3 및 StorageGRID에서만 지원됩니다. 이를 DataLock 기능이라고 하며 클라우드 공급자 인터페이스를 사용하지 않고 Cloud Backup 설정을 사용하여 관리해야 합니다.</block>
+  <block id="0c1029565d47087d49e25dbc4e2a20e9" category="list-text">복원 - 볼륨, 파일 및 폴더 수준 복원 작업을 수행할 수 있습니다</block>
+  <block id="b7027e7163ab44680c3c69296db41564" category="paragraph">이 기능은 온프레미스 클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 시스템에서 11.3 이상을 사용하는 경우 사용할 수 있습니다.<block ref="ba1010a667c53f122912d421bb932c28" category="inline-link-rx"></block>.</block>
+  <block id="0b17a5b6850808b4455bcd3d8bf54966" category="paragraph">ONTAP 시스템에서 Google 클라우드 스토리지로 데이터를 백업할 때 이제 Google에서 관리하는 기본 암호화 키를 사용하는 대신 활성화 마법사에서 데이터 암호화에 대해 고객이 관리하는 키를 직접 선택할 수 있습니다. 먼저 Google에서 고객이 관리하는 암호화 키를 설정한 다음 Cloud Backup을 활성화할 때 세부 정보를 입력합니다.</block>
+  <block id="a282fca785a0e402e0b5cdde4c380d6d" category="paragraph">인터넷에 액세스할 수 없는 사이트의 ONTAP 클러스터 데이터를 StorageGRID으로 백업하는 경우(다크 사이트 또는 오프라인 사이트라고도 함) 이제 검색 및 복원 옵션을 사용하여 필요한 경우 데이터를 복원할 수 있습니다. 이 기능을 사용하려면 BlueXP 커넥터(버전 3.9.25 이상)가 오프라인 사이트에 배포되어야 합니다.</block>
+  <block id="d0729ea313d81752ff62b4b9a3f956b7" category="paragraph">오래된 백업 파일을 아카이브 스토리지에 계층화하면 필요하지 않은 백업에 저렴한 스토리지 클래스를 사용하여 비용을 절감할 수 있습니다. StorageGRID은 아카이빙 스토리지를 제공하지 않는 사내(프라이빗 클라우드) 솔루션이지만 기존의 백업 파일을 퍼블릭 클라우드 아카이브 스토리지로 이동할 수 있습니다. 이러한 방식으로 사용할 경우 클라우드 스토리지로 계층화되거나 클라우드 스토리지에서 복구된 데이터는 StorageGRID와 클라우드 스토리지 간에 이동합니다. BlueXP는 이 데이터 전송에 관여하지 않습니다.</block>
+  <block id="a4a085a9787be2fa9b79bdf6aa072546" category="list-text">StorageGRID는 버킷에 대한 전체 제어 접근 권한이 있어야 합니다 <block ref="08fd47fd7b45cb2848f70fc30872fe0d" prefix="(" category="inline-code"></block>); 그러나 이것이 가능하지 않을 경우 버킷 정책은 StorageGRID에 다음과 같은 S3 권한을 부여해야 합니다.</block>
+  <block id="9ba767f0be9f0bee0980958cc583e14c" category="list-text"><block ref="e24d90c482d00361a495cd937be3bb7b" prefix="" category="inline-code"></block></block>
+  <block id="abd3980be6419b43c4ada2fde9c93bd1" category="list-text"><block ref="ec68e11afcd3e390ebf5080e8af5b735" prefix="" category="inline-code"></block></block>
+  <block id="94ab3733a115c1db662684796c5e5f70" category="list-text"><block ref="53cfd5032381d05f65cbc6d64e0004f5" prefix="" category="inline-code"></block></block>
+  <block id="c51afd34d09e8287bb3c293b4c19f57a" category="list-text"><block ref="05cce54a3c6e4b27fe1202c73065ac29" prefix="" category="inline-code"></block></block>
+  <block id="f4f5a5034e34b12200aaca19a2871aea" category="list-text"><block ref="2fadb459df3bdee0dccfda5cc625c37b" prefix="" category="inline-code"></block></block>
+  <block id="80ce9d537bd04197e7c7cc4227525715" category="list-text"><block ref="9c6f56f3012c2178f15d4346495a0a67" prefix="" category="inline-code"></block></block>
+  <block id="4014cba1d3679d7444ccb96338d9ee36" category="list-text"><block ref="8e0864f8129f5d2b658668b9103e83a5" prefix="" category="inline-code"></block></block>
+  <block id="139e90f4554bdc4681ca70203e695cd5" category="list-text"><block ref="28e5f48e9f12d4928897b706c15e527a" prefix="" category="inline-code"></block></block>
+  <block id="7eca941847083ddad64a04d3dca6b3b8" category="sidebar">Cloud Backup 사용 사례</block>
 </blocks>

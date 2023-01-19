@@ -207,7 +207,7 @@ Connector가 인터넷에 연결되지 않은 사이트에 설치된 경우 Clou
 
 === 이전 백업 파일을 퍼블릭 클라우드 스토리지에 아카이빙하기 위한 준비 중
 
-오래된 백업 파일을 아카이브 스토리지에 계층화하면 필요하지 않은 백업에 저렴한 스토리지 클래스를 사용하여 비용을 절감할 수 있습니다. StorageGRID은 아카이빙 스토리지를 제공하지 않는 사내(프라이빗 클라우드) 솔루션이지만 기존의 백업 파일을 퍼블릭 클라우드 아카이브 스토리지로 이동할 수 있습니다.
+오래된 백업 파일을 아카이브 스토리지에 계층화하면 필요하지 않은 백업에 저렴한 스토리지 클래스를 사용하여 비용을 절감할 수 있습니다. StorageGRID은 아카이빙 스토리지를 제공하지 않는 사내(프라이빗 클라우드) 솔루션이지만 기존의 백업 파일을 퍼블릭 클라우드 아카이브 스토리지로 이동할 수 있습니다. 이러한 방식으로 사용할 경우 클라우드 스토리지로 계층화되거나 클라우드 스토리지에서 복구된 데이터는 StorageGRID와 클라우드 스토리지 간에 이동합니다. BlueXP는 이 데이터 전송에 관여하지 않습니다.
 
 요구 사항::
 +
@@ -217,6 +217,18 @@ Connector가 인터넷에 연결되지 않은 사이트에 설치된 경우 Clou
 * StorageGRID는 이어야 합니다 https://docs.netapp.com/us-en/cloud-manager-storagegrid/task-discover-storagegrid.html["BlueXP Canvas에서 검색되고 사용할 수 있습니다"^]
 * 현재 아카이브 스토리지는 AWS S3 스토리지 클래스에서만 지원됩니다. AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화하도록 선택할 수 있습니다. link:reference-aws-backup-tiers.html["AWS 아카이브 계층에 대해 자세히 알아보십시오"^].
 * 백업이 위치할 스토리지 공간을 위해 Amazon S3 계정을 등록해야 합니다.
+* StorageGRID는 버킷에 대한 전체 제어 접근 권한이 있어야 합니다 (`s3:*`); 그러나 이것이 가능하지 않을 경우 버킷 정책은 StorageGRID에 다음과 같은 S3 권한을 부여해야 합니다.
++
+** `s3:AbortMultipartUpload`
+** `s3:DeleteObject`
+** `s3:GetObject`
+** `s3:ListBucket`
+** `s3:ListBucketMultipartUploads`
+** `s3:ListMultipartUploadParts`
+** `s3:PutObject`
+** `s3:RestoreObject`
+
+
 
 
 --
