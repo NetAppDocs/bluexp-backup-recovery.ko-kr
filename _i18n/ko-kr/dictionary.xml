@@ -739,7 +739,6 @@
   <block id="2acfaf00d1f43b0bc630fdcf43c20bb3" category="paragraph">이 표에서는 두 가지 방법을 비교합니다.</block>
   <block id="1181e345cf6d2eaef5900c975d430d7d" category="cell">찾아보기 및 복원</block>
   <block id="7d0014a7ab187c6931fc2183a6074420" category="cell">검색 및 복원</block>
-  <block id="fa6009564cbbb803ab9e939ec7396236" category="cell">이름이 바뀌거나 삭제된 파일은 처리하지 않습니다</block>
   <block id="609c9e9bd29468f2ba84839f3741b886" category="cell">새로 생성/삭제/이름 변경된 디렉토리와 새로 생성/삭제/이름 변경된 파일을 처리합니다</block>
   <block id="8425d41c6f9d3b6f077b56c4d49651a4" category="paragraph">두 복원 방법을 모두 사용하려면 먼저 고유한 리소스 요구 사항에 맞게 환경을 구성해야 합니다. 이러한 요구 사항은 아래 섹션에 설명되어 있습니다.</block>
   <block id="91679e5e03d41aefa89ddfa7649b05d2" category="paragraph">사용할 복원 작업 유형에 대한 요구 사항 및 복원 단계를 참조하십시오.</block>
@@ -3452,4 +3451,13 @@
   <block id="7eca941847083ddad64a04d3dca6b3b8" category="sidebar">Cloud Backup 사용 사례</block>
   <block id="66d2847cfd42bf73060fb82fb4345a9a" category="list-text">백업 파일이 DataLock 및 랜섬웨어로 구성된 경우 폴더 레벨 복구는 현재 지원되지 않습니다. 이 경우 백업 파일에서 전체 볼륨을 복원한 다음 필요한 폴더 및 파일에 액세스할 수 있습니다.</block>
   <block id="5571d67bc301ab9246278c7b368f2013" category="list-text">백업 파일이 아카이브 스토리지에 있는 경우 폴더 레벨 복구는 현재 지원되지 않습니다. 이 경우 보관되지 않은 최신 백업 파일에서 폴더를 복원하거나, 아카이빙된 백업에서 전체 볼륨을 복원한 다음 필요한 폴더 및 파일에 액세스할 수 있습니다.</block>
+  <block id="0375f4855be072c7d856a0233cc21de9" category="section-title">클라우드 공급자 솔루션 지원</block>
+  <block id="be845c219bb74b14349ffa6e27e7aef3" category="paragraph">BlueXP에 통합한 다음 클라우드 제공업체 솔루션에 대한 기술 지원은 해당 제품에 대한 BlueXP 설명서의 "도움말 얻기"를 참조하십시오.</block>
+  <block id="5bf5309465f91318228a7f956b826348" category="list-text"><block ref="5bf5309465f91318228a7f956b826348" category="inline-link-macro-rx"></block></block>
+  <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="inline-link-macro">Azure NetApp Files</block>
+  <block id="0e2bc9c853e0af52ead12823c025e58b" category="list-text"><block ref="0e2bc9c853e0af52ead12823c025e58b" category="inline-link-macro-rx"></block></block>
+  <block id="b0cee72642f5457a71ddd0b49efb6d93" category="inline-link-macro">Google Cloud용 Cloud Volumes Service</block>
+  <block id="02efcbea18b9485a78a41871dce1e64d" category="list-text"><block ref="02efcbea18b9485a78a41871dce1e64d" category="inline-link-macro-rx"></block></block>
+  <block id="67b74e19355f9340daf7f62ceb8233d5" category="list-text">Connector와 Azure Synapse SQL 서비스 간의 통신을 위해 포트 1433이 열려 있어야 합니다.</block>
+  <block id="8042f6982b79849d158e3d7ac9190cc2" category="cell">파일이 삭제되었거나 이름이 변경된 경우 파일 복구를 처리하지 않고 사용자가 원래 파일 이름을 모르는 경우</block>
 </blocks>

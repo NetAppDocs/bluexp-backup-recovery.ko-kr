@@ -82,24 +82,25 @@ Connector에 권한을 확인하거나 추가합니다:: 클라우드 백업 검
 +
 --
 .시작하기 전에
-Azure Synapse Analytics 리소스 공급자를 구독에 등록해야 합니다. https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["이 리소스 공급자를 구독에 등록하는 방법을 확인하십시오"^]. 리소스 공급자를 등록하려면 구독 * 소유자 * 또는 * 참가자 * 여야 합니다.
-
+* Azure Synapse Analytics 리소스 공급자를 구독에 등록해야 합니다. https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["이 리소스 공급자를 구독에 등록하는 방법을 확인하십시오"^]. 리소스 공급자를 등록하려면 구독 * 소유자 * 또는 * 참가자 * 여야 합니다.
+* Connector와 Azure Synapse SQL 서비스 간의 통신을 위해 포트 1433이 열려 있어야 합니다.
++
 .단계
-. Connector 가상 머신에 할당된 역할을 확인합니다.
+.. Connector 가상 머신에 할당된 역할을 확인합니다.
 +
-.. Azure 포털에서 가상 머신 서비스를 엽니다.
-.. Connector 가상 머신을 선택합니다.
-.. 설정에서 * ID * 를 선택합니다.
-.. Azure 역할 할당 * 을 클릭합니다.
-.. Connector 가상 머신에 할당된 사용자 지정 역할을 기록해 둡니다.
+... Azure 포털에서 가상 머신 서비스를 엽니다.
+... Connector 가상 머신을 선택합니다.
+... 설정에서 * ID * 를 선택합니다.
+... Azure 역할 할당 * 을 클릭합니다.
+... Connector 가상 머신에 할당된 사용자 지정 역할을 기록해 둡니다.
 
 
-. 사용자 지정 역할 업데이트:
+.. 사용자 지정 역할 업데이트:
 +
-.. Azure 포털에서 Azure 구독을 엽니다.
-.. IAM(액세스 제어) > 역할 * 을 클릭합니다.
-.. 사용자 지정 역할에 대한 줄임표(...)를 클릭한 다음 * 편집 * 을 클릭합니다.
-.. JSON을 클릭하고 다음 권한을 추가합니다.
+... Azure 포털에서 Azure 구독을 엽니다.
+... IAM(액세스 제어) > 역할 * 을 클릭합니다.
+... 사용자 지정 역할에 대한 줄임표(...)를 클릭한 다음 * 편집 * 을 클릭합니다.
+... JSON을 클릭하고 다음 권한을 추가합니다.
 +
 [source, json]
 ----
@@ -125,7 +126,9 @@ Azure Synapse Analytics 리소스 공급자를 구독에 등록해야 합니다.
 +
 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html["정책의 전체 JSON 형식을 봅니다"^]
 
-.. 검토 + 업데이트 * 를 클릭한 다음 * 업데이트 * 를 클릭합니다.
+... 검토 + 업데이트 * 를 클릭한 다음 * 업데이트 * 를 클릭합니다.
+
+
 
 
 
