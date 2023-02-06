@@ -45,7 +45,7 @@ summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템의 데이터�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 시스템에서 Cloud Backup을 활성화합니다
 [role="quick-margin-para"]
-작업 환경을 선택하고 오른쪽 패널에서 백업 및 복구 서비스 옆에 있는 * 활성화 > 볼륨 백업 * 을 클릭한 다음 설정 마법사를 따릅니다.
+소스 ONTAP 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 > 볼륨 백업 * 을 클릭한 다음 설정 마법사를 따릅니다.
 
 [role="quick-margin-para"]
 image:screenshot_backup_onprem_enable.png["작업 환경을 선택한 후 사용할 수 있는 백업 및 복구 활성화 버튼이 표시된 스크린샷"]
@@ -62,10 +62,10 @@ image:screenshot_backup_provider_settings_storagegrid.png["ONTAP 클러스터에
 기본 정책은 매일 볼륨을 백업하고 각 볼륨의 최근 30개 백업 복사본을 유지합니다. 시간별, 일별, 주별, 월별 또는 연도별 백업으로 변경, 또는 더 많은 옵션을 제공하는 시스템 정의 정책 중 하나를 선택합니다. 보존할 백업 복사본의 수를 변경할 수도 있습니다.
 
 [role="quick-margin-para"]
-클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 11.3 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일 후에 이전 백업을 AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 계층화할 수 있습니다.
+클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 시스템에서 버전 11.4 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일 후에 이전 백업을 퍼블릭 클라우드 아카이브 계층에 계층화하도록 선택할 수 있습니다. 현재 AWS S3 Glacier/S3 Glacier Deep Archive 또는 Azure Archive 스토리지 계층을 지원합니다.
 
 [role="quick-margin-para"]
-선택적으로 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호할 수 있습니다. link:concept-cloud-backup-policies.html["사용 가능한 클라우드 백업 정책 구성 설정에 대해 자세히 알아보십시오"^].
+클러스터가 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호하도록 선택할 수 있습니다. link:concept-cloud-backup-policies.html["사용 가능한 클라우드 백업 정책 구성 설정에 대해 자세히 알아보십시오"^].
 
 [role="quick-margin-para"]
 image:screenshot_backup_onprem_policy.png["백업 스케줄 및 보존 기간을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
@@ -75,7 +75,7 @@ image:screenshot_backup_onprem_policy.png["백업 스케줄 및 보존 기간을
 Select Volumes(볼륨 선택) 페이지의 기본 백업 정책을 사용하여 백업할 볼륨을 식별합니다. 특정 볼륨에 서로 다른 백업 정책을 할당하려면 추가 정책을 생성한 후 나중에 볼륨에 적용할 수 있습니다.
 
 [role="quick-margin-para"]
-S3 버킷은 입력한 S3 액세스 키와 비밀 키로 표시된 서비스 계정에 자동으로 생성되며 백업 파일은 여기에 저장됩니다.
+S3 버킷은 사용자가 입력한 S3 액세스 키와 비밀 키로 표시된 서비스 계정의 StorageGRID에서 자동으로 생성되며 백업 파일은 여기에 저장됩니다.
 
 
 
@@ -209,14 +209,23 @@ Connector가 인터넷에 연결되지 않은 사이트에 설치된 경우 Clou
 
 오래된 백업 파일을 아카이브 스토리지에 계층화하면 필요하지 않은 백업에 저렴한 스토리지 클래스를 사용하여 비용을 절감할 수 있습니다. StorageGRID은 아카이빙 스토리지를 제공하지 않는 사내(프라이빗 클라우드) 솔루션이지만 기존의 백업 파일을 퍼블릭 클라우드 아카이브 스토리지로 이동할 수 있습니다. 이러한 방식으로 사용할 경우 클라우드 스토리지로 계층화되거나 클라우드 스토리지에서 복구된 데이터는 StorageGRID와 클라우드 스토리지 간에 이동합니다. BlueXP는 이 데이터 전송에 관여하지 않습니다.
 
-요구 사항::
-+
---
+현재 지원되는 기능을 사용하면 AWS_S3 Glacier_/_S3 Glacier Deep Archive_ 또는 _Azure Archive_ 스토리지에 백업을 보관할 수 있습니다.
+
+* ONTAP 요구 사항 *
+
 * 클러스터가 ONTAP 9.12.1 이상을 사용하고 있어야 합니다
-* StorageGRID가 11.3 이상을 사용해야 합니다
-* StorageGRID는 이어야 합니다 https://docs.netapp.com/us-en/cloud-manager-storagegrid/task-discover-storagegrid.html["BlueXP Canvas에서 검색되고 사용할 수 있습니다"^]
-* 현재 아카이브 스토리지는 AWS S3 스토리지 클래스에서만 지원됩니다. AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화하도록 선택할 수 있습니다. link:reference-aws-backup-tiers.html["AWS 아카이브 계층에 대해 자세히 알아보십시오"^].
-* 백업이 위치할 스토리지 공간을 위해 Amazon S3 계정을 등록해야 합니다.
+
+
+* StorageGRID 요구 사항 *
+
+* StorageGRID는 11.4 이상을 사용해야 합니다
+* StorageGRID는 이어야 합니다 https://docs.netapp.com/us-en/cloud-manager-storagegrid/task-discover-storagegrid.html["BlueXP Canvas에서 검색되고 사용할 수 있습니다"^].
+
+
+* Amazon S3 요구사항 *
+
+* 아카이빙된 백업이 위치할 스토리지 공간을 위해 Amazon S3 계정에 등록해야 합니다.
+* AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화하도록 선택할 수 있습니다. link:reference-aws-backup-tiers.html["AWS 아카이브 계층에 대해 자세히 알아보십시오"^].
 * StorageGRID는 버킷에 대한 전체 제어 접근 권한이 있어야 합니다 (`s3:*`); 그러나 이것이 가능하지 않을 경우 버킷 정책은 StorageGRID에 다음과 같은 S3 권한을 부여해야 합니다.
 +
 ** `s3:AbortMultipartUpload`
@@ -231,12 +240,15 @@ Connector가 인터넷에 연결되지 않은 사이트에 설치된 경우 Clou
 
 
 
---
+* Azure Blob 요구사항 *
+
+* 아카이빙된 백업이 위치할 저장소 공간에 대한 Azure 구독에 등록해야 합니다.
+* 활성화 마법사를 사용하면 기존 리소스 그룹을 사용하여 백업을 저장할 Blob 컨테이너를 관리하거나 새 리소스 그룹을 만들 수 있습니다.
 
 
-클러스터의 백업 정책에 대한 아카이브 설정을 정의할 때 클라우드 공급자 자격 증명을 입력하고 사용할 스토리지 클래스를 선택합니다. 클러스터에 대한 백업을 활성화하면 Cloud Backup 이 클라우드 버킷을 생성합니다. AWS 아카이브 스토리지에 필요한 정보는 다음과 같습니다.
+클러스터의 백업 정책에 대한 아카이브 설정을 정의할 때 클라우드 공급자 자격 증명을 입력하고 사용할 스토리지 클래스를 선택합니다. 클러스터에 대한 백업을 활성화하면 Cloud Backup 이 클라우드 버킷을 생성합니다. AWS 및 Azure 아카이브 스토리지에 필요한 정보는 다음과 같습니다.
 
-image:screenshot_sg_archive_to_aws.png["StorageGRID에서 AWS S3로 백업 파일을 아카이빙하는 데 필요한 정보의 스크린샷"]
+image:screenshot_sg_archive_to_cloud.png["StorageGRID에서 AWS S3 또는 Azure Blob으로 백업 파일을 아카이빙하는 데 필요한 정보의 스크린샷"]
 
 선택한 아카이브 정책 설정은 StorageGRID에서 ILM(정보 수명 주기 관리) 정책을 생성하고 설정을 "규칙"으로 추가합니다. 기존의 활성 ILM 정책이 있는 경우 데이터를 아카이브 계층으로 이동하기 위해 ILM 정책에 새 규칙이 추가됩니다. "Proposed" 상태의 기존 ILM 정책이 있는 경우 새 ILM 정책을 만들고 활성화할 수 없습니다. https://docs.netapp.com/us-en/storagegrid-116/ilm/index.html["StorageGRID ILM 정책 및 규칙에 대해 자세히 알아보십시오"^].
 
@@ -284,7 +296,7 @@ image:screenshot_backup_provider_settings_storagegrid.png["온프레미스 클�
 .. 기본 정책의 이름을 입력합니다. 이름을 변경할 필요가 없습니다.
 .. 백업 스케줄을 정의하고 보존할 백업 수를 선택합니다. link:concept-ontap-backup-to-cloud.html#customizable-backup-schedule-and-retention-settings["선택할 수 있는 기존 정책 목록을 봅니다"^].
 .. 클러스터에서 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 _ 을(를) 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호하도록 선택할 수 있습니다. _DataLock_은 백업 파일이 수정되거나 삭제되지 않도록 보호하고, 백업 파일을 검색하여 백업 파일에서 랜섬웨어 공격의 증거를 찾습니다. link:concept-cloud-backup-policies.html#datalock-and-ransomware-protection["사용 가능한 DataLock 설정에 대해 자세히 알아보십시오"^].
-.. 클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 11.3 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일 후에 이전 백업을 AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 계층화할 수 있습니다. <<이전 백업 파일을 퍼블릭 클라우드 스토리지에 아카이빙하기 위한 준비 중,이 기능에 맞게 시스템을 구성하는 방법을 확인하십시오>>.
+.. 클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 시스템에서 버전 11.4 이상을 사용하는 경우 특정 일 수 후에 이전 백업을 퍼블릭 클라우드 아카이브 계층에 계층화하도록 선택할 수 있습니다. 현재 AWS S3 Glacier/S3 Glacier Deep Archive 또는 Azure Archive 스토리지 계층을 지원합니다. <<이전 백업 파일을 퍼블릭 클라우드 스토리지에 아카이빙하기 위한 준비 중,이 기능에 맞게 시스템을 구성하는 방법을 확인하십시오>>.
 +
 image:screenshot_backup_onprem_policy.png["백업 스케줄 및 보존 기간을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
 

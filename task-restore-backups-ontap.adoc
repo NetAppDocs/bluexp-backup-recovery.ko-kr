@@ -83,7 +83,7 @@ image:screenshot_restore_dashboard.png["Browse  amp; Restore 또는 Search  amp;
 
 == 찾아보기 및 복원을 사용하여 ONTAP 데이터를 복원합니다
 
-볼륨, 폴더 또는 파일 복원을 시작하기 전에 복원할 볼륨의 이름, 볼륨이 있는 작업 환경의 이름 및 복원할 백업 파일의 대략적인 날짜를 알아야 합니다.
+볼륨, 폴더 또는 파일 복원을 시작하기 전에 복원할 볼륨의 이름, 작업 환경의 이름 및 볼륨이 있는 SVM의 이름, 복원할 백업 파일의 대략적인 날짜를 알아야 합니다.
 
 * 참고: * 복원하려는 데이터가 들어 있는 백업 파일이 보관 저장소에 있는 경우(ONTAP 9.10.1부터 시작) 복원 작업에 더 많은 시간이 소요되고 비용이 발생합니다. 또한 대상 클러스터는 볼륨 복원의 경우 ONTAP 9.10.1 이상, 파일 복원의 경우 9.11.1, Google 아카이브 및 StorageGRID의 경우 9.12.1 이상을 실행해야 합니다.
 
@@ -104,6 +104,9 @@ ifdef::gcp[]
 link:reference-google-backup-tiers.html["Google 아카이브 스토리지에서 복원하는 방법에 대해 자세히 알아보십시오"].
 
 endif::gcp[]
+
+
+NOTE: Azure에서 StorageGRID 시스템으로 데이터를 복원할 때는 높은 우선 순위가 지원되지 않습니다.
 
 
 
@@ -166,7 +169,7 @@ NOTE: 백업 파일이 DataLock 및 랜섬웨어로 구성된 경우 폴더 또�
 
 image:diagram_browse_restore_volume.png["Browse  amp; Restore를 사용하여 볼륨 복원 작업을 수행하는 흐름을 보여 주는 다이어그램"]
 
-보시다시피 볼륨 복구를 수행하려면 작업 환경 이름, 볼륨 이름 및 백업 파일 날짜를 알아야 합니다.
+보시다시피 볼륨 복원을 수행하려면 작업 환경 이름, 스토리지 VM, 볼륨 이름 및 백업 파일 날짜를 알아야 합니다.
 
 다음 비디오에서는 볼륨 복원에 대한 간단한 단계별 안내를 보여 줍니다.
 
@@ -218,7 +221,7 @@ endif::gcp[]
 
 * StorageGRID에서 복구할 때 StorageGRID 서버의 FQDN과 ONTAP이 StorageGRID와 HTTPS 통신에 사용해야 하는 포트를 입력하고, 객체 스토리지에 액세스하는 데 필요한 액세스 키 및 비밀 키를 선택하고, 대상 볼륨이 상주할 ONTAP 클러스터의 IPspace를 선택합니다.
 +
-.. 복원된 볼륨에 사용할 이름을 입력하고 볼륨이 상주하는 스토리지 VM 및 Aggregate를 선택합니다. 기본적으로 * <source_volume_name>_restore * 가 볼륨 이름으로 사용됩니다.
+.. 복원된 볼륨에 사용할 이름을 입력하고 볼륨이 상주하는 스토리지 VM 및 Aggregate를 선택합니다. FlexGroup 볼륨을 복원할 때 여러 Aggregate를 선택할 수 있습니다. 기본적으로 * <source_volume_name>_restore * 가 볼륨 이름으로 사용됩니다.
 +
 image:screenshot_restore_new_vol_name.png["복원하려는 새 볼륨의 이름을 입력하는 스크린샷."]
 
@@ -422,7 +425,7 @@ image:screenshot_restore_select_dest.png["복원하려는 파일의 볼륨 및 �
 
 검색 및 복원을 사용하여 ONTAP 백업 파일에서 볼륨, 폴더 또는 파일을 복원할 수 있습니다. 검색 및 복원을 사용하면 특정 공급자에 대해 클라우드 저장소에 저장된 모든 백업에서 특정 볼륨, 폴더 또는 파일을 검색한 다음 복구를 수행할 수 있습니다. 정확한 작업 환경 이름 또는 볼륨 이름을 알 필요가 없습니다. 모든 볼륨 백업 파일을 검색합니다.
 
-또한 검색 작업을 통해 ONTAP 볼륨에 대한 모든 로컬 스냅샷 복사본을 확인합니다. 로컬 스냅샷 복사본에서 데이터를 복원하는 것이 백업 파일에서 복원하는 것보다 빠르고 비용이 적게 들 수 있으므로 스냅샷에서 데이터를 복원할 수 있습니다. 클라우드 백업이 아닌 Canvas의 볼륨 세부 정보 페이지에서 스냅샷을 새 볼륨으로 복원할 수 있습니다.
+또한 검색 작업을 통해 ONTAP 볼륨에 대한 모든 로컬 스냅샷 복사본을 확인합니다. 로컬 스냅샷 복사본에서 데이터를 복원하는 것이 백업 파일에서 복원하는 것보다 빠르고 비용이 적게 들 수 있으므로 스냅샷에서 데이터를 복원할 수 있습니다. 스냅샷을 새 볼륨으로 복원할 수 있습니다 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-volumes.html#manage-volumes["Canvas의 볼륨 세부 정보 페이지에서"^] (Cloud Backup에서 아님).
 
 백업 파일에서 볼륨을 복원하면 Cloud Backup은 백업의 데이터를 사용하여 _new_volume을 생성합니다. 원래 작업 환경에서 데이터를 볼륨으로 복원하거나 소스 작업 환경과 동일한 클라우드 계정에 있는 다른 작업 환경으로 복원할 수 있습니다. 또한, 볼륨을 온프레미스 ONTAP 시스템으로 복원할 수 있습니다.
 
@@ -452,6 +455,7 @@ endif::gcp[]
 ====
 * 백업 파일이 DataLock 및 랜섬웨어로 구성된 경우 폴더 레벨 복구는 현재 지원되지 않습니다. 이 경우 백업 파일에서 전체 볼륨을 복원한 다음 필요한 폴더 및 파일에 액세스할 수 있습니다.
 * 백업 파일이 아카이브 스토리지에 있는 경우 폴더 레벨 복구는 현재 지원되지 않습니다. 이 경우 보관되지 않은 최신 백업 파일에서 폴더를 복원하거나, 아카이빙된 백업에서 전체 볼륨을 복원한 다음 필요한 폴더 및 파일에 액세스할 수 있습니다.
+* Azure에서 StorageGRID 시스템으로 데이터를 복원할 때는 높은 복원 우선 순위가 지원되지 않습니다.
 
 
 ====
@@ -542,7 +546,7 @@ ifdef::azure[]
 
 * Azure 요구사항:
 +
-** Azure Synapse Analytics 리소스 공급자를 구독에 등록해야 합니다. https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["이 리소스 공급자를 구독에 등록하는 방법을 확인하십시오"^]. 리소스 공급자를 등록하려면 구독 * 소유자 * 또는 * 참가자 * 여야 합니다.
+** Azure Synapse Analytics 리소스 공급자("Microsoft.Synapse")를 구독에 등록해야 합니다. https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["이 리소스 공급자를 구독에 등록하는 방법을 확인하십시오"^]. 리소스 공급자를 등록하려면 구독 * 소유자 * 또는 * 참가자 * 여야 합니다.
 ** BlueXP에 권한을 제공하는 사용자 역할에 특정 Azure Synapse Workspace 및 Data Lake Storage 계정 권한을 추가해야 합니다. link:task-backup-onprem-to-azure.html#verify-or-add-permissions-to-the-connector["모든 권한이 올바르게 구성되었는지 확인합니다"].
 +
 과거에 구성한 Connector로 Cloud Backup을 이미 사용하고 있다면 지금 BlueXP 사용자 역할에 Azure Synapse Workspace 및 Data Lake Storage 계정 권한을 추가해야 합니다. 새로운 항목이므로 검색 및 복원에 필요합니다.
@@ -684,7 +688,7 @@ image:screenshot_restore_step2_search_restore.png["검색 기준과 일치하는
 
 . 볼륨, 폴더 또는 파일을 복원할 대상 위치를 선택하고 * 복원 * 을 클릭합니다.
 +
-** 볼륨의 경우 원래 대상 작업 환경을 선택하거나 대체 작업 환경을 선택할 수 있습니다.
+** 볼륨의 경우 원래 대상 작업 환경을 선택하거나 대체 작업 환경을 선택할 수 있습니다. FlexGroup 볼륨을 복원할 때 여러 Aggregate를 선택할 수 있습니다.
 ** 폴더의 경우 원래 위치로 복원하거나 작업 환경, 볼륨 및 폴더를 포함한 대체 위치를 선택할 수 있습니다.
 ** 파일의 경우 원래 위치로 복원하거나 작업 환경, 볼륨 및 폴더를 포함한 대체 위치를 선택할 수 있습니다. 원본 위치를 선택할 때 원본 파일을 덮어쓰거나 새 파일을 만들도록 선택할 수 있습니다.
 +

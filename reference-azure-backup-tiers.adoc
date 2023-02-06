@@ -44,6 +44,11 @@ Azure Archive에서 데이터를 복원하는 데 비용이 얼마나 드는가?
 각 방법은 GB당 검색 비용과 요청당 수수료를 다르게 합니다. Azure 지역별 Azure Archive에 대한 자세한 가격을 보려면 를 방문하십시오 https://azure.microsoft.com/en-us/pricing/details/storage/blobs/["Azure 가격 책정 페이지입니다"^].
 
 --
+
+
+
+NOTE: Azure에서 StorageGRID 시스템으로 데이터를 복원할 때는 높은 우선 순위가 지원되지 않습니다.
+
 Azure Archive에 보관된 데이터를 복원하는 데 시간이 얼마나 걸립니까?:: 복원 시간을 구성하는 두 가지 부분이 있습니다.
 +
 --

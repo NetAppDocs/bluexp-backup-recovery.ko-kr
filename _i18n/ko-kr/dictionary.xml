@@ -368,7 +368,6 @@
   <block id="ed09c1b67736709db40a3664c46e855a" category="list-text">백업은 ONTAP 보조 백업에서만 지원됩니다.</block>
   <block id="94d565b7bd06dc8cc34590b54ce74eb6" category="list-text">볼륨에 적용된 스냅샷 정책은 매일, 매주, 매월 등 Cloud Backup에서 인식하는 정책 중 하나여야 합니다. 기본 "sm_created" 정책(* 미러 모든 스냅샷 * 에 사용됨) 가 인식되지 않으며 백업할 수 있는 볼륨 목록에 DP 볼륨이 표시되지 않습니다.</block>
   <block id="3dd0180637528cde8671a0c957cf90da" category="list-text">SM-BC 구성은 지원되지 않습니다.</block>
-  <block id="aff054320cc08565199d39e32a9acfcb" category="list-text">MCC(MetroCluster) 백업은 ONTAP 2차 백업에서만 지원됩니다. MCC &gt; SnapMirror &gt; ONTAP &gt; 클라우드 백업 &gt; 오브젝트 스토리지.</block>
   <block id="6488e4b9eef53ffd6c9cc6103d98e9fa" category="list-text">ONTAP는 단일 볼륨에서 여러 오브젝트 저장소로 이루어진 SnapMirror 관계를 지원하지 않습니다. 따라서 Cloud Backup에서는 이 구성을 지원하지 않습니다.</block>
   <block id="5f5966e9da5716290dfc2b88ceeb2217" category="list-text">복원 중인 파일은 대상 볼륨의 언어와 동일한 언어를 사용해야 합니다. 언어가 동일하지 않으면 오류 메시지가 나타납니다.</block>
   <block id="e386c51e8b46e9dad6f19dc36fbfc831" category="doc">Cloud Backup에 대해 자세히 알아보십시오</block>
@@ -694,7 +693,6 @@
   <block id="4ea13d07c10cf298954fbe9994599f85" category="inline-image-macro">ONTAP 클러스터에서 StorageGRID로 볼륨을 백업할 때의 클라우드 공급자 세부 정보를 보여 주는 스크린샷</block>
   <block id="ff0b7d591550f5f9f869585974a1bbf2" category="paragraph"><block ref="ff0b7d591550f5f9f869585974a1bbf2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a6267aa9363ea23a39e2827d0d338a8f" category="paragraph"><block ref="a6267aa9363ea23a39e2827d0d338a8f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f432a56abcf880039b4fc76adc99cbcd" category="paragraph">S3 버킷은 입력한 S3 액세스 키와 비밀 키로 표시된 서비스 계정에 자동으로 생성되며 백업 파일은 여기에 저장됩니다.</block>
   <block id="da95680877c2d8ff430e738df948144e" category="paragraph">사내 볼륨을 StorageGRID에 백업하기 전에 다음 요구 사항을 읽고 지원되는 구성이 있는지 확인합니다.</block>
   <block id="7c9c2c9135c9dd5b2198f3d2e909e271" category="paragraph"><block ref="7c9c2c9135c9dd5b2198f3d2e909e271" category="inline-image-macro-rx" type="image"></block></block>
   <block id="56b804288a96913690a4b3ca49ceea54" category="list-text">ONTAP를 사용하려면 Connector에서 클러스터 관리 LIF로 인바운드 연결이 필요합니다. 커넥터는 해당 위치에 있어야 합니다.</block>
@@ -751,7 +749,6 @@
   <block id="515ab291ab79ec8cfa9e1523b5a9a8ef" category="section-title">Browse &amp; Restore를 사용하여 볼륨을 복원합니다</block>
   <block id="9336df9a96bed9adb0f67170b2dad2b3" category="inline-image-macro">Browse &amp; amp; Restore를 사용하여 볼륨 복원 작업을 수행하는 흐름을 보여 주는 다이어그램</block>
   <block id="38aad7ac8bd6898064d142472e3e7624" category="paragraph"><block ref="7d27a3070fb1dce60f7cb72cb7d60b55" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="af292b8b1888fe5e6fd1aa517772208a" category="paragraph">보시다시피 볼륨 복구를 수행하려면 작업 환경 이름, 볼륨 이름 및 백업 파일 날짜를 알아야 합니다.</block>
   <block id="1dd03ba197149a65e271bc932ccd3df2" category="paragraph">다음 비디오에서는 볼륨 복원에 대한 간단한 단계별 안내를 보여 줍니다.</block>
   <block id="c656fd75a514c45e55cc9307b0939ee3" category="list-text">Restore * 탭을 클릭하면 Restore Dashboard가 표시됩니다.</block>
   <block id="d4aa01b5673aa73c8800032959090ed7" category="list-text">Browse &amp; Restore _ 섹션에서 * Restore Volume * 을 클릭합니다.</block>
@@ -783,7 +780,6 @@
   <block id="0e91ac4b1796171d6157fb39c3ef5d78" category="paragraph"><block ref="0e91ac4b1796171d6157fb39c3ef5d78" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0e1ef98c65a1f9d57f1fbd8e4f3b46da" category="list-text">위와 같이 * 대상 폴더 선택 * 을 선택한 경우:</block>
   <block id="3f25e82b6a6ddd7bce8047cf9c5eb6cf" category="list-text">폴더를 선택할 수 있습니다.</block>
-  <block id="f86cddb5af7f6094afd9672eaafed050" category="list-text">폴더 위로 마우스를 가져가 을 클릭할 수 있습니다 <block ref="3ff15a622a2116b6d2d6b57ef7b58fef" category="inline-image-macro-rx" type="image"></block> 행 끝에서 하위 폴더로 드릴다운한 다음 폴더를 선택합니다.</block>
   <block id="1c60eafb2bcc4dfa9a04abebcbb62b4e" category="section-title">검색 및 복원을 사용하여 ONTAP 데이터를 복원합니다</block>
   <block id="87e12bc1b54923f05d8d8365d473b744" category="paragraph"><block ref="ca127c5e9bec15815ed41459177c241d" category="inline-link-macro-rx"></block>.</block>
   <block id="42c4ab8961cdba5beaf8c8b46bfb4bc4" category="paragraph">시작하기 전에 복원하려는 볼륨이나 파일의 이름이나 위치를 알고 있어야 합니다.</block>
@@ -1081,7 +1077,6 @@
   <block id="5f0364e373bcb99c02ad1b8359683908" category="inline-link">Cloud Volumes ONTAP 라이센스 항목을 참조하십시오</block>
   <block id="277d325469c77a8ce02855d7ea5c8b1a" category="list-text">Cloud Volumes ONTAP와 클라우드 백업을 번들로 제공할 수 있는 "CVO Professional" 계획. 여기에는 이 라이센스에 대해 청구된 Cloud Volumes ONTAP 볼륨에 대한 무제한 백업이 포함됩니다(백업 용량은 라이센스에 포함되지 않음).</block>
   <block id="798aac57a47adfaf930d9def9b4bbe02" category="paragraph">를 참조하십시오<block ref="d58b2dbf2a4616ceca06f8773ed8f738" category="inline-link-rx"></block> 이 라이센스 옵션에 대해 자세히 알아보십시오.</block>
-  <block id="5fd6f798208daa9906f9880884735da2" category="paragraph">지속적인 백업 작업과 같은 시스템 시작 작업은 * 작업 모니터링 * 탭에 반영되지 않습니다. 사용자 시작 작업만 표시됩니다.</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">도움말 메뉴의 스크린샷으로, 여기에서 지원은 첫 번째 옵션입니다</block>
   <block id="868d9aa88f16ea923af1d15eac5d2647" category="paragraph"><block ref="868d9aa88f16ea923af1d15eac5d2647" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d17d6b5dafebab6b7659da8850737e70" category="list-text">NSS 관리 &gt; NSS 계정 추가 * 를 클릭합니다.</block>
@@ -1557,7 +1552,6 @@
   <block id="ba1ccf94a083bfd57735e245a4f6c008" category="list-text">Next * 를 클릭하면 볼륨 백업의 폴더 및 파일 목록이 표시됩니다.</block>
   <block id="906f805e3d9bd713d4fc930bd763eca9" category="list-text">Azure 요구사항:</block>
   <block id="ad21a85e531f324768ed107500147c11" category="inline-link">이 리소스 공급자를 구독에 등록하는 방법을 확인하십시오</block>
-  <block id="6a50b735b65723537bd33702bf6551aa" category="list-text">Azure Synapse Analytics 리소스 공급자를 구독에 등록해야 합니다.<block ref="66e7a06283e2f9b1945c2e3b539d5c17" category="inline-link-rx"></block>. 리소스 공급자를 등록하려면 구독 * 소유자 * 또는 * 참가자 * 여야 합니다.</block>
   <block id="1a57137c00ac13558ef22f60c946d8b3" category="list-text">Azure에 저장된 백업의 경우 Azure Synapse 작업 공간과 Data Lake 파일 시스템을 작업 공간 데이터를 저장할 컨테이너로 프로비저닝합니다.</block>
   <block id="5f98181f93bdb66aed67b6ec6ca0e6a1" category="section-title">검색 및 복원은 이제 Azure Blob의 백업 파일에서 지원됩니다</block>
   <block id="3cc0a32f0024bbcc0e74c0ca7c01b4ca" category="paragraph">이제 Azure Blob 저장소에 백업 파일을 저장하는 사용자가 볼륨 및 파일을 복원하는 검색 및 복원 방법을 사용할 수 있습니다.<block ref="2505b78b897ef0dc1c5d1783874239f2" category="inline-link-rx"></block>.</block>
@@ -1607,7 +1601,6 @@
   <block id="61b862400cd7156cb725e12fe1947d88" category="list-text">retention * 값은 각 레이블(기간)의 백업 파일 수를 정의합니다. 범주 또는 간격에서 최대 백업 수에 도달하면 오래된 백업이 제거되므로 항상 최신 백업이 유지됩니다. 또한, 폐기된 백업이 클라우드에서 공간을 차지하지 않기 때문에 스토리지 비용이 절감됩니다.</block>
   <block id="292f9f5eb65ebf40fd71fda6e8b093e7" category="list-text">매주 및 매월 볼륨에 대한 백업 파일이 생성됩니다</block>
   <block id="23433a4a1c369f850662f43bac40d8ae" category="section-title">DataLock 및 랜섬웨어 보호</block>
-  <block id="3960b74bd00136bf9d473cf143876ec1" category="paragraph">Cloud Backup은 볼륨 백업을 위한 DataLock 및 랜섬웨어 보호를 지원합니다. 이러한 기능을 사용하여 백업 파일을 잠그고 검색하여 백업 파일에서 잠재적인 랜섬웨어를 감지할 수 있습니다. 이 설정은 클러스터에 대한 볼륨 백업에 대한 추가 보호를 원할 때 백업 정책에 정의할 수 있는 선택적 설정입니다.</block>
   <block id="6c73c9d6c177001ef79643ba7b341c9e" category="list-text">DataLock 및 랜섬웨어 보호를 사용하려는 경우 첫 번째 백업 정책을 생성하고 해당 클러스터에 대한 Cloud Backup을 활성화할 때 활성화해야 합니다.</block>
   <block id="9f6fa998ef483bd08f4d11dca07b347a" category="list-text">DataLock 및 랜섬웨어 보호는 구성된 후에는 클러스터에 대해 비활성화할 수 없습니다. 클러스터에서 이 기능을 활성화하지 마십시오.</block>
   <block id="921b747c1abfd997d26a273c0b62011b" category="section-title">DataLock이란 무엇입니까</block>
@@ -1623,15 +1616,9 @@
   <block id="7b574572d2ae18c60d429c285a8984b9" category="paragraph">언제든지 온디맨드로 랜섬웨어 보호 스캔을 실행하여 특정 백업 파일의 상태를 확인할 수 있습니다. 이 기능은 특정 볼륨의 랜섬웨어 문제가 발생한 경우 해당 볼륨의 백업이 영향을 받지 않는지 확인하려는 경우에 유용합니다.</block>
   <block id="a69e1d2ca1fe7554b8e9cdd1437253dd" category="section-title">DataLock 및 랜섬웨어 보호 설정</block>
   <block id="58fa00d803b45e7110c889dedfeefaef" category="paragraph">각 백업 정책은 백업 파일에 적용할 수 있는 _DataLock 및 랜섬웨어 방지_ 섹션을 제공합니다.</block>
-  <block id="ec9cd099f847d3f19e5340c41e969f9b" category="inline-image-macro">백업 정책을 생성할 때의 DataLock 및 랜섬웨어 보호 설정 스크린샷</block>
-  <block id="d17d20c994e35019de48ae91479b73d2" category="paragraph"><block ref="d17d20c994e35019de48ae91479b73d2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c0b303da7160e59ef9b5719d33c8f30e" category="paragraph">각 백업 정책에 대해 다음 설정 중에서 선택할 수 있습니다.</block>
-  <block id="920d58daaa6a62f8a33d8c2606b5d6ad" category="list-text">없음(기본값)</block>
   <block id="3614cebacf558dc6e489ad626a434323" category="paragraph">DataLock 보호 및 랜섬웨어 보호가 비활성화됩니다.</block>
   <block id="027f1ac1be91251d83347a7798536252" category="inline-link-macro">아래를 참조하십시오</block>
-  <block id="9c0408c775a2b61052a2e700a89f396f" category="list-text">규정 준수</block>
-  <block id="d871807798c398066c07374cd00a3ae5" category="cell">Amazon S3 endif::AWS [] ifdef::Azure []endif::Azure []ifdef::GCP[]endif::GCP[]</block>
-  <block id="f3ec603ab9c35660f371c0fc057b7fd1" category="list-text">클러스터는 ONTAP 9.11.1 이상을 실행해야 합니다</block>
   <block id="f8a21cbcda6edc5ae1bf2008fc82b99d" category="list-text">S3:GetObjectVersionTagging</block>
   <block id="bce339f31623f1dca1af841a36515224" category="list-text">S3:GetBuckketObjectLockConfiguration</block>
   <block id="f80f99cee549d1cdd0a4fe6a1527ea90" category="list-text">S3:GetObjectVersionAcl</block>
@@ -1666,7 +1653,6 @@
   <block id="c10d430cabc016bc8e5ceddffda78379" category="list-text">Cloud Volumes ONTAP와 클라우드 백업을 번들로 제공할 수 있는 "CVO Professional" 패키지입니다. 여기에는 라이센스를 사용하는 Cloud Volumes ONTAP 시스템에 대한 무제한 백업이 포함됩니다(백업 용량은 라이센스 용량에 포함되지 않음). 이 옵션을 사용하면 사내 ONTAP 데이터를 백업할 수 없습니다.</block>
   <block id="8ec0d0dc8da544226cc9d382f2505c92" category="list-text">"CVO Edge Cache" 패키지는 "CVO Professional" 패키지와 동일한 기능을 제공하지만 에 대한 지원도 포함합니다<block ref="475d408daeaf0424668ce650296169bb" category="inline-link-rx"></block>. Cloud Volumes ONTAP 시스템에서 3TiB의 프로비저닝된 각 용량에 대해 하나의 글로벌 파일 캐시 에지 시스템을 구축할 수 있습니다. 이 옵션은 Azure 마켓플레이스를 통해서만 사용할 수 있으며, 온프레미스 ONTAP 데이터를 백업할 수 없습니다.</block>
   <block id="e19c54a7cf194baf456409469eef4cef" category="list-text">Cloud Volumes ONTAP와 클라우드 백업을 번들로 제공할 수 있는 "CVO Professional" 계획. 여기에는 라이센스를 사용하는 Cloud Volumes ONTAP 시스템에 대한 무제한 백업이 포함됩니다(백업 용량은 라이센스 용량에 포함되지 않음). 이 옵션을 사용하면 사내 ONTAP 데이터를 백업할 수 없습니다.</block>
-  <block id="80f19a6a4baa774910df9b4583a11c2e" category="list-text">변경 불가능한 백업 파일을 보존 기간 동안 잠가 있도록 만듭니다.</block>
   <block id="f5ef24e218bb7a52732b62958bb89c68" category="list-text">백업 파일에서 랜섬웨어 공격을 검색하고 감염된 백업을 자동으로 제거/교체합니다.</block>
   <block id="3f28b1a3a0b3b6c8294e56323ec13e18" category="list-text">오래된 백업 파일을 아카이브 스토리지에 계층화하여 비용 절감</block>
   <block id="fe66ea47b1e195d0a8f311d62ee027d8" category="paragraph">클라우드 공급자에게 오브젝트 스토리지 용량과 백업 파일을 쓰고 읽는 데 필요한 리소스 비용이 지불됩니다.</block>
@@ -1864,7 +1850,6 @@
   <block id="357a35aedd0c37deb3a881df778a9bb4" category="list-text">복원 * 을 클릭합니다.</block>
   <block id="3a3684473cd3bbadce768d553de06b92" category="sidebar">클라우드 네이티브 애플리케이션 데이터를 복원합니다</block>
   <block id="e7f0bd203723dde56c408349b772431e" category="paragraph">Cloud Backup은 이제 랜섬웨어 세이프 백업에 대한 오브젝트 잠금을 지원합니다. 클러스터가 ONTAP 9.11.1 이상을 사용하고 있고 백업 대상이 Amazon S3인 경우, _DataLock 및 랜섬웨어 보호_라는 새로운 백업 정책 옵션을 사용할 수 있습니다. DataLock은 백업 파일의 수정 또는 삭제를 방지하고, 랜섬웨어 방지 기능은 백업 파일을 검사하여 백업 파일에 대한 랜섬웨어 공격의 증거를 찾습니다.<block ref="3f7eaa3e30bb5eb7a46ecb7c423ee7ad" category="inline-link-rx"></block>.</block>
-  <block id="4a13f748ffea2bf384ee164062e7e17f" category="paragraph">이 기능을 사용하려면 커넥터 역할에 추가 권한이 필요합니다. 버전 3.9.21 소프트웨어를 사용하여 배포된 Connector에는 이러한 권한이 포함되어 있습니다. 이전 릴리스를 사용하여 Connector를 배포한 경우 사용 권한을 수동으로 추가해야 합니다.<block ref="b51546833a3c96ab5b8c4e49b196cd94" category="inline-link-rx"></block>.</block>
   <block id="9fa4d73f6f3d752a69adeebba1959edb" category="section-title">이제 Cloud Backup은 사용자 지정 SnapMirror 레이블을 사용하여 생성된 정책을 지원합니다</block>
   <block id="387856638678798c3ffb0e38b39170c6" category="paragraph">이전에는 Cloud Backup이 매시간, 매일, 매주, 시간별, 연도별 등의 미리 정의된 SnapMirror 레이블만 지원했습니다. 이제 Cloud Backup은 System Manager 또는 CLI를 사용하여 만든 사용자 지정 SnapMirror 레이블이 있는 SnapMirror 정책을 검색할 수 있습니다. 이러한 새 레이블은 Cloud Backup UI에 표시되므로 선택한 SnapMirror 레이블을 사용하여 볼륨을 클라우드에 백업할 수 있습니다.</block>
   <block id="1c630f0a83d0317db1fef94fb4dac579" category="paragraph">를 누릅니다<block ref="a3c3477c66a633d03b9d52df95b2c874" category="inline-link-rx"></block> 또는<block ref="d8758b85898e795623db75e4c1372f83" category="inline-link-rx"></block> 백업 대상이 Canvas에 작업 환경으로 존재합니다. 온프레미스 ONTAP 또는 Cloud Volumes ONTAP 작업 환경(Azure 또는 GCP에 설치됨)을 대상으로 끌어서 백업 설정 마법사를 시작할 수 있습니다.</block>
@@ -1900,7 +1885,6 @@
   <block id="17c981b300f2af812caf64b9a2093463" category="list-text"><block ref="19fee869bed89515b1fdf17b227a6fea" category="inline-xref-macro-rx"></block></block>
   <block id="8996e9eaff78ab540aab279a66de20ac" category="inline-xref">검색 및 amp;Restore를 사용하여 볼륨, 폴더 및 파일을 복원합니다</block>
   <block id="67e7c5cb86f955703ed9f6730af64fd6" category="list-text"><block ref="2695406f56a43b731bc71bc11df2f690" category="inline-xref-macro-rx"></block></block>
-  <block id="3be60ab390e443d7cab393bf7054a58c" category="paragraph">볼륨, 폴더 또는 파일 복원을 시작하기 전에 복원할 볼륨의 이름, 볼륨이 있는 작업 환경의 이름 및 복원할 백업 파일의 대략적인 날짜를 알아야 합니다.</block>
   <block id="7ff418ea3dd2acd8ae27ed509d08a48b" category="paragraph">ONTAP 백업 파일에서 다음 작업 환경으로 볼륨, 폴더 또는 개별 파일을 복원할 수 있습니다.</block>
   <block id="2e43b583329f5406f8eb83df6ec39874" category="admonition">백업 파일이 DataLock 및 랜섬웨어로 구성된 경우 폴더 또는 파일을 복원할 수 없습니다. 이 경우 백업 파일에서 전체 볼륨을 복원한 다음 필요한 파일에 액세스할 수 있습니다.</block>
   <block id="860f07d2ed109437af4b64fd8713b385" category="paragraph">아카이브 스토리지에 있는 백업 파일에서 볼륨을 복원하는 데는 아카이브 계층 및 복원 우선 순위에 따라 몇 분 또는 몇 시간이 걸릴 수 있습니다. Job Monitoring* 탭을 클릭하여 복구 진행률을 확인할 수 있습니다.</block>
@@ -1927,7 +1911,6 @@
   <block id="ca22cc6140bd8c54eb21a12417ea6dee" category="list-text">Select Items_ 페이지에서 복원하려는 폴더나 파일을 선택하고 * Continue * 를 클릭합니다. 항목을 찾는 데 도움이 되는 방법:</block>
   <block id="8eefd323031d1fae59b5ceef91ab4f93" category="list-text">폴더 또는 파일 이름이 표시되면 해당 이름을 클릭할 수 있습니다.</block>
   <block id="be1f6dcc1782b0b20b55d43b4645e2a7" category="list-text">검색 아이콘을 클릭하고 폴더나 파일의 이름을 입력하여 해당 항목으로 직접 이동할 수 있습니다.</block>
-  <block id="650453873f4094c736ed56dd491d9fd6" category="list-text">를 사용하여 폴더의 하위 수준을 탐색할 수 있습니다 <block ref="3ff15a622a2116b6d2d6b57ef7b58fef" category="inline-image-macro-rx" type="image"></block> 버튼을 클릭하여 특정 파일을 찾습니다.</block>
   <block id="3eff6a40a6c8b834f8c971398e326074" category="list-text">대상 선택 페이지에서 항목을 복원할 * 작업 환경 * 을 선택합니다.</block>
   <block id="47190684d126945126167e8455d8e063" category="inline-image-macro">복원하려는 항목의 대상 작업 환경 선택 스크린샷</block>
   <block id="f7ab4bac0944291671219b917e7b295f" category="paragraph"><block ref="f7ab4bac0944291671219b917e7b295f" category="inline-image-macro-rx" type="image"></block></block>
@@ -1957,7 +1940,6 @@
   <block id="91e324be12e37ac099a891d8f8f15442" category="list-text">복원할 데이터가 있는 리소스에 대해 * 모든 백업 보기 * 를 클릭하여 일치하는 볼륨, 폴더 또는 파일이 포함된 모든 백업 파일을 표시합니다.</block>
   <block id="9dbd66766c1a5629f0433882a1072133" category="list-text">클라우드에서 항목을 복원하는 데 사용할 백업 파일에 대해 * 복원 * 을 클릭합니다.</block>
   <block id="8be1e1a6d2ac4b49f49a7f1f37997551" category="list-text">볼륨, 폴더 또는 파일을 복원할 대상 위치를 선택하고 * 복원 * 을 클릭합니다.</block>
-  <block id="4389ecac6295892013c0fa1f7c431f04" category="list-text">볼륨의 경우 원래 대상 작업 환경을 선택하거나 대체 작업 환경을 선택할 수 있습니다.</block>
   <block id="74b5efa4496e2e9e98c43dd6f32429ec" category="list-text">폴더의 경우 원래 위치로 복원하거나 작업 환경, 볼륨 및 폴더를 포함한 대체 위치를 선택할 수 있습니다.</block>
   <block id="eaea7e11b9b9011f44311456a9459522" category="list-text">파일의 경우 원래 위치로 복원하거나 작업 환경, 볼륨 및 폴더를 포함한 대체 위치를 선택할 수 있습니다. 원본 위치를 선택할 때 원본 파일을 덮어쓰거나 새 파일을 만들도록 선택할 수 있습니다.</block>
   <block id="3a90d49b063db68cc26f9102adf34b70" category="paragraph">볼륨, 폴더 또는 파일이 복원되고 복구 작업의 진행률을 검토할 수 있도록 복구 대시보드로 돌아갑니다. 또한 * Job Monitoring * 탭을 클릭하여 복원 진행률을 확인할 수도 있습니다.</block>
@@ -1993,22 +1975,16 @@
   <block id="aa254718f2c52dc147bfd8f98b0c4840" category="inline-link">Cloud Insights and Cloud Secure를 참조하십시오</block>
   <block id="86fef274eb09e789513af0922e579b5a" category="inline-link">ONTAP에서 제공하는 랜섬웨어 방지 보호</block>
   <block id="dc52d5a83e31ec66da3344056a4e4e39" category="paragraph">이전 백업은 백업 정책 보존 기간이 만료된 후가 아니라 DataLock 보존 기간이 만료된 후에 삭제됩니다.</block>
-  <block id="49a6926ab95494c4de6e1f26bab7e4d5" category="list-text">거버넌스(StorageGRID에서는 사용할 수 없음)</block>
-  <block id="4e828df72a865dff97ed752d2c9c8307" category="paragraph">DataLock은 특정 권한이 있는 사용자(<block ref="6091ac16b06103b3d1b14d6f408bb364" category="inline-link-macro-rx"></block>)는 보존 기간 동안 백업 파일을 덮어쓰거나 삭제할 수 있습니다. 랜섬웨어 보호가 활성화됩니다.</block>
   <block id="5a080c775e60ee1f55b487821cc05ac3" category="paragraph">DataLock은 보존 기간 동안 사용자가 백업 파일을 덮어쓰거나 삭제할 수 없는 _Compliance_mode로 설정됩니다. 랜섬웨어 보호가 활성화됩니다.</block>
   <block id="189baba290165c9a7ddf7f3c3ec05a6a" category="paragraph">다음 퍼블릭 및 프라이빗 클라우드 공급자가 오브젝트 스토리지를 사용하는 경우, 다음과 같은 작업 환경에서 ONTAP 볼륨의 DataLock 및 랜섬웨어 보호를 활성화할 수 있습니다. 향후 릴리즈에서는 클라우드 공급자를 더 추가할 예정입니다.</block>
-  <block id="12ffabaafd850d6e279869bb1cd0b7c8" category="cell">ifdef::AWS[]Amazon S3 endif::AWS[]ifdef::Azure[]endif::Azure[]ifdef::GCP[]endif::GCP[]NetApp StorageGRID</block>
   <block id="46651d9c49a465cb6fa5e07cd6981948" category="list-text">다음 S3 권한은 Connector에 권한을 제공하는 IAM 역할의 일부여야 합니다. 이러한 리소스는 리소스 "arn:AWS:S3::NetApp-backup- *"의 "backupS3Policy" 섹션에 있습니다.</block>
   <block id="a0cfa687d678b7bdaa6e05ad4367a96d" category="list-text">StorageGRID의 경우:</block>
   <block id="00913a42b009e85b8960c2fdad53a54a" category="list-text">Connector를 사내에 구축해야 합니다(인터넷 접속 유무에 관계없이 사이트에 설치할 수 있음).</block>
   <block id="6d77a031f2c449f19db709bc8ae95649" category="list-text">DataLock 기능을 완벽하게 지원하려면 StorageGRID 11.6.0.3 이상이 필요합니다</block>
-  <block id="aab20f5f1b788e9b46223aa9db432026" category="list-text">Cloud Backup을 활성화할 때 선택한 DataLock 옵션(Governance 또는 Compliance)은 해당 클러스터의 모든 백업 정책에 사용해야 합니다. 단일 클러스터에서는 거버넌스 및 규정 준수 모드 잠금을 모두 사용할 수 없습니다.</block>
   <block id="6176afad6a7761beffa9af008f2ae633" category="inline-link">빠른 데모 보기</block>
   <block id="a9840ddd0211114f18d80718c08ddb05" category="paragraph"><block ref="a9840ddd0211114f18d80718c08ddb05" category="inline-link-rx"></block></block>
   <block id="cd2965bfeacaceb11394002abe013260" category="summary">PAYGO(Pay-as-you-Go) 또는 클라우드 공급자로부터 연간 시장 가입 서비스를 구입하거나 NetApp에서 BYOL(Bring-Your-Own-License)을 구입하여 Cloud Backup의 라이센스를 부여할 수 있습니다. 작업 환경에서 Cloud Backup을 활성화하고, 운영 데이터의 백업을 생성하고, 백업 데이터를 운영 시스템에 복원하려면 유효한 라이센스가 필요합니다.</block>
   <block id="ca636232aaf17fe5d8fef3b105b4363c" category="list-text">볼륨, 폴더 또는 개별 파일을 소스 시스템 또는 다른 시스템으로 복원합니다.</block>
-  <block id="ead18a75e8ad08c3fd02c4ded3f53521" category="list-text">단일 파일 복원을 위한 개별 폴더 및 파일을 선택할 수 있는 탐색 가능 및 검색 가능한 파일 카탈로그입니다.</block>
-  <block id="e831d27edb715928e8204ce285611618" category="section-title">파일 및 폴더 복원 제한 사항</block>
   <block id="79ec871c574dbe9adf17973bdb4bf029" category="paragraph">특별히 호출되지 않는 한 검색 및 복원과 찾아보기 및 복원 방법 모두에 이러한 제한 사항이 적용됩니다.</block>
   <block id="7a6f7d393f4de35501272976e1ba9e03" category="list-text">찾아보기 및 복원, 검색 및 복원은 한 번에 하나의 폴더를 복원할 수 있습니다.</block>
   <block id="7ed26bbb75f4d5a15f22c2e06ce64775" category="list-text">기본적으로 백업은 Cloud Volumes ONTAP 시스템에 사용되는 계정과 동일한 계정을 사용하여 생성됩니다. 백업에 다른 AWS 계정을 사용하려면 다음을 수행해야 합니다.</block>
@@ -2189,7 +2165,6 @@
   <block id="ba9a6951ecf97e593c2140f66a8574bf" category="sidebar">ONTAP 볼륨에서 파일 및 폴더를 복구합니다</block>
   <block id="855a635321caeb08d8525de5eea56651" category="list-text">검색 및 복원을 사용하여 데이터를 복원하는 경우 클라우드 공급자가 특정 리소스를 프로비저닝하며, 검색 요청에 의해 스캔된 데이터 양과 관련된 TiB 비용이 있습니다. (이러한 리소스는 Browse &amp; Restore에 필요하지 않습니다.)</block>
   <block id="c03019f9be2cb226dc19ca939f4d2a98" category="paragraph">작업 환경에 Cloud Backup을 활성화하면 처음에 선택한 모든 볼륨이 사용자가 정의한 기본 백업 정책을 사용하여 백업됩니다. RPO(복구 지점 목표)가 서로 다른 특정 볼륨에 서로 다른 백업 정책을 할당하려면 해당 클러스터에 대한 추가 정책을 생성한 다음 Cloud Backup이 활성화된 후 다른 볼륨에 해당 정책을 할당할 수 있습니다.</block>
-  <block id="887b3715a8c6b9f979173f9bb78db138" category="paragraph">현재 백업 대상이 Amazon S3 또는 NetApp StorageGRID인 경우 지원을 받을 수 있습니다. 다른 스토리지 제공업체 대상은 향후 릴리스에 추가될 예정입니다.</block>
   <block id="5116aee7e891450dd457789d0b3857e4" category="paragraph">이 문서에서는 Cloud Backup Service를 사용할 때 사내 ONTAP 시스템 및 Cloud Volumes ONTAP 시스템에 대한 백업 정책 구성 설정에 대해 설명합니다.</block>
   <block id="f576f81f502b655c924b76cc045e8946" category="paragraph">Cloud Backup을 사용하면 각 작업 환경(클러스터)에 대해 고유한 스케줄로 여러 백업 정책을 생성할 수 있습니다. RPO(복구 시점 목표)가 다른 볼륨에 서로 다른 백업 정책을 할당할 수 있습니다.</block>
   <block id="3b190b83ddc2ee9e610caa6dc209fbaf" category="list-text">레이블 * 은 볼륨에서 백업 파일이 생성(또는 업데이트)되는 빈도를 정의합니다. 다음 유형의 라벨 중에서 선택할 수 있습니다.</block>
@@ -2202,10 +2177,7 @@
   <block id="681e74daf8a2c7a6316ddee6727d3b7f" category="paragraph">이 마지막 사례에서는 각 백업 파일이 44일 동안 잠겨 있는 경우, 일반적으로 1시간/24시간 보존 정책으로 보존되는 것보다 더 많은 백업 파일이 포함됩니다. 일반적으로 Cloud Backup은 25번째 백업 파일을 생성할 때 가장 오래된 백업을 삭제하여 최대 보존 한도를 24로 유지합니다(정책에 따라). DataLock 보존 설정은 이 경우 백업 정책의 정책 보존 설정을 재정의합니다. 이 경우 백업 파일이 개체 저장소에 장기간 저장되므로 스토리지 비용이 영향을 받을 수 있습니다.</block>
   <block id="e81b2d9a99c319820fe2a1d0b0d7f2bf" category="paragraph">랜섬웨어 차단 기능은 백업 파일을 검사하여 랜섬웨어 공격의 증거를 찾습니다. 랜섬웨어 공격 탐지 작업은 체크섬 비교를 통해 수행됩니다. 잠재적인 랜섬웨어가 백업 파일에서 이전 백업 파일과 비교하여 식별되면, 최신 백업 파일이 랜섬웨어 공격의 징후를 보이지 않는 최신 백업 파일로 대체됩니다. (랜섬웨어 공격이 발생한 것으로 확인된 파일은 교체후 1일 후에 삭제됩니다.)</block>
   <block id="c545a26c4ed6190e3a8c71826161a528" category="paragraph">클라우드 스토리지에 처음 기록될 때는 백업 파일에 대해 검사가 수행되지 않지만 * next * 백업 파일이 기록될 때는 검사가 수행됩니다. 예를 들어 화요일의 주별 백업 스케줄이 설정되어 있는 경우 14일 화요일에 백업이 생성됩니다. 그리고 화요일에 또 다른 백업이 생성됩니다. 랜섬웨어 스캔은 현재 14번째 백업 파일에서 실행됩니다.</block>
-  <block id="e3ab630e3f610a8213d19aed9bf024c4" category="admonition">StorageGRID S3 오브젝트 잠금 기능은 규정 준수 모드에 해당하는 단일 데이터 잠금 모드를 제공합니다. 동일한 거버넌스 모드는 지원되지 않으므로 사용자는 보존 설정을 무시하거나, 보호된 백업을 덮어쓰거나, 잠긴 백업을 삭제할 수 없습니다.</block>
   <block id="83933361b1e2abf7e7f406666cc9c104" category="list-text">AWS의 경우:</block>
-  <block id="d82ac33ca1171e71de283e404129a0c4" category="paragraph">클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 이전 백업을 _S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 계층화하도록 선택할 수 있습니다. <block ref="f7fa7b0a9e810d8c500bcf785a34f359" category="inline-link-macro-rx"></block>.</block>
-  <block id="3dfe42849739012935ae4b966fa89d76" category="paragraph">클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 이전 백업을 _Azure Archive_storage에 계층화하도록 선택할 수 있습니다. <block ref="2f91ed687cd1d1d6d8235865263a43ff" category="inline-link-macro-rx"></block>.</block>
   <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">고객 수준 계정이 있는 경우 하나 이상의 NSS 계정을 추가할 수 있습니다.</block>
   <block id="d0a875b745f9b38ce0c00471ccf26254" category="list-text">비공개 연결 - VPN 또는 Google Cloud Interconnect를 사용하고 사설 IP 주소를 사용하는 전용 Google Access 인터페이스를 통해 트래픽을 라우팅합니다.</block>
   <block id="dac3cac56101d31900414dafe82d7447" category="summary">Cloud Backup은 데이터의 보호 및 장기 아카이브를 위한 백업 및 복원 기능을 제공하는 BlueXP 작업 환경을 위한 서비스입니다. 백업은 자동으로 생성되어 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 저장됩니다.</block>
@@ -2521,7 +2493,6 @@
   <block id="95bdcffb51de388c8d204ebc69a73e61" category="section-title">AWS 교차 계정 백업 기능이 향상되었습니다</block>
   <block id="ae3795f53c6086a9639e4652dbff318b" category="paragraph">소스 볼륨에 사용 중인 것과 다른 Cloud Volumes ONTAP 계정을 백업에 사용하려면 BlueXP에서 대상 AWS 계정 자격 증명을 추가해야 하며, BlueXP에 사용 권한을 제공하는 IAM 역할에 "S3:PutBucketPolicy" 및 "S3:PutnerOwshipControls" 권한을 추가해야 합니다. 이전에는 AWS 콘솔에서 여러 설정을 구성해야 했습니다. 이제는 더 이상 그렇게 할 필요가 없습니다.</block>
   <block id="ef88ffe6f484bdfc25f97445be29df28" category="sidebar">클러스터 레벨 백업 설정을 관리합니다</block>
-  <block id="749775c831a251b1841492d6cd64446b" category="paragraph">이 스크린샷은 기본 열/필드 머리글을 보여줍니다. 를 클릭할 수 있습니다 <block ref="835a7e197f8f78cae39058ebe9f7b1c4" category="inline-image-macro-rx" type="image"></block> 열 머리글을 표시하거나 숨기려면 또는 "사용자 이름" 및 "유형"에 대해 두 개의 추가 제목을 추가합니다.</block>
   <block id="9596c723878bfc4072c4881a7877ce59" category="list-text">특정 기간 동안 작업을 보려면 페이지 왼쪽 상단의 시간 선택기를 사용합니다</block>
   <block id="8c8d15cbcb23d4d9a941a520eed8f594" category="list-text">특정 상태에 대해 * 작업 보기 * 를 클릭합니다(예: "실패" 아래에서 실패한 작업만 보기)</block>
   <block id="aa72dffd28e8e8bc6bede04c2bfb9b8a" category="paragraph">현재 e-메일 알림을 트리거하는 네 가지 이벤트가 있습니다.</block>
@@ -2607,7 +2578,6 @@
   <block id="cc8b0535948da368f832027c19b7f853" category="list-text">일련 번호 필드에 위에서 사용된 계정 일련 번호(960xxxx)를 복사해 주십시오. 이렇게 하면 계정 처리 속도가 빨라집니다.</block>
   <block id="e57e5c06a7f562addb87315f013677ab" category="inline-link-macro">Google 아카이브 스토리지에서 복원하는 방법에 대해 자세히 알아보십시오</block>
   <block id="9412087e43270b75b90fb61a57336ae4" category="paragraph"><block ref="3c746f2f3db6e0c7091d37b11706df4d" category="inline-link-macro-rx"></block>.</block>
-  <block id="14bc89f69d47048d5fa04ec00dbd4951" category="list-text">복원된 볼륨에 사용할 이름을 입력하고 볼륨이 상주하는 스토리지 VM 및 Aggregate를 선택합니다. 기본적으로 * &lt;source_volume_name&gt;_restore * 가 볼륨 이름으로 사용됩니다.</block>
   <block id="a4601bed84cfcc515268c444afd2de52" category="paragraph"><block ref="bb0b0cd162d3c161f2efdc6c31126950" category="inline-link-macro-rx"></block>. Google 아카이브 스토리지 계층의 백업 파일은 거의 즉시 복원되며 복원 우선 순위가 필요하지 않습니다.</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">결과</block>
   <block id="b696dfa697a630f834f39ef334da1579" category="list-text">folder_restore 작업을 수행하려면 ONTAP 버전이 9.11.1 이상이어야 합니다. ifdef::AWS[]</block>
@@ -2633,7 +2603,6 @@
   <block id="58589148f158cd52293e005634c3a4ac" category="list-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 새로운 시스템이나 기존 시스템에서 Cloud Backup을 활성화합니다</block>
   <block id="89cb34919c63b897d601fddea2dd050d" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 제공업체 세부 정보를 입력합니다</block>
   <block id="31a8f4d5116c3f4c70cbc4447d1ff546" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 기본 백업 정책을 정의합니다</block>
-  <block id="437b494e96946aaf5ecc116d6cb5c33f" category="paragraph"><block ref="437b494e96946aaf5ecc116d6cb5c33f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="de705e296c3c30f9201b0b19e9c260a3" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 백업할 볼륨을 선택합니다</block>
   <block id="f436bcae123c67a5a4225fe3ca69b3a3" category="paragraph">서비스 계정이 이미 구성되어 있어야 합니다. Cloud Volumes ONTAP 시스템을 생성할 때 서비스 계정을 선택하지 않은 경우, 시스템을 끄고 GCP 콘솔에서 Cloud Volumes ONTAP에 서비스 계정을 추가해야 합니다.</block>
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">필요한 것</block>
@@ -2682,12 +2651,9 @@
   <block id="080b8dd3f3323a86a22c3af13ee1c495" category="list-text">Search &amp; Restore 페이지에서 몇 가지 카탈로그 검색을 실행하여 인덱싱된 카탈로그 복원이 성공적으로 완료되었는지 확인합니다.</block>
   <block id="650c5c3b9794e3433e90f3f1f307a2c3" category="list-text">SnapLock Compliance 볼륨은 현재 지원되지 않습니다.</block>
   <block id="bab09e9304b5c4bff1eb4287ce6071b7" category="list-text">FlexGroup 볼륨(ONTAP 9.12.1 이상 필요)</block>
-  <block id="475af0c0d6321583d7e7e8aefaa8c0ea" category="list-text">파일 레벨 복구는 사내 ONTAP 및 Cloud Volumes ONTAP 시스템 모두에서 지원됩니다.</block>
-  <block id="6843e74fcdf0b33118de40008961bd8e" category="list-text">디렉토리/폴더 복구는 현재 지원되지 않습니다.</block>
   <block id="7528a8dc2386db915543addb19c65967" category="paragraph">Cloud Volumes ONTAP 또는 사내 ONTAP 시스템에서 클라우드 백업을 활성화하면 서비스가 데이터의 전체 백업을 수행합니다. 볼륨 스냅샷은 백업 이미지에 포함되지 않습니다. 초기 백업 후에는 모든 추가 백업이 증분 백업되므로 변경된 블록과 새 블록만 백업됩니다. 이렇게 하면 네트워크 트래픽이 최소로 유지됩니다. Cloud Backup은 을 기반으로 합니다<block ref="d8c60b64404c334d98470563ebc11aa0" category="inline-link-rx"></block>.</block>
   <block id="181beb5ba2cd4630deb7eb4905bcf5d0" category="list-text">GCP에서 백업은 _Standard_storage 클래스와 연결됩니다.</block>
   <block id="e3ef2b7eb11e46c821f75f7c65663319" category="inline-link-macro">Google 아카이브 스토리지에 대해 자세히 알아보십시오</block>
-  <block id="ed5d221b71e51e1e1409dda86fedb054" category="paragraph">사내 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 클라우드 백업 UI의 _Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. (이 기능은 현재 Cloud Volumes ONTAP 시스템에서 사용할 수 없습니다.) <block ref="60cdd04e7131e97598ce1c583d8c9a5e" category="inline-link-macro-rx"></block>.</block>
   <block id="7675fc79dcb00b07887361a923ba9860" category="list-text">백업 파일이 아카이브 스토리지에 있는 경우 개별 폴더를 복원할 수 없습니다.</block>
   <block id="70762168244eed6d4b30ab53961acada" category="inline-link">이 작업을 수행하는 방법을 확인하십시오</block>
   <block id="ce03951df7fb3e2e2a2d44f1f519bfc7" category="list-text">필수 AWS 커넥터 권한</block>
@@ -2735,7 +2701,6 @@
   <block id="1d1f829431c9386d582ffb5743db4e57" category="doc">Google 아카이브 스토리지 클래스 및 복원 검색 시간</block>
   <block id="3d00b11e5d07dfd2ba8d56e678bcbad0" category="section-title">Cloud Backup에 지원되는 Google 아카이브 스토리지 클래스입니다</block>
   <block id="ba9d8863610ca6cf8a9d81a9d08b4ff0" category="paragraph">백업 파일이 처음 생성되면 파일이 _Standard_storage에 저장됩니다. 이 계층은 자주 액세스하지 않는 데이터를 저장하는 데 최적화되어 있지만 이를 즉시 액세스할 수도 있습니다.</block>
-  <block id="6f157ad58ad8463aa48b0ef63feae0a5" category="paragraph">사내 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일(일반적으로 30일 이상) 후에 클라우드 백업 UI의 _Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. (이 기능은 현재 Cloud Volumes ONTAP 시스템에서 사용할 수 없습니다.) 이 계층의 데이터는 높은 검색 비용이 필요하므로 이러한 아카이브 백업 파일에서 데이터를 복원해야 하는 빈도를 고려해야 합니다. 에 대한 섹션을 참조하십시오 <block ref="a877e7ca3014076607c0c931133681b8" category="inline-xref-macro-rx"></block>.</block>
   <block id="913a9b95ff41fd20752f94c891595a49" category="paragraph">이러한 유형의 수명주기 규칙을 사용하여 Cloud Backup을 구성할 때는 Google 계정에서 버킷을 설정할 때 라이프사이클 규칙을 구성하지 않아야 합니다.</block>
   <block id="ce438ee45b86179bda77bf3e35381fab" category="inline-link">Google 스토리지 클래스에 대해 알아보십시오</block>
   <block id="6ee8bcc3a0d1b2140035e4aba95e8380" category="paragraph"><block ref="75c9271cc9749f3d160922047bd03bc4" category="inline-link-rx"></block>.</block>
@@ -2760,9 +2725,6 @@
   <block id="f8d12ed26ccbabf790e2b8039b322046" category="paragraph">"자동 백업 사용":"참"을 선택하면 시스템에 이미 있는 모든 볼륨이 백업되고 이후 볼륨도 백업됩니다.</block>
   <block id="056e3b6ecd6329a08267381680ade8b7" category="paragraph">BlueXP 계정 ID를 사용하는 것을 확인할 수 있습니다<block ref="50deb7e0fbc66ff8a640c6692b57f062" prefix=" " category="inline-code"></block>, BlueXP 커넥터 ID<block ref="4c8927d7befc11ec79983636b1168c7e" prefix=" " category="inline-code"></block>, 및 사용자 토큰<block ref="4def1da2868e8cb4ae96d8dc41f88f59" prefix=" " category="inline-code"></block> 명령을 입력합니다.</block>
   <block id="7fca796fb2e827602e2cedf3a042e67f" category="paragraph">일반적으로, 최근 주나 월로부터 특정 볼륨, 폴더 또는 파일을 복원해야 할 때 _Browse &amp; Restore_가 더 낫습니다. 파일의 이름과 위치, 파일의 마지막 상태가 양호한 날짜를 알고 있어야 합니다. 일반적으로 볼륨, 폴더 또는 파일을 복원해야 할 때 검색 및 복원 _ 이(가) 더 좋지만 정확한 이름, 해당 볼륨이 있는 볼륨 또는 상태가 양호한 마지막 날짜를 기억하지 못합니다.</block>
-  <block id="f63030c33368c9800cc44a8f8e79e3ae" category="paragraph">* FlexGroup 볼륨 복원 제한 *:</block>
-  <block id="edf17b5a6d6f509fefc6faa660cd0be4" category="list-text">전체 볼륨 복원은 사내 ONTAP 시스템에만 지원됩니다(Cloud Volumes ONTAP 시스템은 현재 지원되지 않음).</block>
-  <block id="4edc78fc5c04f1cf55893ac0c9ec6f56" category="list-text">현재 볼륨을 단일 aggregate로 복원할 수 있습니다.</block>
   <block id="1e101142b61a711e7fbc92238adf9d20" category="list-text">* PAYGO *: 클라우드 공급자 마켓플레이스의 시간별 구독입니다.</block>
   <block id="146cb6145f5238f0a019636047844250" category="list-text">* 연간 *: 클라우드 공급자 마켓플레이스로부터 연간 계약을 체결합니다.</block>
   <block id="0de9db73ae6cc6898033595f94ad00e5" category="paragraph">NetApp에서 BYOL 라이센스를 구매하는 경우 클라우드 공급자 마켓플레이스의 PAYGO 오퍼링에 가입해야 합니다. 라이센스는 항상 먼저 부과되지만 다음과 같은 경우 마켓플레이스의 시간당 요율로 비용이 청구됩니다.</block>
@@ -3306,7 +3268,6 @@
   <block id="8125c29989803ad0a7a3fcd80763904a" category="list-text">복사<block ref="7730e5c2e030df9de4e60d7586534d1d" prefix=" " category="inline-code"></block> 보낸 사람<block ref="6a722c9070d74bb0503ce0417b0cad70" prefix=" " category="inline-code"></block> 커넥터 VM의 경로<block ref="b99636c9e34de318e385a63d2cb037a1" prefix=" " category="inline-code"></block> 플러그인 호스트에서</block>
   <block id="ef1e764c716d2aa5406d3d434b9c8614" category="list-text">로 이동합니다<block ref="0dc0b955539cf9119a9695bb3312c8cb" prefix=" " category="inline-code"></block> 키 도구 명령을 실행하여 인증서를 가져옵니다.<block ref="0d48a0d1a6daee261d59f76e1ce65f98" prefix=" " category="inline-code"></block></block>
   <block id="fd9064c3951e4ceddd0e2ae6bf2708e5" category="paragraph">* 참고: * 복원하려는 데이터가 들어 있는 백업 파일이 보관 저장소에 있는 경우(ONTAP 9.10.1부터 시작) 복원 작업에 더 많은 시간이 소요되고 비용이 발생합니다. 또한 대상 클러스터는 볼륨 복원의 경우 ONTAP 9.10.1 이상, 파일 복원의 경우 9.11.1, Google 아카이브 및 StorageGRID의 경우 9.12.1 이상을 실행해야 합니다.</block>
-  <block id="996e1ad0df7144c78c9638cef2553e17" category="paragraph">또한 검색 작업을 통해 ONTAP 볼륨에 대한 모든 로컬 스냅샷 복사본을 확인합니다. 로컬 스냅샷 복사본에서 데이터를 복원하는 것이 백업 파일에서 복원하는 것보다 빠르고 비용이 적게 들 수 있으므로 스냅샷에서 데이터를 복원할 수 있습니다. 클라우드 백업이 아닌 Canvas의 볼륨 세부 정보 페이지에서 스냅샷을 새 볼륨으로 복원할 수 있습니다.</block>
   <block id="c003f27675e7048b4dd9d00ba4f2f343" category="paragraph">복원하려는 볼륨의 백업 파일이 아카이브 스토리지(ONTAP 9.10.1부터 사용 가능)에 있는 경우 복원 작업에 더 많은 시간이 소요되고 추가 비용이 발생합니다. 또한 대상 클러스터는 볼륨 복원의 경우 ONTAP 9.10.1 이상, 파일 복원의 경우 9.11.1, Google 아카이브 및 StorageGRID의 경우 9.12.1 이상을 실행해야 합니다.</block>
   <block id="aba6991b1b269dad52e52cd4c3998779" category="list-text">볼륨에 NFS를 설정해야 합니다(NFS 및 SMB/CIFS 볼륨 모두 지원).</block>
   <block id="4870c40d3a9790a30e2c950188cce666" category="list-text">SVM에서 SnapDiff RPC 서버를 활성화해야 합니다. BlueXP는 작업 환경에서 인덱싱을 활성화할 때 이 작업을 자동으로 수행합니다. SnapDiff는 두 스냅샷 복사본 간의 파일 및 디렉토리 차이를 신속하게 식별하는 기술입니다.</block>
@@ -3343,7 +3304,6 @@
   <block id="259867979057b5e6ad5fa3df5144f0da" category="list-text">저장소 계정과 연결된 서비스 에이전트에는 Cloud Backup의 "CryptoKey Encryptter/Decrypter(roles/cloudkms.cryptEncrypterDecrypter)" IAM 역할이 할당됩니다.</block>
   <block id="e5270a4abac17c25b3ef1bd1f0178ffa" category="list-text">백업을 위해 Google Cloud Storage 버킷을 생성할 Google Cloud Project. (프로젝트에 특정 권한이 있는 사용자 지정 역할이 있는 서비스 계정이 있어야 함 - <block ref="fcf105bce6a0d8360050e7cca51db497" category="inline-xref-macro-rx"></block>참조)</block>
   <block id="f8db587738d0ddf87ce3a2c057f297b7" category="list-text">Google에서 관리하는 기본 암호화 키를 사용하거나 고객이 직접 관리하는 키를 선택하여 데이터 암호화를 관리할지 여부를 결정합니다. CMEK를 사용하려면 키 링과 키 이름이 있어야 합니다.<block ref="f8e0e63bffb58004a25f7278cd43c42c" category="inline-link-rx"></block>.</block>
-  <block id="7c8c3c3e25f0041dee3a27547aa13698" category="list-text">클라우드 백업 검색 및 복원 기능이 작동하려면 Connector와 Azure Synapse SQL 서비스 간의 통신을 위해 포트 1433이 열려 있어야 합니다.</block>
   <block id="88a11892e7418e1eee8c952df9545b46" category="section-title">2023년 1월 9일</block>
   <block id="b17d2155a07524d0e8a3d1eb73a257c3" category="section-title">StorageGRID 시스템에서 이전 백업 파일을 AWS S3 아카이브 스토리지로 이동 가능</block>
   <block id="76592785cd14862cf74d11289e50ed92" category="paragraph">이제 StorageGRID 시스템의 이전 백업 파일을 AWS S3의 아카이브 스토리지로 계층화할 수 있습니다. 이를 통해 StorageGRID 시스템의 공간을 절약하고, 이전 백업 파일에 저렴한 스토리지 클래스를 사용하여 비용을 절감할 수 있습니다. AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화하도록 선택할 수 있습니다.</block>
@@ -3358,11 +3318,7 @@
   <block id="4f4a2e17ef7aa2669f99a3748377015f" category="list-text">이 페이지는 15분마다 자동으로 새로 고쳐져 항상 가장 최근의 작업 상태 결과를 볼 수 있습니다. 새로 고침 * 버튼을 클릭하여 페이지를 즉시 업데이트할 수 있습니다.</block>
   <block id="b5c6b00b01586b598af43c9744b7abbf" category="paragraph">이제 클라우드 백업을 사용하여 SnapLock 엔터프라이즈 볼륨을 퍼블릭 및 프라이빗 클라우드에 백업할 수 있습니다. 이 기능을 사용하려면 ONTAP 시스템에서 ONTAP 9.11.1 이상을 실행해야 합니다. 그러나 SnapLock Compliance 볼륨은 현재 지원되지 않습니다.</block>
   <block id="c2957acd301b96ab66a098d21d407ec6" category="summary">작업 환경에서 시작한 백업 및 복원 작업의 상태를 모니터링할 수 있습니다. 이렇게 하면 성공적으로 완료된 작업, 현재 진행 중인 작업 및 실패한 작업을 볼 수 있으므로 문제를 진단하고 해결할 수 있습니다. 또한 시스템에 로그인되어 있지 않은 경우에도 중요한 시스템 작업을 알 수 있도록 전자 메일로 알림을 보내도록 구성할 수 있습니다.</block>
-  <block id="ff11f62f1fefd326fa418557508f0bb3" category="inline-image-macro">새로 고침 버튼</block>
-  <block id="ec07be2e9042814beca41a92a8df587b" category="paragraph">이 페이지는 15분마다 자동으로 새로 고쳐지므로 항상 최신 작업 상태 결과를 확인할 수 있습니다. 를 클릭할 수 있습니다 <block ref="e42fbc94b6d5b113bb8925ec57acbe3b" category="inline-image-macro-rx" type="image"></block> 버튼을 눌러 페이지를 즉시 업데이트합니다.</block>
   <block id="8b512d5ba4f8158f9bbde90865caba8c" category="section-title">Job Monitoring 결과를 보고서로 다운로드합니다</block>
-  <block id="ae976c2662f0510c956866f26b3e7c91" category="inline-image-macro">다운로드 버튼</block>
-  <block id="17d49cbe3e073a57d023fcd4f76f67a3" category="paragraph">작업 모니터링 기본 페이지의 내용을 정리한 후 보고서로 다운로드하려면 을 클릭합니다 <block ref="481ffb3cda2f04d006c0bbcaeeccf883" category="inline-image-macro-rx" type="image"></block> 단추를 클릭합니다. Cloud Backup은 필요에 따라 검토하고 다른 그룹에 보낼 수 있는 .csv 파일을 생성합니다. CSV 파일에는 최대 10,000개의 데이터 행이 포함됩니다.</block>
   <block id="ec7d92235d0dc6e0acfa017dfe7f1dbd" category="section-title">작업 세부 정보를 봅니다</block>
   <block id="1bc59241eb9bf200909aad328d7d6f94" category="paragraph">작업 이름을 클릭하여 특정 작업에 해당하는 세부 정보를 볼 수 있습니다. 작업 세부 정보 페이지에서 기본 작업을 완료하기 위해 실행 중인 모든 하위 작업이 표시됩니다.</block>
   <block id="e415c99bdef560f45a5ed65de16a1f1c" category="paragraph">알림 센터는 사용자가 시작한 백업 및 복원 작업의 진행 상황을 추적하여 작업이 성공했는지 여부를 확인할 수 있습니다. ( 를 클릭하여 알림을 표시할 수 있습니다<block ref="df7c8a71ca3da4359e40e121f18f87b9" category="inline-image-macro-rx" type="image"></block>)를 클릭합니다. 또한 시스템에 로그인하지 않은 경우에도 중요한 시스템 작업을 알 수 있도록 이메일로 알림을 보내도록 BlueXP를 구성할 수 있습니다.</block>
@@ -3396,12 +3352,10 @@
   <block id="98c648bc34880f7f4d457836f8d482d7" category="paragraph">인덱싱된 카탈로그 기능이 활성화된 작업 환경이 이전에 활성화된 상태로 유지되는지 확인합니다.</block>
   <block id="29296806c9458e6f9b360ca27eab0dac" category="list-text">데이터는 블록 레벨에서 복원되고 데이터는 원래 ACL을 보존하면서 사용자가 지정한 위치에 직접 배치합니다.</block>
   <block id="98c5dd0d4e4b94048525760a7e30fd9f" category="inline-link-macro">StorageGRID에서 백업 파일 아카이빙에 대해 자세히 알아보십시오</block>
-  <block id="c9530b8dd09db9c948a2d65976dd98fe" category="paragraph">온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템이 11.3 이상을 사용하는 경우 이전 백업 파일을 퍼블릭 클라우드 아카이브 스토리지에 아카이브할 수 있습니다. 현재 아카이브 스토리지는 AWS S3 스토리지 클래스에서만 지원됩니다. 특정 일 수가 지나면 AWS_S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 백업을 계층화할 수 있습니다. <block ref="363267dd6106568fded10aaeda2ee302" category="inline-link-macro-rx"></block>.</block>
   <block id="29331ccc5b0d6188fad90573f3b1bde1" category="list-text">Cloud Volumes ONTAP 9.7P5 이상을 GCP에서 실행하고 있습니다(ONTAP 9.8P13 이상 권장).</block>
   <block id="8eea324303c1dff2b89095050e381e68" category="paragraph">Google Cloud Project 및 백업을 위해 Google Cloud Storage 버킷을 생성할 지역을 선택합니다. 또한 Google에서 관리하는 기본 암호화 키 대신 고객이 관리하는 데이터 암호화 키를 직접 선택할 수도 있습니다.</block>
   <block id="3faa891caeff03d695c501cc0759c886" category="list-text">고객 관리 암호화 키(CMEK)를 사용하기 위한 필수 정보</block>
   <block id="2599350a4e955ee44290aa8aca0871d2" category="list-text">백업을 위해 Google Cloud Storage 버킷을 생성할 Google Cloud Project 및 지역</block>
-  <block id="38fbb45a27b21096249ed80da88ec578" category="paragraph">클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 11.3 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일 후에 이전 백업을 AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 계층화할 수 있습니다.</block>
   <block id="cac9868917effa10c15d3dafdd2bd043" category="paragraph">다음 이미지는 온프레미스 ONTAP 시스템을 StorageGRID에 백업할 때의 각 구성 요소와 이러한 시스템 간에 준비해야 하는 연결을 보여 줍니다.</block>
   <block id="d1eea7086b8dc17469efa8e41a303777" category="paragraph">커넥터와 사내 ONTAP 시스템이 인터넷에 연결되지 않은 사내 위치(이하 "어두운 사이트")에 설치된 경우 StorageGRID 시스템은 동일한 사내 데이터 센터에 있어야 합니다. 다크 사이트 구성에서는 이전 백업 파일을 퍼블릭 클라우드에 아카이빙하는 기능이 지원되지 않습니다.</block>
   <block id="0276e5d8afdc46e144ae840aae5be338" category="paragraph">이전 백업을 클라우드 아카이브 스토리지에 계층화하려면 StorageGRID 시스템에서 버전 11.3 이상이 실행되고 있어야 합니다.</block>
@@ -3409,24 +3363,16 @@
   <block id="02bf1c0a02190999eeab71bbe7fff71c" category="paragraph">Connector가 인터넷에 연결되지 않은 사이트에 설치된 경우 Cloud Backup 구성 데이터의 로컬 백업을 정기적으로 생성하는 것이 좋습니다. <block ref="07f517d916bbf45a47c5d9dc6a000920" category="inline-link-macro-rx"></block>.</block>
   <block id="89d604768fdd7e6fda1e2bdb512ac56e" category="section-title">이전 백업 파일을 퍼블릭 클라우드 스토리지에 아카이빙하기 위한 준비 중</block>
   <block id="9da2e088609ab78eb6aa7a0ffe0637b3" category="list-text">클러스터가 ONTAP 9.12.1 이상을 사용하고 있어야 합니다</block>
-  <block id="7bbe58a850cc71a0ff06edd40213c29c" category="list-text">StorageGRID가 11.3 이상을 사용해야 합니다</block>
   <block id="170d42742a62bce031fc4ab2cfd0c056" category="inline-link">BlueXP Canvas에서 검색되고 사용할 수 있습니다</block>
-  <block id="98c4206e171ce9b62f1dadef4f4da528" category="list-text">StorageGRID는 이어야 합니다<block ref="a62572fc02ca2a884f6a1e42d38d1d55" category="inline-link-rx"></block></block>
   <block id="68aa7e5e44b2aff449b0543b49e563bd" category="inline-link-macro">AWS 아카이브 계층에 대해 자세히 알아보십시오</block>
-  <block id="9ac50560d5fb673e5d33906e46dd98c6" category="list-text">현재 아카이브 스토리지는 AWS S3 스토리지 클래스에서만 지원됩니다. AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화하도록 선택할 수 있습니다. <block ref="99a80ab47f2b3c111e86aba05224c42e" category="inline-link-macro-rx"></block>.</block>
-  <block id="832d0ea7eab67f52faa651ad1475e14a" category="paragraph">클러스터의 백업 정책에 대한 아카이브 설정을 정의할 때 클라우드 공급자 자격 증명을 입력하고 사용할 스토리지 클래스를 선택합니다. 클러스터에 대한 백업을 활성화하면 Cloud Backup 이 클라우드 버킷을 생성합니다. AWS 아카이브 스토리지에 필요한 정보는 다음과 같습니다.</block>
-  <block id="1561c5b8437cf775ebce2ca08e284b68" category="inline-image-macro">StorageGRID에서 AWS S3로 백업 파일을 아카이빙하는 데 필요한 정보의 스크린샷</block>
-  <block id="4e82138d6097530281cd6cb668514613" category="paragraph"><block ref="4e82138d6097530281cd6cb668514613" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e3f77a85430d8ff3b4a253ea611bd9ee" category="inline-link">StorageGRID ILM 정책 및 규칙에 대해 자세히 알아보십시오</block>
   <block id="3bb8e0b301b3650899fdd92490d4f2b8" category="paragraph">선택한 아카이브 정책 설정은 StorageGRID에서 ILM(정보 수명 주기 관리) 정책을 생성하고 설정을 "규칙"으로 추가합니다. 기존의 활성 ILM 정책이 있는 경우 데이터를 아카이브 계층으로 이동하기 위해 ILM 정책에 새 규칙이 추가됩니다. "Proposed" 상태의 기존 ILM 정책이 있는 경우 새 ILM 정책을 만들고 활성화할 수 없습니다.<block ref="6561077144087ebe496b43ff07401cd5" category="inline-link-rx"></block>.</block>
   <block id="43e902efcea42d88512963cd9451ec29" category="list-text">클러스터에서 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 _ 을(를) 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호하도록 선택할 수 있습니다. _DataLock_은 백업 파일이 수정되거나 삭제되지 않도록 보호하고, 백업 파일을 검색하여 백업 파일에서 랜섬웨어 공격의 증거를 찾습니다. <block ref="a1590ca0a57c2e20ed40ac0f3384a5af" category="inline-link-macro-rx"></block>.</block>
   <block id="b1e78dfdd8adc3005cff56ffd24b2af1" category="inline-xref">이 기능에 맞게 시스템을 구성하는 방법을 확인하십시오</block>
-  <block id="57e477fd9dd6f84cb8ac24711869c4f5" category="list-text">클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 11.3 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일 후에 이전 백업을 AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 계층화할 수 있습니다. <block ref="c2797d22435b48dabeada89d48523cd9" category="inline-xref-macro-rx"></block>.</block>
   <block id="8b1fecd8a08d1d10ad201653d8d4088f" category="sidebar">어두운 사이트에서 Cloud Backup 데이터베이스를 백업합니다</block>
   <block id="fe3f1bd257c4451d8f8bcbf9a1a58d34" category="paragraph"><block ref="1247b899b5e6800d8fd9e850903ad55a" category="inline-link-rx"></block>.</block>
   <block id="275b9b785d71f45bb8f134005ece056a" category="paragraph">* 참고: * 볼륨이 백업되지 않도록 하는 경우 클라우드 공급자가 백업이 사용하는 용량에 대한 객체 스토리지 비용에 대해 계속해서 비용을 부과합니다 <block ref="e2e48247dd6dcee2daca407937463dc9" category="inline-xref-macro-rx"></block>.</block>
   <block id="46fb0ddeabbcb2b9784add28928cfe7a" category="paragraph">볼륨에 적용할 정책이 이미 있어야 합니다.</block>
-  <block id="da241970bf8ab518d4b9fd4ec20e3a48" category="list-text">백업이 위치할 스토리지 공간을 위해 Amazon S3 계정을 등록해야 합니다.</block>
   <block id="3c6238f54517e5cf7923ae4c33a5eff9" category="list-text">StorageGRID의 경우 인터넷 액세스 유무에 관계없이 커넥터를 사내에 구축해야 합니다</block>
   <block id="cd1cceb157b5982d899b66d18217af64" category="list-text">어두운 사이트에서 Connector를 사용하는 경우 인덱싱된 카탈로그 정보는 Connector에 저장됩니다(Connector 버전 3.9.25 이상 필요).</block>
   <block id="e083799711dc9b588bbb440525564506" category="section-title">인터넷 액세스 없이 사이트에서 검색 및 복원을 사용하여 데이터를 복원할 수 있도록 지원이 추가되었습니다</block>
@@ -3460,4 +3406,109 @@
   <block id="02efcbea18b9485a78a41871dce1e64d" category="list-text"><block ref="02efcbea18b9485a78a41871dce1e64d" category="inline-link-macro-rx"></block></block>
   <block id="67b74e19355f9340daf7f62ceb8233d5" category="list-text">Connector와 Azure Synapse SQL 서비스 간의 통신을 위해 포트 1433이 열려 있어야 합니다.</block>
   <block id="8042f6982b79849d158e3d7ac9190cc2" category="cell">파일이 삭제되었거나 이름이 변경된 경우 파일 복구를 처리하지 않고 사용자가 원래 파일 이름을 모르는 경우</block>
+  <block id="ee40b1ed5ff54c5a45df2405e37321af" category="paragraph">사내 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일(일반적으로 30일 이상) 후에 클라우드 백업 UI의 _Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. 이 계층의 데이터는 높은 검색 비용이 필요하므로 이러한 아카이브 백업 파일에서 데이터를 복원해야 하는 빈도를 고려해야 합니다. 에 대한 섹션을 참조하십시오 <block ref="a877e7ca3014076607c0c931133681b8" category="inline-xref-macro-rx"></block>.</block>
+  <block id="cc41e803a771a864052b543dc5b7c82c" category="paragraph">Cloud Backup은 볼륨 백업을 위한 DataLock 및 랜섬웨어 보호를 지원합니다. 이러한 기능을 사용하여 백업 파일을 잠그고 검색하여 백업 파일에서 잠재적인 랜섬웨어를 감지할 수 있습니다. 이 설정은 클러스터에 대한 볼륨 백업에 대한 추가 보호를 원할 때 백업 정책에 정의할 수 있는 선택적 설정입니다.</block>
+  <block id="f45d40d2c3943b450f3c1c0ff3ac37f4" category="inline-link">자세한 내용은 DataLock 및 랜섬웨어 보호 블로그 를 참조하십시오</block>
+  <block id="9119c5c13d4a250d1b7c806e437d4713" category="paragraph"><block ref="340a0b0e8509133a13996f4ac0d4f8c7" category="inline-link-rx"></block>.</block>
+  <block id="df648935757f52b4a31850afc9b184e1" category="inline-image-macro">백업 정책을 생성할 때 AWS, Azure 및 StorageGRID의 DataLock 및 랜섬웨어 보호 설정 스크린샷</block>
+  <block id="2190b49a1b14b8535bb6e273f8e1669a" category="paragraph"><block ref="2190b49a1b14b8535bb6e273f8e1669a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3b9a1c8953f9525af7478016a915ef7d" category="list-text">* 없음 * (기본값)</block>
+  <block id="85285751f187076e55c99f9c081ee3ce" category="list-text">* 거버넌스 *</block>
+  <block id="1313be86e4f8ca14b8faf9a8102d9242" category="paragraph">DataLock은 사용자가 를 사용하는 _Governance_mode로 설정됩니다<block ref="f0eb418c56fa2bd3945fc5bc9dfd5308" prefix=" " category="inline-code"></block> 권한(<block ref="6091ac16b06103b3d1b14d6f408bb364" category="inline-link-macro-rx"></block>)는 보존 기간 동안 백업 파일을 덮어쓰거나 삭제할 수 있습니다. 랜섬웨어 보호가 활성화됩니다.</block>
+  <block id="c4fc4a5ce897100341c466ed1e57ed04" category="list-text">* 규정 준수 *</block>
+  <block id="955fe77cc9e8a5d095db3f9fa574cecc" category="list-text">* 잠금 해제됨 *</block>
+  <block id="4cf34dc9a130f8a8d184658e36b0ddfe" category="paragraph">백업 파일은 보존 기간 동안 보호됩니다. 보존 기간은 늘리거나 줄일 수 있습니다. 일반적으로 시스템을 테스트하는 데 24시간 동안 사용됩니다. 랜섬웨어 보호가 활성화됩니다.</block>
+  <block id="0bc97c04e1336d5dea7eb8f594430f11" category="list-text">* 잠김 *</block>
+  <block id="b60b433cbb018337e7d15c6d92ec2a0e" category="paragraph">백업 파일은 보존 기간 동안 보호됩니다. 보존 기간을 늘릴 수는 있지만 줄일 수는 없습니다. 전체 규정 준수 충족 랜섬웨어 보호가 활성화됩니다.</block>
+  <block id="a7333071b8d492fc2184540602ce3b9e" category="cell">Azure Blob endif::Azure []ifdef::GCP[]endif::GCP[]</block>
+  <block id="da3a611050815415e3372ad88f95d3e7" category="cell">ifdef::AWS[]Amazon S3 endif::AWS[]ifdef::Azure[]Azure Blob endif::Azure[]ifdef::GCP[]endif::GCP[]NetApp StorageGRID</block>
+  <block id="3e07e3793cc8aeeff073f7b7004ec087" category="list-text">클러스터가 ONTAP 9.11.1 이상(Azure의 경우 9.12.1)을 실행해야 합니다.</block>
+  <block id="b6cde9c60675582b751733112d2d9c0e" category="list-text">Azure의 경우:</block>
+  <block id="0533605aac0a1bcb05ae410dde4bfc5f" category="list-text">Cloud Backup을 활성화할 때 선택하는 DataLock 옵션은 해당 클러스터의 모든 백업 정책에 사용해야 합니다.</block>
+  <block id="f3012b8afd230a88ecdba872940ac2a7" category="list-text">단일 클러스터에서는 두 DataLock 모드를 모두 사용할 수 없습니다.</block>
+  <block id="62637ce89beaec82e954d18d03579ae4" category="paragraph">클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 이전 백업을 _S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 계층화할 수 있습니다. <block ref="f7fa7b0a9e810d8c500bcf785a34f359" category="inline-link-macro-rx"></block>.</block>
+  <block id="dcf736c14b723c6b77ce630517c0e3ef" category="paragraph">클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 이전 백업을 _Azure Archive_storage에 계층화할 수 있습니다. <block ref="2f91ed687cd1d1d6d8235865263a43ff" category="inline-link-macro-rx"></block>.</block>
+  <block id="fb19a140c92b4109f65874b08fb055b5" category="paragraph">사내 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 클라우드 백업 UI의 _Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. <block ref="60cdd04e7131e97598ce1c583d8c9a5e" category="inline-link-macro-rx"></block>.</block>
+  <block id="858f352aed10fc578bc936929dbfe50b" category="paragraph">온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템에서 11.4 이상을 사용하는 경우 이전 백업 파일을 퍼블릭 클라우드 아카이브 스토리지에 아카이브할 수 있습니다.</block>
+  <block id="1ecce3a208a223602d1ac42d27ccd9df" category="paragraph">+** AWS의 경우 AWS_S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 백업을 계층화할 수 있습니다. <block ref="f7fa7b0a9e810d8c500bcf785a34f359" category="inline-link-macro-rx"></block>.</block>
+  <block id="862c21f94072591ed68930b5432494ac" category="paragraph">+** Azure의 경우 이전 백업을 _Azure Archive_storage에 계층화할 수 있습니다. <block ref="2f91ed687cd1d1d6d8235865263a43ff" category="inline-link-macro-rx"></block>.</block>
+  <block id="441c18d944ac4c193a895113937933f0" category="paragraph">를 누릅니다<block ref="363267dd6106568fded10aaeda2ee302" category="inline-link-macro-rx"></block>.</block>
+  <block id="e0df57205d7b0421563db2353cc0566c" category="paragraph">선택적으로 ONTAP 9.12.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호할 수 있습니다. <block ref="87ffafedb97d3b50ea58ef296117bbac" category="inline-link-macro-rx"></block>.</block>
+  <block id="8e735e680b7368147fd11864544dafdc" category="list-text">Azure Synapse Analytics 리소스 공급자("Microsoft.Synapse")를 구독에 등록해야 합니다.<block ref="66e7a06283e2f9b1945c2e3b539d5c17" category="inline-link-rx"></block>. 리소스 공급자를 등록하려면 구독 * 소유자 * 또는 * 참가자 * 여야 합니다.</block>
+  <block id="b28ddb2a8035e2a2d25e5b2d20f33fcb" category="list-text">선택적으로 ONTAP 9.12.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호할 수 있습니다. _DataLock_은 백업 파일이 수정되거나 삭제되지 않도록 보호하고, 백업 파일을 검색하여 백업 파일에서 랜섬웨어 공격의 증거를 찾습니다. <block ref="a1590ca0a57c2e20ed40ac0f3384a5af" category="inline-link-macro-rx"></block>.</block>
+  <block id="f733133f73e1a7c93b416165d7e8fe6e" category="list-text">기존 볼륨만 백업하려면 제목 행(<block ref="48e674c3b35bfe3d3a9cb29d2c6ff5c1" category="inline-image-macro-rx" type="image"></block>)를 클릭합니다.</block>
+  <block id="78633c0dade918ad68e370625d6d7b64" category="list-text">개별 볼륨을 백업하려면 각 볼륨에 대한 확인란을 선택합니다(<block ref="27922440534843fc73bbce66b8385327" category="inline-image-macro-rx" type="image"></block>)를 클릭합니다.</block>
+  <block id="716ef7b4757802ea9cccaa1100796c41" category="list-text">클라우드 백업 검색 및 복원 기능이 작동하려면 Connector와 Azure Synapse SQL 서비스 간의 통신을 위해 포트 1433이 열려 있어야 합니다.</block>
+  <block id="a71885ef6a4b7b03d125d62703fd8263" category="admonition">지속적인 백업 작업과 같은 시스템 시작 작업은 * 작업 모니터링 * 탭에 반영되지 않습니다. -- 사용자 시작 작업만 표시됩니다.</block>
+  <block id="e3b4f8fa8b10978799c7afb6af895d2a" category="inline-image-macro">더하기 기호 단추</block>
+  <block id="9242e15fce714d8c7c3b06793453802d" category="paragraph">이 스크린샷은 기본 열/필드 머리글을 보여줍니다. 를 클릭할 수 있습니다 <block ref="67e31c53d0f38fc4da85c525a5be7511" category="inline-image-macro-rx" type="image"></block> 열 머리글을 표시하거나 숨기려면 또는 "사용자 이름" 및 "유형"에 대해 두 개의 추가 제목을 추가합니다.</block>
+  <block id="63a6a88c066880c5ac42394a22803ca6" category="inline-image-macro">새로 고침</block>
+  <block id="1b9503fb0780a47432acd66652752b5b" category="paragraph">이 페이지는 15분마다 자동으로 새로 고쳐지므로 항상 최신 작업 상태 결과를 확인할 수 있습니다. 를 클릭할 수 있습니다 <block ref="26403496cb9a151e9afeeb59244dd01b" category="inline-image-macro-rx" type="image"></block> 버튼을 눌러 페이지를 즉시 업데이트합니다.</block>
+  <block id="801ab24683a4a8c433c6eb40c48bcd9d" category="inline-image-macro">다운로드</block>
+  <block id="e24ca4972ca35c84b1dae71aaf15065b" category="paragraph">작업 모니터링 기본 페이지의 내용을 정리한 후 보고서로 다운로드하려면 을 클릭합니다 <block ref="d2e5c9ca6fcd7f605e1d5f7b4f6a6a99" category="inline-image-macro-rx" type="image"></block> 단추를 클릭합니다. Cloud Backup은 필요에 따라 검토하고 다른 그룹에 보낼 수 있는 .csv 파일을 생성합니다. CSV 파일에는 최대 10,000개의 데이터 행이 포함됩니다.</block>
+  <block id="fb1b06f0a66663d0b3bfa0401405a807" category="list-text">변경 불가능한 백업 파일은 보존 기간 동안 잠기고 보호되도록 만듭니다.</block>
+  <block id="90004223d681b1085ee8ff58039b08bb" category="list-text">탐색 가능하고 검색 가능한 파일 카탈로그를 통해 단일 파일 복원을 위한 개별 폴더 및 파일을 쉽게 선택할 수 있습니다.</block>
+  <block id="92524402c108ab284bc6798e0addc26d" category="inline-xref">백업 및 복원 제한 사항</block>
+  <block id="459e9c0a518eab1d9e4ab7cdc89584d8" category="paragraph">의 섹션을 참조하십시오 <block ref="253106289c94848c578475b45290aa80" category="inline-xref-macro-rx"></block> 추가 요구 사항 및 제한 사항</block>
+  <block id="4df1a85d32abc942958400f1bc79add0" category="paragraph">현재 백업 대상이 Amazon S3, Azure Blob 또는 NetApp StorageGRID인 경우 지원을 사용할 수 있습니다. 다른 스토리지 제공업체 대상은 향후 릴리스에 추가될 예정입니다.</block>
+  <block id="8c58ab985a3067673c7dcd27d1164971" category="paragraph">클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 클라우드 백업 UI의 _Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. <block ref="60cdd04e7131e97598ce1c583d8c9a5e" category="inline-link-macro-rx"></block>.</block>
+  <block id="3ab813cb58ced99c324082878fbc9261" category="paragraph">온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템에서 11.4 이상을 사용하는 경우 특정 일 후에 이전 백업 파일을 퍼블릭 클라우드 아카이브 스토리지에 아카이브할 수 있습니다. 현재 AWS S3 Glacier/S3 Glacier Deep Archive 또는 Azure Archive 스토리지 계층을 지원합니다. <block ref="363267dd6106568fded10aaeda2ee302" category="inline-link-macro-rx"></block>.</block>
+  <block id="27e92fcddc23071f7a376e1c06fa20d6" category="list-text">MetroCluster 지원:</block>
+  <block id="84c7d283de0aa36ab8316be3e98f7f95" category="list-text">ONTAP 9.12.1 GA 이상을 사용하는 경우 기본 시스템에 연결하면 백업이 지원됩니다. 전체 백업 구성이 보조 시스템으로 전송되므로 전환 후 클라우드 백업이 자동으로 계속됩니다. 2차 시스템에 백업을 설정할 필요가 없습니다(사실상 백업 설정이 제한됨).</block>
+  <block id="1c56c2d187d14cd1052a9152c839b453" category="list-text">ONTAP 9.12.0 이하 버전을 사용하는 경우 ONTAP 보조 시스템에서만 백업이 지원됩니다.</block>
+  <block id="6413e2887d9fc1bca42a1d8fa137281d" category="list-text">현재 FlexGroup 볼륨의 백업은 지원되지 않습니다.</block>
+  <block id="374f4526af8df5d7623354dc7ae40010" category="section-title">복구 제한 사항</block>
+  <block id="2906b13dc7235ea8bc16b456298915d1" category="list-text">디렉토리/폴더 복구는 현재 FlexGroup 볼륨에서 지원되지 않습니다.</block>
+  <block id="2ec354868590a74d060a9333bd4af020" category="list-text">Azure에서 StorageGRID 시스템으로 데이터를 복원할 때는 _High_restore 우선 순위가 지원되지 않습니다.</block>
+  <block id="4378789701cd2498a252a52806a1f3a4" category="section-title">2023년 2월 6일</block>
+  <block id="86763912a3fb720760d95338a077e264" category="section-title">StorageGRID 시스템에서 이전 백업 파일을 Azure 아카이브 스토리지로 이동하는 기능입니다</block>
+  <block id="56182657e28c8dfde64ef2386feb1cde" category="paragraph">이제 StorageGRID 시스템의 이전 백업 파일을 Azure의 아카이브 스토리지로 계층화할 수 있습니다. 이를 통해 StorageGRID 시스템의 공간을 절약하고, 이전 백업 파일에 저렴한 스토리지 클래스를 사용하여 비용을 절감할 수 있습니다.</block>
+  <block id="2dbb2c58aa8d6b345d1c74a70f17d1a2" category="paragraph">이 기능은 온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템에서 11.4 이상을 사용하는 경우 사용할 수 있습니다.<block ref="70195a33db6d6b4308ed37adb844e324" category="inline-link-rx"></block>.</block>
+  <block id="609d2baddee02ef8a648a83c3c6583af" category="section-title">DataLock 및 랜섬웨어 보호는 Azure Blob의 백업 파일에 대해 구성할 수 있습니다</block>
+  <block id="dc78c18207a001d77615c0f857f16f9d" category="inline-link">DataLock 및 랜섬웨어 보호를 사용하여 백업을 보호하는 방법에 대해 자세히 알아보십시오</block>
+  <block id="44522dba6ab4478f7cb53c4622e3dafa" category="paragraph">이제 DataLock 및 랜섬웨어 보호가 Azure Blob에 저장된 백업 파일에 지원됩니다. Cloud Volumes ONTAP 또는 온프레미스 ONTAP 시스템에서 ONTAP 9.12.1 이상을 실행하는 경우 백업 파일을 잠그고 스캔하여 잠재적인 랜섬웨어를 탐지할 수 있습니다.<block ref="97e28eb0f7fdcd65cbf9241c83ee1d40" category="inline-link-rx"></block>.</block>
+  <block id="5b97e7065442b7eb64668b69dbdada19" category="section-title">백업 및 복원 FlexGroup 볼륨 개선 사항</block>
+  <block id="36698eb018d0923e923633648afc1660" category="list-text">이제 FlexGroup 볼륨을 복원할 때 여러 Aggregate를 선택할 수 있습니다. 마지막 릴리즈에서는 단일 애그리게이트만 선택할 수 있었습니다.</block>
+  <block id="f5f0348847173672e951c41ae184f50e" category="list-text">FlexGroup 볼륨 복원은 이제 Cloud Volumes ONTAP 시스템에서 지원됩니다. 마지막 릴리즈에서는 사내 ONTAP 시스템에만 복구할 수 있었습니다.</block>
+  <block id="a54cefe3a8b51c74b8c67bb08d2b0a06" category="section-title">Cloud Volumes ONTAP 시스템은 이전 백업을 Google 아카이브 스토리지로 이동할 수 있습니다</block>
+  <block id="b84a16ea39cceb9b085257510b1c4e29" category="paragraph">백업 파일은 처음에 Google Standard 스토리지 클래스에서 생성됩니다. 이제 Cloud Backup을 사용하여 추가 비용 최적화를 위해 이전 백업을 Google Archive 스토리지에 계층화할 수 있습니다. 마지막 릴리즈에서는 사내 ONTAP 클러스터에서만 이 기능을 지원했으며, 이제 Google Cloud에 구축된 Cloud Volumes ONTAP 시스템도 지원됩니다.</block>
+  <block id="f14d5764e935884afbd83d7ee86487df" category="section-title">이제 볼륨 복원 작업을 통해 볼륨 데이터를 복원할 SVM을 선택할 수 있습니다</block>
+  <block id="7caa222989bc85d23ec0930e42a99387" category="paragraph">이제 볼륨 데이터를 ONTAP 클러스터의 다른 스토리지 VM으로 복원할 수 있습니다. 과거에는 스토리지 VM을 선택할 기능이 없었습니다.</block>
+  <block id="14f514abf2e1958a0b5bcab66eaf30a4" category="section-title">MetroCluster 구성의 볼륨 지원 향상</block>
+  <block id="1fe2df29e9bf17baaab103f0a9bba7fe" category="paragraph">ONTAP 9.12.1 GA 이상을 사용하는 경우 MetroCluster 구성에서 기본 시스템에 연결하면 백업이 지원됩니다. 전체 백업 구성이 보조 시스템으로 전송되므로 전환 후 클라우드 백업이 자동으로 계속됩니다.</block>
+  <block id="5f3a7b9d761ca72393881ec6b3e09094" category="inline-link">자세한 내용은 백업 제한 사항 을 참조하십시오</block>
+  <block id="a6fdbb3a339b191fd632ddee7fbee8cf" category="paragraph"><block ref="10efc6f0a427d8e27569782c3149d3d7" category="inline-link-rx"></block>.</block>
+  <block id="0d12e2bc2bcdc88948dc22492e4465d5" category="inline-link">필요한 경우 이러한 사용 권한을 추가하는 방법을 알아봅니다</block>
+  <block id="79ab6792e94316bd9a787cf24d4ff7b1" category="paragraph">이 기능을 사용하려면 커넥터 역할에 추가 권한이 필요합니다. 버전 3.9.21 소프트웨어를 사용하여 배포된 Connector에는 이러한 권한이 포함되어 있습니다. 이전 릴리스를 사용하여 Connector를 배포한 경우 사용 권한을 수동으로 추가해야 합니다.<block ref="5959bb22b1cf142d57ce2b955e17e926" category="inline-link-rx"></block>.</block>
+  <block id="dc9dd93b10cba183eee2ce520923ce91" category="paragraph">소스 ONTAP 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 &gt; 볼륨 백업 * 을 클릭한 다음 설정 마법사를 따릅니다.</block>
+  <block id="a3f797adde499065d918bd32198f5b55" category="paragraph">클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 시스템에서 버전 11.4 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일 후에 이전 백업을 퍼블릭 클라우드 아카이브 계층에 계층화하도록 선택할 수 있습니다. 현재 AWS S3 Glacier/S3 Glacier Deep Archive 또는 Azure Archive 스토리지 계층을 지원합니다.</block>
+  <block id="4a1bbe14768818704adfcc190f3fad02" category="paragraph">클러스터가 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호하도록 선택할 수 있습니다. <block ref="87ffafedb97d3b50ea58ef296117bbac" category="inline-link-macro-rx"></block>.</block>
+  <block id="2f57a005d513080291cd2a14713fbefd" category="paragraph">S3 버킷은 사용자가 입력한 S3 액세스 키와 비밀 키로 표시된 서비스 계정의 StorageGRID에서 자동으로 생성되며 백업 파일은 여기에 저장됩니다.</block>
+  <block id="8cf75051d5f10d2acafc2a32d094b174" category="paragraph">현재 지원되는 기능을 사용하면 AWS_S3 Glacier_/_S3 Glacier Deep Archive_ 또는 _Azure Archive_ 스토리지에 백업을 보관할 수 있습니다.</block>
+  <block id="df665d822f03b2bd6bab86eb83f02605" category="paragraph">* ONTAP 요구 사항 *</block>
+  <block id="34694926aa1d4d0f11f7da3c458f0e72" category="paragraph">* StorageGRID 요구 사항 *</block>
+  <block id="8bcf790caa84000d570d027ed4f8736a" category="list-text">StorageGRID는 11.4 이상을 사용해야 합니다</block>
+  <block id="3ebfc45e81207fdc1d33750d83ff4359" category="list-text">StorageGRID는 이어야 합니다<block ref="a62572fc02ca2a884f6a1e42d38d1d55" category="inline-link-rx"></block>.</block>
+  <block id="e72317565731d7261572856170ffdded" category="paragraph">* Amazon S3 요구사항 *</block>
+  <block id="c36c751c1a7fe413ac301c3d92bbb612" category="list-text">아카이빙된 백업이 위치할 스토리지 공간을 위해 Amazon S3 계정에 등록해야 합니다.</block>
+  <block id="e5580f38a75af9bb97cbe865a78096f4" category="list-text">AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화하도록 선택할 수 있습니다. <block ref="99a80ab47f2b3c111e86aba05224c42e" category="inline-link-macro-rx"></block>.</block>
+  <block id="d2d43a5427405c59aef36d83c72a5344" category="paragraph">* Azure Blob 요구사항 *</block>
+  <block id="e95b31272e0a6f7731cbc68925346e01" category="list-text">아카이빙된 백업이 위치할 저장소 공간에 대한 Azure 구독에 등록해야 합니다.</block>
+  <block id="dad1e43ee4bc95d547de4b89294b34b2" category="list-text">활성화 마법사를 사용하면 기존 리소스 그룹을 사용하여 백업을 저장할 Blob 컨테이너를 관리하거나 새 리소스 그룹을 만들 수 있습니다.</block>
+  <block id="c0b9600bdde25b8f7aa5c7571c4616fb" category="paragraph">클러스터의 백업 정책에 대한 아카이브 설정을 정의할 때 클라우드 공급자 자격 증명을 입력하고 사용할 스토리지 클래스를 선택합니다. 클러스터에 대한 백업을 활성화하면 Cloud Backup 이 클라우드 버킷을 생성합니다. AWS 및 Azure 아카이브 스토리지에 필요한 정보는 다음과 같습니다.</block>
+  <block id="ffb1d9a265e376f6a3298be0531504f5" category="inline-image-macro">StorageGRID에서 AWS S3 또는 Azure Blob으로 백업 파일을 아카이빙하는 데 필요한 정보의 스크린샷</block>
+  <block id="f87b4b2f51abea38ed1fffa1cc2fe4e9" category="paragraph"><block ref="f87b4b2f51abea38ed1fffa1cc2fe4e9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="da0f161911ade8ba5f822031519efb79" category="list-text">클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 시스템에서 버전 11.4 이상을 사용하는 경우 특정 일 수 후에 이전 백업을 퍼블릭 클라우드 아카이브 계층에 계층화하도록 선택할 수 있습니다. 현재 AWS S3 Glacier/S3 Glacier Deep Archive 또는 Azure Archive 스토리지 계층을 지원합니다. <block ref="c2797d22435b48dabeada89d48523cd9" category="inline-xref-macro-rx"></block>.</block>
+  <block id="503a5a17ab72d832b77a414d0e906545" category="paragraph">볼륨, 폴더 또는 파일 복원을 시작하기 전에 복원할 볼륨의 이름, 작업 환경의 이름 및 볼륨이 있는 SVM의 이름, 복원할 백업 파일의 대략적인 날짜를 알아야 합니다.</block>
+  <block id="40046bfa2e6f2f907ffbc04727e57d99" category="admonition">Azure에서 StorageGRID 시스템으로 데이터를 복원할 때는 높은 우선 순위가 지원되지 않습니다.</block>
+  <block id="21bd1c165765a25c7d7d5952425ab965" category="paragraph">보시다시피 볼륨 복원을 수행하려면 작업 환경 이름, 스토리지 VM, 볼륨 이름 및 백업 파일 날짜를 알아야 합니다.</block>
+  <block id="0be2cc016222329564ba86576a1d69ee" category="list-text">복원된 볼륨에 사용할 이름을 입력하고 볼륨이 상주하는 스토리지 VM 및 Aggregate를 선택합니다. FlexGroup 볼륨을 복원할 때 여러 Aggregate를 선택할 수 있습니다. 기본적으로 * &lt;source_volume_name&gt;_restore * 가 볼륨 이름으로 사용됩니다.</block>
+  <block id="d3d6642cce936e1e178fb7a0f2dfc58f" category="list-text">를 사용하여 폴더의 하위 수준을 탐색할 수 있습니다 <block ref="f6625f52b1c71dcdec014baa14bc9e40" category="inline-image-macro-rx" type="image"></block> 버튼을 클릭하여 특정 파일을 찾습니다.</block>
+  <block id="62813012ad9cc198c144b40ee8b9d777" category="list-text">폴더 위로 마우스를 가져가 을 클릭할 수 있습니다 <block ref="f6625f52b1c71dcdec014baa14bc9e40" category="inline-image-macro-rx" type="image"></block> 행 끝에서 하위 폴더로 드릴다운한 다음 폴더를 선택합니다.</block>
+  <block id="5d4acb09fec56e15b5468670a1788d81" category="inline-link">Canvas의 볼륨 세부 정보 페이지에서</block>
+  <block id="ee48d26f28ddbbb409fa7c8a1693fd31" category="paragraph">또한 검색 작업을 통해 ONTAP 볼륨에 대한 모든 로컬 스냅샷 복사본을 확인합니다. 로컬 스냅샷 복사본에서 데이터를 복원하는 것이 백업 파일에서 복원하는 것보다 빠르고 비용이 적게 들 수 있으므로 스냅샷에서 데이터를 복원할 수 있습니다. 스냅샷을 새 볼륨으로 복원할 수 있습니다<block ref="9b321c216c1645df5c4b93fc1f28c28e" category="inline-link-rx"></block> (Cloud Backup에서 아님).</block>
+  <block id="f2750c1f24a10b384914ab44b4f2d630" category="list-text">Azure에서 StorageGRID 시스템으로 데이터를 복원할 때는 높은 복원 우선 순위가 지원되지 않습니다.</block>
+  <block id="92a755b6d9fa88006d2c9e3907a504a5" category="list-text">볼륨의 경우 원래 대상 작업 환경을 선택하거나 대체 작업 환경을 선택할 수 있습니다. FlexGroup 볼륨을 복원할 때 여러 Aggregate를 선택할 수 있습니다.</block>
+  <block id="de0ace3ca6a340bec96b9fe94ee00c37" category="paragraph">백업은 기본적으로 표준 스토리지에 저장됩니다. 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 아카이브 스토리지에 백업을 계층화하도록 선택할 수 있습니다. <block ref="87ffafedb97d3b50ea58ef296117bbac" category="inline-link-macro-rx"></block>.</block>
+  <block id="0a0a678be4028579aac1f022ed126971" category="paragraph"><block ref="0a0a678be4028579aac1f022ed126971" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

@@ -51,7 +51,10 @@ image:screenshot_backup_provider_settings_gcp.png["GCP에 설치된 Cloud Volume
 기본 정책은 매일 볼륨을 백업하고 각 볼륨의 최근 30개 백업 복사본을 유지합니다. 시간별, 일별, 주별, 월별 또는 연도별 백업으로 변경, 또는 더 많은 옵션을 제공하는 시스템 정의 정책 중 하나를 선택합니다. 보존할 백업 복사본의 수를 변경할 수도 있습니다.
 
 [role="quick-margin-para"]
-image:screenshot_backup_policy_gcp_no_archive.png["기능을 설정하거나 해제한 다음 백업 보존을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
+백업은 기본적으로 표준 스토리지에 저장됩니다. 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 아카이브 스토리지에 백업을 계층화하도록 선택할 수 있습니다. link:concept-cloud-backup-policies.html["사용 가능한 클라우드 백업 정책 구성 설정에 대해 자세히 알아보십시오"^].
+
+[role="quick-margin-para"]
+image:screenshot_backup_policy_gcp.png["기능을 설정하거나 해제한 다음 백업 보존을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["다섯"] 백업할 볼륨을 선택합니다
 [role="quick-margin-para"]
@@ -200,8 +203,9 @@ Project에는 미리 정의된 스토리지 관리자 역할이 있는 서비스
 +
 .. 기본 정책의 이름을 입력합니다. 이름을 변경할 필요가 없습니다.
 .. 백업 스케줄을 정의하고 보존할 백업 수를 선택합니다. link:concept-ontap-backup-to-cloud.html#customizable-backup-schedule-and-retention-settings["선택할 수 있는 기존 정책 목록을 봅니다"^].
+.. ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 아카이브 스토리지에 백업을 계층화하도록 선택할 수 있습니다. link:concept-cloud-backup-policies.html["사용 가능한 클라우드 백업 정책 구성 설정에 대해 자세히 알아보십시오"^].
 +
-image:screenshot_backup_policy_gcp_no_archive.png["기능을 설정하거나 해제한 다음 백업 보존을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
+image:screenshot_backup_policy_gcp.png["기능을 설정하거나 해제한 다음 백업 보존을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
 
 
 

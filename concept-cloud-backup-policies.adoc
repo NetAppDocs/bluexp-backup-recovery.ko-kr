@@ -55,6 +55,8 @@ Cloud Backup은 볼륨 백업을 위한 DataLock 및 랜섬웨어 보호를 지�
 
 이 두 기능 모두 백업 파일을 보호하므로 소스 데이터에 대한 랜섬웨어 공격의 경우 언제든지 유효한 백업 파일을 사용하여 데이터를 복구할 수 있습니다. 백업을 일정 기간 동안 잠그고 유지해야 하는 특정 규정 요구 사항을 충족하는 것도 도움이 됩니다. DataLock 및 랜섬웨어 보호가 활성화되면 Cloud Backup 활성화에 따라 프로비저닝되는 클라우드 버킷에서 오브젝트 잠금 및 오브젝트 버전 관리가 활성화됩니다.
 
+https://bluexp.netapp.com/blog/cbs-blg-the-bluexp-feature-that-protects-backups-from-ransomware["자세한 내용은 DataLock 및 랜섬웨어 보호 블로그 를 참조하십시오"^].
+
 이 기능은 소스 볼륨에 대한 보호 기능을 제공하지 않으며 해당 소스 볼륨의 백업에만 사용됩니다. NetApp 사용 https://cloud.netapp.com/ci-sde-plp-cloud-secure-info-trial?hsCtaTracking=fefadff4-c195-4b6a-95e3-265d8ce7c0cd%7Cb696fdde-c026-4007-a39e-5e986c4d27c6["Cloud Insights and Cloud Secure를 참조하십시오"^]또는 일부 를 누릅니다 https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ONTAP에서 제공하는 랜섬웨어 방지 보호"^] 소스 볼륨을 보호합니다.
 
 [CAUTION]
@@ -110,48 +112,84 @@ DataLock은 백업 파일이 특정 기간 동안 수정 또는 삭제되지 않
 
 각 백업 정책은 백업 파일에 적용할 수 있는 _DataLock 및 랜섬웨어 방지_ 섹션을 제공합니다.
 
-image:screenshot_datalock_ransomware_settings.png["백업 정책을 생성할 때의 DataLock 및 랜섬웨어 보호 설정 스크린샷"]
+image:screenshot_datalock_ransomware_settings.png["백업 정책을 생성할 때 AWS, Azure 및 StorageGRID의 DataLock 및 랜섬웨어 보호 설정 스크린샷"]
 
 각 백업 정책에 대해 다음 설정 중에서 선택할 수 있습니다.
 
-* 없음(기본값)
+[role="tabbed-block"]
+====
+.설치하고
+--
+* * 없음 * (기본값)
 +
 DataLock 보호 및 랜섬웨어 보호가 비활성화됩니다.
 
-* 거버넌스(StorageGRID에서는 사용할 수 없음)
+* * 거버넌스 *
 +
-DataLock은 특정 권한이 있는 사용자(link:concept-cloud-backup-policies.html#requirements["아래를 참조하십시오"])는 보존 기간 동안 백업 파일을 덮어쓰거나 삭제할 수 있습니다. 랜섬웨어 보호가 활성화됩니다.
+DataLock은 사용자가 를 사용하는 _Governance_mode로 설정됩니다 `s3:BypassGovernanceRetention` 권한(link:concept-cloud-backup-policies.html#requirements["아래를 참조하십시오"])는 보존 기간 동안 백업 파일을 덮어쓰거나 삭제할 수 있습니다. 랜섬웨어 보호가 활성화됩니다.
 
-* 규정 준수
+* * 규정 준수 *
 +
 DataLock은 보존 기간 동안 사용자가 백업 파일을 덮어쓰거나 삭제할 수 없는 _Compliance_mode로 설정됩니다. 랜섬웨어 보호가 활성화됩니다.
 
 
 
+--
+.Azure를 지원합니다
+--
+* * 없음 * (기본값)
++
+DataLock 보호 및 랜섬웨어 보호가 비활성화됩니다.
 
-NOTE: StorageGRID S3 오브젝트 잠금 기능은 규정 준수 모드에 해당하는 단일 데이터 잠금 모드를 제공합니다. 동일한 거버넌스 모드는 지원되지 않으므로 사용자는 보존 설정을 무시하거나, 보호된 백업을 덮어쓰거나, 잠긴 백업을 삭제할 수 없습니다.
+* * 잠금 해제됨 *
++
+백업 파일은 보존 기간 동안 보호됩니다. 보존 기간은 늘리거나 줄일 수 있습니다. 일반적으로 시스템을 테스트하는 데 24시간 동안 사용됩니다. 랜섬웨어 보호가 활성화됩니다.
 
+* * 잠김 *
++
+백업 파일은 보존 기간 동안 보호됩니다. 보존 기간을 늘릴 수는 있지만 줄일 수는 없습니다. 전체 규정 준수 충족 랜섬웨어 보호가 활성화됩니다.
+
+
+
+--
+.StorageGRID
+--
+* * 없음 * (기본값)
++
+DataLock 보호 및 랜섬웨어 보호가 비활성화됩니다.
+
+* * 규정 준수 *
++
+DataLock은 보존 기간 동안 사용자가 백업 파일을 덮어쓰거나 삭제할 수 없는 _Compliance_mode로 설정됩니다. 랜섬웨어 보호가 활성화됩니다.
+
+
+
+--
+====
 
 
 === 지원되는 작업 환경 및 오브젝트 스토리지 공급자
 
 다음 퍼블릭 및 프라이빗 클라우드 공급자가 오브젝트 스토리지를 사용하는 경우, 다음과 같은 작업 환경에서 ONTAP 볼륨의 DataLock 및 랜섬웨어 보호를 활성화할 수 있습니다. 향후 릴리즈에서는 클라우드 공급자를 더 추가할 예정입니다.
 
-[cols="50,50"]
+[cols="55,45"]
 |===
 | 소스 작업 환경 | 백업 파일 대상 ifdef::AWS[] 
 
 
-| AWS의 Cloud Volumes ONTAP | Amazon S3 endif::AWS [] ifdef::Azure []endif::Azure []ifdef::GCP[]endif::GCP[] 
+| AWS의 Cloud Volumes ONTAP | Amazon S3 엔디프::AWS[]ifdef::Azure[] 
 
 
-| 사내 ONTAP 시스템 | ifdef::AWS[]Amazon S3 endif::AWS[]ifdef::Azure[]endif::Azure[]ifdef::GCP[]endif::GCP[]NetApp StorageGRID 
+| Azure의 Cloud Volumes ONTAP | Azure Blob endif::Azure []ifdef::GCP[]endif::GCP[] 
+
+
+| 사내 ONTAP 시스템 | ifdef::AWS[]Amazon S3 endif::AWS[]ifdef::Azure[]Azure Blob endif::Azure[]ifdef::GCP[]endif::GCP[]NetApp StorageGRID 
 |===
 
 
 === 요구 사항
 
-* 클러스터는 ONTAP 9.11.1 이상을 실행해야 합니다
+* 클러스터가 ONTAP 9.11.1 이상(Azure의 경우 9.12.1)을 실행해야 합니다.
 * BlueXP 3.9.21 이상을 사용해야 합니다
 
 
@@ -200,6 +238,17 @@ https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aw
 
 endif::aws[]
 
+ifdef::azure[]
+
+* Azure의 경우:
++
+** Connector는 클라우드 또는 사내에 구축할 수 있습니다
+
+
+
+
+endif::azure[]
+
 * StorageGRID의 경우:
 +
 ** Connector를 사내에 구축해야 합니다(인터넷 접속 유무에 관계없이 사이트에 설치할 수 있음).
@@ -213,7 +262,8 @@ endif::aws[]
 === 제한 사항
 
 * 백업 정책에 아카이브 스토리지를 구성한 경우 DataLock 및 랜섬웨어 보호를 사용할 수 없습니다.
-* Cloud Backup을 활성화할 때 선택한 DataLock 옵션(Governance 또는 Compliance)은 해당 클러스터의 모든 백업 정책에 사용해야 합니다. 단일 클러스터에서는 거버넌스 및 규정 준수 모드 잠금을 모두 사용할 수 없습니다.
+* Cloud Backup을 활성화할 때 선택하는 DataLock 옵션은 해당 클러스터의 모든 백업 정책에 사용해야 합니다.
+* 단일 클러스터에서는 두 DataLock 모드를 모두 사용할 수 없습니다.
 * DataLock을 활성화하면 모든 볼륨 백업이 잠깁니다. 단일 클러스터에 대해 잠긴 볼륨 백업과 잠기지 않은 볼륨 백업을 혼합하여 사용할 수 없습니다.
 * DataLock 및 랜섬웨어 보호는 DataLock 및 랜섬웨어 보호가 활성화된 백업 정책을 사용하여 새 볼륨 백업에 적용됩니다. Cloud Backup을 활성화한 후에는 이 기능을 활성화할 수 없습니다.
 
@@ -234,7 +284,7 @@ ifdef::aws[]
 
 * AWS에서는 백업이 _Standard_storage 클래스에서 시작되고 30일 후에 _Standard - Infrequent Access_storage 클래스로 전환됩니다.
 +
-클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 이전 백업을 _S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 계층화하도록 선택할 수 있습니다. link:reference-aws-backup-tiers.html["AWS 아카이브 스토리지에 대해 자세히 알아보십시오"^].
+클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 이전 백업을 _S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 계층화할 수 있습니다. link:reference-aws-backup-tiers.html["AWS 아카이브 스토리지에 대해 자세히 알아보십시오"^].
 
 +
 Cloud Backup을 활성화할 때 첫 번째 백업 정책에서 _S3 Glacier_또는 _S3 Glacier Deep Archive_를 선택한 경우 해당 계층은 해당 클러스터에 대한 향후 백업 정책에 사용할 수 있는 유일한 아카이브 계층이 됩니다. 첫 번째 백업 정책에서 아카이브 계층을 선택하지 않으면 _S3 Glacier_는 이후 정책에 대한 유일한 보관 옵션입니다.
@@ -247,7 +297,7 @@ ifdef::azure[]
 
 * Azure에서 백업은 _Cool_access 계층과 연결됩니다.
 +
-클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 이전 백업을 _Azure Archive_storage에 계층화하도록 선택할 수 있습니다. link:reference-azure-backup-tiers.html["Azure 아카이브 스토리지에 대해 자세히 알아보십시오"^].
+클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 이전 백업을 _Azure Archive_storage에 계층화할 수 있습니다. link:reference-azure-backup-tiers.html["Azure 아카이브 스토리지에 대해 자세히 알아보십시오"^].
 
 
 
@@ -257,7 +307,7 @@ ifdef::gcp[]
 
 * GCP에서 백업은 _Standard_storage 클래스와 연결됩니다.
 +
-사내 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 클라우드 백업 UI의 _Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. (이 기능은 현재 Cloud Volumes ONTAP 시스템에서 사용할 수 없습니다.) link:reference-google-backup-tiers.html["Google 아카이브 스토리지에 대해 자세히 알아보십시오"^].
+사내 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 클라우드 백업 UI의 _Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. link:reference-google-backup-tiers.html["Google 아카이브 스토리지에 대해 자세히 알아보십시오"^].
 
 
 
@@ -265,6 +315,20 @@ endif::gcp[]
 
 * StorageGRID에서 백업은 _Standard_storage 클래스와 연결됩니다.
 +
-온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템이 11.3 이상을 사용하는 경우 이전 백업 파일을 퍼블릭 클라우드 아카이브 스토리지에 아카이브할 수 있습니다. 현재 아카이브 스토리지는 AWS S3 스토리지 클래스에서만 지원됩니다. 특정 일 수가 지나면 AWS_S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 백업을 계층화할 수 있습니다. link:task-backup-onprem-private-cloud.html#preparing-to-archive-older-backup-files-to-public-cloud-storage["StorageGRID에서 백업 파일 아카이빙에 대해 자세히 알아보십시오"^].
+온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템에서 11.4 이상을 사용하는 경우 이전 백업 파일을 퍼블릭 클라우드 아카이브 스토리지에 아카이브할 수 있습니다.
 
 
+
+ifdef::aws[]
+
++** AWS의 경우 AWS_S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 백업을 계층화할 수 있습니다. link:reference-aws-backup-tiers.html["AWS 아카이브 스토리지에 대해 자세히 알아보십시오"^].
+
+endif::aws[]
+
+ifdef::azure[]
+
++** Azure의 경우 이전 백업을 _Azure Archive_storage에 계층화할 수 있습니다. link:reference-azure-backup-tiers.html["Azure 아카이브 스토리지에 대해 자세히 알아보십시오"^].
+
+endif::azure[]
+
+를 누릅니다link:task-backup-onprem-private-cloud.html#preparing-to-archive-older-backup-files-to-public-cloud-storage["StorageGRID에서 백업 파일 아카이빙에 대해 자세히 알아보십시오"^].
