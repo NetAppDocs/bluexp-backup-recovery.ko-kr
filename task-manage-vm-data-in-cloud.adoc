@@ -38,6 +38,11 @@ summary: 데이터 저장소와 가상 머신을 보고 VMware vSphere 인스턴
 * 이 작업에 대한 정보 *
 
 * NFS 데이터 저장소만 표시됩니다.
+
+
+
+NOTE: iSCSI/FC/NVMe 및 VVol 기반의 VMFS 데이터 저장소는 지원되지 않습니다.
+
 * SnapCenter Plug-in for VMware vSphere에서 하나 이상의 백업이 성공한 데이터 저장소만 표시됩니다.
 
 
