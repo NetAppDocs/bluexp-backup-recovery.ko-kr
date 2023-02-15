@@ -35,17 +35,6 @@ summary: 데이터 저장소와 가상 머신을 보고 VMware vSphere 인스턴
 
 등록된 VMware vSphere용 SnapCenter 플러그인을 사용하여 보호되는 데이터 저장소 및 가상 머신이 표시됩니다.
 
-* 이 작업에 대한 정보 *
-
-* NFS 데이터 저장소만 표시됩니다.
-
-
-
-NOTE: iSCSI/FC/NVMe 및 VVol 기반의 VMFS 데이터 저장소는 지원되지 않습니다.
-
-* SnapCenter Plug-in for VMware vSphere에서 하나 이상의 백업이 성공한 데이터 저장소만 표시됩니다.
-
-
 .단계
 . BlueXP UI에서 * 보호 * > * 백업 및 복구 * > * 가상 머신 * > * 설정 * > * SnapCenter Plug-in for VMware vSphere * 를 클릭합니다.
 . 데이터 저장소 및 가상 머신을 보려는 VMware vSphere용 SnapCenter 플러그인을 클릭합니다.

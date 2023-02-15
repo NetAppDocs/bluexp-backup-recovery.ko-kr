@@ -31,6 +31,7 @@ SnapCenter Plug-in for VMware vSphere를 BlueXP(이전의 Cloud Manager)와 통�
 
 * ONTAP 9.8 이상
 * BlueXP 3.9 이상
+* NFS 데이터 저장소만 지원됩니다. iSCSI/FC/NVMe 및 VVol 기반의 VMFS 데이터 저장소는 지원되지 않습니다.
 * VMware vSphere 4.6P1용 SnapCenter 플러그인에서 하나 이상의 백업을 수행해야 합니다.
 * SnapCenter Plug-in for VMware vSphere에서 BlueXP의 가상 시스템 정책과 레이블 또는 레이블이 없는 일일, 주별 또는 월별 정책을 하나 이상 지원합니다.
 * 사전 구성된 정책의 경우 VMware vSphere 및 클라우드용 SnapCenter 플러그인의 데이터 저장소에 대한 스케줄 계층이 동일해야 합니다.

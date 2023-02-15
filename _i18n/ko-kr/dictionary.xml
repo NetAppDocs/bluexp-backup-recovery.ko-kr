@@ -1249,8 +1249,6 @@
   <block id="c592537d7c4342754740fa8b36640686" category="section-title">데이터 저장소 및 가상 머신을 봅니다</block>
   <block id="3fad99d665e8244fc38412e798c501af" category="paragraph">등록된 VMware vSphere용 SnapCenter 플러그인을 사용하여 보호되는 데이터 저장소 및 가상 머신이 표시됩니다.</block>
   <block id="78166ce4ccceeedfbf6aeb8682851072" category="paragraph">* 이 작업에 대한 정보 *</block>
-  <block id="6b0050118b87748ccc2e6422181d4463" category="list-text">NFS 데이터 저장소만 표시됩니다.</block>
-  <block id="4a60f4a892ee2b36c77a92d2aa8f7a15" category="list-text">SnapCenter Plug-in for VMware vSphere에서 하나 이상의 백업이 성공한 데이터 저장소만 표시됩니다.</block>
   <block id="21d67fc25940b8b3b749e37ad8e29e79" category="list-text">데이터 저장소 및 가상 머신을 보려는 VMware vSphere용 SnapCenter 플러그인을 클릭합니다.</block>
   <block id="b4aa547260f4fe266f03ec3a845576a5" category="section-title">VMware vSphere용 SnapCenter 플러그인을 편집합니다</block>
   <block id="65e94d24e7bbe43abc97d317024d0fcd" category="list-text">을 클릭하고 * 편집 * 을 선택합니다</block>
@@ -3511,5 +3509,5 @@
   <block id="92a755b6d9fa88006d2c9e3907a504a5" category="list-text">볼륨의 경우 원래 대상 작업 환경을 선택하거나 대체 작업 환경을 선택할 수 있습니다. FlexGroup 볼륨을 복원할 때 여러 Aggregate를 선택할 수 있습니다.</block>
   <block id="de0ace3ca6a340bec96b9fe94ee00c37" category="paragraph">백업은 기본적으로 표준 스토리지에 저장됩니다. 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 아카이브 스토리지에 백업을 계층화하도록 선택할 수 있습니다. <block ref="87ffafedb97d3b50ea58ef296117bbac" category="inline-link-macro-rx"></block>.</block>
   <block id="0a0a678be4028579aac1f022ed126971" category="paragraph"><block ref="0a0a678be4028579aac1f022ed126971" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3ff977a010b4bffe09adf01a3ba75903" category="admonition">iSCSI/FC/NVMe 및 VVol 기반의 VMFS 데이터 저장소는 지원되지 않습니다.</block>
+  <block id="8453fab1acf37cb3dad50bd528b75148" category="list-text">NFS 데이터 저장소만 지원됩니다. iSCSI/FC/NVMe 및 VVol 기반의 VMFS 데이터 저장소는 지원되지 않습니다.</block>
 </blocks>
