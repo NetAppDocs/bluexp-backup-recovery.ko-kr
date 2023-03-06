@@ -110,7 +110,7 @@ https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-restore-backups-
 
 * SAP HANA 데이터베이스
 +
-** Azure NetApp Files(ANF)에 상주하는 SAP HANA 데이터베이스의 정책 기반 백업 및 복원 지원
+** Azure NetApp Files에 상주하는 SAP HANA 데이터베이스의 정책 기반 백업 및 복원을 지원합니다
 ** 사용자 지정 정책을 지원합니다
 
 

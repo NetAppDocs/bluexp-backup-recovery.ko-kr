@@ -1096,7 +1096,6 @@
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈 소스</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
-  <block id="07d41912a6ab6b97216f8cf89e93205c" category="section-title">자체 지원</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">이 옵션은 하루 24시간, 주 7일 동안 무료로 사용할 수 있습니다.</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">기술 자료</block>
   <block id="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="list-text"><block ref="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="inline-link-rx"></block></block>
@@ -1104,8 +1103,6 @@
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">문서화</block>
   <block id="80b1b0d2b1ebf2b3cba2d25759801afd" category="list-text">mailto:ng-cloudmanager-feedback@netapp.com [피드백 이메일]</block>
-  <block id="0659d428df833a806e29e65e632d380a" category="section-title">NetApp 지원</block>
-  <block id="f5052c65917d7341726235d4d4941461" category="list-text">기술 지원 아래에서 사용 가능한 옵션 중 하나를 선택합니다.</block>
   <block id="2d0d225e73f16b3d6a3fd87e23385c8e" category="paragraph">사내 ONTAP 시스템에서 Google 클라우드 스토리지로 백업을 구성할 때 두 가지 연결 방법을 사용할 수 있습니다.</block>
   <block id="9a5f1a8ca0c47b2989eff1e34ffce9a2" category="list-text">공용 연결 - 공용 Google 엔드포인트를 사용하여 ONTAP 시스템을 Google 클라우드 스토리지에 직접 연결합니다.</block>
   <block id="5c37edf1ec718afd1ab9a5a51043e0ce" category="paragraph">다음 단계를 수행하여 빠르게 시작하십시오. 각 단계에 대한 자세한 내용은 이 항목의 다음 섹션을 참조하십시오.</block>
@@ -1755,7 +1752,6 @@
   <block id="3dbc2a858555e80cf398377571556499" category="list-text">SSH_PORT: Oracle 호스트의 SSH 포트이며 이는 선택적 매개 변수입니다. 기본값은 22입니다</block>
   <block id="e5a8e97642efe29ef958c3cafde091c8" category="list-text">plugin_port: 플러그인에서 사용하는 포트로, 이 매개 변수는 선택 사항입니다. 기본값은 8145입니다</block>
   <block id="5e0c9d9b775ad3565e6649bfa8ec9800" category="list-text">install_dir: 플러그인이 배포될 디렉터리이며 선택적 매개 변수입니다. 기본값은 /opt입니다.</block>
-  <block id="1744dd19db9c80afac565572fb28289c" category="paragraph">Oracle 호스트에서 SSH 키 기반 인증이 활성화되지 않은 경우 다음 수동 단계를 수행하여 플러그인을 구축해야 합니다.</block>
   <block id="e67d4d64b1a45fd340729c74de84b847" category="list-text">Connector VM에 로그인합니다.</block>
   <block id="274f1ac526644b363a1660f91b59759a" category="list-text">SnapCenter Linux 호스트 플러그인 바이너리를 다운로드합니다. S UDO Docker Exec - IT cloudmanager_scs_cloud curl-X get <block ref="b6b73f503ca62442f11ad4b84cc2f0bc" category="inline-link-rx"></block></block>
   <block id="5f46deee08d4b3d1d62d6ffaf5f1db1c" category="list-text">다운로드한 플러그인의 바이너리 경로를 가져옵니다. sudo ls &lt;base_mount_path&gt;$(sudo docker PS | grep-Po "cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin/snapcenter_linux_host_plugin_scs.bin'</block>
@@ -1955,7 +1951,6 @@
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">위의 자체 지원 옵션 외에도 NetApp 지원 전문가와 협력하여 지원을 활성화한 이후의 모든 문제를 해결할 수 있습니다.</block>
   <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">지원 등록 방법을 알아보십시오</block>
   <block id="383133cb6f7207b1c65c3ace94aa5e95" category="list-text">전화로 통화하려면 * 전화 * 를 클릭하십시오. 전화를 걸 수 있는 전화 번호가 나열된 netapp.com 페이지로 연결됩니다.</block>
-  <block id="bf5bc6ab0f95f17f4e98c9d766b8c11d" category="list-text">케이스 생성 * 을 클릭하여 NetApp 지원 전문가와 함께 티켓을 엽니다.</block>
   <block id="b53e0a259f4a0c8e7da80d6c94e26c84" category="list-text">* NetApp Support 사이트 계정 *: 지원 케이스를 여는 사람과 관련된 해당 NSS 계정을 선택합니다. 이 담당자는 아래에 제공된 추가 이메일 외에 NetApp에 연락할 수 있는 기본 담당자가 됩니다.</block>
   <block id="2e50c5f85523f0aba9ff2db10f18279c" category="list-text">* 작업 환경 *: 스토리지에 적용 가능한 경우 * Cloud Volumes ONTAP * 또는 * On-Premise * 를 선택한 다음 관련 작업 환경을 선택합니다.</block>
   <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">* 케이스 우선 순위 *: 케이스의 우선 순위를 선택합니다. 우선 순위는 낮음, 중간, 높음 또는 긴급입니다.</block>
@@ -2793,15 +2788,10 @@
   <block id="aead5ccad47d982e42806d38753de835" category="paragraph">BlueXP에서 VMware vSphere용 SnapCenter 플러그인의 세부 정보를 편집할 수 있습니다.</block>
   <block id="98c5d692e015a6f029128bd692f9ac3d" category="paragraph">Cloud Backup for Applications를 Cloud Manager 및 사내 SnapCenter와 통합하여 ONTAP에서 Google Cloud Platform으로 애플리케이션 데이터를 백업할 수 있습니다.</block>
   <block id="367df4ef9103973813086656b7424c40" category="summary">각 SAP HANA 데이터베이스 호스트에 SAP HNAN용 SnapCenter 플러그인을 구축합니다.</block>
-  <block id="d5df46302dfdd7579521694fb4b06495" category="doc">SAP HANA용 SnapCenter 플러그인 구축</block>
   <block id="0aa4c98c108fd4eb123ca5d3e22561e8" category="paragraph">각 SAP HANA 데이터베이스 호스트에 SAP HANA용 SnapCenter 플러그인을 구축해야 합니다. SAP HANA 호스트에 SSH 키 기반 인증이 활성화되어 있는지 여부에 따라 플러그인 구축 방법 중 하나를 따를 수 있습니다.</block>
   <block id="dd115af180e43b9284746f0724f2e436" category="admonition">각 SAP HANA 데이터베이스 호스트에 Java 11(64비트) Oracle Java 또는 OpenJDK가 설치되어 있는지 확인합니다.</block>
-  <block id="16ca5309d737224096c304c6dff4de3a" category="section-title">루트가 아닌 사용자를 구성합니다</block>
-  <block id="fd80eea6ceaa6f2785bf097c10501f77" category="paragraph">플러그인을 배포하려면 루트가 아닌 사용자를 생성해야 합니다.</block>
   <block id="3ebdbfe737c7aead22c3f4a0051261a7" category="list-text">SAP HANA 데이터베이스 호스트에 로그인하고 다음 단계를 수행합니다.</block>
-  <block id="089e0745e03208bd82005bf60f52e3c2" category="list-text">루트가 아닌 사용자 계정, 개인 키 쌍을 만들고 권한을 할당합니다.</block>
   <block id="bdacf8a8beaec8b190c600a860c2b532" category="list-text">4단계에서 복사한 선을 에 붙여 넣습니다<block ref="6c109d6e94c97fb519007c1f06880582" prefix=" " category="inline-code"></block> visudo Linux 유틸리티를 사용하여 파일을 저장합니다.</block>
-  <block id="e3092b913d71bf2b71c0b3838c675913" category="paragraph">위의 줄에서 &lt;LINUXUSER&gt;를 만든 루트가 아닌 사용자로 바꾸고 visualod 유틸리티에 저장합니다.</block>
   <block id="6fb496880c72d81f141594926d685434" category="section-title">플러그인을 수동으로 구축합니다</block>
   <block id="81669171fb08f882a32669c2772c3fd8" category="paragraph">HANA 호스트에 SSH 키 기반 인증이 설정되어 있지 않은 경우 다음 수동 단계를 수행하여 플러그인을 구축해야 합니다.</block>
   <block id="ec3a94350310fa8818e0df3a82aa2b54" category="list-text">SAP HANA 데이터베이스 호스트에서 다음 명령을 실행하여 바이너리에 대한 실행 권한을 설정합니다.<block ref="4cd88a831fa940d7f40686837061308c" prefix=" " category="inline-code"></block></block>
@@ -2821,7 +2811,6 @@
   <block id="bccdf5c7461a91341c81491a049f7917" category="list-text">Google Cloud Platform * 을 선택하여 클라우드 공급자로 구성합니다.</block>
   <block id="e29eef6ae64d545134f2b42984845a94" category="section-title">2022년 12월 19일</block>
   <block id="0a286ad90f3a25f45e443367036a8789" category="list-text">SAP HANA 데이터베이스</block>
-  <block id="feb69ad1d8975111fe86bbc94b823a7f" category="list-text">Azure NetApp Files(ANF)에 상주하는 SAP HANA 데이터베이스의 정책 기반 백업 및 복원 지원</block>
   <block id="d5a365014bbbc5172b423043fb2a2501" category="list-text">사용자 지정 정책을 지원합니다</block>
   <block id="5ffbe0deb5b41148dc58e63a20df8411" category="list-text">Oracle 데이터베이스</block>
   <block id="aa6dc7e308fa4a4875c447c8e7fa4a19" category="list-text">호스트를 추가하고 플러그인을 자동으로 구축합니다</block>
@@ -3018,7 +3007,6 @@
   <block id="54f922a09b59b7f2fce83cc984324d03" category="paragraph">정책을 할당하고 백업을 생성하려면 SAP HANA 데이터베이스 호스트를 수동으로 추가해야 합니다. SAP HANA 데이터베이스 호스트에 대한 자동 검색은 지원되지 않습니다.</block>
   <block id="2d401a77c81793a9ece97156d2f30373" category="list-text">작업 환경을 추가하고 Connector를 만들어야 합니다.</block>
   <block id="fdb89fa76e003bcdaa62dc781c75080d" category="list-text">커넥터가 작업 환경에 연결되어 있는지 확인합니다</block>
-  <block id="0c6caad59b974bed7b5a027d2727752f" category="list-text">SAP HANA용 SnapCenter 플러그인을 구축해야 합니다. <block ref="4495130e78dd5770e2665c50d9b867ed" category="inline-link-macro-rx"></block></block>
   <block id="19ba3d8b0889a939f5ec8733d64f1d60" category="list-text">SAP HANA 데이터베이스 호스트를 추가하는 동안 HDB 사용자 저장소 키를 추가해야 합니다. HDB 보안 사용자 저장소 키는 SAP HANA 데이터베이스 호스트의 연결 정보를 클라이언트에 안전하게 저장하는 데 사용되며 HDBSQL 클라이언트는 보안 사용자 저장소 키를 사용하여 SAP HANA 데이터베이스 호스트에 연결합니다.</block>
   <block id="eb8c7136dc3f88489deecb383a3e2159" category="list-text">HANA 시스템 복제(HSR)의 경우 HANA 시스템을 보호하려면 운영 및 보조 HANA 시스템을 모두 수동으로 등록해야 합니다.</block>
   <block id="8b0c466fdb979630c3d45c5c1cdb2441" category="list-text">BlueXP * UI에서 * 보호 * &gt; * 백업 및 복구 * &gt; * 응용 프로그램 * 을 클릭합니다.</block>
@@ -3046,16 +3034,13 @@
   <block id="718c7b6c3378e6331dfacc19082eceda" category="section-title">비 데이터 볼륨 추가</block>
   <block id="c1d37ffb98838b18cccda19785198d15" category="paragraph">멀티 테넌트 데이터베이스 컨테이너 또는 단일 컨테이너 유형 SAP HANA 시스템을 추가한 후 HANA 시스템의 비 데이터 볼륨을 추가할 수 있습니다.</block>
   <block id="70ece8b209ed1c9476f13c0fa00e2a77" category="list-text">응용 프로그램 * 페이지에서 을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 비 데이터 볼륨을 추가하려는 시스템에 해당하는 * 시스템 관리 * &gt; * 비 데이터 볼륨 * 을 선택합니다.</block>
-  <block id="1c5bc62ec06d77a94bd950001c20bf5c" category="section-title">글로벌 비 데이터 볼륨 추가</block>
   <block id="e84d0cbc8756fa7ba2af158f670486a8" category="paragraph">멀티 테넌트 데이터베이스 컨테이너 또는 단일 컨테이너 유형 SAP HANA 시스템을 추가한 후 HANA 시스템의 글로벌 비 데이터 볼륨을 추가할 수 있습니다.</block>
   <block id="01f13da2dfcf737f54346ebf7f44db6f" category="list-text">시스템 유형 드롭다운에서 * 글로벌 비 데이터 볼륨 * 을 선택합니다.</block>
   <block id="5d9b8dbd580deb48e76c53d62ab7c6f3" category="list-text">SAP HANA 시스템의 관련 SID를 지정합니다.</block>
   <block id="9c40bb6f28c1548e2bec94c55bf9bf96" category="list-text">플러그인 호스트를 선택합니다</block>
   <block id="b5e87b76d37fdb904487f6bc0c10bef7" category="paragraph">(선택 사항) 여러 호스트를 추가하려면 * 플러그인 호스트 추가 * 를 클릭하고 호스트 이름과 포트를 지정한 다음 * 호스트 추가 * 를 클릭합니다.</block>
   <block id="7322146fa0278b7076d42a67da3ca68f" category="section-title">사전 스크립트 및 포스트스크립트</block>
-  <block id="b3716aa17e229f5a48546a80e870a997" category="paragraph">정책을 생성하는 동안 처방자, postscript 및 종료 스크립트를 제공할 수 있습니다. 이러한 스크립트는 백업을 생성하는 동안 HANA 호스트에서 실행됩니다.</block>
   <block id="6185a8cfc72f93e3f8af600e5e7f9606" category="paragraph">스크립트에 대해 지원되는 형식은 .sh, python 스크립트, perl 스크립트 등이 있습니다.</block>
-  <block id="d36dcc27103f15cf7156e649498bba14" category="paragraph">prescpt 및 PostScript는 호스트 관리자가 에 등록해야 합니다<block ref="198c786822c306ff1d8e3ae0098bbf6c" prefix=" " category="inline-code"></block></block>
   <block id="3c91acc7806c6fcfd2da29720998df5d" category="paragraph"><block ref="8a0444f402186e75dfce312a113251e3" prefix="" category="inline-code"></block></block>
   <block id="50283e8d57278ed79d15d9dbb7c56561" category="section-title">환경 변수</block>
   <block id="3e2882dbce286b81b8650600aa1d8086" category="paragraph">복원 워크플로의 경우 다음 환경 변수를 처방과 PS의 일부로 사용할 수 있습니다.</block>
@@ -3076,7 +3061,6 @@
   <block id="30ca1c0b30eeb1e981b018064c3097f6" category="list-text">응용 프로그램 * 페이지의 설정 드롭다운 목록에서 * 정책 * 을 선택합니다.</block>
   <block id="78ba2f5b165a9466c243c7ee05da78ac" category="list-text">(선택 사항) 스냅샷 복사본 이름의 형식을 편집합니다.</block>
   <block id="808bacecc5ae86450915402dea0afd9a" category="list-text">정책 유형을 선택합니다.</block>
-  <block id="d47a69e45ac10064eed780e92117e540" category="list-text">(선택 사항) 스크립트를 지정합니다.</block>
   <block id="01ca810bd15c48e8c9ab7589db8498ca" category="section-title">SAP HANA 데이터베이스의 백업을 생성합니다</block>
   <block id="9fbab2932a5b265f7d6778bc72aaa745" category="paragraph">HANA 시스템 복제(HSR)의 경우 예약된 백업 작업이 운영 HANA 시스템에만 대해 트리거되고 시스템이 보조 HANA 시스템으로 페일오버되면 기존 스케줄이 현재 운영 HANA 시스템에 대한 백업을 트리거합니다. 정책이 두 HANA 시스템에 모두 할당되지 않은 경우 페일오버 후 일정이 실패합니다.</block>
   <block id="e0a1b2dffc713527405b0a710a4c3c77" category="paragraph">HSR 시스템에 서로 다른 정책이 할당된 경우 예약된 백업이 두 시스템에 대해 트리거되고 보조 HANA 시스템에 대한 백업이 실패합니다.</block>
@@ -3089,38 +3073,17 @@
   <block id="34cdaf3eb96811f5c751a65473724ab9" category="list-text">(선택 사항) 스크립트의 스크립트 및 경로를 지정합니다.</block>
   <block id="3c384d2eeea22869be9b66e36dec9d6e" category="list-text">백업 생성 * 을 클릭합니다.</block>
   <block id="33519237272d7d2506e4b23467569d7f" category="summary">각 Oracle 데이터베이스 호스트에 Oracle용 SnapCenter 플러그인을 구축합니다.</block>
-  <block id="5513c7a4fb1a461c9910fea9e8c7a3df" category="doc">호스트를 추가하고 Oracle 데이터베이스를 검색합니다</block>
-  <block id="0046bf9daf0e3a3d63572328eb09710c" category="paragraph">호스트를 추가하고 호스트에서 데이터베이스를 검색하여 정책을 할당하고 백업을 생성해야 합니다. 이미 플러그인을 구축한 경우 호스트를 수동으로 추가하거나 SSH를 사용하여 호스트를 추가할 수 있습니다.</block>
   <block id="031ed57adfb7acf180fc66b9bac25dcf" category="paragraph">호스트를 추가하기 전에 필수 구성 요소가 충족되었는지 확인해야 합니다.</block>
   <block id="00346be4bfc4c310cf2dbead933dff7c" category="list-text">작업 환경과 커넥터를 만들어야 합니다.</block>
   <block id="150cd80aa8da7e8a0e1532db17acbab2" category="list-text">Connector가 작업 환경 및 Oracle 데이터베이스 호스트에 연결되어 있는지 확인합니다.</block>
   <block id="b3a8552d8ed438ec3ca2f066908ea2d4" category="list-text">각 Oracle 데이터베이스 호스트에 Java 11(64비트) Oracle Java 또는 OpenJDK가 설치되어 있고 JAVA_HOME 변수가 적절하게 설정되어 있는지 확인합니다.</block>
-  <block id="5206371c2969f80deb7370081781fc8b" category="list-text">루트가 아닌 사용자를 만들어야 합니다. 자세한 내용은 을 참조하십시오 <block ref="218c9ff3f0827d13a63195c67e07e241" category="inline-xref-macro-rx"></block>.</block>
-  <block id="419e9f180bcb9992797f0d63e5108d02" category="inline-xref">수동</block>
-  <block id="6082f779360f7aa7eae37c198973c6a2" category="inline-xref">스크립트 사용</block>
-  <block id="a0b4d571b248f50b94b7633e3babe462" category="list-text">호스트를 수동으로 추가하려면 먼저 플러그인을 배포해야 합니다. 플러그인을 배포할 수 있습니다 <block ref="71f9c0626648fc2ad6935845122647e8" category="inline-xref-macro-rx"></block> 또는 <block ref="d5731cdfa534d1a5d7ccf2070fa3f2fc" category="inline-xref-macro-rx"></block>.</block>
-  <block id="9528b4fc4cc8c4ea29cdf1b307031b98" category="paragraph">각 Oracle 데이터베이스 호스트에 플러그인을 구축해야 합니다.</block>
-  <block id="882fd9db70a37f6582163f4e6d1c4fde" category="paragraph">플러그인을 배포하려면 루트가 아닌 사용자를 구성해야 합니다.</block>
   <block id="c3af1031c174f35d8fbd1d63764549d3" category="list-text">_base_mount_path_/_version_/sc-linux-host-plugin/ * 에 있는 * oracle_checksum_scs.txt * 파일에서 1에서 16으로 행을 복사합니다.</block>
   <block id="941c84084e1d6a473d4b06951513646e" category="list-text">Oracle 데이터베이스 호스트에 로그인하고 다음 단계를 수행합니다.</block>
   <block id="20ba94819b2688b9ce1be17cd8c67f00" category="inline-link">사용자 계정을 만듭니다</block>
-  <block id="dc77642a9db95bfa3d7cfad2feac68d7" category="list-text">루트가 아닌 사용자 계정, 개인 키 쌍을 만들고 권한을 할당합니다. 자세한 내용은 을 참조하십시오<block ref="fda0d36f41d4c9e30e06c472b1bf9e0c" category="inline-link-rx"></block>.</block>
   <block id="e0a6bb364ca10aed658b56d5c7220ce6" category="list-text">visudo Linux 유틸리티를 사용하여 4단계에서 복사한 행을 _/etc/sudoers_file에 붙여 넣습니다.</block>
-  <block id="e0ec6c3418190a65b388f2ec3b545b73" category="paragraph">위의 줄에서 &lt;LINUXUSER&gt;를 만든 루트가 아닌 사용자로 바꾸고 파일을 visudo 유틸리티에 저장합니다.</block>
-  <block id="ad15ac1aed6665420aee6da3d2599843" category="paragraph">snapcenter_linux_host_plugin_scs.bin_은 루트가 아닌 사용자가 액세스할 수 있는 위치에 복사해야 합니다.</block>
-  <block id="1140247d0922f07c1db2936f25736b76" category="list-text">루트가 아닌 사용자 계정을 사용하여 Oracle 데이터베이스 호스트에 로그인하고 다음 명령을 실행하여 바이너리에 대한 실행 권한을 활성화합니다.<block ref="4cd88a831fa940d7f40686837061308c" prefix=" " category="inline-code"></block></block>
-  <block id="448fb639b2dbccf2171b5c8f9a70a09a" category="list-text">Oracle 플러그인을 sudo non-root 사용자로 구축합니다.<block ref="a9b0283be469b80a16d7090f132ac831" prefix=" " category="inline-code"></block></block>
-  <block id="d00dc5124d9367c0c08e4ba45796fdd4" category="section-title">스크립트를 사용하여 플러그인을 배포합니다</block>
-  <block id="7f4f03eee9cd1fb77b091d1f31a63e75" category="paragraph">비 루트 사용자에 대해 Oracle 호스트에서 SSH 키 기반 인증을 사용하는 경우 다음 단계를 수행하여 플러그인을 구축할 수 있습니다. 단계를 수행하기 전에 커넥터에 대한 SSH 연결이 활성화되어 있는지 확인합니다.</block>
   <block id="5db771567067dd09af5564e02cf7ed87" category="list-text">Connector에 제공된 도우미 스크립트를 사용하여 플러그인을 배포합니다.<block ref="1d1dd7c5683a80bd4fd769dadbf81b09" prefix=" " category="inline-code"></block></block>
-  <block id="0fe1e69c4c87559df8ff5fba40419445" category="list-text">SSH_KEY_FILE은 비 루트 사용자의 SSH 키이며 Oracle 호스트에 연결하는 데 사용됩니다. 필수 매개 변수입니다.</block>
-  <block id="d9997864ce67719ea93cc0b0cff9c006" category="list-text">user_name: Oracle 호스트에 대한 SSH 권한이 있는 루트가 아닌 사용자로, 이 매개 변수는 선택 사항입니다. 기본값은 EC2-user입니다.</block>
   <block id="6ae7d9f8527d1ed6cd28c1fe9cc17109" category="paragraph">예를 들면 다음과 같습니다.<block ref="f2458f3042d087542cd1b232a3f7c978" prefix=" " category="inline-code"></block></block>
-  <block id="af7f8976f175216d1e12ff5be8b68be4" category="section-title">호스트를 추가합니다</block>
-  <block id="c45737224c5ab40ea9affadd8962c6e7" category="paragraph">호스트를 추가하고 Oracle 데이터베이스를 검색해야 합니다.</block>
   <block id="e4bed981c8dc4fe15a706f0b93160836" category="list-text">BlueXP UI에서 * 보호 * &gt; * 백업 및 복구 * &gt; * 응용 프로그램 * 을 클릭합니다.</block>
-  <block id="254d235472af71154481e0a6f56b2535" category="list-text">호스트 추가 페이지에서 다음 중 하나를 수행합니다.</block>
-  <block id="2958f19f58f0ca8d9d63b20360a0d39d" category="paragraph">플러그인을 배포했습니다 <block ref="71f9c0626648fc2ad6935845122647e8" category="inline-xref-macro-rx"></block> 또는 <block ref="d5731cdfa534d1a5d7ccf2070fa3f2fc" category="inline-xref-macro-rx"></block></block>
   <block id="f56876c150285cea7b724cbb95594046" category="list-text">수동 * 을 선택합니다.</block>
   <block id="96d18284484330f0461bebeeedf28b93" category="list-text">플러그인이 구축된 호스트의 FQDN 또는 IP 주소를 지정합니다.</block>
   <block id="4b9c5e10e240cdb44f786ad97e92d363" category="paragraph">FQDN 또는 IP 주소를 사용하여 Connector가 데이터베이스 호스트와 통신할 수 있는지 확인합니다.</block>
@@ -3128,11 +3091,8 @@
   <block id="acb4159eef3e5ecd5b233216c18d4d45" category="paragraph">기본 포트는 8145입니다.</block>
   <block id="91128bbc82eb724ccb4b4532f152c3da" category="list-text">커넥터 를 선택합니다.</block>
   <block id="74a99b6dc2ef8f1a612ef62e0fbae84d" category="list-text">호스트에 플러그인이 설치되어 있는지 확인하려면 확인란을 선택합니다</block>
-  <block id="8443ac4c22417245b61f0c033b4ea3d2" category="paragraph">플러그인을 자동으로 배포하려는 경우</block>
   <block id="044408c01f4556451a3907257fc21382" category="list-text">SSH * 를 사용하여 * 를 선택합니다.</block>
   <block id="21c7549ba6f4014b1d2c113aff7f95aa" category="list-text">플러그인을 설치할 호스트의 FQDN 또는 IP 주소를 지정합니다.</block>
-  <block id="067a9635a80c1edff88c622203fa7ce1" category="inline-xref">루트가 아닌 사용자</block>
-  <block id="0b2581c6c2b040b10360f2182f95a26e" category="list-text">사용자 이름(<block ref="b860729b45208ea0c8184e39fd0d4fa7" category="inline-xref-macro-rx"></block>)를 사용하여 호스트에 플러그인 패키지를 복사합니다.</block>
   <block id="791d63ac899b8ad7fc56dc931d1fd29a" category="list-text">SSH 및 플러그인 포트를 지정합니다.</block>
   <block id="505ce6fed4446b13324d0562a28bb6ba" category="paragraph">기본 SSH 포트는 22이고 플러그인 포트는 8145입니다.</block>
   <block id="11f3ace264fde67c71154e15a9b49b51" category="paragraph">플러그인을 설치한 후 애플리케이션 호스트에서 SSH 포트를 닫을 수 있습니다. 다른 플러그인 작업에는 SSH 포트가 필요하지 않습니다.</block>
@@ -3148,7 +3108,6 @@
   <block id="013e38cfdb2c6d0bb3f17b59760240ff" category="summary">BlueXP는 NetApp ONTAP 또는 Cloud Volumes ONTAP용 Amazon FSx에 상주하는 Oracle ® 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다.</block>
   <block id="7105ab20f187c4c6345342e06cd1748d" category="paragraph">Cloud Backup for Applications는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. BlueXP(이전의 Cloud Manager) 내에서 활성화된 Cloud Backup for Applications는 다음과 같은 애플리케이션에 대해 효율적이고 일관된 정책 기반 보호 기능을 제공합니다.</block>
   <block id="9b029537d0b8df0bfe13af02e2f4b676" category="list-text">NetApp ONTAP 및 Cloud Volumes ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스입니다</block>
-  <block id="0fb238fbf40ffb66b4fc526838e26664" category="list-text">Azure NetApp Files(ANF)에 상주하는 SAP HANA 시스템</block>
   <block id="0e9f5823c929b9fb9d64f8929519166d" category="list-text">BlueXP UI에서 Cloud Backup for Applications UI에 액세스할 수 있습니다.</block>
   <block id="97c81decba97f11a1ed9821a4ddbc39d" category="paragraph">Cloud Backup for Applications UI는 애플리케이션을 위한 데이터 보호 기능을 제공합니다.</block>
   <block id="a900fc2ba3036431f83eaa95438d5c78" category="list-text">BlueXP Connector는 사용자의 클라우드 네트워크에서 실행되며 스토리지 시스템 및 애플리케이션별 플러그인과 상호 작용하는 구성 요소입니다.</block>
@@ -3185,7 +3144,6 @@
   <block id="9317a56cfedd80231a539c42f44d9c8d" category="section-title">SAP HANA 데이터베이스 보호</block>
   <block id="494c3084e3990387ac3b46cb5749bb65" category="list-text">RHEL 7.5 이상, SAP HANA 인증 8.x 플랫폼</block>
   <block id="504d22b0e020e0b365851eef08a1e4ca" category="list-text">SLES 12 SP5 이상 및 15 SPX 플랫폼은 SAP HANA 인증을 받았습니다</block>
-  <block id="bf8209cf9b7524db25e82e107aec699b" category="list-text">스토리지 시스템: Azure NetApp Files(ANF)</block>
   <block id="4181f6e16bb30e02b42299eaabaccd5e" category="list-text">스토리지 레이아웃: 데이터 및 로그의 경우 Azure는 NFSv4.1만 지원합니다.</block>
   <block id="c7325743e6b1be5853672e4ed19d279b" category="list-text">데이터베이스 레이아웃:</block>
   <block id="4f3c431044df2a4101e620b1add959d6" category="list-text">단일 컨테이너 버전 1.0SPS12</block>
@@ -3205,12 +3163,9 @@
   <block id="5cca45bd52ac035de73ec0e76f0e5043" category="summary">데이터 파일을 복원한 다음 데이터베이스를 복구합니다.</block>
   <block id="e648f70e1fb5d17870bf65097e43c5a6" category="doc">클라우드 네이티브 SAP HANA 데이터베이스 복원</block>
   <block id="26661dc24144ed594be15c07b300db39" category="paragraph">데이터가 손실된 경우 데이터 및 비 데이터 파일을 복원한 다음 데이터베이스를 복구할 수 있습니다.</block>
-  <block id="209bbbd2ef26cf13ac9d3e2ab4a48795" category="paragraph">정책을 생성하는 동안 처방자, postscript 및 종료 스크립트를 제공할 수 있습니다. 이 스크립트는 복구 작업을 수행하는 동안 HANA 호스트에서 실행됩니다.</block>
-  <block id="8e193dde313806673c3561148f67d074" category="paragraph">prescpt 및 PostScript는 호스트 관리자가 에 등록해야 합니다<block ref="3b233c9e75b7e3c86773366e24bbc002" prefix=" " category="inline-code"></block></block>
   <block id="43b21c00ad4299ac7f4d7e1dafb5f387" category="paragraph">* 필요한 것 *</block>
   <block id="f8988e398a707101924ea388677409fc" category="list-text">SAP HANA 시스템은 중지된 상태여야 합니다.</block>
   <block id="e7112ed1470e71e600498d1a4b34ac26" category="list-text">SAP HANA 시스템을 중지하도록 처방할 수 있습니다.</block>
-  <block id="864ef826ca9afa5b1d7e1e3468c6f957" category="list-text">시스템 복원 * 페이지에서 스크립트를 입력합니다.</block>
   <block id="8f0f4ecd6bb49079fb488435d58bf611" category="list-text">복원 후 SAP HANA 시스템을 수동으로 복구하거나 SAP HANA 시스템 복구를 수행하는 PostScript를 제공합니다.</block>
   <block id="aafa017aee26c3860dee1aac06cc22e5" category="section-title">비 데이터 볼륨 복원</block>
   <block id="b78066905c05d49abb8f4df49665ed37" category="list-text">응용 프로그램 * 페이지의 드롭다운 상자에서 비 데이터 볼륨 을 선택합니다.</block>
@@ -3224,9 +3179,7 @@
   <block id="c6927bf583958e84094bc7e9d4328c6f" category="section-title">Azure NetApp Files 작업 환경을 생성합니다</block>
   <block id="8b53faee27870b72e0be69261d54a7ee" category="inline-link-macro">Azure NetApp Files에 대해 자세히 알아보십시오</block>
   <block id="c5c12e22be965b4ae0e9fc5e1618bdbe" category="inline-link-macro">Azure NetApp Files 작업 환경을 만듭니다</block>
-  <block id="bf91af894eb3580afdb33ab6ce5ab06f" category="paragraph">데이터베이스가 호스팅되는 Azure NetApp Files(ANF) 작업 환경을 만들어야 합니다. 자세한 내용은 을 참조하십시오 <block ref="e42252aa263ed60f84feb7fdedc741c2" category="inline-link-macro-rx"></block> 및 <block ref="08189a1662d35a0f6c5c7b20dd7f30c3" category="inline-link-macro-rx"></block>.</block>
   <block id="e7a9cd1dc4bf0c230d0684e18369d70d" category="section-title">커넥터를 작성합니다</block>
-  <block id="7c258ce888390955a0508e6bf64eec18" category="paragraph">계정 관리자는 BlueXP가 공용 클라우드 환경 내에서 리소스와 프로세스를 관리할 수 있도록 ANF에 Connector를 배포해야 합니다.</block>
   <block id="bca25b5056d8715db55e6e28a72ddea0" category="admonition">UI에서 새 connector_id를 업데이트할 수 없습니다.</block>
   <block id="e12fb4f30abef516bf6f5e0e9a5b72b7" category="inline-link-macro">BlueXP에서 Azure에 커넥터를 만듭니다</block>
   <block id="3717a56f9d9c162dfd0127cd325c0a2f" category="paragraph">자세한 내용은 을 참조하십시오 <block ref="88ddfb8e0cf0e729a2d90f978111b93e" category="inline-link-macro-rx"></block>.</block>
@@ -3262,7 +3215,6 @@
   <block id="fa4308d3f9fdcd01f05ba58ff69b9dd5" category="list-text">에서 행 1을 16으로 복사합니다<block ref="5fc8e5db28f79a3512344717eb75a2f3" prefix=" " category="inline-code"></block> 파일 위치<block ref="dca5cd789ecd3e8ac3b24e72d56f2c0f" prefix=" " category="inline-code"></block></block>
   <block id="c8e4cea60639b8f6c2e1f74034e46e71" category="list-text">Linux 호스트 플러그인 바이너리를 다운로드합니다.<block ref="842b6533279ede354ede13a8696c77a7" prefix=" " category="inline-code"></block></block>
   <block id="1333b695230748772732811a4dce8133" category="list-text">복사<block ref="4f97ae2a0dc11c8ac2f61e73bbd23cd8" prefix=" " category="inline-code"></block> 각 SAP HANA 데이터베이스 호스트에 SCP 또는 다른 대체 방법을 사용합니다.</block>
-  <block id="f21f4c2a14663fba17fd663498932188" category="list-text">sudo non-root 사용자로 SAP HANA 플러그인을 구축합니다.<block ref="a9b0283be469b80a16d7090f132ac831" prefix=" " category="inline-code"></block></block>
   <block id="8125c29989803ad0a7a3fcd80763904a" category="list-text">복사<block ref="7730e5c2e030df9de4e60d7586534d1d" prefix=" " category="inline-code"></block> 보낸 사람<block ref="6a722c9070d74bb0503ce0417b0cad70" prefix=" " category="inline-code"></block> 커넥터 VM의 경로<block ref="b99636c9e34de318e385a63d2cb037a1" prefix=" " category="inline-code"></block> 플러그인 호스트에서</block>
   <block id="ef1e764c716d2aa5406d3d434b9c8614" category="list-text">로 이동합니다<block ref="0dc0b955539cf9119a9695bb3312c8cb" prefix=" " category="inline-code"></block> 키 도구 명령을 실행하여 인증서를 가져옵니다.<block ref="0d48a0d1a6daee261d59f76e1ce65f98" prefix=" " category="inline-code"></block></block>
   <block id="fd9064c3951e4ceddd0e2ae6bf2708e5" category="paragraph">* 참고: * 복원하려는 데이터가 들어 있는 백업 파일이 보관 저장소에 있는 경우(ONTAP 9.10.1부터 시작) 복원 작업에 더 많은 시간이 소요되고 비용이 발생합니다. 또한 대상 클러스터는 볼륨 복원의 경우 ONTAP 9.10.1 이상, 파일 복원의 경우 9.11.1, Google 아카이브 및 StorageGRID의 경우 9.12.1 이상을 실행해야 합니다.</block>
@@ -3510,4 +3462,63 @@
   <block id="de0ace3ca6a340bec96b9fe94ee00c37" category="paragraph">백업은 기본적으로 표준 스토리지에 저장됩니다. 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 아카이브 스토리지에 백업을 계층화하도록 선택할 수 있습니다. <block ref="87ffafedb97d3b50ea58ef296117bbac" category="inline-link-macro-rx"></block>.</block>
   <block id="0a0a678be4028579aac1f022ed126971" category="paragraph"><block ref="0a0a678be4028579aac1f022ed126971" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8453fab1acf37cb3dad50bd528b75148" category="list-text">NFS 데이터 저장소만 지원됩니다. iSCSI/FC/NVMe 및 VVol 기반의 VMFS 데이터 저장소는 지원되지 않습니다.</block>
+  <block id="f990e553cdc4c29c2efffba33e08a8c7" category="inline-link-macro">자세한 정보.</block>
+  <block id="c0efb50e50bd832fe33303fe8a025710" category="list-text">(선택 사항) 스크립트를 지정합니다. <block ref="64f80f18cd8436040cdc180731adb1df" category="inline-link-macro-rx"></block></block>
+  <block id="898f472703342efc6d5adc298a7628c8" category="paragraph">정책을 생성하는 동안 처방자, postscript 및 종료 스크립트를 제공할 수 있습니다. 이러한 스크립트는 데이터 보호 작업 중에 HANA 호스트에서 실행됩니다.</block>
+  <block id="c5b751b6877453fd04eb6340347e4511" category="paragraph">prescpt 및 PostScript는 호스트 관리자가 에 등록해야 합니다<block ref="91d372f85b001dba79ebc4129e5acd32" prefix=" " category="inline-code"></block> 파일.</block>
+  <block id="0baab2619f15ec742e2bf8b60e516b39" category="paragraph">백업 워크플로우의 경우, 다음 환경 변수를 prescpt 및 PostScript의 일부로 사용할 수 있습니다.</block>
+  <block id="37b91819addbb5b3ca6a2d78cfe91ff2" category="inline-link-macro">사전 스크립트 및 포스트스크립트</block>
+  <block id="c7436ac5bc62035107d7dd8330e0ce9c" category="paragraph">자세한 내용은 을 참조하십시오 <block ref="e21df236c176ec826d056db82d193773" category="inline-link-macro-rx"></block></block>
+  <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">자체 지원 옵션을 사용합니다</block>
+  <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">NetApp Support로 케이스 생성</block>
+  <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">리소스 * 페이지의 기술 지원 아래에서 사용 가능한 옵션 중 하나를 선택합니다.</block>
+  <block id="5be2e1dfe4bf215289731df45ec8157b" category="list-text">케이스 생성 * 을 클릭하여 NetApp 지원 담당자와 티켓을 엽니다.</block>
+  <block id="32ecc38b872b5f889b952ca26b4c9e01" category="list-text">Azure NetApp Files에 상주하는 SAP HANA 시스템</block>
+  <block id="25b10c02d41eec413a14409c4612d5d3" category="list-text">스토리지 시스템: Azure NetApp Files</block>
+  <block id="2aebd4a586327a155f5ad3b448f755af" category="doc">SAP HANA용 SnapCenter 플러그인을 구축하고 데이터베이스 호스트를 추가합니다</block>
+  <block id="269c48e37c80fdf85eed155628bc58de" category="inline-link-macro">SnapCenter 사용자에 대해 sudo를 구성합니다.</block>
+  <block id="ddaa83445dd7a230c2c58c8306085a19" category="list-text">SnapCenter 사용자를 생성하고 SnapCenter 사용자에 대해 sudo를 구성해야 합니다. 자세한 내용은 을 참조하십시오 <block ref="6178ed5e7702fbe22f507b323e07e08d" category="inline-link-macro-rx"></block></block>
+  <block id="d2112f16a8059fc09554b14c09d4fcfc" category="list-text">데이터베이스 호스트를 추가하기 전에 SAP HANA용 SnapCenter 플러그인을 구축해야 합니다.</block>
+  <block id="257b77ad500d8d34d40999c829e11687" category="list-text">SSH 기반 구축을 사용하는 경우 커넥터는 SSH 포트에 대한 통신을 활성화해야 합니다(기본값: 22).</block>
+  <block id="5725f533e015d3bd4b9e8c38eca0144b" category="list-text">커넥터가 작동을 위해 플러그인 포트(기본값: 8145)에 대한 통신을 활성화해야 합니다.</block>
+  <block id="b010a3fdc0e4a30de49959a04a4e75e0" category="section-title">SnapCenter 사용자에 대해 sudo를 구성합니다</block>
+  <block id="a07faa3e8d1ee5e05e2477cb22d4aada" category="paragraph">플러그인을 배포하려면 SnapCenter 사용자를 만들어야 합니다.</block>
+  <block id="d92750f46e700776d748ee9b15b423cc" category="list-text">SnapCenter 사용자 계정, 개인 키 쌍을 만들고 권한을 할당합니다.</block>
+  <block id="1aadfd10fc57b635454a6d55fa8fc260" category="paragraph">위의 줄에서 &lt;LINUXUSER&gt; 를 만든 SnapCenter 사용자로 바꾸고 visualod 유틸리티에 저장합니다.</block>
+  <block id="1fd90cd4e86ccb2a0caebc53978ce238" category="inline-link-macro">SAP HANA 데이터베이스 호스트</block>
+  <block id="d608b8b79f8e38b5355b2621076c03a7" category="paragraph">플러그인을 배포한 후에는 을 추가해야 합니다 <block ref="92ad6bba296fdb7b03893ff2938b8375" category="inline-link-macro-rx"></block></block>
+  <block id="bd66e9124149884520020da3bbb7fb42" category="list-text">SAP HANA 플러그인을 sudo SnapCenter 사용자로 구축합니다.<block ref="a9b0283be469b80a16d7090f132ac831" prefix=" " category="inline-code"></block></block>
+  <block id="c827c4145f570b61f9ba6a78e5ffdca3" category="list-text">Connector에서 다음 명령을 실행하여 커넥터에서 플러그인에 연결할 수 있는지 확인합니다.</block>
+  <block id="196620afd1e2e98d838480028131dc6b" category="paragraph"><block ref="7bab21217ba7da8fb8f176538fe93b9b" prefix="" category="inline-code"></block></block>
+  <block id="ed4c596de80903a7b24e5ada4ad1cb18" category="section-title">글로벌 비 데이터 볼륨 추가</block>
+  <block id="c85382f11c645139d96d5e2eacdd8985" category="list-text">시스템 복원 * 페이지에서 스크립트를 입력합니다. <block ref="64f80f18cd8436040cdc180731adb1df" category="inline-link-macro-rx"></block></block>
+  <block id="c2d07a443e1ff7ca3b9a176f2e281fa7" category="paragraph">데이터베이스가 호스팅되는 Azure NetApp Files 작업 환경을 만들어야 합니다. 자세한 내용은 을 참조하십시오 <block ref="e42252aa263ed60f84feb7fdedc741c2" category="inline-link-macro-rx"></block> 및 <block ref="08189a1662d35a0f6c5c7b20dd7f30c3" category="inline-link-macro-rx"></block>.</block>
+  <block id="86e567c58e1677d6f28f5faf45337dd6" category="paragraph">계정 관리자는 Azure NetApp Files에 커넥터를 배포하여 BlueXP가 공용 클라우드 환경 내에서 리소스와 프로세스를 관리할 수 있도록 해야 합니다.</block>
+  <block id="fcdf1a1b46f3b7e8ad6ff82010438a90" category="list-text">Azure NetApp Files에 상주하는 SAP HANA 데이터베이스의 정책 기반 백업 및 복원을 지원합니다</block>
+  <block id="626a739569b9dd0c59a5743d227d6123" category="doc">Oracle용 SnapCenter 플러그인을 구축하고 데이터베이스 호스트를 추가합니다</block>
+  <block id="67d8739c95209190622df34ef33e74cb" category="paragraph">각 Oracle 데이터베이스 호스트에 Oracle용 SnapCenter 플러그인을 구축하고, 데이터베이스 호스트를 추가하고, 호스트에서 데이터베이스를 검색하여 정책을 할당하고, 백업을 생성해야 합니다.</block>
+  <block id="90830749b6cbde0f0a187f49bb486594" category="list-text">데이터베이스 호스트에 대해 SSH가 설정된 경우 다음 방법 중 하나를 사용하여 플러그인을 배포할 수 있습니다.</block>
+  <block id="8b6b64c474edd30f1a9272ee24a2232f" category="list-text">플러그인을 배포하고 SSH 옵션을 사용하여 UI를 호스트에 추가합니다. <block ref="96cf78a1eacf9d4e1d33800a6dba4d36" category="inline-xref-macro-rx"></block>.</block>
+  <block id="3262da317dca873a6393aacedc92711b" category="list-text">스크립트를 사용하여 플러그인을 배포하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다. <block ref="7e15d0c8c67b3cf8713be59b7b4c1b25" category="inline-xref-macro-rx"></block>.</block>
+  <block id="08504e173a088669654aaeccaa2b3a23" category="list-text">SSH가 비활성화된 경우 수동으로 플러그인을 배포하고 UI에서 수동 옵션을 사용하여 호스트를 추가합니다. <block ref="5f00e4f7335cd99930cda849266e93c9" category="inline-xref-macro-rx"></block>.</block>
+  <block id="39897a09935775120f58a38650026ddb" category="list-text">SnapCenter 사용자를 생성하고 SnapCenter 사용자에 대해 sudo를 구성해야 합니다. 자세한 내용은 을 참조하십시오 <block ref="5e3b9649d708169ed88a9a242f31b61c" category="inline-xref-macro-rx"></block>.</block>
+  <block id="552cb41f77557f24afc949caef89280f" category="list-text">SSH 기반 구축을 사용하는 경우 커넥터가 SSH 포트에 대해 통신을 활성화했는지 확인합니다(기본값: 22).</block>
+  <block id="39f31ccaa29cc339e3980e0da960d750" category="list-text">커넥터가 작동을 위해 플러그인 포트(기본값: 8145)에 대한 통신을 활성화했는지 확인합니다.</block>
+  <block id="739fcf2b514d944f705042f1e0e00257" category="paragraph">SnapCenter 사용자를 생성하고 사용자에 대해 sudo를 구성해야 합니다.</block>
+  <block id="fe689694da98d31a8ecb33f9937bcf2b" category="list-text">SnapCenter 사용자 계정, 개인 키 쌍을 만들고 권한을 할당합니다. 자세한 내용은 을 참조하십시오<block ref="fda0d36f41d4c9e30e06c472b1bf9e0c" category="inline-link-rx"></block>.</block>
+  <block id="08a9756f760e15ecb833f8a03e820f5c" category="paragraph">위의 줄에서 &lt;LINUXUSER&gt;를 만든 SnapCenter 사용자로 바꾸고 파일을 visudo 유틸리티에 저장합니다.</block>
+  <block id="cf4cb057a8a94a7af35c1f206a490fc7" category="section-title">SSH 옵션을 사용하여 플러그인을 배포하고 UI에서 호스트를 추가합니다</block>
+  <block id="c19f3000ecedd6e739c73e513c597e19" category="list-text">호스트 추가 페이지에서 다음을 수행합니다.</block>
+  <block id="ac942bfda2b49411af92bb83a04093ea" category="inline-xref">sudo SnapCenter 사용자</block>
+  <block id="3873a19d99c54075bd878c4755a660d7" category="list-text">사용자 이름(<block ref="0ddbb3d2c437bced333ce4f5ef476df6" category="inline-xref-macro-rx"></block>)를 사용하여 호스트에 플러그인 패키지를 복사합니다.</block>
+  <block id="96e8e4df8b3ca0b4eec3a79081f69a5f" category="section-title">스크립트를 사용하여 플러그인을 배포하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다</block>
+  <block id="91eb61d109e3007a8e969ba3cba1c154" category="paragraph">SnapCenter 사용자에 대해 Oracle 호스트에서 SSH 키 기반 인증을 사용하는 경우 다음 단계를 수행하여 플러그인을 구축할 수 있습니다. 단계를 수행하기 전에 커넥터에 대한 SSH 연결이 활성화되어 있는지 확인합니다.</block>
+  <block id="10e01a340c84380e027a73fec4302231" category="list-text">SSH_KEY_FILE은 SnapCenter 사용자의 SSH 키이며 Oracle 호스트에 연결하는 데 사용됩니다. 필수 매개 변수입니다.</block>
+  <block id="2a8cccba41dd7585d3e688efa551f3ca" category="list-text">user_name: Oracle 호스트에서 SSH 권한을 가진 SnapCenter 사용자로, 이 매개 변수는 선택 사항입니다. 기본값은 EC2-user입니다.</block>
+  <block id="dc9d1d5a9daee6a922e8ca3b643f951f" category="section-title">수동으로 플러그인을 배포하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다</block>
+  <block id="6536d8bd829629536e41a1e31830f5df" category="paragraph">Oracle 데이터베이스 호스트에서 SSH 키 기반 인증이 활성화되지 않은 경우 다음 수동 단계를 수행하여 플러그인을 구축한 다음 수동 옵션을 사용하여 UI에서 호스트를 추가해야 합니다.</block>
+  <block id="59498123f173f525c8ccd6041aad0090" category="paragraph">snapcenter_linux_host_plugin_scs.bin_은 SnapCenter 사용자가 액세스할 수 있는 위치에 복사해야 합니다.</block>
+  <block id="9fccb7bf2ea38fc2199a167bbe2d87fd" category="list-text">SnapCenter 사용자 계정을 사용하여 Oracle 데이터베이스 호스트에 로그인하고 다음 명령을 실행하여 바이너리에 대한 실행 권한을 활성화합니다.<block ref="4cd88a831fa940d7f40686837061308c" prefix=" " category="inline-code"></block></block>
+  <block id="2fe3c4ca1597e6bdf865a7367c7a7a08" category="list-text">Oracle 플러그인을 sudo SnapCenter 사용자로 구축합니다.<block ref="d0ac17823bdcaade630c1553c4540054" prefix=" " category="inline-code"></block></block>
+  <block id="f55cf31361d600683e03e25c6f1109e3" category="list-text">Connector에서 아래 명령을 실행하여 커넥터에서 플러그인에 연결할 수 있는지 확인합니다.<block ref="7bab21217ba7da8fb8f176538fe93b9b" prefix=" " category="inline-code"></block></block>
 </blocks>

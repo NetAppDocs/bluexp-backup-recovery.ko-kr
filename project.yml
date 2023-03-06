@@ -128,7 +128,7 @@ sidebar:
             url: "/reference-configure-fsx-for-ontap.html"
           - title: Cloud Volumes ONTAP를 구성합니다
             url: "/reference-configure-cloud-volumes-ontap.html"
-          - title: 호스트를 추가하고 Oracle 데이터베이스를 검색합니다
+          - title: Oracle용 SnapCenter 플러그인을 구축하고 데이터베이스 호스트를 추가합니다
             url: "/task-add-host-discover-oracle-databases.html"
           - title: Oracle 데이터베이스를 백업합니다
             url: "/task-backup-cloud-native-oracle-data.html"
@@ -140,7 +140,7 @@ sidebar:
           - title: Azure NetApp Files를 구성합니다
             flavor: azure
             url: "/reference-configure-azure-netapp-files.html"
-          - title: SAP HANA용 SnapCenter 플러그인 구축
+          - title: SAP HANA용 SnapCenter 플러그인을 구축하고 데이터베이스 호스트를 추가합니다
             flavor: azure
             url: "/task-deploy-snapcenter-plugin-for-sap-hana.html"
           - title: SAP HANA 데이터베이스 백업

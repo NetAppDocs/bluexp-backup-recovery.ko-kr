@@ -17,7 +17,7 @@ summary: BlueXP는 NetApp ONTAP 또는 Cloud Volumes ONTAP용 Amazon FSx에 상�
 Cloud Backup for Applications는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. BlueXP(이전의 Cloud Manager) 내에서 활성화된 Cloud Backup for Applications는 다음과 같은 애플리케이션에 대해 효율적이고 일관된 정책 기반 보호 기능을 제공합니다.
 
 * NetApp ONTAP 및 Cloud Volumes ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스입니다
-* Azure NetApp Files(ANF)에 상주하는 SAP HANA 시스템
+* Azure NetApp Files에 상주하는 SAP HANA 시스템
 
 
 
@@ -144,7 +144,7 @@ IMPORTANT: Cloud Backup for Applications SaaS 인프라는 지역 내의 가용�
 ** SLES 12 SP5 이상 및 15 SPX 플랫폼은 SAP HANA 인증을 받았습니다
 
 
-* 스토리지 시스템: Azure NetApp Files(ANF)
+* 스토리지 시스템: Azure NetApp Files
 * 스토리지 레이아웃: 데이터 및 로그의 경우 Azure는 NFSv4.1만 지원합니다.
 * 데이터베이스 레이아웃:
 +
