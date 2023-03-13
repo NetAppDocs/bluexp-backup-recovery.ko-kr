@@ -251,8 +251,38 @@ endif::azure[]
 
 * StorageGRID의 경우:
 +
-** Connector를 사내에 구축해야 합니다(인터넷 접속 유무에 관계없이 사이트에 설치할 수 있음).
 ** DataLock 기능을 완벽하게 지원하려면 StorageGRID 11.6.0.3 이상이 필요합니다
+** Connector를 사내에 구축해야 합니다(인터넷 접속 유무에 관계없이 사이트에 설치할 수 있음).
+** 다음 S3 권한은 Connector에 권한을 제공하는 IAM 역할의 일부여야 합니다.
++
+*** S3:GetObjectVersionTagging
+*** S3:GetBuckketObjectLockConfiguration
+*** S3:GetObjectVersionAcl
+*** S3:PutObjectTagging
+*** S3:DeleteObject 를 선택합니다
+*** S3:삭제 ObjectTagging
+*** S3:GetObjectRetention
+*** S3:DeleteObjectVersionTagging
+*** S3:PutObject
+*** S3:GetObject
+*** S3:PutBucketObjectLockConfiguration
+*** S3:GetLifecycleConfiguration
+*** S3:ListBucketByTags
+*** S3:GetBucketTagging
+*** S3:DeleteObjectVersion
+*** S3:목록 BuckketVersions
+*** S3:목록 버킷
+*** S3: PutBucketTagging
+*** S3:GetObjectTagging
+*** S3: PutBucketVersioning
+*** S3:PutObjectVersionTagging
+*** S3:GetBucketVersioning
+*** S3:GetBuckketAcl
+*** S3:PutObjectRetention
+*** S3:GetBucketLocation
+*** S3:GetObjectVersion
+
+
 
 
 

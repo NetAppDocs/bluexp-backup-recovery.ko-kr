@@ -18,6 +18,28 @@ Cloud Backup의 새로운 기능에 대해 알아보십시오.
 
 
 
+== 2023년 3월 9일
+
+
+
+=== 이제 폴더 레벨 복구 작업에 모든 하위 폴더 및 파일이 포함됩니다
+
+이전에는 폴더를 복원했을 때 해당 폴더의 파일만 복원되었고 하위 폴더 또는 하위 폴더의 파일은 복원되지 않았습니다. 이제 ONTAP 9.13.0 이상을 사용하는 경우 선택한 폴더에 있는 모든 하위 폴더와 파일이 복원됩니다. 따라서 최상위 폴더에 여러 개의 중첩된 폴더가 있는 경우 많은 시간과 비용을 절약할 수 있습니다.
+
+
+
+=== 어두운 사이트에 있는 Cloud Volumes ONTAP 시스템의 데이터를 백업하는 기능
+
+이제 AWS 및 Azure 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3 또는 Azure Blob으로 백업할 수 있습니다. 이 작업을 수행하려면 상업 지역의 Linux 호스트에 커넥터를 설치하고 Cloud Volumes ONTAP 시스템도 배포해야 합니다. 을 참조하십시오 link:task-backup-to-s3.html["Cloud Volumes ONTAP 데이터를 Amazon S3에 백업"] 및 link:task-backup-to-azure.html["Azure Blob에 Cloud Volumes ONTAP 데이터 백업"].
+
+
+
+=== 작업 모니터는 특정 백업 또는 복원 작업을 찾을 수 있는 고급 필터링을 제공합니다
+
+작업 모니터링 페이지에 고급 필터링이 추가되어 시간, 워크로드(볼륨, 애플리케이션, 가상 머신 또는 Kubernetes) 별로 백업 및 복원 작업을 검색할 수 있습니다. 작업 유형, 상태, 작업 환경 및 스토리지 VM "application_3"과 같은 자원 검색을 위해 자유 텍스트를 입력할 수도 있습니다.  https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-monitor-backup-jobs.html#searching-and-filtering-the-list-of-jobs["고급 필터 사용 방법을 확인하십시오"].
+
+
+
 == 2023년 2월 6일
 
 

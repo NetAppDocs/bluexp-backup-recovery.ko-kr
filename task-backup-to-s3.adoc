@@ -27,7 +27,12 @@ summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP에서 Amazon S3�
 * AWS에서 Cloud Volumes ONTAP 9.7P5 이상을 실행 중입니다(ONTAP 9.8P13 이상 권장).
 * 백업이 위치할 스토리지 공간에 대한 유효한 클라우드 공급자 가입이 있습니다.
 * 에 가입했습니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["BlueXP Marketplace 백업 서비스"], 및 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS 연간 계약"]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"] Cloud Backup BYOL 라이센스는 NetApp에서 제공
-* 권한이 있는 BlueXP Connector를 제공하는 IAM 역할에는 최신 버전의 S3 권한이 포함됩니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html["BlueXP 정책"^].
+* AWS에 커넥터가 설치되어 있습니다.
++
+** 커넥터는 인터넷에 접속하거나 접속하지 않고 사이트에 설치할 수 있습니다.
+** 권한이 있는 BlueXP Connector를 제공하는 IAM 역할에는 최신 버전의 S3 권한이 포함됩니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html["BlueXP 정책"^].
+
+
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 새로운 시스템이나 기존 시스템에서 Cloud Backup을 활성화합니다
@@ -83,13 +88,29 @@ Cloud Volumes ONTAP 데이터와 사내 ONTAP 데이터를 모두 백업할 수 
 
 Cloud Volumes ONTAP 및 클라우드 백업을 번들로 제공하기 위한 연간 계약의 경우 Cloud Volumes ONTAP 작업 환경을 생성할 때 연간 계약을 설정해야 합니다. 이 옵션을 사용하면 온프레미스 데이터를 백업할 수 없습니다.
 
-Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"].
+Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"]. 어두운 사이트에 Connector 및 Cloud Volumes ONTAP 시스템을 구축할 때는 BYOL 라이센스를 사용해야 합니다.
 
 그리고 백업이 위치할 스토리지 공간을 위한 AWS 계정이 있어야 합니다.
 
 --
 지원되는 AWS 영역:: Cloud Backup은 모든 AWS 지역에서 지원됩니다 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP가 지원되는 경우"^]AWS GovCloud 지역 포함.
 데이터 암호화에 대해 고객이 관리하는 키를 사용하는 데 필요한 정보입니다:: 기본 Amazon S3 암호화 키를 사용하는 대신 활성화 마법사에서 데이터 암호화에 대해 고객이 관리하는 키를 직접 선택할 수 있습니다. 이 경우 암호화 관리 키가 이미 설정되어 있어야 합니다. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-kms.html["자신의 키를 사용하는 방법을 확인하십시오"^].
+커넥터 요구 사항:: 커넥터는 인터넷에 연결되어 있거나 연결되어 있지 않은 AWS 지역에 설치할 수 있습니다. 현재 AWS 상업용 사이트만 인터넷에 액세스할 수 없는 사이트에 지원됩니다.
++
+--
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["AWS에 커넥터 구축"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html["인터넷 액세스 없이 AWS 지역의 Linux 호스트에 커넥터 설치"^]
+
+
+--
+
+
+
+NOTE: BlueXP 커넥터에는 클라우드 백업 기능이 내장되어 있습니다. 인터넷에 연결되지 않은 사이트에 설치한 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 link:whats-new.html["클라우드 백업 새로운 기능"] 각 Cloud Backup 릴리즈의 새로운 기능을 보려면 ~ 단계를 따르십시오 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-on-prem-without-internet-access["Connector 소프트웨어를 업그레이드합니다"^] 새 기능을 사용하려는 경우
+
+Connector가 인터넷에 연결되지 않은 사이트에 설치된 경우 Cloud Backup 구성 데이터의 로컬 백업을 정기적으로 생성하는 것이 좋습니다. link:reference-backup-cbs-db-in-dark-site.html["어두운 사이트에서 Cloud Backup 데이터를 백업하는 방법을 알아보십시오"^].
+
 필수 AWS 커넥터 권한:: 권한을 BlueXP에 제공하는 IAM 역할에는 최신 S3 권한이 포함되어야 합니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html["BlueXP 정책"^].
 +
 --
@@ -243,7 +264,7 @@ image:screenshot_backup_provider_settings_aws.png["Cloud Volumes ONTAP 시스템
 .. 기본 정책의 이름을 입력합니다. 이름을 변경할 필요가 없습니다.
 .. 백업 스케줄을 정의하고 보존할 백업 수를 선택합니다. link:concept-ontap-backup-to-cloud.html#customizable-backup-schedule-and-retention-settings["선택할 수 있는 기존 정책 목록을 봅니다"^].
 .. 선택적으로 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호할 수 있습니다. _DataLock_은 백업 파일이 수정되거나 삭제되지 않도록 보호하고, 백업 파일을 검색하여 백업 파일에서 랜섬웨어 공격의 증거를 찾습니다. link:concept-cloud-backup-policies.html#datalock-and-ransomware-protection["사용 가능한 DataLock 설정에 대해 자세히 알아보십시오"^].
-.. 선택적으로 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화할 수 있습니다. link:reference-aws-backup-tiers.html["아카이브 계층 사용에 대해 자세히 알아보십시오"].
+.. 선택적으로 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화할 수 있습니다. 이 기능은 어두운 사이트에 배포할 때는 사용할 수 없습니다. link:reference-aws-backup-tiers.html["아카이브 계층 사용에 대해 자세히 알아보십시오"].
 +
 image:screenshot_backup_policy_aws.png["스케줄 및 백업 보존을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
 
