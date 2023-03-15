@@ -2330,7 +2330,6 @@
   <block id="eef42d7f28b590d9b42d8fbddb7a3937" category="paragraph">선택적으로 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호할 수 있습니다. <block ref="87ffafedb97d3b50ea58ef296117bbac" category="inline-link-macro-rx"></block>.</block>
   <block id="1b023ff169abba0d2ae3b5eda4b0662e" category="list-text">또한 가능합니다 <block ref="691b942cd3d613931fde06fad7da9248" category="inline-link-macro-rx"></block> 사내 ONTAP 시스템으로.</block>
   <block id="10ad842a6a3246a44700dd2f0005c89c" category="section-title">Job Monitor를 사용하여 백업 및 복구 작업 상태를 봅니다</block>
-  <block id="8fa9fc7dcc8c23904d4a616698a7a223" category="paragraph">Job Monitoring* 탭에서 모든 백업 및 복원 작업과 현재 상태의 목록을 볼 수 있습니다. 여기에는 Cloud Volumes ONTAP, 온프레미스 ONTAP, 애플리케이션, 가상 머신 및 Kubernetes 시스템의 운영이 포함됩니다. 각 작업 또는 작업에는 고유한 ID와 상태가 있습니다. 상태는 다음과 같습니다.</block>
   <block id="505a83f220c02df2f85c3810cd9ceb38" category="list-text">성공</block>
   <block id="3919b07e397df4ea5f1ccc5ad0f35b8a" category="list-text">볼륨(Cloud Volumes ONTAP 및 온프레미스 ONTAP 볼륨)</block>
   <block id="1ddf333c6654f7f89c739dddfb4cc429" category="list-text">응용 프로그램</block>
@@ -3570,11 +3569,9 @@
   <block id="5463242c7cc34f92b5dbbf1ab6d87188" category="paragraph">이전에는 폴더를 복원했을 때 해당 폴더의 파일만 복원되었고 하위 폴더 또는 하위 폴더의 파일은 복원되지 않았습니다. 이제 ONTAP 9.13.0 이상을 사용하는 경우 선택한 폴더에 있는 모든 하위 폴더와 파일이 복원됩니다. 따라서 최상위 폴더에 여러 개의 중첩된 폴더가 있는 경우 많은 시간과 비용을 절약할 수 있습니다.</block>
   <block id="bbe776d643f3b0568f3c2fa216a50124" category="section-title">어두운 사이트에 있는 Cloud Volumes ONTAP 시스템의 데이터를 백업하는 기능</block>
   <block id="aef1b3252b7a5b85dab7066cccc19b52" category="paragraph">이제 AWS 및 Azure 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3 또는 Azure Blob으로 백업할 수 있습니다. 이 작업을 수행하려면 상업 지역의 Linux 호스트에 커넥터를 설치하고 Cloud Volumes ONTAP 시스템도 배포해야 합니다. 을 참조하십시오 <block ref="31e49e13e812c331f506a2a8e6b7ad22" category="inline-link-macro-rx"></block> 및 <block ref="ab5c78f08c8780b598ee1d4de19230ab" category="inline-link-macro-rx"></block>.</block>
-  <block id="463ed6b78b2c95e39ecc10ee3195e921" category="section-title">작업 모니터는 특정 백업 또는 복원 작업을 찾을 수 있는 고급 필터링을 제공합니다</block>
   <block id="1cdf820a77c583c660d65df7b1ca03b8" category="inline-link">고급 필터 사용 방법을 확인하십시오</block>
   <block id="aa3492539222da5bc85fd5614f489f71" category="paragraph">작업 모니터링 페이지에 고급 필터링이 추가되어 시간, 워크로드(볼륨, 애플리케이션, 가상 머신 또는 Kubernetes) 별로 백업 및 복원 작업을 검색할 수 있습니다. 작업 유형, 상태, 작업 환경 및 스토리지 VM "application_3"과 같은 자원 검색을 위해 자유 텍스트를 입력할 수도 있습니다. <block ref="f726054cf0d935cd51c2a5edb3b3fd0c" category="inline-link-rx"></block>.</block>
   <block id="1625899745083f00e310fe6a84e9582c" category="list-text">다음 S3 권한은 Connector에 권한을 제공하는 IAM 역할의 일부여야 합니다.</block>
-  <block id="ec119ac8f6ca5b011d4a2ba9323dbca5" category="admonition">현재 진행 중인 백업 작업과 같은 시스템 시작 작업은 * 작업 모니터링 * 탭에 반영되지 않습니다. -- 사용자가 시작한 작업만 표시됩니다.</block>
   <block id="d90665b682298c55adb9c3f6a9ceb3f0" category="paragraph">이 스크린샷은 기본 열/필드 머리글을 보여줍니다. 를 클릭할 수 있습니다 <block ref="67e31c53d0f38fc4da85c525a5be7511" category="inline-image-macro-rx" type="image"></block> "작업 환경", "SVM", "사용자 이름" 및 "워크로드"에 대한 4개의 추가 열을 표시합니다.</block>
   <block id="9d5572457fea4567bbd4373a983f3216" category="section-title">작업 목록 검색 및 필터링</block>
   <block id="c892f9f2802395ba3a650b944f02ddbc" category="paragraph">기본적으로 작업 모니터링 페이지에는 최근 24시간의 작업이 표시됩니다. 각 열 머리글을 클릭하여 상태, 시작 시간, 자원 이름 등을 기준으로 정렬하면 결과를 정렬할 수 있습니다.</block>
@@ -3591,4 +3588,9 @@
   <block id="e429a3dcdf9ca5d36834b72490aae784" category="admonition">Azure 아카이브 스토리지에서 StorageGRID 시스템으로 데이터를 복원할 때는 높은 우선 순위가 지원되지 않습니다.</block>
   <block id="5a583661a8908e9d0eb4e2adb7e14660" category="paragraph">ONTAP 9.13.0 이상을 사용하는 경우 폴더 내의 모든 파일 및 하위 폴더와 함께 폴더를 복원할 수 있습니다. 9.13.0 이전 버전의 ONTAP를 사용하는 경우 해당 폴더의 파일만 복원되고 하위 폴더의 파일은 복원되지 않습니다.</block>
   <block id="9dc68f929a10fb4c3bc9901cb0ad551c" category="list-text">Azure 아카이브 스토리지에서 StorageGRID 시스템으로 데이터를 복원할 때는 높은 복원 우선 순위가 지원되지 않습니다.</block>
+  <block id="1442489a4cf0ea56df2e53ec47c70ec8" category="section-title">작업 모니터의 여러 가지 개선 사항</block>
+  <block id="bf2bb33000b51334f72c2e394ff56247" category="list-text">클라우드 백업 UI 및 API에서 시작된 사용자 시작 백업 및 복원 작업과 지속적인 백업 작업과 같은 시스템 시작 작업은 이제 ONTAP 9.13.0 이상을 실행하는 Cloud Volumes ONTAP 시스템의 * 작업 모니터링 * 탭에서 모두 사용할 수 있습니다. 이전 버전의 Cloud Volumes ONTAP 시스템 및 온-프레미스 ONTAP 시스템은 현재 사용자가 시작한 작업만 표시합니다.</block>
+  <block id="da2d24e019fdbb554fb9260491bdb31f" category="paragraph">Job Monitoring* 탭에서 모든 백업 및 복원 작업과 현재 상태의 목록을 볼 수 있습니다. 여기에는 Cloud Volumes ONTAP, 온프레미스 ONTAP, 애플리케이션, 가상 머신 및 Kubernetes 시스템의 운영이 포함됩니다. 각 작업 또는 작업에는 고유한 ID와 상태가 있습니다. 상태는 다음과 같습니다.</block>
+  <block id="51ed954daa0d2ac8e61b514ada10d020" category="paragraph">클라우드 백업 UI 및 API에서 시작된 사용자 시작 백업 및 복원 작업과 지속적인 백업 작업과 같은 시스템 시작 작업은 모두 ONTAP 9.13.0 이상을 실행하는 Cloud Volumes ONTAP 시스템의 * 작업 모니터링 * 탭에서 사용할 수 있습니다.</block>
+  <block id="ef3fa14a7fd05f8163ad506cf72a0464" category="admonition">Cloud Volumes ONTAP 시스템에서 이전 버전의 ONTAP를 실행하거나 온프레미스 ONTAP 시스템에서 실행할 경우 현재 사용자가 시작한 작업만 표시됩니다.</block>
 </blocks>
