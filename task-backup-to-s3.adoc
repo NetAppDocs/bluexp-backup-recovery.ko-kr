@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-backup-to-s3.html 
 keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, aws, aws s3, amazon s3, s3 bucket, back up volumes, cloud backup 
-summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP에서 Amazon S3로 데이터 백업을 시작하십시오. 
+summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 Amazon S3로 볼륨 데이터 백업을 시작하십시오. 
 ---
 = Cloud Volumes ONTAP 데이터를 Amazon S3에 백업
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP에서 Amazon S3�
 
 
 [role="lead"]
-몇 가지 단계를 완료하여 Cloud Volumes ONTAP에서 Amazon S3로 데이터 백업을 시작하십시오.
+몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 Amazon S3로 볼륨 데이터 백업을 시작하십시오.
 
 
 
@@ -27,9 +27,9 @@ summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP에서 Amazon S3�
 * AWS에서 Cloud Volumes ONTAP 9.7P5 이상을 실행 중입니다(ONTAP 9.8P13 이상 권장).
 * 백업이 위치할 스토리지 공간에 대한 유효한 클라우드 공급자 가입이 있습니다.
 * 에 가입했습니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["BlueXP Marketplace 백업 서비스"], 및 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS 연간 계약"]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"] Cloud Backup BYOL 라이센스는 NetApp에서 제공
-* AWS에 커넥터가 설치되어 있습니다.
+* AWS에 Connector가 설치되어 있습니다.
 +
-** 커넥터는 인터넷에 접속하거나 접속하지 않고 사이트에 설치할 수 있습니다.
+** 커넥터는 전체 인터넷 액세스("표준 모드")가 있는 사이트나 제한된 인터넷 연결("제한 모드")으로 설치할 수 있습니다.
 ** 권한이 있는 BlueXP Connector를 제공하는 IAM 역할에는 최신 버전의 S3 권한이 포함됩니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html["BlueXP 정책"^].
 
 
@@ -88,28 +88,22 @@ Cloud Volumes ONTAP 데이터와 사내 ONTAP 데이터를 모두 백업할 수 
 
 Cloud Volumes ONTAP 및 클라우드 백업을 번들로 제공하기 위한 연간 계약의 경우 Cloud Volumes ONTAP 작업 환경을 생성할 때 연간 계약을 설정해야 합니다. 이 옵션을 사용하면 온프레미스 데이터를 백업할 수 없습니다.
 
-Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"]. 어두운 사이트에 Connector 및 Cloud Volumes ONTAP 시스템을 구축할 때는 BYOL 라이센스를 사용해야 합니다.
+Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"]. Connector 및 Cloud Volumes ONTAP 시스템이 어두운 사이트에 구축된 경우 BYOL 라이센스를 사용해야 합니다.
 
 그리고 백업이 위치할 스토리지 공간을 위한 AWS 계정이 있어야 합니다.
 
 --
-지원되는 AWS 영역:: Cloud Backup은 모든 AWS 지역에서 지원됩니다 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP가 지원되는 경우"^]AWS GovCloud 지역 포함.
 데이터 암호화에 대해 고객이 관리하는 키를 사용하는 데 필요한 정보입니다:: 기본 Amazon S3 암호화 키를 사용하는 대신 활성화 마법사에서 데이터 암호화에 대해 고객이 관리하는 키를 직접 선택할 수 있습니다. 이 경우 암호화 관리 키가 이미 설정되어 있어야 합니다. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-kms.html["자신의 키를 사용하는 방법을 확인하십시오"^].
-커넥터 요구 사항:: 커넥터는 인터넷에 연결되어 있거나 연결되어 있지 않은 AWS 지역에 설치할 수 있습니다. 현재 AWS 상업용 사이트만 인터넷에 액세스할 수 없는 사이트에 지원됩니다.
+커넥터 요구 사항:: 커넥터는 전체 또는 제한된 인터넷 액세스("표준" 또는 "제한" 모드)가 있는 AWS 지역에 설치할 수 있습니다.
 +
 --
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["AWS에 커넥터 구축"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html["인터넷 액세스 없이 AWS 지역의 Linux 호스트에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html["AWS 지역의 Linux 호스트에 수동으로 커넥터 설치"^]
 
 
 --
 
-
-
-NOTE: BlueXP 커넥터에는 클라우드 백업 기능이 내장되어 있습니다. 인터넷에 연결되지 않은 사이트에 설치한 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 link:whats-new.html["클라우드 백업 새로운 기능"] 각 Cloud Backup 릴리즈의 새로운 기능을 보려면 ~ 단계를 따르십시오 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-on-prem-without-internet-access["Connector 소프트웨어를 업그레이드합니다"^] 새 기능을 사용하려는 경우
-
-Connector가 인터넷에 연결되지 않은 사이트에 설치된 경우 Cloud Backup 구성 데이터의 로컬 백업을 정기적으로 생성하는 것이 좋습니다. link:reference-backup-cbs-db-in-dark-site.html["어두운 사이트에서 Cloud Backup 데이터를 백업하는 방법을 알아보십시오"^].
 
 필수 AWS 커넥터 권한:: 권한을 BlueXP에 제공하는 IAM 역할에는 최신 S3 권한이 포함되어야 합니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html["BlueXP 정책"^].
 +
@@ -186,6 +180,7 @@ Connector가 인터넷에 연결되지 않은 사이트에 설치된 경우 Clou
 BlueXP 버전 3.9.23 이상을 사용하여 Cloud Volumes ONTAP 작업 환경을 생성한 경우 이러한 권한은 이미 IAM 역할의 일부여야 합니다. 그렇지 않으면 누락된 권한을 추가해야 합니다.
 
 --
+지원되는 AWS 영역:: Cloud Backup은 모든 AWS 지역에서 지원됩니다 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP가 지원되는 경우"^]AWS GovCloud 지역 포함.
 다른 AWS 계정에서 백업을 생성하기 위해 필요한 설정:: 기본적으로 백업은 Cloud Volumes ONTAP 시스템에 사용되는 계정과 동일한 계정을 사용하여 생성됩니다. 백업에 다른 AWS 계정을 사용하려면 다음을 수행해야 합니다.
 +
 --

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-backup-onprem-to-aws.html 
 keywords: backing up, back up, backup, backup on-prem ontap, on-premises, back up volumes, cloud backup, aws, aws s3, amazon s3, govcloud, government 
-summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Amazon S3 스토리지로의 데이터 백업을 시작하십시오. 
+summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Amazon S3 스토리지로의 볼륨 데이터 백업을 시작하십시오. 
 ---
 = 사내 ONTAP 데이터를 Amazon S3에 백업
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Amazon S
 
 
 [role="lead"]
-몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Amazon S3 스토리지로의 데이터 백업을 시작하십시오.
+몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Amazon S3 스토리지로의 볼륨 데이터 백업을 시작하십시오.
 
 "사내 ONTAP 시스템"에는 FAS, AFF 및 ONTAP Select 시스템이 포함됩니다.
 

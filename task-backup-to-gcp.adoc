@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-backup-to-gcp.html 
 keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, gcp, google cloud, back up volumes, cloud backup 
-summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP에서 Google Cloud 스토리지로 데이터 백업을 시작하십시오. 
+summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 Google Cloud 스토리지로 볼륨 데이터 백업을 시작하십시오. 
 ---
 = Cloud Volumes ONTAP 데이터를 Google 클라우드 스토리지에 백업
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP에서 Google Clou
 
 
 [role="lead"]
-Cloud Volumes ONTAP에서 Google 클라우드 스토리지로 데이터 백업을 시작하는 몇 가지 단계를 완료하십시오.
+몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 Google 클라우드 스토리지로 볼륨 데이터 백업을 시작하십시오.
 
 
 
@@ -28,6 +28,7 @@ Cloud Volumes ONTAP에서 Google 클라우드 스토리지로 데이터 백업�
 * 백업이 위치할 스토리지 공간에 대한 유효한 GCP 구독이 있습니다.
 * Google Cloud Project에는 사전 정의된 스토리지 관리자 역할이 있는 서비스 계정이 있습니다.
 * 에 가입했습니다 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["BlueXP Marketplace 백업 서비스"^]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"^] Cloud Backup BYOL 라이센스는 NetApp에서 제공
+* Google Cloud에 Connector가 설치되어 있습니다.
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 새로운 시스템이나 기존 시스템에서 Cloud Backup을 활성화합니다
@@ -81,6 +82,14 @@ Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 
 --
 지원되는 GCP 지역:: Cloud Backup은 모든 GCP 지역에서 지원됩니다 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP가 지원되는 경우"^].
 GCP 서비스 계정:: Google Cloud Project에는 사전 정의된 스토리지 관리자 역할이 있는 서비스 계정이 있어야 합니다. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-creating-gcp-service-account.html["서비스 계정을 만드는 방법에 대해 알아봅니다"^].
+커넥터 요구 사항:: 커넥터는 인터넷에 액세스할 수 있는 Google 지역에 설치해야 합니다.
++
+--
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html["Google Cloud에 Connector를 구축합니다"^]
+
+
+--
 Connector에 권한을 확인하거나 추가합니다:: 클라우드 백업 "검색 및 복원" 기능을 사용하려면 Connector 역할에 특정 권한이 있어야 Google Cloud BigQuery 서비스에 액세스할 수 있습니다. 아래 사용 권한을 확인하고 정책을 수정해야 하는 경우 단계를 따릅니다.
 +
 --

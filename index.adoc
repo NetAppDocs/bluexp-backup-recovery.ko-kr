@@ -2,8 +2,8 @@
 layout: astra 
 sidebar: sidebar 
 permalink: index.html 
-lead: Cloud Backup provides backup and restore capabilities for protection and long-term archive of your data. 
-summary: Cloud Backup은 데이터의 보호 및 장기 아카이브를 위한 백업 및 복원 기능을 제공합니다. 
+lead: 'BlueXP backup and recovery (Cloud Backup) provides efficient, secure, and cost-effective data protection for NetApp ONTAP data, databases, and virtual machines, both on premises and in the cloud.' 
+summary: 'BlueXP 백업 및 복구(클라우드 백업)는 사내 및 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 시스템에 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.' 
 ---
 = Cloud Backup 설명서
 :hardbreaks:

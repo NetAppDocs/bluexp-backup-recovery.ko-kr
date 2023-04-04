@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-backup-to-azure.html 
 keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, azure, azure blob, back up volumes, cloud backup 
-summary: Cloud Volumes ONTAP에서 Azure Blob 저장소로 데이터 백업을 시작하려면 몇 가지 단계를 완료하십시오. 
+summary: Cloud Volumes ONTAP 시스템에서 Azure Blob 저장소로 볼륨 데이터 백업을 시작하려면 몇 가지 단계를 완료하십시오. 
 ---
 = Azure Blob 저장소에 Cloud Volumes ONTAP 데이터 백업
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Cloud Volumes ONTAP에서 Azure Blob 저장소로 데이터 백업을 �
 
 
 [role="lead"]
-Cloud Volumes ONTAP에서 Azure Blob 저장소로 데이터 백업을 시작하려면 몇 가지 단계를 완료하십시오.
+Cloud Volumes ONTAP 시스템에서 Azure Blob 저장소로 볼륨 데이터 백업을 시작하려면 몇 가지 단계를 완료하십시오.
 
 
 
@@ -27,10 +27,9 @@ Cloud Volumes ONTAP에서 Azure Blob 저장소로 데이터 백업을 시작하�
 * Azure에서 Cloud Volumes ONTAP 9.7P5 이상을 실행 중입니다(ONTAP 9.8P13 이상 권장).
 * 백업이 위치할 스토리지 공간에 대한 유효한 클라우드 공급자 가입이 있습니다.
 * 에 가입했습니다 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["BlueXP Marketplace 백업 서비스"^]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"^] Cloud Backup BYOL 라이센스는 NetApp에서 제공
-* Azure에 커넥터가 설치되어 있습니다. 커넥터는 인터넷에 접속하거나 접속하지 않고 사이트에 설치할 수 있습니다.
+* Azure에 커넥터가 설치되어 있습니다. 커넥터는 전체 인터넷 액세스("표준 모드")가 있는 사이트나 제한된 인터넷 연결("제한 모드")으로 설치할 수 있습니다. .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 새로운 시스템이나 기존 시스템에서 Cloud Backup을 활성화합니다
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 새로운 시스템이나 기존 시스템에서 Cloud Backup을 활성화합니다
 [role="quick-margin-list"]
 * 새 시스템: 작업 환경 마법사에서 기본적으로 클라우드 백업이 설정됩니다. 옵션을 활성 상태로 유지해야 합니다.
 * 기존 시스템: 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 * 를 클릭한 다음 설치 마법사를 따릅니다.
@@ -77,26 +76,21 @@ image:diagram_cloud_backup_cvo_azure.png["Cloud Backup이 소스 시스템 및 �
 라이센스 요구 사항:: Cloud Backup PAYGO 라이센스의 경우 Cloud Backup을 활성화하기 전에 Azure Marketplace를 통해 가입해야 합니다. Cloud Backup에 대한 청구는 이 구독을 통해 이루어집니다. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["작업 환경 마법사의 세부 정보 및 자격 증명 페이지에서 구독할 수 있습니다"^].
 +
 --
-Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"]. 어두운 사이트에 Connector 및 Cloud Volumes ONTAP 시스템을 구축할 때는 BYOL 라이센스를 사용해야 합니다.
+Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"]. Connector 및 Cloud Volumes ONTAP 시스템이 어두운 사이트에 구축된 경우 BYOL 라이센스를 사용해야 합니다.
 
 그리고 백업이 위치할 스토리지 공간에 대한 Microsoft Azure 구독이 있어야 합니다.
 
 --
-커넥터 요구 사항:: 커넥터는 인터넷에 접속하거나 접속하지 않고 Azure 지역에 설치할 수 있습니다. 현재 Azure 상용 사이트만 인터넷에 액세스할 수 없는 사이트에 지원됩니다.
+커넥터 요구 사항:: 커넥터는 전체 또는 제한된 인터넷 액세스("표준" 또는 "제한" 모드)가 있는 Azure 지역에 설치할 수 있습니다.
 +
 --
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html["Azure에 커넥터를 배포합니다"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html["인터넷 액세스 없이 Azure 지역의 Linux 호스트에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html["Azure 지역의 Linux 호스트에 수동으로 커넥터 설치"^]
 
 
 --
 
-
-
-NOTE: BlueXP 커넥터에는 클라우드 백업 기능이 내장되어 있습니다. 인터넷에 연결되지 않은 사이트에 설치한 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 link:whats-new.html["클라우드 백업 새로운 기능"] 각 Cloud Backup 릴리즈의 새로운 기능을 보려면 ~ 단계를 따르십시오 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-on-prem-without-internet-access["Connector 소프트웨어를 업그레이드합니다"^] 새 기능을 사용하려는 경우
-
-Connector가 인터넷에 연결되지 않은 사이트에 설치된 경우 Cloud Backup 구성 데이터의 로컬 백업을 정기적으로 생성하는 것이 좋습니다. link:reference-backup-cbs-db-in-dark-site.html["어두운 사이트에서 Cloud Backup 데이터를 백업하는 방법을 알아보십시오"^].
 
 Connector에 권한을 확인하거나 추가합니다:: 클라우드 백업 검색 및 복원 기능을 사용하려면 Connector의 역할에 특정 권한이 있어야 Azure Synapse Workspace 및 Data Lake Storage 계정에 액세스할 수 있습니다. 아래 사용 권한을 확인하고 정책을 수정해야 하는 경우 단계를 따릅니다.
 +
@@ -239,7 +233,11 @@ image:screenshot_backup_select_volumes.png["백업할 볼륨을 선택하는 스
 
 
 .결과
-Blob 저장소 컨테이너는 입력한 리소스 그룹에 자동으로 생성되며 백업 파일은 여기에 저장됩니다. 백업 상태를 모니터링할 수 있도록 볼륨 백업 대시보드가 표시됩니다. 을 사용하여 백업 및 복원 작업의 상태를 모니터링할 수도 있습니다 link:task-monitor-backup-jobs.html["작업 모니터링 패널"^].
+Blob 저장소 컨테이너는 입력한 리소스 그룹에 자동으로 생성되며 백업 파일은 여기에 저장됩니다.
+
+백업 상태를 모니터링할 수 있도록 볼륨 백업 대시보드가 표시됩니다. 을 사용하여 백업 및 복원 작업의 상태를 모니터링할 수도 있습니다 link:task-monitor-backup-jobs.html["작업 모니터링 패널"^].
+
+기본적으로 Cloud Backup은 비용 최적화를 위해 LRS(Local Redundancy)가 포함된 Blob 컨테이너를 프로비저닝합니다. 데이터가 다른 영역 간에 복제되도록 하려면 이 설정을 영역 중복(ZRS)으로 변경할 수 있습니다. 에 대한 Microsoft 지침을 참조하십시오 https://learn.microsoft.com/en-us/azure/storage/common/redundancy-migration?tabs=portal["스토리지 계정의 복제 방법을 변경합니다"^].
 
 
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-backup-onprem-to-azure.html 
 keywords: backing up, back up, backup, backup on-prem ontap, on-premises, back up volumes, cloud backup, azure, azure blob, government 
-summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Azure Blob 저장소로 데이터 백업을 시작하십시오. 
+summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Azure Blob 저장소로 볼륨 데이터 백업을 시작하십시오. 
 ---
 = 온프레미스 ONTAP 데이터를 Azure Blob 저장소에 백업
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Azure Bl
 
 
 [role="lead"]
-몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Azure Blob 저장소로 데이터 백업을 시작하십시오.
+몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Azure Blob 저장소로 볼륨 데이터 백업을 시작하십시오.
 
 "사내 ONTAP 시스템"에는 FAS, AFF 및 ONTAP Select 시스템이 포함됩니다.
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-backup-onprem-private-cloud.html 
 keywords: backing up, back up, backup, backup on-prem ontap, on-prem, on-premises, back up volumes, cloud backup, StorageGRID 
-summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템의 데이터를 NetApp StorageGRID 시스템의 오브젝트 스토리지로 백업을 시작하십시오. 
+summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템의 볼륨 데이터를 NetApp StorageGRID 시스템의 오브젝트 스토리지로 백업을 시작하십시오. 
 ---
 = 사내 ONTAP 데이터를 StorageGRID에 백업
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템의 데이터�
 
 
 [role="lead"]
-몇 가지 단계를 완료하여 사내 ONTAP 시스템의 데이터를 NetApp StorageGRID 시스템의 오브젝트 스토리지로 백업을 시작하십시오.
+몇 가지 단계를 완료하여 사내 ONTAP 시스템의 볼륨 데이터를 NetApp StorageGRID 시스템의 오브젝트 스토리지로 백업을 시작하십시오.
 
 "사내 ONTAP 시스템"에는 FAS, AFF 및 ONTAP Select 시스템이 포함됩니다.
 
