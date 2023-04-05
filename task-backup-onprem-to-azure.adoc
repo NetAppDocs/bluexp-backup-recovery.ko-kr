@@ -149,10 +149,9 @@ ONTAP는 오브젝트 스토리지 간에 데이터를 읽고 씁니다. 오브�
 Azure VNET 또는 구내에 이미 Connector가 배포되어 있는 경우 모두 설정됩니다. 그렇지 않은 경우 이러한 위치 중 하나에 커넥터를 생성하여 ONTAP 데이터를 Azure Blob 저장소에 백업해야 합니다. 다른 클라우드 공급자에 배포된 Connector는 사용할 수 없습니다.
 
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["커넥터 시작하기"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html["Azure에 커넥터 설치"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["구내에 커넥터 설치"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-launching-azure-mktp.html["Azure Government 지역에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html["Azure에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["구내에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-restricted-mode.html["Azure Government 지역에 커넥터 설치"^]
 +
 Connector가 온프레미스에 설치되어 있지 않고 클라우드에 배포된 경우 Azure Government 지역에서는 Cloud Backup이 지원됩니다. 또한 Azure Marketplace에서 Connector를 배포해야 합니다. BlueXP SaaS 웹 사이트에서 정부 지역에 Connector를 배포할 수 없습니다.
 

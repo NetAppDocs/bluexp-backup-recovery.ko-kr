@@ -91,8 +91,6 @@
   <block id="d32e4305e9f04e1cbc37d3e892619ee7" category="section-title">커넥터 작성 또는 전환</block>
   <block id="e6e80588e9fe7cf89218fea44300f7ca" category="inline-link">커넥터에 대해 자세히 알아보십시오</block>
   <block id="da1264a616f156bd6836a85f7dfdea5a" category="list-text"><block ref="da1264a616f156bd6836a85f7dfdea5a" category="inline-link-rx"></block></block>
-  <block id="c870531773e82c374eb4125c8029e25e" category="inline-link">커넥터 간 전환</block>
-  <block id="74d39f4b6fe0e32c5cfa2ed86891bf44" category="list-text"><block ref="74d39f4b6fe0e32c5cfa2ed86891bf44" category="inline-link-rx"></block></block>
   <block id="a8e8e48001e032c3b5939047d15db5a2" category="section-title">커넥터를 위한 네트워킹 준비</block>
   <block id="7b16b8b258668ab05a1e5d83e084b477" category="paragraph">커넥터에 필요한 네트워크 연결이 있는지 확인합니다.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">단계</block>
@@ -693,7 +691,6 @@
   <block id="d106fcaf30ac3fffe7a077d64962b14d" category="paragraph">이러한 액세스 키는 다음 권한을 가진 사용자와 연결되어야 합니다.</block>
   <block id="a1b7de43a5472d2ba57c5f863040eec2" category="list-text">오브젝트 버전 관리</block>
   <block id="f9e3fe9bcf87b917aee79601ec31e206" category="inline-link">인터넷에 액세스할 수 있는 Linux 호스트에 커넥터 설치</block>
-  <block id="c406c8943ff98e7dc5d56f37428c9410" category="list-text"><block ref="c406c8943ff98e7dc5d56f37428c9410" category="inline-link-rx"></block></block>
   <block id="971cb541767606cd3faa97135df94e68" category="paragraph">라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 NetApp의 일련 번호가 필요합니다. <block ref="47744e5312ce42ad8130a5365d7fb0d0" category="inline-link-macro-rx"></block>.</block>
   <block id="60a2dc1fd82db84a092db92c95942712" category="admonition">StorageGRID에 파일을 백업할 때는 PAYGO 라이센스가 지원되지 않습니다.</block>
   <block id="528fb0026f2e5c72059a493302f53861" category="section-title">StorageGRID로 클라우드 백업 지원</block>
@@ -1206,8 +1203,6 @@
   <block id="03a5b9815bb473e6f4be8d24abee633a" category="list-text">Browse &amp; Restore는 한 번에 최대 100개의 개별 파일을 복원할 수 있습니다.</block>
   <block id="83e93965854a9ee03d55a2d15f2e8dc7" category="list-text">Search &amp; Restore는 한 번에 하나의 파일을 복원할 수 있습니다.</block>
   <block id="e41af01898aa01f20e528d19fdda2ec8" category="paragraph">사내 ONTAP 클러스터를 퍼블릭 인터넷을 통해 AWS S3에 직접 연결할지, VPN 또는 AWS 직접 연결을 사용할지, 프라이빗 VPC 엔드 포인트 인터페이스를 통해 트래픽을 AWS S3에 연결할지 선택합니다.</block>
-  <block id="d41b031ef25fff764808749edcc2cd28" category="inline-link">커넥터 시작하기</block>
-  <block id="b37ed402641ff6f2d1b0b55061547f2d" category="list-text"><block ref="b37ed402641ff6f2d1b0b55061547f2d" category="inline-link-rx"></block></block>
   <block id="76e709935c290dea4c7b1c0de4918211" category="inline-link-macro">커넥터에 S3 버킷을 관리할 수 있는 권한이 있는지 확인합니다</block>
   <block id="834f26d80b9784d547a441b2c02d3ad5" category="list-text"><block ref="7eb7d4d5a2ffca3aec2449e14ed03205" category="inline-link-macro-rx"></block>.</block>
   <block id="187b50ee8f2351a69b8fa6b8b42687d5" category="paragraph">IPspace 내의 모든 인터클러스터 LIF는 오브젝트 저장소에 대한 액세스 권한이 있어야 합니다. 현재 IPspace에 대해 이 기능을 구성할 수 없는 경우 모든 인터클러스터 LIF가 오브젝트 저장소에 액세스할 수 있는 전용 IPspace를 만들어야 합니다.</block>
@@ -1392,7 +1387,6 @@
   <block id="360446e3fb6e2087ba1eda4d6e9eafde" category="list-text">노드의 인터클러스터 LIF는 오브젝트 저장소에 액세스할 수 있습니다(Connector가 "어두운" 사이트에 설치된 경우 필요하지 않음).</block>
   <block id="6dca065caf89927398e08355b9d7718e" category="paragraph">데이터를 StorageGRID에 백업할 때 Connector를 사내에서 사용할 수 있어야 합니다. 새 커넥터를 설치하거나 현재 선택한 커넥터가 내부에 있는지 확인해야 합니다. 커넥터는 인터넷에 접속하거나 접속하지 않고 사이트에 설치할 수 있습니다.</block>
   <block id="f6428d68ab8312cad4e05d9222dbabc5" category="inline-link">인터넷에 액세스하지 않고 Linux 호스트에 커넥터 설치</block>
-  <block id="d2c6281fb2bfdd80b1c106c90e21e78b" category="list-text"><block ref="d2c6281fb2bfdd80b1c106c90e21e78b" category="inline-link-rx"></block></block>
   <block id="31f0caf11b57fb7cb77368268e368d75" category="inline-link-macro">클라우드 백업 새로운 기능</block>
   <block id="f4cec0313eb4678996dc68cfe81c6f4f" category="inline-link">Connector 소프트웨어를 업그레이드합니다</block>
   <block id="1ad501aca706aedda73a497f3e05cad4" category="list-text">포트 443을 통해 클라우드 백업으로 아웃바운드 인터넷 연결(커넥터가 "어두운" 사이트에 설치된 경우 필요하지 않음)</block>
@@ -1411,9 +1405,7 @@
   <block id="003facd7f31c0fd7dac15a48dbce6ccc" category="inline-image-macro">Cloud Backup이 클러스터의 볼륨 및 백업 파일이 있는 Google Cloud 스토리지와 프라이빗 연결을 통해 통신하는 방법을 보여주는 다이어그램입니다.</block>
   <block id="4b831201269c6366ac22eccdcf44893f" category="paragraph"><block ref="4b831201269c6366ac22eccdcf44893f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1c52fe530613f90d476d439dbca6d53e" category="inline-link">GCP에 커넥터 설치</block>
-  <block id="a792c7e75bcc7cf7d82f87b63cbca477" category="list-text"><block ref="a792c7e75bcc7cf7d82f87b63cbca477" category="inline-link-rx"></block></block>
   <block id="c434332bb7ea2d6636a3d41a262f1e7e" category="inline-link">구내에 커넥터 설치</block>
-  <block id="408e970a6e2ac7b03356ff4f61689ed3" category="list-text"><block ref="408e970a6e2ac7b03356ff4f61689ed3" category="inline-link-rx"></block></block>
   <block id="902e370d1248b02546dce02dd966d3df" category="list-text">기본 정책에 사용할 백업 정책 세부 정보를 입력하고 * 다음 * 을 클릭합니다. 기존 정책을 선택하거나 각 섹션에 선택 항목을 입력하여 새 정책을 생성할 수 있습니다.</block>
   <block id="9f0a90a5aa72e2d8a79c1f4913cfc4eb" category="list-text">기본 정책의 이름을 입력합니다. 이름을 변경할 필요가 없습니다.</block>
   <block id="3b4d703b29a9da1e70d08b65d53fe521" category="paragraph">Cloud Backup은 다음 소비 모델로 제공됩니다.</block>
@@ -1456,7 +1448,6 @@
   <block id="eaa29096ef448c4ab5d5ece35c540788" category="paragraph"><block ref="eaa29096ef448c4ab5d5ece35c540788" category="inline-image-macro-rx" type="image"></block></block>
   <block id="244b0622880fcbe1c4432e64d81bc038" category="paragraph">AWS VPC 또는 사내에 Connector가 이미 구축되어 있는 경우 모두 설정됩니다. 그렇지 않은 경우, 두 위치 중 하나에서 커넥터를 생성하여 ONTAP 데이터를 AWS S3 스토리지로 백업해야 합니다. 다른 클라우드 공급자에 배포된 Connector는 사용할 수 없습니다.</block>
   <block id="cd10ae990b1a676dcb9da574833197dc" category="inline-link">AWS에 커넥터 설치</block>
-  <block id="fe96b3be0fd11571a6c8ea6ac43f23fe" category="list-text"><block ref="fe96b3be0fd11571a6c8ea6ac43f23fe" category="inline-link-rx"></block></block>
   <block id="2e379f93711508ab69eec06837dd271c" category="inline-link">끝점 목록을 참조하십시오</block>
   <block id="3014a55cd7ec25590c6b5406eec324b1" category="list-text">포트 443을 통해 Cloud Backup Service 및 S3 오브젝트 스토리지에 HTTPS로 연결합니다 <block ref="2b717f51e9f0e108fc936d861142f7b4" category="inline-link-rx"></block>)</block>
   <block id="b81793c592727efa905fe3e8a74bbb9d" category="list-text">ONTAP 클러스터에서 VPC로의 직접 연결 또는 VPN 연결이 있고 커넥터와 S3 간의 통신을 AWS 내부 네트워크(* 전용* 연결)에 유지하고자 하는 경우 S3로 VPC 엔드포인트 인터페이스를 활성화해야 합니다. <block ref="038eee040120b4244a9c2b9d19ca5787" category="inline-xref-macro-rx"></block></block>
@@ -1516,7 +1507,6 @@
   <block id="325a65bfe5fe5e749b4e5c907feaa4cd" category="paragraph"><block ref="325a65bfe5fe5e749b4e5c907feaa4cd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="68c339b6eb7bfabf7edb3aa60625b8a0" category="paragraph">Azure VNET 또는 구내에 이미 Connector가 배포되어 있는 경우 모두 설정됩니다. 그렇지 않은 경우 이러한 위치 중 하나에 커넥터를 생성하여 ONTAP 데이터를 Azure Blob 저장소에 백업해야 합니다. 다른 클라우드 공급자에 배포된 Connector는 사용할 수 없습니다.</block>
   <block id="698b05231bfe12b062cbf4a5381b3d2f" category="inline-link">Azure에 커넥터 설치</block>
-  <block id="b4f571ad8c9a525beb5cb8da26f64fef" category="list-text"><block ref="b4f571ad8c9a525beb5cb8da26f64fef" category="inline-link-rx"></block></block>
   <block id="a3caba4397a73eb091b3374d44a36510" category="list-text">Azure 스토리지에 VNET 프라이빗 엔드포인트를 설정합니다. 이 기능은 ONTAP 클러스터에서 VNET로 연결되는 ExpressRoute 또는 VPN 연결이 있고, 가상 프라이빗 네트워크(* 전용* 연결)에 유지하기 위해 Connector와 Blob 스토리지 간의 통신을 원하는 경우에 필요합니다.</block>
   <block id="37c606e486cf867317024daab096d5c7" category="sidebar">Azure에서 다중 계정 액세스를 위한 백업을 구성합니다</block>
   <block id="9aa87cabc3c16ccfd72ed13e9e2a189c" category="list-text">ONTAP 클러스터는 백업 및 복원 작업을 위해 인터클러스터 LIF에서 StorageGRID 게이트웨이 노드에 대한 사용자 지정 포트를 통한 HTTPS 연결을 시작합니다. 백업 설정 중에 포트를 구성할 수 있습니다.</block>
@@ -2201,7 +2191,6 @@
   <block id="39f30cdd2630386fa4f3ba56e107c2fd" category="list-text">가입 2(BlueXP 커넥터 및 Cloud Volumes ONTAP 시스템이 배포된 위치)와 리소스 그룹을 선택합니다.</block>
   <block id="5e9c68a306632190e5fdfb7db87750f9" category="list-text">온-프레미스 클러스터를 발견하고 BlueXP의 작업 환경에 추가했습니다. 을 참조하십시오<block ref="04e8e773ac6637419158f2743860946e" category="inline-link-rx"></block> 를 참조하십시오.</block>
   <block id="f14bda54277879b5d5f51fa405834285" category="paragraph">볼륨 데이터 백업을 시작하기 전에 BlueXP에서 온-프레미스 ONTAP 클러스터를 검색해야 합니다.</block>
-  <block id="48b0bfd3649cb51640d3b2b726ccd1b0" category="admonition">BlueXP 커넥터에는 클라우드 백업 기능이 내장되어 있습니다. 인터넷에 연결되지 않은 사이트에 설치한 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 <block ref="4b505ef59fae088b7538ff8d53b204e9" category="inline-link-macro-rx"></block> 각 Cloud Backup 릴리즈의 새로운 기능을 보려면 ~ 단계를 따르십시오<block ref="9f7f6f7d33dac6a99bb8b7e121fd2054" category="inline-link-rx"></block> 새 기능을 사용하려는 경우</block>
   <block id="4222162492898e3a8b9e4698a4abb67a" category="paragraph">SnapCenter Plug-in for VMware vSphere와 BlueXP를 통합하여 하나 이상의 데이터 저장소를 Amazon 웹 서비스에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
   <block id="a9bb4a4ebd2695e50a673d0b706564b1" category="list-text">BlueXP UI에서 * 보호 * &gt; * 백업 및 복구 * &gt; * 가상 머신 * 을 클릭합니다.</block>
   <block id="abe7d23d1826e9db79e6c78593403413" category="paragraph">BlueXP에서 검색할 ONTAP 클러스터를 구성하여 데이터 저장소를 백업합니다. 데이터 저장소 중 하나에 작업 환경을 추가한 후 동일한 ONTAP 클러스터에 상주하는 다른 모든 데이터 저장소에 다시 사용할 수 있습니다.</block>
@@ -2298,7 +2287,6 @@
   <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXP 블로그</block>
   <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">모든 BlueXP 설명서</block>
   <block id="dbb5638e73887ef4301df1c7b10993df" category="inline-link">AWS GovCloud 지역에 커넥터 설치</block>
-  <block id="9ead7424c07e39075bc88d26cf29486d" category="list-text"><block ref="9ead7424c07e39075bc88d26cf29486d" category="inline-link-rx"></block></block>
   <block id="86459dce2ebdc093806a2c3cc3a8ca9e" category="list-text">볼륨 선택 페이지에서 정의된 백업 정책을 사용하여 백업할 볼륨을 선택합니다. 특정 볼륨에 서로 다른 백업 정책을 할당하려는 경우 추가 정책을 생성하여 나중에 해당 볼륨에 적용할 수 있습니다.</block>
   <block id="47ab521431b84d7f8280399db460e01b" category="list-text">나중에 추가된 모든 기존 볼륨과 볼륨을 백업하려면 "Back up all existing and future volumes..." 확인란을 선택합니다. 모든 볼륨이 백업되고 새 볼륨에 대해 백업을 사용하도록 설정할 필요가 없도록 이 옵션을 사용하는 것이 좋습니다.</block>
   <block id="fc32ef7e48902fe522b53f26c5a7c5cc" category="list-text">기존 볼륨만 백업하려면 제목 행(<block ref="2b1190f90c2c717d2aa70aabd2fc4c36" category="inline-image-macro-rx" type="image"></block>)를 클릭합니다.</block>
@@ -2356,7 +2344,6 @@
   <block id="1921607c8a4d3375b5df7e659b429e1c" category="paragraph">Google Cloud Storage 버킷은 입력한 Google 액세스 키 및 비밀 키로 표시된 서비스 계정에 자동으로 생성되며 백업 파일은 여기에 저장됩니다. 백업 상태를 모니터링할 수 있도록 볼륨 백업 대시보드가 표시됩니다. 을 사용하여 백업 및 복원 작업의 상태를 모니터링할 수도 있습니다 <block ref="5d9366e34fca5f2de6190abcadbc5e98" category="inline-link-macro-rx"></block>.</block>
   <block id="30d334a4a47bf8bcc0a713cea94b6d98" category="list-text">또한 가능합니다 <block ref="691b942cd3d613931fde06fad7da9248" category="inline-link-macro-rx"></block> Google의 Cloud Volumes ONTAP 시스템 또는 온프레미스 ONTAP 시스템으로.</block>
   <block id="0fed42c16e02df19813c1ada5f9c8fd7" category="inline-link">Azure Government 지역에 커넥터 설치</block>
-  <block id="3ed416b513332ef0663a96d528858df7" category="list-text"><block ref="3ed416b513332ef0663a96d528858df7" category="inline-link-rx"></block></block>
   <block id="62640a282075f7801899cdb8febacf09" category="summary">각 ONTAP 시스템에 대해 클라우드 백업을 활성화할 때 설정하는 여러 클러스터 레벨 백업 설정을 변경할 수 있습니다. "기본" 백업 설정으로 적용되는 일부 설정을 수정할 수도 있습니다. 여기에는 스토리지 키 변경, 오브젝트 스토리지에 대한 백업 전송 속도, 기간별 스냅샷 복사본을 백업 파일로 내보낼 것인지 여부 등이 포함됩니다.</block>
   <block id="c7d0d42759e1658d8ae1d80e3dedd0d1" category="doc">클러스터 레벨 백업 설정 관리</block>
   <block id="c039a60af8309de6dc61d8d90e85b514" category="paragraph">클러스터 레벨 백업 설정은 _Advanced Settings_ 페이지에서 사용할 수 있습니다.</block>
@@ -3469,10 +3456,8 @@
   <block id="d2b32f39697a5b013948d2ec66933921" category="list-text">작업 - BlueXP 데이터베이스에서 작업 세부 정보 항목을 관리합니다</block>
   <block id="608448c2576128ccc8c2f959d59e20b4" category="list-text">커넥터 요구 사항</block>
   <block id="c9069f67c447a0a15bda0467230c3148" category="inline-link">AWS에 커넥터 구축</block>
-  <block id="545a608e55ae4e3a96594a093a988a8a" category="list-text"><block ref="545a608e55ae4e3a96594a093a988a8a" category="inline-link-rx"></block></block>
   <block id="070bde10025186ce49792171c694b711" category="list-text">선택적으로 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화할 수 있습니다. 이 기능은 어두운 사이트에 배포할 때는 사용할 수 없습니다. <block ref="58f01ad9ea7ce8fd23147681b9f27af7" category="inline-link-macro-rx"></block>.</block>
   <block id="261ca950ce5b13f6fc57f9ad7d366d88" category="inline-link">Azure에 커넥터를 배포합니다</block>
-  <block id="28cf618b595b848efbf044d272e765f2" category="list-text"><block ref="28cf618b595b848efbf044d272e765f2" category="inline-link-rx"></block></block>
   <block id="7cccee5994c911e5094d2b657aa36982" category="list-text">ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 Azure 아카이브 스토리지에 백업을 계층화하도록 선택할 수 있습니다. 이 기능은 어두운 사이트에 배포할 때는 사용할 수 없습니다. <block ref="0f1866ee99580c7794186e312ffd205e" category="inline-link-macro-rx"></block>.</block>
   <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">지원 사례 관리(Preview)</block>
   <block id="8b74b053fbeeff5c3b6f4991cb1d028d" category="paragraph">BlueXP에서 직접 활성 및 해결된 지원 사례를 보고 관리할 수 있습니다. NSS 계정 및 회사와 관련된 케이스를 관리할 수 있습니다.</block>
@@ -3542,11 +3527,9 @@
   <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">첨부 파일은 파일당 25MB로 제한됩니다. txt, log, pdf, jpg/jpeg, rtf, DOC/docx, xls/xlsx 및 CSV.</block>
   <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">* 케이스 메모 업데이트 *: 문제에 대한 추가 세부 정보를 제공하거나 * 파일 업로드 * 를 선택하여 최대 5개의 파일을 첨부할 수 있습니다.</block>
   <block id="99b6a376880ac28b047f54b783efb2b9" category="summary">Cloud Volumes ONTAP 시스템에서 Azure Blob 저장소로 볼륨 데이터 백업을 시작하려면 몇 가지 단계를 완료하십시오.</block>
-  <block id="682b6321ac519cf28bd8d1a2cb21003e" category="list-text">Azure에 커넥터가 설치되어 있습니다. 커넥터는 전체 인터넷 액세스("표준 모드")가 있는 사이트나 제한된 인터넷 연결("제한 모드")으로 설치할 수 있습니다. .<block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 새로운 시스템이나 기존 시스템에서 Cloud Backup을 활성화합니다</block>
   <block id="6bdecde65d2cf1697dee748c10e1d508" category="paragraph">Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. <block ref="47744e5312ce42ad8130a5365d7fb0d0" category="inline-link-macro-rx"></block>. Connector 및 Cloud Volumes ONTAP 시스템이 어두운 사이트에 구축된 경우 BYOL 라이센스를 사용해야 합니다.</block>
   <block id="6322974b2572b580e2e280f1f7473932" category="list-text">커넥터는 전체 또는 제한된 인터넷 액세스("표준" 또는 "제한" 모드)가 있는 Azure 지역에 설치할 수 있습니다.</block>
   <block id="f07703a113f9329efbb1b3b1ed7d5490" category="inline-link">Azure 지역의 Linux 호스트에 수동으로 커넥터 설치</block>
-  <block id="6557cfcd06534fdeff37ca971fbd068c" category="list-text"><block ref="6557cfcd06534fdeff37ca971fbd068c" category="inline-link-rx"></block></block>
   <block id="f74289356f2bc0344a65a98de529ad8d" category="paragraph">Blob 저장소 컨테이너는 입력한 리소스 그룹에 자동으로 생성되며 백업 파일은 여기에 저장됩니다.</block>
   <block id="62ce1fd293b23e542e251491d1905645" category="paragraph">백업 상태를 모니터링할 수 있도록 볼륨 백업 대시보드가 표시됩니다. 을 사용하여 백업 및 복원 작업의 상태를 모니터링할 수도 있습니다 <block ref="5d9366e34fca5f2de6190abcadbc5e98" category="inline-link-macro-rx"></block>.</block>
   <block id="95fa16fe802a71eca4c0ade2049c7325" category="inline-link">스토리지 계정의 복제 방법을 변경합니다</block>
@@ -3609,13 +3592,11 @@
   <block id="051139f64ea4dc8d9390cd2792f01b14" category="list-text">Google Cloud에 Connector가 설치되어 있습니다.</block>
   <block id="6b344f3d57a23c796f9476dd353d12e7" category="list-text">커넥터는 인터넷에 액세스할 수 있는 Google 지역에 설치해야 합니다.</block>
   <block id="87a05d4200b00403ad79b218876c73d4" category="inline-link">Google Cloud에 Connector를 구축합니다</block>
-  <block id="b7ca017a195ca4317075e0552ce38e44" category="list-text"><block ref="b7ca017a195ca4317075e0552ce38e44" category="inline-link-rx"></block></block>
   <block id="38d4d167f6dd9174c3535fc5c7ba4b76" category="section-title">2023년 4월 4일</block>
   <block id="40c193dda1b0a4df68695abe150f234a" category="section-title">"제한" 모드에서 Cloud Volumes ONTAP 시스템의 데이터를 클라우드로 백업하는 기능</block>
   <block id="28e1f4495f1c7f5d7f7a5392a215c21a" category="paragraph">이제 AWS, Azure 및 GCP 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 "제한" 모드로 백업할 수 있습니다. 이를 위해서는 먼저 "제한된" 상업 지역에 커넥터를 설치해야 합니다. 을 참조하십시오<block ref="0607f60a93455f62c98c67f333a631e0" category="inline-link-rx"></block> 및<block ref="d878e312b2f9cdcef2f8eccaa51619ee" category="inline-link-rx"></block>.</block>
   <block id="57c3b4ba3c60295d45a2554606080eef" category="section-title">API를 사용하여 사내 ONTAP 볼륨을 ONTAP S3에 백업하는 기능</block>
   <block id="430a1b25bf435fd21376b7b1884b6999" category="inline-link">ONTAP S3와 타겟으로 통합(REST API 사용)</block>
-  <block id="26ec6efcc8d7c7740aceeb4c7307d184" category="paragraph">API의 새로운 기능을 사용하면 BlueXP 클라우드 백업을 사용하여 볼륨 스냅샷을 ONTAP S3에 백업할 수 있습니다. 이 기능은 현재 온프레미스 ONTAP 시스템에서만 사용할 수 있습니다. 자세한 지침은 블로그를 참조하십시오<block ref="50f757899df464a10b489edfac75ae5d" category="inline-link-rx"></block>.</block>
   <block id="720734599c08f49ea57d729ec9f12d53" category="section-title">Azure 저장소 계정의 영역 중복성 측면을 LRS에서 ZRS로 변경할 수 있습니다</block>
   <block id="d9f6af5f4e2b16940729f1ac7da86d7d" category="paragraph">Cloud Volumes ONTAP 시스템에서 Azure 스토리지로 백업을 생성할 때 Cloud Backup은 기본적으로 비용 최적화를 위해 LRS(Local Redundancy)를 사용하여 Blob 컨테이너를 프로비저닝합니다. 데이터를 다른 영역 간에 복제하려면 이 설정을 영역 중복(ZRS)으로 변경할 수 있습니다. 에 대한 Microsoft 지침을 참조하십시오<block ref="c549763665cfbb93dbccfdbf667aa0f2" category="inline-link-rx"></block>.</block>
   <block id="a7393f4b2940dc4b2ad20a62564d25be" category="section-title">작업 모니터 기능 향상</block>
@@ -3632,7 +3613,6 @@
   <block id="a9d3c4c93c315af7f13f9b365c2adcbf" category="list-text">커넥터는 전체 인터넷 액세스("표준 모드")가 있는 사이트나 제한된 인터넷 연결("제한 모드")으로 설치할 수 있습니다.</block>
   <block id="5b477e50c905f9613c5e16e571e9e5bc" category="list-text">커넥터는 전체 또는 제한된 인터넷 액세스("표준" 또는 "제한" 모드)가 있는 AWS 지역에 설치할 수 있습니다.</block>
   <block id="e7e22b4d377bdd0d9b0cb0ec1148ae55" category="inline-link">AWS 지역의 Linux 호스트에 수동으로 커넥터 설치</block>
-  <block id="1196ba0da50696f076c6352e9882467f" category="list-text"><block ref="1196ba0da50696f076c6352e9882467f" category="inline-link-rx"></block></block>
   <block id="04b01ab636ef32a98ac9e4e70d26301d" category="paragraph">Cloud Backup은 인터넷에 연결되지 않은 사이트("비공개 모드" 또는 "다크" 사이트라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 구성에서는 볼륨 및 파일 복구도 모두 지원됩니다. 이 경우 어두운 사이트에 BlueXP 커넥터를 배포해야 합니다.</block>
   <block id="9cee8a58cb0f70566a439c4bcaed0562" category="list-text">AWS 상업 지역 및 AWS C2S/SC2S 보안 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3에 백업할 수 있습니다. 을 참조하십시오 <block ref="31e49e13e812c331f506a2a8e6b7ad22" category="inline-link-macro-rx"></block>.</block>
   <block id="5660f9fec8990d75e681f2c7676a1132" category="list-text">Azure 상용 지역 및 Azure IL6 보안 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Azure Blob에 백업할 수 있습니다. 을 참조하십시오 <block ref="ab5c78f08c8780b598ee1d4de19230ab" category="inline-link-macro-rx"></block>.</block>
@@ -3648,4 +3628,20 @@
   <block id="042a30f816a9f3db4f832c68a750cbd0" category="paragraph">시작 시간은 각 소스 ONTAP 시스템에 설정된 표준 시간대를 기준으로 합니다. UI에서 사용자가 지정한 시간에 백업 작업을 예약할 수 없습니다. 자세한 내용은 시스템 엔지니어에게 문의하십시오.</block>
   <block id="f6c25edb13a1fb5bd6c5a94f498065a2" category="summary">몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Amazon S3 스토리지로의 볼륨 데이터 백업을 시작하십시오.</block>
   <block id="1034847477ed5a052dde5a113bf49af2" category="paragraph">Cloud Backup은 Connector가 온프레미스에 설치되어 있지 않고 클라우드에 구축된 경우 GovCloud 지역에서 지원됩니다. 또한 AWS Marketplace에서 Connector를 구축해야 합니다. BlueXP SaaS 웹 사이트에서 정부 지역에 Connector를 배포할 수 없습니다.</block>
+  <block id="a16acb967c4e8e9b1d495f499e535a7a" category="list-text">Azure에 커넥터가 설치되어 있습니다. 커넥터는 전체 인터넷 액세스("표준 모드")가 있는 사이트나 제한된 인터넷 연결("제한 모드")으로 설치할 수 있습니다.</block>
+  <block id="d6dafcdb12e4f86e51530ee982eab823" category="list-text"><block ref="d6dafcdb12e4f86e51530ee982eab823" category="inline-link-rx"></block></block>
+  <block id="027b143222d1d3eb38cfc1f168468c85" category="list-text"><block ref="027b143222d1d3eb38cfc1f168468c85" category="inline-link-rx"></block></block>
+  <block id="42fe5b7d13b47e1a54bdeba0b60b6fe4" category="list-text"><block ref="42fe5b7d13b47e1a54bdeba0b60b6fe4" category="inline-link-rx"></block></block>
+  <block id="9782e9b134ce2961f9658af915ee4113" category="list-text"><block ref="9782e9b134ce2961f9658af915ee4113" category="inline-link-rx"></block></block>
+  <block id="d1830c648563b369c87ce51dd1eefe60" category="list-text"><block ref="d1830c648563b369c87ce51dd1eefe60" category="inline-link-rx"></block></block>
+  <block id="323b89c418724269f9abecade7c834d3" category="list-text"><block ref="323b89c418724269f9abecade7c834d3" category="inline-link-rx"></block></block>
+  <block id="8359638cbd1b68fd640fa0f309480550" category="list-text"><block ref="8359638cbd1b68fd640fa0f309480550" category="inline-link-rx"></block></block>
+  <block id="348d63f232889527f97197322aaa8986" category="admonition">BlueXP 커넥터에는 클라우드 백업 기능이 내장되어 있습니다. 인터넷에 연결되지 않은 사이트에 설치한 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 <block ref="4b505ef59fae088b7538ff8d53b204e9" category="inline-link-macro-rx"></block> 각 Cloud Backup 릴리즈의 새로운 기능을 보려면 ~ 단계를 따르십시오<block ref="665cecca74760cbd23ea14978e32ba89" category="inline-link-rx"></block> 새 기능을 사용하려는 경우</block>
+  <block id="2ea7e7f07a1904fc4427a42a7aba9533" category="list-text"><block ref="2ea7e7f07a1904fc4427a42a7aba9533" category="inline-link-rx"></block></block>
+  <block id="1a9500ce2c4bdf3774a1abc05bae9ae2" category="list-text"><block ref="1a9500ce2c4bdf3774a1abc05bae9ae2" category="inline-link-rx"></block></block>
+  <block id="f25c47eb7d9f3c638d89723bee6d2360" category="paragraph">API의 새로운 기능을 사용하면 BlueXP 클라우드 백업을 사용하여 볼륨 스냅샷을 ONTAP S3에 백업할 수 있습니다. 이 기능은 현재 온프레미스 ONTAP 시스템에서만 사용할 수 있습니다. 자세한 지침은 블로그를 참조하십시오<block ref="50f757899df464a10b489edfac75ae5d" category="inline-link-rx"></block>.</block>
+  <block id="bf561a7142f1f05d376a8d4b4beaad24" category="list-text"><block ref="bf561a7142f1f05d376a8d4b4beaad24" category="inline-link-rx"></block></block>
+  <block id="51c1a6c1e7497769792664cc458e4b3b" category="list-text"><block ref="51c1a6c1e7497769792664cc458e4b3b" category="inline-link-rx"></block></block>
+  <block id="3b3fe44fb52240d2bf1cecd954ba8f31" category="list-text"><block ref="3b3fe44fb52240d2bf1cecd954ba8f31" category="inline-link-rx"></block></block>
+  <block id="b08b0a6b8389d8eb21b696d8750a42c7" category="list-text"><block ref="b08b0a6b8389d8eb21b696d8750a42c7" category="inline-link-rx"></block></block>
 </blocks>

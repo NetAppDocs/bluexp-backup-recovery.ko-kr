@@ -98,8 +98,8 @@ Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 
 +
 --
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["AWS에 커넥터 구축"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html["AWS 지역의 Linux 호스트에 수동으로 커넥터 설치"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html["AWS에 커넥터 구축"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-restricted-mode.html["AWS 지역의 Linux 호스트에 수동으로 커넥터 설치"^]
 
 
 --
