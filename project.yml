@@ -38,7 +38,7 @@ sidebar:
       url: "/task-monitor-backup-jobs.html"
   - title: ONTAP 데이터를 백업 및 복원합니다
     entries:
-    - title: ONTAP 데이터 보호
+    - title: ONTAP 볼륨 데이터를 보호합니다
       url: "/concept-ontap-backup-to-cloud.html"
     - title: Cloud Volumes ONTAP를 Amazon S3에 백업합니다
       flavor: aws
@@ -315,8 +315,8 @@ homepage:
     links:
     - title: NetApp 커뮤니티
       url: https://community.netapp.com/t5/Public-Cloud-Services/ct-p/CDS
-    - title: BlueXP 블로그
-      url: https://bluexp.netapp.com/blog
+    - title: Cloud Backup 블로그
+      url: https://bluexp.netapp.com/blog/topic/cloud-backup
     - title: Cloud Backup 사용 사례
       url: https://bluexp.netapp.com/cloud-backup
     - title: 클라우드 웨비나

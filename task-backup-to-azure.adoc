@@ -119,20 +119,45 @@ Connector에 권한을 확인하거나 추가합니다:: 클라우드 백업 검
 +
 [source, json]
 ----
-"Microsoft.Storage/checknameavailability/read",
-"Microsoft.Storage/operations/read",
+"Microsoft.Compute/virtualMachines/read",
+"Microsoft.Compute/virtualMachines/start/action",
+"Microsoft.Compute/virtualMachines/deallocate/action",
 "Microsoft.Storage/storageAccounts/listkeys/action",
 "Microsoft.Storage/storageAccounts/read",
 "Microsoft.Storage/storageAccounts/write",
 "Microsoft.Storage/storageAccounts/blobServices/containers/read",
 "Microsoft.Storage/storageAccounts/listAccountSas/action",
+"Microsoft.KeyVault/vaults/read",
+"Microsoft.KeyVault/vaults/accessPolicies/write",
+"Microsoft.Network/networkInterfaces/read",
+"Microsoft.Resources/subscriptions/locations/read",
+"Microsoft.Network/virtualNetworks/read",
+"Microsoft.Network/virtualNetworks/subnets/read",
+"Microsoft.Resources/subscriptions/resourceGroups/read",
+"Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+"Microsoft.Resources/subscriptions/resourceGroups/write",
+"Microsoft.Authorization/locks/*",
+"Microsoft.Network/privateEndpoints/write",
+"Microsoft.Network/privateEndpoints/read",
+"Microsoft.Network/privateDnsZones/virtualNetworkLinks/write",
+"Microsoft.Network/virtualNetworks/join/action",
+"Microsoft.Network/privateDnsZones/A/write",
+"Microsoft.Network/privateDnsZones/read",
+"Microsoft.Network/privateDnsZones/virtualNetworkLinks/read",
+"Microsoft.Compute/virtualMachines/extensions/delete",
+"Microsoft.Compute/virtualMachines/delete",
+"Microsoft.Network/networkInterfaces/delete",
+"Microsoft.Network/networkSecurityGroups/delete",
+"Microsoft.Resources/deployments/delete",
+"Microsoft.Network/publicIPAddresses/delete",
+"Microsoft.Storage/storageAccounts/blobServices/containers/write",
+"Microsoft.ManagedIdentity/userAssignedIdentities/assign/action",
 "Microsoft.Synapse/workspaces/write",
 "Microsoft.Synapse/workspaces/read",
 "Microsoft.Synapse/workspaces/delete",
 "Microsoft.Synapse/register/action",
 "Microsoft.Synapse/checkNameAvailability/action",
 "Microsoft.Synapse/workspaces/operationStatuses/read",
-"Microsoft.Synapse/workspaces/firewallRules/write",
 "Microsoft.Synapse/workspaces/firewallRules/read",
 "Microsoft.Synapse/workspaces/replaceAllIpFirewallRules/action",
 "Microsoft.Synapse/workspaces/operationResults/read",
@@ -150,6 +175,10 @@ https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-az
 
 --
 지원되는 Azure 지역:: Cloud Backup은 모든 Azure 지역에서 지원됩니다 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP가 지원되는 경우"^]Azure Government 지역을 비롯한 모든 지역에서 사용할 수 있습니다.
+
+
+기본적으로 Cloud Backup은 비용 최적화를 위해 LRS(Local Redundancy)가 포함된 Blob 컨테이너를 프로비저닝합니다. 다른 존 간에 데이터가 복제되도록 하려면 Cloud Backup이 활성화된 후 이 설정을 ZRS(Zone Redundancy)로 변경할 수 있습니다. 에 대한 Microsoft 지침을 참조하십시오 https://learn.microsoft.com/en-us/azure/storage/common/redundancy-migration?tabs=portal["스토리지 계정의 복제 방법을 변경합니다"^].
+
 다른 Azure 구독에서 백업을 생성하기 위한 필수 설정:: 기본적으로 백업은 Cloud Volumes ONTAP 시스템에 사용되는 것과 동일한 구독을 사용하여 생성됩니다. 백업에 다른 Azure 구독을 사용하려면 을(를) 사용해야 합니다 link:reference-backup-multi-account-azure.html["Azure 포털에 로그인하고 두 구독을 연결합니다"].
 데이터 암호화에 대해 고객이 관리하는 키를 사용하는 데 필요한 정보입니다:: 정품 인증 마법사에서 기본 Microsoft 관리 암호화 키를 사용하는 대신 고객이 관리하는 키를 사용하여 데이터를 암호화할 수 있습니다. 이 경우 Azure 가입, 키 저장소 이름 및 키가 필요합니다. https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["자신의 키를 사용하는 방법을 확인하십시오"^].
 
