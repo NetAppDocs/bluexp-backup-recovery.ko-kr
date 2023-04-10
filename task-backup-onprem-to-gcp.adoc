@@ -155,8 +155,7 @@ Google Cloud Platform VPC에 이미 Connector를 구축한 경우 원하는 대�
 .단계
 . 커넥터가 설치된 네트워크에서 다음 연결을 사용할 수 있는지 확인합니다.
 +
-** 포트 443(HTTPS)을 통해 Cloud Backup Service에 아웃바운드 인터넷 연결
-** Google Cloud 스토리지에 포트 443을 통한 HTTPS 연결
+** 포트 443을 통해 Cloud Backup Service 및 Google Cloud 스토리지에 HTTPS로 연결합니다 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-google.html#endpoints-contacted-for-day-to-day-operations["끝점 목록을 참조하십시오"^])
 ** 포트 443을 통해 ONTAP 클러스터 관리 LIF에 HTTPS로 연결합니다
 
 

@@ -147,7 +147,7 @@ ONTAP 시스템에서 Google 클라우드 스토리지로 데이터를 백업할
 
 인터넷에 액세스할 수 없는 사이트의 ONTAP 클러스터 데이터를 StorageGRID으로 백업하는 경우(다크 사이트 또는 오프라인 사이트라고도 함) 이제 검색 및 복원 옵션을 사용하여 필요한 경우 데이터를 복원할 수 있습니다. 이 기능을 사용하려면 BlueXP 커넥터(버전 3.9.25 이상)가 오프라인 사이트에 배포되어야 합니다.
 
-https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-restore-backups-ontap.html#restoring-ontap-data-using-search-restore["검색 및 amp; 복원을 사용하여 ONTAP 데이터를 복원하는 방법을 확인하십시오"].https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html["오프라인 사이트에 커넥터를 설치하는 방법을 알아봅니다"].
+https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-restore-backups-ontap.html#restoring-ontap-data-using-search-restore["검색 및 amp; 복원을 사용하여 ONTAP 데이터를 복원하는 방법을 확인하십시오"].https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private-mode.html["오프라인 사이트에 커넥터를 설치하는 방법을 알아봅니다"].
 
 
 
@@ -216,7 +216,7 @@ Cloud Backup의 변경으로 인해 Cloud Backup 작업을 성공적으로 수�
 
 | https://*.cloudmanager.cloud.netapp.com 으로 문의하십시오 | https://*.api.bluexp.netapp.com 으로 문의하십시오 
 |===
-의 전체 끝점 목록을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html#outbound-internet-access["설치하고"^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html#outbound-internet-access["Google 클라우드"^], 또는 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html#outbound-internet-access["Azure를 지원합니다"^] 설명합니다.
+의 전체 끝점 목록을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-aws.html#outbound-internet-access["설치하고"^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-google.html#outbound-internet-access["Google 클라우드"^], 또는 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-azure.html#outbound-internet-access["Azure를 지원합니다"^] 설명합니다.
 
 
 
@@ -449,7 +449,7 @@ Cloud Backup은 이제 랜섬웨어 세이프 백업에 대한 오브젝트 잠�
 
 사내 ONTAP 클러스터가 인터넷 액세스가 연결되지 않은 사이트에 있는 경우, 다크 사이트 또는 오프라인 사이트라고도 합니다. 이제 Cloud Backup을 사용하여 볼륨 데이터를 동일한 사이트에 있는 NetApp StorageGRID 시스템에 백업할 수 있습니다. 이 기능을 사용하려면 BlueXP 커넥터(버전 3.9.19 이상)도 오프라인 사이트에 배포해야 합니다.
 
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html["오프라인 사이트에 커넥터를 설치하는 방법을 알아봅니다"].https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-private-cloud.html["오프라인 사이트에서 ONTAP 데이터를 StorageGRID에 백업하는 방법을 알아봅니다"].
+https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private-mode.html["오프라인 사이트에 커넥터를 설치하는 방법을 알아봅니다"].https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-private-cloud.html["오프라인 사이트에서 ONTAP 데이터를 StorageGRID에 백업하는 방법을 알아봅니다"].
 
 
 
@@ -558,27 +558,3 @@ GKE 클러스터에 NetApp Astra Trident가 설치되어 있고 Cloud Volumes ON
 
 
 === Cloud Data Sense를 사용하여 Cloud Backup 파일을 검사하는 베타 기능은 이 릴리즈에서 더 이상 제공되지 않습니다
-
-
-
-== 2022년 2월 14일
-
-
-
-=== 이제 단일 클러스터의 개별 볼륨에 백업 정책을 할당할 수 있습니다
-
-과거에는 클러스터의 모든 볼륨에 단일 백업 정책만 할당할 수 있었습니다. 이제 단일 클러스터에 대해 여러 백업 정책을 생성하고 여러 볼륨에 서로 다른 정책을 적용할 수 있습니다. link:task-manage-backups-ontap#changing-the-policy-assigned-to-existing-volumes["클러스터에 대한 새 백업 정책을 생성하고 이를 선택한 볼륨에 할당하는 방법을 알아보십시오"].
-
-
-
-=== 새 옵션을 사용하면 새로 생성된 볼륨에 기본 백업 정책을 자동으로 적용할 수 있습니다
-
-과거에는 Cloud Backup을 활성화한 후 작업 환경에서 생성된 새 볼륨을 수동으로 백업 정책을 적용해야 했습니다. 이제 볼륨이 BlueXP, System Manager, CLI 또는 API에서 생성되었는지에 관계없이 Cloud Backup은 볼륨을 검색하고 기본 정책으로 선택한 백업 정책을 적용합니다.
-
-이 옵션은 새 작업 환경에서 백업을 설정하거나 기존 작업 환경의 _Manage Volumes_페이지에서 백업을 설정할 때 사용할 수 있습니다.
-
-
-
-=== 새 작업 모니터를 사용하여 모든 백업 및 복원 작업의 진행 상태를 확인할 수 있습니다
-
-백업 정책 변경 또는 백업 삭제와 같이 여러 볼륨에 대해 작업을 시작한 경우 작업 모니터를 사용하면 모든 볼륨에서 작업이 완료된 시점을 확인할 수 있습니다. link:task-monitor-backup-jobs.html["작업 모니터 사용 방법을 참조하십시오"].

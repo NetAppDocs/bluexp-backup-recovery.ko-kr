@@ -104,7 +104,7 @@ Cloud Backup은 Connector가 온프레미스에 설치되어 있지 않고 클�
 
 * 커넥터가 설치된 네트워크에서 다음 연결을 사용할 수 있는지 확인합니다.
 +
-** 포트 443을 통해 Cloud Backup Service 및 S3 오브젝트 스토리지에 HTTPS로 연결합니다 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["끝점 목록을 참조하십시오"^])
+** 포트 443을 통해 Cloud Backup Service 및 S3 오브젝트 스토리지에 HTTPS로 연결합니다 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-aws.html#endpoints-contacted-for-day-to-day-operations["끝점 목록을 참조하십시오"^])
 ** 포트 443을 통해 ONTAP 클러스터 관리 LIF에 HTTPS로 연결합니다
 ** AWS 및 AWS GovCloud 배포에는 추가 인바운드 및 아웃바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html["AWS의 커넥터 규칙"^] 를 참조하십시오.
 

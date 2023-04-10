@@ -166,8 +166,7 @@ Connector가 온프레미스에 설치되어 있지 않고 클라우드에 배�
 .단계
 . 커넥터가 설치된 네트워크에서 다음 연결을 사용할 수 있는지 확인합니다.
 +
-** 포트 443(HTTPS)을 통해 Cloud Backup Service에 아웃바운드 인터넷 연결
-** Blob 개체 저장소에 대한 포트 443을 통한 HTTPS 연결
+** 포트 443을 통해 Cloud Backup Service 및 Blob 개체 스토리지에 HTTPS로 연결합니다 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["끝점 목록을 참조하십시오"^])
 ** 포트 443을 통해 ONTAP 클러스터 관리 LIF에 HTTPS로 연결합니다
 ** 클라우드 백업 검색 및 복원 기능이 작동하려면 Connector와 Azure Synapse SQL 서비스 간의 통신을 위해 포트 1433이 열려 있어야 합니다.
 ** Azure 및 Azure Government 배포에는 추가 인바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-azure.html["Azure의 커넥터 규칙"^] 를 참조하십시오.
