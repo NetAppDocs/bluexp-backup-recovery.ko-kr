@@ -1010,7 +1010,6 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 커뮤니티</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">클라우드 웨비나</block>
   <block id="cedae03e22c7bb2c103685dfa74cddab" category="paragraph">BYOL은 1TiB 단위로 기간 기반(12, 24 또는 36개월) _ 및 _ 용량 기반 예를 들어, 1년, 최대 용량(10TiB)에 대해 서비스 사용을 위해 NetApp에 비용을 지불합니다.</block>
-  <block id="983a4e7f5913304ec713a249baf7be47" category="section-title">2022년 3월 3일</block>
   <block id="2af55e36133bee199e6856aa4e468486" category="paragraph">볼륨 * (새 볼륨으로)을 원래 작업 환경, 동일한 클라우드 계정을 사용하는 다른 작업 환경 또는 온프레미스 ONTAP 시스템으로 복원할 수 있습니다.</block>
   <block id="49b3fb49db06a6317743033ac39be690" category="paragraph">원래 작업 환경의 볼륨, 동일한 클라우드 계정을 사용하는 다른 작업 환경의 볼륨 또는 온프레미스 ONTAP 시스템의 볼륨으로 * 파일 * 을 복원할 수 있습니다.</block>
   <block id="91c3ddf19f416d0a8c7658b15c646d42" category="paragraph">백업 파일에서 볼륨을 복원하면 Cloud Backup은 백업의 데이터를 사용하여 _new_volume을 생성합니다. 원래 작업 환경의 볼륨이나 소스 작업 환경과 동일한 클라우드 계정에 있는 다른 작업 환경으로 데이터를 복원할 수 있습니다. 또한, 볼륨을 온프레미스 ONTAP 시스템으로 복원할 수 있습니다.</block>
@@ -1031,8 +1030,6 @@
   <block id="223fdeee6256cb135700ded14acc7574" category="section-title">SnapCenter에 기반을 둔 애플리케이션 클라우드 백업 1.1.0 이 현재 GA입니다</block>
   <block id="1959411b4282df2234896496da39c42f" category="paragraph">필요한 경우 클라우드에서 사내로 데이터를 복원할 수 있습니다.</block>
   <block id="0749ae9ea79ee87dd8c530f67a9065fe" category="section-title">모든 ONTAP 백업 파일에서 볼륨 또는 파일을 검색하는 새로운 검색 및 복원 기능</block>
-  <block id="afffc0d082245313c31dfcac23d2d8e0" category="section-title">GKE Kubernetes 클러스터에서 Google Cloud 스토리지로 영구 볼륨을 백업하는 기능</block>
-  <block id="536f48524e36a16593703c5d8d108b79" category="section-title">Cloud Data Sense를 사용하여 Cloud Backup 파일을 검사하는 베타 기능은 이 릴리즈에서 더 이상 제공되지 않습니다</block>
   <block id="cd1b53810620b8c77681a96dd010c21c" category="list-text">Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. <block ref="47744e5312ce42ad8130a5365d7fb0d0" category="inline-link-macro-rx"></block>.</block>
   <block id="cbc540ff279c66e1f0e285002a107926" category="list-text">Cloud Backup PAYGO 라이센스의 경우, 를 통한 구독<block ref="92655de6fae7d07ed3897ce19d51b88d" category="inline-link-rx"></block> Cloud Backup을 활성화하기 전에 가 필요합니다. Cloud Backup에 대한 청구는 이 구독을 통해 이루어집니다.<block ref="2dcb14e4aff486ad01ca943b2718d3a3" category="inline-link-rx"></block>.</block>
   <block id="c1d703bdf53bad5718c774b5ba1504f9" category="paragraph">StorageGRID는 다음 요구 사항을 충족해야 합니다. 를 참조하십시오<block ref="a9591d68f190d64ce21caf15a77d51e9" category="inline-link-rx"></block> 를 참조하십시오.</block>
@@ -1266,7 +1263,6 @@
   <block id="b83e2caeb95bea361704be4e9e795cd1" category="paragraph">API는 에서 사용할 수 있습니다<block ref="323898002645c2363c910f7c119fd4d6" category="inline-link-rx"></block>. 을 참조하십시오 <block ref="cf7847f4c926eb96d69d319dfdc23654" category="inline-link-macro-rx"></block> API에 대한 개요입니다.</block>
   <block id="45ee97ced966affff074d2bc1efe2686" category="paragraph">새로운 Cloud Backup for Applications 기능을 사용하면 Oracle 및 Microsoft SQL에 대한 기존 애플리케이션 정합성 보장 스냅샷(백업)을 사내 운영 스토리지에서 Amazon S3 또는 Azure Blob의 클라우드 오브젝트 스토리지로 오프로드할 수 있습니다.</block>
   <block id="8a0841a62164343a6bb78ffd4349420f" category="inline-link">사내 애플리케이션 데이터를 클라우드로 보호하는 방법에 대해 자세히 알아보십시오</block>
-  <block id="6ff133e735e841b3a54d6f8c0a84c071" category="paragraph">GKE 클러스터에 NetApp Astra Trident가 설치되어 있고 Cloud Volumes ONTAP for GCP를 클러스터의 백엔드 스토리지로 사용하는 경우, Google Cloud 스토리지와 영구 볼륨을 백업 및 복원할 수 있습니다. <block ref="04c62f5c961d468f8c7e3d8b6a8a1398" category="inline-link-macro-rx"></block>.</block>
   <block id="49930e1d4376887999c072bd91775525" category="cell">백업 파일 대상 ifdef::AWS[]</block>
   <block id="8889077573d45691231050324d93b6a9" category="cell">Amazon S3 엔디프::AWS[]ifdef::Azure[]</block>
   <block id="0959a2f5eff65303771c49363a01d789" category="cell">Azure Blob endif::Azure []ifdef::GCP[]</block>
@@ -3550,14 +3546,9 @@
   <block id="a9d3c4c93c315af7f13f9b365c2adcbf" category="list-text">커넥터는 전체 인터넷 액세스("표준 모드")가 있는 사이트나 제한된 인터넷 연결("제한 모드")으로 설치할 수 있습니다.</block>
   <block id="5b477e50c905f9613c5e16e571e9e5bc" category="list-text">커넥터는 전체 또는 제한된 인터넷 액세스("표준" 또는 "제한" 모드)가 있는 AWS 지역에 설치할 수 있습니다.</block>
   <block id="e7e22b4d377bdd0d9b0cb0ec1148ae55" category="inline-link">AWS 지역의 Linux 호스트에 수동으로 커넥터 설치</block>
-  <block id="04b01ab636ef32a98ac9e4e70d26301d" category="paragraph">Cloud Backup은 인터넷에 연결되지 않은 사이트("비공개 모드" 또는 "다크" 사이트라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 구성에서는 볼륨 및 파일 복구도 모두 지원됩니다. 이 경우 어두운 사이트에 BlueXP 커넥터를 배포해야 합니다.</block>
-  <block id="9cee8a58cb0f70566a439c4bcaed0562" category="list-text">AWS 상업 지역 및 AWS C2S/SC2S 보안 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3에 백업할 수 있습니다. 을 참조하십시오 <block ref="31e49e13e812c331f506a2a8e6b7ad22" category="inline-link-macro-rx"></block>.</block>
-  <block id="5660f9fec8990d75e681f2c7676a1132" category="list-text">Azure 상용 지역 및 Azure IL6 보안 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Azure Blob에 백업할 수 있습니다. 을 참조하십시오 <block ref="ab5c78f08c8780b598ee1d4de19230ab" category="inline-link-macro-rx"></block>.</block>
   <block id="ee2081007b4b41aa21ddcbdddb722d5e" category="section-title">연결이 제한된 사이트 지원</block>
-  <block id="b2f6031ac57c2fd58a0d11d2c12f1465" category="paragraph">클라우드 백업은 인터넷 연결이 제한된 사이트("제한된 모드"라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 구성에서는 볼륨 및 파일 복구도 모두 지원됩니다. 이 경우 제한된 영역에 BlueXP 커넥터를 배포해야 합니다.</block>
   <block id="a3f02510edf67619908394e8afc73938" category="list-text">AWS 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3에 백업할 수 있습니다. 을 참조하십시오 <block ref="31e49e13e812c331f506a2a8e6b7ad22" category="inline-link-macro-rx"></block>.</block>
   <block id="b8507c62b8182b29a382ffefc9fab5f2" category="list-text">Azure 상용 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Azure Blob으로 백업할 수 있습니다. 을 참조하십시오 <block ref="ab5c78f08c8780b598ee1d4de19230ab" category="inline-link-macro-rx"></block>.</block>
-  <block id="1b57298c9825f880d62b2296bd4b45f2" category="paragraph">모든 볼륨의 시간별, 일별, 주별, 월별 및 연도별 백업을 조합하여 선택할 수 있습니다. 볼륨에 적용된 스냅샷 정책은 Cloud Backup에서 인식하는 정책 중 하나여야 합니다. 또한 3개월, 1년 및 7년 동안 백업 및 보존을 제공하는 시스템 정의 정책 중 하나를 선택할 수도 있습니다. 이러한 정책은 다음과 같습니다.</block>
   <block id="a6a4730c10b1358f1c9def7ffe4b5b3e" category="summary">BlueXP 백업 및 복구(클라우드 백업)는 사내 및 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 시스템에 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.</block>
   <block id="7eb9cafcf06d2b2e35409b3b19eebaa6" category="summary">BlueXP 백업 및 복구는 사내 및 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 머신에 대해 효율적이고 안전하며 비용 효율적인 데이터 보호 기능을 제공합니다. 백업은 자동으로 생성되어 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 저장됩니다.</block>
   <block id="4e16c93a7a40b92bf4ddc82057092a1f" category="paragraph">BlueXP 백업 및 복구(클라우드 백업)는 사내 및 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 시스템에 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다. 백업은 자동으로 생성되어 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 저장됩니다.</block>
@@ -3645,4 +3636,7 @@
   <block id="da51e9451a525419419d8c9da2b6fd19" category="paragraph"><block ref="14f29cbb042037b28f496533bcac017b" category="inline-link-rx"></block>.<block ref="f39d73248b535226c2e16237e43ff2d0" category="inline-link-rx"></block>.</block>
   <block id="22af84c027176379749ae95a3dcf8328" category="list-text">포트 443을 통해 Cloud Backup Service 및 S3 오브젝트 스토리지에 HTTPS로 연결합니다 <block ref="e55fc914b3d027a7a2463283008a8fbf" category="inline-link-rx"></block>)</block>
   <block id="1733b24a3114e19949a64706ed91c2af" category="list-text"><block ref="1733b24a3114e19949a64706ed91c2af" category="inline-link-rx"></block></block>
+  <block id="ff130d4d587ae9b0b25a1a56ae928634" category="paragraph">클라우드 백업은 인터넷 연결이 제한된 사이트("제한된 모드"라고도 함)에서 볼륨 데이터를 백업 및 복원하는 데 사용할 수 있습니다. 이 경우 제한된 영역에 BlueXP 커넥터를 배포해야 합니다.</block>
+  <block id="0a4d3b56b9c686b7377816bc81da68bb" category="paragraph">Cloud Backup은 인터넷에 연결되지 않은 사이트("비공개 모드" 또는 "다크" 사이트라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 경우 어두운 사이트에 BlueXP 커넥터를 배포해야 합니다.</block>
+  <block id="b2b373cdd55c0c4cdd45eaaa104c1c58" category="paragraph">모든 볼륨의 시간별, 일별, 주별, 월별 및 연도별 백업을 조합하여 선택할 수 있습니다. 볼륨에 적용된 스냅샷 정책은 Cloud Backup에서 인식하는 정책 중 하나여야 하며, 그렇지 않으면 백업 파일이 생성되지 않습니다. 또한 3개월, 1년 및 7년 동안 백업 및 보존을 제공하는 시스템 정의 정책 중 하나를 선택할 수도 있습니다. 이러한 정책은 다음과 같습니다.</block>
 </blocks>
