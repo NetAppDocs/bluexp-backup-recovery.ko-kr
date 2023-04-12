@@ -95,9 +95,19 @@ ONTAP 백업 파일에서 다음 작업 환경으로 볼륨, 폴더 또는 개�
 
 클라우드 백업은 인터넷 연결이 제한된 사이트("제한된 모드"라고도 함)에서 볼륨 데이터를 백업 및 복원하는 데 사용할 수 있습니다. 이 경우 제한된 영역에 BlueXP 커넥터를 배포해야 합니다.
 
+ifdef::aws[]
+
 * AWS 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3에 백업할 수 있습니다. 을 참조하십시오 link:task-backup-to-s3.html["Cloud Volumes ONTAP 데이터를 Amazon S3에 백업"].
+
+
+endif::aws[]
+
+ifdef::azure[]
+
 * Azure 상용 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Azure Blob으로 백업할 수 있습니다. 을 참조하십시오 link:task-backup-to-azure.html["Azure Blob에 Cloud Volumes ONTAP 데이터 백업"].
 
+
+endif::azure[]
 
 
 
@@ -105,8 +115,14 @@ ONTAP 백업 파일에서 다음 작업 환경으로 볼륨, 폴더 또는 개�
 
 Cloud Backup은 인터넷에 연결되지 않은 사이트("비공개 모드" 또는 "다크" 사이트라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 경우 어두운 사이트에 BlueXP 커넥터를 배포해야 합니다.
 
-* 로컬 사내 ONTAP 시스템에서 로컬 NetApp StorageGRID 시스템으로 데이터를 백업할 수 있습니다. 을 참조하십시오 link:task-backup-onprem-private-cloud.html["사내 ONTAP 데이터를 StorageGRID에 백업"] 를 참조하십시오.
+* 로컬 사내 ONTAP 시스템에서 로컬 NetApp StorageGRID 시스템으로 데이터를 백업할 수 있습니다. 을 참조하십시오 link:task-backup-onprem-private-cloud.html["사내 ONTAP 데이터를 StorageGRID에 백업"] 를 참조하십시오. ifdef::AWS[]
 
+
+endif::aws[]
+
+ifdef::azure[]
+
+endif::azure[]
 
 
 
@@ -416,8 +432,7 @@ endif::gcp[]
 
 === 백업 제한 사항
 
-* 이전 백업 파일을 아카이브 스토리지에 계층화하려면 클러스터에서 ONTAP 9.10.1 이상이 실행되고 있어야 합니다. 아카이브 스토리지에 있는 백업 파일에서 볼륨을 복원하려면 대상 클러스터에서 ONTAP 9.10.1 이상이 실행되고 있어야 합니다.
-* 정책에 할당된 볼륨이 없을 때 백업 정책을 생성하거나 편집할 때 유지되는 백업 수는 최대 1018개가 될 수 있습니다. 이 문제를 해결하려면 정책을 생성할 백업 수를 줄일 수 있습니다. 그런 다음 정책에 볼륨을 할당한 후 정책을 편집하여 최대 4000개의 백업을 생성할 수 있습니다.
+* 정책에 할당된 볼륨이 없을 때 백업 정책을 생성하거나 편집할 때 유지되는 백업 수는 최대 1018개가 될 수 있습니다. 정책에 볼륨을 할당한 후 정책을 편집하여 최대 4000개의 백업을 생성할 수 있습니다.
 * 데이터 보호(DP) 볼륨 백업 시:
 +
 ** SnapMirror 레이블 'app_consistent' 및 'all_source_snapshot'과의 관계는 클라우드에 백업되지 않습니다.

@@ -1273,7 +1273,6 @@
   <block id="a9f8eef7fdd18a9397fd96b661adbbf3" category="cell">Google 사내 ONTAP 시스템의 Cloud Volumes ONTAP::GCP []</block>
   <block id="50447057d0b53e52a90454c49619b112" category="list-text">아카이브 스토리지로 이동한 백업 파일에서 볼륨 데이터를 복구해야 하는 경우, 클라우드 공급자로부터 추가 Per-GiB 검색 비용 및 요청당 수수료를 받을 수 있습니다.</block>
   <block id="7f4e982bcc5753d9d97c31f1f4d46a2b" category="paragraph">백업 서비스에 대한 비용을 지불하는 방법에는 세 가지가 있습니다. 첫 번째 옵션은 클라우드 공급자를 구독하는 것입니다. 구독하면 매월 요금을 지불할 수 있습니다. 두 번째 옵션은 연간 계약을 얻는 것입니다. 세 번째 옵션은 NetApp에서 직접 라이센스를 구매하는 것입니다. 를 읽습니다 <block ref="b839456cc57645a9392f4db60a4f044a" category="inline-xref-macro-rx"></block> 섹션을 참조하십시오.</block>
-  <block id="1ab00b260d8ce265da81957e2ab8768a" category="list-text">이전 백업 파일을 아카이브 스토리지에 계층화하려면 클러스터에서 ONTAP 9.10.1 이상이 실행되고 있어야 합니다. 아카이브 스토리지에 있는 백업 파일에서 볼륨을 복원하려면 대상 클러스터에서 ONTAP 9.10.1 이상이 실행되고 있어야 합니다.</block>
   <block id="54bddc4e25a88aae05bb69520422c997" category="list-text">구독하면 무료 평가판이 종료된 후에도 서비스가 중단되지 않습니다. 평가판이 종료되면 백업하는 데이터의 양에 따라 매시간 요금이 부과됩니다.</block>
   <block id="5f5358182364ef304e26de4fc2395537" category="list-text">BYOL 라이센스에서 허용하는 것보다 더 많은 데이터를 백업하는 경우 용량제 가입형 모델을 통해 데이터 백업을 계속 수행할 수 있습니다. 예를 들어, 10TiB BYOL 라이센스가 있는 경우 PAYGO 구독을 통해 10TiB를 초과하는 모든 용량이 충전됩니다.</block>
   <block id="49871198f1fc79f432cd047f40a00a48" category="paragraph">클라우드 백업을 위한 몇 가지 PAYGO 계획이 있습니다.</block>
@@ -3424,7 +3423,6 @@
   <block id="f791bc685c526af8296381acff10f6a0" category="list-text">* 케이스 종료 *: 케이스를 닫는 이유에 대한 세부 정보를 제공하고 * 케이스 닫기 * 를 클릭합니다.</block>
   <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">표의 마지막 열에서 메뉴를 선택한 후 수행할 수 있는 작업을 보여 주는 스크린샷</block>
   <block id="e9a5c374fb47ed2ae5cc6108fb36d829" category="paragraph"><block ref="e9a5c374fb47ed2ae5cc6108fb36d829" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2336f5fb78c2a5c8f2076f882bd71161" category="list-text">로컬 사내 ONTAP 시스템에서 로컬 NetApp StorageGRID 시스템으로 데이터를 백업할 수 있습니다. 을 참조하십시오 <block ref="14e7f2dcf692810422b10a89547f7ac5" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="a5e6246728060cb5f413df6fa5adbf0c" category="inline-link-macro">Azure Blob에 Cloud Volumes ONTAP 데이터 백업</block>
   <block id="9d5cd7f5faccdd3ae5ba70e594cc061f" category="list-text">현재 오브젝트 저장소의 WORM/Compliance 모드는 Amazon S3, Azure 및 StorageGRID에서 지원됩니다. 이를 DataLock 기능이라고 하며 클라우드 공급자 인터페이스를 사용하지 않고 Cloud Backup 설정을 사용하여 관리해야 합니다.</block>
   <block id="1eea998a6969261ae6e45e41459d7ae2" category="list-text">ONTAP 9.13.0 이상을 사용하는 경우 찾아보기 및 복원, 검색 및 복원 기능을 사용하여 폴더 내의 모든 파일 및 하위 폴더와 함께 폴더를 복원할 수 있습니다.</block>
@@ -3639,4 +3637,6 @@
   <block id="ff130d4d587ae9b0b25a1a56ae928634" category="paragraph">클라우드 백업은 인터넷 연결이 제한된 사이트("제한된 모드"라고도 함)에서 볼륨 데이터를 백업 및 복원하는 데 사용할 수 있습니다. 이 경우 제한된 영역에 BlueXP 커넥터를 배포해야 합니다.</block>
   <block id="0a4d3b56b9c686b7377816bc81da68bb" category="paragraph">Cloud Backup은 인터넷에 연결되지 않은 사이트("비공개 모드" 또는 "다크" 사이트라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 경우 어두운 사이트에 BlueXP 커넥터를 배포해야 합니다.</block>
   <block id="b2b373cdd55c0c4cdd45eaaa104c1c58" category="paragraph">모든 볼륨의 시간별, 일별, 주별, 월별 및 연도별 백업을 조합하여 선택할 수 있습니다. 볼륨에 적용된 스냅샷 정책은 Cloud Backup에서 인식하는 정책 중 하나여야 하며, 그렇지 않으면 백업 파일이 생성되지 않습니다. 또한 3개월, 1년 및 7년 동안 백업 및 보존을 제공하는 시스템 정의 정책 중 하나를 선택할 수도 있습니다. 이러한 정책은 다음과 같습니다.</block>
+  <block id="11222d6b8c3052f6f5e7aaaa5b23b929" category="list-text">로컬 사내 ONTAP 시스템에서 로컬 NetApp StorageGRID 시스템으로 데이터를 백업할 수 있습니다. 을 참조하십시오 <block ref="14e7f2dcf692810422b10a89547f7ac5" category="inline-link-macro-rx"></block> 를 참조하십시오. ifdef::AWS[]</block>
+  <block id="3835d8f8839ebb8c540019c7da03ff7a" category="list-text">정책에 할당된 볼륨이 없을 때 백업 정책을 생성하거나 편집할 때 유지되는 백업 수는 최대 1018개가 될 수 있습니다. 정책에 볼륨을 할당한 후 정책을 편집하여 최대 4000개의 백업을 생성할 수 있습니다.</block>
 </blocks>
