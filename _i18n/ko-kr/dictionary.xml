@@ -365,7 +365,6 @@
   <block id="e386c51e8b46e9dad6f19dc36fbfc831" category="doc">Cloud Backup에 대해 자세히 알아보십시오</block>
   <block id="1619bac39deaef2fc2adb60633af222f" category="paragraph">필요한 경우 백업에서 전체 _volume_을 동일하거나 다른 작업 환경으로 복원할 수 있습니다. ONTAP 데이터를 백업할 때 또는 백업에서 하나 이상의 _files_를 동일하거나 다른 작업 환경으로 복원하도록 선택할 수도 있습니다.</block>
   <block id="b8d82fc8540bcb0b292930e59ebdd4dd" category="inline-link-macro">Cloud Backup에 대해 자세히 알아보십시오</block>
-  <block id="44eb910aad595ba9500cebcb52445bcf" category="paragraph">백업 및 복원을 사용하여 다음을 수행할 수 있습니다.</block>
   <block id="02fe91ecafd3cfc37675f0776294605f" category="inline-link-macro">자세한 기능은 여기 에서 확인하십시오</block>
   <block id="b5f2f8ae72382a141b81a0a0040bdad2" category="section-title">백업은 자정에 수행됩니다</block>
   <block id="9d4d346f8d68a04c07546d05864bce31" category="list-text">매시간 백업은 시간 5분 전에 매시간 시작됩니다.</block>
@@ -374,8 +373,6 @@
   <block id="e029f5798c244f87b310df92d9b4527f" category="list-text">매월 백업은 매월 첫 번째 날에 자정이 지난 직후에 시작됩니다.</block>
   <block id="fab27e4b9f13b45f921fe1c7f42ffac1" category="section-title">백업 복사본은 NetApp 계정과 연결됩니다</block>
   <block id="ac252743de820aac9183d9f76d4bed67" category="inline-link">NetApp 계정</block>
-  <block id="3ce3233955186ca42fd073f31c7b98aa" category="paragraph">백업 복사본은 와 연결됩니다<block ref="5c84ace7b3e4263476ddf0c264272cee" category="inline-link-rx"></block> 커넥터가 있는 위치.</block>
-  <block id="20c092d8421a998d3ac6aa33a55628ba" category="paragraph">동일한 NetApp 계정에 여러 커넥터가 있는 경우 각 커넥터는 동일한 백업 목록을 표시합니다. 여기에는 Cloud Volumes ONTAP 및 다른 커넥터의 온-프레미스 ONTAP 인스턴스와 연결된 백업이 포함됩니다.</block>
   <block id="18a6c204240510c87aba39d6d8b5d26b" category="doc">온프레미스 애플리케이션 데이터를 보호합니다</block>
   <block id="bc2c0309ab805c8d369345a992e020bd" category="paragraph">애플리케이션 데이터를 클라우드 서비스에 백업하기 전에 다음 요구 사항을 읽고 지원되는 구성이 있는지 확인합니다.</block>
   <block id="c3ce6809be6bdc67ae978395484d0585" category="list-text">ONTAP 9.8 이상</block>
@@ -2102,7 +2099,6 @@
   <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">고객 수준 계정이 있는 경우 하나 이상의 NSS 계정을 추가할 수 있습니다.</block>
   <block id="d0a875b745f9b38ce0c00471ccf26254" category="list-text">비공개 연결 - VPN 또는 Google Cloud Interconnect를 사용하고 사설 IP 주소를 사용하는 전용 Google Access 인터페이스를 통해 트래픽을 라우팅합니다.</block>
   <block id="ac66cfcf395ec1521c28c0c64a6aac63" category="paragraph">대부분의 경우 모든 백업 작업에 BlueXP UI를 사용합니다. 그러나 ONTAP 9.9.1부터 ONTAP 시스템 관리자를 사용하여 사내 ONTAP 클러스터의 볼륨 백업 작업을 시작할 수 있습니다.<block ref="b4b04e1b4b3140ad1e0e3c0a94c9c848" category="inline-link-rx"></block></block>
-  <block id="bf2b1bf7aed8d75654bb42a8a53d6a96" category="paragraph">백업 복사본은 BlueXP가 클라우드 계정에 생성하는 객체 저장소에 저장됩니다. 클러스터/작업 환경당 하나의 오브젝트 저장소가 있으며 BlueXP에서는 오브젝트 저장소의 이름을 "NetApp-backup-clusteruuid"로 지정합니다. 이 오브젝트 저장소를 삭제하지 마십시오.</block>
   <block id="e33931549f252451d72b5664ade6ecf0" category="list-text">AWS에서 BlueXP는 를 활성화합니다<block ref="b38667957fcdf9b9da65b213e7fb2492" category="inline-link-rx"></block> S3 버킷에서.</block>
   <block id="4dee49a9c46b2664e49d7142dc11104d" category="list-text">Azure에서 BlueXP는 Blob 컨테이너용 저장소 계정이 있는 새 리소스 그룹 또는 기존 리소스 그룹을 사용합니다. BlueXP<block ref="a7068b8d2b60241ce77a1051f3a66ed5" category="inline-link-rx"></block> 기본적으로 사용됩니다.</block>
   <block id="59cbb06daac31886728833270d8bf9a2" category="list-text">GCP에서 BlueXP는 Google Cloud Storage 버킷의 스토리지 계정이 있는 신규 또는 기존 프로젝트를 사용합니다.</block>
@@ -3439,8 +3435,6 @@
   <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">이 옵션을 사용하면 다시 로그인하라는 메시지가 표시됩니다. 이러한 계정의 토큰은 90일 후에 만료됩니다. 이를 알리는 알림이 게시됩니다.</block>
   <block id="aa581d4a856d4e4b679f430d75b6675b" category="list-text">Cloud Volumes ONTAP 및 사내 ONTAP 시스템에서 ONTAP 볼륨 데이터를 백업 및 복원합니다. <block ref="3033f928f79d30b4398dcd6d1b71f659" category="inline-link-macro-rx"></block>.</block>
   <block id="0ddf34ad5270eddf503a40460693fa5f" category="list-text">Kubernetes 영구 볼륨 백업 및 복원 <block ref="03139d1d874301f535e307718cfea817" category="inline-link-macro-rx"></block>.</block>
-  <block id="630b6fb489bd2a5285488f531d84037b" category="list-text">클라우드 백업 for Applications를 사용하여 사내 ONTAP 시스템에서 애플리케이션 정합성을 보장하는 스냅샷을 백업합니다. <block ref="0cae341dd31c4bfca67f66dd24fe06e1" category="inline-link-macro-rx"></block>.</block>
-  <block id="8c9003b0bb11b5538760df9871279172" category="admonition">BlueXP Connector가 클라우드의 정부 지역 또는 인터넷 액세스가 없는 사이트(어두운 사이트)에 구축된 경우 클라우드 백업은 ONTAP 시스템의 백업 및 복원 작업만 지원합니다. 이러한 유형의 구축 방법을 사용할 경우 Cloud Backup은 Kubernetes 클러스터, 애플리케이션 또는 가상 시스템의 백업 및 복원 작업을 지원하지 않습니다.</block>
   <block id="01e76ab0dacc58799dc14adbdc705ac7" category="section-title">2023년 3월 9일</block>
   <block id="35203f05692d5cc102a5525bf4de9733" category="section-title">이제 폴더 레벨 복구 작업에 모든 하위 폴더 및 파일이 포함됩니다</block>
   <block id="5463242c7cc34f92b5dbbf1ab6d87188" category="paragraph">이전에는 폴더를 복원했을 때 해당 폴더의 파일만 복원되었고 하위 폴더 또는 하위 폴더의 파일은 복원되지 않았습니다. 이제 ONTAP 9.13.0 이상을 사용하는 경우 선택한 폴더에 있는 모든 하위 폴더와 파일이 복원됩니다. 따라서 최상위 폴더에 여러 개의 중첩된 폴더가 있는 경우 많은 시간과 비용을 절약할 수 있습니다.</block>
@@ -3549,8 +3543,6 @@
   <block id="b8507c62b8182b29a382ffefc9fab5f2" category="list-text">Azure 상용 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Azure Blob으로 백업할 수 있습니다. 을 참조하십시오 <block ref="ab5c78f08c8780b598ee1d4de19230ab" category="inline-link-macro-rx"></block>.</block>
   <block id="a6a4730c10b1358f1c9def7ffe4b5b3e" category="summary">BlueXP 백업 및 복구(클라우드 백업)는 사내 및 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 시스템에 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.</block>
   <block id="7eb9cafcf06d2b2e35409b3b19eebaa6" category="summary">BlueXP 백업 및 복구는 사내 및 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 머신에 대해 효율적이고 안전하며 비용 효율적인 데이터 보호 기능을 제공합니다. 백업은 자동으로 생성되어 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 저장됩니다.</block>
-  <block id="4e16c93a7a40b92bf4ddc82057092a1f" category="paragraph">BlueXP 백업 및 복구(클라우드 백업)는 사내 및 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 시스템에 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다. 백업은 자동으로 생성되어 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 저장됩니다.</block>
-  <block id="d875f19aed16817841128703d062f580" category="paragraph">이 서비스는 블록 레벨, 영구 증분 복제를 수행하고 모든 스토리지 효율성을 보존하여 복제 및 저장되는 데이터 양을 크게 줄입니다. 또한, 보호되는 스토리지 계층에 대해서만 비용을 지불하고 가장 저렴한 스토리지 계층을 사용하여 Cloud Backup을 매우 비용 효율적으로 사용할 수 있습니다.</block>
   <block id="042a30f816a9f3db4f832c68a750cbd0" category="paragraph">시작 시간은 각 소스 ONTAP 시스템에 설정된 표준 시간대를 기준으로 합니다. UI에서 사용자가 지정한 시간에 백업 작업을 예약할 수 없습니다. 자세한 내용은 시스템 엔지니어에게 문의하십시오.</block>
   <block id="f6c25edb13a1fb5bd6c5a94f498065a2" category="summary">몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Amazon S3 스토리지로의 볼륨 데이터 백업을 시작하십시오.</block>
   <block id="1034847477ed5a052dde5a113bf49af2" category="paragraph">Cloud Backup은 Connector가 온프레미스에 설치되어 있지 않고 클라우드에 구축된 경우 GovCloud 지역에서 지원됩니다. 또한 AWS Marketplace에서 Connector를 구축해야 합니다. BlueXP SaaS 웹 사이트에서 정부 지역에 Connector를 배포할 수 없습니다.</block>
@@ -3639,4 +3631,13 @@
   <block id="b2b373cdd55c0c4cdd45eaaa104c1c58" category="paragraph">모든 볼륨의 시간별, 일별, 주별, 월별 및 연도별 백업을 조합하여 선택할 수 있습니다. 볼륨에 적용된 스냅샷 정책은 Cloud Backup에서 인식하는 정책 중 하나여야 하며, 그렇지 않으면 백업 파일이 생성되지 않습니다. 또한 3개월, 1년 및 7년 동안 백업 및 보존을 제공하는 시스템 정의 정책 중 하나를 선택할 수도 있습니다. 이러한 정책은 다음과 같습니다.</block>
   <block id="11222d6b8c3052f6f5e7aaaa5b23b929" category="list-text">로컬 사내 ONTAP 시스템에서 로컬 NetApp StorageGRID 시스템으로 데이터를 백업할 수 있습니다. 을 참조하십시오 <block ref="14e7f2dcf692810422b10a89547f7ac5" category="inline-link-macro-rx"></block> 를 참조하십시오. ifdef::AWS[]</block>
   <block id="3835d8f8839ebb8c540019c7da03ff7a" category="list-text">정책에 할당된 볼륨이 없을 때 백업 정책을 생성하거나 편집할 때 유지되는 백업 수는 최대 1018개가 될 수 있습니다. 정책에 볼륨을 할당한 후 정책을 편집하여 최대 4000개의 백업을 생성할 수 있습니다.</block>
+  <block id="bb280534703ad71e61cfe80a5fe858c8" category="paragraph">BlueXP 백업 및 복구(클라우드 백업)는 온프레미스 및 클라우드 모두에서 NetApp ONTAP 데이터, Kubernetes 영구 볼륨, 데이터베이스 및 가상 시스템에 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다. 백업은 자동으로 생성되어 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 저장됩니다.</block>
+  <block id="c046907d1d72e6426051e85493e0af8e" category="paragraph">이 서비스는 블록 레벨, 영구 증분 복제를 수행하고 모든 스토리지 효율성을 보존하여 복제 및 저장되는 데이터 양을 크게 줄입니다. 또한, 고객은 보호되는 스토리지 계층에 대해서만 비용을 지불하고 가장 저렴한 스토리지 계층을 사용하여 Cloud Backup을 매우 비용 효율적으로 사용할 수 있습니다.</block>
+  <block id="56387194e2baefbedf3b4e19ea5780fe" category="paragraph">백업 및 복구를 사용하여 다음을 수행할 수 있습니다.</block>
+  <block id="48bcb85cafc1f72efb03d9b2b5ed82c5" category="list-text">클라우드 백업 for Applications를 사용하여 사내 ONTAP 시스템에서 애플리케이션 정합성을 보장하는 스냅샷을 백업합니다. <block ref="0cae341dd31c4bfca67f66dd24fe06e1" category="inline-link-macro-rx"></block>.</block>
+  <block id="df405fcd52dd910b780660dd568c32f0" category="admonition">BlueXP Connector가 클라우드의 정부 지역 또는 인터넷 액세스가 없는 사이트(어두운 사이트)에 배포되면 클라우드 백업은 ONTAP 시스템의 백업 및 복원 작업만 지원합니다. 이러한 유형의 구축 방법을 사용할 경우 Cloud Backup은 Kubernetes 클러스터, 애플리케이션 또는 가상 시스템의 백업 및 복원 작업을 지원하지 않습니다.</block>
+  <block id="06548d8c3dd532a955281943d00e4ae0" category="paragraph">다음 이미지는 구성 요소 간의 관계를 보여 줍니다.</block>
+  <block id="27af9a77d19fed3cc5992a809811dc11" category="paragraph">백업 복사본은 BlueXP가 클라우드 계정에 생성하는 객체 저장소에 저장됩니다. 클러스터/작업 환경당 하나의 오브젝트 저장소가 있으며 BlueXP에서는 다음과 같이 오브젝트 저장소의 이름을 지정합니다.<block ref="395f30b009fd80d4c1cba9bc07db445d" prefix=" " category="inline-code"></block>. 이 오브젝트 저장소를 삭제하지 마십시오.</block>
+  <block id="6433bf341a35460ce346cdf0fc05e1b8" category="paragraph">백업 복사본은 와 연결됩니다<block ref="5c84ace7b3e4263476ddf0c264272cee" category="inline-link-rx"></block> BlueXP 커넥터가 있는 위치.</block>
+  <block id="610778054da9c0e7c61921555da9ddc9" category="paragraph">동일한 NetApp 계정에 여러 커넥터가 있는 경우 각 Connector는 동일한 백업 목록을 표시합니다. 여기에는 Cloud Volumes ONTAP 및 다른 커넥터의 온-프레미스 ONTAP 인스턴스와 연결된 백업이 포함됩니다.</block>
 </blocks>
