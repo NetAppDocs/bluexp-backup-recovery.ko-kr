@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-add-host-discover-oracle-databases.html 
-keywords: Cloud Manager, BlueXP, SnapCenter Plug-in for Oracle, Oracle, database, host, deploy, add host, discover 
-summary: 각 Oracle 데이터베이스 호스트에 Oracle용 SnapCenter 플러그인을 구축합니다. 
+keywords: Cloud Manager, BlueXP, SnapCenter Plug-in for Oracle, Oracle, database, host, install, add host, discover 
+summary: 각 Oracle 데이터베이스 호스트에 Oracle용 SnapCenter 플러그인을 설치합니다. 
 ---
-= Oracle용 SnapCenter 플러그인을 구축하고 데이터베이스 호스트를 추가합니다
+= Oracle용 SnapCenter 플러그인을 설치하고 데이터베이스 호스트를 추가합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,15 +14,15 @@ summary: 각 Oracle 데이터베이스 호스트에 Oracle용 SnapCenter 플러�
 
 
 [role="lead"]
-각 Oracle 데이터베이스 호스트에 Oracle용 SnapCenter 플러그인을 구축하고, 데이터베이스 호스트를 추가하고, 호스트에서 데이터베이스를 검색하여 정책을 할당하고, 백업을 생성해야 합니다.
+각 Oracle 데이터베이스 호스트에 Oracle용 SnapCenter 플러그인을 설치하고, 데이터베이스 호스트를 추가하고, 호스트에서 데이터베이스를 검색하여 정책을 할당하고, 백업을 생성해야 합니다.
 
-* 데이터베이스 호스트에 대해 SSH가 설정된 경우 다음 방법 중 하나를 사용하여 플러그인을 배포할 수 있습니다.
+* 데이터베이스 호스트에 대해 SSH가 설정된 경우 다음 방법 중 하나를 사용하여 플러그인을 설치할 수 있습니다.
 +
-** 플러그인을 배포하고 SSH 옵션을 사용하여 UI를 호스트에 추가합니다. <<SSH 옵션을 사용하여 플러그인을 배포하고 UI에서 호스트를 추가합니다,자세한 정보>>.
-** 스크립트를 사용하여 플러그인을 배포하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다. <<스크립트를 사용하여 플러그인을 배포하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다,자세한 정보>>.
+** SSH 옵션을 사용하여 플러그인을 설치하고 UI에서 호스트를 추가합니다. <<SSH 옵션을 사용하여 UI에서 호스트를 추가합니다,자세한 정보>>.
+** 스크립트를 사용하여 플러그인을 설치하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다. <<스크립트를 사용하여 플러그인을 설치하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다,자세한 정보>>.
 
 
-* SSH가 비활성화된 경우 수동으로 플러그인을 배포하고 UI에서 수동 옵션을 사용하여 호스트를 추가합니다. <<수동으로 플러그인을 배포하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다,자세한 정보>>.
+* SSH가 비활성화된 경우 수동으로 플러그인을 설치하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다. <<수동으로 플러그인을 설치하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다,자세한 정보>>.
 
 
 
@@ -33,42 +33,29 @@ summary: 각 Oracle 데이터베이스 호스트에 Oracle용 SnapCenter 플러�
 
 * 작업 환경과 커넥터를 만들어야 합니다.
 * Connector가 작업 환경 및 Oracle 데이터베이스 호스트에 연결되어 있는지 확인합니다.
++
+연결 문제를 해결하는 방법에 대한 자세한 내용은 을 참조하십시오 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Cloud_Backup_Application_Failed_to_validate_connectivity_from_BlueXP_connector_host_to_application_database_host["BlueXP 커넥터 호스트에서 애플리케이션 데이터베이스 호스트로의 연결을 확인하지 못했습니다"].
+
++
+커넥터를 분실하거나 새 커넥터를 만든 경우 커넥터를 기존 응용 프로그램 리소스에 연결해야 합니다. 커넥터 업데이트에 대한 지침은 을 참조하십시오 link:task-manage-cloud-native-app-data.html#update-the-connector-details["커넥터 세부 정보를 업데이트합니다"].
+
 * BlueXP 사용자에게 "계정 관리자" 역할이 있는지 확인합니다.
 * 각 Oracle 데이터베이스 호스트에 Java 11(64비트) Oracle Java 또는 OpenJDK가 설치되어 있고 JAVA_HOME 변수가 적절하게 설정되어 있는지 확인합니다.
-* SnapCenter 사용자를 생성하고 SnapCenter 사용자에 대해 sudo를 구성해야 합니다. 자세한 내용은 을 참조하십시오 <<SnapCenter 사용자에 대해 sudo를 구성합니다>>.
-* SSH 기반 구축을 사용하는 경우 커넥터가 SSH 포트에 대해 통신을 활성화했는지 확인합니다(기본값: 22).
-* 커넥터가 작동을 위해 플러그인 포트(기본값: 8145)에 대한 통신을 활성화했는지 확인합니다.
+* SSH 기반 설치를 수행하는 경우 커넥터에 SSH 포트에 대한 통신이 활성화되어 있는지 확인합니다(기본값: 22).
+* 데이터 보호 작업이 작동하려면 커넥터에 플러그인 포트(기본값: 8145)에 대한 통신이 활성화되어 있는지 확인합니다.
+* 최신 버전의 플러그인이 설치되어 있는지 확인합니다. 플러그인을 업그레이드하려면 를 참조하십시오 <<Oracle 데이터베이스용 SnapCenter 플러그인을 업그레이드하십시오>>.
+* 애플리케이션 호스트에서 비 루트(sudo) 계정을 생성합니다.
 
 
 
 
-=== SnapCenter 사용자에 대해 sudo를 구성합니다
-
-SnapCenter 사용자를 생성하고 사용자에 대해 sudo를 구성해야 합니다.
-
-* 단계 *
-
-. Connector VM에 로그인합니다.
-. SnapCenter Linux 호스트 플러그인 바이너리를 다운로드합니다. S UDO Docker Exec - IT cloudmanager_scs_cloud curl-X get 'http://127.0.0.1/deploy/downloadLinuxPlugin'`[]
-. 기본 마운트 경로를 가져옵니다. 'SUDO Docker 볼륨 ls | grep scs_cloud_volume | awk {'print$2'} | xargs sudo Docker 볼륨 검사 | grep mountpoint'
-. _base_mount_path_/_version_/sc-linux-host-plugin/ * 에 있는 * oracle_checksum_scs.txt * 파일에서 1에서 16으로 행을 복사합니다.
-. Oracle 데이터베이스 호스트에 로그인하고 다음 단계를 수행합니다.
-+
-.. SnapCenter 사용자 계정, 개인 키 쌍을 만들고 권한을 할당합니다. 자세한 내용은 을 참조하십시오 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/managing-users.html#create-user-account["사용자 계정을 만듭니다"^].
-.. visudo Linux 유틸리티를 사용하여 4단계에서 복사한 행을 _/etc/sudoers_file에 붙여 넣습니다.
-+
-위의 줄에서 <LINUXUSER>를 만든 SnapCenter 사용자로 바꾸고 파일을 visudo 유틸리티에 저장합니다.
-
-
-
-
-
-
-
-== SSH 옵션을 사용하여 플러그인을 배포하고 UI에서 호스트를 추가합니다
+== SSH 옵션을 사용하여 UI에서 호스트를 추가합니다
 
 . BlueXP UI에서 * 보호 * > * 백업 및 복구 * > * 응용 프로그램 * 을 클릭합니다.
-. 응용 프로그램 검색을 클릭합니다.
++
+호스트를 이미 추가했고 다른 호스트를 추가하려면 * 응용 프로그램 * > * 데이터베이스 관리 * > * 추가 * 를 클릭한 다음 5단계를 진행합니다.
+
+. 응용 프로그램 검색 * 을 클릭합니다.
 . Cloud Native * 를 선택하고 * Next * 를 클릭합니다.
 +
 이 계정의 모든 사용자에 대해 예약된 데이터 보호 작업을 수행하기 위해 _SnapCenter 시스템_역할이 있는 서비스 계정이 생성됩니다.
@@ -77,21 +64,25 @@ SnapCenter 사용자를 생성하고 사용자에 대해 sudo를 구성해야 �
 ** 서비스 계정을 보려면 * 계정 * > * 계정 관리 * > * 회원 * 을 클릭합니다.
 +
 
-NOTE: 서비스 계정(_SnapCenter-account-<AccountID>_)은 예약된 백업 작업을 실행하는 데 사용됩니다. 서비스 계정을 삭제해서는 안 됩니다.
+NOTE: 서비스 계정(_SnapCenter-account-<accountid>_)은 예약된 백업 작업을 실행하는 데 사용됩니다. 서비스 계정을 삭제해서는 안 됩니다.
 
 
 
-. 호스트 추가 페이지에서 다음을 수행합니다.
+. 애플리케이션 유형으로 Oracle을 선택합니다.
+. 호스트 세부 정보 페이지에서 다음을 수행합니다.
 +
 .. SSH * 를 사용하여 * 를 선택합니다.
 .. 플러그인을 설치할 호스트의 FQDN 또는 IP 주소를 지정합니다.
-.. 사용자 이름(<<Configure a sudo for SnapCenter user,sudo SnapCenter 사용자>>)를 사용하여 호스트에 플러그인 패키지를 복사합니다.
+.. 플러그인 패키지를 호스트에 복사할 때 사용하는 비 루트(sudo) 사용자를 지정합니다.
++
+루트 사용자는 지원되지 않습니다.
+
 .. SSH 및 플러그인 포트를 지정합니다.
 +
 기본 SSH 포트는 22이고 플러그인 포트는 8145입니다.
 
 +
-플러그인을 설치한 후 애플리케이션 호스트에서 SSH 포트를 닫을 수 있습니다. 다른 플러그인 작업에는 SSH 포트가 필요하지 않습니다.
+플러그인을 설치한 후 애플리케이션 호스트에서 SSH 포트를 닫을 수 있습니다. 데이터 보호 작업에 SSH 포트가 필요하지 않습니다.
 
 .. 커넥터 를 선택합니다.
 .. (선택 사항) Connector와 호스트 간에 키 없는 인증이 활성화되지 않은 경우 호스트와 통신하는 데 사용할 SSH 개인 키를 지정해야 합니다.
@@ -100,47 +91,42 @@ NOTE: 서비스 계정(_SnapCenter-account-<AccountID>_)은 예약된 백업 작
 NOTE: SSH 개인 키는 애플리케이션의 어느 곳에나 저장되지 않으며 다른 작업에 사용되지 않습니다.
 
 .. 다음 * 을 클릭합니다.
+
+
+. 구성 페이지에서 다음을 수행합니다.
 +
-*** 호스트의 모든 데이터베이스를 표시합니다. 데이터베이스에 대한 OS 인증이 비활성화된 경우 * 구성 * 을 클릭하여 데이터베이스 인증을 구성해야 합니다. 자세한 내용은 을 참조하십시오 <<Oracle 데이터베이스 자격 증명을 구성합니다>>.
-*** Settings * 를 클릭하고 * Hosts * 를 선택하여 모든 호스트를 봅니다. 데이터베이스 호스트를 제거하려면 * 제거 * 를 클릭합니다.
+.. 텍스트를 _ /etc/sudoers.d/snapcenter_file에 복사하여 비루트(sudo) 사용자에 대한 sudo 액세스를 구성합니다.
+.. 확인란을 선택하고 * 다음 * 을 클릭합니다.
+
+
+. 세부 정보를 검토하고 * 응용 프로그램 검색 * 을 클릭합니다.
++
+** 플러그인이 설치되면 검색 작업이 시작됩니다. Job Monitoring* 페이지에서 설치 작업을 모니터링할 수 있습니다.
+** 호스트의 모든 데이터베이스를 표시합니다. 데이터베이스에 대한 OS 인증이 비활성화된 경우 * 구성 * 을 클릭하여 데이터베이스 인증을 활성화합니다. 자세한 내용은 을 참조하십시오 <<Oracle 데이터베이스 자격 증명을 구성합니다>>.
+** Settings * 를 클릭하고 * Hosts * 를 선택하여 모든 호스트를 봅니다.
 +
 
 NOTE: 특정 호스트를 보기 위한 필터가 작동하지 않습니다. 필터에 호스트 이름을 지정하면 모든 호스트가 표시됩니다.
 
-*** 설정 * 을 클릭하고 * 정책 * 을 선택하여 미리 구성된 정책을 봅니다. 사전 구성된 정책을 검토하여 요구 사항에 맞게 정책을 편집하거나 새 정책을 생성할 수 있습니다.
+** 설정 * 을 클릭하고 * 정책 * 을 선택하여 미리 구성된 정책을 봅니다. 사전 구성된 정책을 검토하여 요구 사항에 맞게 정책을 편집하거나 새 정책을 생성할 수 있습니다.
 
 
 
 
 
 
+== 스크립트를 사용하여 플러그인을 설치하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다
 
+Oracle 호스트 비루트 사용자 계정에 대한 SSH 키 기반 인증을 구성하고 다음 단계를 수행하여 플러그인을 설치합니다.
 
-== 스크립트를 사용하여 플러그인을 배포하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다
+* 시작하기 전에 *
 
-SnapCenter 사용자에 대해 Oracle 호스트에서 SSH 키 기반 인증을 사용하는 경우 다음 단계를 수행하여 플러그인을 구축할 수 있습니다. 단계를 수행하기 전에 커넥터에 대한 SSH 연결이 활성화되어 있는지 확인합니다.
+커넥터에 대한 SSH 연결이 활성화되어 있는지 확인합니다.
 
 * 단계 *
 
-. Connector VM에 로그인합니다.
-. 기본 마운트 경로를 가져옵니다. 'SUDO Docker 볼륨 ls | grep scs_cloud_volume | awk {'print$2'} | xargs sudo Docker 볼륨 검사 | grep mountpoint'
-. Connector에 제공된 도우미 스크립트를 사용하여 플러그인을 배포합니다.
-`sudo <base_mount_path>/scripts/oracle_plugin_copy_and_install.sh --host <host_name> --sshkey <ssh_key_file> --username <user_name> --port <ssh_port> --pluginport <plugin_port> --installdir <install_dir>`
-+
-** host_name 은 Oracle 호스트의 이름이며 필수 매개 변수입니다.
-** SSH_KEY_FILE은 SnapCenter 사용자의 SSH 키이며 Oracle 호스트에 연결하는 데 사용됩니다. 필수 매개 변수입니다.
-** user_name: Oracle 호스트에서 SSH 권한을 가진 SnapCenter 사용자로, 이 매개 변수는 선택 사항입니다. 기본값은 EC2-user입니다.
-** SSH_PORT: Oracle 호스트의 SSH 포트이며 이는 선택적 매개 변수입니다. 기본값은 22입니다
-** plugin_port: 플러그인에서 사용하는 포트로, 이 매개 변수는 선택 사항입니다. 기본값은 8145입니다
-** install_dir: 플러그인이 배포될 디렉터리이며 선택적 매개 변수입니다. 기본값은 /opt입니다.
-+
-예를 들면 다음과 같습니다.
-`sudo /var/lib/docker/volumes/service-manager-2_cloudmanager_scs_cloud_volume/_data/scripts/oracle_plugin_copy_and_install.sh --host xxx.xx.x.x --sshkey /keys/netapp-ssh.ppk`
-
-
-
 . BlueXP UI에서 * 보호 * > * 백업 및 복구 * > * 응용 프로그램 * 을 클릭합니다.
-. 응용 프로그램 검색을 클릭합니다.
+. 응용 프로그램 검색 * 을 클릭합니다.
 . Cloud Native * 를 선택하고 * Next * 를 클릭합니다.
 +
 이 계정의 모든 사용자에 대해 예약된 데이터 보호 작업을 수행하기 위해 _SnapCenter 시스템_역할이 있는 서비스 계정이 생성됩니다.
@@ -149,14 +135,15 @@ SnapCenter 사용자에 대해 Oracle 호스트에서 SSH 키 기반 인증을 �
 ** 서비스 계정을 보려면 * 계정 * > * 계정 관리 * > * 회원 * 을 클릭합니다.
 +
 
-NOTE: 서비스 계정(_SnapCenter-account-<AccountID>_)은 예약된 백업 작업을 실행하는 데 사용됩니다. 서비스 계정을 삭제해서는 안 됩니다.
+NOTE: 서비스 계정(_SnapCenter-account-<accountid>_)은 예약된 백업 작업을 실행하는 데 사용됩니다. 서비스 계정을 삭제해서는 안 됩니다.
 
 
 
-. 호스트 추가 페이지에서 다음을 수행합니다.
+. 애플리케이션 유형으로 Oracle을 선택합니다.
+. 호스트 세부 정보 페이지에서 다음을 수행합니다.
 +
 .. 수동 * 을 선택합니다.
-.. 플러그인이 구축된 호스트의 FQDN 또는 IP 주소를 지정합니다.
+.. 플러그인이 설치된 호스트의 FQDN 또는 IP 주소를 지정합니다.
 +
 FQDN 또는 IP 주소를 사용하여 Connector가 데이터베이스 호스트와 통신할 수 있는지 확인합니다.
 
@@ -164,85 +151,119 @@ FQDN 또는 IP 주소를 사용하여 Connector가 데이터베이스 호스트�
 +
 기본 포트는 8145입니다.
 
+.. 플러그인 패키지를 호스트에 복사할 때 사용하는 비 루트(sudo) 사용자를 지정합니다.
 .. 커넥터 를 선택합니다.
-.. 호스트에 플러그인이 설치되어 있는지 확인하려면 확인란을 선택합니다
-.. 응용 프로그램 검색 * 을 클릭합니다.
+.. 호스트에 플러그인이 설치되어 있는지 확인하려면 확인란을 선택합니다.
+.. 다음 * 을 클릭합니다.
+
+
+. 구성 페이지에서 다음을 수행합니다.
 +
-*** 호스트의 모든 데이터베이스를 표시합니다. 데이터베이스에 대한 OS 인증이 비활성화된 경우 * 구성 * 을 클릭하여 데이터베이스 인증을 구성해야 합니다. 자세한 내용은 을 참조하십시오 <<Oracle 데이터베이스 자격 증명을 구성합니다>>.
-*** Settings * 를 클릭하고 * Hosts * 를 선택하여 모든 호스트를 봅니다. 데이터베이스 호스트를 제거하려면 * 제거 * 를 클릭합니다.
+.. 텍스트를 에 복사하여 SnapCenter 사용자에 대한 sudo 액세스를 구성합니다 `/etc/sudoers.d/snapcenter` 파일.
+.. 확인란을 선택하고 * 다음 * 을 클릭합니다.
+
+
+. Connector VM에 로그인합니다.
+. Connector에 제공된 스크립트를 사용하여 플러그인을 설치합니다.
+`sudo bash  /var/lib/docker/volumes/service-manager-2_cloudmanager_scs_cloud_volume/_data/scripts/linux_plugin_copy_and_install.sh --host <plugin_host> --username <host_user_name> --sshkey <host_ssh_key> --pluginport <plugin_port> --sshport <host_ssh_port>`
++
+** plugin_host 는 Oracle 호스트의 이름이며 필수 매개 변수입니다.
+** host_user_name은 Oracle 호스트에 대한 SSH 권한이 있는 SnapCenter 사용자이며 필수 매개 변수입니다.
+** host_ssh_key는 SnapCenter 사용자의 SSH 키이며 Oracle 호스트에 연결하는 데 사용됩니다. 필수 매개 변수입니다.
+** plugin_port 는 플러그인에서 사용하는 포트이며 선택적 매개 변수입니다. 기본값은 8145입니다
+** host_ssh_port는 Oracle 호스트의 SSH 포트이며 선택적 매개 변수입니다. 기본값은 22입니다
++
+예를 들면 다음과 같습니다.
+`sudo bash  /var/lib/docker/volumes/service-manager-2_cloudmanager_scs_cloud_volume/_data/scripts/linux_plugin_copy_and_install.sh --host 10.0.1.1 --username snapcenter --sshkey /keys/netapp-ssh.ppk`
+
+
+
+. 세부 정보를 검토하고 * 응용 프로그램 검색 * 을 클릭합니다.
++
+** 호스트의 모든 데이터베이스를 표시합니다. 데이터베이스에 대한 OS 인증이 비활성화된 경우 * 구성 * 을 클릭하여 데이터베이스 인증을 활성화합니다. 자세한 내용은 을 참조하십시오 <<Oracle 데이터베이스 자격 증명을 구성합니다>>.
+** Settings * 를 클릭하고 * Hosts * 를 선택하여 모든 호스트를 봅니다.
 +
 
 NOTE: 특정 호스트를 보기 위한 필터가 작동하지 않습니다. 필터에 호스트 이름을 지정하면 모든 호스트가 표시됩니다.
 
-*** 설정 * 을 클릭하고 * 정책 * 을 선택하여 미리 구성된 정책을 봅니다. 사전 구성된 정책을 검토하여 요구 사항에 맞게 정책을 편집하거나 새 정책을 생성할 수 있습니다.
+** 설정 * 을 클릭하고 * 정책 * 을 선택하여 미리 구성된 정책을 봅니다. 사전 구성된 정책을 검토하여 요구 사항에 맞게 정책을 편집하거나 새 정책을 생성할 수 있습니다.
 
 
 
 
 
 
+== 수동으로 플러그인을 설치하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다
 
-
-== 수동으로 플러그인을 배포하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다
-
-Oracle 데이터베이스 호스트에서 SSH 키 기반 인증이 활성화되지 않은 경우 다음 수동 단계를 수행하여 플러그인을 구축한 다음 수동 옵션을 사용하여 UI에서 호스트를 추가해야 합니다.
+Oracle 데이터베이스 호스트에서 SSH 키 기반 인증이 활성화되지 않은 경우 다음 수동 단계를 수행하여 플러그인을 설치한 다음 수동 옵션을 사용하여 UI에서 호스트를 추가해야 합니다.
 
 * 단계 *
 
+. BlueXP UI에서 * 보호 * > * 백업 및 복구 * > * 응용 프로그램 * 을 클릭합니다.
+. 응용 프로그램 검색 * 을 클릭합니다.
+. Cloud Native * 를 선택하고 * Next * 를 클릭합니다.
++
+이 계정의 모든 사용자에 대해 예약된 데이터 보호 작업을 수행하기 위해 _SnapCenter 시스템_역할이 있는 서비스 계정이 생성됩니다.
+
++
+** 서비스 계정을 보려면 * 계정 * > * 계정 관리 * > * 회원 * 을 클릭합니다.
++
+
+NOTE: 서비스 계정(_SnapCenter-account-<accountid>_)은 예약된 백업 작업을 실행하는 데 사용됩니다. 서비스 계정을 삭제해서는 안 됩니다.
+
+
+
+. 애플리케이션 유형으로 Oracle을 선택합니다.
+. Host details * 페이지에서 다음 작업을 수행합니다.
++
+.. 수동 * 을 선택합니다.
+.. 플러그인이 설치된 호스트의 FQDN 또는 IP 주소를 지정합니다.
++
+FQDN 또는 IP 주소를 사용하여 Connector가 데이터베이스 호스트와 통신할 수 있는지 확인합니다.
+
+.. 플러그인 포트를 지정합니다.
++
+기본 포트는 8145입니다.
+
+.. 플러그인 패키지를 호스트에 복사할 때 사용할 sudo non-root(sudo) 사용자를 지정합니다.
+.. 커넥터 를 선택합니다.
+.. 호스트에 플러그인이 설치되어 있는지 확인하려면 확인란을 선택합니다.
+.. 다음 * 을 클릭합니다.
+
+
+. 구성 * 페이지에서 다음 작업을 수행합니다.
++
+.. 텍스트를 에 복사하여 SnapCenter 사용자에 대한 sudo 액세스를 구성합니다 `/etc/sudoers.d/snapcenter` 파일.
+.. 확인란을 선택하고 * 다음 * 을 클릭합니다.
+
+
 . Connector VM에 로그인합니다.
 . SnapCenter Linux 호스트 플러그인 바이너리를 다운로드합니다. S UDO Docker Exec - IT cloudmanager_scs_cloud curl-X get 'http://127.0.0.1/deploy/downloadLinuxPlugin'`[]
-. 기본 마운트 경로를 가져옵니다. 'SUDO Docker 볼륨 ls | grep scs_cloud_volume | awk {'print$2'} | xargs sudo Docker 볼륨 검사 | grep mountpoint'
-. 다운로드한 플러그인의 바이너리 경로를 가져옵니다. sudo ls <base_mount_path>$(sudo docker PS | grep-Po "cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin/snapcenter_linux_host_plugin_scs.bin'
-. SCP 또는 다른 대체 방법을 사용하여 각 Oracle 데이터베이스 호스트에 _snapcenter_linux_host_plugin_scs.bin_을 복사합니다.
 +
-snapcenter_linux_host_plugin_scs.bin_은 SnapCenter 사용자가 액세스할 수 있는 위치에 복사해야 합니다.
+플러그인 바이너리는 _ cd /var/lib/docker/volumes/service-manager-2_cloudmanager_scs_cloud_volume/_data/$(sudo docker PS | grep-Po "cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin_
 
-. SnapCenter 사용자 계정을 사용하여 Oracle 데이터베이스 호스트에 로그인하고 다음 명령을 실행하여 바이너리에 대한 실행 권한을 활성화합니다.
+. SCP 또는 다른 대체 방법을 사용하여 각 Oracle 데이터베이스 호스트에 대해 _/home/<non root user (sudo)>/.SC_NetApp_path의 위 경로에서 copy_snapcenter_linux_host_plugin_scs.bin_
+. 비 루트(sudo) 계정을 사용하여 Oracle 데이터베이스 호스트에 로그인합니다.
+. 디렉토리를 _/home/<non root user>/.sc_netapp/_로 변경하고 다음 명령을 실행하여 바이너리에 대한 실행 권한을 활성화합니다.
 `chmod +x snapcenter_linux_host_plugin_scs.bin`
-. Oracle 플러그인을 sudo SnapCenter 사용자로 구축합니다.
-`./snapcenter_linux_host_plugin_scs.bin -i silent -DSPL_USER=<snapcenter-user>`
+. sudo SnapCenter 사용자로 Oracle 플러그인을 설치합니다.
+`./snapcenter_linux_host_plugin_scs.bin -i silent -DSPL_USER=<non-root>`
 . 플러그인 호스트의 커넥터 VM의 _/var/opt/snapcenter/spl/etc/_에서 _certificate.p12_from_<base_mount_path>/client/certificate/_path를 _ /var/opt/snapcenter/spl/etc/_로 복사합니다.
 . /var/opt/snapcenter/spl/etc_로 이동하고 keytool 명령을 실행하여 인증서를 가져옵니다. keytool -v -importkeystore -srckeystore certificate.p12 -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype jks -srcstorephass SnapCenter -deststorephass SnapCenter -srcalalas agentcert -alias destagentcert -not프롬프트
 . SPL을 다시 시작합니다:'stemctl restart SPL'
 . Connector에서 아래 명령을 실행하여 커넥터에서 플러그인에 연결할 수 있는지 확인합니다.
-`docker exec -it cloudmanager_scs_cloud curl -ik \https://<FQDN or IP of the plug-in host>:<plug-in port>/getVersion --cert /config/client/certificate/certificate.pem --key /config/client/certificate/key.pem`
-. BlueXP UI에서 * 보호 * > * 백업 및 복구 * > * 응용 프로그램 * 을 클릭합니다.
-. 응용 프로그램 검색을 클릭합니다.
-. Cloud Native * 를 선택하고 * Next * 를 클릭합니다.
+`docker exec -it cloudmanager_scs_cloud curl -ik \https://<FQDN or IP of the plug-in host>:<plug-in port>/PluginService/Version --cert /config/client/certificate/certificate.pem --key /config/client/certificate/key.pem`
+. 세부 정보를 검토하고 * 응용 프로그램 검색 * 을 클릭합니다.
 +
-이 계정의 모든 사용자에 대해 예약된 데이터 보호 작업을 수행하기 위해 _SnapCenter 시스템_역할이 있는 서비스 계정이 생성됩니다.
-
-+
-** 서비스 계정을 보려면 * 계정 * > * 계정 관리 * > * 회원 * 을 클릭합니다.
-+
-
-NOTE: 서비스 계정(_SnapCenter-account-<AccountID>_)은 예약된 백업 작업을 실행하는 데 사용됩니다. 서비스 계정을 삭제해서는 안 됩니다.
-
-
-
-. 호스트 추가 페이지에서 다음을 수행합니다.
-+
-.. 수동 * 을 선택합니다.
-.. 플러그인이 구축된 호스트의 FQDN 또는 IP 주소를 지정합니다.
-+
-FQDN 또는 IP 주소를 사용하여 Connector가 데이터베이스 호스트와 통신할 수 있는지 확인합니다.
-
-.. 플러그인 포트를 지정합니다.
-+
-기본 포트는 8145입니다.
-
-.. 커넥터 를 선택합니다.
-.. 호스트에 플러그인이 설치되어 있는지 확인하려면 확인란을 선택합니다
-.. 응용 프로그램 검색 * 을 클릭합니다.
-+
-*** 호스트의 모든 데이터베이스를 표시합니다. 데이터베이스에 대한 OS 인증이 비활성화된 경우 * 구성 * 을 클릭하여 데이터베이스 인증을 구성해야 합니다. 자세한 내용은 을 참조하십시오 <<Oracle 데이터베이스 자격 증명을 구성합니다>>.
-*** Settings * 를 클릭하고 * Hosts * 를 선택하여 모든 호스트를 봅니다. 데이터베이스 호스트를 제거하려면 * 제거 * 를 클릭합니다.
+** 호스트의 모든 데이터베이스를 표시합니다. 데이터베이스에 대한 OS 인증이 비활성화된 경우 * 구성 * 을 클릭하여 데이터베이스 인증을 활성화합니다. 자세한 내용은 을 참조하십시오 <<Oracle 데이터베이스 자격 증명을 구성합니다>>.
+** Settings * 를 클릭하고 * Hosts * 를 선택하여 모든 호스트를 봅니다.
 +
 
 NOTE: 특정 호스트를 보기 위한 필터가 작동하지 않습니다. 필터에 호스트 이름을 지정하면 모든 호스트가 표시됩니다.
 
-*** 설정 * 을 클릭하고 * 정책 * 을 선택하여 미리 구성된 정책을 봅니다. 사전 구성된 정책을 검토하여 요구 사항에 맞게 정책을 편집하거나 새 정책을 생성할 수 있습니다.
-
+** 설정 * 을 클릭하고 * 정책 * 을 선택하여 미리 구성된 정책을 봅니다. 사전 구성된 정책을 검토하여 요구 사항에 맞게 정책을 편집하거나 새 정책을 생성할 수 있습니다.
++
+BlueXP UI로 이동합니다.
 
 
 
@@ -252,11 +273,11 @@ NOTE: 특정 호스트를 보기 위한 필터가 작동하지 않습니다. 필
 
 == Oracle 데이터베이스 자격 증명을 구성합니다
 
-Oracle 데이터베이스에서 데이터 보호 작업을 수행하는 데 사용되는 자격 증명을 구성해야 합니다.
+Oracle 데이터베이스에서 데이터 보호 작업을 수행하는 데 사용되는 데이터베이스 자격 증명을 구성해야 합니다.
 
 * 단계 *
 
-. 데이터베이스에 대한 OS 인증이 비활성화된 경우 * 구성 * 을 클릭하여 데이터베이스 인증을 구성해야 합니다.
+. 데이터베이스에 대한 OS 인증이 비활성화된 경우 * 구성 * 을 클릭하여 데이터베이스 인증을 수정합니다.
 . 사용자 이름, 암호 및 포트 세부 정보를 지정합니다.
 +
 데이터베이스가 ASM에 있는 경우 ASM 설정도 구성해야 합니다.
@@ -265,4 +286,38 @@ Oracle 데이터베이스에서 데이터 보호 작업을 수행하는 데 사�
 Oracle 사용자는 sysdba 권한을 가지고 ASM 사용자는 sysasm 권한을 가지고 있어야 합니다.
 
 . 구성 * 을 클릭합니다.
+
+
+
+
+== Oracle 데이터베이스용 SnapCenter 플러그인을 업그레이드하십시오
+
+Oracle용 SnapCenter 플러그인을 업그레이드하여 최신 새 기능 및 향상된 기능에 액세스해야 합니다. BlueXP UI에서 또는 명령줄을 사용하여 업그레이드할 수 있습니다.
+
+* 시작하기 전에 *
+
+* 호스트에서 실행 중인 작업이 없는지 확인합니다.
+
+
+* 단계 *
+
+. 백업 및 복구 * > * 응용 프로그램 * > * 호스트 * 를 클릭합니다.
+. 전체 상태 열을 확인하여 호스트에 대해 플러그인 업그레이드를 사용할 수 있는지 확인합니다.
+. UI 또는 명령줄을 사용하여 플러그인을 업그레이드합니다.
++
+|===
+| UI를 사용하여 업그레이드합니다 | 명령줄을 사용하여 업그레이드합니다 
+
+
+ a| 
+.. 을 클릭합니다 image:icon-action.png["아이콘을 클릭하여 작업을 선택합니다"] 호스트에 해당되며 * Upgrade Plug-in * 을 클릭합니다.
+.. 확인란을 선택하고 * 업그레이드 * 를 클릭합니다.
+
+ a| 
+.. Connector VM에 로그인합니다.
+.. 다음 스크립트를 실행합니다.
+`sudo bash /var/lib/docker/volumes/service-manager-2_cloudmanager_scs_cloud_volume/_data/scripts/linux_plugin_copy_and_install.sh --host <plugin_host> --username <host_user_name> --sshkey <host_ssh_key> --pluginport <plugin_port> --sshport <host_ssh_port> --upgrade`
+
+
+|===
 

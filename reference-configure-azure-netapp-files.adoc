@@ -14,7 +14,7 @@ summary: Azure NetApp Files 작업 환경과 커넥터를 작성합니다
 
 
 [role="lead"]
-Azure NetApp Files 작업 환경과 커넥터를 작성해야 합니다.
+BlueXP를 사용하면 Azure NetApp Files 작업 환경을 만들어 볼륨 및 추가 데이터 서비스를 추가하고 관리해야 합니다. 또한 Azure에서 Connector를 만들어 BlueXP가 퍼블릭 클라우드 환경 내의 리소스와 프로세스를 관리할 수 있도록 해야 합니다.
 
 
 
@@ -26,9 +26,23 @@ Azure NetApp Files 작업 환경과 커넥터를 작성해야 합니다.
 
 == 커넥터를 작성합니다
 
-계정 관리자는 Azure NetApp Files에 커넥터를 배포하여 BlueXP가 공용 클라우드 환경 내에서 리소스와 프로세스를 관리할 수 있도록 해야 합니다.
+BlueXP 계정 관리자는 Azure에 Connector를 배포하여 BlueXP가 공용 클라우드 환경 내의 리소스와 프로세스를 관리할 수 있도록 해야 합니다.
 
 
 NOTE: UI에서 새 connector_id를 업데이트할 수 없습니다.
 
 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html["BlueXP에서 Azure에 커넥터를 만듭니다"].
+
+* 동일한 커넥터를 사용하여 Azure NetApp Files 작업 환경과 데이터베이스를 모두 관리해야 합니다.
+* Azure NetApp Files 작업 환경과 데이터베이스가 동일한 VPC(가상 프라이빗 클라우드)에 있는 경우 동일한 VPC에 커넥터를 구축할 수 있습니다.
+* Azure NetApp Files 작업 환경과 데이터베이스가 서로 다른 VPC에 있고 Azure NetApp Files에 NAS(NFS) 워크로드가 구성되어 있는 경우 VPC 중 하나에 커넥터를 생성할 수 있습니다.
+
+
+커넥터를 만든 후 다음을 수행합니다.
+
+* Storage * > * Canvas * > * My Working Environments * > * Add Working Environment * 를 클릭하여 작업 환경을 추가합니다.
++
+커넥터와 데이터베이스 호스트 및 Azure NetApp Files 작업 환경 간의 연결이 있는지 확인합니다. 커넥터는 Azure NetApp Files 작동 환경에 연결해야 합니다.
+
+* 커넥터 > 커넥터 관리 * 를 클릭하고 커넥터 이름을 선택하여 커넥터 ID를 복사합니다.
+
