@@ -526,7 +526,6 @@
   <block id="2b0d303ec45a6f12beec71d59abfee40" category="doc">클라우드 백업의 새로운 기능</block>
   <block id="abad9ff4f9967065f50634a2a3606dd0" category="inline-link-macro">검색 및 amp;Restore 사용 방법에 대해 알아봅니다</block>
   <block id="6aa300e24ddf3ee5a99bbb1cf5bb4a72" category="inline-link-macro">자세한 내용을 보려면 여기를 클릭하십시오</block>
-  <block id="6c92285fa6d3e827b198d120ea3ac674" category="inline-link">여기</block>
   <block id="c9413dd7682a45da9ecc9efa8cea47d7" category="list-text">진행 중</block>
   <block id="7b2f31b90fe1c2cc33a52233c1925df3" category="list-text">대기열에 있습니다</block>
   <block id="0eaadb4fcb48a0a0ed7bc9868be9fbaa" category="list-text">경고</block>
@@ -1613,7 +1612,6 @@
   <block id="d435e298ecd3e81d33c28c2ac5aaa9cf" category="list-text">cloudmanager_scs_cloud에 연결하고 _config.yml_에서 * enableCACert * 를 * true * 로 수정합니다. 'SUDO Docker Exec - cloudmanager_SCS_cloud SED-I's/enableCACert: false/enableCACert: true/g'/opt/NetApp/cloudmanager-SCS-cloud/config/config.yml'</block>
   <block id="beed6a355a0f3c2fec57e272c4df9a9b" category="list-text">cloudmanager_scs_cloud 컨테이너를 다시 시작합니다. 'SUDO Docker restart cloudmanager_scs_cloud'를 선택합니다</block>
   <block id="56221c5b2b531b839a3cd5c7e9c9cd9f" category="section-title">REST API 액세스</block>
-  <block id="e9d91293c5b15aa3d5a1944f0f3de884" category="paragraph">애플리케이션을 클라우드로 보호하는 REST API를 사용할 수 있습니다<block ref="34be8f96bca8ea568f4cd28ef35bb6b3" category="inline-link-rx"></block>.</block>
   <block id="4512b12288e7290cb279f814b15ba5dc" category="inline-link">통합 인증을 사용하여 사용자 토큰을 생성합니다</block>
   <block id="8753ca0304fc4dd31beb83f4a57f7b41" category="paragraph">REST API에 액세스하려면 통합 인증이 있는 사용자 토큰을 얻어야 합니다. 사용자 토큰을 얻는 방법에 대한 자세한 내용은 을 참조하십시오<block ref="0eb587a835d0db317e25e938408a4ed2" category="inline-link-rx"></block>.</block>
   <block id="bea93ac0c50dbd01324ebd42ff666cd8" category="section-title">ONTAP 작업 환경을 위한 FSx를 생성합니다</block>
@@ -2651,7 +2649,6 @@
   <block id="9d1e8db5c5513ba1e380be173bfe943a" category="paragraph">예를 들어 소스 데이터베이스의 볼륨 이름이 _sourceVolName_인 경우 복제된 볼륨 이름은 _sourceVolNameSCS_Clone_1661420020304608825_가 됩니다.</block>
   <block id="4c39a98f63c172a0f1f516379767640a" category="admonition">CurrentTimeStamNumber _ 는 볼륨 이름의 고유성을 제공합니다.</block>
   <block id="76fbbcab41a218d428077878fdffe387" category="section-title">자동으로 생성된 명명 체계</block>
-  <block id="0e6fcef1616c5d86cbfd8760ef27fec4" category="paragraph">클론 생성 스키마를 * Auto-Generated * 로 선택하면 마운트 지점의 위치와 클론 데이터베이스의 디스크 그룹 이름에 접미사가 추가됩니다. * 기본 클론 방법을 선택한 경우 접미사가 * 클론 SID * 가 됩니다. * 지정 파일 방법을 선택한 경우 접미사는 클론 사양 파일을 다운로드하는 동안 지정된 * 접미사 * 가 됩니다.</block>
   <block id="85ad7e9cd2258729935819b5b8d12c0c" category="paragraph">예를 들어 소스 데이터베이스의 마운트 지점이 _/netapp_sourcedb/data_1_이고 * 클론 SID * 또는 * 접미사 * 가 _HR_인 경우 복제된 데이터베이스의 마운트 지점은 _/netapp_sourcedb/data_1_HR_입니다.</block>
   <block id="ede76157ac7c5bfe761f851611ff031e" category="list-text">제어 파일 및 redo 로그 파일 수는 소스와 동일합니다.</block>
   <block id="950f79de2cdec1225a95d6167045afaf" category="list-text">모든 REDO 로그 파일 및 제어 파일은 복제된 데이터 마운트 지점 중 하나 또는 데이터 ASM 디스크 그룹에 위치합니다.</block>
@@ -3739,4 +3736,8 @@
   <block id="691b857c2ea9a46d47730b371ae5ac4d" category="sidebar">애플리케이션 데이터를 클라우드에 백업</block>
   <block id="5019db204cdfcff4225102866ab1c6bb" category="paragraph">를 모두 충족했는지 확인합니다 <block ref="c22fa2c0fe9f65f9b0ae3d1833efe89e" category="inline-link-macro-rx"></block> 클라우드에 데이터 저장소를 백업하기 전에.</block>
   <block id="23b39cc9d92424089210492c9ae6a9dd" category="paragraph">를 모두 충족했는지 확인합니다 <block ref="c22fa2c0fe9f65f9b0ae3d1833efe89e" category="inline-link-macro-rx"></block> 가상 머신을 클라우드에서 복구하기 전에</block>
+  <block id="05325f804117a5761ceaa9843ca9dcbd" category="paragraph">애플리케이션을 클라우드로 보호하는 REST API는 다음 사이트에서 확인할 수 있습니다.<block ref="3b69a934f25b6e0b95aa2e5dfdea3a71" category="inline-link-rx"></block>.</block>
+  <block id="d3f281db7462fac1f93bb8cd8a846973" category="paragraph">클론 생성 스키마를 * Auto-Generated * 로 선택하면 마운트 지점의 위치와 클론 데이터베이스의 디스크 그룹 이름에 접미사가 추가됩니다.</block>
+  <block id="b473eb967027d6cb105d361800543822" category="list-text">기본 클론 방법을 선택한 경우 접미사가 * 클론 SID * 가 됩니다.</block>
+  <block id="7bee2ff1284f314015393080c5e56ecc" category="list-text">지정 파일 방법을 선택한 경우 접미사는 클론 사양 파일을 다운로드하는 동안 지정된 * 접미사 * 가 됩니다.</block>
 </blocks>
