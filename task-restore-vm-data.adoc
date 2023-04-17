@@ -20,7 +20,7 @@ summary: 클라우드에서 가상 머신을 사내 SnapCenter로 복구할 수 
 NOTE: 데이터 저장소에 걸쳐 있는 가상 머신은 복구할 수 없습니다.
 
 .시작하기 전에
-를 모두 충족했는지 확인합니다 link:concept-protect-vm-data.html#Requirements["요구 사항"] 가상 머신을 클라우드에서 복구하기 전에
+를 모두 충족했는지 확인합니다 link:concept-protect-vm-data.html["요구 사항"] 가상 머신을 클라우드에서 복구하기 전에
 
 .단계
 . BlueXP UI에서 * 보호 * > * 백업 및 복구 * > * 가상 머신 * > * VMware vSphere * 용 SnapCenter 플러그인 * 을 클릭하고 VMware vSphere 호스트용 SnapCenter 플러그인을 선택합니다.

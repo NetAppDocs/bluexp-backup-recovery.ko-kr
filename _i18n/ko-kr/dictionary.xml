@@ -1178,12 +1178,10 @@
   <block id="529795f55723488071425500df0ff5d6" category="summary">클라우드에서 가상 머신을 사내 SnapCenter로 복구할 수 있습니다.</block>
   <block id="70861b61c8a43f84ddd14a22316ee5af" category="doc">클라우드에서 가상 머신을 복구합니다</block>
   <block id="b4851e92b19af0c5c82447fc0937709d" category="inline-link-macro">요구 사항</block>
-  <block id="1344fa03cfc0e1e9c9a94eebf3e3c1a9" category="paragraph">를 모두 충족했는지 확인합니다 <block ref="a5bf58fdc6833048fad2d714a6e89f9c" category="inline-link-macro-rx"></block> 가상 머신을 클라우드에서 복구하기 전에</block>
   <block id="ceb4a235a226f19c172c9cf7c46d00dc" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 복원하려는 데이터 저장소에 해당하는 * View Details * 를 클릭합니다.</block>
   <block id="a03a09176193c264d8dcbdcb8f2f9043" category="list-text">복원하려는 백업에 해당하는 * 복원 * 을 클릭합니다.</block>
   <block id="0291e73f7c30c841795ff165a80bdc0e" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 복원하려는 가상 머신에 해당하는 을 클릭하고 * Restore * 를 클릭합니다.</block>
   <block id="42387e1cb260fd1fb8624acde3767841" category="paragraph">백업이 수행된 위치와 동일한 위치로 VM이 복구됩니다.</block>
-  <block id="9a0c42190771559c2a8da5fac845d24d" category="admonition">를 모두 충족했는지 확인합니다 <block ref="a5bf58fdc6833048fad2d714a6e89f9c" category="inline-link-macro-rx"></block> 클라우드에 데이터 저장소를 백업하기 전에.</block>
   <block id="8f2653c5938080ffdd57904f850bc430" category="section-title">VMware vSphere용 SnapCenter 플러그인을 등록합니다</block>
   <block id="4e5b953e1349e67f48dba9317bba75d3" category="list-text">VMware vSphere * 용 SnapCenter 플러그인 등록 을 클릭합니다.</block>
   <block id="4eb88f79049bc78204f8659b66b7b655" category="list-text">사용자 이름 및 암호 필드에서 관리자 역할을 가진 사용자의 자격 증명을 지정합니다.</block>
@@ -3739,4 +3737,6 @@
   <block id="a46033978f070978d19c56a083f9252f" category="sidebar">사내 애플리케이션 데이터를 백업 및 복원합니다</block>
   <block id="084829803f52f86aee9d787cb2c3581d" category="sidebar">클라우드 네이티브 애플리케이션 데이터 백업 및 복원</block>
   <block id="691b857c2ea9a46d47730b371ae5ac4d" category="sidebar">애플리케이션 데이터를 클라우드에 백업</block>
+  <block id="5019db204cdfcff4225102866ab1c6bb" category="paragraph">를 모두 충족했는지 확인합니다 <block ref="c22fa2c0fe9f65f9b0ae3d1833efe89e" category="inline-link-macro-rx"></block> 클라우드에 데이터 저장소를 백업하기 전에.</block>
+  <block id="23b39cc9d92424089210492c9ae6a9dd" category="paragraph">를 모두 충족했는지 확인합니다 <block ref="c22fa2c0fe9f65f9b0ae3d1833efe89e" category="inline-link-macro-rx"></block> 가상 머신을 클라우드에서 복구하기 전에</block>
 </blocks>

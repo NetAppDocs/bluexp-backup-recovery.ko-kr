@@ -19,7 +19,7 @@ SnapCenter Plug-in for VMware vSphere 호스트를 BlueXP와 통합하여 하나
 데이터 저장소가 아카이브 정책과 연결된 경우 아카이브 계층을 선택할 수 있는 옵션이 제공됩니다. 지원되는 아카이브 계층은 Azure Archive Blob Storage입니다.
 
 .시작하기 전에
-를 모두 충족했는지 확인합니다 link:concept-protect-vm-data.html#Requirements["요구 사항"] 클라우드에 데이터 저장소를 백업하기 전에.
+를 모두 충족했는지 확인합니다 link:concept-protect-vm-data.html["요구 사항"] 클라우드에 데이터 저장소를 백업하기 전에.
 
 .단계
 . BlueXP UI에서 * 보호 * > * 백업 및 복구 * > * 가상 머신 * 을 클릭합니다.
