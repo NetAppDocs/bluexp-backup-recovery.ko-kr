@@ -829,8 +829,6 @@
   <block id="5afde787e060c3a96f34f757eb507404" category="sidebar">Kubernetes 클러스터를 Amazon S3에 연결</block>
   <block id="3ef08bbbf058b2bc6a87e3ff1ceecd81" category="sidebar">Azure Blob에 대한 Kubernetes 클러스터</block>
   <block id="d5513ddfa26c41caaba3c021a29dbe45" category="sidebar">Kubernetes 클러스터를 Google Cloud로</block>
-  <block id="e2f83fe82d1e819ed299851d4da320ce" category="sidebar">ONTAP 볼륨을 복원합니다</block>
-  <block id="09653b9c7955d4792895fbf1fcaa6ad6" category="sidebar">Kubernetes 볼륨 복원</block>
   <block id="4c371e6c984a858ae1f9d8d607a2cfd4" category="sidebar">ONTAP 백업 파일을 관리합니다</block>
   <block id="c88c557dd4e62b29bc87fc433d1738c6" category="sidebar">볼륨 백업을 설정 및 해제합니다</block>
   <block id="56b3614ad370987e8f2f3583eb78c757" category="sidebar">기존 백업 정책을 편집합니다</block>
@@ -1045,7 +1043,6 @@
   <block id="4cfbdcb9aba741b123b3c46a8341bf59" category="sidebar">가상 머신 데이터 보호</block>
   <block id="b2736084b30c35472d74c3c29a818a95" category="sidebar">가상 머신 보호 관리</block>
   <block id="c2c86860cad5cd95ae9ef9c003e01d57" category="sidebar">가상 머신 데이터를 복구합니다</block>
-  <block id="3eb97a71011fe0dae37080fd785e4db5" category="sidebar">가상 머신 데이터 백업 및 복원</block>
   <block id="b418e05c847b656e4a8ac26f2f0cc045" category="inline-link">가상 시스템을 클라우드로 보호하는 방법에 대해 자세히 알아보십시오</block>
   <block id="3a5ea6bb0616fe3f66bd74e5e18fd1b3" category="paragraph"><block ref="95fa49d8f0b9a0affedd5e0d4a52c2d2" category="inline-link-rx"></block>.</block>
   <block id="7c8db0bef9b3c6a1335fe8f0a09bfdef" category="sidebar">가상 머신 데이터 백업 및 복원</block>
@@ -1735,8 +1732,6 @@
   <block id="2d96aa84884717fd77e4906d82c73ddc" category="section-title">2022년 9월 28일</block>
   <block id="d45e0847841b73f9b8082d6a7bc89f24" category="paragraph">필요한 경우 백업에서 전체 _volume_, _folder_ 또는 하나 이상의 _files_ 를 동일하거나 다른 작업 환경으로 복원할 수 있습니다.</block>
   <block id="262efb8db11032d91af39217fa610e82" category="paragraph">ONTAP 백업 파일에서 다음 작업 환경으로 볼륨, 폴더 또는 개별 파일을 복원할 수 있습니다.</block>
-  <block id="5a885bd71d1142c7d1b89fcfcf197a41" category="sidebar">ONTAP 백업 파일에서 데이터를 복원합니다</block>
-  <block id="ba9a6951ecf97e593c2140f66a8574bf" category="sidebar">ONTAP 볼륨에서 파일 및 폴더를 복구합니다</block>
   <block id="855a635321caeb08d8525de5eea56651" category="list-text">검색 및 복원을 사용하여 데이터를 복원하는 경우 클라우드 공급자가 특정 리소스를 프로비저닝하며, 검색 요청에 의해 스캔된 데이터 양과 관련된 TiB 비용이 있습니다. (이러한 리소스는 Browse &amp; Restore에 필요하지 않습니다.)</block>
   <block id="3b190b83ddc2ee9e610caa6dc209fbaf" category="list-text">레이블 * 은 볼륨에서 백업 파일이 생성(또는 업데이트)되는 빈도를 정의합니다. 다음 유형의 라벨 중에서 선택할 수 있습니다.</block>
   <block id="42f0dfacb9775e138cb12f277162bec2" category="list-text">3개월, 1년 또는 7년 동안 백업 및 보존을 제공하는 시스템 정의 정책 중 하나를 선택할 수 있습니다.</block>
@@ -3740,4 +3735,13 @@
   <block id="2e5d6ff9bc4d6b4194df020bde3f3dca" category="sidebar">어두운 사이트에서 BlueXP 백업 및 복구 데이터베이스를 백업합니다</block>
   <block id="54153028a776309bcfbdd3b7b8285463" category="sidebar">BlueXP 백업 및 복구 블로그</block>
   <block id="960dd4200d015a0a12dfd299c1348c9c" category="sidebar">BlueXP 백업 및 복구 활용 사례</block>
+  <block id="ceffaf94354645ad26052bbc53604f5d" category="sidebar">가상 머신 데이터를 클라우드에 백업합니다</block>
+  <block id="a1c18d7af73fa7e0ef0013130f15b257" category="sidebar">클라우드에서 데이터 복원</block>
+  <block id="6edd76ff9d03a833a8a254cc8af745d0" category="sidebar">ONTAP 볼륨 데이터를 복원합니다</block>
+  <block id="10b8a325c32b95729e9b37864d6a110a" category="sidebar">사내 Oracle 애플리케이션 데이터를 복원합니다</block>
+  <block id="6002846df6663ea571e55d74bd085335" category="sidebar">온프레미스 SQL Server 애플리케이션 데이터를 복원합니다</block>
+  <block id="4bc9a14a4fac8328e801409fa8234e7e" category="sidebar">클라우드 네이티브 Oracle 애플리케이션 데이터를 복원합니다</block>
+  <block id="5fd9bba0b0a00c42d3baab299425c076" category="sidebar">클라우드 네이티브 SAP HANA 애플리케이션 데이터를 복원합니다</block>
+  <block id="18de97333e5776e0c135dd87c10b965c" category="sidebar">가상 머신 데이터를 복구합니다</block>
+  <block id="16cc11572a7582fe5007212d56145dc8" category="sidebar">Kubernetes 볼륨 데이터를 복원합니다</block>
 </blocks>
