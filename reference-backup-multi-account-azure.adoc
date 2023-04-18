@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-backup-multi-account-azure.html 
 keywords: microsoft azure, azure, regions, blob, multiple accounts, multiple regions, backup 
-summary: 클라우드 백업을 사용하면 소스 Cloud Volumes ONTAP 볼륨이 있는 위치와 다른 Azure 계정에 백업 파일을 생성할 수 있습니다. 이는 BlueXP Connector가 있는 계정과 다릅니다. 
+summary: BlueXP 백업 및 복구를 사용하면 소스 Cloud Volumes ONTAP 볼륨이 있는 위치와 다른 Azure 계정에 백업 파일을 생성할 수 있습니다. 이는 BlueXP 커넥터가 있는 계정과 다릅니다. 
 ---
 = Azure에서 다중 계정 액세스에 대한 백업을 구성합니다
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 클라우드 백업을 사용하면 소스 Cloud Volumes ONTAP 볼륨�
 
 
 [role="lead"]
-클라우드 백업을 사용하면 소스 Cloud Volumes ONTAP 볼륨이 상주하는 위치와 다른 Azure 계정에서 백업 파일을 생성할 수 있습니다. 또한 두 계정은 BlueXP Connector가 있는 계정과 다를 수 있습니다.
+BlueXP 백업 및 복구를 사용하면 소스 Cloud Volumes ONTAP 볼륨이 상주하는 위치와 다른 Azure 계정에서 백업 파일을 생성할 수 있습니다. 또한 두 계정은 BlueXP Connector가 있는 계정과 다를 수 있습니다.
 
 이 단계는 사용자가 있을 때만 필요합니다 https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-to-azure.html["Azure Blob 저장소에 Cloud Volumes ONTAP 데이터 백업"^].
 
@@ -131,5 +131,5 @@ image:screenshot_azure_networking5.png[""]
 +
 이제 스토리지 계정(서브스크립션 1)은 서브스크립션 2에서 실행 중인 Cloud Volumes ONTAP 시스템에 액세스할 수 있습니다.
 
-. Cloud Volumes ONTAP 시스템에서 클라우드 백업을 다시 활성화해 보십시오. 이번에는 성공적으로 완료되어야 합니다.
+. Cloud Volumes ONTAP 시스템에서 BlueXP 백업 및 복구를 다시 활성화해 보십시오. 이 경우 성공적으로 수행되어야 합니다.
 

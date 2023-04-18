@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: api-backup-restore.html 
 keywords: api, apis, rest, restful, authorization, getting started, body, header, token, reference, expired token, expires, expired, token expired, list apis 
-summary: 웹 UI를 통해 사용할 수 있는 Cloud Backup 기능도 RESTful API를 통해 사용할 수 있습니다. 
+summary: 웹 UI를 통해 사용할 수 있는 BlueXP 백업 및 복구 기능은 RESTful API를 통해서도 사용할 수 있습니다. 
 ---
-= 클라우드 백업 API
+= BlueXP 백업 및 복구 API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,9 @@ summary: 웹 UI를 통해 사용할 수 있는 Cloud Backup 기능도 RESTful AP
 
 
 [role="lead"]
-웹 UI를 통해 사용할 수 있는 Cloud Backup 기능은 RESTful API를 통해서도 사용할 수 있습니다.
+웹 UI를 통해 사용할 수 있는 BlueXP 백업 및 복구 기능은 RESTful API를 통해서도 사용할 수 있습니다.
 
-Cloud Backup에는 9가지 유형의 엔드포인트가 정의되어 있습니다.
+BlueXP 백업 및 복구 내에 9가지 유형의 엔드포인트가 정의되어 있습니다.
 
 * 백업 - 클라우드 및 사내 리소스의 백업 작업을 관리하고 백업 데이터의 세부 정보를 검색합니다
 * 카탈로그 - 쿼리를 기반으로 파일에 대한 인덱싱된 카탈로그 검색을 관리합니다(검색 및 복원).
@@ -34,7 +34,7 @@ Cloud Backup에는 9가지 유형의 엔드포인트가 정의되어 있습니�
 
 == 시작하기
 
-클라우드 백업 API를 시작하려면 사용자 토큰, BlueXP 계정 ID 및 BlueXP 커넥터 ID를 얻어야 합니다.
+BlueXP 백업 및 복구 API를 시작하려면 사용자 토큰, BlueXP 계정 ID 및 BlueXP 커넥터 ID를 얻어야 합니다.
 
 API 호출을 할 때 인증 헤더에 사용자 토큰을 추가하고 X-agent-id 헤더에 BlueXP 커넥터 ID를 추가합니다. API에서 BlueXP 계정 ID를 사용해야 합니다.
 
@@ -95,7 +95,7 @@ Header:
 
 == API 사용 예
 
-다음 예에서는 Azure 클라우드의 East-US-2 영역에서 일별, 시간별, 주별 레이블이 설정된 새 정책이 있는 작업 환경에서 Cloud Backup을 활성화하는 API 호출을 보여 줍니다. 이때 Azure 클라우드의 East-US-2 영역에서는 Archive After Days가 180일로 설정됩니다. 이렇게 하면 작업 환경에서만 백업할 수 있지만 볼륨은 백업되지 않습니다.
+다음 예에서는 Azure 클라우드의 East-US-2 영역에서 일일, 시간별, 주별 레이블이 설정된 새 정책이 적용된 작업 환경에서 BlueXP 백업 및 복구를 활성화하는 API 호출을 보여 줍니다. 이렇게 하면 작업 환경에서만 백업할 수 있지만 볼륨은 백업되지 않습니다.
 
 "자동 백업 사용":"참"을 선택하면 시스템에 이미 있는 모든 볼륨이 백업되고 이후 볼륨도 백업됩니다.
 
@@ -186,4 +186,4 @@ curl --location --request GET 'https://api.bluexp.netapp.com/account/account-DpT
 
 == API 참조입니다
 
-각 Cloud Backup API에 대한 문서는 에서 확인할 수 있습니다 https://docs.netapp.com/us-en/cloud-manager-automation/cbs/overview.html[].
+각 BlueXP 백업 및 복구 API에 대한 설명서는 에서 구할 수 있습니다 https://docs.netapp.com/us-en/cloud-manager-automation/cbs/overview.html[].

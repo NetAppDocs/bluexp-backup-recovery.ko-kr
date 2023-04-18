@@ -39,11 +39,11 @@ summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템의 볼륨 데�
 ** 커넥터 네트워킹은 ONTAP 클러스터 및 StorageGRID에 대한 아웃바운드 HTTPS 연결을 활성화합니다.
 
 
-* 을(를) 구입했습니다 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"^] Cloud Backup BYOL 라이센스는 NetApp에서 제공
+* 을(를) 구입했습니다 link:task-licensing-cloud-backup.html#use-a-bluexp-backup-and-recovery-byol-license["활성화합니다"^] BlueXP 백업 및 복구 BYOL 라이센스를 NetApp에서 제공
 * StorageGRID의 버전 10.3 이상에는 S3 권한이 있는 액세스 키가 있습니다.
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 시스템에서 Cloud Backup을 활성화합니다
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 시스템에서 BlueXP 백업 및 복구를 활성화합니다
 [role="quick-margin-para"]
 소스 ONTAP 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 > 볼륨 백업 * 을 클릭한 다음 설정 마법사를 따릅니다.
 
@@ -65,10 +65,10 @@ image:screenshot_backup_provider_settings_storagegrid.png["ONTAP 클러스터에
 클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 시스템에서 버전 11.4 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일 후에 이전 백업을 퍼블릭 클라우드 아카이브 계층에 계층화하도록 선택할 수 있습니다. 현재 AWS S3 Glacier/S3 Glacier Deep Archive 또는 Azure Archive 스토리지 계층을 지원합니다.
 
 [role="quick-margin-para"]
-클러스터가 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호하도록 선택할 수 있습니다. link:concept-cloud-backup-policies.html["사용 가능한 클라우드 백업 정책 구성 설정에 대해 자세히 알아보십시오"^].
+클러스터가 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호하도록 선택할 수 있습니다. link:concept-cloud-backup-policies.html["사용 가능한 BlueXP 백업 및 복구 정책 구성 설정에 대해 자세히 알아보십시오"^].
 
 [role="quick-margin-para"]
-image:screenshot_backup_onprem_policy.png["백업 스케줄 및 보존 기간을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
+image:screenshot_backup_onprem_policy.png["백업 일정 및 보존 기간을 선택할 수 있는 BlueXP 백업 및 복구 설정을 보여 주는 스크린샷."]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["다섯"] 백업할 볼륨을 선택합니다
 [role="quick-margin-para"]
@@ -85,7 +85,7 @@ S3 버킷은 사용자가 입력한 S3 액세스 키와 비밀 키로 표시된 
 
 다음 이미지는 온프레미스 ONTAP 시스템을 StorageGRID에 백업할 때의 각 구성 요소와 이러한 시스템 간에 준비해야 하는 연결을 보여 줍니다.
 
-image:diagram_cloud_backup_onprem_storagegrid.png["Cloud Backup이 소스 시스템 및 백업 파일이 있는 대상 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다."]
+image:diagram_cloud_backup_onprem_storagegrid.png["BlueXP 백업 및 복구가 백업 파일이 있는 소스 시스템 및 대상 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다."]
 
 커넥터와 사내 ONTAP 시스템이 인터넷에 연결되지 않은 사내 위치(이하 "어두운 사이트")에 설치된 경우 StorageGRID 시스템은 동일한 사내 데이터 센터에 있어야 합니다. 다크 사이트 구성에서는 이전 백업 파일을 퍼블릭 클라우드에 아카이빙하는 기능이 지원되지 않습니다.
 
@@ -103,7 +103,7 @@ ONTAP 요구 사항::
 * ONTAP 9.7P5 이상, ONTAP 9.8P13 이상 권장
 * SnapMirror 라이센스(프리미엄 번들 또는 데이터 보호 번들의 일부로 포함)
 +
-* 참고: * Cloud Backup을 사용할 때는 "하이브리드 클라우드 번들"이 필요하지 않습니다.
+* 참고: * BlueXP 백업 및 복구를 사용할 때는 "하이브리드 클라우드 번들"이 필요하지 않습니다.
 
 +
 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["클러스터 라이센스를 관리합니다"^].
@@ -125,12 +125,12 @@ ONTAP는 오브젝트 스토리지 간에 데이터를 읽고 씁니다. 오브�
 * ONTAP를 사용하려면 Connector에서 클러스터 관리 LIF로 인바운드 연결이 필요합니다. 커넥터는 해당 위치에 있어야 합니다.
 * 인터클러스터 LIF는 백업할 볼륨을 호스팅하는 각 ONTAP 노드에 필요합니다. LIF는 ONTAP가 오브젝트 스토리지에 연결하는 데 사용해야 하는 _IPspace_와 연결되어 있어야 합니다. https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspace에 대해 자세히 알아보십시오"^].
 +
-클라우드 백업을 설정하면 사용할 IPspace를 묻는 메시지가 표시됩니다. 각 LIF가 연결되는 IPspace를 선택해야 합니다. 이는 여러분이 생성한 "기본" IPspace 또는 사용자 지정 IPspace가 될 수 있습니다.
+BlueXP 백업 및 복구를 설정할 때 사용할 IPspace를 묻는 메시지가 표시됩니다. 각 LIF가 연결되는 IPspace를 선택해야 합니다. 이는 여러분이 생성한 "기본" IPspace 또는 사용자 지정 IPspace가 될 수 있습니다.
 
 * 노드의 인터클러스터 LIF는 오브젝트 저장소에 액세스할 수 있습니다(Connector가 "어두운" 사이트에 설치된 경우 필요하지 않음).
 * 볼륨이 있는 스토리지 VM에 대해 DNS 서버가 구성되었습니다. 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["SVM을 위한 DNS 서비스 구성"^].
 * 을 사용하는 경우 기본값 이외의 IPspace를 사용하는 경우 오브젝트 스토리지에 액세스하려면 정적 라우트를 생성해야 할 수 있습니다.
-* 필요한 경우 Cloud Backup Service에서 지정한 포트(일반적으로 포트 443)를 통해 개체 스토리지로 ONTAP 연결을 허용하고 포트 53(TCP/UDP)을 통해 스토리지 VM에서 DNS 서버로 이름 확인 트래픽을 허용하도록 방화벽 규칙을 업데이트합니다.
+* 필요한 경우 방화벽 규칙을 업데이트하여 ONTAP에서 지정한 포트(일반적으로 포트 443)를 통해 객체 스토리지로 BlueXP 백업 및 복구 서비스 연결을 허용하고 포트 53(TCP/UDP)을 통해 스토리지 VM에서 DNS 서버로 이름 확인 트래픽을 허용합니다.
 
 
 --
@@ -153,7 +153,7 @@ StorageGRID는 다음 요구 사항을 충족해야 합니다. 를 참조하십�
 S3 자격 증명:: StorageGRID 스토리지에 대한 액세스를 제어하려면 S3 테넌트 계정을 생성해야 합니다. https://docs.netapp.com/us-en/storagegrid-116/admin/creating-tenant-account.html["자세한 내용은 StorageGRID 문서를 참조하십시오"^].
 +
 --
-StorageGRID로 백업을 설정하면 백업 마법사에서 테넌트 계정에 대한 S3 액세스 키와 암호 키를 입력하라는 메시지가 표시됩니다. 클라우드 백업은 테넌트 계정을 사용하여 백업을 저장하는 데 사용되는 StorageGRID 버킷을 인증하고 액세스할 수 있습니다. 키는 StorageGRID가 누가 요청하는지 알 수 있도록 필요합니다.
+StorageGRID로 백업을 설정하면 백업 마법사에서 테넌트 계정에 대한 S3 액세스 키와 암호 키를 입력하라는 메시지가 표시됩니다. 테넌트 계정을 사용하면 BlueXP 백업 및 복구를 통해 백업을 저장하는 데 사용되는 StorageGRID 버킷을 인증하고 액세스할 수 있습니다. 키는 StorageGRID가 누가 요청하는지 알 수 있도록 필요합니다.
 
 이러한 액세스 키는 다음 권한을 가진 사용자와 연결되어야 합니다.
 
@@ -182,9 +182,9 @@ StorageGRID로 백업을 설정하면 백업 마법사에서 테넌트 계정에
 
 
 
-NOTE: BlueXP 커넥터에는 클라우드 백업 기능이 내장되어 있습니다. 인터넷에 연결되지 않은 사이트에 설치한 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 link:whats-new.html["클라우드 백업 새로운 기능"] 각 Cloud Backup 릴리즈의 새로운 기능을 보려면 ~ 단계를 따르십시오 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode["Connector 소프트웨어를 업그레이드합니다"^] 새 기능을 사용하려는 경우
+NOTE: BlueXP 백업 및 복구 기능은 BlueXP 커넥터에 내장되어 있습니다. 인터넷에 연결되지 않은 사이트에 설치한 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 link:whats-new.html["BlueXP 백업 및 복구 새로운 기능"] 각 BlueXP 백업 및 복구 릴리스의 새로운 기능을 보려면 의 단계를 따르십시오 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode["Connector 소프트웨어를 업그레이드합니다"^] 새 기능을 사용하려는 경우
 
-Connector가 인터넷에 연결되지 않은 사이트에 설치된 경우 Cloud Backup 구성 데이터의 로컬 백업을 정기적으로 생성하는 것이 좋습니다. link:reference-backup-cbs-db-in-dark-site.html["어두운 사이트에서 Cloud Backup 데이터를 백업하는 방법을 알아보십시오"^].
+인터넷 연결 없이 사이트에 Connector가 설치된 경우 BlueXP 백업 및 복구 구성 데이터의 로컬 백업을 정기적으로 생성하는 것이 좋습니다. link:reference-backup-cbs-db-in-dark-site.html["어두운 사이트에서 BlueXP 백업 및 복구 데이터를 백업하는 방법을 알아보십시오"^].
 
 
 
@@ -197,7 +197,7 @@ Connector가 인터넷에 연결되지 않은 사이트에 설치된 경우 Clou
 +
 ** 포트 443을 통해 StorageGRID 게이트웨이 노드에 대한 HTTPS 연결
 ** 포트 443을 통해 ONTAP 클러스터 관리 LIF에 HTTPS로 연결합니다
-** 포트 443을 통해 클라우드 백업으로 아웃바운드 인터넷 연결(커넥터가 "어두운" 사이트에 설치된 경우 필요하지 않음)
+** 포트 443을 통해 BlueXP 백업 및 복구에 대한 아웃바운드 인터넷 연결(커넥터가 "어두운" 사이트에 설치된 경우 필요하지 않음)
 
 
 
@@ -245,7 +245,7 @@ Connector가 인터넷에 연결되지 않은 사이트에 설치된 경우 Clou
 * 활성화 마법사를 사용하면 기존 리소스 그룹을 사용하여 백업을 저장할 Blob 컨테이너를 관리하거나 새 리소스 그룹을 만들 수 있습니다.
 
 
-클러스터의 백업 정책에 대한 아카이브 설정을 정의할 때 클라우드 공급자 자격 증명을 입력하고 사용할 스토리지 클래스를 선택합니다. 클러스터에 대한 백업을 활성화하면 Cloud Backup 이 클라우드 버킷을 생성합니다. AWS 및 Azure 아카이브 스토리지에 필요한 정보는 다음과 같습니다.
+클러스터의 백업 정책에 대한 아카이브 설정을 정의할 때 클라우드 공급자 자격 증명을 입력하고 사용할 스토리지 클래스를 선택합니다. BlueXP 백업 및 복구는 클러스터에 대한 백업을 활성화할 때 클라우드 버킷을 생성합니다. AWS 및 Azure 아카이브 스토리지에 필요한 정보는 다음과 같습니다.
 
 image:screenshot_sg_archive_to_cloud.png["StorageGRID에서 AWS S3 또는 Azure Blob으로 백업 파일을 아카이빙하는 데 필요한 정보의 스크린샷"]
 
@@ -255,18 +255,18 @@ image:screenshot_sg_archive_to_cloud.png["StorageGRID에서 AWS S3 또는 Azure 
 
 === 라이센스 요구 사항
 
-클러스터에서 Cloud Backup을 활성화하려면 NetApp에서 Cloud Backup BYOL 라이센스를 구입하여 활성화해야 합니다. 이 라이센스는 계정에 사용되며 여러 시스템에서 사용할 수 있습니다.
+클러스터에 대한 BlueXP 백업 및 복구를 활성화하려면 먼저 NetApp에서 BYOL 백업 및 복구 라이센스를 구입하여 활성화해야 합니다. 이 라이센스는 계정에 사용되며 여러 시스템에서 사용할 수 있습니다.
 
-라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 NetApp의 일련 번호가 필요합니다. link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"].
+라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 NetApp의 일련 번호가 필요합니다. link:task-licensing-cloud-backup.html#use-a-bluexp-backup-and-recovery-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"].
 
 
 TIP: StorageGRID에 파일을 백업할 때는 PAYGO 라이센스가 지원되지 않습니다.
 
 
 
-== StorageGRID로 클라우드 백업 지원
+== StorageGRID에 대한 BlueXP 백업 및 복구 활성화
 
-사내 작업 환경에서 언제든지 직접 Cloud Backup을 사용할 수 있습니다.
+BlueXP 백업 및 복구는 온프레미스 작업 환경에서 바로 사용할 수 있습니다.
 
 .단계
 . Canvas에서 온-프레미스 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 > 볼륨 백업 * 을 클릭합니다.
@@ -283,7 +283,7 @@ image:screenshot_backup_onprem_enable.png["작업 환경을 선택한 후 사용
 .. 백업을 저장하기 위해 버킷에 액세스하는 데 사용되는 액세스 키 및 비밀 키
 .. 백업할 볼륨이 상주하는 ONTAP 클러스터의 IPspace 이 IPspace용 인터클러스터 LIF는 아웃바운드 인터넷 액세스를 가져야 합니다( 커넥터가 "어두운" 사이트에 설치된 경우 필요하지 않음).
 +
-올바른 IPspace를 선택하면 클라우드 백업이 ONTAP에서 StorageGRID 오브젝트 스토리지로의 연결을 설정할 수 있습니다.
+올바른 IPspace를 선택하면 BlueXP 백업 및 복구 기능이 ONTAP에서 StorageGRID 오브젝트 스토리지로의 연결을 설정할 수 있습니다.
 
 +
 image:screenshot_backup_provider_settings_storagegrid.png["온프레미스 클러스터에서 StorageGRID 스토리지로 볼륨을 백업할 때의 클라우드 공급자 세부 정보를 보여 주는 스크린샷"]
@@ -297,10 +297,10 @@ image:screenshot_backup_provider_settings_storagegrid.png["온프레미스 클�
 .. 클러스터에서 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 _ 을(를) 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호하도록 선택할 수 있습니다. _DataLock_은 백업 파일이 수정되거나 삭제되지 않도록 보호하고, 백업 파일을 검색하여 백업 파일에서 랜섬웨어 공격의 증거를 찾습니다. link:concept-cloud-backup-policies.html#datalock-and-ransomware-protection["사용 가능한 DataLock 설정에 대해 자세히 알아보십시오"^].
 .. 클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 시스템에서 버전 11.4 이상을 사용하는 경우 특정 일 수 후에 이전 백업을 퍼블릭 클라우드 아카이브 계층에 계층화하도록 선택할 수 있습니다. 현재 AWS S3 Glacier/S3 Glacier Deep Archive 또는 Azure Archive 스토리지 계층을 지원합니다. <<이전 백업 파일을 퍼블릭 클라우드 스토리지에 아카이빙하기 위한 준비 중,이 기능에 맞게 시스템을 구성하는 방법을 확인하십시오>>.
 +
-image:screenshot_backup_onprem_policy.png["백업 스케줄 및 보존 기간을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
+image:screenshot_backup_onprem_policy.png["백업 일정 및 보존 기간을 선택할 수 있는 BlueXP 백업 및 복구 설정을 보여 주는 스크린샷."]
 
 +
-* 중요: * DataLock을 사용하려는 경우 Cloud Backup을 활성화할 때 첫 번째 정책에서 활성화해야 합니다.
+* 중요: * DataLock을 사용하려는 경우 BlueXP 백업 및 복구를 활성화할 때 첫 번째 정책에서 활성화해야 합니다.
 
 
 
@@ -315,7 +315,7 @@ image:screenshot_backup_select_volumes.png["백업할 볼륨을 선택하는 스
 ** 이 작업 환경에서 방금 선택한 백업 일정 레이블(예: 일별, 주별 등)과 일치하는 읽기/쓰기 볼륨의 로컬 스냅샷 복사본이 있는 경우 "기존 스냅샷 복사본을 오브젝트 스토리지로 백업 복사본으로 내보내기"라는 추가 프롬프트가 표시됩니다. 볼륨에 대한 완벽한 보호를 위해 모든 기록 스냅샷을 백업 파일로 오브젝트 스토리지에 복제하려면 이 확인란을 선택합니다.
 
 
-. 백업 활성화 * 를 클릭하면 선택한 각 볼륨의 초기 백업이 시작됩니다.
+. 백업 활성화 * 를 클릭하면 선택한 각 볼륨의 초기 백업을 수행하여 BlueXP 백업 및 복구가 시작됩니다.
 
 
 .결과

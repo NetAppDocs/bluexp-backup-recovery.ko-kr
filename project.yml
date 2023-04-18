@@ -1,6 +1,6 @@
 ---
 settings:
-  name: Cloud Backup
+  name: BlueXP backup and recovery
   platform: cloud
   internal:
     pdf_enabled: true
@@ -24,13 +24,13 @@ settings:
   langs: ko-kr,us-en,ja-jp,zh-cn,zh-tw,de-de,es-es,fr-fr
 sidebar:
   entries:
-  - title: Cloud Backup 문서
+  - title: BlueXP 백업 및 복구 문서
     url: "/index.html"
   - title: 릴리스 정보
     url: "/whats-new.html"
   - title: 시작하십시오
     entries:
-    - title: Cloud Backup에 대해 자세히 알아보십시오
+    - title: BlueXP 백업 및 복구에 대해 알아보십시오
       url: "/concept-backup-to-cloud.html"
     - title: 라이센스를 설정합니다
       url: "/task-licensing-cloud-backup.html"
@@ -187,18 +187,15 @@ sidebar:
     url: "/api-backup-restore.html"
   - title: 참조하십시오
     entries:
-    - title: 클라우드 백업 정책 설정
+    - title: BlueXP 백업 및 복구 정책 설정
       url: "/concept-cloud-backup-policies.html"
     - title: 지원되는 AWS 아카이브 스토리지 계층
-      flavor: aws
       url: "/reference-aws-backup-tiers.html"
     - title: 지원되는 Azure 아카이브 액세스 계층
-      flavor: azure
       url: "/reference-azure-backup-tiers.html"
     - title: 지원되는 Google 아카이브 스토리지 계층
-      flavor: gcp
       url: "/reference-google-backup-tiers.html"
-    - title: 어두운 사이트에서 Cloud Backup 데이터베이스를 백업합니다
+    - title: 어두운 사이트에서 BlueXP 백업 및 복구 데이터베이스를 백업합니다
       url: "/reference-backup-cbs-db-in-dark-site.html"
     - title: Azure에서 다중 계정 액세스를 위한 백업을 구성합니다
       flavor: azure
@@ -215,7 +212,7 @@ homepage:
   tiles:
   - title: 시작하십시오
     links:
-    - title: Cloud Backup에 대해 자세히 알아보십시오
+    - title: BlueXP 백업 및 복구에 대해 알아보십시오
       url: concept-backup-to-cloud.html
     - title: 새로운 기능
       url: whats-new.html
@@ -317,9 +314,9 @@ homepage:
     links:
     - title: NetApp 커뮤니티
       url: https://community.netapp.com/t5/Public-Cloud-Services/ct-p/CDS
-    - title: Cloud Backup 블로그
+    - title: BlueXP 백업 및 복구 블로그
       url: https://bluexp.netapp.com/blog/topic/cloud-backup
-    - title: Cloud Backup 사용 사례
+    - title: BlueXP 백업 및 복구 활용 사례
       url: https://bluexp.netapp.com/cloud-backup
     - title: 클라우드 웨비나
       url: https://bluexp.netapp.com/events

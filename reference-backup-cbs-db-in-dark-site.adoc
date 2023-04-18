@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-backup-cbs-db-in-dark-site.html 
 keywords: backup database, recover database 
-summary: 인터넷에 연결되지 않은 사이트에서 Cloud Backup을 사용하는 경우 BlueXP Connector 호스트 시스템에 문제가 있을 경우 중요한 Cloud Backup 파일을 정기적으로 백업해야 합니다. 그러면 새 Connector를 구축하고 중요한 Cloud Backup 데이터를 복원할 수 있습니다. 
+summary: 인터넷에 연결되지 않은 사이트에서 BlueXP 백업 및 복구를 사용하는 경우 BlueXP 커넥터 호스트 시스템에 문제가 있을 경우 중요한 BlueXP 백업 및 복구 파일을 정기적으로 백업해야 합니다. 이렇게 하면 새 커넥터를 배포하고 중요한 BlueXP 백업 및 복구 데이터를 복원할 수 있습니다. 
 ---
-= 어두운 사이트에서 Cloud Backup 데이터를 백업 및 복원합니다
+= 어두운 사이트에서 BlueXP 백업 및 복구 데이터 백업 및 복원
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,32 +14,32 @@ summary: 인터넷에 연결되지 않은 사이트에서 Cloud Backup을 사용
 
 
 [role="lead"]
-인터넷에 연결되지 않은 사이트에서 Cloud Backup을 사용하는 경우 BlueXP Connector 호스트 시스템에 문제가 있을 경우 중요한 Cloud Backup 파일을 정기적으로 백업해야 합니다. 그러면 새 Connector를 구축하고 중요한 Cloud Backup 데이터를 복원할 수 있습니다.
+인터넷에 연결되지 않은 사이트에서 BlueXP 백업 및 복구를 사용하는 경우 BlueXP 커넥터 호스트 시스템에 문제가 있을 경우 중요한 BlueXP 백업 및 복구 파일을 정기적으로 백업해야 합니다. 이렇게 하면 새 커넥터를 배포하고 중요한 BlueXP 백업 및 복구 데이터를 복원할 수 있습니다.
 
-BlueXP Connector가 클라우드 공급업체에 구축하거나 인터넷에 액세스할 수 있는 자체 호스트 시스템에 구축된 SaaS 환경에서 Cloud Backup을 사용하는 경우 중요한 Cloud Backup 구성 데이터가 모두 백업되고 클라우드에 저장됩니다. 인터넷에 액세스할 수 없는 사이트에서 Cloud Backup을 사용하는 경우, "다크 사이트"라고도 하는 이 Cloud Backup 정보는 로컬 Connector 시스템에만 저장됩니다.
+BlueXP Connector가 클라우드 공급업체에 배포되거나 인터넷 액세스가 가능한 자체 호스트 시스템에 구축된 SaaS 환경에서 BlueXP 백업 및 복구를 사용하는 경우 중요한 모든 BlueXP 백업 및 복구 구성 데이터가 클라우드에 백업 및 저장됩니다. 인터넷 액세스가 없는 사이트에서 "다크 사이트"라고도 하는 BlueXP 백업 및 복구를 사용하는 경우 이 BlueXP 백업 및 복구 정보는 로컬 커넥터 시스템에만 저장됩니다.
 
-이 항목에서는 중요한 클라우드 백업 데이터를 연결된 StorageGRID 시스템에 백업하는 방법에 대해 설명합니다. 또한 필요한 경우 새 커넥터에 데이터를 복원하는 방법에 대해서도 설명합니다.
+이 항목에서는 연결된 StorageGRID 시스템에 중요한 BlueXP 백업 및 복구 데이터를 백업하는 방법에 대해 설명합니다. 또한 필요한 경우 새 커넥터에 데이터를 복원하는 방법에 대해서도 설명합니다.
 
 
 
-== 중요한 Cloud Backup 데이터를 백업합니다
+== 중요한 BlueXP 백업 및 복구 데이터를 백업합니다
 
 백업해야 하는 데이터 유형은 두 가지입니다.
 
-* Cloud Backup 데이터베이스
+* BlueXP 백업 및 복구 데이터베이스
 * 인덱싱된 카탈로그 파일(검색 및 복원 기능에 사용됨)
 
 
 
-NOTE: 항상 최신 데이터에 액세스할 수 있도록 이 Cloud Backup 데이터를 정기적으로 백업하도록 계획해야 합니다.
+NOTE: 항상 최신 데이터에 액세스할 수 있도록 이 BlueXP 백업 및 복구 데이터를 정기적으로 백업해야 합니다.
 
-Cloud Backup 데이터베이스 또는 인덱싱된 카탈로그 파일에는 볼륨 데이터가 포함되지 않습니다.
+볼륨 데이터는 BlueXP 백업 및 복구 데이터베이스 또는 인덱싱된 카탈로그 파일에 포함되지 않습니다.
 
 
 
-=== Cloud Backup 데이터베이스를 백업합니다
+=== BlueXP 백업 및 복구 데이터베이스를 백업합니다
 
-Cloud Backup 데이터베이스에는 모든 볼륨, 백업 파일, 백업 정책 및 구성 정보 목록이 포함되어 있습니다.
+BlueXP 백업 및 복구 데이터베이스에는 모든 볼륨, 백업 파일, 백업 정책 및 구성 정보 목록이 포함되어 있습니다.
 
 .단계
 . 적절한 자격 증명을 사용하여 커넥터 호스트 시스템에 로그인합니다.
@@ -51,7 +51,7 @@ docker exec -it ds_mysql_1 sh
 ----
 . 컨테이너 셸에서 "env"를 배포합니다.
 . MySQL DB 패스워드가 필요합니다. 따라서 "mysql_root_password" 키의 값을 복사합니다.
-. 다음 명령을 입력하여 Cloud Backup MySQL DB를 백업합니다.
+. 다음 명령을 입력하여 BlueXP 백업 및 복구 MySQL DB를 백업합니다.
 +
 [source, cli]
 ----
@@ -85,14 +85,14 @@ zip -r catalogxxxxxx.zip catalogxxxxxx
 
 
 
-== Cloud Backup 데이터를 새 Connector로 복원합니다
+== BlueXP 백업 및 복구 데이터를 새 커넥터로 복원합니다
 
-온프레미스 커넥터에 심각한 장애가 발생할 경우 새 커넥터를 설치한 다음 Cloud Backup 데이터를 새 커넥터로 복원해야 합니다.
+온-프레미스 커넥터에 심각한 장애가 발생한 경우 새 커넥터를 설치한 다음 BlueXP 백업 및 복구 데이터를 새 커넥터에 복원해야 합니다.
 
-Cloud Backup 시스템을 작업 상태로 되돌리려면 다음 4가지 작업을 수행해야 합니다.
+BlueXP 백업 및 복구 시스템을 작동 상태로 되돌리기 위해 수행해야 하는 4가지 작업은 다음과 같습니다.
 
 * 새 BlueXP 커넥터를 설치합니다
-* Cloud Backup 데이터베이스를 복원합니다
+* BlueXP 백업 및 복구 데이터베이스를 복원합니다
 * 인덱싱된 카탈로그 파일을 복원합니다
 * 모든 온프레미스 ONTAP 시스템과 StorageGRID 시스템을 BlueXP UI로 재검색합니다
 
@@ -103,7 +103,7 @@ Cloud Backup 시스템을 작업 상태로 되돌리려면 다음 4가지 작업
 
 === 새로운 온프레미스 Linux 호스트에 새 커넥터를 설치합니다
 
-새 BlueXP 커넥터를 설치할 때 원래 커넥터에 설치한 것과 동일한 소프트웨어 릴리스를 다운로드해야 합니다. Cloud Backup 데이터베이스 구조를 주기적으로 변경하면 최신 소프트웨어 릴리즈가 원래 데이터베이스 백업과 호환되지 않을 수 있습니다. 가능합니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-on-prem-without-internet-access["백업 데이터베이스를 복원한 후 Connector 소프트웨어를 최신 버전으로 업그레이드합니다"^].
+새 BlueXP 커넥터를 설치할 때 원래 커넥터에 설치한 것과 동일한 소프트웨어 릴리스를 다운로드해야 합니다. BlueXP 백업 및 복구 데이터베이스 구조를 정기적으로 변경하면 새 소프트웨어 릴리스가 원래 데이터베이스 백업과 호환되지 않을 수 있습니다. 가능합니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-on-prem-without-internet-access["백업 데이터베이스를 복원한 후 Connector 소프트웨어를 최신 버전으로 업그레이드합니다"^].
 
 . https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private-mode.html["새로운 사내 Linux 호스트에 BlueXP 커넥터를 설치합니다"^]
 . 방금 만든 관리자 자격 증명을 사용하여 BlueXP에 로그인합니다.
@@ -111,7 +111,7 @@ Cloud Backup 시스템을 작업 상태로 되돌리려면 다음 4가지 작업
 
 
 
-=== Cloud Backup 데이터베이스를 복원합니다
+=== BlueXP 백업 및 복구 데이터베이스를 복원합니다
 
 . MySQL 백업을 보안 위치에서 새 커넥터 호스트로 복사합니다.
 . 다음 명령을 사용하여 MySQL Docker 컨테이너에 백업을 복사합니다.
@@ -128,13 +128,13 @@ docker exec -it ds_mysql_1 sh
 ----
 . 컨테이너 셸에서 "env"를 배포합니다.
 . MySQL DB 패스워드가 필요합니다. 따라서 "mysql_root_password" 키의 값을 복사합니다.
-. 다음 명령을 사용하여 Cloud Backup MySQL DB를 복구합니다.
+. 다음 명령을 사용하여 BlueXP 백업 및 복구 MySQL DB를 복원합니다.
 +
 [source, cli]
 ----
 mysql -u root -p cloud_backup < mysql.dump.cloud_backup.sql
 ----
-. 다음 SQL 명령을 사용하여 Cloud Backup MySQL DB가 올바르게 복구되었는지 확인합니다.
+. 다음 SQL 명령을 사용하여 BlueXP 백업 및 복구 MySQL DB가 올바르게 복원되었는지 확인합니다.
 +
 [source, cli]
 ----
@@ -208,7 +208,7 @@ curl -X GET http://10.193.192.202/tenancy/external/resource?account=account-DARK
 +
 이 API는 다음과 같은 응답을 반환합니다. "resourceIdentifier" 아래의 값은 _WorkingEnvironment ID_를 나타내며 "AGENTID" 아래의 값은 _x-agent-id_를 나타냅니다.
 
-. 작업 환경과 관련된 StorageGRID 시스템의 세부 정보로 클라우드 백업 데이터베이스를 업데이트합니다. 아래와 같이 StorageGRID의 정규화된 도메인 이름과 액세스 키 및 스토리지 키를 입력해야 합니다.
+. 작업 환경과 관련된 StorageGRID 시스템의 세부 정보로 BlueXP 백업 및 복구 데이터베이스를 업데이트합니다. 아래와 같이 StorageGRID의 정규화된 도메인 이름과 액세스 키 및 스토리지 키를 입력해야 합니다.
 +
 [source, http]
 ----
@@ -222,7 +222,7 @@ curl -X POST 'http://10.193.192.202/account/account-DARKSITE1/providers/cloudman
 
 
 
-=== 클라우드 백업 설정을 확인합니다
+=== BlueXP 백업 및 복구 설정을 확인합니다
 
 . 각 ONTAP 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 백업 보기 * 를 클릭합니다.
 +

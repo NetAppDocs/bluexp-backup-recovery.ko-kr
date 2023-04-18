@@ -26,7 +26,7 @@ summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 A
 [role="quick-margin-list"]
 * AWS에서 Cloud Volumes ONTAP 9.7P5 이상을 실행 중입니다(ONTAP 9.8P13 이상 권장).
 * 백업이 위치할 스토리지 공간에 대한 유효한 클라우드 공급자 가입이 있습니다.
-* 에 가입했습니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["BlueXP Marketplace 백업 서비스"], 및 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS 연간 계약"]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["활성화합니다"] Cloud Backup BYOL 라이센스는 NetApp에서 제공
+* 에 가입했습니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["BlueXP Marketplace 백업 서비스"], 및 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS 연간 계약"]또는 을(를) 구입한 경우 link:task-licensing-cloud-backup.html#use-a-bluexp-backup-and-recovery-byol-license["활성화합니다"] BlueXP 백업 및 복구 BYOL 라이센스를 NetApp에서 제공
 * AWS에 Connector가 설치되어 있습니다.
 +
 ** 커넥터는 전체 인터넷 액세스("표준 모드")가 있는 사이트나 제한된 인터넷 연결("제한 모드")으로 설치할 수 있습니다.
@@ -35,9 +35,9 @@ summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 A
 
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 새로운 시스템이나 기존 시스템에서 Cloud Backup을 활성화합니다
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 새 시스템이나 기존 시스템에서 BlueXP 백업 및 복구를 활성화합니다
 [role="quick-margin-list"]
-* 새 시스템: 작업 환경 마법사에서 기본적으로 클라우드 백업이 설정됩니다. 옵션을 활성 상태로 유지해야 합니다.
+* 새 시스템: BlueXP 백업 및 복구는 작업 환경 마법사에서 기본적으로 활성화됩니다. 옵션을 활성 상태로 유지해야 합니다.
 * 기존 시스템: 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 * 를 클릭한 다음 설치 마법사를 따릅니다.
 +
 image:screenshot_backup_cvo_enable.png["작업 환경을 선택한 후 사용할 수 있는 백업 및 복구 활성화 버튼이 표시된 스크린샷"]
@@ -59,10 +59,10 @@ image:screenshot_backup_provider_settings_aws.png["Cloud Volumes ONTAP 시스템
 백업은 기본적으로 S3 Standard 스토리지에 저장됩니다. 클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화하도록 선택할 수 있습니다.
 
 [role="quick-margin-para"]
-선택적으로 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호할 수 있습니다. link:concept-cloud-backup-policies.html["사용 가능한 클라우드 백업 정책 구성 설정에 대해 자세히 알아보십시오"^].
+선택적으로 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호할 수 있습니다. link:concept-cloud-backup-policies.html["사용 가능한 BlueXP 백업 및 복구 정책 구성 설정에 대해 자세히 알아보십시오"^].
 
 [role="quick-margin-para"]
-image:screenshot_backup_policy_aws.png["백업 스케줄 및 보존 기간을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
+image:screenshot_backup_policy_aws.png["백업 일정 및 보존 기간을 선택할 수 있는 BlueXP 백업 및 복구 설정을 보여 주는 스크린샷."]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["다섯"] 백업할 볼륨을 선택합니다
 [role="quick-margin-para"]
@@ -76,19 +76,19 @@ S3에 볼륨을 백업하기 전에 다음 요구 사항을 읽고 지원되는 
 
 다음 이미지는 각 구성 요소와 이러한 구성 요소 간에 준비해야 하는 연결을 보여 줍니다.
 
-image:diagram_cloud_backup_cvo_aws.png["Cloud Backup이 소스 시스템 및 백업 파일이 있는 대상 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다."]
+image:diagram_cloud_backup_cvo_aws.png["BlueXP 백업 및 복구가 백업 파일이 있는 소스 시스템 및 대상 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다."]
 
 VPC 게이트웨이 엔드포인트는 이미 VPC에 있어야 합니다. https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html["게이트웨이 엔드포인트에 대해 자세히 알아보십시오"^].
 
 지원되는 ONTAP 버전:: ONTAP 9.7P5 이상, ONTAP 9.8P13 이상 권장
-라이센스 요구 사항:: Cloud Backup PAYGO 라이센스의 경우, Cloud Volumes ONTAP 및 클라우드 백업을 구축할 수 있는 AWS 마켓플레이스에서 BlueXP 구독을 사용할 수 있습니다. 다음 작업을 수행해야 합니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["이 BlueXP 구독을 신청하십시오"^] Cloud Backup을 활성화하기 전에, Cloud Backup에 대한 청구는 이 구독을 통해 이루어집니다.
+라이센스 요구 사항:: BlueXP 백업 및 복구 PAYGO 라이센스의 경우 Cloud Volumes ONTAP 및 BlueXP 백업 및 복구를 구축할 수 있는 AWS Marketplace에서 BlueXP 구독을 사용할 수 있습니다. 다음 작업을 수행해야 합니다 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["이 BlueXP 구독을 신청하십시오"^] BlueXP 백업 및 복구를 활성화하기 전에 BlueXP 백업 및 복구에 대한 청구는 이 구독을 통해 이루어집니다.
 +
 --
 Cloud Volumes ONTAP 데이터와 사내 ONTAP 데이터를 모두 백업할 수 있는 연간 계약이 체결되어 있으면 에 가입해야 합니다 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS 마켓플레이스 페이지를 참조하십시오"^] 그리고 나서 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-aws-accounts.html["가입 정보를 AWS 자격 증명과 연결합니다"^].
 
-Cloud Volumes ONTAP 및 클라우드 백업을 번들로 제공하기 위한 연간 계약의 경우 Cloud Volumes ONTAP 작업 환경을 생성할 때 연간 계약을 설정해야 합니다. 이 옵션을 사용하면 온프레미스 데이터를 백업할 수 없습니다.
+Cloud Volumes ONTAP 및 BlueXP 백업 및 복구를 번들로 제공할 수 있는 연간 계약의 경우 Cloud Volumes ONTAP 작업 환경을 생성할 때 연간 계약을 설정해야 합니다. 이 옵션을 사용하면 온프레미스 데이터를 백업할 수 없습니다.
 
-Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. link:task-licensing-cloud-backup.html#use-a-cloud-backup-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"]. Connector 및 Cloud Volumes ONTAP 시스템이 어두운 사이트에 구축된 경우 BYOL 라이센스를 사용해야 합니다.
+BlueXP 백업 및 복구 BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. link:task-licensing-cloud-backup.html#use-a-bluexp-backup-and-recovery-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"]. Connector 및 Cloud Volumes ONTAP 시스템이 어두운 사이트에 구축된 경우 BYOL 라이센스를 사용해야 합니다.
 
 그리고 백업이 위치할 스토리지 공간을 위한 AWS 계정이 있어야 합니다.
 
@@ -174,13 +174,13 @@ Cloud Backup BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 
 
 버전 3.9.21 이상을 사용하여 Connector를 배포한 경우 이러한 권한은 이미 IAM 역할의 일부여야 합니다. 그렇지 않으면 누락된 권한을 추가해야 합니다. 특히 검색 및 복원에 필요하므로 "Athena" 및 "GLUE" 권한이 필요합니다.
 
-필요한 AWS Cloud Volumes ONTAP 권한:: Cloud Volumes ONTAP 시스템에서 ONTAP 9.12.1 이상의 소프트웨어를 실행하는 경우, 권한이 있는 작업 환경을 제공하는 IAM 역할에는 특히 최신 클라우드 백업에 대한 새로운 S3 권한 세트가 포함되어야 합니다 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-iam-roles.html["Cloud Volumes ONTAP 정책"^].
+필요한 AWS Cloud Volumes ONTAP 권한:: Cloud Volumes ONTAP 시스템에서 ONTAP 9.12.1 이상의 소프트웨어를 실행하는 경우, 권한이 있는 작업 환경을 제공하는 IAM 역할에는 최신 버전의 BlueXP 백업 및 복구를 위한 새로운 S3 권한 세트가 포함되어야 합니다 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-iam-roles.html["Cloud Volumes ONTAP 정책"^].
 +
 --
 BlueXP 버전 3.9.23 이상을 사용하여 Cloud Volumes ONTAP 작업 환경을 생성한 경우 이러한 권한은 이미 IAM 역할의 일부여야 합니다. 그렇지 않으면 누락된 권한을 추가해야 합니다.
 
 --
-지원되는 AWS 영역:: Cloud Backup은 모든 AWS 지역에서 지원됩니다 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP가 지원되는 경우"^]AWS GovCloud 지역 포함.
+지원되는 AWS 영역:: BlueXP 백업 및 복구는 모든 AWS 지역에서 지원됩니다 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP가 지원되는 경우"^]AWS GovCloud 지역 포함.
 다른 AWS 계정에서 백업을 생성하기 위해 필요한 설정:: 기본적으로 백업은 Cloud Volumes ONTAP 시스템에 사용되는 계정과 동일한 계정을 사용하여 생성됩니다. 백업에 다른 AWS 계정을 사용하려면 다음을 수행해야 합니다.
 +
 --
@@ -207,9 +207,9 @@ BlueXP 버전 3.9.23 이상을 사용하여 Cloud Volumes ONTAP 작업 환경을
 
 
 
-== 새로운 시스템에서 Cloud Backup을 활성화합니다
+== 새 시스템에서 BlueXP 백업 및 복구 활성화
 
-클라우드 백업은 작업 환경 마법사에서 기본적으로 설정됩니다. 옵션을 활성 상태로 유지해야 합니다.
+BlueXP 백업 및 복구는 작업 환경 마법사에서 기본적으로 활성화됩니다. 옵션을 활성 상태로 유지해야 합니다.
 
 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html["AWS에서 Cloud Volumes ONTAP 실행"^] Cloud Volumes ONTAP 시스템 생성에 대한 요구 사항 및 세부 정보를 확인하십시오.
 
@@ -219,19 +219,19 @@ BlueXP 버전 3.9.23 이상을 사용하여 Cloud Volumes ONTAP 작업 환경을
 . 세부 정보 및 자격 증명 페이지를 입력합니다.
 . 서비스 페이지에서 서비스를 활성화된 상태로 두고 * 계속 * 을 클릭합니다.
 +
-image:screenshot_backup_to_gcp.png["에는 작업 환경 마법사의 클라우드 백업 옵션이 나와 있습니다."]
+image:screenshot_backup_to_gcp.png["에는 작업 환경 마법사의 BlueXP 백업 및 복구 옵션이 나와 있습니다."]
 
 . 마법사의 페이지를 완료하여 시스템을 구축합니다.
 
 
 .결과
-Cloud Backup은 시스템에서 활성화되어 매일 볼륨을 백업하며 최근 30개의 백업 복사본을 보존합니다.
+BlueXP 백업 및 복구는 시스템에서 사용할 수 있으며 매일 볼륨을 백업하고 가장 최근 30개의 백업 복사본을 유지합니다.
 
 
 
-== 기존 시스템에서 Cloud Backup 활성화
+== 기존 시스템에서 BlueXP 백업 및 복구 활성화
 
-작업 환경에서 바로 언제든지 Cloud Backup을 사용할 수 있습니다.
+BlueXP 백업 및 복구는 작업 환경에서 바로 사용할 수 있습니다.
 
 .단계
 . 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 * 를 클릭합니다.
@@ -261,10 +261,10 @@ image:screenshot_backup_provider_settings_aws.png["Cloud Volumes ONTAP 시스템
 .. 선택적으로 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 설정 중 하나를 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호할 수 있습니다. _DataLock_은 백업 파일이 수정되거나 삭제되지 않도록 보호하고, 백업 파일을 검색하여 백업 파일에서 랜섬웨어 공격의 증거를 찾습니다. link:concept-cloud-backup-policies.html#datalock-and-ransomware-protection["사용 가능한 DataLock 설정에 대해 자세히 알아보십시오"^].
 .. 선택적으로 ONTAP 9.10.1 이상을 사용하는 경우 추가 비용 최적화를 위해 일정 일 후에 S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화할 수 있습니다. 이 기능은 어두운 사이트에 배포할 때는 사용할 수 없습니다. link:reference-aws-backup-tiers.html["아카이브 계층 사용에 대해 자세히 알아보십시오"].
 +
-image:screenshot_backup_policy_aws.png["스케줄 및 백업 보존을 선택할 수 있는 Cloud Backup 설정을 보여 주는 스크린샷"]
+image:screenshot_backup_policy_aws.png["일정 및 백업 보존을 선택할 수 있는 BlueXP 백업 및 복구 설정을 보여 주는 스크린샷."]
 
 +
-* 중요: * DataLock을 사용하려는 경우 Cloud Backup을 활성화할 때 첫 번째 정책에서 활성화해야 합니다.
+* 중요: * DataLock을 사용하려는 경우 BlueXP 백업 및 복구를 활성화할 때 첫 번째 정책에서 활성화해야 합니다.
 
 
 
@@ -279,7 +279,7 @@ image:screenshot_backup_select_volumes.png["백업할 볼륨을 선택하는 스
 ** 이 작업 환경에서 방금 선택한 백업 일정 레이블(예: 일별, 주별 등)과 일치하는 읽기/쓰기 볼륨의 로컬 스냅샷 복사본이 있는 경우 "기존 스냅샷 복사본을 오브젝트 스토리지로 백업 복사본으로 내보내기"라는 추가 프롬프트가 표시됩니다. 볼륨에 대한 완벽한 보호를 위해 모든 기록 스냅샷을 백업 파일로 오브젝트 스토리지에 복제하려면 이 확인란을 선택합니다.
 
 
-. 백업 활성화 * 를 클릭하면 선택한 각 볼륨의 초기 백업이 시작됩니다.
+. 백업 활성화 * 를 클릭하면 선택한 각 볼륨의 초기 백업을 수행하여 BlueXP 백업 및 복구가 시작됩니다.
 
 
 .결과

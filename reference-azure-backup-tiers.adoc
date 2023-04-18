@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-azure-backup-tiers.html 
 keywords: microsoft azure, azure, cool, access tier, archive 
-summary: Cloud Backup은 하나의 Azure 아카이브 액세스 계층 및 대부분의 영역을 지원합니다. 
+summary: BlueXP 백업 및 복구는 하나의 Azure 아카이브 액세스 계층과 대부분의 지역을 지원합니다. 
 ---
 = Azure 아카이브 계층 및 복원 검색 시간
 :hardbreaks:
@@ -14,17 +14,17 @@ summary: Cloud Backup은 하나의 Azure 아카이브 액세스 계층 및 대�
 
 
 [role="lead"]
-Cloud Backup은 하나의 Azure 아카이브 액세스 계층 및 대부분의 영역을 지원합니다.
+BlueXP 백업 및 복구는 하나의 Azure 아카이브 액세스 계층과 대부분의 지역을 지원합니다.
 
 
 
-== Cloud Backup에 지원되는 Azure Blob 액세스 계층
+== BlueXP 백업 및 복구를 위해 지원되는 Azure Blob 액세스 계층
 
 백업 파일이 처음 생성될 때는 _Cool_access 계층에 저장됩니다. 이 계층은 자주 액세스하지 않는 데이터를 저장하는 데 최적화되어 있지만 필요할 때 즉시 액세스할 수 있습니다.
 
 소스 클러스터에서 ONTAP 9.10.1 이상이 실행 중인 경우 추가 비용 최적화를 위해 일정 일(일반적으로 30일 이상) 후에 _Cool_to_Azure Archive_storage에서 백업을 계층화하도록 선택할 수 있습니다. 이 계층의 데이터는 필요할 때 즉시 액세스할 수 없으며 검색 비용을 더 높여야 하기 때문에 이러한 아카이브 백업 파일에서 데이터를 복원해야 하는 빈도를 고려해야 합니다. 에 대한 다음 섹션을 참조하십시오 <<아카이브 스토리지에서 데이터 복원,아카이브 스토리지에서 데이터 복원>>.
 
-이러한 유형의 수명 주기 규칙으로 Cloud Backup을 구성할 때는 Azure 계정에서 컨테이너를 설정할 때 수명 주기 규칙을 구성하지 않아야 합니다.
+이러한 유형의 수명 주기 규칙을 사용하여 BlueXP 백업 및 복구를 구성할 때는 Azure 계정에 컨테이너를 설정할 때 수명 주기 규칙을 구성하지 않아야 합니다.
 
 https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["Azure Blob 액세스 계층에 대해 알아보십시오"^].
 
