@@ -1006,7 +1006,6 @@
   <block id="35902f649443d8dd6c5f04595fff3035" category="paragraph">Cloud Backup을 활성화한 후 Kubernetes 클러스터에 새로운 영구 볼륨을 추가한 경우에는 이전에 해당 볼륨에 대한 백업을 구성해야 했습니다. 이제 새로 생성된 볼륨에 자동으로 적용되는 정책을 선택할 수 있습니다. 이 옵션은 새 Kubernetes 클러스터에 대한 Cloud Backup을 활성화할 때 설정 마법사에서 사용할 수 있습니다.</block>
   <block id="afd87a86d8a5973d91f3fcc4e85c719f" category="section-title">Cloud Backup for Virtual Machines 1.1.0이 현재 GA로 제공됩니다</block>
   <block id="db46ba2f888d41e44da25c2d8c1f406d" category="summary">데이터 저장소와 가상 머신을 보고 VMware vSphere 인스턴스용 SnapCenter 플러그인을 편집할 수 있습니다.</block>
-  <block id="880521c077c3d9130e51f737ddd86b15" category="doc">가상 시스템 보호 관리</block>
   <block id="78166ce4ccceeedfbf6aeb8682851072" category="paragraph">* 이 작업에 대한 정보 *</block>
   <block id="b4aa547260f4fe266f03ec3a845576a5" category="section-title">VMware vSphere용 SnapCenter 플러그인을 편집합니다</block>
   <block id="4cc186df234138a57b2e8c5d8e5f7f8d" category="list-text">저장 * 을 클릭합니다.</block>
@@ -1016,13 +1015,11 @@
   <block id="048b394365a250ed3a53a1b28e83733e" category="paragraph">새로운 변경 사항이 검색됩니다.</block>
   <block id="3e99ccad833881d9a8aeec4e2665baae" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 데이터 저장소에 해당하는 * Refresh Protection * 을 클릭하여 변경 사항에 대한 클라우드 보호를 활성화합니다.</block>
   <block id="529795f55723488071425500df0ff5d6" category="summary">클라우드에서 가상 머신을 사내 SnapCenter로 복구할 수 있습니다.</block>
-  <block id="70861b61c8a43f84ddd14a22316ee5af" category="doc">클라우드에서 가상 머신을 복구합니다</block>
   <block id="b4851e92b19af0c5c82447fc0937709d" category="inline-link-macro">요구 사항</block>
   <block id="ceb4a235a226f19c172c9cf7c46d00dc" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 복원하려는 데이터 저장소에 해당하는 * View Details * 를 클릭합니다.</block>
   <block id="a03a09176193c264d8dcbdcb8f2f9043" category="list-text">복원하려는 백업에 해당하는 * 복원 * 을 클릭합니다.</block>
   <block id="0291e73f7c30c841795ff165a80bdc0e" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 복원하려는 가상 머신에 해당하는 을 클릭하고 * Restore * 를 클릭합니다.</block>
   <block id="42387e1cb260fd1fb8624acde3767841" category="paragraph">백업이 수행된 위치와 동일한 위치로 VM이 복구됩니다.</block>
-  <block id="8f2653c5938080ffdd57904f850bc430" category="section-title">VMware vSphere용 SnapCenter 플러그인을 등록합니다</block>
   <block id="4e5b953e1349e67f48dba9317bba75d3" category="list-text">VMware vSphere * 용 SnapCenter 플러그인 등록 을 클릭합니다.</block>
   <block id="4eb88f79049bc78204f8659b66b7b655" category="list-text">사용자 이름 및 암호 필드에서 관리자 역할을 가진 사용자의 자격 증명을 지정합니다.</block>
   <block id="1d419e3005bf4974f6070bbb53e5816f" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 백업하려는 데이터 저장소에 대해 * Activate Backup * 를 클릭합니다.</block>
@@ -1040,12 +1037,8 @@
   <block id="f8038513f93eb5ca7b2505674255b67b" category="list-text">필요한 리소스 그룹에서 " *_Recent * "를 비활성화합니다. 리소스 그룹에 대해 " *_Recent * "를 설정한 경우 해당 리소스 그룹의 백업을 클라우드의 데이터 보호에 사용할 수 없으며 이후에 복구 작업에 사용할 수 없습니다.</block>
   <block id="391eb750d98c55b72607ff6ec6311db2" category="list-text">가상 머신이 복구될 대상 데이터 저장소에 VMDK, VMX, VMSD 등과 같은 모든 가상 머신 파일의 복제본을 수용할 수 있는 공간이 충분한지 확인합니다.</block>
   <block id="6ee2c41b7a9bfae5bb618327d9499834" category="list-text">대상 데이터 저장소에 이전 복원 작업 실패의 restore_xxx_xxxxxx_filename 형식으로 오래된 가상 머신 파일이 없는지 확인합니다. 복구 작업을 트리거하기 전에 오래된 파일을 삭제해야 합니다.</block>
-  <block id="4cfbdcb9aba741b123b3c46a8341bf59" category="sidebar">가상 머신 데이터 보호</block>
-  <block id="b2736084b30c35472d74c3c29a818a95" category="sidebar">가상 머신 보호 관리</block>
-  <block id="c2c86860cad5cd95ae9ef9c003e01d57" category="sidebar">가상 머신 데이터를 복구합니다</block>
   <block id="b418e05c847b656e4a8ac26f2f0cc045" category="inline-link">가상 시스템을 클라우드로 보호하는 방법에 대해 자세히 알아보십시오</block>
   <block id="3a5ea6bb0616fe3f66bd74e5e18fd1b3" category="paragraph"><block ref="95fa49d8f0b9a0affedd5e0d4a52c2d2" category="inline-link-rx"></block>.</block>
-  <block id="7c8db0bef9b3c6a1335fe8f0a09bfdef" category="sidebar">가상 머신 데이터 백업 및 복원</block>
   <block id="338b73eb5ee02b02ceb307b68866c9f2" category="section-title">ONTAP 찾아보기 및 복원 기능에는 클라우드 복원 인스턴스가 필요하지 않습니다</block>
   <block id="c2f301bf47b0e51a835909a868e786b5" category="paragraph">S3 및 Blob 스토리지에서 파일 레벨 찾아보기 및 복원 작업에 사용되는 별도의 클라우드 복원 인스턴스/가상 머신. 이 인스턴스는 사용하지 않을 때 종료되지만 파일을 복원할 때 약간의 시간과 비용이 추가되었습니다. 이 기능은 필요 시 Connector에 배포되는 무료 컨테이너로 대체되었습니다. 다음과 같은 이점을 제공합니다.</block>
   <block id="b7a41babdf28bb4d456f0725ccfbc402" category="list-text">파일 레벨 복구 작업에 대한 추가 비용 없음</block>
@@ -1693,7 +1686,6 @@
   <block id="ba7b66b996d8928df996e4fd4fffa4a4" category="doc">StorageGRID에 데이터 저장소를 백업합니다</block>
   <block id="cf4e6e70123f43cdec5ffd93f792c083" category="list-text">스토리지 서버 IP를 지정합니다.</block>
   <block id="10303a499a9e21a77e6dad69618c622b" category="list-text">액세스 키와 비밀 키를 선택합니다.</block>
-  <block id="fe8f95b60b7c4092ce03adfbb31e89b4" category="doc">가상 머신을 백업하는 정책을 생성합니다</block>
   <block id="43852dc1e0c3229284688eb4c01dfef0" category="paragraph">미리 정의된 정책을 편집하지 않으려면 정책을 만들어야 합니다.</block>
   <block id="0ef51421739da7017b4d3decc1813f4a" category="list-text">가상 머신 페이지의 설정 드롭다운 목록에서 * 정책 * 을 선택합니다.</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">지원 등록 개요</block>
@@ -2143,7 +2135,6 @@
   <block id="244bf1b38515bb301b6d835e3906b9a1" category="paragraph">아카이브 계층의 데이터는 필요할 때 즉시 액세스할 수 없으며 검색 비용을 높여야 하기 때문에 아카이빙된 백업 파일에서 데이터를 복원해야 하는 빈도를 고려해야 합니다.</block>
   <block id="373e31603b5a78ab3bc84cbe57c892b5" category="paragraph">각 백업 정책은 백업 파일에 적용할 수 있는 _Archival Policy_에 대한 섹션을 제공합니다.</block>
   <block id="0776412162b9ad0d387bbf818146d659" category="sidebar">지원되는 Google 아카이브 스토리지 계층</block>
-  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">새로운 기능</block>
   <block id="b2ff0fb046b03e40e599f1561ed5ebd3" category="list-text">FlexGroup 볼륨에서 FlexVol 볼륨으로 또는 FlexVol 볼륨을 FlexGroup 볼륨으로 복원하는 것은 지원되지 않습니다.</block>
   <block id="30bc6b6cbbb254a1299f2544d8a09731" category="paragraph">API 호출을 할 때 인증 헤더에 사용자 토큰을 추가하고 X-agent-id 헤더에 BlueXP 커넥터 ID를 추가합니다. API에서 BlueXP 계정 ID를 사용해야 합니다.</block>
   <block id="710f97f519c3a0c08777096972387f3c" category="list-text">NetApp BlueXP 웹 사이트에서 사용자 토큰을 받으십시오.</block>
@@ -2196,7 +2187,6 @@
   <block id="c816d65f45a034b0842bc039567fcb6b" category="inline-link-macro">Google Cloud에서 Cloud Volumes ONTAP를 빠르게 시작합니다</block>
   <block id="d6758ec75f0ff2bab6d8a4d6b6f79cf1" category="list-text"><block ref="d6758ec75f0ff2bab6d8a4d6b6f79cf1" category="inline-link-macro-rx"></block></block>
   <block id="2a60e5494e07cff54330378780f8e2a4" category="list-text">(선택 사항) 비용 최적화를 위해 일정 일 후에 오브젝트 저장소에서 아카이브 스토리지로 백업을 이동하려면 * Tier Backups to Archival * 확인란을 선택하고 백업을 아카이빙해야 하는 일 수를 입력합니다.</block>
-  <block id="2918bd1eb41f17cc6bbd51b50460f7dc" category="admonition">가상 시스템과 연결된 정책은 편집하거나 삭제할 수 없습니다.</block>
   <block id="d5b842bb75f6d0fd358e7a35f06b5354" category="summary">Oracle 데이터베이스의 예약된 백업 또는 주문형 백업을 생성합니다.</block>
   <block id="b83d0a6a6920d792bf1e5421f574e4d8" category="doc">클라우드 네이티브 Oracle 데이터베이스 백업</block>
   <block id="436faef9b95757e54b257ab16a914324" category="section-title">Oracle Database 백업을 생성합니다</block>
@@ -2381,7 +2371,6 @@
   <block id="9bc04b83e994e96133d24116c5a25bf5" category="list-text">@는 데이터를 데이터베이스 이름과 분리하고 값을 키와 분리하는 데 사용됩니다. 예: data@RG2_scspr2417819002_07-20-2021_12.16.48.9267_0 | LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267_1</block>
   <block id="08d3131fcf6d963372785be681e343e9" category="list-text">는 SC_BACKUP_NAME 매개 변수에 대해 서로 다른 두 엔터티 간에 데이터를 분리하는 데 사용됩니다. 예: DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267_0 | LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267_1</block>
   <block id="1dc2b43d41c36670d82fe3076115def6" category="list-text">, 은 같은 키에 대한 변수 집합을 구분하는 데 사용됩니다. 예: data@RG2_scspr2417819002_07-20-2021_12.16.48.9267_0 | log@RG2_scspr2417819002_07-20-2021_12.16.4267_1, RG2_scprsprs2417819002_07-21-21-2021_12.48.9267_1, squ2287_2407_2407_2427_2407_24222_242267_42.722_242267_1</block>
-  <block id="9506c95f9ad8061d2b32d45700688c83" category="paragraph">클라우드에서 가상 머신을 사내 vCenter로 복구할 수 있습니다. 백업이 수행된 위치와 정확히 동일한 위치로 복구됩니다. 가상 머신이 아카이브 정책을 사용하여 백업된 경우 아카이브 복구 우선 순위를 설정할 수 있습니다.</block>
   <block id="5183d16b45269aeda8f220ef35e5327c" category="list-text">백업에서 복구할 가상 머신을 선택합니다.</block>
   <block id="0b204b102ed08f6af904a33d81026023" category="list-text">Archival Restore Priority * 를 선택하고 * Next * 를 클릭합니다.</block>
   <block id="071df86763e0e93af80e50596aa0710c" category="list-text">가상 머신을 복구할 백업을 선택합니다.</block>
@@ -2471,7 +2460,6 @@
   <block id="e3b72f702a3b0c42e864fe0ad9eb9453" category="paragraph"><block ref="e3b72f702a3b0c42e864fe0ad9eb9453" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2c9139d12cc7ddacb93c941d4bf412a2" category="paragraph">커넥터는 애플리케이션 또는 다른 애플리케이션과 동일한 VPC 또는 VNET에 구축할 수 있습니다. 커넥터와 응용 프로그램이 서로 다른 네트워크에 있는 경우 이들 간에 네트워크 연결을 설정해야 합니다.</block>
   <block id="e3a2981d750d1d4a623860068a07cc70" category="admonition">단일 BlueXP 커넥터는 여러 스토리지 시스템 및 여러 애플리케이션 플러그인과 통신할 수 있습니다. Connector와 애플리케이션 호스트 간에 연결이 있는 경우 애플리케이션을 관리하려면 단일 커넥터가 필요합니다.</block>
-  <block id="11db7b880ef2ebba3ee0a02b685e8da0" category="section-title">Oracle 데이터베이스 보호</block>
   <block id="18cf072964a583150dd247485ba75b92" category="list-text">ONTAP용 Amazon FSx</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="list-text">Cloud Volumes ONTAP</block>
   <block id="09417dd7907c94abc22203ab06dade6c" category="list-text">스토리지 레이아웃:</block>
@@ -2488,7 +2476,6 @@
   <block id="5669d4dde41a20620530fdebbd1d9492" category="list-text">백업, 복원, 클론 및 기타 작업 모니터링</block>
   <block id="9518d577aae2b3d43b6dd0f41fb999e1" category="list-text">Oracle 11g를 지원하지 않습니다</block>
   <block id="d67615cd9765a283fd8a9d06cd5d44a1" category="list-text">에서는 백업에 대한 마운트, 카탈로그 및 검증 작업을 지원하지 않습니다</block>
-  <block id="9317a56cfedd80231a539c42f44d9c8d" category="section-title">SAP HANA 데이터베이스 보호</block>
   <block id="494c3084e3990387ac3b46cb5749bb65" category="list-text">RHEL 7.5 이상, SAP HANA 인증 8.x 플랫폼</block>
   <block id="504d22b0e020e0b365851eef08a1e4ca" category="list-text">SLES 12 SP5 이상 및 15 SPX 플랫폼은 SAP HANA 인증을 받았습니다</block>
   <block id="c7325743e6b1be5853672e4ed19d279b" category="list-text">데이터베이스 레이아웃:</block>
@@ -2533,7 +2520,6 @@
   <block id="0939e02b7faf70738951c4d3dac49c2d" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 삭제할 클론에 대해 * Delete * 를 클릭합니다.</block>
   <block id="6c2d45f01ff62f51f26b2e2555360189" category="list-text">(선택 사항) * 강제 삭제 * 확인란을 선택합니다.</block>
   <block id="d13044a4ef6b89541aeb5868baab390c" category="paragraph">모든 호스트에 SAP HANA용 SnapCenter 플러그인이 설치되어 실행 중이며 새 커넥터에서 모두 연결할 수 있는 경우 커넥터 세부 정보가 성공적으로 업데이트됩니다.</block>
-  <block id="0fbf3afea399595219e31836afabacc9" category="list-text">SnapCenter Plug-in for VMware vSphere 4.7P1 이상을 사용하여 사내 보조 스토리지에서 가상 머신을 백업해야 합니다.</block>
   <block id="9a3ae5d8e3738351dd9a586e8215632a" category="list-text">SnapCenter Plug-in for VMware vSphere에서 BlueXP의 가상 시스템 정책과 레이블 또는 레이블이 없는 일일, 주별 또는 월별 정책을 하나 이상 지원합니다.</block>
   <block id="add26d38486fad5ca461f986832fa6c3" category="inline-image-macro">아키텍처 다이어그램</block>
   <block id="955c6f1851b4039bd20ae31d5f14d338" category="paragraph"><block ref="955c6f1851b4039bd20ae31d5f14d338" category="inline-image-macro-rx" type="image"></block></block>
@@ -2924,8 +2910,6 @@
   <block id="51c1a6c1e7497769792664cc458e4b3b" category="list-text"><block ref="51c1a6c1e7497769792664cc458e4b3b" category="inline-link-rx"></block></block>
   <block id="3b3fe44fb52240d2bf1cecd954ba8f31" category="list-text"><block ref="3b3fe44fb52240d2bf1cecd954ba8f31" category="inline-link-rx"></block></block>
   <block id="b08b0a6b8389d8eb21b696d8750a42c7" category="list-text"><block ref="b08b0a6b8389d8eb21b696d8750a42c7" category="inline-link-rx"></block></block>
-  <block id="ceb0e703e6fc4ff33d792e51790261e4" category="paragraph">사내 운영 스토리지와 2차 스토리지에서 클라우드로 데이터 저장소를 백업하여 가상 시스템의 데이터를 보호할 수 있습니다. 필요한 경우 가상 머신을 사내 VMware vSphere 호스트용 SnapCenter 플러그인으로 다시 복구할 수 있습니다.</block>
-  <block id="21d7ed1a0ed596af2b79f06576c84ca9" category="paragraph">데이터 저장소를 Amazon Web Services S3, Microsoft Azure Blob, Google Cloud Platform 및 StorageGRID에 백업할 수 있습니다.</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">시작하기 전에</block>
   <block id="949ad3136d64be33cc1a6a67e3add3d1" category="paragraph">클라우드 공급자에 데이터 저장소 및 가상 머신 백업을 시작하기 전에 다음 요구 사항을 읽고 지원되는 구성이 있는지 확인하십시오.</block>
   <block id="9b9477e579c3b44dd623d5a6e1ea8d78" category="list-text">BlueXP</block>
@@ -2939,12 +2923,10 @@
   <block id="b9f7c26581cad3cbd789c6d293692814" category="admonition">데이터 저장소에 걸쳐 있는 가상 머신은 복구할 수 없습니다.</block>
   <block id="76edd5381919de6c1c9b123a884984f8" category="list-text">BlueXP UI에서 * 보호 * &gt; * 백업 및 복구 * &gt; * 가상 머신 * &gt; * VMware vSphere * 용 SnapCenter 플러그인 * 을 클릭하고 VMware vSphere 호스트용 SnapCenter 플러그인을 선택합니다.</block>
   <block id="873069930fc1357e9cd4216822243f14" category="admonition">소스 가상 머신이 다른 위치(vMotion)로 이동되고 사용자가 BlueXP에서 해당 가상 머신의 복구를 트리거하면 가상 머신이 백업이 수행된 소스 위치로 복구됩니다.</block>
-  <block id="73bc14a460209f6fd497aa9bd91fbaa6" category="list-text">데이터 저장소 또는 가상 시스템에서 복구할 수 있습니다.</block>
   <block id="5d920b501536441ea32ecc24679c72a2" category="cell">원하는 작업</block>
   <block id="df2d87dc916178a7076837c06010ded0" category="paragraph">데이터 저장소에서 복구합니다</block>
   <block id="4569e5f9f0309302f499c21fc4cb8ee6" category="paragraph">이 옵션은 보관 설정이 구성된 정책을 사용하여 가상 컴퓨터를 보호하는 경우에만 사용할 수 있습니다. Amazon Web Services에서 지원되는 아카이브 복원 우선순위는 높음, 표준 및 낮음이며 Microsoft Azure에서 지원되는 아카이브 복원 우선순위는 높음 및 표준입니다.</block>
   <block id="2a8a756e65415cefaa2a8f2d963e01be" category="paragraph">가상 시스템에서 복원합니다</block>
-  <block id="4eb58c4143c6b0e5561211f7a2425377" category="list-text">오브젝트 저장소에서 아카이브 스토리지로 백업을 이동하려면 ONTAP 9.10.1 이상을 실행해야 하며 Amazon Web Services 또는 Azure가 클라우드 공급자가 되어야 합니다.</block>
   <block id="5d0ad01dbdb8717fbebf1cb44a3c10cd" category="list-text">각 클라우드 공급자에 대해 아카이브 액세스 계층을 구성해야 합니다.</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">이 작업에 대해</block>
   <block id="ca69b8ee34e44ac66b7f0dfd3b786e9c" category="paragraph">BlueXP에서 다음과 같은 사전 정의된 정책을 사용할 수 있습니다.</block>
@@ -2956,7 +2938,6 @@
   <block id="f352f7544724f99ab1b27e3e40291b49" category="admonition">BlueXP에서 VMware vSphere 호스트용 SnapCenter 플러그인을 여러 개 등록할 수 있습니다. 그러나 일단 등록하면 VMware vSphere 호스트용 SnapCenter 플러그인을 제거할 수 없습니다.</block>
   <block id="ebeea6bd6cc46b0c9f463f2b01659606" category="list-text">VMware vSphere용 SnapCenter 플러그인 필드에서 VMware vSphere 호스트용 SnapCenter 플러그인의 FQDN 또는 IP 주소를 지정합니다.</block>
   <block id="463d350eb6c9887e5addb9a6561a47ad" category="list-text">포트 필드에서 VMware vSphere 호스트용 SnapCenter 플러그인이 실행되고 있는 포트 번호를 지정합니다.</block>
-  <block id="a3640e12809bb0c58c14ed0dc2515991" category="paragraph">VMware vSphere 호스트용 SnapCenter 플러그인과 BlueXP 간에 통신이 가능하도록 포트가 열려 있는지 확인해야 합니다.</block>
   <block id="1e88a362bd23950ee5a102f645348ac8" category="paragraph">VMware vSphere 호스트용 등록된 SnapCenter 플러그인을 사용하여 보호되는 모든 데이터 저장소와 가상 머신을 보려면 * 백업 및 복구 * &gt; * 가상 머신 * 을 클릭합니다.</block>
   <block id="942c9249796cf6b78c981ebf15195809" category="list-text"><block ref="942c9249796cf6b78c981ebf15195809" category="inline-link-rx"></block></block>
   <block id="26000c50c37289d13041f03c670085a3" category="paragraph">SnapCenter Plug-in for VMware vSphere 호스트를 BlueXP와 통합하여 하나 이상의 데이터 저장소를 Microsoft Azure에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
@@ -3490,7 +3471,6 @@
   <block id="5c92c4685a32fe7d41d3f537c7f5116b" category="paragraph">* 중요: * DataLock을 사용하려는 경우 BlueXP 백업 및 복구를 활성화할 때 첫 번째 정책에서 활성화해야 합니다.</block>
   <block id="0331809832826b1a244aca026a9b2d64" category="list-text">백업 활성화 * 를 클릭하면 선택한 각 볼륨의 초기 백업을 수행하여 BlueXP 백업 및 복구가 시작됩니다.</block>
   <block id="ba48140a3394818b661e6fd497e203a7" category="doc">BlueXP 백업 및 복구에 대해 알아보십시오</block>
-  <block id="fa3178fc47dcb8e792e863ce59dac949" category="paragraph">BlueXP 백업 및 복구는 사내 및 클라우드 모두에서 NetApp ONTAP 데이터, Kubernetes 영구 볼륨, 데이터베이스 및 가상 머신에 대해 효율적이고 안전하며 비용 효율적인 데이터 보호 기능을 제공합니다. 백업은 자동으로 생성되어 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 저장됩니다.</block>
   <block id="af4d8d7b56820e969dfbdcfe2654b5b3" category="paragraph">이 서비스는 블록 레벨, 영구 증분 복제를 수행하고 모든 스토리지 효율성을 보존하여 복제 및 저장되는 데이터 양을 크게 줄입니다. 또한, 고객은 보호되는 것에 대해서만 비용을 지불하고 사용 가능한 가장 저렴한 스토리지 계층을 사용함으로써 BlueXP 백업 및 복구를 매우 비용 효율적으로 수행할 수 있습니다.</block>
   <block id="723a81a7ee0b42134a46c1aaa0d99371" category="inline-link">BlueXP 백업 및 복구에 대해 자세히 알아보십시오</block>
   <block id="9eb420abad7616344371178eb6cfb9a7" category="paragraph"><block ref="63f4276e2fdf1ca315cba1b1fcff7250" category="inline-link-rx"></block>.</block>
@@ -3735,7 +3715,6 @@
   <block id="2e5d6ff9bc4d6b4194df020bde3f3dca" category="sidebar">어두운 사이트에서 BlueXP 백업 및 복구 데이터베이스를 백업합니다</block>
   <block id="54153028a776309bcfbdd3b7b8285463" category="sidebar">BlueXP 백업 및 복구 블로그</block>
   <block id="960dd4200d015a0a12dfd299c1348c9c" category="sidebar">BlueXP 백업 및 복구 활용 사례</block>
-  <block id="ceffaf94354645ad26052bbc53604f5d" category="sidebar">가상 머신 데이터를 클라우드에 백업합니다</block>
   <block id="a1c18d7af73fa7e0ef0013130f15b257" category="sidebar">클라우드에서 데이터 복원</block>
   <block id="6edd76ff9d03a833a8a254cc8af745d0" category="sidebar">ONTAP 볼륨 데이터를 복원합니다</block>
   <block id="10b8a325c32b95729e9b37864d6a110a" category="sidebar">사내 Oracle 애플리케이션 데이터를 복원합니다</block>
@@ -3744,4 +3723,21 @@
   <block id="5fd9bba0b0a00c42d3baab299425c076" category="sidebar">클라우드 네이티브 SAP HANA 애플리케이션 데이터를 복원합니다</block>
   <block id="18de97333e5776e0c135dd87c10b965c" category="sidebar">가상 머신 데이터를 복구합니다</block>
   <block id="16cc11572a7582fe5007212d56145dc8" category="sidebar">Kubernetes 볼륨 데이터를 복원합니다</block>
+  <block id="70dfad9357f3b3b710b73d8eb3666851" category="paragraph">BlueXP 백업 및 복구 서비스는 온프레미스와 클라우드 모두에서 NetApp ONTAP 데이터, Kubernetes 영구 볼륨, 데이터베이스 및 가상 머신에 대해 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다. 백업은 자동으로 생성되어 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 저장됩니다.</block>
+  <block id="9a3f2e7eb30992bb084418711e5093f2" category="doc">데이터 저장소 및 가상 머신 데이터 보호 관리</block>
+  <block id="2131f85f2f51908e5c573c231b274f4c" category="paragraph">기본 8144 포트에서 실행 중인 온프레미스 SnapCenter Plug-in for VMware vSphere 호스트와 클라우드 공급자(Amazon Web Services, Microsoft Azure, Google Cloud Platform) 또는 온프레미스에서 실행 가능한 BlueXP Connector 인스턴스 간에 통신이 열려 있는지 확인해야 합니다.</block>
+  <block id="de437d1f424b507f3d7be645ac0952c2" category="paragraph">가상 시스템에 대한 BlueXP 백업 및 복구는 가상 시스템을 복원하는 데이터 저장소를 백업하여 데이터 보호 기능을 제공합니다.</block>
+  <block id="40c5998ccd6f421d1eaa29ece0c36b59" category="paragraph">데이터 저장소를 Amazon Web Services S3, Microsoft Azure Blob, Google Cloud Platform 및 StorageGRID에 백업하고 VMware vSphere 호스트용 온프레미스 SnapCenter 플러그인으로 가상 머신을 복원할 수 있습니다.</block>
+  <block id="2a18af02b6c0b7e92a17df9509574f26" category="list-text">SnapCenter Plug-in for VMware vSphere 4.7P1 이상을 사용하여 사내 보조 스토리지의 데이터 저장소를 백업해야 합니다.</block>
+  <block id="9fe2f95002b4b4815d52173b68bf9862" category="summary">데이터 저장소를 백업하는 정책을 생성합니다</block>
+  <block id="38fb3153d6139974d24ba11e28a0718d" category="list-text">오브젝트 저장소에서 아카이브 스토리지로 백업을 이동하려면 ONTAP 9.10.1 이상을 실행해야 하며 Amazon Web Services 또는 Microsoft Azure가 클라우드 공급자가 되어야 합니다.</block>
+  <block id="44dae527927c9be3aabaf37ba09b9068" category="admonition">데이터 저장소와 연결된 정책은 편집하거나 삭제할 수 없습니다.</block>
+  <block id="ffa1e37a2c6478ff157a0a7d25a607e9" category="doc">클라우드에서 가상 머신 데이터를 복원합니다</block>
+  <block id="95513dac8a621e64dcee2a0f311b0e66" category="paragraph">클라우드에서 가상 머신 데이터를 다시 사내 vCenter로 복구할 수 있습니다. 백업이 수행된 위치와 정확히 동일한 위치로 복구됩니다. 가상 머신이 아카이브 정책을 사용하여 백업된 경우 아카이브 복구 우선 순위를 설정할 수 있습니다.</block>
+  <block id="6c0dd80335ed3d649017aa79a23eddae" category="list-text">데이터 저장소 또는 가상 시스템에서 복구할 수 있습니다.</block>
+  <block id="54a98d3cca3d552c2562869bfcebf735" category="section-title">Oracle 데이터베이스 보호</block>
+  <block id="b45eb079efd4b3748b1efc669c02c01c" category="section-title">SAP HANA 데이터베이스 보호</block>
+  <block id="3eb97a71011fe0dae37080fd785e4db5" category="sidebar">가상 머신 데이터 백업 및 복원</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">새로운 소식</block>
+  <block id="7048662b75c8f210e59f898d992521cc" category="sidebar">데이터 저장소를 클라우드에 백업합니다</block>
 </blocks>

@@ -4,7 +4,7 @@ permalink: task-manage-vm-data-in-cloud.html
 keywords: manage backups, virtual machines, view datastores, view virtual machines, edit 
 summary: 데이터 저장소와 가상 머신을 보고 VMware vSphere 인스턴스용 SnapCenter 플러그인을 편집할 수 있습니다. 
 ---
-= 가상 시스템 보호 관리
+= 데이터 저장소 및 가상 머신 데이터 보호 관리
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

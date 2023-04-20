@@ -4,7 +4,7 @@ permalink: task-restore-vm-data.html
 keywords: restore virtual machines 
 summary: 클라우드에서 가상 머신을 사내 SnapCenter로 복구할 수 있습니다. 
 ---
-= 클라우드에서 가상 머신을 복구합니다
+= 클라우드에서 가상 머신 데이터를 복원합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 클라우드에서 가상 머신을 사내 SnapCenter로 복구할 수 
 
 
 [role="lead"]
-클라우드에서 가상 머신을 사내 vCenter로 복구할 수 있습니다. 백업이 수행된 위치와 정확히 동일한 위치로 복구됩니다. 가상 머신이 아카이브 정책을 사용하여 백업된 경우 아카이브 복구 우선 순위를 설정할 수 있습니다.
+클라우드에서 가상 머신 데이터를 다시 사내 vCenter로 복구할 수 있습니다. 백업이 수행된 위치와 정확히 동일한 위치로 복구됩니다. 가상 머신이 아카이브 정책을 사용하여 백업된 경우 아카이브 복구 우선 순위를 설정할 수 있습니다.
 
 
 NOTE: 데이터 저장소에 걸쳐 있는 가상 머신은 복구할 수 없습니다.

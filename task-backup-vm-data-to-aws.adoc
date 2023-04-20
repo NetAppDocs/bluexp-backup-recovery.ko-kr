@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-backup-vm-data-to-aws.html 
-keywords: back up, backup, backup virtual machine data, aws, Amazon Web Services, cloud backup, backup datastores 
+keywords: back up, backup, backup datastore, aws, Amazon Web Services, cloud backup, backup datastores 
 summary: 사내 ONTAP에서 AWS로 데이터 저장소를 백업합니다. 
 ---
 = Amazon Web Services에 데이터 저장소를 백업합니다

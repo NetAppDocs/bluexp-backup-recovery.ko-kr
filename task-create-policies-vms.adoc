@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-create-policies-vms.html 
 keywords: create policy, protection policies, predefined policies, custom policies 
-summary: 가상 머신을 백업하는 정책을 생성합니다 
+summary: 데이터 저장소를 백업하는 정책을 생성합니다 
 ---
-= 가상 머신을 백업하는 정책을 생성합니다
+= 데이터 저장소를 백업하는 정책을 생성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,7 +18,7 @@ summary: 가상 머신을 백업하는 정책을 생성합니다
 
 .시작하기 전에
 * 미리 정의된 정책을 편집하지 않으려면 정책을 만들어야 합니다.
-* 오브젝트 저장소에서 아카이브 스토리지로 백업을 이동하려면 ONTAP 9.10.1 이상을 실행해야 하며 Amazon Web Services 또는 Azure가 클라우드 공급자가 되어야 합니다.
+* 오브젝트 저장소에서 아카이브 스토리지로 백업을 이동하려면 ONTAP 9.10.1 이상을 실행해야 하며 Amazon Web Services 또는 Microsoft Azure가 클라우드 공급자가 되어야 합니다.
 * 각 클라우드 공급자에 대해 아카이브 액세스 계층을 구성해야 합니다.
 
 
@@ -74,6 +74,6 @@ BlueXP에서 다음과 같은 사전 정의된 정책을 사용할 수 있습니
 . Create * 를 클릭합니다.
 +
 
-NOTE: 가상 시스템과 연결된 정책은 편집하거나 삭제할 수 없습니다.
+NOTE: 데이터 저장소와 연결된 정책은 편집하거나 삭제할 수 없습니다.
 
 
