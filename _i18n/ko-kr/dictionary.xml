@@ -758,11 +758,7 @@
   <block id="c1b2dc0798d3960e25b8a12c751f53ec" category="list-text">Add License_대화 상자에서 라이센스 정보를 입력하고 * Add License * 를 클릭합니다.</block>
   <block id="cb365723ea49a8e0727d9887fcd819ad" category="list-text">백업 라이센스 일련 번호가 있고 NSS 계정을 알고 있는 경우 * 일련 번호 입력 * 옵션을 선택하고 해당 정보를 입력합니다.</block>
   <block id="a274f4d4670213a9045ce258c6c56b80" category="inline-link">알림</block>
-  <block id="07cbe2ff704ff30b6f3ca7e91297e4fd" category="paragraph">라이센스가 부여된 기간이 만료일에 가까워지고 있거나 라이센스가 부여된 용량이 한도에 도달한 경우 백업 UI에서 알림을 받게 됩니다. 이 상태는 Digital Wallet 페이지와 에도 표시됩니다<block ref="2011e54262643b9060a004b0df801155" category="inline-link-rx"></block>.</block>
-  <block id="89ec6475bcd2a52ce9ca1c8fa843339e" category="inline-image-macro">Digital Wallet 페이지에 만료 중인 라이센스를 보여 주는 스크린샷.</block>
-  <block id="b16535eaa5694c59eb7ff71777c5cd59" category="paragraph"><block ref="b16535eaa5694c59eb7ff71777c5cd59" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b2b168bd64a341a85c749cb61bba40cb" category="inline-xref">NetApp Support 사이트에서 라이센스 파일을 받으십시오</block>
-  <block id="f0542d3d118535e2d706a4502f615735" category="list-text">Digital Wallet page_Data Services Licenses_탭에서 를 클릭합니다 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 업데이트하는 서비스 일련 번호에 대해 * Update License * 를 클릭합니다.</block>
   <block id="3ce750f001c2369e23b68f3210d9f100" category="inline-image-macro">특정 서비스에 대한 라이센스 업데이트 단추를 선택하는 스크린샷</block>
   <block id="9d37072f5a1b76b16e647a14826ade70" category="paragraph"><block ref="9d37072f5a1b76b16e647a14826ade70" category="inline-image-macro-rx" type="image"></block></block>
   <block id="41e921305ae1b027e5d364af4a2a9df2" category="list-text">Update License_page에서 라이센스 파일을 업로드하고 * Update License * 를 클릭합니다.</block>
@@ -1235,7 +1231,6 @@
   <block id="37c606e486cf867317024daab096d5c7" category="sidebar">Azure에서 다중 계정 액세스를 위한 백업을 구성합니다</block>
   <block id="9aa87cabc3c16ccfd72ed13e9e2a189c" category="list-text">ONTAP 클러스터는 백업 및 복원 작업을 위해 인터클러스터 LIF에서 StorageGRID 게이트웨이 노드에 대한 사용자 지정 포트를 통한 HTTPS 연결을 시작합니다. 백업 설정 중에 포트를 구성할 수 있습니다.</block>
   <block id="92a508a0037c85cca367ecb3e92a0fde" category="list-text">포트 443을 통해 StorageGRID 게이트웨이 노드에 대한 HTTPS 연결</block>
-  <block id="24e6e2f6171b43a847fe194a9a9b5cd0" category="inline-link">글로벌 파일 캐시</block>
   <block id="92b61176075059ecdabd92837adf7da4" category="paragraph">백업에 대한 StorageGRID 대상이 Canvas에서 작업 환경으로 존재하는 경우 클러스터를 StorageGRID 작업 환경으로 끌어서 설치 마법사를 시작할 수 있습니다.</block>
   <block id="ebea53a8d7bf996062062169f43ef628" category="list-text">백업 스케줄을 정의하고 보존할 백업 수를 선택합니다. <block ref="67a34cd7549e2904a063387c005adbcb" category="inline-link-macro-rx"></block>.</block>
   <block id="5a378b18f7bf0c4cabc6c655cd2f535e" category="list-text">다음 * 을 클릭합니다.</block>
@@ -1742,17 +1737,14 @@
   <block id="59cbb06daac31886728833270d8bf9a2" category="list-text">GCP에서 BlueXP는 Google Cloud Storage 버킷의 스토리지 계정이 있는 신규 또는 기존 프로젝트를 사용합니다.</block>
   <block id="800de79585a9dadbf8cf5d2e105d09bb" category="list-text">StorageGRID에서 BlueXP는 오브젝트 저장소 버킷에 기존 저장소 계정을 사용합니다.</block>
   <block id="065c13346a6a1b4ec88ebda80e48a910" category="inline-link">BlueXP 계정</block>
-  <block id="0dd9786a3d42804eeebb54b2f3e11edd" category="paragraph">BlueXP Digital Wallet 페이지에 입력한 일련 번호를 통해 서비스를 활성화할 수 있습니다. 두 제한 중 하나에 도달하면 라이센스를 갱신해야 합니다. Backup BYOL 라이센스는 와 관련된 모든 소스 시스템에 적용됩니다<block ref="52a8d8c521fd6d51982efde4bc1bb1fd" category="inline-link-rx"></block>.</block>
   <block id="ea8bcfb1baf19f84e4a5e1f8a744b022" category="list-text">BlueXP 메뉴에서 * 보호 &gt; 백업 및 복구 * 를 선택합니다.</block>
   <block id="58916e7720d1539d3ab208d053e7dd1d" category="paragraph">이 옵션을 사용하려면 마켓플레이스 페이지에서 구독을 설정한 다음<block ref="f1f7c973fce685b876017d26d677c721" category="inline-link-rx"></block>. 또한 BlueXP의 AWS 자격 증명에 활성 서브스크립션을 하나만 할당할 수 있으므로 이 연간 계약 가입을 통해 Cloud Volumes ONTAP 시스템에 대한 비용을 지불해야 합니다.</block>
   <block id="d24c531f67e59e16184a6f74c9a59f91" category="paragraph">이 옵션을 사용하려면 Cloud Volumes ONTAP 작업 환경을 생성할 때 연간 계약을 설정하고 BlueXP에서 AWS 마켓플레이스에 가입하라는 메시지를 표시합니다.</block>
-  <block id="aa64d3ab005dc0bda0aad02472aaa320" category="paragraph">BlueXP의 Digital Wallet 페이지를 사용하여 BYOL 라이센스를 관리합니다. Digital Wallet에서 새 라이센스를 추가하고, 기존 라이센스를 업데이트하고, 라이센스 상태를 볼 수 있습니다.</block>
   <block id="f68bf28051d836364652b5a91d1bcd3a" category="list-text">BlueXP 계정 ID(지원 사이트에서 테넌트 ID라고 함)를 입력하고 * 제출 * 을 클릭하여 라이센스 파일을 다운로드합니다.</block>
   <block id="257ff1df6b80ed0bf9b3463d53be79f9" category="paragraph">BlueXP의 상단에서 * 계정 * 드롭다운을 선택한 다음 계정 옆의 * 계정 관리 * 를 클릭하여 BlueXP 계정 ID를 찾을 수 있습니다. 계정 ID는 개요 탭에 있습니다.</block>
   <block id="8d080a0104c2b8b29f5fc2be913926af" category="list-text">BlueXP 메뉴에서 * Governance &gt; Digital Wallet * 을 클릭한 다음 * Data Services Licenses * 탭을 선택합니다.</block>
   <block id="bae190eec3db4a0dd635ae72756acde8" category="inline-link">NSS 계정을 BlueXP에 추가합니다</block>
   <block id="fc76651edf85f11e6b8f2a81226ab59d" category="paragraph">드롭다운 목록에서 NetApp Support 사이트 계정을 사용할 수 없는 경우<block ref="6d9745cd4f1d60b55f06aef4c5cb6ec4" category="inline-link-rx"></block>.</block>
-  <block id="8061535eb5e8bab52c4a8a0fdc119d14" category="paragraph">라이센스 비용을 지불하고 NetApp Support 사이트에 등록한 후 BlueXP는 디지털 지갑의 라이센스를 자동으로 업데이트하고 데이터 서비스 라이센스 페이지에 변경 내용이 5-10분 내에 반영됩니다.</block>
   <block id="cc51ebad1f268690053194c8639d1a75" category="list-text">BlueXP에서 라이센스를 자동으로 업데이트할 수 없는 경우(예: 어두운 사이트에 설치된 경우) 라이센스 파일을 수동으로 업로드해야 합니다.</block>
   <block id="379dea20c8734742bd3f9c78de134135" category="paragraph">이러한 경고가 표시되면 BlueXP 인터페이스 오른쪽 아래에 있는 채팅 아이콘을 사용하여 라이센스를 갱신하십시오.</block>
   <block id="1fdc9d2d6f254f32143c31bdb680c25a" category="paragraph">BlueXP에서 ONTAP 클러스터를 검색하고, 클러스터가 최소 요구 사항을 충족하는지 확인하고, 클러스터가 AWS S3에 연결될 수 있도록 네트워크 설정을 사용자 지정합니다.</block>
@@ -2892,8 +2884,6 @@
   <block id="ee2081007b4b41aa21ddcbdddb722d5e" category="section-title">연결이 제한된 사이트 지원</block>
   <block id="a3f02510edf67619908394e8afc73938" category="list-text">AWS 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3에 백업할 수 있습니다. 을 참조하십시오 <block ref="31e49e13e812c331f506a2a8e6b7ad22" category="inline-link-macro-rx"></block>.</block>
   <block id="b8507c62b8182b29a382ffefc9fab5f2" category="list-text">Azure 상용 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Azure Blob으로 백업할 수 있습니다. 을 참조하십시오 <block ref="ab5c78f08c8780b598ee1d4de19230ab" category="inline-link-macro-rx"></block>.</block>
-  <block id="a6a4730c10b1358f1c9def7ffe4b5b3e" category="summary">BlueXP 백업 및 복구(클라우드 백업)는 사내 및 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 시스템에 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.</block>
-  <block id="7eb9cafcf06d2b2e35409b3b19eebaa6" category="summary">BlueXP 백업 및 복구는 사내 및 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 머신에 대해 효율적이고 안전하며 비용 효율적인 데이터 보호 기능을 제공합니다. 백업은 자동으로 생성되어 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 저장됩니다.</block>
   <block id="042a30f816a9f3db4f832c68a750cbd0" category="paragraph">시작 시간은 각 소스 ONTAP 시스템에 설정된 표준 시간대를 기준으로 합니다. UI에서 사용자가 지정한 시간에 백업 작업을 예약할 수 없습니다. 자세한 내용은 시스템 엔지니어에게 문의하십시오.</block>
   <block id="f6c25edb13a1fb5bd6c5a94f498065a2" category="summary">몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Amazon S3 스토리지로의 볼륨 데이터 백업을 시작하십시오.</block>
   <block id="a16acb967c4e8e9b1d495f499e535a7a" category="list-text">Azure에 커넥터가 설치되어 있습니다. 커넥터는 전체 인터넷 액세스("표준 모드")가 있는 사이트나 제한된 인터넷 연결("제한 모드")으로 설치할 수 있습니다.</block>
@@ -3360,7 +3350,6 @@
   <block id="d3f281db7462fac1f93bb8cd8a846973" category="paragraph">클론 생성 스키마를 * Auto-Generated * 로 선택하면 마운트 지점의 위치와 클론 데이터베이스의 디스크 그룹 이름에 접미사가 추가됩니다.</block>
   <block id="b473eb967027d6cb105d361800543822" category="list-text">기본 클론 방법을 선택한 경우 접미사가 * 클론 SID * 가 됩니다.</block>
   <block id="7bee2ff1284f314015393080c5e56ecc" category="list-text">지정 파일 방법을 선택한 경우 접미사는 클론 사양 파일을 다운로드하는 동안 지정된 * 접미사 * 가 됩니다.</block>
-  <block id="add971a5b842968000d5e9b8cd3b1684" category="summary">BlueXP 백업 및 복구는 ONTAP 클러스터 데이터의 보호 및 장기 아카이브를 위한 백업 및 복원 기능을 제공합니다. 백업은 거의 복구 또는 클론 복제에 사용되는 볼륨 Snapshot 복사본과 관계없이 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 자동으로 생성되고 저장됩니다.</block>
   <block id="453e66b92e78e9c59b8192fa674cb377" category="doc">BlueXP 백업 및 복구를 사용하여 ONTAP 클러스터 데이터를 보호합니다</block>
   <block id="cd6de3b24ca86c25e1638a3d0c67466c" category="paragraph">BlueXP 백업 및 복구를 사용하면 다음과 같은 작업 환경에서 ONTAP 볼륨을 다음과 같은 퍼블릭 및 프라이빗 클라우드 공급자의 오브젝트 스토리지로 백업할 수 있습니다.</block>
   <block id="e053cf298b007eb949b93bc1bbd6453c" category="paragraph">BlueXP 백업 및 복구는 제한된 인터넷 연결("제한 모드"라고도 함)을 사용하여 볼륨 데이터를 백업하고 복원할 수 있습니다. 이 경우 제한된 영역에 BlueXP 커넥터를 배포해야 합니다.</block>
@@ -3499,7 +3488,6 @@
   <block id="094ba72a3fdb39776632245f235f26be" category="section-title">BlueXP 백업 및 복구 PAYGO 구독을 사용합니다</block>
   <block id="c04968186bb3df4bd0331429c63f8641" category="paragraph">BlueXP 백업 및 복구를 위한 몇 가지 PAYGO 계획이 있습니다.</block>
   <block id="d6d65ebf5ad097949fd6fbbf14e96347" category="list-text">Cloud Volumes ONTAP 및 BlueXP 백업 및 복구를 번들로 제공할 수 있는 "CVO Professional" 패키지입니다. 여기에는 라이센스를 사용하는 Cloud Volumes ONTAP 시스템에 대한 무제한 백업이 포함됩니다(백업 용량은 라이센스 용량에 포함되지 않음). 이 옵션을 사용하면 사내 ONTAP 데이터를 백업할 수 없습니다.</block>
-  <block id="d7a158120ac71a227bc19987a9b341fb" category="list-text">"CVO Edge Cache" 패키지는 "CVO Professional" 패키지와 동일한 기능을 제공하지만 에 대한 지원도 포함합니다<block ref="475d408daeaf0424668ce650296169bb" category="inline-link-rx"></block>. Cloud Volumes ONTAP 시스템에서 3TiB의 프로비저닝된 각 용량에 대해 하나의 글로벌 파일 캐시 에지 시스템을 구축할 수 있습니다. 이 옵션은 Azure 및 Google 마켓플레이스에서 사용할 수 있으며, 온프레미스 ONTAP 데이터를 백업할 수 없습니다.</block>
   <block id="c02893129433d085ea6dfbc155a79562" category="paragraph">다음 링크를 사용하여 클라우드 공급자 마켓플레이스에서 BlueXP 백업 및 복구를 구독하십시오.</block>
   <block id="cdf5556d637c931d7fb6a645af6fc805" category="paragraph">연간 계약을 구매하여 BlueXP 백업 및 복구에 대한 비용을 매년 지불합니다.</block>
   <block id="46289439d4ba1052046eac9e7e72ca47" category="list-text">Cloud Volumes ONTAP 및 BlueXP 백업 및 복구를 번들로 제공할 수 있는 "CVO Professional" 계획입니다. 여기에는 라이센스를 사용하는 Cloud Volumes ONTAP 시스템에 대한 무제한 백업이 포함됩니다(백업 용량은 라이센스 용량에 포함되지 않음). 이 옵션을 사용하면 사내 ONTAP 데이터를 백업할 수 없습니다.</block>
@@ -3549,7 +3537,6 @@
   <block id="cc30b9dac3532c6eec37a8e45c7aab0b" category="summary">웹 UI를 통해 사용할 수 있는 BlueXP 백업 및 복구 기능은 RESTful API를 통해서도 사용할 수 있습니다.</block>
   <block id="77d4d9afc8b5a0160c070fc2f71692a4" category="doc">BlueXP 백업 및 복구 API</block>
   <block id="3eb635444f2c91af4f0b9c5e7eb8ce2e" category="paragraph">웹 UI를 통해 사용할 수 있는 BlueXP 백업 및 복구 기능은 RESTful API를 통해서도 사용할 수 있습니다.</block>
-  <block id="17e519cb3c57a9ec38afbdc326725f90" category="paragraph">BlueXP 백업 및 복구 내에 9가지 유형의 엔드포인트가 정의되어 있습니다.</block>
   <block id="12a2037b721e887383ad92ab04c54ed9" category="paragraph">BlueXP 백업 및 복구 API를 시작하려면 사용자 토큰, BlueXP 계정 ID 및 BlueXP 커넥터 ID를 얻어야 합니다.</block>
   <block id="364d76798fa90eb8899a1b8798fd1791" category="paragraph">다음 예에서는 Azure 클라우드의 East-US-2 영역에서 일일, 시간별, 주별 레이블이 설정된 새 정책이 적용된 작업 환경에서 BlueXP 백업 및 복구를 활성화하는 API 호출을 보여 줍니다. 이렇게 하면 작업 환경에서만 백업할 수 있지만 볼륨은 백업되지 않습니다.</block>
   <block id="16f8d7fb6b488cf9914e01cad7b0556f" category="paragraph">각 BlueXP 백업 및 복구 API에 대한 설명서는 에서 구할 수 있습니다<block ref="323898002645c2363c910f7c119fd4d6" category="inline-link-rx"></block>.</block>
@@ -3740,4 +3727,17 @@
   <block id="3eb97a71011fe0dae37080fd785e4db5" category="sidebar">가상 머신 데이터 백업 및 복원</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">새로운 소식</block>
   <block id="7048662b75c8f210e59f898d992521cc" category="sidebar">데이터 저장소를 클라우드에 백업합니다</block>
+  <block id="febda1467d687047522ece2d9d4680b8" category="summary">BlueXP 백업 및 복구 서비스는 ONTAP 클러스터 데이터의 보호 및 장기 아카이브를 위한 백업 및 복원 기능을 제공합니다. 백업은 거의 복구 또는 클론 복제에 사용되는 볼륨 Snapshot 복사본과 관계없이 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 자동으로 생성되고 저장됩니다.</block>
+  <block id="b0633b8fc7276f8e9a7f9ba97c212551" category="paragraph">서비스를 활성화하기 위해 BlueXP 디지털 전자지갑 페이지에 입력한 일련 번호를 받게 됩니다. 두 제한 중 하나에 도달하면 라이센스를 갱신해야 합니다. Backup BYOL 라이센스는 와 관련된 모든 소스 시스템에 적용됩니다<block ref="52a8d8c521fd6d51982efde4bc1bb1fd" category="inline-link-rx"></block>.</block>
+  <block id="a18f9997a691db43808d1169a31c3670" category="summary">BlueXP 백업 및 복구 서비스(클라우드 백업)는 사내 및 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 머신에 대해 효율적이고 안전하며 비용 효율적인 데이터 보호 기능을 제공합니다.</block>
+  <block id="3daba77ab92b57915950a36f17f965c3" category="summary">BlueXP 백업 및 복구 서비스는 온프레미스와 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 시스템에 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다. 백업은 자동으로 생성되어 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 저장됩니다.</block>
+  <block id="6192be65cd3fbb101c0f789fab9eae08" category="inline-link">BlueXP 에지 캐싱</block>
+  <block id="a803d6b73372969b4830a3a6cc9bfeef" category="list-text">"CVO Edge Cache" 패키지는 "CVO Professional" 패키지와 동일한 기능을 제공하지만 에 대한 지원도 포함합니다<block ref="6a291086b9b2e2c1bf57350866f6f726" category="inline-link-rx"></block> 서비스. Cloud Volumes ONTAP 시스템에서 3TiB의 프로비저닝된 각 용량에 대해 하나의 글로벌 파일 캐시 에지 시스템을 구축할 수 있습니다. 이 옵션은 Azure 및 Google 마켓플레이스에서 사용할 수 있으며, 온프레미스 ONTAP 데이터를 백업할 수 없습니다.</block>
+  <block id="0a190b7a7b571c1c4ae19e069137c2ac" category="paragraph">BlueXP 디지털 지갑을 사용하여 BYOL 라이센스를 관리합니다. BlueXP 디지털 지갑에서 새 라이센스를 추가하고 기존 라이센스를 업데이트하고 라이센스 상태를 볼 수 있습니다.</block>
+  <block id="ee3c97eeb652fa9d260a05c339bc1004" category="paragraph">라이센스가 부여된 기간이 만료일에 가까워지고 있거나 라이센스가 부여된 용량이 한도에 도달한 경우 백업 UI에서 알림을 받게 됩니다. 이 상태는 BlueXP 디지털 지갑 페이지 및 에도 표시됩니다<block ref="2011e54262643b9060a004b0df801155" category="inline-link-rx"></block>.</block>
+  <block id="0553876f11122be0920f9fa9c803d152" category="inline-image-macro">BlueXP 디지털 전자지갑에서 만료 중인 라이센스를 보여 주는 스크린샷.</block>
+  <block id="3ef315abed0cef6dcc1d41cb39b4322b" category="paragraph"><block ref="3ef315abed0cef6dcc1d41cb39b4322b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b23b97d3c26b0f7e2265329756cea9ca" category="paragraph">라이센스 비용을 지불하고 NetApp Support 사이트에 등록한 후 BlueXP는 BlueXP 디지털 지갑의 라이센스를 자동으로 업데이트하고 데이터 서비스 라이센스 페이지에 변경 내용이 5-10분 내에 반영됩니다.</block>
+  <block id="858d57a70137ab2d1ecb54acde00b982" category="list-text">BlueXP 디지털 전자지갑페이지_데이터 서비스 라이선스_탭에서 를 클릭합니다 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 업데이트하는 서비스 일련 번호에 대해 * Update License * 를 클릭합니다.</block>
+  <block id="59c9e6a866010a647915edad57105749" category="paragraph">BlueXP 백업 및 복구 내에 10가지 유형의 엔드포인트가 정의되어 있습니다.</block>
 </blocks>
