@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-restore-cloud-native-oracle-data.html 
-keywords: cloud native, application data, restore, data files, control files, recovery, Cloud Manager, BlueXP, Oracle database, Oracle 
+keywords: cloud-native, application data, restore, data files, control files, recovery, Cloud Manager, BlueXP, Oracle database, Oracle 
 summary: 데이터 파일, 제어 파일 또는 둘 모두를 복원한 다음 데이터베이스를 복구합니다. 
 ---
-= 클라우드 네이티브 Oracle 데이터베이스를 복원합니다
+= 클라우드 네이티브 Oracle 데이터베이스 복원
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,7 +18,7 @@ summary: 데이터 파일, 제어 파일 또는 둘 모두를 복원한 다음 �
 
 * 시작하기 전에 *
 
-Oracle 21c 데이터베이스가 시작 상태인 경우 복원 작업이 실패합니다. 데이터베이스를 성공적으로 복원하려면 다음을 실행해야 합니다.
+Oracle 21c 데이터베이스가 시작 상태인 경우 복원 작업이 실패합니다. 다음 명령을 실행하여 데이터베이스를 복원해야 합니다.
 `cp -f <ORACLE_HOME>/jdbc/lib/ojdbc8.jar /opt/NetApp/snapcenter/spl/plugins/sco/lib/ojdbc8-8.jar`
 
 * 단계 *

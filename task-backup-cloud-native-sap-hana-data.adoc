@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-backup-cloud-native-sap-hana-data.html 
-keywords: cloud native, application data, back up, policy, pre-canned policies, scheduled backups, on-demand backups, cloud manager, BlueXP, add hosts, create policy, SAP HANA Database 
+keywords: cloud-native, application data, back up, policy, pre-canned policies, scheduled backups, on-demand backups, cloud manager, BlueXP, add hosts, create policy, SAP HANA Database 
 summary: SAP HANA 데이터베이스의 예약된 백업 또는 온디맨드 백업을 생성합니다. 
 ---
 = 클라우드 네이티브 SAP HANA 데이터베이스 백업

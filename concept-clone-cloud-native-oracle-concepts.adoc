@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-clone-cloud-native-oracle-concepts.html 
-keywords: cloud native, application data, clone, Cloud Manager, BlueXP, Oracle database, Oracle, clone limitations, clone methods, clone naming scheme, requirements, clone specification file 
+keywords: cloud-native application data, clone, Cloud Manager, BlueXP, Oracle database, Oracle, clone limitations, clone methods, clone naming scheme, requirements, clone specification file 
 summary: 데이터베이스를 클론 복제하기 전에 클론 개념을 이해해야 합니다. 
 ---
 = 클론 개념 및 요구 사항

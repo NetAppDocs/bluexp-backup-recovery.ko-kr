@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-create-policies-apps.html 
 keywords: policy, create, pre-canned polices, custom policies, protection policies 
-summary: 사전 구성된 정책을 사용하거나 사용자 고유의 정책을 만들어 애플리케이션을 보호합니다. 
+summary: 응용 프로그램을 보호하기 위해 고유한 정책을 만듭니다. 
 ---
 = 응용 프로그램을 백업하는 정책을 만듭니다
 :hardbreaks:

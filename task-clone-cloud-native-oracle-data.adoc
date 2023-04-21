@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-clone-cloud-native-oracle-data.html 
-keywords: cloud native, application data, restore, data files, control files, recovery, Cloud Manager, BlueXP, Oracle database, Oracle 
+keywords: cloud-native, application data, restore, data files, control files, recovery, Cloud Manager, BlueXP, Oracle database, Oracle 
 summary: 소스 또는 대체 호스트에 데이터베이스를 복제합니다. 
 ---
 = 클라우드 네이티브 Oracle 데이터베이스 클론

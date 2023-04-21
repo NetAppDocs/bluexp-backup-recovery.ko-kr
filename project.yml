@@ -112,7 +112,7 @@ sidebar:
         url: "/task-restore-sql-data.html"
     - title: 애플리케이션 백업을 마운트합니다
       url: "/task-mount-app-backup.html"
-  - title: 클라우드 네이티브 애플리케이션 데이터 백업 및 복원
+  - title: 클라우드 네이티브 애플리케이션 데이터를 백업 및 복원합니다
     entries:
     - title: 클라우드 네이티브 애플리케이션 데이터 보호
       url: "/concept-protect-cloud-app-data-to-cloud.html"
@@ -127,7 +127,7 @@ sidebar:
       - title: Azure NetApp Files를 구성합니다
         flavor: azure
         url: "/reference-configure-azure-netapp-files.html"
-      - title: Oracle용 SnapCenter 플러그인을 구축하고 데이터베이스 호스트를 추가합니다
+      - title: Oracle용 SnapCenter 플러그인을 설치하고 데이터베이스 호스트를 추가합니다
         url: "/task-add-host-discover-oracle-databases.html"
       - title: Oracle 데이터베이스를 백업합니다
         url: "/task-backup-cloud-native-oracle-data.html"
@@ -139,13 +139,13 @@ sidebar:
       - title: Azure NetApp Files를 구성합니다
         flavor: azure
         url: "/reference-configure-azure-netapp-files.html"
-      - title: SAP HANA용 SnapCenter 플러그인을 구축하고 데이터베이스 호스트를 추가합니다
+      - title: SAP HANA용 SnapCenter 플러그인을 설치하고 데이터베이스 호스트를 추가합니다
         flavor: azure
         url: "/task-deploy-snapcenter-plugin-for-sap-hana.html"
       - title: SAP HANA 데이터베이스 백업
         flavor: azure
         url: "/task-backup-cloud-native-sap-hana-data.html"
-    - title: 클라우드 네이티브 Oracle 데이터베이스를 복원합니다
+    - title: 클라우드 네이티브 Oracle 데이터베이스 복원
       url: "/task-restore-cloud-native-oracle-data.html"
     - title: 클라우드 네이티브 SAP HANA 데이터베이스 복원
       flavor: azure
@@ -158,7 +158,7 @@ sidebar:
         url: "/concept-clone-cloud-native-oracle-concepts.html"
       - title: 클라우드 네이티브 Oracle 데이터베이스 클론
         url: "/task-clone-cloud-native-oracle-data.html"
-    - title: 클라우드 네이티브 애플리케이션 데이터의 보호 관리
+    - title: 클라우드 네이티브 애플리케이션 데이터 보호 관리
       url: "/task-manage-cloud-native-app-data.html"
   - title: 가상 머신 데이터 백업 및 복원
     entries:
