@@ -74,6 +74,8 @@ Oracle 데이터베이스 호스트
 . 커넥터 ID * 를 수정합니다.
 
 
+ifdef::azure[]
+
 
 
  a| 
@@ -97,6 +99,8 @@ curl --location --request PATCH
 ----
 모든 호스트에 SAP HANA용 SnapCenter 플러그인이 설치되어 실행 중이며 새 커넥터에서 모두 연결할 수 있는 경우 커넥터 세부 정보가 성공적으로 업데이트됩니다.
 
+endif::azure[]
+
 |===
 Oracle 또는 SAP HANA 호스트에 대한 커넥터 세부 정보를 업데이트한 후 다음을 수행하여 커넥터 세부 정보가 성공적으로 업데이트되었는지 확인하십시오.
 
@@ -108,7 +112,7 @@ Oracle 또는 SAP HANA 호스트에 대한 커넥터 세부 정보를 업데이�
 .. 플러그인 호스트의 _/var/opt/snapcenter/spl/etc/_에 커넥터 VM의 _<base_mount_path>/client/certificate/_path 에서 certificate.p12를 복사합니다.
 
 
-. 플러그인 호스트에 로그인하고 다음 단계를 수행합니다.
+. 플러그인 호스트에 로그인하고 다음 단계를 수행하십시오.
 +
 .. /var/opt/snapcenter/spl/etc_로 이동한 후 keytool 명령을 실행하여 certificate.p12 파일을 가져옵니다. keytool -v -importkeystore -srckeystore certificate.p12 -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype jks -srcstorephass SnapCenter -deststorephass SnapCenter -srcalalas agentcert -alias destagentcert -not프롬프트
 .. SPL을 다시 시작합니다:'stemctl restart SPL'
