@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-backup-vm-data-to-azure.html 
-keywords: back up, backup, backup datastore, Microsoft Azure, cloud backup, backup datastores 
+keywords: back up, backup, backup datastore, Microsoft Azure, backup datastores 
 summary: 사내 ONTAP에서 Azure로 데이터 저장소를 백업합니다. 
 ---
 = Microsoft Azure에 데이터 저장소를 백업합니다
