@@ -55,7 +55,7 @@ Oracle 21c 데이터베이스가 시작 상태인 경우 복원 작업이 실패
 강제 데이터 이동 없이 복원 * 확인란을 선택할 수도 있습니다.
 
 +
-SAN 레이아웃에서 Oracle용 SnapCenter 플러그인이 ASM 디스크 그룹에서 Oracle 데이터 파일 이외의 외부 파일을 찾으면 연결 및 복사 복원 방법이 수행됩니다. 외부 파일은 다음 유형 중 하나 이상이 될 수 있습니다.
+Amazon FSx for NetApp ONTAP 또는 Cloud Volumes ONTAP SAN 레이아웃에서 Oracle용 SnapCenter 플러그인이 ASM 디스크 그룹에서 Oracle 데이터 파일 이외의 외부 파일을 찾으면 연결 및 복사 복원 방법을 수행합니다. 외부 파일은 다음 유형 중 하나 이상이 될 수 있습니다.
 
 +
 ** 매개 변수

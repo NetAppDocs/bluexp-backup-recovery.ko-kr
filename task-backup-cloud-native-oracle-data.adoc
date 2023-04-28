@@ -37,7 +37,7 @@ summary: Oracle 데이터베이스의 예약된 백업 또는 주문형 백업�
 사후 스크립트는 _/var/opt/snapcenter/SPL/scripts_ 경로에 유지해야 합니다.
 
 +
-지원되는 환경 변수는 다음과 같습니다.
+사후 스크립트는 일련의 환경 변수를 지원합니다.
 
 +
 |===
@@ -95,7 +95,7 @@ SC_PRIMARY_ARCHIVELOGS_VOLUME_FULL_PATH를 선택합니다
 미리 구성된 정책을 할당하거나 정책을 생성한 다음 데이터베이스에 할당할 수 있습니다. 정책이 할당되면 정책에 정의된 일정에 따라 백업이 생성됩니다.
 
 
-NOTE: Oracle의 경우 ASM 디스크 그룹을 생성할 때 디스크 그룹 전체에 공통 볼륨이 없는지 확인합니다. 각 디스크 그룹에는 전용 볼륨이 있어야 합니다.
+NOTE: NetApp ONTAP 또는 Cloud Volumes ONTAP용 Amazon FSx에서 ASM 디스크 그룹을 생성할 때 디스크 그룹 전체에 공통 볼륨이 없는지 확인합니다. 각 디스크 그룹에는 전용 볼륨이 있어야 합니다.
 
 * 단계 *
 
@@ -122,7 +122,7 @@ NOTE: 서비스 계정(_SnapCenter-account-<account_id>_)은 예약된 백업 �
 * 단계 *
 
 . 응용 프로그램 페이지에서 을 클릭합니다 image:icon-action.png["아이콘을 클릭하여 작업을 선택합니다"] 응용 프로그램에 해당하는 을 클릭하고 * On-Demand Backup * 을 클릭합니다.
-. 응용 프로그램에 여러 정책이 할당된 경우 정책, 보존 값을 선택한 다음 * 백업 생성 * 을 클릭합니다.
+. 여러 정책이 애플리케이션에 할당된 경우 정책, 보존 계층을 선택한 다음 * 백업 생성 * 을 클릭합니다.
 
 
 
@@ -130,7 +130,7 @@ NOTE: 서비스 계정(_SnapCenter-account-<account_id>_)은 예약된 백업 �
 == 제한 사항
 
 * 에서는 FSx 볼륨이 중복되어 있는 여러 ASM 디스크 그룹에 상주하는 Oracle 데이터베이스에 대한 정합성 보장 그룹 스냅샷을 지원하지 않습니다
-* Oracle 데이터베이스가 ASM에 구성되어 있는 경우 SVM 이름이 FSx 시스템 전체에서 고유한지 확인합니다. FSx 시스템 간에 SVM 이름이 동일한 경우 이러한 SVM에 상주하는 Oracle 데이터베이스 백업도 지원되지 않습니다.
+* Oracle 데이터베이스가 NetApp ONTAP 또는 Cloud Volumes ONTAP용 Amazon FSx에 있고 ASM에 구성되어 있는 경우 SVM 이름이 FSx 시스템 전체에서 고유한지 확인합니다. FSx 시스템 간에 SVM 이름이 동일한 경우 이러한 SVM에 상주하는 Oracle 데이터베이스 백업도 지원되지 않습니다.
 * 큰 데이터베이스(250GB 이상)를 복원한 후 같은 데이터베이스에서 전체 온라인 백업을 수행하는 경우 다음 오류로 인해 작업이 실패할 수 있습니다.
 `failed with status code 500, error {\"error\":{\"code\":\"app_internal_error\",\"message\":\"Failed to create snapshot. Reason: Snapshot operation not allowed due to clones backed by snapshots. Try again after sometime.`
 +

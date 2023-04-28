@@ -59,7 +59,7 @@ IMPORTANT: BlueXP SaaS 인프라는 지역 내의 가용성 영역 장애에 대
 
 * 호스트 추가 및 플러그인 구축
 +
-스크립트를 사용하거나 자동으로 플러그인을 배포할 수 있습니다.
+UI, 스크립트 또는 수동으로 플러그인을 배포할 수 있습니다.
 
 * Oracle 데이터베이스 자동 검색
 * NetApp ONTAP, Cloud Volumes ONTAP 및 Azure NetApp Files용 Amazon FSx에 상주하는 Oracle 데이터베이스 백업
