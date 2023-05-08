@@ -179,6 +179,7 @@ StorageGRID로 백업을 설정하면 백업 마법사에서 테넌트 계정에
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["인터넷에 액세스할 수 있는 Linux 호스트에 커넥터 설치"^]
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private-mode.html["인터넷에 액세스하지 않고 Linux 호스트에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html["커넥터 간 전환"^]
 
 
 

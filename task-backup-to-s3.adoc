@@ -94,18 +94,16 @@ BlueXP 백업 및 복구 BYOL 라이센스의 경우, 라이센스 기간 및 �
 
 --
 데이터 암호화에 대해 고객이 관리하는 키를 사용하는 데 필요한 정보입니다:: 기본 Amazon S3 암호화 키를 사용하는 대신 활성화 마법사에서 데이터 암호화에 대해 고객이 관리하는 키를 직접 선택할 수 있습니다. 이 경우 암호화 관리 키가 이미 설정되어 있어야 합니다. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-kms.html["자신의 키를 사용하는 방법을 확인하십시오"^].
-커넥터 요구 사항:: 커넥터는 전체 또는 제한된 인터넷 액세스("표준" 또는 "제한" 모드)가 있는 AWS 지역에 설치할 수 있습니다.
+커넥터 요구 사항:: 커넥터는 전체 또는 제한된 인터넷 액세스("표준" 또는 "제한된" 모드)가 있는 AWS 지역에 설치할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-modes.html["자세한 내용은 BlueXP 배포 모드를 참조하십시오"^].
 +
 --
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html["AWS에 커넥터 구축"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-restricted-mode.html["AWS 지역의 Linux 호스트에 수동으로 커넥터 설치"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html["표준 모드(전체 인터넷 액세스)로 AWS에 커넥터 구축"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-restricted-mode.html["제한된 모드로 커넥터 설치(제한된 아웃바운드 액세스)"^]
 
 
 --
-
-
-필수 AWS 커넥터 권한:: 권한을 BlueXP에 제공하는 IAM 역할에는 최신 S3 권한이 포함되어야 합니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html["BlueXP 정책"^].
+필수 AWS 커넥터 권한:: 권한을 BlueXP에 제공하는 IAM 역할에는 최신 S3 권한이 포함되어야 합니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html["BlueXP 정책"^]. 정책에 이러한 사용 권한이 모두 포함되어 있지 않으면 를 참조하십시오 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 설명서: IAM 정책 편집"].
 +
 --
 다음은 정책의 특정 사용 권한입니다.
@@ -172,7 +170,8 @@ BlueXP 백업 및 복구 BYOL 라이센스의 경우, 라이센스 기간 및 �
 --
 
 
-버전 3.9.21 이상을 사용하여 Connector를 배포한 경우 이러한 권한은 이미 IAM 역할의 일부여야 합니다. 그렇지 않으면 누락된 권한을 추가해야 합니다. 특히 검색 및 복원에 필요하므로 "Athena" 및 "GLUE" 권한이 필요합니다.
+
+NOTE: AWS 중국 지역에서 백업을 생성할 때는 IAM 정책의 All_Resource_섹션에서 AWS 리소스 이름 "arn"을 "AWS"에서 "AWS-cn"으로 변경해야 합니다 `arn:aws-cn:s3:::netapp-backup-*`.
 
 필요한 AWS Cloud Volumes ONTAP 권한:: Cloud Volumes ONTAP 시스템에서 ONTAP 9.12.1 이상의 소프트웨어를 실행하는 경우, 권한이 있는 작업 환경을 제공하는 IAM 역할에는 최신 버전의 BlueXP 백업 및 복구를 위한 새로운 S3 권한 세트가 포함되어야 합니다 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-iam-roles.html["Cloud Volumes ONTAP 정책"^].
 +

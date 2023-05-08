@@ -188,7 +188,7 @@ sidebar:
     url: "/api-backup-restore.html"
   - title: 참조하십시오
     entries:
-    - title: BlueXP 백업 및 복구 정책 설정
+    - title: 백업 정책 설정
       url: "/concept-cloud-backup-policies.html"
     - title: 지원되는 AWS 아카이브 스토리지 계층
       url: "/reference-aws-backup-tiers.html"

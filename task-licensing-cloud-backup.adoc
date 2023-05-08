@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-licensing-cloud-backup.html 
 keywords: license, licensing, install, updating license, paygo license, byol license, nlf, license generator, backup license, add backup license, update backup license, annual 
-summary: 'PAYGO(Pay-as-you-Go) 또는 클라우드 공급자로부터 연간 시장 가입 서비스를 구입하거나 NetApp에서 BYOL(Bring-Your-Own-License)을 구입하여 BlueXP 백업 및 복구 라이선스를 취득할 수 있습니다. 작업 환경에서 BlueXP 백업 및 복구를 활성화하고, 프로덕션 데이터의 백업을 만들고, 백업 데이터를 프로덕션 시스템으로 복원하려면 유효한 라이센스가 필요합니다.' 
+summary: 'BlueXP 백업 및 복구는 클라우드 공급자로부터 용량제로(pay-as-you-go) 또는 연간 시장 가입 서비스를 구입하거나 NetApp에서 구입한 자체 라이센스를 구입하여 라이센스를 구입할 수 있습니다. 작업 환경에서 BlueXP 백업 및 복구를 활성화하고, 프로덕션 데이터의 백업을 만들고, 백업 데이터를 프로덕션 시스템으로 복원하려면 유효한 라이센스가 필요합니다.' 
 ---
 = BlueXP 백업 및 복구에 대한 라이센스를 설정합니다
 :hardbreaks:
@@ -50,7 +50,7 @@ BlueXP 백업 및 복구를 위한 몇 가지 PAYGO 계획이 있습니다.
 
 * Cloud Volumes ONTAP 데이터와 사내 ONTAP 데이터를 백업할 수 있는 "클라우드 백업" 패키지
 * Cloud Volumes ONTAP 및 BlueXP 백업 및 복구를 번들로 제공할 수 있는 "CVO Professional" 패키지입니다. 여기에는 라이센스를 사용하는 Cloud Volumes ONTAP 시스템에 대한 무제한 백업이 포함됩니다(백업 용량은 라이센스 용량에 포함되지 않음). 이 옵션을 사용하면 사내 ONTAP 데이터를 백업할 수 없습니다.
-* "CVO Edge Cache" 패키지는 "CVO Professional" 패키지와 동일한 기능을 제공하지만 에 대한 지원도 포함합니다 https://docs.netapp.com/us-en/cloud-manager-file-cache/concept-gfc.html["BlueXP 에지 캐싱"^] 서비스. Cloud Volumes ONTAP 시스템에서 3TiB의 프로비저닝된 각 용량에 대해 하나의 글로벌 파일 캐시 에지 시스템을 구축할 수 있습니다. 이 옵션은 Azure 및 Google 마켓플레이스에서 사용할 수 있으며, 온프레미스 ONTAP 데이터를 백업할 수 없습니다.
+* "CVO Edge Cache" 패키지는 "CVO Professional" 패키지와 동일한 기능을 제공하지만 에 대한 지원도 포함합니다 https://docs.netapp.com/us-en/cloud-manager-file-cache/concept-gfc.html["BlueXP 에지 캐싱"^] 서비스. Cloud Volumes ONTAP 시스템에서 3TiB의 용량 프로비저닝당 BlueXP 에지 캐싱 에지 시스템 1개를 구축할 수 있습니다. 이 옵션은 Azure 및 Google 마켓플레이스에서 사용할 수 있으며, 온프레미스 ONTAP 데이터를 백업할 수 없습니다.
 
 
 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html#capacity-based-licensing["이러한 용량 기반 라이센스 패키지에 대해 자세히 알아보십시오"].
