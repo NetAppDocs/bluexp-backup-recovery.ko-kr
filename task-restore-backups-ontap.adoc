@@ -423,7 +423,7 @@ image:screenshot_restore_select_dest.png["복원하려는 파일의 볼륨 및 �
 
 검색 및 복원을 사용하여 ONTAP 백업 파일에서 볼륨, 폴더 또는 파일을 복원할 수 있습니다. 검색 및 복원을 사용하면 특정 공급자에 대해 클라우드 저장소에 저장된 모든 백업에서 특정 볼륨, 폴더 또는 파일을 검색한 다음 복구를 수행할 수 있습니다. 정확한 작업 환경 이름 또는 볼륨 이름을 알 필요가 없습니다. 모든 볼륨 백업 파일을 검색합니다.
 
-또한 검색 작업을 통해 ONTAP 볼륨에 대한 모든 로컬 스냅샷 복사본을 확인합니다. 로컬 스냅샷 복사본에서 데이터를 복원하는 것이 백업 파일에서 복원하는 것보다 빠르고 비용이 적게 들 수 있으므로 스냅샷에서 데이터를 복원할 수 있습니다. 스냅샷을 새 볼륨으로 복원할 수 있습니다 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-volumes.html#manage-volumes["Canvas의 볼륨 세부 정보 페이지에서"^] (BlueXP 백업 및 복구가 아님).
+또한 검색 작업을 통해 ONTAP 볼륨에 대한 모든 로컬 스냅샷 복사본을 확인합니다. 로컬 스냅샷 복사본에서 데이터를 복원하는 것이 백업 파일에서 복원하는 것보다 빠르고 비용이 적게 들 수 있으므로 스냅샷에서 데이터를 복원할 수 있습니다. 스냅샷을 새 볼륨으로 복원할 수 있습니다 https://["Canvas의 볼륨 세부 정보 페이지에서"^] (BlueXP 백업 및 복구가 아님).
 
 백업 파일에서 볼륨을 복원할 때 BlueXP 백업 및 복구는 백업의 데이터를 사용하여 _new_volume을 생성합니다. 원래 작업 환경에서 데이터를 볼륨으로 복원하거나 소스 작업 환경과 동일한 클라우드 계정에 있는 다른 작업 환경으로 복원할 수 있습니다. 또한, 볼륨을 온프레미스 ONTAP 시스템으로 복원할 수 있습니다.
 
@@ -546,7 +546,7 @@ ifdef::azure[]
 
 * Azure 요구사항:
 +
-** Azure Synapse Analytics 리소스 공급자("Microsoft.Synapse")를 구독에 등록해야 합니다. https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["이 리소스 공급자를 구독에 등록하는 방법을 확인하십시오"^]. 리소스 공급자를 등록하려면 구독 * 소유자 * 또는 * 참가자 * 여야 합니다.
+** Azure Synapse Analytics 리소스 공급자("Microsoft.Synapse")를 구독에 등록해야 합니다. https://["이 리소스 공급자를 구독에 등록하는 방법을 확인하십시오"^]. 리소스 공급자를 등록하려면 구독 * 소유자 * 또는 * 참가자 * 여야 합니다.
 ** BlueXP에 권한을 제공하는 사용자 역할에 특정 Azure Synapse Workspace 및 Data Lake Storage 계정 권한을 추가해야 합니다. link:task-backup-onprem-to-azure.html#verify-or-add-permissions-to-the-connector["모든 권한이 올바르게 구성되었는지 확인합니다"].
 +
 과거에 구성한 커넥터를 사용하여 BlueXP 백업 및 복구를 이미 사용하고 있다면 지금 BlueXP 사용자 역할에 Azure Synapse Workspace 및 Data Lake Storage 계정 권한을 추가해야 합니다. 새로운 항목이므로 검색 및 복원에 필요합니다.
@@ -579,7 +579,7 @@ endif::gcp[]
 +
 ** 계정에 클라우드 공급자 자격 증명이 없으면 인덱싱된 카탈로그 정보가 Connector에 저장됩니다.
 ** 어두운 사이트에서 Connector를 사용하는 경우 인덱싱된 카탈로그 정보는 Connector에 저장됩니다(Connector 버전 3.9.25 이상 필요).
-** 있는 경우 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-accounts-aws.html["AWS 자격 증명"^] 또는 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-accounts-azure.html["Azure 자격 증명"^] 어카운트의 경우 인덱싱된 카탈로그는 클라우드에 구축된 Connector와 마찬가지로 클라우드 공급자에 저장됩니다. (두 자격 증명이 모두 있는 경우 기본적으로 AWS가 선택됩니다.)
+** 있는 경우 https://["AWS 자격 증명"^] 또는 https://["Azure 자격 증명"^] 어카운트의 경우 인덱싱된 카탈로그는 클라우드에 구축된 Connector와 마찬가지로 클라우드 공급자에 저장됩니다. (두 자격 증명이 모두 있는 경우 기본적으로 AWS가 선택됩니다.)
 +
 온-프레미스 Connector를 사용하는 경우에도 Connector 사용 권한과 클라우드 공급자 리소스 모두에 대해 클라우드 공급자 요구 사항이 충족되어야 합니다. 이 구축을 사용할 때는 위의 AWS 및 Azure 요구사항을 참조하십시오.
 
@@ -618,7 +618,7 @@ image:diagram_search_restore_vol_file.png["검색 및 앰프, 복원을 사용�
 
 ifdef::aws[]
 
-* AWS에 저장된 백업의 경우 새로운 S3 버킷과 을 프로비저닝합니다 https://aws.amazon.com/athena/faqs/["아마존 Athena 대화형 쿼리 서비스"^] 및 https://aws.amazon.com/glue/faqs/["AWS Glue 서버리스 데이터 통합 서비스"^].
+* AWS에 저장된 백업의 경우 새로운 S3 버킷과 을 프로비저닝합니다 https://["아마존 Athena 대화형 쿼리 서비스"^] 및 https://["AWS Glue 서버리스 데이터 통합 서비스"^].
 
 
 endif::aws[]
@@ -632,7 +632,7 @@ endif::azure[]
 
 ifdef::gcp[]
 
-* Google Cloud에 저장된 백업의 경우 IT 부서는 새로운 버킷과 을 프로비저닝합니다 https://cloud.google.com/bigquery["Google Cloud BigQuery 서비스"^] 계정/프로젝트 수준에서 프로비저닝됩니다.
+* Google Cloud에 저장된 백업의 경우 IT 부서는 새로운 버킷과 을 프로비저닝합니다 https://["Google Cloud BigQuery 서비스"^] 계정/프로젝트 수준에서 프로비저닝됩니다.
 
 
 endif::gcp[]

@@ -23,7 +23,7 @@ SAP HANA 소스 시스템의 데이터로 SAP HANA 타겟 시스템을 업데이
 * 소스 및 타겟 시스템에서 SAP HANA 데이터베이스 버전이 동일한지 확인합니다.
 * 사용할 업데이트 스크립트를 결정해야 합니다. 새로 고침 스크립트는 솔루션 기술 보고서에서 사용할 수 있습니다.
 +
-https://docs.netapp.com/us-en/netapp-solutions-sap/lifecycle/sc-copy-clone-automation-example-scripts.html#script-sc-system-refresh-sh["자동화 스크립트 예"]
+https://["자동화 스크립트 예"]
 
 +
 새로 고침 스크립트를 사용자 지정할 수 있습니다.

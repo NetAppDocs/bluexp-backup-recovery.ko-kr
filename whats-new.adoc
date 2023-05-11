@@ -30,7 +30,7 @@ DataLock 및 랜섬웨어 보호를 사용하여 백업 파일을 구성했거�
 
 === Google Cloud에 볼륨을 백업할 때 고객 관리 키를 지역 및 프로젝트 간 백업할 수 있습니다
 
-이제 고객 관리 암호화 키(CMEK)의 프로젝트가 아닌 다른 프로젝트에 있는 버킷을 선택할 수 있습니다.
+이제 고객 관리 암호화 키(CMEK)의 프로젝트가 아닌 다른 프로젝트에 있는 버킷을 선택할 수 있습니다. https://["고객이 관리하는 암호화 키 설정에 대해 자세히 알아보십시오"].
 
 
 
@@ -38,7 +38,7 @@ DataLock 및 랜섬웨어 보호를 사용하여 백업 파일을 구성했거�
 
 클러스터가 ONTAP 9.12.1 이상을 실행 중인 경우 AWS China Beijing(cn-North-1) 및 Ningxia(cn-북서쪽-1) 지역이 백업 파일의 대상으로 지원됩니다.
 
-BlueXP Connector에 할당된 IAM 정책은 all_Resource_sections의 AWS 리소스 이름 "arn"을 "AWS"에서 "AWS-cn"로 변경해야 합니다. 예를 들어 "arn:AWS-cn:S3::NetApp-backup- *"를 변경할 수 있습니다. 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-to-s3.html["Cloud Volumes ONTAP 데이터를 Amazon S3에 백업"] 및 https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-to-aws.html["사내 ONTAP 데이터를 Amazon S3에 백업"] 를 참조하십시오.
+BlueXP Connector에 할당된 IAM 정책은 all_Resource_sections의 AWS 리소스 이름 "arn"을 "AWS"에서 "AWS-cn"로 변경해야 합니다. 예를 들어 "arn:AWS-cn:S3::NetApp-backup- *"를 변경할 수 있습니다. 을 참조하십시오 https://["Cloud Volumes ONTAP 데이터를 Amazon S3에 백업"] 및 https://["사내 ONTAP 데이터를 Amazon S3에 백업"] 를 참조하십시오.
 
 
 
@@ -88,27 +88,27 @@ ONTAP 9.13.1 이상을 실행하는 온-프레미스 ONTAP 시스템의 경우 *
 
 === "제한" 모드에서 Cloud Volumes ONTAP 시스템의 데이터를 클라우드로 백업하는 기능
 
-이제 AWS, Azure 및 GCP 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 "제한된 모드"로 백업할 수 있습니다. 이를 위해서는 먼저 "제한된" 상업 지역에 커넥터를 설치해야 합니다. https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-modes.html["BlueXP 배포 모드에 대해 자세히 알아보십시오"^]. 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-to-s3.html["Cloud Volumes ONTAP 데이터를 Amazon S3에 백업"] 및 https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-to-azure.html["Azure Blob에 Cloud Volumes ONTAP 데이터 백업"].
+이제 AWS, Azure 및 GCP 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 "제한된 모드"로 백업할 수 있습니다. 이를 위해서는 먼저 "제한된" 상업 지역에 커넥터를 설치해야 합니다. https://["BlueXP 배포 모드에 대해 자세히 알아보십시오"^]. 을 참조하십시오 https://["Cloud Volumes ONTAP 데이터를 Amazon S3에 백업"] 및 https://["Azure Blob에 Cloud Volumes ONTAP 데이터 백업"].
 
 
 
 === API를 사용하여 사내 ONTAP 볼륨을 ONTAP S3에 백업하는 기능
 
-API의 새로운 기능을 사용하면 BlueXP 백업 및 복구를 사용하여 볼륨 스냅샷을 ONTAP S3에 백업할 수 있습니다. 이 기능은 현재 사내 ONTAP 시스템에서만 사용할 수 있습니다. 자세한 지침은 블로그를 참조하십시오 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-Feature-Blog-April-23-Updates/ba-p/443075#toc-hId--846533830["ONTAP S3와 타겟 통합"^].
+API의 새로운 기능을 사용하면 BlueXP 백업 및 복구를 사용하여 볼륨 스냅샷을 ONTAP S3에 백업할 수 있습니다. 이 기능은 현재 사내 ONTAP 시스템에서만 사용할 수 있습니다. 자세한 지침은 블로그를 참조하십시오 https://["ONTAP S3와 타겟 통합"^].
 
 
 
 === Azure 저장소 계정의 영역 중복성 측면을 LRS에서 ZRS로 변경할 수 있습니다
 
-Cloud Volumes ONTAP 시스템에서 Azure 스토리지로 백업을 생성할 때 기본적으로 BlueXP 백업 및 복구는 비용 최적화를 위해 LRS(Local Redundancy)를 사용하여 Blob 컨테이너를 프로비저닝합니다. 데이터를 다른 영역 간에 복제하려면 이 설정을 영역 중복(ZRS)으로 변경할 수 있습니다. 에 대한 Microsoft 지침을 참조하십시오 https://learn.microsoft.com/en-us/azure/storage/common/redundancy-migration?tabs=portal["스토리지 계정의 복제 방법을 변경합니다"^].
+Cloud Volumes ONTAP 시스템에서 Azure 스토리지로 백업을 생성할 때 기본적으로 BlueXP 백업 및 복구는 비용 최적화를 위해 LRS(Local Redundancy)를 사용하여 Blob 컨테이너를 프로비저닝합니다. 데이터를 다른 영역 간에 복제하려면 이 설정을 영역 중복(ZRS)으로 변경할 수 있습니다. 에 대한 Microsoft 지침을 참조하십시오 https://["스토리지 계정의 복제 방법을 변경합니다"^].
 
 
 
 === 작업 모니터 기능 향상
 
 * 이제 BlueXP 백업 및 복구 UI 및 API에서 시작된 사용자 시작 백업 및 복원 작업과 이러한 진행 중인 백업 작업을 ONTAP 9.13.0 이상을 실행하는 Cloud Volumes ONTAP 시스템의 * 작업 모니터링 * 탭에서 사용할 수 있습니다. 이전 ONTAP 버전은 사용자가 시작한 작업만 표시합니다.
-* 모든 작업에 대한 보고를 위해 CSV 파일을 다운로드할 수 있을 뿐만 아니라 단일 작업에 대한 JSON 파일을 다운로드하여 자세한 내용을 볼 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-monitor-backup-jobs.html#download-job-monitoring-results-as-a-report["자세한 정보"].
-* 두 가지 새로운 백업 작업 경고가 추가되었습니다. "예약된 작업 실패" 및 "복원 작업이 완료되지만 경고가 있음" https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-monitor-backup-jobs.html#review-backup-and-restore-alerts-in-the-bluexp-notification-center["BlueXP 백업 및 복구가 전송할 수 있는 모든 경고를 검토합니다"].
+* 모든 작업에 대한 보고를 위해 CSV 파일을 다운로드할 수 있을 뿐만 아니라 단일 작업에 대한 JSON 파일을 다운로드하여 자세한 내용을 볼 수 있습니다. https://["자세한 정보"].
+* 두 가지 새로운 백업 작업 경고가 추가되었습니다. "예약된 작업 실패" 및 "복원 작업이 완료되지만 경고가 있음" https://["BlueXP 백업 및 복구가 전송할 수 있는 모든 경고를 검토합니다"].
 
 
 
@@ -125,13 +125,13 @@ Cloud Volumes ONTAP 시스템에서 Azure 스토리지로 백업을 생성할 �
 
 === 어두운 사이트에 있는 Cloud Volumes ONTAP 시스템의 데이터를 백업하는 기능
 
-이제 AWS 및 Azure 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3 또는 Azure Blob으로 백업할 수 있습니다. 이 작업을 수행하려면 상업 지역의 Linux 호스트에 커넥터를 설치하고 Cloud Volumes ONTAP 시스템도 배포해야 합니다. 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-to-s3.html["Cloud Volumes ONTAP 데이터를 Amazon S3에 백업"] 및 https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-to-azure.html["Azure Blob에 Cloud Volumes ONTAP 데이터 백업"].
+이제 AWS 및 Azure 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3 또는 Azure Blob으로 백업할 수 있습니다. 이 작업을 수행하려면 상업 지역의 Linux 호스트에 커넥터를 설치하고 Cloud Volumes ONTAP 시스템도 배포해야 합니다. 을 참조하십시오 https://["Cloud Volumes ONTAP 데이터를 Amazon S3에 백업"] 및 https://["Azure Blob에 Cloud Volumes ONTAP 데이터 백업"].
 
 
 
 === 작업 모니터의 여러 가지 개선 사항
 
-* 작업 모니터링 페이지에 고급 필터링이 추가되어 시간, 워크로드(볼륨, 애플리케이션, 가상 머신 또는 Kubernetes) 별로 백업 및 복원 작업을 검색할 수 있습니다. 작업 유형, 상태, 작업 환경 및 스토리지 VM "application_3"과 같은 자원 검색을 위해 자유 텍스트를 입력할 수도 있습니다.  https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-monitor-backup-jobs.html#searching-and-filtering-the-list-of-jobs["고급 필터 사용 방법을 확인하십시오"].
+* 작업 모니터링 페이지에 고급 필터링이 추가되어 시간, 워크로드(볼륨, 애플리케이션, 가상 머신 또는 Kubernetes) 별로 백업 및 복원 작업을 검색할 수 있습니다. 작업 유형, 상태, 작업 환경 및 스토리지 VM "application_3"과 같은 자원 검색을 위해 자유 텍스트를 입력할 수도 있습니다.  https://["고급 필터 사용 방법을 확인하십시오"].
 * 이제 BlueXP 백업 및 복구 UI 및 API에서 시작된 사용자 시작 백업 및 복원 작업과 이러한 진행 중인 백업 작업을 ONTAP 9.13.0 이상을 실행하는 Cloud Volumes ONTAP 시스템의 * 작업 모니터링 * 탭에서 사용할 수 있습니다. 이전 버전의 Cloud Volumes ONTAP 시스템 및 온-프레미스 ONTAP 시스템은 현재 사용자가 시작한 작업만 표시합니다.
 
 
@@ -145,13 +145,13 @@ Cloud Volumes ONTAP 시스템에서 Azure 스토리지로 백업을 생성할 �
 
 이제 StorageGRID 시스템의 이전 백업 파일을 Azure의 아카이브 스토리지로 계층화할 수 있습니다. 이를 통해 StorageGRID 시스템의 공간을 절약하고, 이전 백업 파일에 저렴한 스토리지 클래스를 사용하여 비용을 절감할 수 있습니다.
 
-이 기능은 온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템에서 11.4 이상을 사용하는 경우 사용할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-private-cloud.html#preparing-to-archive-older-backup-files-to-public-cloud-storage["자세히 알아보기"^].
+이 기능은 온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템에서 11.4 이상을 사용하는 경우 사용할 수 있습니다. https://["자세히 알아보기"^].
 
 
 
 === DataLock 및 랜섬웨어 보호는 Azure Blob의 백업 파일에 대해 구성할 수 있습니다
 
-이제 DataLock 및 랜섬웨어 보호가 Azure Blob에 저장된 백업 파일에 지원됩니다. Cloud Volumes ONTAP 또는 온프레미스 ONTAP 시스템에서 ONTAP 9.12.1 이상을 실행하는 경우 백업 파일을 잠그고 스캔하여 잠재적인 랜섬웨어를 탐지할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-cloud-backup-policies.html#datalock-and-ransomware-protection["DataLock 및 랜섬웨어 보호를 사용하여 백업을 보호하는 방법에 대해 자세히 알아보십시오"^].
+이제 DataLock 및 랜섬웨어 보호가 Azure Blob에 저장된 백업 파일에 지원됩니다. Cloud Volumes ONTAP 또는 온프레미스 ONTAP 시스템에서 ONTAP 9.12.1 이상을 실행하는 경우 백업 파일을 잠그고 스캔하여 잠재적인 랜섬웨어를 탐지할 수 있습니다. https://["DataLock 및 랜섬웨어 보호를 사용하여 백업을 보호하는 방법에 대해 자세히 알아보십시오"^].
 
 
 
@@ -179,7 +179,7 @@ Cloud Volumes ONTAP 시스템에서 Azure 스토리지로 백업을 생성할 �
 
 ONTAP 9.12.1 GA 이상을 사용하는 경우 MetroCluster 구성에서 기본 시스템에 연결하면 백업이 지원됩니다. 전체 백업 구성이 보조 시스템으로 전송되므로 전환 후 클라우드 백업이 자동으로 계속됩니다.
 
-https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html#backup-limitations["자세한 내용은 백업 제한 사항 을 참조하십시오"].
+https://["자세한 내용은 백업 제한 사항 을 참조하십시오"].
 
 
 
@@ -191,7 +191,7 @@ https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-
 
 이제 StorageGRID 시스템의 이전 백업 파일을 AWS S3의 아카이브 스토리지로 계층화할 수 있습니다. 이를 통해 StorageGRID 시스템의 공간을 절약하고, 이전 백업 파일에 저렴한 스토리지 클래스를 사용하여 비용을 절감할 수 있습니다. AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화하도록 선택할 수 있습니다.
 
-이 기능은 온프레미스 클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 시스템에서 11.3 이상을 사용하는 경우 사용할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-private-cloud.html#preparing-to-archive-older-backup-files-to-public-cloud-storage["자세히 알아보기"].
+이 기능은 온프레미스 클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 시스템에서 11.3 이상을 사용하는 경우 사용할 수 있습니다. https://["자세히 알아보기"].
 
 
 
@@ -203,7 +203,7 @@ ONTAP 시스템에서 Google 클라우드 스토리지로 데이터를 백업할
 
 === Google Cloud Storage에서 백업을 생성하는 서비스 계정에 더 이상 "스토리지 관리자" 역할이 필요하지 않습니다
 
-이전 릴리즈에서는 BlueXP 백업 및 복구를 통해 Google Cloud Storage 버킷에 액세스할 수 있도록 하는 서비스 계정에 "스토리지 관리자" 역할이 필요했습니다. 이제 서비스 계정에 할당할 수 있는 권한이 축소된 사용자 지정 역할을 만들 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-to-gcp.html#preparing-google-cloud-storage-for-backups["백업을 위해 Google Cloud Storage를 준비하는 방법을 알아보십시오"].
+이전 릴리즈에서는 BlueXP 백업 및 복구를 통해 Google Cloud Storage 버킷에 액세스할 수 있도록 하는 서비스 계정에 "스토리지 관리자" 역할이 필요했습니다. 이제 서비스 계정에 할당할 수 있는 권한이 축소된 사용자 지정 역할을 만들 수 있습니다. https://["백업을 위해 Google Cloud Storage를 준비하는 방법을 알아보십시오"].
 
 
 
@@ -211,13 +211,13 @@ ONTAP 시스템에서 Google 클라우드 스토리지로 데이터를 백업할
 
 인터넷에 액세스할 수 없는 사이트의 ONTAP 클러스터 데이터를 StorageGRID으로 백업하는 경우(다크 사이트 또는 오프라인 사이트라고도 함) 이제 검색 및 복원 옵션을 사용하여 필요한 경우 데이터를 복원할 수 있습니다. 이 기능을 사용하려면 BlueXP 커넥터(버전 3.9.25 이상)가 오프라인 사이트에 배포되어야 합니다.
 
-https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-restore-backups-ontap.html#restoring-ontap-data-using-search-restore["검색 및 amp; 복원을 사용하여 ONTAP 데이터를 복원하는 방법을 확인하십시오"].https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private-mode.html["오프라인 사이트에 커넥터를 설치하는 방법을 알아봅니다"].
+https://["검색 및 amp; 복원을 사용하여 ONTAP 데이터를 복원하는 방법을 확인하십시오"].https://["오프라인 사이트에 커넥터를 설치하는 방법을 알아봅니다"].
 
 
 
 === 작업 모니터링 결과 페이지를 .csv 보고서로 다운로드할 수 있습니다
 
-작업 모니터링 페이지를 필터링하여 관심 있는 작업 및 작업을 표시한 후에는 해당 데이터의 .csv 파일을 생성하고 다운로드할 수 있습니다. 그런 다음 정보를 분석하거나 조직의 다른 사용자에게 보고서를 보낼 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-monitor-backup-jobs.html#download-job-monitoring-results-as-a-report["작업 모니터링 보고서를 생성하는 방법을 참조하십시오"].
+작업 모니터링 페이지를 필터링하여 관심 있는 작업 및 작업을 표시한 후에는 해당 데이터의 .csv 파일을 생성하고 다운로드할 수 있습니다. 그런 다음 정보를 분석하거나 조직의 다른 사용자에게 보고서를 보낼 수 있습니다. https://["작업 모니터링 보고서를 생성하는 방법을 참조하십시오"].
 
 
 
@@ -280,7 +280,7 @@ Cloud Backup의 변경으로 인해 Cloud Backup 작업을 성공적으로 수�
 
 | https://*.cloudmanager.cloud.netapp.com 으로 문의하십시오 | https://*.api.bluexp.netapp.com 으로 문의하십시오 
 |===
-의 전체 끝점 목록을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-aws.html#outbound-internet-access["설치하고"^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-google.html#outbound-internet-access["Google 클라우드"^], 또는 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-azure.html#outbound-internet-access["Azure를 지원합니다"^] 설명합니다.
+의 전체 끝점 목록을 참조하십시오 https://["설치하고"^], https://["Google 클라우드"^], 또는 https://["Azure를 지원합니다"^] 설명합니다.
 
 
 
@@ -296,7 +296,7 @@ Cloud Backup의 변경으로 인해 Cloud Backup 작업을 성공적으로 수�
 
 Cloud Backup은 이제 FlexGroup 볼륨 백업 및 복원을 지원합니다. ONTAP 9.12.1 이상을 사용하는 경우 FlexGroup 볼륨을 퍼블릭 및 프라이빗 클라우드 스토리지에 백업할 수 있습니다. FlexVol 및 FlexGroup 볼륨이 포함된 작업 환경이 있는 경우 ONTAP 소프트웨어를 업데이트하면 해당 시스템의 FlexGroup 볼륨을 백업할 수 있습니다.
 
-https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html#supported-volumes["지원되는 볼륨 유형의 전체 목록을 참조하십시오"].
+https://["지원되는 볼륨 유형의 전체 목록을 참조하십시오"].
 
 
 
@@ -314,19 +314,19 @@ https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-
 
 작업 환경에 백업 일정 레이블(예: 일별, 주별 등)과 일치하는 볼륨의 로컬 스냅샷 복사본이 있는 경우 이러한 기존 스냅샷을 백업 파일로 오브젝트 스토리지로 내보낼 수 있습니다. 이전 Snapshot 복사본을 기본 백업 복사본으로 이동하여 클라우드에서 백업을 초기화할 수 있습니다.
 
-이 옵션은 작업 환경에서 Cloud Backup을 활성화할 때 사용할 수 있습니다. 나중에 에서 이 설정을 변경할 수도 있습니다 https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-manage-backup-settings-ontap.html["고급 설정 페이지"].
+이 옵션은 작업 환경에서 Cloud Backup을 활성화할 때 사용할 수 있습니다. 나중에 에서 이 설정을 변경할 수도 있습니다 https://["고급 설정 페이지"].
 
 
 
 === 이제 소스 시스템에서 더 이상 필요하지 않은 볼륨을 아카이빙하는 데 Cloud Backup을 사용할 수 있습니다
 
-이제 볼륨에 대한 백업 관계를 삭제할 수 있습니다. 이렇게 하면 새 백업 파일 생성을 중지하고 소스 볼륨을 삭제하지만 기존의 모든 백업 파일은 보존하려는 경우에 아카이빙 메커니즘이 제공됩니다. 따라서 나중에 필요할 경우 백업 파일에서 볼륨을 복원하는 동시에 소스 스토리지 시스템의 공간을 지울 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-manage-backups-ontap.html#deleting-volume-backup-relationships["자세히 알아보기"].
+이제 볼륨에 대한 백업 관계를 삭제할 수 있습니다. 이렇게 하면 새 백업 파일 생성을 중지하고 소스 볼륨을 삭제하지만 기존의 모든 백업 파일은 보존하려는 경우에 아카이빙 메커니즘이 제공됩니다. 따라서 나중에 필요할 경우 백업 파일에서 볼륨을 복원하는 동시에 소스 스토리지 시스템의 공간을 지울 수 있습니다. https://["자세히 알아보기"].
 
 
 
 === 이메일 및 알림 센터에서 Cloud Backup 경고를 받도록 지원이 추가되었습니다
 
-Cloud Backup이 BlueXP 알림 서비스에 통합되었습니다. BlueXP 메뉴 표시줄에서 알림 표시를 클릭하여 Cloud Backup 알림을 표시할 수 있습니다. 또한 시스템에 로그인하지 않은 경우에도 중요한 시스템 작업을 알 수 있도록 이메일로 알림을 보내도록 BlueXP를 구성할 수 있습니다. 이 이메일은 백업 및 복원 작업을 알아야 하는 모든 수신자에게 보낼 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-monitor-backup-jobs.html#use-the-job-monitor-to-view-backup-and-restore-job-status["자세히 알아보기"].
+Cloud Backup이 BlueXP 알림 서비스에 통합되었습니다. BlueXP 메뉴 표시줄에서 알림 표시를 클릭하여 Cloud Backup 알림을 표시할 수 있습니다. 또한 시스템에 로그인하지 않은 경우에도 중요한 시스템 작업을 알 수 있도록 이메일로 알림을 보내도록 BlueXP를 구성할 수 있습니다. 이 이메일은 백업 및 복원 작업을 알아야 하는 모든 수신자에게 보낼 수 있습니다. https://["자세히 알아보기"].
 
 
 
@@ -343,7 +343,7 @@ Cloud Backup이 BlueXP 알림 서비스에 통합되었습니다. BlueXP 메뉴 
 * 오브젝트 스토리지에 연결된 ONTAP IPspace(활성화 중에 잘못 선택한 경우)
 
 
-https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-manage-backup-settings-ontap.html["클러스터 레벨 백업 설정 관리에 대해 자세히 알아보십시오"].
+https://["클러스터 레벨 백업 설정 관리에 대해 자세히 알아보십시오"].
 
 
 
@@ -357,7 +357,7 @@ https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-manage-backup-se
 
 === 작업 모니터링 페이지가 업데이트되었습니다
 
-다음 업데이트가 에 업데이트되었습니다 https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-monitor-backup-jobs.html["작업 모니터링 페이지"]:
+다음 업데이트가 에 업데이트되었습니다 https://["작업 모니터링 페이지"]:
 
 * "워크로드" 열을 사용할 수 있으므로 이 페이지를 필터링하여 볼륨, 애플리케이션, 가상 머신 및 Kubernetes의 백업 서비스에 대한 작업을 볼 수 있습니다.
 * 특정 백업 작업에 대한 세부 정보를 보려면 "사용자 이름" 및 "작업 유형"에 대한 새 열을 추가할 수 있습니다.
@@ -405,7 +405,7 @@ https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-manage-backup-se
 
 === StorageGRID 시스템의 백업 파일에 대해 DataLock 및 랜섬웨어 보호를 구성할 수 있습니다
 
-마지막 릴리즈에서는 Amazon S3 버킷에 저장된 백업에 대해 _DataLock 및 랜섬웨어 보호_가 도입되었습니다. 이 릴리즈는 StorageGRID 시스템에 저장된 백업 파일에 대한 지원을 확장합니다. 클러스터가 ONTAP 9.11.1 이상을 사용하고 있고 StorageGRID 시스템에서 버전 11.6.0.3 이상을 실행 중인 경우 이 새로운 백업 정책 옵션을 사용할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-cloud-backup-policies.html#datalock-and-ransomware-protection["DataLock 및 랜섬웨어 보호를 사용하여 백업을 보호하는 방법에 대해 자세히 알아보십시오"^].
+마지막 릴리즈에서는 Amazon S3 버킷에 저장된 백업에 대해 _DataLock 및 랜섬웨어 보호_가 도입되었습니다. 이 릴리즈는 StorageGRID 시스템에 저장된 백업 파일에 대한 지원을 확장합니다. 클러스터가 ONTAP 9.11.1 이상을 사용하고 있고 StorageGRID 시스템에서 버전 11.6.0.3 이상을 실행 중인 경우 이 새로운 백업 정책 옵션을 사용할 수 있습니다. https://["DataLock 및 랜섬웨어 보호를 사용하여 백업을 보호하는 방법에 대해 자세히 알아보십시오"^].
 
 버전 3.9.22 이상의 소프트웨어가 있는 커넥터를 실행해야 합니다. Connector는 구내에 설치해야 하며 인터넷에 접속하거나 접속하지 않은 사이트에 설치할 수 있습니다.
 
@@ -431,7 +431,7 @@ https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-manage-backup-se
 
 === 끌어서 놓기를 통해 클라우드 백업을 StorageGRID 시스템에 사용할 수 있습니다
 
-를 누릅니다 https://docs.netapp.com/us-en/cloud-manager-storagegrid/task-discover-storagegrid.html["StorageGRID"^] 백업 대상은 Canvas에 작업 환경으로 있으며, 온프레미스 ONTAP 작업 환경을 대상으로 끌어서 클라우드 백업 설정 마법사를 시작할 수 있습니다.
+를 누릅니다 https://["StorageGRID"^] 백업 대상은 Canvas에 작업 환경으로 있으며, 온프레미스 ONTAP 작업 환경을 대상으로 끌어서 클라우드 백업 설정 마법사를 시작할 수 있습니다.
 
 
 
@@ -441,23 +441,23 @@ https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-manage-backup-se
 
 === 클라우드 네이티브 애플리케이션 데이터를 보호하기 위해 지원이 추가되었습니다
 
-Cloud Backup for Applications는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. BlueXP에서 활성화된 애플리케이션용 클라우드 백업은 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스의 효율적이고 애플리케이션 정합성이 보장되는 정책 기반 백업 및 복원을 제공합니다.https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-protect-cloud-app-data-to-cloud.html["자세한 정보"^].
+Cloud Backup for Applications는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. BlueXP에서 활성화된 애플리케이션용 클라우드 백업은 NetApp ONTAP용 Amazon FSx에 상주하는 Oracle 데이터베이스의 효율적이고 애플리케이션 정합성이 보장되는 정책 기반 백업 및 복원을 제공합니다.https://["자세한 정보"^].
 
 
 
 === 검색 및 복원은 이제 Azure Blob의 백업 파일에서 지원됩니다
 
-이제 Azure Blob 저장소에 백업 파일을 저장하는 사용자가 볼륨 및 파일을 복원하는 검색 및 복원 방법을 사용할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-restore-backups-ontap.html#prerequisites-2["검색 및 amp;Restore를 사용하여 볼륨 및 파일을 복원하는 방법을 확인하십시오"^].
+이제 Azure Blob 저장소에 백업 파일을 저장하는 사용자가 볼륨 및 파일을 복원하는 검색 및 복원 방법을 사용할 수 있습니다. https://["검색 및 amp;Restore를 사용하여 볼륨 및 파일을 복원하는 방법을 확인하십시오"^].
 
-이 기능을 사용하려면 커넥터 역할에 추가 권한이 필요합니다. 버전 3.9.21 소프트웨어(2022년 8월)를 사용하여 배포된 커넥터에는 이러한 권한이 포함됩니다. 이전 릴리스를 사용하여 Connector를 배포한 경우 사용 권한을 수동으로 추가해야 합니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-to-azure.html#verify-or-add-permissions-to-the-connector["필요한 경우 이러한 사용 권한을 추가하는 방법을 알아봅니다"^].
+이 기능을 사용하려면 커넥터 역할에 추가 권한이 필요합니다. 버전 3.9.21 소프트웨어(2022년 8월)를 사용하여 배포된 커넥터에는 이러한 권한이 포함됩니다. 이전 릴리스를 사용하여 Connector를 배포한 경우 사용 권한을 수동으로 추가해야 합니다. https://["필요한 경우 이러한 사용 권한을 추가하는 방법을 알아봅니다"^].
 
 
 
 === 백업 파일이 삭제 및 랜섬웨어 공격으로부터 보호할 수 있는 기능이 추가되었습니다
 
-Cloud Backup은 이제 랜섬웨어 세이프 백업에 대한 오브젝트 잠금을 지원합니다. 클러스터가 ONTAP 9.11.1 이상을 사용하고 있고 백업 대상이 Amazon S3인 경우, _DataLock 및 랜섬웨어 보호_라는 새로운 백업 정책 옵션을 사용할 수 있습니다. DataLock은 백업 파일의 수정 또는 삭제를 방지하고, 랜섬웨어 방지 기능은 백업 파일을 검사하여 백업 파일에 대한 랜섬웨어 공격의 증거를 찾습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-cloud-backup-policies.html#datalock-and-ransomware-protection["DataLock 및 랜섬웨어 보호를 사용하여 백업을 보호하는 방법에 대해 자세히 알아보십시오"^].
+Cloud Backup은 이제 랜섬웨어 세이프 백업에 대한 오브젝트 잠금을 지원합니다. 클러스터가 ONTAP 9.11.1 이상을 사용하고 있고 백업 대상이 Amazon S3인 경우, _DataLock 및 랜섬웨어 보호_라는 새로운 백업 정책 옵션을 사용할 수 있습니다. DataLock은 백업 파일의 수정 또는 삭제를 방지하고, 랜섬웨어 방지 기능은 백업 파일을 검사하여 백업 파일에 대한 랜섬웨어 공격의 증거를 찾습니다. https://["DataLock 및 랜섬웨어 보호를 사용하여 백업을 보호하는 방법에 대해 자세히 알아보십시오"^].
 
-이 기능을 사용하려면 커넥터 역할에 추가 권한이 필요합니다. 버전 3.9.21 소프트웨어를 사용하여 배포된 Connector에는 이러한 권한이 포함되어 있습니다. 이전 릴리스를 사용하여 Connector를 배포한 경우 사용 권한을 수동으로 추가해야 합니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-to-aws.html#set-up-s3-permissions["필요한 경우 이러한 사용 권한을 추가하는 방법을 알아봅니다"^].
+이 기능을 사용하려면 커넥터 역할에 추가 권한이 필요합니다. 버전 3.9.21 소프트웨어를 사용하여 배포된 Connector에는 이러한 권한이 포함되어 있습니다. 이전 릴리스를 사용하여 Connector를 배포한 경우 사용 권한을 수동으로 추가해야 합니다. https://["필요한 경우 이러한 사용 권한을 추가하는 방법을 알아봅니다"^].
 
 
 
@@ -475,7 +475,7 @@ Cloud Backup은 이제 랜섬웨어 세이프 백업에 대한 오브젝트 잠�
 
 === 끌어서 놓기를 통해 Cloud Backup을 Azure Blob 및 Google Cloud Storage로 이동할 수 있습니다
 
-를 누릅니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-viewing-azure-blob.html["Azure Blob"^] 또는 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-viewing-gcp-storage.html["Google 클라우드 스토리지"^] 백업 대상이 Canvas에 작업 환경으로 존재합니다. 온프레미스 ONTAP 또는 Cloud Volumes ONTAP 작업 환경(Azure 또는 GCP에 설치됨)을 대상으로 끌어서 백업 설정 마법사를 시작할 수 있습니다.
+를 누릅니다 https://["Azure Blob"^] 또는 https://["Google 클라우드 스토리지"^] 백업 대상이 Canvas에 작업 환경으로 존재합니다. 온프레미스 ONTAP 또는 Cloud Volumes ONTAP 작업 환경(Azure 또는 GCP에 설치됨)을 대상으로 끌어서 백업 설정 마법사를 시작할 수 있습니다.
 
 이 기능은 Amazon S3 버킷에 이미 존재합니다.
 
@@ -513,7 +513,7 @@ Cloud Backup은 이제 랜섬웨어 세이프 백업에 대한 오브젝트 잠�
 
 사내 ONTAP 클러스터가 인터넷 액세스가 연결되지 않은 사이트에 있는 경우, 다크 사이트 또는 오프라인 사이트라고도 합니다. 이제 Cloud Backup을 사용하여 볼륨 데이터를 동일한 사이트에 있는 NetApp StorageGRID 시스템에 백업할 수 있습니다. 이 기능을 사용하려면 BlueXP 커넥터(버전 3.9.19 이상)도 오프라인 사이트에 배포해야 합니다.
 
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private-mode.html["오프라인 사이트에 커넥터를 설치하는 방법을 알아봅니다"].https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-private-cloud.html["오프라인 사이트에서 ONTAP 데이터를 StorageGRID에 백업하는 방법을 알아봅니다"].
+https://["오프라인 사이트에 커넥터를 설치하는 방법을 알아봅니다"].https://["오프라인 사이트에서 ONTAP 데이터를 StorageGRID에 백업하는 방법을 알아봅니다"].
 
 
 
@@ -521,7 +521,7 @@ https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private
 
 VMware vSphere용 SnapCenter 플러그인을 BlueXP와 통합하여 가상 시스템의 데이터를 보호할 수 있습니다. 데이터 저장소를 클라우드에 백업하고 VMware vSphere용 사내 SnapCenter 플러그인으로 가상 머신을 간편하게 복원할 수 있습니다.
 
-https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-protect-vm-data.html["가상 시스템을 클라우드로 보호하는 방법에 대해 자세히 알아보십시오"].
+https://["가상 시스템을 클라우드로 보호하는 방법에 대해 자세히 알아보십시오"].
 
 
 
@@ -540,7 +540,7 @@ S3 및 Blob 스토리지에서 파일 레벨 찾아보기 및 복원 작업에 �
 
 === Google Cloud 및 StorageGRID 스토리지에서 파일에 대한 찾아보기 및 복원 지원
 
-위에서 설명한 대로 Browse & Restore 작업에 대한 컨테이너가 추가되어 Google Cloud 및 StorageGRID 시스템에 저장된 백업 파일에서 파일 복원 작업을 수행할 수 있습니다. 이제 Browse & Restore를 사용하여 모든 퍼블릭 클라우드 공급자 및 StorageGRID에서 파일을 복원할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-restore-backups-ontap.html#restoring-ontap-data-using-browse-restore["ONTAP 백업에서 볼륨 및 파일을 복원하기 위해 Browse  amp; Restore를 사용하는 방법을 확인하십시오"].
+위에서 설명한 대로 Browse & Restore 작업에 대한 컨테이너가 추가되어 Google Cloud 및 StorageGRID 시스템에 저장된 백업 파일에서 파일 복원 작업을 수행할 수 있습니다. 이제 Browse & Restore를 사용하여 모든 퍼블릭 클라우드 공급자 및 StorageGRID에서 파일을 복원할 수 있습니다. https://["ONTAP 백업에서 볼륨 및 파일을 복원하기 위해 Browse  amp; Restore를 사용하는 방법을 확인하십시오"].
 
 
 
@@ -552,13 +552,13 @@ S3 및 Blob 스토리지에서 파일 레벨 찾아보기 및 복원 작업에 �
 
 === Kubernetes 클러스터에서 새로 생성된 볼륨에 백업 정책을 자동으로 적용합니다
 
-Cloud Backup을 활성화한 후 Kubernetes 클러스터에 새로운 영구 볼륨을 추가한 경우에는 이전에 해당 볼륨에 대한 백업을 구성해야 했습니다. 이제 새로 생성된 볼륨에 자동으로 적용되는 정책을 선택할 수 있습니다 https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-manage-backups-kubernetes.html#setting-a-backup-policy-to-be-assigned-to-new-volumes["백업 설정 페이지에서"] 이미 Cloud Backup을 활성화한 클러스터의 경우
+Cloud Backup을 활성화한 후 Kubernetes 클러스터에 새로운 영구 볼륨을 추가한 경우에는 이전에 해당 볼륨에 대한 백업을 구성해야 했습니다. 이제 새로 생성된 볼륨에 자동으로 적용되는 정책을 선택할 수 있습니다 https://["백업 설정 페이지에서"] 이미 Cloud Backup을 활성화한 클러스터의 경우
 
 
 
 === 이제 Cloud Backup API를 사용하여 백업 및 복원 작업을 관리할 수 있습니다
 
-API는 에서 사용할 수 있습니다 https://docs.netapp.com/us-en/cloud-manager-automation/cbs/overview.html[]. 을 참조하십시오 link:api-backup-restore.html["이 페이지"] API에 대한 개요입니다.
+API는 에서 사용할 수 있습니다 https://[]. 을 참조하십시오 link:api-backup-restore.html["이 페이지"] API에 대한 개요입니다.
 
 
 
@@ -568,7 +568,7 @@ API는 에서 사용할 수 있습니다 https://docs.netapp.com/us-en/cloud-man
 
 === 검색 및 복원은 이제 Google Cloud Storage의 백업 파일에서 지원됩니다
 
-4월에 AWS에 백업 파일을 저장한 사용자를 위해 볼륨 및 파일 복원 검색 및 복원 방법이 도입되었습니다. 이제 Google Cloud Storage에 백업 파일을 저장하는 사용자가 이 기능을 사용할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-restore-backups-ontap.html#prerequisites-2["검색 및 amp;Restore를 사용하여 볼륨 및 파일을 복원하는 방법을 확인하십시오"].
+4월에 AWS에 백업 파일을 저장한 사용자를 위해 볼륨 및 파일 복원 검색 및 복원 방법이 도입되었습니다. 이제 Google Cloud Storage에 백업 파일을 저장하는 사용자가 이 기능을 사용할 수 있습니다. https://["검색 및 amp;Restore를 사용하여 볼륨 및 파일을 복원하는 방법을 확인하십시오"].
 
 
 
@@ -587,4 +587,4 @@ Cloud Backup에서 라이센스를 구축하는 방법은 다음과 같이 몇 �
 * 무료 평가판은 마켓플레이스 가입이 시작되는 날부터 시작됩니다. 예를 들어, Cloud Volumes ONTAP 시스템에 대해 30일 동안 Marketplace 구독을 사용한 후 무료 평가판을 활성화하면 클라우드 백업 평가판을 사용할 수 없습니다.
 
 
-https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-licensing-cloud-backup.html["사용 가능한 라이센스 모델에 대해 자세히 알아보십시오"].
+https://["사용 가능한 라이센스 모델에 대해 자세히 알아보십시오"].

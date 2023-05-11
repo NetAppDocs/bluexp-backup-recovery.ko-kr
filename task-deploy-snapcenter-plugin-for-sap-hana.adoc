@@ -46,7 +46,7 @@ summary: 각 SAP HANA 데이터베이스 호스트에 SAP HANA용 SnapCenter 플
 
 
 
-NOTE: BlueXP 커넥터 호스트에서 애플리케이션 호스트로의 연결에 실패한 경우 을 참조하십시오 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Cloud_Backup_Application_Failed_to_validate_connectivity_from_BlueXP_connector_host_to_application_database_host["기술 자료 문서"^] 를 참조하십시오.
+NOTE: BlueXP 커넥터 호스트에서 애플리케이션 호스트로의 연결에 실패한 경우 을 참조하십시오 https://["기술 자료 문서"^] 를 참조하십시오.
 
 
 
@@ -155,7 +155,7 @@ HANA 호스트에 SSH 키 기반 인증이 설정되어 있지 않은 경우 아
 * 단계 *
 
 . Connector VM에 로그인합니다.
-. SnapCenter Linux 호스트 플러그인 바이너리를 다운로드합니다. S UDO Docker Exec - IT cloudmanager_scs_cloud curl-X get 'http://127.0.0.1/deploy/downloadLinuxPlugin'`[]
+. SnapCenter Linux 호스트 플러그인 바이너리를 다운로드합니다. S UDO Docker Exec - IT cloudmanager_scs_cloud curl-X get 'http://[]
 +
 플러그인 바이너리는 _ cd /var/lib/docker/volumes/service-manager-2_cloudmanager_scs_cloud_volume/_data/$(sudo docker PS | grep-Po "cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin_
 
