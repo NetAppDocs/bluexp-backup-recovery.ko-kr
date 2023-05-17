@@ -244,6 +244,40 @@ SAP HANA 시스템을 제거하기 전에 관련된 모든 백업을 삭제하�
 
 
 
+=== SAP HANA 데이터베이스 호스트를 삭제합니다
+
+REST API만 사용하여 SAP HANA 데이터베이스 호스트를 제거할 수 있습니다.
+
+* 단계 *
+
+. UI를 사용하거나 아래 REST API를 사용하여 SAP HANA 데이터베이스 호스트와 연결된 모든 시스템을 삭제합니다.
+`DELETE /saphana/and/systems/(id)`
+. SAP HANA 데이터베이스 호스트를 제거하려면 다음 단계를 수행하십시오.
++
+.. REST API 가져오기를 사용하여 삭제해야 하는 SAP HANA 데이터베이스 호스트의 ID를 가져올 수 있습니다.
+`GET /saphana/hosts`
+   `{`
+    `"num_records": 1,`
+    `"records": [`
+        `{`
+            `"id": "c9a6849f-29ea-45c5-a17f-a1e78ad2a30e",`
+            `"host_name": "galaxy-vm134.netapp.com",`
+            `"port": 443,`
+            `"agent_id": "n3TrgkGvnTOFTJJNBxeh3oPxG8AcrcHeclients"`
+       
+`}`
+    `]`
+`}`
+.. 아래 REST API에서 ID를 전달하여 SAP HANA 데이터베이스 호스트를 삭제합니다.
+`DELETE /saphana/hosts/(id)`
+.. 아래 명령을 사용하여 데이터베이스 호스트에서 SAP HANA Linux 플러그인을 제거합니다.
+`/opt/NetApp/snapcenter/spl/installation/plugins/uninstall`
+
+
+
+
+
+
 === 비 데이터 볼륨 추가
 
 멀티 테넌트 데이터베이스 컨테이너 또는 단일 컨테이너 유형 SAP HANA 시스템을 추가한 후 HANA 시스템의 비 데이터 볼륨을 추가할 수 있습니다.
@@ -283,4 +317,29 @@ SAP HANA 시스템을 제거하기 전에 관련된 모든 백업을 삭제하�
 .. 모든 세부 정보를 검토하고 * 시스템 추가 * 를 클릭합니다.
 
 
+
+
+
+
+=== SAP HANA 데이터베이스 호스트를 수정합니다
+
+SAP HANA 데이터베이스 호스트를 추가한 후 REST API를 사용하여 호스트 이름 또는 플러그인 포트를 수정할 수 있습니다.
+
+* 단계 *
+
+. REST API 가져오기를 사용하여 삭제해야 하는 SAP HANA 데이터베이스 호스트의 ID를 가져올 수 있습니다. `GET /saphana/hosts`
+   `{`
+    `"num_records": 1,`
+    `"records": [`
+        `{`
+            `"id": "c9a6849f-29ea-45c5-a17f-a1e78ad2a30e",`
+            `"host_name": "galaxy-vm134.netapp.com",`
+            `"port": 443,`
+            `"agent_id": "n3TrgkGvnTOFTJJNBxeh3oPxG8AcrcHeclients"`
+       
+`}`
+    `]`
+`}`
+. 아래의 패치 API를 사용하여 호스트 이름 또는 플러그인 포트를 수정합니다.
+`PATCH /saphana/hosts/(id)``
 

@@ -3762,4 +3762,35 @@
   <block id="7eb75a0482cc00856d6f59785ed2196a" category="list-text">BlueXP 백업 및 복구 PAYGO 라이센스의 경우 에 가입해야 합니다<block ref="72b5d28b0fc68220ca561b42693848df" category="inline-link-rx"></block>. BlueXP 백업 및 복구에 대한 청구는 이 구독을 통해 이루어집니다.</block>
   <block id="e59cc93e05cd1a09fee0d3400cb6594b" category="inline-link">Azure 마켓플레이스에서 제공하는 NetApp BlueXP 오퍼링입니다</block>
   <block id="1ec47f8d2867e62133816fe5c965e4ea" category="list-text">BlueXP 백업 및 복구 PAYGO 라이센스의 경우 에 가입해야 합니다<block ref="2fad159ac15feeefc5347d9f8b6dbeab" category="inline-link-rx"></block>. BlueXP 백업 및 복구에 대한 청구는 이 구독을 통해 이루어집니다.</block>
+  <block id="297636b2bcb79ee4ccd3bb7671403999" category="section-title">SAP HANA 데이터베이스 호스트를 삭제합니다</block>
+  <block id="a2d13879a7b76ffe897fe8103b434355" category="paragraph">REST API만 사용하여 SAP HANA 데이터베이스 호스트를 제거할 수 있습니다.</block>
+  <block id="a8a535cce11f864e14e13eff6e6b9d73" category="list-text">UI를 사용하거나 아래 REST API를 사용하여 SAP HANA 데이터베이스 호스트와 연결된 모든 시스템을 삭제합니다.<block ref="f43e4584db76b7893255f556ed8c0765" prefix=" " category="inline-code"></block></block>
+  <block id="b7f6974b5d69aff198f9237a0a2c094d" category="list-text">SAP HANA 데이터베이스 호스트를 제거하려면 다음 단계를 수행하십시오.</block>
+  <block id="200afc5eca1ab2aaaf44d39b4e461f2a" category="list-text">REST API 가져오기를 사용하여 삭제해야 하는 SAP HANA 데이터베이스 호스트의 ID를 가져올 수 있습니다.<block ref="51dad906998af1627cfd8c445b8b43ab" prefix=" " category="inline-code"></block>
+  <block ref="f95b70fdc3088560732a5ac135644506" prefix=" " category="inline-code"></block>
+   <block ref="a641cfb5b011b5cb49303b34c80a6cfb" prefix=" " category="inline-code"></block>
+   <block ref="f3b599239bed41162cfb754c5bb9df44" prefix=" " category="inline-code"></block>
+       <block ref="f95b70fdc3088560732a5ac135644506" prefix=" " category="inline-code"></block>
+           <block ref="ed7b8bd22adb1714fa637cd7b3b4331b" prefix=" " category="inline-code"></block>
+           <block ref="f7c6ee9d9565c48c4aa24578d992f34b" prefix=" " category="inline-code"></block>
+           <block ref="095c01fe765e288681985447a475baee" prefix=" " category="inline-code"></block>
+           <block ref="db764a9381e247045b4f4a6c09e121b0" prefix=" " category="inline-code"></block>
+       <block ref="cbb184dd8e05c9709e5dcaedaa0495cf" prefix=" " category="inline-code"></block>
+   <block ref="0fbd1776e1ad22c59a7080d35c7fd4db" prefix=" " category="inline-code"></block><block ref="cbb184dd8e05c9709e5dcaedaa0495cf" prefix=" " category="inline-code"></block></block>
+  <block id="51a11f42ba598ff4a34cf79c1f4610af" category="list-text">아래 REST API에서 ID를 전달하여 SAP HANA 데이터베이스 호스트를 삭제합니다.<block ref="60ca3266dc3cf7874e88782aed985504" prefix=" " category="inline-code"></block></block>
+  <block id="d8328889034337fbd81cf76d0c3dce07" category="list-text">아래 명령을 사용하여 데이터베이스 호스트에서 SAP HANA Linux 플러그인을 제거합니다.<block ref="45dc69782ede4b4cd03c3ab1172c0756" prefix=" " category="inline-code"></block></block>
+  <block id="190be79bcda9073c7cc174d89a62b124" category="section-title">SAP HANA 데이터베이스 호스트를 수정합니다</block>
+  <block id="b5c57e960c8315130e111d59c3f6629e" category="paragraph">SAP HANA 데이터베이스 호스트를 추가한 후 REST API를 사용하여 호스트 이름 또는 플러그인 포트를 수정할 수 있습니다.</block>
+  <block id="25e29ce32228dfb20b227bafb1c5eff6" category="list-text">REST API 가져오기를 사용하여 삭제해야 하는 SAP HANA 데이터베이스 호스트의 ID를 가져올 수 있습니다.<block ref="51dad906998af1627cfd8c445b8b43ab" prefix=" " category="inline-code"></block>
+  <block ref="f95b70fdc3088560732a5ac135644506" prefix=" " category="inline-code"></block>
+   <block ref="a641cfb5b011b5cb49303b34c80a6cfb" prefix=" " category="inline-code"></block>
+   <block ref="f3b599239bed41162cfb754c5bb9df44" prefix=" " category="inline-code"></block>
+       <block ref="f95b70fdc3088560732a5ac135644506" prefix=" " category="inline-code"></block>
+           <block ref="ed7b8bd22adb1714fa637cd7b3b4331b" prefix=" " category="inline-code"></block>
+           <block ref="f7c6ee9d9565c48c4aa24578d992f34b" prefix=" " category="inline-code"></block>
+           <block ref="095c01fe765e288681985447a475baee" prefix=" " category="inline-code"></block>
+           <block ref="db764a9381e247045b4f4a6c09e121b0" prefix=" " category="inline-code"></block>
+       <block ref="cbb184dd8e05c9709e5dcaedaa0495cf" prefix=" " category="inline-code"></block>
+   <block ref="0fbd1776e1ad22c59a7080d35c7fd4db" prefix=" " category="inline-code"></block><block ref="cbb184dd8e05c9709e5dcaedaa0495cf" prefix=" " category="inline-code"></block></block>
+  <block id="cab82189f2bc3aa6ebb43c8830e47693" category="list-text">아래의 패치 API를 사용하여 호스트 이름 또는 플러그인 포트를 수정합니다.<block ref="1fcec45b91ad39b0aa8d1cf2b8d5e031" prefix=" " category="inline-code"></block></block>
 </blocks>
