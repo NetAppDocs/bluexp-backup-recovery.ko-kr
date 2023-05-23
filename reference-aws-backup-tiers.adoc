@@ -28,7 +28,7 @@ BlueXP 백업 및 복구를 활성화할 때 첫 번째 백업 정책에서 _S3 
 
 이러한 유형의 수명주기 규칙을 사용하여 BlueXP 백업 및 복구를 구성할 때는 AWS 계정에 버킷을 설정할 때 수명주기 규칙을 구성하지 않아야 합니다.
 
-https://["S3 스토리지 클래스에 대해 알아보십시오"^].
+https://aws.amazon.com/s3/storage-classes/["S3 스토리지 클래스에 대해 알아보십시오"^].
 
 
 
@@ -52,7 +52,7 @@ Amazon S3 Glacier 및 Amazon S3 Glacier Deep Archive에서 데이터를 복원�
 
 | * S3 Glacier Deep Archive * |  | 빠른 검색, 높은 비용 | 검색 속도 감소, 비용 최소화 
 |===
-각 방법은 GB당 검색 비용과 요청당 수수료를 다르게 합니다. AWS 지역별 S3 Glacier 가격 에 대한 자세한 내용은 를 참조하십시오 https://["Amazon S3 가격 페이지"^].
+각 방법은 GB당 검색 비용과 요청당 수수료를 다르게 합니다. AWS 지역별 S3 Glacier 가격 에 대한 자세한 내용은 를 참조하십시오 https://aws.amazon.com/s3/pricing/["Amazon S3 가격 페이지"^].
 
 --
 Amazon S3 Glacier에 보관된 개체를 복원하는 데 시간이 얼마나 걸립니까?:: 총 복원 시간을 구성하는 두 가지 부분이 있습니다.
@@ -76,7 +76,7 @@ Amazon S3 Glacier에 보관된 개체를 복원하는 데 시간이 얼마나 �
 * * 복원 시간 *: 표준 저장소의 백업 파일에서 데이터를 복원하는 시간입니다. 이 시간은 아카이브 계층을 사용하지 않을 때 표준 스토리지에서 직접 수행하는 일반적인 복원 작업과 다르지 않습니다.
 
 
-Amazon S3 Glacier 및 S3 Glacier Deep Archive 검색 옵션에 대한 자세한 내용은 을 참조하십시오 https://["이러한 스토리지 클래스에 대한 Amazon FAQ가 있습니다"^].
+Amazon S3 Glacier 및 S3 Glacier Deep Archive 검색 옵션에 대한 자세한 내용은 을 참조하십시오 https://aws.amazon.com/s3/faqs/#Amazon_S3_Glacier["이러한 스토리지 클래스에 대한 Amazon FAQ가 있습니다"^].
 
 --
 

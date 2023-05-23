@@ -268,7 +268,7 @@ FQDN 또는 IP 주소를 사용하여 Connector가 데이터베이스 호스트�
 
 
 . Connector VM에 로그인합니다.
-. SnapCenter Linux 호스트 플러그인 바이너리를 다운로드합니다. S UDO Docker Exec - IT cloudmanager_scs_cloud curl-X get 'http://[]
+. SnapCenter Linux 호스트 플러그인 바이너리를 다운로드합니다. S UDO Docker Exec - IT cloudmanager_scs_cloud curl-X get 'http://127.0.0.1/deploy/downloadLinuxPlugin'`[]
 +
 플러그인 바이너리는 _ cd /var/lib/docker/volumes/service-manager-2_cloudmanager_scs_cloud_volume/_data/$(sudo docker PS | grep-Po "cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin_
 

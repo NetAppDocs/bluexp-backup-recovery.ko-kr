@@ -26,7 +26,7 @@ BlueXP 백업 및 복구는 하나의 Google 아카이브 스토리지 클래스
 
 이러한 유형의 수명 주기 규칙을 사용하여 BlueXP 백업 및 복구를 구성할 때 Google 계정에서 버킷을 설정할 때 수명 주기 규칙을 구성하지 않아야 합니다.
 
-https://["Google 스토리지 클래스에 대해 알아보십시오"^].
+https://cloud.google.com/storage/docs/storage-classes["Google 스토리지 클래스에 대해 알아보십시오"^].
 
 
 
@@ -34,7 +34,7 @@ https://["Google 스토리지 클래스에 대해 알아보십시오"^].
 
 아카이브 스토리지에 오래된 백업 파일을 저장하는 것은 표준 스토리지에 비해 훨씬 저렴하지만, 복원 작업을 위해 아카이브 스토리지에 있는 백업 파일의 데이터에 액세스하는 데는 시간이 약간 더 오래 걸리고 비용이 더 많이 듭니다.
 
-Google Archive에서 데이터를 복원하는 데 비용이 얼마나 드나요?:: 지역별 Google Cloud Storage에 대한 자세한 가격을 보려면 를 방문하십시오 https://["Google Cloud Storage 가격 페이지"^].
+Google Archive에서 데이터를 복원하는 데 비용이 얼마나 드나요?:: 지역별 Google Cloud Storage에 대한 자세한 가격을 보려면 를 방문하십시오 https://cloud.google.com/storage/pricing["Google Cloud Storage 가격 페이지"^].
 Google Archive에 보관된 개체를 복원하는 데 시간이 얼마나 걸립니까?:: 총 복원 시간을 구성하는 두 가지 부분이 있습니다.
 +
 --

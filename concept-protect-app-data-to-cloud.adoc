@@ -20,8 +20,8 @@ summary: BlueXP 및 사내 SnapCenter와 애플리케이션을 위한 BlueXP 백
 
 응용 프로그램의 BlueXP 백업 및 복구에 대한 자세한 내용은 다음을 참조하십시오.
 
-* https://["BlueXP 백업 및 복구 및 SnapCenter를 사용한 애플리케이션 인식 백업"^]
-* https://["애플리케이션 팟캐스트를 위한 BlueXP 백업 및 복구"^]
+* https://cloud.netapp.com/blog/cbs-cloud-backup-and-snapcenter-integration["BlueXP 백업 및 복구 및 SnapCenter를 사용한 애플리케이션 인식 백업"^]
+* https://soundcloud.com/techontap_podcast/episode-322-cloud-backup-for-applications["애플리케이션 팟캐스트를 위한 BlueXP 백업 및 복구"^]
 
 
 

@@ -161,7 +161,7 @@ BlueXP 백업 및 복구는 소스 볼륨의 스토리지 효율성을 보존하
 ifdef::aws[]
 
 +
-** AWS에서는 https://["아마존 애써나"^] 및 https://["AWS 글루"^] 리소스가 새로운 S3 버킷에 구축됩니다.
+** AWS에서는 https://aws.amazon.com/athena/faqs/["아마존 애써나"^] 및 https://aws.amazon.com/glue/faqs/["AWS 글루"^] 리소스가 새로운 S3 버킷에 구축됩니다.
 +
 endif::aws[]
 
@@ -171,7 +171,7 @@ endif::aws[]
 ifdef::azure[]
 
 +
-** Azure에서는 가 있습니다 https://["Azure Synapse 작업 공간"^] 및 https://["Azure Data Lake Storage를 참조하십시오"^] 데이터를 저장 및 분석할 수 있도록 스토리지 계정에 프로비저닝됩니다.
+** Azure에서는 가 있습니다 https://azure.microsoft.com/en-us/services/synapse-analytics/?&ef_id=EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE:G:s&gclid=EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE["Azure Synapse 작업 공간"^] 및 https://azure.microsoft.com/en-us/services/storage/data-lake-storage/?&ef_id=EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE:G:s&gclid=EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE["Azure Data Lake Storage를 참조하십시오"^] 데이터를 저장 및 분석할 수 있도록 스토리지 계정에 프로비저닝됩니다.
 +
 endif::azure[]
 
@@ -181,7 +181,7 @@ endif::azure[]
 
 ifdef::gcp[]
 
-* Google에서는 새로운 버킷이 배포되고 https://["Google Cloud BigQuery 서비스"^] 계정/프로젝트 수준에서 프로비저닝됩니다.
+* Google에서는 새로운 버킷이 배포되고 https://cloud.google.com/bigquery["Google Cloud BigQuery 서비스"^] 계정/프로젝트 수준에서 프로비저닝됩니다.
 
 
 endif::gcp[]
@@ -223,7 +223,7 @@ NetApp에서 BYOL 라이센스를 구매하는 경우 클라우드 공급자 마
 
 BYOL은 1TiB 단위로 기간 기반(12, 24 또는 36개월) _ 및 _ 용량 기반 예를 들어, 1년, 최대 용량(10TiB)에 대해 서비스 사용을 위해 NetApp에 비용을 지불합니다.
 
-서비스를 활성화하기 위해 BlueXP 디지털 전자지갑 페이지에 입력한 일련 번호를 받게 됩니다. 두 제한 중 하나에 도달하면 라이센스를 갱신해야 합니다. Backup BYOL 라이센스는 와 관련된 모든 소스 시스템에 적용됩니다 https://["BlueXP 계정"^].
+서비스를 활성화하기 위해 BlueXP 디지털 전자지갑 페이지에 입력한 일련 번호를 받게 됩니다. 두 제한 중 하나에 도달하면 라이센스를 갱신해야 합니다. Backup BYOL 라이센스는 와 관련된 모든 소스 시스템에 적용됩니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-netapp-accounts.html["BlueXP 계정"^].
 
 link:task-licensing-cloud-backup.html#use-a-bluexp-backup-and-recovery-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"].
 
@@ -271,7 +271,7 @@ link:task-licensing-cloud-backup.html#use-an-annual-contract["연간 계약을 �
 
 == BlueXP 백업 및 복구의 작동 방식
 
-Cloud Volumes ONTAP 또는 온프레미스 ONTAP 시스템에서 BlueXP 백업 및 복구를 활성화하면 서비스가 데이터의 전체 백업을 수행합니다. 볼륨 스냅샷은 백업 이미지에 포함되지 않습니다. 초기 백업 후에는 모든 추가 백업이 증분 백업되므로 변경된 블록과 새 블록만 백업됩니다. 이렇게 하면 네트워크 트래픽이 최소로 유지됩니다. BlueXP 백업 및 복구는 을 기반으로 합니다 https://["NetApp SnapMirror 클라우드 기술"^].
+Cloud Volumes ONTAP 또는 온프레미스 ONTAP 시스템에서 BlueXP 백업 및 복구를 활성화하면 서비스가 데이터의 전체 백업을 수행합니다. 볼륨 스냅샷은 백업 이미지에 포함되지 않습니다. 초기 백업 후에는 모든 추가 백업이 증분 백업되므로 변경된 블록과 새 블록만 백업됩니다. 이렇게 하면 네트워크 트래픽이 최소로 유지됩니다. BlueXP 백업 및 복구는 을 기반으로 합니다 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["NetApp SnapMirror 클라우드 기술"^].
 
 
 CAUTION: 백업 파일을 관리하거나 변경하기 위해 클라우드 제공업체 환경에서 직접 수행한 작업은 파일을 손상시킬 수 있으며 지원되지 않는 구성을 초래할 수 있습니다.
@@ -288,14 +288,14 @@ image:diagram_cloud_backup_general.png["BlueXP 백업 및 복구가 백업 파�
 
 ifdef::aws[]
 
-* AWS에서 BlueXP는 를 활성화합니다 https://["Amazon S3 블록 공용 액세스 기능입니다"^] S3 버킷에서.
+* AWS에서 BlueXP는 를 활성화합니다 https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 블록 공용 액세스 기능입니다"^] S3 버킷에서.
 
 
 endif::aws[]
 
 ifdef::azure[]
 
-* Azure에서 BlueXP는 Blob 컨테이너용 저장소 계정이 있는 새 리소스 그룹 또는 기존 리소스 그룹을 사용합니다. BlueXP https://["BLOB 데이터에 대한 공개 액세스를 차단합니다"] 기본적으로 사용됩니다.
+* Azure에서 BlueXP는 Blob 컨테이너용 저장소 계정이 있는 새 리소스 그룹 또는 기존 리소스 그룹을 사용합니다. BlueXP https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["BLOB 데이터에 대한 공개 액세스를 차단합니다"] 기본적으로 사용됩니다.
 
 
 endif::azure[]

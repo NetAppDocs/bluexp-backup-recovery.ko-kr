@@ -26,7 +26,7 @@ BlueXP 백업 및 복구는 하나의 Azure 아카이브 액세스 계층과 대
 
 이러한 유형의 수명 주기 규칙을 사용하여 BlueXP 백업 및 복구를 구성할 때는 Azure 계정에 컨테이너를 설정할 때 수명 주기 규칙을 구성하지 않아야 합니다.
 
-https://["Azure Blob 액세스 계층에 대해 알아보십시오"^].
+https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["Azure Blob 액세스 계층에 대해 알아보십시오"^].
 
 
 
@@ -41,7 +41,7 @@ Azure Archive에서 데이터를 복원하는 데 비용이 얼마나 드는가?
 * * 표준 *: 검색 속도 감소, 비용 절감
 
 
-각 방법은 GB당 검색 비용과 요청당 수수료를 다르게 합니다. Azure 지역별 Azure Archive에 대한 자세한 가격을 보려면 를 방문하십시오 https://["Azure 가격 책정 페이지입니다"^].
+각 방법은 GB당 검색 비용과 요청당 수수료를 다르게 합니다. Azure 지역별 Azure Archive에 대한 자세한 가격을 보려면 를 방문하십시오 https://azure.microsoft.com/en-us/pricing/details/storage/blobs/["Azure 가격 책정 페이지입니다"^].
 
 --
 
@@ -61,7 +61,7 @@ Azure Archive에 보관된 데이터를 복원하는 데 시간이 얼마나 걸
 * * 복원 시간 *: Cool storage의 백업 파일에서 데이터를 복원하는 시간입니다. 이 시간은 보관 계층을 사용하지 않을 때 Cool 스토리지에서 직접 수행하는 일반적인 복원 작업과 다르지 않습니다.
 
 
-Azure Archive 검색 옵션에 대한 자세한 내용은 을 참조하십시오 https://["이 Azure FAQ를 참조하십시오"^].
+Azure Archive 검색 옵션에 대한 자세한 내용은 을 참조하십시오 https://azure.microsoft.com/en-us/pricing/details/storage/blobs/#faq["이 Azure FAQ를 참조하십시오"^].
 
 --
 

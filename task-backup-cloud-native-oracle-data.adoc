@@ -134,6 +134,6 @@ NOTE: 서비스 계정(_SnapCenter-account-<account_id>_)은 예약된 백업 �
 * 큰 데이터베이스(250GB 이상)를 복원한 후 같은 데이터베이스에서 전체 온라인 백업을 수행하는 경우 다음 오류로 인해 작업이 실패할 수 있습니다.
 `failed with status code 500, error {\"error\":{\"code\":\"app_internal_error\",\"message\":\"Failed to create snapshot. Reason: Snapshot operation not allowed due to clones backed by snapshots. Try again after sometime.`
 +
-이 문제를 해결하는 방법에 대한 자세한 내용은 다음을 참조하십시오. https://["스냅샷이 백업한 클론으로 인해 스냅샷 작업이 허용되지 않습니다"].
+이 문제를 해결하는 방법에 대한 자세한 내용은 다음을 참조하십시오. https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/Snapshot_operation_not_allowed_due_to_clones_backed_by_snapshots["스냅샷이 백업한 클론으로 인해 스냅샷 작업이 허용되지 않습니다"].
 
 
