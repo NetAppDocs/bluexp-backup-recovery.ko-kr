@@ -16,7 +16,7 @@ summary: BlueXP 백업 및 복구를 사용하면 소스 Cloud Volumes ONTAP 볼
 [role="lead"]
 BlueXP 백업 및 복구를 사용하면 소스 Cloud Volumes ONTAP 볼륨이 상주하는 위치와 다른 Azure 계정에서 백업 파일을 생성할 수 있습니다. 또한 두 계정은 BlueXP Connector가 있는 계정과 다를 수 있습니다.
 
-이 단계는 사용자가 있을 때만 필요합니다 https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-to-azure.html["Azure Blob 저장소에 Cloud Volumes ONTAP 데이터 백업"^].
+이 단계는 사용자가 있을 때만 필요합니다 https://docs.netapp.com/us-en/bluexp-backup-recovery/task-backup-to-azure.html["Azure Blob 저장소에 Cloud Volumes ONTAP 데이터 백업"^].
 
 아래 단계에 따라 이러한 방법으로 구성을 설정하기만 하면 됩니다.
 

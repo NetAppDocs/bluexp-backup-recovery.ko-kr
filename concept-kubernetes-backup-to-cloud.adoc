@@ -129,7 +129,7 @@ link:task-licensing-cloud-backup.html#use-a-bluexp-backup-and-recovery-paygo-sub
 
 BYOL은 기간 기반(12, 24 또는 36개월) _ 및 _ 용량 기반(1TB 증분) 1년, 최대 용량(10TB)을 위해 서비스 사용 비용을 NetApp에 지불합니다.
 
-서비스를 활성화하기 위해 BlueXP 디지털 전자지갑 페이지에 입력한 일련 번호를 받게 됩니다. 두 제한 중 하나에 도달하면 라이센스를 갱신해야 합니다. Backup BYOL 라이센스는 와 관련된 모든 소스 시스템에 적용됩니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-netapp-accounts.html["BlueXP 계정"^].
+서비스를 활성화하기 위해 BlueXP 디지털 전자지갑 페이지에 입력한 일련 번호를 받게 됩니다. 두 제한 중 하나에 도달하면 라이센스를 갱신해야 합니다. Backup BYOL 라이센스는 와 관련된 모든 소스 시스템에 적용됩니다 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-netapp-accounts.html["BlueXP 계정"^].
 
 link:task-licensing-cloud-backup.html#use-a-bluexp-backup-and-recovery-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"].
 

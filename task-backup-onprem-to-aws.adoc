@@ -89,10 +89,10 @@ BlueXP 커넥터는 BlueXP 기능을 위한 주요 소프트웨어입니다. ONT
 
 AWS VPC 또는 사내에 Connector가 이미 구축되어 있는 경우 모두 설정됩니다. 그렇지 않은 경우, 두 위치 중 하나에서 커넥터를 생성하여 ONTAP 데이터를 AWS S3 스토리지로 백업해야 합니다. 다른 클라우드 공급자에 배포된 Connector는 사용할 수 없습니다.
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html["AWS에 커넥터 설치"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["구내에 커넥터 설치"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-restricted-mode.html["AWS GovCloud 지역에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["AWS에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["구내에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-restricted-mode.html["AWS GovCloud 지역에 커넥터 설치"^]
 +
 BlueXP 백업 및 복구는 GovCloud 지역에서 Connector가 온프레미스에 설치되어 있지 않은 클라우드에 배포되었을 때 지원됩니다. 또한 AWS Marketplace에서 Connector를 구축해야 합니다. BlueXP SaaS 웹 사이트에서 정부 지역에 Connector를 배포할 수 없습니다.
 
@@ -104,9 +104,9 @@ BlueXP 백업 및 복구는 GovCloud 지역에서 Connector가 온프레미스�
 
 * 커넥터가 설치된 네트워크에서 다음 연결을 사용할 수 있는지 확인합니다.
 +
-** 포트 443을 통해 BlueXP 백업 및 복구 서비스 및 S3 오브젝트 스토리지에 HTTPS로 연결합니다 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-aws.html#endpoints-contacted-for-day-to-day-operations["끝점 목록을 참조하십시오"^])
+** 포트 443을 통해 BlueXP 백업 및 복구 서비스 및 S3 오브젝트 스토리지에 HTTPS로 연결합니다 (https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-aws.html#endpoints-contacted-for-day-to-day-operations["끝점 목록을 참조하십시오"^])
 ** 포트 443을 통해 ONTAP 클러스터 관리 LIF에 HTTPS로 연결합니다
-** AWS 및 AWS GovCloud 배포에는 추가 인바운드 및 아웃바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html["AWS의 커넥터 규칙"^] 를 참조하십시오.
+** AWS 및 AWS GovCloud 배포에는 추가 인바운드 및 아웃바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["AWS의 커넥터 규칙"^] 를 참조하십시오.
 
 
 * link:task-backup-onprem-to-aws.html#set-up-s3-permissions["커넥터에 S3 버킷을 관리할 수 있는 권한이 있는지 확인합니다"].
@@ -123,7 +123,7 @@ BlueXP 백업 및 복구는 GovCloud 지역에서 Connector가 온프레미스�
 
 볼륨 데이터 백업을 시작하기 전에 BlueXP에서 온-프레미스 ONTAP 클러스터를 검색해야 합니다. 클러스터를 추가하려면 클러스터 관리 IP 주소와 admin 사용자 계정의 암호를 알아야 합니다.
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["클러스터를 검색하는 방법에 대해 알아보십시오"^].
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["클러스터를 검색하는 방법에 대해 알아보십시오"^].
 
 
 
@@ -199,7 +199,7 @@ IPspace 내의 모든 인터클러스터 LIF는 오브젝트 저장소에 대한
 
 
 .단계
-. 다음 S3 권한(최신 버전)이 있는지 확인합니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html["BlueXP 정책"^])는 Connector에 권한을 제공하는 IAM 역할의 일부입니다. 그렇지 않은 경우 를 참조하십시오 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 설명서: IAM 정책 편집"].
+. 다음 S3 권한(최신 버전)이 있는지 확인합니다 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html["BlueXP 정책"^])는 Connector에 권한을 제공하는 IAM 역할의 일부입니다. 그렇지 않은 경우 를 참조하십시오 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 설명서: IAM 정책 편집"].
 +
 [source, json]
 ----
@@ -329,7 +329,7 @@ NOTE: AWS 중국 지역에서 백업을 생성할 때는 IAM 정책의 All_Resou
 
 기본 Amazon S3 암호화 키를 사용하여 온프레미스 클러스터와 S3 버킷 사이에 전달된 데이터를 암호화하려는 경우 기본 설치에 해당 암호화 유형이 사용되기 때문에 모두 설정됩니다.
 
-기본 키를 사용하는 대신 고객이 관리하는 키를 데이터 암호화에 사용하려면 BlueXP 백업 및 복구 마법사를 시작하기 전에 암호화 관리 키가 이미 설정되어 있어야 합니다. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-kms.html["자신의 키를 사용하는 방법을 확인하십시오"^].
+기본 키를 사용하는 대신 고객이 관리하는 키를 데이터 암호화에 사용하려면 BlueXP 백업 및 복구 마법사를 시작하기 전에 암호화 관리 키가 이미 설정되어 있어야 합니다. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-setting-up-kms.html["자신의 키를 사용하는 방법을 확인하십시오"^].
 
 
 
@@ -354,7 +354,7 @@ image:screenshot_backup_aws_sec_group.png["Connector와 연결된 AWS 보안 그
 +
 image:screenshot_endpoint_dns_aws_console.png["AWS 콘솔에서 VPC 엔드포인트의 DNS 이름 스크린샷"]
 
-. VPC S3 엔드포인트에서 인증서를 가져옵니다. 당신은 이렇게 합니다 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["BlueXP Connector를 호스팅하는 VM에 로그인합니다"^] 다음 명령을 실행합니다. 엔드포인트의 DNS 이름을 입력할 때 "*"를 대체하여 "bucket"을 앞에 추가합니다.
+. VPC S3 엔드포인트에서 인증서를 가져옵니다. 당신은 이렇게 합니다 https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["BlueXP Connector를 호스팅하는 VM에 로그인합니다"^] 다음 명령을 실행합니다. 엔드포인트의 DNS 이름을 입력할 때 "*"를 대체하여 "bucket"을 앞에 추가합니다.
 +
 [source, text]
 ----
@@ -405,7 +405,7 @@ image:screenshot_backup_onprem_enable.png["작업 환경을 선택한 후 사용
 액세스 키 및 비밀 키는 ONTAP 클러스터에 S3 버킷을 액세스할 수 있도록 생성한 IAM 사용자를 위한 것입니다.
 
 .. 백업이 저장될 AWS 영역입니다.
-.. 기본 Amazon S3 암호화 키를 사용할지, AWS 계정에서 고객이 직접 관리하는 키를 선택할지 상관없이 데이터 암호화를 관리하게 됩니다. (https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-kms.html["자신의 키를 사용하는 방법을 확인하십시오"])를 클릭합니다.
+.. 기본 Amazon S3 암호화 키를 사용할지, AWS 계정에서 고객이 직접 관리하는 키를 선택할지 상관없이 데이터 암호화를 관리하게 됩니다. (https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-setting-up-kms.html["자신의 키를 사용하는 방법을 확인하십시오"])를 클릭합니다.
 +
 image:screenshot_backup_provider_settings_aws.png["ONTAP 시스템에서 AWS S3로 볼륨을 백업할 때의 클라우드 공급자 세부 정보를 보여 주는 스크린샷"]
 

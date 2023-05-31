@@ -26,7 +26,7 @@ summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Azure Bl
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1개"] 구성에 대한 지원을 확인합니다
 [role="quick-margin-list"]
-* 온-프레미스 클러스터를 발견하고 BlueXP의 작업 환경에 추가했습니다. 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["ONTAP 클러스터 검색"^] 를 참조하십시오.
+* 온-프레미스 클러스터를 발견하고 BlueXP의 작업 환경에 추가했습니다. 을 참조하십시오 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["ONTAP 클러스터 검색"^] 를 참조하십시오.
 +
 ** 클러스터에서 ONTAP 9.7P5 이상이 실행 중입니다(ONTAP 9.8P13 이상 권장).
 ** 클러스터에는 SnapMirror 라이센스가 있으며, 이 라이센스는 프리미엄 번들 또는 데이터 보호 번들의 일부로 포함됩니다.
@@ -101,7 +101,7 @@ image:diagram_cloud_backup_onprem_azure_private.png["BlueXP 백업 및 복구가
 
 볼륨 데이터 백업을 시작하기 전에 BlueXP에서 온-프레미스 ONTAP 클러스터를 검색해야 합니다.
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["클러스터를 검색하는 방법에 대해 알아보십시오"^].
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["클러스터를 검색하는 방법에 대해 알아보십시오"^].
 
 ONTAP 요구 사항::
 +
@@ -148,10 +148,10 @@ BlueXP 백업 및 복구를 설정할 때 사용할 IPspace를 묻는 메시지�
 
 Azure VNET 또는 구내에 이미 Connector가 배포되어 있는 경우 모두 설정됩니다. 그렇지 않은 경우 이러한 위치 중 하나에 커넥터를 생성하여 ONTAP 데이터를 Azure Blob 저장소에 백업해야 합니다. 다른 클라우드 공급자에 배포된 Connector는 사용할 수 없습니다.
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html["Azure에 커넥터 설치"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["구내에 커넥터 설치"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-restricted-mode.html["Azure Government 지역에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Azure에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["구내에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-restricted-mode.html["Azure Government 지역에 커넥터 설치"^]
 +
 BlueXP 백업 및 복구는 Azure Government 지역에서 Connector가 온프레미스에 설치된 것이 아니라 클라우드에 배포되었을 때 지원됩니다. 또한 Azure Marketplace에서 Connector를 배포해야 합니다. BlueXP SaaS 웹 사이트에서 정부 지역에 Connector를 배포할 수 없습니다.
 
@@ -166,10 +166,10 @@ BlueXP 백업 및 복구는 Azure Government 지역에서 Connector가 온프레
 .단계
 . 커넥터가 설치된 네트워크에서 다음 연결을 사용할 수 있는지 확인합니다.
 +
-** 포트 443을 통해 BlueXP 백업 및 복구 서비스 및 Blob 개체 스토리지에 HTTPS로 연결합니다 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["끝점 목록을 참조하십시오"^])
+** 포트 443을 통해 BlueXP 백업 및 복구 서비스 및 Blob 개체 스토리지에 HTTPS로 연결합니다 (https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["끝점 목록을 참조하십시오"^])
 ** 포트 443을 통해 ONTAP 클러스터 관리 LIF에 HTTPS로 연결합니다
 ** BlueXP 백업 및 복구 검색 및 복원 기능이 작동하려면 Connector와 Azure Synapse SQL 서비스 간의 통신을 위해 포트 1433이 열려 있어야 합니다.
-** Azure 및 Azure Government 배포에는 추가 인바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-azure.html["Azure의 커넥터 규칙"^] 를 참조하십시오.
+** Azure 및 Azure Government 배포에는 추가 인바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Azure의 커넥터 규칙"^] 를 참조하십시오.
 
 
 . Azure 스토리지에 VNET 프라이빗 엔드포인트를 설정합니다. 이 기능은 ONTAP 클러스터에서 VNET로 연결되는 ExpressRoute 또는 VPN 연결이 있고, 가상 프라이빗 네트워크(* 전용* 연결)에 유지하기 위해 Connector와 Blob 스토리지 간의 통신을 원하는 경우에 필요합니다.
@@ -246,7 +246,7 @@ Azure Synapse Analytics 리소스 공급자("Microsoft.Synapse")를 구독에 �
 "Microsoft.Synapse/workspaces/privateEndpointConnectionsApproval/action"
 ----
 +
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html["정책의 전체 JSON 형식을 봅니다"^]
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["정책의 전체 JSON 형식을 봅니다"^]
 
 .. 검토 + 업데이트 * 를 클릭한 다음 * 업데이트 * 를 클릭합니다.
 

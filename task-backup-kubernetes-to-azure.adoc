@@ -69,8 +69,8 @@ image:diagram_cloud_backup_k8s_cvo_azure.png["BlueXP 백업 및 복구가 백업
 Kubernetes 클러스터 요구사항::
 +
 --
-* Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다. https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-kubernetes-discover-azure.html["Kubernetes 클러스터를 검색하는 방법을 알아보십시오"^].
-* Trident는 클러스터에 설치해야 하며 Trident 버전은 21.1 이상이어야 합니다. 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-trident.html["Trident 설치 방법"^] 또는 https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-trident.html["Trident 버전을 업그레이드하는 방법"^].
+* Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다. https://docs.netapp.com/us-en/bluexp-kubernetes/task/task-kubernetes-discover-azure.html["Kubernetes 클러스터를 검색하는 방법을 알아보십시오"^].
+* Trident는 클러스터에 설치해야 하며 Trident 버전은 21.1 이상이어야 합니다. 을 참조하십시오 https://docs.netapp.com/us-en/bluexp-kubernetes/task/task-k8s-manage-trident.html["Trident 설치 방법"^] 또는 https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-trident.html["Trident 버전을 업그레이드하는 방법"^].
 * 클러스터는 '백엔드 스토리지'를 위해 Azure에서 Cloud Volumes ONTAP를 사용해야 합니다.
 * Cloud Volumes ONTAP 시스템은 Kubernetes 클러스터와 같은 Azure 지역에 있어야 하며 ONTAP 9.7P5 이상을 실행해야 합니다(ONTAP 9.8P11 이상 권장).
 +
@@ -129,7 +129,7 @@ spec:
 
 
 --
-라이센스 요구 사항:: BlueXP 백업 및 복구 PAYGO 라이센스의 경우 BlueXP 백업 및 복구를 활성화하기 전에 Azure Marketplace를 통해 가입해야 합니다. BlueXP 백업 및 복구에 대한 청구는 이 구독을 통해 이루어집니다. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["작업 환경 마법사의 세부 정보 및 자격 증명 페이지에서 구독할 수 있습니다"^].
+라이센스 요구 사항:: BlueXP 백업 및 복구 PAYGO 라이센스의 경우 BlueXP 백업 및 복구를 활성화하기 전에 Azure Marketplace를 통해 가입해야 합니다. BlueXP 백업 및 복구에 대한 청구는 이 구독을 통해 이루어집니다. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["작업 환경 마법사의 세부 정보 및 자격 증명 페이지에서 구독할 수 있습니다"^].
 +
 --
 BlueXP 백업 및 복구 BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. link:task-licensing-cloud-backup.html#use-a-bluexp-backup-and-recovery-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"].

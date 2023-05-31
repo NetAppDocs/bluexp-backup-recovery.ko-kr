@@ -26,7 +26,7 @@ summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템의 볼륨 데�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1개"] 구성에 대한 지원을 확인합니다
 [role="quick-margin-list"]
-* 온-프레미스 클러스터를 발견하고 BlueXP의 작업 환경에 추가했습니다. 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["ONTAP 클러스터 검색"^] 를 참조하십시오.
+* 온-프레미스 클러스터를 발견하고 BlueXP의 작업 환경에 추가했습니다. 을 참조하십시오 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["ONTAP 클러스터 검색"^] 를 참조하십시오.
 +
 ** 클러스터에서 ONTAP 9.7P5 이상이 실행 중입니다.
 ** 클러스터에는 SnapMirror 라이센스가 있으며, 이 라이센스는 프리미엄 번들 또는 데이터 보호 번들의 일부로 포함됩니다.
@@ -95,7 +95,7 @@ image:diagram_cloud_backup_onprem_storagegrid.png["BlueXP 백업 및 복구가 �
 
 볼륨 데이터 백업을 시작하기 전에 BlueXP에서 온-프레미스 ONTAP 클러스터를 검색해야 합니다.
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["클러스터를 검색하는 방법에 대해 알아보십시오"^].
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["클러스터를 검색하는 방법에 대해 알아보십시오"^].
 
 ONTAP 요구 사항::
 +
@@ -176,14 +176,14 @@ StorageGRID로 백업을 설정하면 백업 마법사에서 테넌트 계정에
 
 데이터를 StorageGRID에 백업할 때 Connector를 사내에서 사용할 수 있어야 합니다. 새 커넥터를 설치하거나 현재 선택한 커넥터가 내부에 있는지 확인해야 합니다. 커넥터는 인터넷에 접속하거나 접속하지 않고 사이트에 설치할 수 있습니다.
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["인터넷에 액세스할 수 있는 Linux 호스트에 커넥터 설치"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private-mode.html["인터넷에 액세스하지 않고 Linux 호스트에 커넥터 설치"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html["커넥터 간 전환"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["인터넷에 액세스할 수 있는 Linux 호스트에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["인터넷에 액세스하지 않고 Linux 호스트에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html["커넥터 간 전환"^]
 
 
 
-NOTE: BlueXP 백업 및 복구 기능은 BlueXP 커넥터에 내장되어 있습니다. 인터넷에 연결되지 않은 사이트에 설치한 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 link:whats-new.html["BlueXP 백업 및 복구 새로운 기능"] 각 BlueXP 백업 및 복구 릴리스의 새로운 기능을 보려면 의 단계를 따르십시오 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode["Connector 소프트웨어를 업그레이드합니다"^] 새 기능을 사용하려는 경우
+NOTE: BlueXP 백업 및 복구 기능은 BlueXP 커넥터에 내장되어 있습니다. 인터넷에 연결되지 않은 사이트에 설치한 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 link:whats-new.html["BlueXP 백업 및 복구 새로운 기능"] 각 BlueXP 백업 및 복구 릴리스의 새로운 기능을 보려면 의 단계를 따르십시오 https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode["Connector 소프트웨어를 업그레이드합니다"^] 새 기능을 사용하려는 경우
 
 인터넷 연결 없이 사이트에 Connector가 설치된 경우 BlueXP 백업 및 복구 구성 데이터의 로컬 백업을 정기적으로 생성하는 것이 좋습니다. link:reference-backup-cbs-db-in-dark-site.html["어두운 사이트에서 BlueXP 백업 및 복구 데이터를 백업하는 방법을 알아보십시오"^].
 
@@ -219,7 +219,7 @@ NOTE: BlueXP 백업 및 복구 기능은 BlueXP 커넥터에 내장되어 있습
 * StorageGRID 요구 사항 *
 
 * StorageGRID는 11.4 이상을 사용해야 합니다
-* StorageGRID는 이어야 합니다 https://docs.netapp.com/us-en/cloud-manager-storagegrid/task-discover-storagegrid.html["BlueXP Canvas에서 검색되고 사용할 수 있습니다"^].
+* StorageGRID는 이어야 합니다 https://docs.netapp.com/us-en/bluexp-storagegrid/task-discover-storagegrid.html["BlueXP Canvas에서 검색되고 사용할 수 있습니다"^].
 
 
 * Amazon S3 요구사항 *

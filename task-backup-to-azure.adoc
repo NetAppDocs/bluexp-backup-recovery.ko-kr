@@ -74,7 +74,7 @@ Azure Blob 저장소에 볼륨을 백업하기 전에 다음 요구 사항을 �
 image:diagram_cloud_backup_cvo_azure.png["BlueXP 백업 및 복구가 백업 파일이 있는 소스 시스템 및 대상 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다."]
 
 지원되는 ONTAP 버전:: ONTAP 9.7P5 이상, ONTAP 9.8P13 이상 권장
-라이센스 요구 사항:: BlueXP 백업 및 복구 PAYGO 라이센스의 경우 BlueXP 백업 및 복구를 활성화하기 전에 Azure Marketplace를 통해 가입해야 합니다. BlueXP 백업 및 복구에 대한 청구는 이 구독을 통해 이루어집니다. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["작업 환경 마법사의 세부 정보 및 자격 증명 페이지에서 구독할 수 있습니다"^].
+라이센스 요구 사항:: BlueXP 백업 및 복구 PAYGO 라이센스의 경우 BlueXP 백업 및 복구를 활성화하기 전에 Azure Marketplace를 통해 가입해야 합니다. BlueXP 백업 및 복구에 대한 청구는 이 구독을 통해 이루어집니다. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["작업 환경 마법사의 세부 정보 및 자격 증명 페이지에서 구독할 수 있습니다"^].
 +
 --
 BlueXP 백업 및 복구 BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. link:task-licensing-cloud-backup.html#use-a-bluexp-backup-and-recovery-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"]. Connector 및 Cloud Volumes ONTAP 시스템이 어두운 사이트에 구축된 경우("프라이빗 모드") BYOL 라이센스를 사용해야 합니다.
@@ -82,12 +82,12 @@ BlueXP 백업 및 복구 BYOL 라이센스의 경우, 라이센스 기간 및 �
 그리고 백업이 위치할 스토리지 공간에 대한 Microsoft Azure 구독이 있어야 합니다.
 
 --
-커넥터 요구 사항:: 커넥터는 전체 또는 제한된 인터넷 액세스("표준" 또는 "제한" 모드)가 있는 Azure 지역에 설치할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-modes.html["자세한 내용은 BlueXP 배포 모드를 참조하십시오"^].
+커넥터 요구 사항:: 커넥터는 전체 또는 제한된 인터넷 액세스("표준" 또는 "제한" 모드)가 있는 Azure 지역에 설치할 수 있습니다. https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["자세한 내용은 BlueXP 배포 모드를 참조하십시오"^].
 +
 --
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html["Azure에서 표준 모드로 커넥터 배포(전체 인터넷 액세스)"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-restricted-mode.html["제한된 모드로 커넥터 설치(제한된 아웃바운드 액세스)"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Azure에서 표준 모드로 커넥터 배포(전체 인터넷 액세스)"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-restricted-mode.html["제한된 모드로 커넥터 설치(제한된 아웃바운드 액세스)"^]
 
 
 --
@@ -162,7 +162,7 @@ Connector에 권한을 확인하거나 추가합니다:: BlueXP 백업 및 복�
 "Microsoft.Synapse/workspaces/privateEndpointConnectionsApproval/action"
 ----
 +
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html["정책의 전체 JSON 형식을 봅니다"^]
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["정책의 전체 JSON 형식을 봅니다"^]
 
 ... 검토 + 업데이트 * 를 클릭한 다음 * 업데이트 * 를 클릭합니다.
 
@@ -188,7 +188,7 @@ https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-az
 
 BlueXP 백업 및 복구는 작업 환경 마법사에서 기본적으로 활성화됩니다. 옵션을 활성 상태로 유지해야 합니다.
 
-을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["Azure에서 Cloud Volumes ONTAP 실행"^] Cloud Volumes ONTAP 시스템 생성에 대한 요구 사항 및 세부 정보를 확인하십시오.
+을 참조하십시오 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["Azure에서 Cloud Volumes ONTAP 실행"^] Cloud Volumes ONTAP 시스템 생성에 대한 요구 사항 및 세부 정보를 확인하십시오.
 
 
 NOTE: 리소스 그룹의 이름을 선택하려면 * Cloud Volumes ONTAP 배포 시 * BlueXP 백업 및 복구를 비활성화합니다. 의 단계를 따릅니다 <<enabling-bluexp-backup-and-recovery-on-an-existing-system,기존 시스템에서 BlueXP 백업 및 복구 활성화>> BlueXP 백업 및 복구를 활성화하고 리소스 그룹을 선택합니다.
