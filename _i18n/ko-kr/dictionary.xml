@@ -988,7 +988,6 @@
   <block id="0291e73f7c30c841795ff165a80bdc0e" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 복원하려는 가상 머신에 해당하는 을 클릭하고 * Restore * 를 클릭합니다.</block>
   <block id="42387e1cb260fd1fb8624acde3767841" category="paragraph">백업이 수행된 위치와 동일한 위치로 VM이 복구됩니다.</block>
   <block id="4e5b953e1349e67f48dba9317bba75d3" category="list-text">VMware vSphere * 용 SnapCenter 플러그인 등록 을 클릭합니다.</block>
-  <block id="4eb88f79049bc78204f8659b66b7b655" category="list-text">사용자 이름 및 암호 필드에서 관리자 역할을 가진 사용자의 자격 증명을 지정합니다.</block>
   <block id="1d419e3005bf4974f6070bbb53e5816f" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 백업하려는 데이터 저장소에 대해 * Activate Backup * 를 클릭합니다.</block>
   <block id="925e322b8ed2bad21cf3391e5e93df0a" category="list-text">SVM에 해당하는 * 작업 환경 추가 * 를 클릭합니다.</block>
   <block id="73f07eefb51e62cc902b672233bd4977" category="list-text">ONTAP 클러스터 사용자의 자격 증명을 지정합니다.</block>
@@ -3796,4 +3795,5 @@
   <block id="8ff7f40c0012810703dc67d79b10ff7b" category="list-text"><block ref="9b634f22874d44b1e001e536ff14de06" category="inline-link-rx"></block> 이전 환경에서 사용할 수 있었습니다.</block>
   <block id="9859429ce021a771d55011bbad61663d" category="list-text"><block ref="95020d92addc538671ad8a553222768a" category="inline-link-rx"></block>.</block>
   <block id="dd356e8ea63119f95e3666d6db68f47e" category="paragraph">을 사용하여 원래 커넥터 설정에 설정했던 ONTAP 작업 환경과 연관된 StorageGRID 시스템의 세부 정보를 추가합니다<block ref="84b7c1fcfbca071b9004578261b65308" category="inline-link-rx"></block>.</block>
+  <block id="eeba430c3c4e0795629fe640359a8730" category="list-text">사용자 이름 및 암호 필드에서 관리자 역할을 가진 vCenter 사용자의 자격 증명을 지정합니다.</block>
 </blocks>

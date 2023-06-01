@@ -30,7 +30,7 @@ NOTE: BlueXP에서 VMware vSphere 호스트용 SnapCenter 플러그인을 여러
 +
 기본 8144 포트에서 실행 중인 온프레미스 SnapCenter Plug-in for VMware vSphere 호스트와 클라우드 공급자(Amazon Web Services, Microsoft Azure, Google Cloud Platform) 또는 온프레미스에서 실행 가능한 BlueXP Connector 인스턴스 간에 통신이 열려 있는지 확인해야 합니다.
 
-.. 사용자 이름 및 암호 필드에서 관리자 역할을 가진 사용자의 자격 증명을 지정합니다.
+.. 사용자 이름 및 암호 필드에서 관리자 역할을 가진 vCenter 사용자의 자격 증명을 지정합니다.
 
 
 . Register * 를 클릭합니다.
