@@ -34,6 +34,10 @@ sidebar:
       url: "/concept-backup-to-cloud.html"
     - title: 라이센스를 설정합니다
       url: "/task-licensing-cloud-backup.html"
+  - title: 데이터 보호를 모니터링합니다
+    entries:
+    - title: 데이터 보호 범위에 대한 보고
+      url: "/task-report-inventory.html"
     - title: 백업 및 복원 작업의 상태를 모니터링합니다
       url: "/task-monitor-backup-jobs.html"
   - title: ONTAP 데이터를 백업 및 복원합니다
@@ -199,7 +203,7 @@ sidebar:
     - title: Azure에서 다중 계정 액세스에 대한 백업을 구성합니다
       flavor: azure
       url: "/reference-backup-multi-account-azure.html"
-    - title: 어두운 사이트에서 BlueXP 백업 및 복구 데이터베이스를 백업합니다
+    - title: 어두운 사이트에서 BlueXP 백업 및 복구 데이터베이스를 복원합니다
       url: "/reference-backup-cbs-db-in-dark-site.html"
     - title: BlueXP 백업 및 복구를 다시 시작합니다
       url: "/reference-restart-backup.html"

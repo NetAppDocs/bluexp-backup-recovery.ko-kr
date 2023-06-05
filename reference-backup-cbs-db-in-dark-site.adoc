@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-backup-cbs-db-in-dark-site.html 
 keywords: backup database, recover database 
-summary: 인터넷에 연결되지 않은 사이트에서 BlueXP 백업 및 복구를 사용하는 경우 BlueXP 커넥터 호스트 시스템에 문제가 있을 경우 중요한 BlueXP 백업 및 복구 파일을 정기적으로 백업해야 합니다. 이렇게 하면 새 커넥터를 배포하고 중요한 BlueXP 백업 및 복구 데이터를 복원할 수 있습니다. 
+summary: '"비공개 모드"라고 하는 인터넷 액세스가 없는 사이트에서 BlueXP 백업 및 복구를 사용하는 경우, BlueXP 백업 및 복구 구성 데이터는 백업이 저장되는 StorageGRID 버킷에 백업됩니다. 향후 BlueXP 커넥터 호스트 시스템에 문제가 있을 경우 새 커넥터를 배포하고 중요한 BlueXP 백업 및 복구 데이터를 복원할 수 있습니다.' 
 ---
-= 어두운 사이트에서 BlueXP 백업 및 복구 데이터 백업 및 복원
+= 어두운 사이트에서 BlueXP 백업 및 복구 데이터를 복원합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,74 +14,20 @@ summary: 인터넷에 연결되지 않은 사이트에서 BlueXP 백업 및 복�
 
 
 [role="lead"]
-인터넷에 연결되지 않은 사이트에서 BlueXP 백업 및 복구를 사용하는 경우 BlueXP 커넥터 호스트 시스템에 문제가 있을 경우 중요한 BlueXP 백업 및 복구 파일을 정기적으로 백업해야 합니다. 이렇게 하면 새 커넥터를 배포하고 중요한 BlueXP 백업 및 복구 데이터를 복원할 수 있습니다.
+인터넷에 액세스할 수 없는 사이트에서 "비공개 모드" 또는 "다크 사이트"라고 하는 BlueXP 백업 및 복구를 사용하는 경우 백업이 저장되는 StorageGRID 버킷에 BlueXP 백업 및 복구 구성 데이터가 백업됩니다. 향후 BlueXP 커넥터 호스트 시스템에 문제가 있을 경우 새 커넥터를 배포하고 중요한 BlueXP 백업 및 복구 데이터를 복원할 수 있습니다.
 
-BlueXP Connector가 클라우드 공급업체에 배포되거나 인터넷 액세스가 가능한 자체 호스트 시스템에 구축된 SaaS 환경에서 BlueXP 백업 및 복구를 사용하는 경우 중요한 모든 BlueXP 백업 및 복구 구성 데이터가 클라우드에 백업 및 저장됩니다. 인터넷 액세스가 없는 사이트에서 "제한된 모드" 또는 "어두운 사이트"라고 하는 BlueXP 백업 및 복구를 사용하는 경우 이 BlueXP 백업 및 복구 정보는 로컬 커넥터 시스템에만 저장됩니다.
+BlueXP Connector가 클라우드 공급업체에 배포되거나 인터넷에 액세스할 수 있는 자체 호스트 시스템에 구축된 SaaS 환경에서 BlueXP 백업 및 복구를 사용하는 경우 중요한 모든 BlueXP 백업 및 복구 구성 데이터가 클라우드에서 백업 및 보호됩니다. Connector에 문제가 있는 경우 새 Connector를 생성하고 작업 환경을 추가하면 백업 세부 정보가 자동으로 복원됩니다.
 
-중요한 BlueXP 백업 및 복구 데이터를 연결된 StorageGRID 시스템에 백업하는 방법과 필요한 경우 새 커넥터에 데이터를 복원하는 방법에 대해 설명합니다.
+다음 두 가지 유형의 데이터가 백업됩니다.
 
-
-
-== 중요한 BlueXP 백업 및 복구 데이터를 백업합니다
-
-백업해야 하는 데이터 유형은 두 가지입니다.
-
-* BlueXP 백업 및 복구 데이터베이스
-* 인덱싱된 카탈로그 파일(검색 및 복원 기능에 사용됨)
+* BlueXP 백업 및 복구 데이터베이스 - 모든 볼륨, 백업 파일, 백업 정책 및 구성 정보 목록이 포함되어 있습니다.
+* 인덱싱된 카탈로그 파일 - 복원하려는 볼륨 데이터를 찾을 때 검색 및 복원 기능에 사용되는 자세한 인덱스를 포함합니다.
 
 
-
-NOTE: 항상 최신 데이터에 액세스할 수 있도록 이 BlueXP 백업 및 복구 데이터를 정기적으로 백업해야 합니다.
-
-볼륨 데이터는 BlueXP 백업 및 복구 데이터베이스 또는 인덱싱된 카탈로그 파일에 포함되지 않습니다.
+이 데이터는 1일 1회 자정에 백업되며 각 파일의 최대 7개의 복사본이 유지됩니다. 커넥터가 여러 온-프레미스 ONTAP 작업 환경을 관리하는 경우 BlueXP 백업 및 복구 파일은 먼저 활성화된 작업 환경의 버킷에 위치합니다.
 
 
-
-=== BlueXP 백업 및 복구 데이터베이스를 백업합니다
-
-BlueXP 백업 및 복구 데이터베이스에는 모든 볼륨, 백업 파일, 백업 정책 및 구성 정보 목록이 포함되어 있습니다.
-
-.단계
-. 적절한 자격 증명을 사용하여 커넥터 호스트 시스템에 로그인합니다.
-. 다음 명령을 입력하여 MySQL 컨테이너 셸을 입력합니다.
-+
-[source, cli]
-----
-docker exec -it ds_mysql_1 sh
-----
-. 컨테이너 셸에서 "env"를 배포합니다.
-. MySQL DB 패스워드가 필요합니다. 따라서 "mysql_root_password" 키의 값을 복사합니다.
-. 다음 명령을 입력하여 BlueXP 백업 및 복구 MySQL DB를 백업합니다.
-+
-[source, cli]
-----
-mysqldump --user root --password -p cloud_backup --result-file=mysql.dump.cloud_backup.sql
-----
-. 다음 명령을 입력하여 MySQL Docker 컨테이너에서 MySQL DB 백업을 복사합니다.
-+
-[source, cli]
-----
-docker cp ds_mysql_1:/mysql.dump.cloud_backup.sql .
-----
-. 백업을 네트워크의 안전한 위치에 복사합니다. 해당 위치에 대한 ONTAP 볼륨 백업을 생성하는 경우 로컬 StorageGRID 시스템을 사용할 수 있습니다.
-
-
-
-
-=== 인덱싱된 카탈로그 파일을 백업합니다
-
-인덱싱된 카탈로그는 검색 및 복원 기능에 사용됩니다. 모든 볼륨과 모든 백업 파일에 대한 정보가 포함되어 있어 복원하려는 볼륨 데이터를 찾을 때 검색을 매우 빠르고 효율적으로 수행할 수 있습니다.
-
-. Connector 호스트 시스템에서 디렉토리를 "/opt/application/netapp/CBS"로 변경합니다.
-. Index Catalog 폴더를 찾습니다. 문자열 * catalog * 로 시작합니다.
-. 다음 명령을 입력하여 "catalog<_xxxxxx_>" 폴더를 압축합니다.
-+
-[source, cli]
-----
-zip -r catalogxxxxxx.zip catalogxxxxxx
-----
-. 압축된 백업을 네트워크의 안전한 위치에 복사합니다.
-
+TIP: 볼륨 데이터는 BlueXP 백업 및 복구 데이터베이스 또는 인덱싱된 카탈로그 파일에 포함되지 않습니다.
 
 
 
@@ -99,6 +45,19 @@ BlueXP 백업 및 복구 시스템을 작동 상태로 되돌리기 위해 수�
 
 시스템이 정상적으로 작동하는지 확인한 후에는 새 백업 파일을 생성하는 것이 좋습니다.
 
+.필요한 것
+백업 파일이 저장되는 StorageGRID 버킷에서 최신 데이터베이스 및 인덱스 백업에 액세스해야 합니다.
+
+* BlueXP 백업 및 복구 MySQL 데이터베이스 파일
++
+이 파일은 버킷의 다음 위치에 있습니다 `netapp-backup-<GUID>/mysql_backup/`, 그리고 이름은 이다 `CBS_DB_Backup_<day>_<month>_<year>.sql`.
+
+* 인덱싱된 카탈로그 백업 zip 파일
++
+이 파일은 버킷의 다음 위치에 있습니다 `netapp-backup-<GUID>/catalog_backup/`, 그리고 이름은 이다 `Indexed_Catalog_DB_Backup_<db_name>_<day>_<month>_<year>.zip`.
+
+
+
 
 
 === 새로운 온프레미스 Linux 호스트에 새 커넥터를 설치합니다
@@ -113,12 +72,12 @@ BlueXP 백업 및 복구 시스템을 작동 상태로 되돌리기 위해 수�
 
 === BlueXP 백업 및 복구 데이터베이스를 복원합니다
 
-. MySQL 백업을 보안 위치에서 새 커넥터 호스트로 복사합니다.
+. 백업 위치에서 새 커넥터 호스트로 MySQL 백업을 복사합니다. 아래의 예제 파일 이름 "CBS_DB_Backup_23_05_2023.sql"을 사용합니다.
 . 다음 명령을 사용하여 MySQL Docker 컨테이너에 백업을 복사합니다.
 +
 [source, cli]
 ----
-docker cp mysql.dump.cloud_backup.sql ds_mysql_1:/.
+docker cp CBS_DB_Backup_23_05_2023.sql ds_mysql_1:/.
 ----
 . 다음 명령을 사용하여 MySQL 컨테이너 셸을 입력합니다.
 +
@@ -132,13 +91,13 @@ docker exec -it ds_mysql_1 sh
 +
 [source, cli]
 ----
-mysql -u root -p cloud_backup < mysql.dump.cloud_backup.sql
+mysql -u root -p cloud_backup < CBS_DB_Backup_23_05_2023.sql
 ----
 . 다음 SQL 명령을 사용하여 BlueXP 백업 및 복구 MySQL DB가 올바르게 복원되었는지 확인합니다.
 +
 [source, cli]
 ----
-# mysql -u root -p cloud_backup
+mysql -u root -p cloud_backup
 ----
 +
 암호를 입력합니다.
@@ -158,14 +117,14 @@ mysql> select * from volume;
 
 === 인덱싱된 카탈로그 파일을 복원합니다
 
-. 보안 위치에서 "/opt/application/netapp/CBS" 폴더의 새 커넥터 호스트로 인덱스 카탈로그 백업 zip 파일을 복사합니다.
-. 다음 명령을 사용하여 "catalogxxxxxx.zip" 파일의 압축을 풉니다.
+. 인덱싱된 카탈로그 백업 zip 파일을 복사합니다. 예제 파일 이름 "Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip"을 백업 위치에서 "/opt/application/NetApp/CBS" 폴더의 새 커넥터 호스트로 사용합니다.
+. 다음 명령을 사용하여 "Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip" 파일의 압축을 풉니다.
 +
 [source, cli]
 ----
-unzip catalogxxxxxx.zip
+unzip Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip -d catalogdb1
 ----
-. ls * 명령을 실행하여 하위 폴더 "changes" 및 "snapshots" 아래에 "catalogxxxxxx" 폴더가 생성되었는지 확인하십시오.
+. ls * 명령을 실행하여 "catalogdb1" 폴더가 하위 폴더 아래에 "changes" 및 "snapshots"와 함께 생성되었는지 확인하십시오.
 
 
 

@@ -922,16 +922,7 @@
   <block id="a9805696126ef48bc68224dc06136bbd" category="list-text">백업 설정 페이지에서 _ 을(를) 클릭합니다 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 백업을 비활성화하려는 작업 환경에서 * 백업 비활성화 * 를 선택합니다.</block>
   <block id="a1eb634b81be113bee0e21e6a20c118c" category="inline-image-macro">백업할 영구 볼륨을 선택하는 스크린샷</block>
   <block id="e89d53cec577b746e47f09500583b69a" category="paragraph"><block ref="e89d53cec577b746e47f09500583b69a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="49644953fd4e9612a9842d17bef5e79b" category="section-title">2022년 5월 2일</block>
-  <block id="403f4772d715b69d553d3568ca523be0" category="section-title">검색 및 복원은 이제 Google Cloud Storage의 백업 파일에서 지원됩니다</block>
   <block id="a2824b49f1c7526bf0e925b86c7b293c" category="inline-link">검색 및 amp;Restore를 사용하여 볼륨 및 파일을 복원하는 방법을 확인하십시오</block>
-  <block id="1dc3a9d2d46d5247757ad692a1dda8d4" category="section-title">Kubernetes 클러스터에서 새로 생성된 볼륨에 자동으로 적용할 백업 정책을 구성합니다</block>
-  <block id="fd875d3cd25e36f42ac27fb4f3449a8e" category="section-title">이제 작업 환경에서 Cloud Backup을 활성화하려면 라이센스가 필요합니다</block>
-  <block id="75c0e3b9776c1472c507114bf7a7a1cf" category="paragraph">Cloud Backup에서 라이센스를 구축하는 방법은 다음과 같이 몇 가지 변경되었습니다.</block>
-  <block id="e84f7761b10b99ddca7152e4bb801dd6" category="list-text">Cloud Backup을 활성화하려면 먼저 클라우드 공급자로부터 PAYGO Marketplace 구독에 가입하거나 NetApp에서 BYOL 라이센스를 구입해야 합니다.</block>
-  <block id="6902b4bfe7e77a50b544384d4b87d579" category="list-text">30일 무료 평가판은 클라우드 공급자가 PAYGO 구독을 사용하는 경우에만 사용할 수 있으며 BYOL 라이센스를 사용하는 경우에는 사용할 수 없습니다.</block>
-  <block id="013bf9b0d5295922582e97a69409b714" category="list-text">무료 평가판은 마켓플레이스 가입이 시작되는 날부터 시작됩니다. 예를 들어, Cloud Volumes ONTAP 시스템에 대해 30일 동안 Marketplace 구독을 사용한 후 무료 평가판을 활성화하면 클라우드 백업 평가판을 사용할 수 없습니다.</block>
-  <block id="caf9c5028f987d64131bfc8e9f4bd0ed" category="inline-link">사용 가능한 라이센스 모델에 대해 자세히 알아보십시오</block>
   <block id="5ef05167488611c5bd4ff0f410595ce4" category="section-title">30일 무료 평가판</block>
   <block id="9fddc1f9c7fd56a9a852b0bd4cd2e8e7" category="paragraph">사용한 만큼만 지불하는 용량제 방식을 사용하면 클라우드 공급업체에 오브젝트 스토리지 비용을 지불하고, NetApp 백업 라이센스 비용을 단일 정액제로 지불할 수 있습니다. 무료 평가판을 가지고 있거나 BYOL(Bring Your Own License)을 사용하는 경우에도 가입해야 합니다.</block>
   <block id="1c13d659a0c62fc2dcf4332ea8957263" category="paragraph">BYOL 라이센스가 만료되면 다음 두 가지 상황이 발생할 수 있습니다.</block>
@@ -970,7 +961,6 @@
   <block id="55082684c888abf218793c0bd2f3b5e4" category="paragraph">표준 공용 인터넷 연결을 사용하려는 경우 모든 권한은 Connector에 의해 설정되며 다른 작업은 필요하지 않습니다. 이 연결 유형은 에 나와 있습니다 <block ref="b1224f75874af139b1e7a51a1da970e9" category="inline-link-macro-rx"></block>.</block>
   <block id="7cb65d7424b08922f4902800ae6b79d0" category="inline-link-macro">두 번째 다이어그램</block>
   <block id="ca301c03d4c5ce91946df8b15f3dbe5f" category="paragraph">사내 데이터 센터에서 VPC로 인터넷을 통해 보다 안전하게 연결하려면 백업 활성화 마법사에서 AWS PrivateLink 연결을 선택하는 옵션이 있습니다. VPN 또는 AWS Direct Connect를 사용하여 프라이빗 IP 주소를 사용하는 VPC 엔드포인트 인터페이스를 통해 사내 시스템을 연결하려는 경우 필요합니다. 이 연결 유형은 에 나와 있습니다 <block ref="0f7afb920fb200721cfd6111e33f99d4" category="inline-link-macro-rx"></block>.</block>
-  <block id="35902f649443d8dd6c5f04595fff3035" category="paragraph">Cloud Backup을 활성화한 후 Kubernetes 클러스터에 새로운 영구 볼륨을 추가한 경우에는 이전에 해당 볼륨에 대한 백업을 구성해야 했습니다. 이제 새로 생성된 볼륨에 자동으로 적용되는 정책을 선택할 수 있습니다. 이 옵션은 새 Kubernetes 클러스터에 대한 Cloud Backup을 활성화할 때 설정 마법사에서 사용할 수 있습니다.</block>
   <block id="afd87a86d8a5973d91f3fcc4e85c719f" category="section-title">Cloud Backup for Virtual Machines 1.1.0이 현재 GA로 제공됩니다</block>
   <block id="db46ba2f888d41e44da25c2d8c1f406d" category="summary">데이터 저장소와 가상 머신을 보고 VMware vSphere 인스턴스용 SnapCenter 플러그인을 편집할 수 있습니다.</block>
   <block id="78166ce4ccceeedfbf6aeb8682851072" category="paragraph">* 이 작업에 대한 정보 *</block>
@@ -1091,7 +1081,6 @@
   <block id="e25a9f6fb169550c2eb662453971516f" category="paragraph"><block ref="e25a9f6fb169550c2eb662453971516f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0868f24313a597293d06e71f7f63fd1e" category="list-text">커넥터는 인터넷에 접속하거나 접속하지 않고 사이트에 설치할 수 있습니다.</block>
   <block id="360446e3fb6e2087ba1eda4d6e9eafde" category="list-text">노드의 인터클러스터 LIF는 오브젝트 저장소에 액세스할 수 있습니다(Connector가 "어두운" 사이트에 설치된 경우 필요하지 않음).</block>
-  <block id="6dca065caf89927398e08355b9d7718e" category="paragraph">데이터를 StorageGRID에 백업할 때 Connector를 사내에서 사용할 수 있어야 합니다. 새 커넥터를 설치하거나 현재 선택한 커넥터가 내부에 있는지 확인해야 합니다. 커넥터는 인터넷에 접속하거나 접속하지 않고 사이트에 설치할 수 있습니다.</block>
   <block id="f6428d68ab8312cad4e05d9222dbabc5" category="inline-link">인터넷에 액세스하지 않고 Linux 호스트에 커넥터 설치</block>
   <block id="f4cec0313eb4678996dc68cfe81c6f4f" category="inline-link">Connector 소프트웨어를 업그레이드합니다</block>
   <block id="7213734d8950b4641631fa35737ef55d" category="list-text">백업할 볼륨이 상주하는 ONTAP 클러스터의 IPspace 이 IPspace용 인터클러스터 LIF는 아웃바운드 인터넷 액세스를 가져야 합니다( 커넥터가 "어두운" 사이트에 설치된 경우 필요하지 않음).</block>
@@ -1503,9 +1492,7 @@
   <block id="392d70ca39f31f10bd637936769788df" category="inline-link">StorageGRID</block>
   <block id="caa02466e2a6c1c2c13139fe55b7aaab" category="list-text">정품 인증 마법사에서 기본 Microsoft 관리 암호화 키를 사용하는 대신 고객이 관리하는 키를 사용하여 데이터를 암호화할 수 있습니다. 이 경우 Azure 가입, 키 저장소 이름 및 키가 필요합니다.<block ref="50f2f49feb0afd07f1969b5faf2ca775" category="inline-link-rx"></block>.</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">위의 자체 지원 옵션 외에도 NetApp 지원 전문가와 협력하여 지원을 활성화한 이후의 모든 문제를 해결할 수 있습니다.</block>
-  <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">지원 등록 방법을 알아보십시오</block>
   <block id="383133cb6f7207b1c65c3ace94aa5e95" category="list-text">전화로 통화하려면 * 전화 * 를 클릭하십시오. 전화를 걸 수 있는 전화 번호가 나열된 netapp.com 페이지로 연결됩니다.</block>
-  <block id="b53e0a259f4a0c8e7da80d6c94e26c84" category="list-text">* NetApp Support 사이트 계정 *: 지원 케이스를 여는 사람과 관련된 해당 NSS 계정을 선택합니다. 이 담당자는 아래에 제공된 추가 이메일 외에 NetApp에 연락할 수 있는 기본 담당자가 됩니다.</block>
   <block id="2e50c5f85523f0aba9ff2db10f18279c" category="list-text">* 작업 환경 *: 스토리지에 적용 가능한 경우 * Cloud Volumes ONTAP * 또는 * On-Premise * 를 선택한 다음 관련 작업 환경을 선택합니다.</block>
   <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">* 케이스 우선 순위 *: 케이스의 우선 순위를 선택합니다. 우선 순위는 낮음, 중간, 높음 또는 긴급입니다.</block>
   <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">이러한 우선 순위에 대한 자세한 내용을 보려면 필드 이름 옆에 있는 정보 아이콘 위로 마우스를 가져갑니다.</block>
@@ -1617,21 +1604,10 @@
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">지원 등록 개요</block>
   <block id="192054ad7601240a3e8be54cc5cc548e" category="paragraph">지원 권한을 활성화하려면 두 가지 형태의 등록이 있습니다.</block>
   <block id="55ff64467cd508971910145ab5d6b3b8" category="list-text">클라우드 공급자 마켓플레이스의 구독과 연결된 Cloud Volumes ONTAP 일련 번호 등록(20자리 909201xxxxxxxx 일련 번호)</block>
-  <block id="98bc603dcb6d5a57d540b13b541fa41a" category="paragraph">등록 방법은 신규 고객인지, 기존 고객인지 또는 파트너인지에 따라 다릅니다.</block>
-  <block id="e5646198d2e01aab2cec9ef946f9c53a" category="list-text">기존 고객 또는 파트너</block>
-  <block id="4e6af37fb81d50483d832d4de6e2b26a" category="inline-xref">NSS 계정을 추가하는 방법에 대해 알아봅니다</block>
-  <block id="1c91f3adc957364cb01d33e100ee1ea3" category="list-text">NetApp이 처음입니다</block>
-  <block id="00fc9d0c515c69ea2c368521453d982e" category="inline-xref">NetApp에 등록하는 방법을 알아보십시오</block>
-  <block id="97454ce87333f7ebd50ee38b8126fb39" category="paragraph"><block ref="37544f11913357c4e8c8a4ec607ae247" category="inline-xref-macro-rx"></block>.</block>
   <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">다음 사항에 유의하십시오.</block>
   <block id="1dcb63fd55c4d22e87cb32275b8cc808" category="inline-image-macro">세 개의 가로 점으로 구성된 아이콘</block>
-  <block id="ad56c7289bc13dcf4f78c285f7f03878" category="section-title">NetApp에 등록</block>
-  <block id="f1bac79c2c71fbd93863b9fbd718094c" category="paragraph">NetApp 지원에 등록하는 방법은 NetApp Support 사이트(NSS) 계정이 이미 있는지 여부에 따라 다릅니다.</block>
   <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">NSS 계정이 있는 기존 고객</block>
-  <block id="819aff12752b7e6a1828e755c7664de7" category="list-text">Resources * 페이지에서 * Register for Support * 를 클릭합니다.</block>
-  <block id="e8a3d9970b8fc1d92caaf33d9e116bd4" category="inline-image-macro">계정 일련 번호 및 지원 등록 옵션을 보여 주는 스크린샷</block>
   <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">기존 고객이지만 NSS 계정은 없습니다</block>
-  <block id="cc1d3c161bcf25e6445c2fc771647849" category="paragraph">기존 사용권 및 제품 번호를 가지고 있지만 _NO_NSS 계정을 가지고 있는 기존 NetApp 고객은 NSS 계정을 만들어야 합니다.</block>
   <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">NetApp Support 사이트 사용자 등록 양식</block>
   <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">를 완료하여 NetApp Support 사이트 계정을 생성합니다<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
   <block id="d61c9f72493817776f392db42ac446a2" category="list-text">적절한 사용자 레벨(일반적으로 * NetApp 고객/최종 사용자 *)을 선택해야 합니다.</block>
@@ -1656,7 +1632,6 @@
   <block id="105cf1dd74d7a9079245d031f91df8b0" category="paragraph">이 기능은 소스 볼륨에 대한 보호 기능을 제공하지 않으며 해당 소스 볼륨의 백업에만 사용됩니다. NetApp 사용<block ref="2e57621b97dadc1cef3dd80d75e83676" category="inline-link-rx"></block>또는 일부 를 누릅니다<block ref="086d55e347fe71de47923b356a73187b" category="inline-link-rx"></block> 소스 볼륨을 보호합니다.</block>
   <block id="f88d31c8fba76a471a02f0b65a9ac963" category="list-text">12개의 보존 기간을 사용하여 월별 백업 스케줄을 생성하는 경우 각 백업은 삭제하기 전에 12개월(14일 추가) 동안 잠깁니다.</block>
   <block id="bf7c437191fdcde55e7d7e2fc049c230" category="list-text">24개의 보존 기간을 사용하여 시간별 백업 일정을 생성하는 경우 백업이 24시간 동안 잠겨 있다고 생각할 수 있습니다. 그러나 이 기간이 최소 30일 미만이므로 각 백업은 44일(30일 + 14일 버퍼) 동안 잠기고 보존됩니다.</block>
-  <block id="e81b2d9a99c319820fe2a1d0b0d7f2bf" category="paragraph">랜섬웨어 차단 기능은 백업 파일을 검사하여 랜섬웨어 공격의 증거를 찾습니다. 랜섬웨어 공격 탐지 작업은 체크섬 비교를 통해 수행됩니다. 잠재적인 랜섬웨어가 백업 파일에서 이전 백업 파일과 비교하여 식별되면, 최신 백업 파일이 랜섬웨어 공격의 징후를 보이지 않는 최신 백업 파일로 대체됩니다. (랜섬웨어 공격이 발생한 것으로 확인된 파일은 교체후 1일 후에 삭제됩니다.)</block>
   <block id="c545a26c4ed6190e3a8c71826161a528" category="paragraph">클라우드 스토리지에 처음 기록될 때는 백업 파일에 대해 검사가 수행되지 않지만 * next * 백업 파일이 기록될 때는 검사가 수행됩니다. 예를 들어 화요일의 주별 백업 스케줄이 설정되어 있는 경우 14일 화요일에 백업이 생성됩니다. 그리고 화요일에 또 다른 백업이 생성됩니다. 랜섬웨어 스캔은 현재 14번째 백업 파일에서 실행됩니다.</block>
   <block id="83933361b1e2abf7e7f406666cc9c104" category="list-text">AWS의 경우:</block>
   <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">고객 수준 계정이 있는 경우 하나 이상의 NSS 계정을 추가할 수 있습니다.</block>
@@ -1690,33 +1665,22 @@
   <block id="5f6926750c6dd8a22b3997020614fae5" category="paragraph">BlueXP UI에서 클라우드에 있는 백업을 볼 수 있습니다.</block>
   <block id="f52be7ce52e18a98dacf4e0ce5a03e37" category="list-text">백업 및 복구 * &gt; * 작업 모니터링 * 을 클릭합니다.</block>
   <block id="243263104c829e77835d632f591230d5" category="summary">NetApp 기술 지원 팀과 지원 케이스를 생성하기 전에 NetApp Support 사이트 계정을 BlueXP에 추가한 다음 지원 등록을 해야 합니다.</block>
-  <block id="8bf30fadf784022b073adb9233678a71" category="paragraph">NetApp 기술 지원 팀의 지원 케이스를 생성하기 전에 NetApp Support 사이트(NSS) 계정을 BlueXP에 추가한 다음 지원 등록을 해야 합니다.</block>
   <block id="2322ca552c2b0ebe090c8485519246a8" category="list-text">BlueXP 계정 ID 지원 가입 등록(BlueXP의 지원 리소스 페이지에 있는 20자리 960xxxxxxxxx 일련 번호)</block>
   <block id="23fdcbefa6d9cd877be7ceb7a18bb936" category="paragraph">이는 BlueXP 내의 모든 서비스에 대한 단일 지원 가입 ID의 역할을 합니다. 각 BlueXP 계정 수준 지원 구독을 등록해야 합니다.</block>
   <block id="67dbdeb11e22ea7def810bade59ce818" category="paragraph">이러한 일련 번호는 일반적으로 _PAYGO 일련 번호_라고 하며 Cloud Volumes ONTAP 배포 시 BlueXP에서 생성됩니다.</block>
-  <block id="9d4125dc88bb9db6eb4be939905761ce" category="paragraph">두 가지 유형의 일련 번호를 등록하면 지원 티켓 열기와 자동 케이스 생성 등의 기능을 사용할 수 있습니다.</block>
-  <block id="76928f97884b4332b83c5be9b99d93d3" category="paragraph">기존 NetApp 고객 또는 파트너는 NSS(NetApp Support 사이트) SSO 계정을 사용하여 위에서 이러한 등록을 수행할 수 있습니다. 지원 대시보드에서 BlueXP는 NSS 계정을 추가할 수 있는 * NSS 관리 * 페이지를 제공합니다. NSS 계정을 추가하면 BlueXP에서 이러한 일련 번호를 자동으로 등록합니다.</block>
-  <block id="8d80298f51b7ff2da78e26e60195c7a3" category="paragraph"><block ref="cbec7c1a4a2acff5e84457dd449ac01d" category="inline-xref-macro-rx"></block>.</block>
-  <block id="679f2cae4657f177cc89458d49c97e5f" category="paragraph">NetApp이 처음인 파트너는 NetApp의 지원 등록 사이트에서 BlueXP 계정 ID 일련 번호를 한 번 등록해야 합니다. 이 등록을 완료하고 새 NSS 계정을 만들면 BlueXP에서 이 계정을 사용하여 앞으로 자동 등록할 수 있습니다.</block>
-  <block id="a92ec860f505b318fd0f0eba6165d607" category="section-title">BlueXP에 NSS 계정을 추가합니다</block>
   <block id="1afe19576f77bb0073c93359ed2cbb18" category="list-text">BlueXP 콘솔의 오른쪽 상단에서 도움말 아이콘을 클릭하고 * 지원 * 을 선택합니다.</block>
   <block id="cbc6cc3bb022583403171b447b2a962c" category="paragraph">이러한 작업을 통해 BlueXP는 NSS 계정을 사용하여 라이선스 다운로드, 소프트웨어 업그레이드 확인 및 향후 지원 등록과 같은 작업을 수행할 수 있습니다.</block>
   <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">NSS 계정을 가지고 있는 NetApp 고객은 BlueXP를 통해 지원을 받기 위해 등록하기만 하면 됩니다.</block>
-  <block id="25b94e7b58140f12be91fa8fd935fa59" category="list-text">아직 추가하지 않은 경우 NSS 계정을 BlueXP에 추가합니다.</block>
   <block id="5226d4ec1f4f81b740cbbd27635b441f" category="list-text">위에 사용된 BlueXP 계정 일련 번호(960xxxx)를 일련 번호 필드에 복사해야 합니다. 이렇게 하면 계정 처리 속도가 빨라집니다.</block>
-  <block id="1c0e45ef07d0dbc13ca2394d5e285fd7" category="paragraph">NetApp Support 사이트 계정이 있으면 BlueXP로 이동하여 나중에 등록하기 위해 이 NSS 계정을 추가할 수 있습니다.</block>
   <block id="c9df4195a305212ffd7b56d24f67129d" category="summary">NetApp은 다양한 방법으로 BlueXP를 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다. 지원 등록에는 웹 티켓팅을 통한 원격 기술 지원이 포함됩니다.</block>
   <block id="7c5661ab6b39ee901cea00a6e7020a49" category="paragraph">NetApp은 다양한 방법으로 BlueXP 및 클라우드 서비스를 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다. 지원 등록에는 웹 티켓팅을 통한 원격 기술 지원이 포함됩니다.</block>
   <block id="9a3db1abe5491d0eb9bb5d125981356c" category="paragraph">문제를 해결하는 데 도움이 되는 문서를 찾으려면 BlueXP 기술 자료를 검색하십시오.</block>
   <block id="00c5fef3bb9d593ae96bf5d2ee60354a" category="paragraph">BlueXP 커뮤니티에 가입하여 진행 중인 토론을 팔로우하거나 새 토론을 만드십시오.</block>
   <block id="a4a6c2ea0078252eac2d74ef3e6c917c" category="paragraph">현재 보고 있는 BlueXP 문서입니다.</block>
   <block id="6702efec14563f45f1ee2f8c613b8ad8" category="paragraph">저희는 귀하의 의견을 소중하게 생각합니다. BlueXP 개선에 도움이 되는 피드백을 제출하십시오.</block>
-  <block id="1012a287397c66025d7748edf06a36e2" category="paragraph">케이스 생성* 기능을 사용하려면 먼저 BlueXP 계정 ID 일련 번호( 960xxxx) NetApp 포함 <block ref="3349e4b3d05f646f2f1421bee7c2ad26" category="inline-link-macro-rx"></block>.</block>
   <block id="6254a4afeeb76765a127fe74d31c1b3d" category="list-text">BlueXP에서 * 도움말 &gt; 지원 * 을 클릭합니다.</block>
-  <block id="d950fb930d7f7e6bfdda1b91b4639a02" category="paragraph">NSS 계정이 표시되지 않으면 BlueXP의 지원 섹션에서 * NSS 관리 * 탭으로 이동하여 추가할 수 있습니다.</block>
   <block id="d63bf50426f4c712554faec55b30c548" category="list-text">* 서비스 *: 문제와 관련된 서비스를 선택합니다. 예를 들어, 서비스 내의 워크플로우 또는 기능과 관련된 기술 지원 문제에 해당하는 BlueXP를 예로 들 수 있습니다.</block>
   <block id="aa996e20900197b0ea41485ada083d8c" category="paragraph">작업 환경 목록은 서비스의 상단 배너에서 선택한 BlueXP 계정, 작업 영역 및 커넥터의 범위 내에 있습니다.</block>
-  <block id="fa6b601b2fb4e3e5c7b466ecb8bd70ac" category="paragraph">이 오류는 NSS 계정과 연결된 레코드 회사가 BlueXP 계정 일련 번호( 960xxxx) 또는 작동 환경 일련 번호 케이스 생성 * 양식 상단의 NSS 계정 목록을 확인하여 올바른 일치 항목을 찾거나 다음 옵션 중 하나를 사용하여 지원을 요청할 수 있습니다.</block>
   <block id="d4f4c5ccc817cf84f5825246d829cabe" category="list-text">Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다.</block>
   <block id="7dbea888521fb9c4360764add4f59e05" category="list-text">BlueXP에 권한을 제공하는 사용자 역할에 특정 Amazon Athena, AWS Glue 및 AWS S3 권한을 추가해야 합니다. <block ref="172464504974bed7b77dd155db5fb92b" category="inline-link-macro-rx"></block>.</block>
   <block id="97b5e4c408de2e312a0b1fc4e2535f1f" category="list-text">BlueXP에 권한을 제공하는 사용자 역할에 특정 Azure Synapse Workspace 및 Data Lake Storage 계정 권한을 추가해야 합니다. <block ref="3f613adb79f1db61c1db3e20329cd95a" category="inline-link-macro-rx"></block>.</block>
@@ -1919,7 +1883,6 @@
   <block id="2cc8b747af3c0ee9d2485056484fa546" category="paragraph">다음 다이어그램에서는 * public connection * 메서드와 구성 요소 간에 준비해야 하는 연결을 보여 줍니다. Connector는 Google Cloud Platform VPC에 구축해야 합니다.</block>
   <block id="a1a1b18c2d1bda9a72e2c8ae3e17a916" category="paragraph">다음 다이어그램에서는 * private connection * 메서드와 구성 요소 간에 준비해야 하는 연결을 보여 줍니다. Connector는 Google Cloud Platform VPC에 구축해야 합니다.</block>
   <block id="8f6062f059e26f94975a36f6a5efcc4b" category="paragraph">이전 릴리즈에서는 Connector가 사내에 구축될 때 퍼블릭 클라우드에 백업 파일을 생성하기 위한 지원이 추가되었습니다. 이 릴리즈에서는 검색 및 복원을 사용하여 Connector가 사내에 구축된 Amazon S3 또는 Azure Blob에서 백업을 복원할 수 있도록 지원이 계속 제공됩니다. 또한 검색 및 복원 기능은 StorageGRID 시스템에서 온-프레미스 ONTAP 시스템으로 지금 백업을 복원할 수 있도록 지원합니다.</block>
-  <block id="f2575f6d19024f7288cf78d7dc5b3db9" category="paragraph">지원 대시보드를 통해 NetApp Support 사이트 계정을 추가하고 관리하여 BlueXP에서 사용할 수 있습니다.</block>
   <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">파트너 또는 리셀러 계정이 있는 경우 NSS 계정을 하나 이상 추가할 수 있지만 고객 수준 계정과 함께 추가할 수는 없습니다.</block>
   <block id="2974170a8b1b5b4a2ac69aacd4c1c9c3" category="list-text">지원 등록 페이지에서 계정 ID 일련 번호를 찾습니다.</block>
   <block id="50a1dc01b7312307c34a888071586955" category="list-text">위의 2단계에서 계정의 일련 번호를 복사하고 보안 검색을 완료한 다음 NetApp의 글로벌 데이터 개인 정보 보호 정책을 읽는지 확인합니다.</block>
@@ -1950,17 +1913,8 @@
   <block id="31a8f4d5116c3f4c70cbc4447d1ff546" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 기본 백업 정책을 정의합니다</block>
   <block id="de705e296c3c30f9201b0b19e9c260a3" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 백업할 볼륨을 선택합니다</block>
   <block id="f436bcae123c67a5a4225fe3ca69b3a3" category="paragraph">서비스 계정이 이미 구성되어 있어야 합니다. Cloud Volumes ONTAP 시스템을 생성할 때 서비스 계정을 선택하지 않은 경우, 시스템을 끄고 GCP 콘솔에서 Cloud Volumes ONTAP에 서비스 계정을 추가해야 합니다.</block>
-  <block id="90a2b3614b10514530462c20f49310e9" category="paragraph">백업해야 하는 데이터 유형은 두 가지입니다.</block>
-  <block id="42f4d5b158a93e293d624d39bf3d9c3e" category="list-text">인덱싱된 카탈로그 파일(검색 및 복원 기능에 사용됨)</block>
-  <block id="8c1b248edb88a6de85b408ee92f9d0c3" category="list-text">적절한 자격 증명을 사용하여 커넥터 호스트 시스템에 로그인합니다.</block>
-  <block id="efd75f5230ec23281732b80a345896d9" category="list-text">다음 명령을 입력하여 MySQL 컨테이너 셸을 입력합니다.</block>
   <block id="ea88528cf92a2583181519ef77cd0928" category="list-text">컨테이너 셸에서 "env"를 배포합니다.</block>
   <block id="fb4d2049eb8a30a41f47794ab189550a" category="list-text">MySQL DB 패스워드가 필요합니다. 따라서 "mysql_root_password" 키의 값을 복사합니다.</block>
-  <block id="7db6ebf161f7a9da5769ee912be2da41" category="list-text">다음 명령을 입력하여 MySQL Docker 컨테이너에서 MySQL DB 백업을 복사합니다.</block>
-  <block id="155dea4952585272f1c0844ef81cfd9a" category="section-title">인덱싱된 카탈로그 파일을 백업합니다</block>
-  <block id="7cb88c443fc924903c835b571b479a4e" category="list-text">Index Catalog 폴더를 찾습니다. 문자열 * catalog * 로 시작합니다.</block>
-  <block id="8569fa5b25edd3388fba8c4d5fbbdf9d" category="list-text">다음 명령을 입력하여 "catalog&lt;_xxxxxx_&gt;" 폴더를 압축합니다.</block>
-  <block id="a343bcd32b68b96334fcf073958cc3da" category="list-text">압축된 백업을 네트워크의 안전한 위치에 복사합니다.</block>
   <block id="f0f8593cf8d423b69e3ba1407f6f5b05" category="inline-link">새로운 온프레미스 Linux 호스트에 새 커넥터를 설치합니다</block>
   <block id="bac8f03e2f29846dbab5b2b784213272" category="list-text">인덱싱된 카탈로그 파일을 복원합니다</block>
   <block id="f19661624edbf73361ae75955e672733" category="paragraph">시스템이 정상적으로 작동하는지 확인한 후에는 새 백업 파일을 생성하는 것이 좋습니다.</block>
@@ -1968,8 +1922,6 @@
   <block id="bb319ca7a8d748d2ce5adf7548a5803c" category="list-text">다음 명령을 사용하여 MySQL 컨테이너 셸을 입력합니다.</block>
   <block id="1a411806f1f54597b7259137d2e753db" category="paragraph">암호를 입력합니다.</block>
   <block id="3ec8f556a760c1ea438f0c8012517d09" category="paragraph">표시된 볼륨이 원래 환경에 있던 볼륨과 동일한지 확인합니다.</block>
-  <block id="4137b6be705d5f9d9f9bcc8018e1f70a" category="list-text">다음 명령을 사용하여 "catalogxxxxxx.zip" 파일의 압축을 풉니다.</block>
-  <block id="82ed93b77a5223377d1a45ab463f6fb3" category="list-text">ls * 명령을 실행하여 하위 폴더 "changes" 및 "snapshots" 아래에 "catalogxxxxxx" 폴더가 생성되었는지 확인하십시오.</block>
   <block id="202fec1254d856dde5dee6e53f5eb9e9" category="inline-link">온프레미스 ONTAP 작업 환경을 모두 살펴보십시오</block>
   <block id="f8fe3d533b3c8ec77c886cdbfcbd8c60" category="inline-link">StorageGRID 시스템에 대해 알아보십시오</block>
   <block id="e828f5871c88d64ebf2a764153246360" category="list-text">각 ONTAP 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 백업 보기 * 를 클릭합니다.</block>
@@ -2441,14 +2393,11 @@
   <block id="ec7d92235d0dc6e0acfa017dfe7f1dbd" category="section-title">작업 세부 정보를 봅니다</block>
   <block id="3ce5b4dc9c8f2be5c856c5ecbade36be" category="list-text">Azure에서 Cloud Volumes ONTAP 9.7P5 이상을 실행 중입니다(ONTAP 9.8P13 이상 권장).</block>
   <block id="555662c8177ef0a8b7bd61c88704ac20" category="list-text">AWS에서 Cloud Volumes ONTAP 9.7P5 이상을 실행 중입니다(ONTAP 9.8P13 이상 권장).</block>
-  <block id="f89ceb52adf6438c575a46d20a693abb" category="list-text">백업을 네트워크의 안전한 위치에 복사합니다. 해당 위치에 대한 ONTAP 볼륨 백업을 생성하는 경우 로컬 StorageGRID 시스템을 사용할 수 있습니다.</block>
-  <block id="c404e3c86dc07dadeb1ba026f8f68641" category="paragraph">인덱싱된 카탈로그는 검색 및 복원 기능에 사용됩니다. 모든 볼륨과 모든 백업 파일에 대한 정보가 포함되어 있어 복원하려는 볼륨 데이터를 찾을 때 검색을 매우 빠르고 효율적으로 수행할 수 있습니다.</block>
   <block id="49ec960387a7762f70c9454eff39ff67" category="list-text">새 BlueXP 커넥터를 설치합니다</block>
   <block id="f7610e9182682c46b21a456bb9f88633" category="list-text">모든 온프레미스 ONTAP 시스템과 StorageGRID 시스템을 BlueXP UI로 재검색합니다</block>
   <block id="65432ae2b80d2de48c0eff9f34726b87" category="inline-link">백업 데이터베이스를 복원한 후 Connector 소프트웨어를 최신 버전으로 업그레이드합니다</block>
   <block id="fb91cab4ff80a23255e3962dd363d180" category="inline-link">새로운 사내 Linux 호스트에 BlueXP 커넥터를 설치합니다</block>
   <block id="ecbcbb16fdbff1b3b59d0639b270e056" category="list-text">방금 만든 관리자 자격 증명을 사용하여 BlueXP에 로그인합니다.</block>
-  <block id="5fb01033092428057d91703462850bb8" category="list-text">MySQL 백업을 보안 위치에서 새 커넥터 호스트로 복사합니다.</block>
   <block id="47088be6cbcb439bd7241ec72edf3a91" category="section-title">ONTAP 클러스터와 StorageGRID 시스템에 대해 알아보십시오</block>
   <block id="8a817b57889a6e642ad7fb06e7b26c80" category="section-title">StorageGRID 환경 세부 정보를 설정합니다</block>
   <block id="95405ad3ad814456093255e6d36ee69e" category="inline-link">BlueXP API</block>
@@ -2493,7 +2442,6 @@
   <block id="4014cba1d3679d7444ccb96338d9ee36" category="list-text"><block ref="8e0864f8129f5d2b658668b9103e83a5" prefix="" category="inline-code"></block></block>
   <block id="139e90f4554bdc4681ca70203e695cd5" category="list-text"><block ref="28e5f48e9f12d4928897b706c15e527a" prefix="" category="inline-code"></block></block>
   <block id="0375f4855be072c7d856a0233cc21de9" category="section-title">클라우드 공급자 솔루션 지원</block>
-  <block id="be845c219bb74b14349ffa6e27e7aef3" category="paragraph">BlueXP에 통합한 다음 클라우드 제공업체 솔루션에 대한 기술 지원은 해당 제품에 대한 BlueXP 설명서의 "도움말 얻기"를 참조하십시오.</block>
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="inline-link-macro">Azure NetApp Files</block>
   <block id="b0cee72642f5457a71ddd0b49efb6d93" category="inline-link-macro">Google Cloud용 Cloud Volumes Service</block>
   <block id="67b74e19355f9340daf7f62ceb8233d5" category="list-text">Connector와 Azure Synapse SQL 서비스 간의 통신을 위해 포트 1433이 열려 있어야 합니다.</block>
@@ -2513,7 +2461,6 @@
   <block id="a7333071b8d492fc2184540602ce3b9e" category="cell">Azure Blob endif::Azure []ifdef::GCP[]endif::GCP[]</block>
   <block id="da3a611050815415e3372ad88f95d3e7" category="cell">ifdef::AWS[]Amazon S3 endif::AWS[]ifdef::Azure[]Azure Blob endif::Azure[]ifdef::GCP[]endif::GCP[]NetApp StorageGRID</block>
   <block id="b6cde9c60675582b751733112d2d9c0e" category="list-text">Azure의 경우:</block>
-  <block id="f3012b8afd230a88ecdba872940ac2a7" category="list-text">단일 클러스터에서는 두 DataLock 모드를 모두 사용할 수 없습니다.</block>
   <block id="62637ce89beaec82e954d18d03579ae4" category="paragraph">클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 이전 백업을 _S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 계층화할 수 있습니다. <block ref="f7fa7b0a9e810d8c500bcf785a34f359" category="inline-link-macro-rx"></block>.</block>
   <block id="dcf736c14b723c6b77ce630517c0e3ef" category="paragraph">클러스터에서 ONTAP 9.10.1 이상을 사용하는 경우 이전 백업을 _Azure Archive_storage에 계층화할 수 있습니다. <block ref="2f91ed687cd1d1d6d8235865263a43ff" category="inline-link-macro-rx"></block>.</block>
   <block id="858f352aed10fc578bc936929dbfe50b" category="paragraph">온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템에서 11.4 이상을 사용하는 경우 이전 백업 파일을 퍼블릭 클라우드 아카이브 스토리지에 아카이브할 수 있습니다.</block>
@@ -2660,7 +2607,6 @@
   <block id="6c99ceac3d4ecb03d01e55de5bf1dadf" category="paragraph">백업 및 복원 상태는 다음과 같을 수 있습니다.</block>
   <block id="7e318049bc5ff56e12d5aaab6c31bfe3" category="list-text">Job Monitoring * 탭을 선택합니다.</block>
   <block id="57544dd9986f2126f88bac7c195f9bd4" category="paragraph">이 스크린샷은 기본 열 머리글을 보여 줍니다.</block>
-  <block id="165b658a40f191c52efd59498a472761" category="list-text">4개의 추가 열(작업 환경, SVM, 사용자 이름 및 워크로드)을 표시하려면 을 선택합니다 <block ref="67e31c53d0f38fc4da85c525a5be7511" category="inline-image-macro-rx" type="image"></block>.</block>
   <block id="87aa191eff82d3ce3518c07577f209bd" category="section-title">작업 목록을 검색 및 필터링합니다</block>
   <block id="3cdaf61a1c1fcead1aac87ee5bf643c6" category="paragraph">기본적으로 작업 모니터링 페이지에는 최근 24시간의 작업이 표시됩니다.</block>
   <block id="a466bc110c2ee16333fcf19f4e7b5dc2" category="list-text">결과를 다르게 정렬하려면 각 열 머리글을 선택하여 상태, 시작 시간, 자원 이름 등을 기준으로 정렬합니다.</block>
@@ -3212,13 +3158,10 @@
   <block id="dd18c0c541bc275d66476e68ad00dbfe" category="list-text">필요한 경우 방화벽 규칙을 업데이트하여 ONTAP에서 지정한 포트(일반적으로 포트 443)를 통해 객체 스토리지로 BlueXP 백업 및 복구 서비스 연결을 허용하고 포트 53(TCP/UDP)을 통해 스토리지 VM에서 DNS 서버로 이름 확인 트래픽을 허용합니다.</block>
   <block id="3286d58803294a9601c966ac257608d5" category="paragraph">StorageGRID로 백업을 설정하면 백업 마법사에서 테넌트 계정에 대한 S3 액세스 키와 암호 키를 입력하라는 메시지가 표시됩니다. 테넌트 계정을 사용하면 BlueXP 백업 및 복구를 통해 백업을 저장하는 데 사용되는 StorageGRID 버킷을 인증하고 액세스할 수 있습니다. 키는 StorageGRID가 누가 요청하는지 알 수 있도록 필요합니다.</block>
   <block id="9bbe0ee1e1e96c5abb69993ee0671a43" category="inline-link-macro">BlueXP 백업 및 복구 새로운 기능</block>
-  <block id="b95bd07a0f4f64d48d1643a4406ce216" category="inline-link-macro">어두운 사이트에서 BlueXP 백업 및 복구 데이터를 백업하는 방법을 알아보십시오</block>
-  <block id="b43f5a4ac0049b67620f35ce2841f259" category="paragraph">인터넷 연결 없이 사이트에 Connector가 설치된 경우 BlueXP 백업 및 복구 구성 데이터의 로컬 백업을 정기적으로 생성하는 것이 좋습니다. <block ref="e362ad6232a5b9d107ea1203fc9178f4" category="inline-link-macro-rx"></block>.</block>
   <block id="60397124d8fb7c1ba3027a2310ed6ee4" category="list-text">포트 443을 통해 BlueXP 백업 및 복구에 대한 아웃바운드 인터넷 연결(커넥터가 "어두운" 사이트에 설치된 경우 필요하지 않음)</block>
   <block id="44f9bf3663fe60bc8f71ff77b6957109" category="paragraph">클러스터의 백업 정책에 대한 아카이브 설정을 정의할 때 클라우드 공급자 자격 증명을 입력하고 사용할 스토리지 클래스를 선택합니다. BlueXP 백업 및 복구는 클러스터에 대한 백업을 활성화할 때 클라우드 버킷을 생성합니다. AWS 및 Azure 아카이브 스토리지에 필요한 정보는 다음과 같습니다.</block>
   <block id="64ed7192272577317871df08d9d54ae4" category="paragraph">클러스터에 대한 BlueXP 백업 및 복구를 활성화하려면 먼저 NetApp에서 BYOL 백업 및 복구 라이센스를 구입하여 활성화해야 합니다. 이 라이센스는 계정에 사용되며 여러 시스템에서 사용할 수 있습니다.</block>
   <block id="0abc92d264f8d3612b6bbb8507a4cbfd" category="paragraph">라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 NetApp의 일련 번호가 필요합니다. <block ref="685a1f13858a68e0a232160884c81603" category="inline-link-macro-rx"></block>.</block>
-  <block id="51674c4b3243dd05ddd9d6e34228a248" category="section-title">StorageGRID에 대한 BlueXP 백업 및 복구 활성화</block>
   <block id="86e40e213794d95b205eaa9c71d0bed9" category="paragraph">올바른 IPspace를 선택하면 BlueXP 백업 및 복구 기능이 ONTAP에서 StorageGRID 오브젝트 스토리지로의 연결을 설정할 수 있습니다.</block>
   <block id="b9182e8ca7dfbc01cd11a94346297f90" category="paragraph"><block ref="b9182e8ca7dfbc01cd11a94346297f90" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5c92c4685a32fe7d41d3f537c7f5116b" category="paragraph">* 중요: * DataLock을 사용하려는 경우 BlueXP 백업 및 복구를 활성화할 때 첫 번째 정책에서 활성화해야 합니다.</block>
@@ -3408,15 +3351,6 @@
   <block id="f98bd8688162885c52860bed1262784f" category="paragraph">개인 엔드포인트와 통신하는 데 포트 80(HTTP)을 사용하는 경우 모두 설정됩니다. 지금 클러스터에서 BlueXP 백업 및 복구를 활성화할 수 있습니다.</block>
   <block id="4addbe3fd43e1a48fd8eb999d5f3b487" category="section-title">BlueXP 백업 및 복구를 활성화합니다</block>
   <block id="f3d3616df99b7525a49fa9d5c9b2660d" category="list-text">계정에 대한 기존 BlueXP 백업 및 복구 라이센스가 없는 경우 이 시점에서 사용할 충전 방법 유형을 선택하라는 메시지가 표시됩니다. AWS에서 PAYGO(Pay-as-you-Go) BlueXP Marketplace 오퍼링을 구독하거나(또는 구독을 여러 개 선택한 경우) NetApp에서 BlueXP 백업 및 복구 BYOL 라이센스를 구입하여 활성화할 수 있습니다. <block ref="bce0911f49e923e839a36aaf0ede034d" category="inline-link-macro-rx"></block></block>
-  <block id="081c5ee4ba0521a5313b250cf5798eef" category="summary">인터넷에 연결되지 않은 사이트에서 BlueXP 백업 및 복구를 사용하는 경우 BlueXP 커넥터 호스트 시스템에 문제가 있을 경우 중요한 BlueXP 백업 및 복구 파일을 정기적으로 백업해야 합니다. 이렇게 하면 새 커넥터를 배포하고 중요한 BlueXP 백업 및 복구 데이터를 복원할 수 있습니다.</block>
-  <block id="b77289a5dae5ddc53ad511eccbb89bf6" category="doc">어두운 사이트에서 BlueXP 백업 및 복구 데이터 백업 및 복원</block>
-  <block id="93041685fa852bcfa4707487f2dbf4be" category="section-title">중요한 BlueXP 백업 및 복구 데이터를 백업합니다</block>
-  <block id="3fb300f30af57af68c2e25e2cdf828b3" category="list-text">BlueXP 백업 및 복구 데이터베이스</block>
-  <block id="064bb6dc88d576a46925a6d27518b507" category="admonition">항상 최신 데이터에 액세스할 수 있도록 이 BlueXP 백업 및 복구 데이터를 정기적으로 백업해야 합니다.</block>
-  <block id="e8c17d26623d4aede1b419ab9c5afe12" category="paragraph">볼륨 데이터는 BlueXP 백업 및 복구 데이터베이스 또는 인덱싱된 카탈로그 파일에 포함되지 않습니다.</block>
-  <block id="fe7f28733cdfdbb6900a0a47431f4257" category="section-title">BlueXP 백업 및 복구 데이터베이스를 백업합니다</block>
-  <block id="4fba065fda6a94c7b23c2139efccc5f1" category="paragraph">BlueXP 백업 및 복구 데이터베이스에는 모든 볼륨, 백업 파일, 백업 정책 및 구성 정보 목록이 포함되어 있습니다.</block>
-  <block id="0feb99de08b39a73c026309c2991e15f" category="list-text">다음 명령을 입력하여 BlueXP 백업 및 복구 MySQL DB를 백업합니다.</block>
   <block id="edff5ebe6fa75b91836dac47d7940449" category="section-title">BlueXP 백업 및 복구 데이터를 새 커넥터로 복원합니다</block>
   <block id="815289240ead1921d67ba2c1e806a37b" category="paragraph">온-프레미스 커넥터에 심각한 장애가 발생한 경우 새 커넥터를 설치한 다음 BlueXP 백업 및 복구 데이터를 새 커넥터에 복원해야 합니다.</block>
   <block id="eced51eb44e5e285c2a52b0b05c4b03b" category="paragraph">BlueXP 백업 및 복구 시스템을 작동 상태로 되돌리기 위해 수행해야 하는 4가지 작업은 다음과 같습니다.</block>
@@ -3436,7 +3370,6 @@
   <block id="2ad205e5d53ae88417e90a2fa15aa48d" category="paragraph">BlueXP 백업 및 복구를 활성화할 때 첫 번째 백업 정책에서 _S3 Glacier_또는 _S3 Glacier Deep Archive_를 선택한 경우 해당 계층은 해당 클러스터에 대한 향후 백업 정책에 사용할 수 있는 유일한 아카이브 계층이 됩니다. 첫 번째 백업 정책에서 아카이브 계층을 선택하지 않으면 _S3 Glacier_는 이후 정책에 대한 유일한 보관 옵션입니다.</block>
   <block id="683fc015ec20f6233b25343bf3daea19" category="paragraph">사내 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일 후에 BlueXP 백업 및 복구 UI의 _Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. <block ref="60cdd04e7131e97598ce1c583d8c9a5e" category="inline-link-macro-rx"></block>.</block>
   <block id="01492017a2321f7b3f8484fd1f8aa8d7" category="sidebar">BlueXP 백업 및 복구 문서</block>
-  <block id="2e5d6ff9bc4d6b4194df020bde3f3dca" category="sidebar">어두운 사이트에서 BlueXP 백업 및 복구 데이터베이스를 백업합니다</block>
   <block id="54153028a776309bcfbdd3b7b8285463" category="sidebar">BlueXP 백업 및 복구 블로그</block>
   <block id="960dd4200d015a0a12dfd299c1348c9c" category="sidebar">BlueXP 백업 및 복구 활용 사례</block>
   <block id="a1c18d7af73fa7e0ef0013130f15b257" category="sidebar">클라우드에서 데이터 복원</block>
@@ -3586,7 +3519,6 @@
   <block id="53775c897cfb7fba4b875a6f0ce56341" category="admonition">백업이 있는 작업 환경 또는 클러스터를 삭제하려면 * 시스템을 삭제하기 전에 * 백업을 삭제해야 합니다. 시스템을 삭제할 때 BlueXP 백업 및 복구는 자동으로 백업을 삭제하지 않으며, 시스템이 삭제된 후 백업을 삭제할 수 있도록 UI에 현재 지원이 없습니다. 나머지 백업에 대한 오브젝트 스토리지 비용은 계속해서 청구됩니다.</block>
   <block id="a6ec5120288fff40c2745ac6a464099f" category="paragraph">BlueXP 백업 및 복구는 인터넷 연결이 없는 사이트("비공개 모드" 또는 "다크" 사이트라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 경우 BlueXP 커넥터를 비공개 모드로 배포해야 합니다.</block>
   <block id="7063b7db80bf8574d1141e84ae0a1c85" category="list-text">FlexGroup 볼륨 백업은 아카이브 스토리지로 이동할 수 없습니다.</block>
-  <block id="0e9c6bfd90b7d8c40adbe605efba03b2" category="list-text">FlexGroup 볼륨 백업에서는 DataLock 및 랜섬웨어 보호를 사용할 수 없습니다.</block>
   <block id="e6637eb830a542083d44cb29a234bdf3" category="list-text">현재 오브젝트 저장소의 WORM/Compliance 모드는 Amazon S3, Azure 및 StorageGRID에서 지원됩니다. 이를 DataLock 기능이라고 하며 클라우드 공급자 인터페이스를 사용하지 않고 BlueXP 백업 및 복구 설정을 사용하여 관리해야 합니다.</block>
   <block id="caac6b6b759dd099323676db10be1564" category="list-text">디렉토리/폴더 복구는 클러스터가 ONTAP 9.13.1 이상을 실행하는 경우에만 아카이브 스토리지에 상주하는 데이터에 지원됩니다.</block>
   <block id="e8573f3934d023dbb0b6cea67803d326" category="list-text">디렉토리/폴더 복구는 클러스터가 ONTAP 9.13.1 이상을 실행하는 경우에만 DataLock을 사용하여 보호되는 데이터에 대해 지원됩니다.</block>
@@ -3596,8 +3528,6 @@
   <block id="40d2dc321bf0d1e8c62d93ca99421fb6" category="inline-link">자세한 내용은 BlueXP 배포 모드를 참조하십시오</block>
   <block id="98eef7e95983b72b4d417c12eaef0df7" category="inline-link">Azure에서 표준 모드로 커넥터 배포(전체 인터넷 액세스)</block>
   <block id="25ea6f476e6d2e28d6075e5526758673" category="inline-link">제한된 모드로 커넥터 설치(제한된 아웃바운드 액세스)</block>
-  <block id="f59ba9544b91f15bf21dc9731d8101ed" category="paragraph">BlueXP Connector가 클라우드 공급업체에 배포되거나 인터넷 액세스가 가능한 자체 호스트 시스템에 구축된 SaaS 환경에서 BlueXP 백업 및 복구를 사용하는 경우 중요한 모든 BlueXP 백업 및 복구 구성 데이터가 클라우드에 백업 및 저장됩니다. 인터넷 액세스가 없는 사이트에서 "제한된 모드" 또는 "어두운 사이트"라고 하는 BlueXP 백업 및 복구를 사용하는 경우 이 BlueXP 백업 및 복구 정보는 로컬 커넥터 시스템에만 저장됩니다.</block>
-  <block id="01f6b31ae6611c8f5e0bcc21952f1327" category="paragraph">중요한 BlueXP 백업 및 복구 데이터를 연결된 StorageGRID 시스템에 백업하는 방법과 필요한 경우 새 커넥터에 데이터를 복원하는 방법에 대해 설명합니다.</block>
   <block id="b5e4425a80571820c3fc81b638ce52be" category="summary">BlueXP 백업 및 복구 서비스(클라우드 백업)는 온프레미스 및 클라우드 모두에서 NetApp ONTAP 데이터, Kubernetes 영구 볼륨, 데이터베이스 및 가상 시스템에 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.</block>
   <block id="d1ce73c34fafec004ce6d188a1769e33" category="list-text">커넥터는 전체 인터넷 액세스("표준 모드")가 있는 사이트나 제한된 인터넷 연결("제한 모드")으로 설치할 수 있습니다.</block>
   <block id="0e58108645de369af6e83522b7945f2b" category="inline-link">표준 모드(전체 인터넷 액세스)로 AWS에 커넥터 구축</block>
@@ -3649,8 +3579,6 @@
    <block ref="0fbd1776e1ad22c59a7080d35c7fd4db" prefix=" " category="inline-code"></block><block ref="cbb184dd8e05c9709e5dcaedaa0495cf" prefix=" " category="inline-code"></block></block>
   <block id="cab82189f2bc3aa6ebb43c8830e47693" category="list-text">아래의 패치 API를 사용하여 호스트 이름 또는 플러그인 포트를 수정합니다.<block ref="1fcec45b91ad39b0aa8d1cf2b8d5e031" prefix=" " category="inline-code"></block></block>
   <block id="c325ed37b6a44d9e765cfd2dd7779cfb" category="paragraph">ONTAP 9.13.1 이상을 실행하는 온-프레미스 ONTAP 시스템의 경우 * 작업 모니터링 * 탭에서 이러한 지속적인 백업 작업과 같은 시스템 시작 작업을 사용할 수 있습니다. 이전 ONTAP 버전은 사용자가 시작한 작업만 표시합니다.</block>
-  <block id="62bcc3625fd0e0ab73db7f861ea43e38" category="list-text">Connector 호스트 시스템에서 디렉토리를 "/opt/application/netapp/CBS"로 변경합니다.</block>
-  <block id="471862806e2663ce1f62d2a75294c7f4" category="list-text">보안 위치에서 "/opt/application/netapp/CBS" 폴더의 새 커넥터 호스트로 인덱스 카탈로그 백업 zip 파일을 복사합니다.</block>
   <block id="4e4c67e8658214022378968dae080ce5" category="list-text">"CVO Edge Cache" 패키지는 "CVO Professional" 패키지와 동일한 기능을 제공하지만 에 대한 지원도 포함합니다<block ref="0e8295000b498583f7b721745920fe19" category="inline-link-rx"></block> 서비스. Cloud Volumes ONTAP 시스템에서 3TiB의 용량 프로비저닝당 BlueXP 에지 캐싱 에지 시스템 1개를 구축할 수 있습니다. 이 옵션은 Azure 및 Google 마켓플레이스에서 사용할 수 있으며, 온프레미스 ONTAP 데이터를 백업할 수 없습니다.</block>
   <block id="83e6a84bd8ee7bed2013f07c3bd590c7" category="paragraph"><block ref="e8c794dc8a2003f8106407fa82df9679" category="inline-link-rx"></block>.</block>
   <block id="7d17ede22a66ff897bf29e0913870d0b" category="paragraph">이 옵션을 사용하려면 마켓플레이스 페이지에서 구독을 설정한 다음<block ref="3e7d826ab39799649c48f6e2f8f11222" category="inline-link-rx"></block>. 또한 BlueXP에서 AWS 자격 증명에 활성 서브스크립션을 하나만 할당할 수 있으므로 이 연간 계약 가입을 통해 Cloud Volumes ONTAP 시스템에 대한 비용을 지불해야 합니다.</block>
@@ -3683,7 +3611,6 @@
   <block id="e8d4092baef6680c6a35d5228ae31de2" category="paragraph"><block ref="e8d4092baef6680c6a35d5228ae31de2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0dfcbbbe02d3e96f8ad78782e8772587" category="paragraph">이 ID는 이메일에 매핑되는 시스템 생성 ID입니다. NSS 관리 * 페이지의 에서 이메일을 표시할 수 있습니다 <block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> 메뉴.</block>
   <block id="fc79de85a483938f72fbcb9822ec0ae3" category="list-text">로그인 자격 증명 토큰을 새로 고쳐야 하는 경우 에 * 자격 증명 업데이트 * 옵션이 있습니다 <block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> 메뉴.</block>
-  <block id="1bb5620ed3998fd776980cad36e22c9a" category="paragraph"><block ref="1bb5620ed3998fd776980cad36e22c9a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="379f9cd57d97013f3f7fdd24f692a0b1" category="paragraph"><block ref="379f9cd57d97013f3f7fdd24f692a0b1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9748f351c4d16d0c4d18b2ae55b47a99" category="list-text">BlueXP 백업 및 복구 PAYGO 라이센스의 경우 BlueXP 백업 및 복구를 활성화하기 전에 Azure Marketplace를 통해 가입해야 합니다. BlueXP 백업 및 복구에 대한 청구는 이 구독을 통해 이루어집니다.<block ref="c9aff78f9846421ce008e556f4151f92" category="inline-link-rx"></block>.</block>
   <block id="698d055ff2d2109face4d8309d53ca3a" category="list-text">커넥터는 전체 또는 제한된 인터넷 액세스("표준" 또는 "제한" 모드)가 있는 Azure 지역에 설치할 수 있습니다.<block ref="30d3d302b7eb1435cdb8dd90d49c0322" category="inline-link-rx"></block>.</block>
@@ -3696,7 +3623,6 @@
   <block id="b8c4390ff667478ec0b60750dee2c4c7" category="list-text"><block ref="b8c4390ff667478ec0b60750dee2c4c7" category="inline-link-rx"></block></block>
   <block id="c89f481c3b46af99ed7620462173a07c" category="list-text"><block ref="c89f481c3b46af99ed7620462173a07c" category="inline-link-rx"></block></block>
   <block id="2aeeba0020a7848f7902186fbd8cb9e8" category="list-text"><block ref="2aeeba0020a7848f7902186fbd8cb9e8" category="inline-link-rx"></block></block>
-  <block id="d4a1ca5e593cb72661adda86d030f425" category="admonition">BlueXP 백업 및 복구 기능은 BlueXP 커넥터에 내장되어 있습니다. 인터넷에 연결되지 않은 사이트에 설치한 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 <block ref="f2b1fe06debcbb7b96badbcb85471310" category="inline-link-macro-rx"></block> 각 BlueXP 백업 및 복구 릴리스의 새로운 기능을 보려면 의 단계를 따르십시오<block ref="164e4794420610da956934de57a9da8a" category="inline-link-rx"></block> 새 기능을 사용하려는 경우</block>
   <block id="f2952cd66b2c1d62b092c2ae5559eabf" category="list-text">StorageGRID는 이어야 합니다<block ref="27661aa20e8b873c50bd0587758b98a1" category="inline-link-rx"></block>.</block>
   <block id="bc199847b8f34640b8ff543d338f0ead" category="paragraph">또한 검색 작업을 통해 ONTAP 볼륨에 대한 모든 로컬 스냅샷 복사본을 확인합니다. 로컬 스냅샷 복사본에서 데이터를 복원하는 것이 백업 파일에서 복원하는 것보다 빠르고 비용이 적게 들 수 있으므로 스냅샷에서 데이터를 복원할 수 있습니다. 스냅샷을 새 볼륨으로 복원할 수 있습니다<block ref="e8608a07f1140ab080666e48adb90501" category="inline-link-rx"></block> (BlueXP 백업 및 복구가 아님).</block>
   <block id="c2e1ae9092ad1a2b4bccebec9b7fbd42" category="list-text">있는 경우<block ref="a7e016fe79f350912ccb5dfe261d7ecb" category="inline-link-rx"></block> 또는<block ref="d3d508974cb975126e687a6961f332c5" category="inline-link-rx"></block> 어카운트의 경우 인덱싱된 카탈로그는 클라우드에 구축된 Connector와 마찬가지로 클라우드 공급자에 저장됩니다. (두 자격 증명이 모두 있는 경우 기본적으로 AWS가 선택됩니다.)</block>
@@ -3721,15 +3647,12 @@
   <block id="327e32511f0c97676e41ea866aac0721" category="list-text">포트 443을 통해 BlueXP 백업 및 복구 서비스 및 Google Cloud 스토리지에 HTTPS로 연결합니다 <block ref="e228b87eff1d3a92b4544cd5652fc5ad" category="inline-link-rx"></block>)</block>
   <block id="c55a4ed0f55f8209574960c04bd36597" category="paragraph">이제 고객 관리 암호화 키(CMEK)의 프로젝트가 아닌 다른 프로젝트에 있는 버킷을 선택할 수 있습니다.<block ref="2425c9129a22c7135ee8a04ae0dae970" category="inline-link-rx"></block>.</block>
   <block id="cfc826b330f7a25cc3c4e115a9fcca13" category="paragraph">BlueXP Connector에 할당된 IAM 정책은 all_Resource_sections의 AWS 리소스 이름 "arn"을 "AWS"에서 "AWS-cn"로 변경해야 합니다. 예를 들어 "arn:AWS-cn:S3::NetApp-backup- *"를 변경할 수 있습니다. 을 참조하십시오<block ref="17dde2a04d27e7ad2a9f0a451a7a0e90" category="inline-link-rx"></block> 및<block ref="bb86d78b7593b3e1252f277b7dd6e017" category="inline-link-rx"></block> 를 참조하십시오.</block>
-  <block id="e440c82aa05a4e6e5bc3191ceeece3ae" category="paragraph">이제 AWS, Azure 및 GCP 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 "제한된 모드"로 백업할 수 있습니다. 이를 위해서는 먼저 "제한된" 상업 지역에 커넥터를 설치해야 합니다.<block ref="0eb8533d49e65dbfdd979d6ceb88ebff" category="inline-link-rx"></block>. 을 참조하십시오<block ref="27ee532be7d9f80c345fcb2108369dd1" category="inline-link-rx"></block> 및<block ref="eb65204a82ae962a8410421a1d6516bd" category="inline-link-rx"></block>.</block>
-  <block id="3e5afb80ef2b2c6b108c664e6550be33" category="list-text">이제 BlueXP 백업 및 복구 UI 및 API에서 시작된 사용자 시작 백업 및 복원 작업과 이러한 진행 중인 백업 작업을 ONTAP 9.13.1 이상을 실행하는 사내 ONTAP 시스템의 * 작업 모니터링 * 탭에서 사용할 수 있습니다. 이전 ONTAP 버전은 사용자가 시작한 작업만 표시합니다.</block>
   <block id="3f95b7ff004c9ea7ba2c076aa81ddbd8" category="list-text">모든 작업에 대한 보고를 위해 CSV 파일을 다운로드할 수 있을 뿐만 아니라 단일 작업에 대한 JSON 파일을 다운로드하여 자세한 내용을 볼 수 있습니다.<block ref="c5e8ac86e60de65889ee067b8ca8ac22" category="inline-link-rx"></block>.</block>
   <block id="aca6a48e798dafa8a873544468b60e06" category="list-text">두 가지 새로운 백업 작업 경고가 추가되었습니다. "예약된 작업 실패" 및 "복원 작업이 완료되지만 경고가 있음"<block ref="a4848a9ae757d04f84e693376feb04c0" category="inline-link-rx"></block>.</block>
   <block id="cb388daef1ecf4d75abae922da7c4ccd" category="paragraph">이제 AWS 및 Azure 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3 또는 Azure Blob으로 백업할 수 있습니다. 이 작업을 수행하려면 상업 지역의 Linux 호스트에 커넥터를 설치하고 Cloud Volumes ONTAP 시스템도 배포해야 합니다. 을 참조하십시오<block ref="17dde2a04d27e7ad2a9f0a451a7a0e90" category="inline-link-rx"></block> 및<block ref="e88a100423dadabfc9781439f925633d" category="inline-link-rx"></block>.</block>
   <block id="7397c46a6bf6fde87c1217e8c8bbab15" category="list-text">작업 모니터링 페이지에 고급 필터링이 추가되어 시간, 워크로드(볼륨, 애플리케이션, 가상 머신 또는 Kubernetes) 별로 백업 및 복원 작업을 검색할 수 있습니다. 작업 유형, 상태, 작업 환경 및 스토리지 VM "application_3"과 같은 자원 검색을 위해 자유 텍스트를 입력할 수도 있습니다. <block ref="3ed9d480474f89776ff0bf3cbda69d30" category="inline-link-rx"></block>.</block>
   <block id="72577c9cc3c11c1b1c16727589471767" category="paragraph">이 기능은 온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템에서 11.4 이상을 사용하는 경우 사용할 수 있습니다.<block ref="a928050165abd52aa438367540434489" category="inline-link-rx"></block>.</block>
   <block id="3171c3474d761b0543c2bd83d1d3f702" category="paragraph">이제 DataLock 및 랜섬웨어 보호가 Azure Blob에 저장된 백업 파일에 지원됩니다. Cloud Volumes ONTAP 또는 온프레미스 ONTAP 시스템에서 ONTAP 9.12.1 이상을 실행하는 경우 백업 파일을 잠그고 스캔하여 잠재적인 랜섬웨어를 탐지할 수 있습니다.<block ref="2045a684ba4b47f5626fcfb6a06714da" category="inline-link-rx"></block>.</block>
-  <block id="5df99ce910070abbda065759347f25b3" category="paragraph"><block ref="4f80ba7b64beb474546685a97f9eb3b0" category="inline-link-rx"></block>.</block>
   <block id="3c718c5f17f9fcfc63a7338e836856c8" category="paragraph">이 기능은 온프레미스 클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 시스템에서 11.3 이상을 사용하는 경우 사용할 수 있습니다.<block ref="b82e63d60c4d06f5682d15a56c05b007" category="inline-link-rx"></block>.</block>
   <block id="85d6a3e13464f9ef61ac713c37b8f174" category="paragraph">이전 릴리즈에서는 BlueXP 백업 및 복구를 통해 Google Cloud Storage 버킷에 액세스할 수 있도록 하는 서비스 계정에 "스토리지 관리자" 역할이 필요했습니다. 이제 서비스 계정에 할당할 수 있는 권한이 축소된 사용자 지정 역할을 만들 수 있습니다.<block ref="75740d83aea3391a75bdf8fb0dfe10a6" category="inline-link-rx"></block>.</block>
   <block id="c89564af11ef846a4ab221b1ae9b0943" category="paragraph"><block ref="4ab4188a7e1e15339fd18b35288f7c72" category="inline-link-rx"></block>.
@@ -3757,8 +3680,6 @@
   <block id="af9091a34041d22f15b1c8a327a57951" category="paragraph">위에서 설명한 대로 Browse &amp; Restore 작업에 대한 컨테이너가 추가되어 Google Cloud 및 StorageGRID 시스템에 저장된 백업 파일에서 파일 복원 작업을 수행할 수 있습니다. 이제 Browse &amp; Restore를 사용하여 모든 퍼블릭 클라우드 공급자 및 StorageGRID에서 파일을 복원할 수 있습니다.<block ref="4bc7c8e9ed5c5a5c6bdeb14f06726295" category="inline-link-rx"></block>.</block>
   <block id="759bfd00aa9668f59a8dbc69a9620ef1" category="paragraph">Cloud Backup을 활성화한 후 Kubernetes 클러스터에 새로운 영구 볼륨을 추가한 경우에는 이전에 해당 볼륨에 대한 백업을 구성해야 했습니다. 이제 새로 생성된 볼륨에 자동으로 적용되는 정책을 선택할 수 있습니다<block ref="d2d4435857095ed7734722170e567751" category="inline-link-rx"></block> 이미 Cloud Backup을 활성화한 클러스터의 경우</block>
   <block id="978c0e96c314f21cb16d2c24ae0624a9" category="paragraph">API는 에서 사용할 수 있습니다<block ref="09e8c3aae0da31a3bb4ba59e7440e87c" category="inline-link-rx"></block>. 을 참조하십시오 <block ref="cf7847f4c926eb96d69d319dfdc23654" category="inline-link-macro-rx"></block> API에 대한 개요입니다.</block>
-  <block id="18761d8c202e79e8b99bf6f0ea7ec3eb" category="paragraph">4월에 AWS에 백업 파일을 저장한 사용자를 위해 볼륨 및 파일 복원 검색 및 복원 방법이 도입되었습니다. 이제 Google Cloud Storage에 백업 파일을 저장하는 사용자가 이 기능을 사용할 수 있습니다.<block ref="331e4b78e2b84f2bc1fc35b2d92671b9" category="inline-link-rx"></block>.</block>
-  <block id="79e7ae6e1f3618ce5e3dbaf9fb1541ea" category="paragraph"><block ref="ffe4df67e95bb2472093e9a3d0a7a76b" category="inline-link-rx"></block>.</block>
   <block id="a4208eced8af02553d8e5579f39b9b33" category="list-text">Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다.<block ref="44c761dee3b53dae29ddd56ac5dddd4f" category="inline-link-rx"></block>.</block>
   <block id="15535e291980746e2353acd6a4780f1c" category="list-text">BlueXP 백업 및 복구 PAYGO 라이센스의 경우 를 통한 구독<block ref="92655de6fae7d07ed3897ce19d51b88d" category="inline-link-rx"></block> 은 BlueXP 백업 및 복구를 활성화하기 전에 필요합니다. BlueXP 백업 및 복구에 대한 청구는 이 구독을 통해 이루어집니다.<block ref="3b07d088d7c07da8d439b897764a7334" category="inline-link-rx"></block>.</block>
   <block id="9178cbd8799c2d35e159c2e093e709aa" category="paragraph">기존 Cloud Volumes ONTAP 시스템을 검색하고 BlueXP에 추가할 수 있습니다. 자세한 내용은 을 참조하십시오 <block ref="2136955d725610e67d83c3e217237632" category="inline-link-macro-rx"></block>.</block>
@@ -3796,4 +3717,151 @@
   <block id="9859429ce021a771d55011bbad61663d" category="list-text"><block ref="95020d92addc538671ad8a553222768a" category="inline-link-rx"></block>.</block>
   <block id="dd356e8ea63119f95e3666d6db68f47e" category="paragraph">을 사용하여 원래 커넥터 설정에 설정했던 ONTAP 작업 환경과 연관된 StorageGRID 시스템의 세부 정보를 추가합니다<block ref="84b7c1fcfbca071b9004578261b65308" category="inline-link-rx"></block>.</block>
   <block id="eeba430c3c4e0795629fe640359a8730" category="list-text">사용자 이름 및 암호 필드에서 관리자 역할을 가진 vCenter 사용자의 자격 증명을 지정합니다.</block>
+  <block id="71a925d299dcd6304c6bca811d4b0689" category="paragraph">StorageGRID에 데이터를 백업할 때는 BlueXP 커넥터를 사내에서 사용할 수 있어야 합니다. 새 커넥터를 설치하거나 현재 선택한 커넥터가 내부에 있는지 확인해야 합니다. 커넥터는 인터넷에 접속하거나 접속하지 않고 사이트에 설치할 수 있습니다.</block>
+  <block id="8e874375dafe4dcecab5a036da27e0aa" category="section-title">비공개 모드(어두운 사이트) 고려 사항</block>
+  <block id="eb4772e24220b0f97991bfcb63d4c610" category="list-text">BlueXP 백업 및 복구 기능은 BlueXP 커넥터에 내장되어 있습니다. 비공개 모드로 설치된 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 <block ref="f2b1fe06debcbb7b96badbcb85471310" category="inline-link-macro-rx"></block> 각 BlueXP 백업 및 복구 릴리스의 새로운 기능을 보려면 새 기능을 사용하려면 의 단계를 따릅니다<block ref="164e4794420610da956934de57a9da8a" category="inline-link-rx"></block>.</block>
+  <block id="e13c78b71eaa74d8ecd0f16e0230146e" category="inline-link-macro">BlueXP 백업 및 복구 데이터를 새 커넥터로 복원합니다</block>
+  <block id="ede38993b53fdad78e39fbbcee6eec12" category="list-text">SaaS 환경에서 BlueXP 백업 및 복구를 사용하는 경우 BlueXP 백업 및 복구 구성 데이터가 클라우드에 백업됩니다. 인터넷에 액세스할 수 없는 사이트에서 BlueXP 백업 및 복구를 사용하는 경우 BlueXP 백업 및 복구 구성 데이터가 백업을 저장할 StorageGRID 버킷에 백업됩니다. 비공개 모드 사이트에서 커넥터 오류가 발생한 경우 를 사용할 수 있습니다 <block ref="21b30d1009822b1f508f80c6007a3164" category="inline-link-macro-rx"></block>.</block>
+  <block id="920fe1428c19533eda6222fe7e58efbe" category="inline-link">BlueXP 로그인과 관련된 자격 증명을 관리하는 방법에 대해 알아봅니다</block>
+  <block id="e1d2e1a634647fd631081bc4f6f8e523" category="list-text">케이스 생성 * 기능을 사용하려면 먼저 NetApp Support 사이트 자격 증명을 BlueXP 로그인에 연결해야 합니다.<block ref="2a0d8b66ca9e99d023b48cf25f40fb12" category="inline-link-rx"></block>.</block>
+  <block id="e49aa971c20ec071f1b5bbc3c7266769" category="list-text">일련 번호가 있는 ONTAP 시스템의 케이스를 여는 경우 NSS 계정은 해당 시스템의 일련 번호와 연결되어 있어야 합니다.</block>
+  <block id="c7b7a5ae9f37fd7d24e4d641b9186fe9" category="paragraph">이 오류는 NSS 계정과 연결된 레코드 회사가 BlueXP 계정 일련 번호( 960xxxx) 또는 작동 환경 일련 번호 다음 옵션 중 하나를 사용하여 지원을 요청할 수 있습니다.</block>
+  <block id="2d2e8adaf3e8251b54baf420588cfb9d" category="paragraph">랜섬웨어 차단 기능은 백업 파일을 검사하여 랜섬웨어 공격의 증거를 찾습니다. 랜섬웨어 공격 탐지 작업은 체크섬 비교를 통해 수행됩니다. 잠재적 랜섬웨어가 이전 백업 파일과 비교하여 새 백업 파일에서 식별된 경우, 최신 백업 파일이 랜섬웨어 공격의 징후를 보이지 않는 최신 백업 파일로 대체됩니다. (랜섬웨어 공격이 발생한 것으로 확인된 파일은 교체후 1일 후에 삭제됩니다.)</block>
+  <block id="cd979c7356414580d564b463e3fe798a" category="list-text">단일 클러스터에서 여러 DataLock 모드를 사용할 수 없습니다.</block>
+  <block id="e7d60457cf8d5955e88e40aa083c07fa" category="list-text">FlexGroup 볼륨은 ONTAP 9.13.1 이상을 사용하는 경우에만 DataLock 및 랜섬웨어 보호를 사용할 수 있습니다.</block>
+  <block id="5e5c52eb046d9534a5304cfb91b3736a" category="list-text">FlexGroup 볼륨 백업은 클러스터에서 ONTAP 9.13.1 이상을 실행하는 경우 DataLock 및 랜섬웨어 보호를 사용할 수 있습니다.</block>
+  <block id="062059692404411848a017472898ba37" category="paragraph">시작한 백업 작업 또는 예약된 백업 작업의 상태를 모니터링하고 시작한 작업을 복원할 수 있습니다. 완료, 진행 중 또는 실패한 작업을 확인하여 문제를 진단하고 해결할 수 있습니다. BlueXP 알림 센터를 사용하면 전자 메일로 알림을 보내도록 설정할 수 있으므로 시스템에 로그인하지 않은 경우에도 중요한 시스템 작업을 알 수 있습니다. BlueXP 타임라인을 사용하면 UI 또는 API를 통해 시작된 모든 작업의 세부 정보를 볼 수 있습니다.</block>
+  <block id="747ab4e57729ad952df86b61ce8fa363" category="list-text">추가 열 표시(작업 환경, SVM, 사용자 이름, 워크로드, 정책, 및 스냅샷 레이블)을 선택하고 을 선택합니다 <block ref="67e31c53d0f38fc4da85c525a5be7511" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="ef01d887513738e3083dc9422947bd11" category="paragraph">백업 정책 및 스냅샷 레이블과 같은 여러 필터를 사용하여 작업 모니터링 페이지의 작업을 필터링할 수 있습니다.</block>
+  <block id="d119f82d01fe8b24b109c5ce80991809" category="section-title">백업 수명주기 작업을 검토합니다</block>
+  <block id="93d7343c1b7b9d802947b5e6175b94db" category="paragraph">백업 수명 주기 흐름을 모니터링하면 감사 완전성, 책임 및 백업 안전을 보장할 수 있습니다. 백업 수명주기를 추적할 수 있도록 모든 백업 복사본의 만료일을 확인할 수 있습니다.</block>
+  <block id="a6854f2ce244e1e0d06026bef9b25444" category="paragraph">백업 수명주기 작업은 삭제되거나 삭제될 대기열에 있는 모든 스냅샷 복제본을 추적합니다. ONTAP 9.13부터 작업 모니터링 페이지에서 "백업 수명 주기"라는 모든 작업 유형을 확인할 수 있습니다.</block>
+  <block id="52c5954a1583a5e646920e29a1a418fa" category="paragraph">"Backup Lifecycle" 작업 유형은 BlueXP 백업 및 복구에 의해 보호되는 볼륨에서 시작된 모든 스냅샷 삭제 작업을 캡처합니다.</block>
+  <block id="9304f305aa89a02039b5cb4ac930f498" category="list-text">[고급 검색 및 필터링] * 영역을 선택하여 [검색] 패널을 엽니다.</block>
+  <block id="afc9c2f739e11e765d2fc6721d4b9baf" category="list-text">"Backup Lifecycle"의 작업 유형을 선택합니다.</block>
+  <block id="08de06f9b28385865215daa7746404fb" category="paragraph">스냅샷 정책 레이블이 일치하지 않아 백업 파일이 생성되지 않았습니다</block>
+  <block id="e04734e5a595f337d94bd806eda32769" category="section-title">BlueXP 타임라인에서 작동 활동을 검토합니다</block>
+  <block id="395c3350138efc4530d1a49a6f39f732" category="paragraph">BlueXP 타임라인에서 추가 조사를 위해 백업 및 복원 작업에 대한 세부 정보를 볼 수 있습니다. BlueXP 타임라인은 사용자가 시작하거나 시스템 시작 여부에 관계없이 각 이벤트에 대한 세부 정보를 제공하며 UI 또는 API를 통해 시작된 작업을 표시합니다.</block>
+  <block id="b47bbc8022db13f22970dc58a89f44a2" category="inline-link">시각표와 알림 센터의 차이점에 대해 알아봅니다</block>
+  <block id="7c9a9551a82f974f54945fe3abbeec59" category="paragraph"><block ref="be62b15feb39ec16dcb7570febe101f2" category="inline-link-rx"></block>.</block>
+  <block id="3bec690d07df1a3a36c8a3122654fc24" category="section-title">2023년 6월 5일</block>
+  <block id="47cb625c2251a650ce99bc5010f839ac" category="section-title">FlexGroup 볼륨은 DataLock 및 랜섬웨어 보호를 사용하여 백업 및 보호할 수 있습니다</block>
+  <block id="ea9b647c4b660963890b981cadc4c22f" category="paragraph">FlexGroup 볼륨에 대한 백업 정책은 클러스터에서 ONTAP 9.13.1 이상을 실행할 때 DataLock 및 랜섬웨어 보호를 사용할 수 있습니다.</block>
+  <block id="f6477043c28067a4e579493c6cbb2e5f" category="section-title">새로운 보고 기능</block>
+  <block id="7423bbe1d34880696cfb7dd51492349f" category="inline-link">데이터 보호 범위에 대한 보고</block>
+  <block id="90c3582e59f2cb06c1d746e0f983ffde" category="paragraph">이제 보고서 탭이 있으며 특정 계정, 작업 환경 또는 SVM 인벤토리에 대한 모든 백업이 포함된 백업 인벤토리 보고서를 생성할 수 있습니다. 또한 데이터 보호 작업 활동 보고서를 생성할 수 있습니다. 이 보고서는 서비스 수준 계약 모니터링에 도움이 되는 스냅샷, 백업, 클론 및 복원 작업에 대한 정보를 제공합니다. 을 참조하십시오<block ref="76fbdf5883fabf4a66bc2a9d2bdc8b58" category="inline-link-rx"></block>.</block>
+  <block id="5cc0a3c2b0d184efdd93deba5120c0b4" category="section-title">작업 모니터 기능 향상</block>
+  <block id="c17e5b19576d968cb68cb76a1904afca" category="paragraph">이제 Job Monitor 페이지에서 _backup lifeCycle_을 작업 유형으로 검토하여 전체 백업 주기를 추적할 수 있습니다. 또한 BlueXP 타임라인의 모든 작업에 대한 세부 정보를 볼 수 있습니다. 을 참조하십시오<block ref="757859ff46183d1407cb40e64e39a313" category="inline-link-rx"></block>.</block>
+  <block id="5a4b2cac486281ad2280371043da8170" category="section-title">어두운 사이트에서 중요한 BlueXP 백업 및 복구 파일을 자동으로 백업합니다</block>
+  <block id="7109418f2cd9c52748bb2a769336a1d0" category="paragraph">"비공개 모드" 배포라고 하는 인터넷 액세스가 없는 사이트에서 BlueXP 백업 및 복구를 사용하는 경우 BlueXP 백업 및 복구 정보는 로컬 커넥터 시스템에만 저장됩니다. 이 새로운 기능은 중요한 BlueXP 백업 및 복구 데이터를 연결된 StorageGRID 시스템의 버킷에 자동으로 백업하므로 필요한 경우 이 데이터를 새 커넥터에 복원할 수 있습니다.<block ref="7987fffb3d9d5da865ce1f589e4bd463" category="inline-link-rx"></block></block>
+  <block id="813935edc5ac8e9f2c18c722e28dddf8" category="paragraph">이제 AWS, Azure 및 GCP 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 "제한된 모드"로 백업할 수 있습니다. 이를 위해서는 먼저 "제한된" 상업 지역에 커넥터를 설치해야 합니다.<block ref="0eb8533d49e65dbfdd979d6ceb88ebff" category="inline-link-rx"></block>. 을 참조하십시오<block ref="17dde2a04d27e7ad2a9f0a451a7a0e90" category="inline-link-rx"></block> 및<block ref="e88a100423dadabfc9781439f925633d" category="inline-link-rx"></block>.</block>
+  <block id="f1a109ae8d953da8e05cf5534df6b22b" category="list-text">이제 BlueXP 백업 및 복구 UI 및 API에서 시작된 사용자 시작 백업 및 복원 작업과 이러한 진행 중인 백업 작업을 ONTAP 9.13.0 이상을 실행하는 Cloud Volumes ONTAP 시스템의 * 작업 모니터링 * 탭에서 사용할 수 있습니다. 이전 ONTAP 버전은 사용자가 시작한 작업만 표시합니다.</block>
+  <block id="732b0ab66e04245a9430107793fd1d96" category="paragraph"><block ref="3422a8d7040fc7a0bf0d737d556a20c0" category="inline-link-rx"></block>.</block>
+  <block id="df2ad11320e999cf48f0378d98ab0bb4" category="summary">"비공개 모드"라고 하는 인터넷 액세스가 없는 사이트에서 BlueXP 백업 및 복구를 사용하는 경우, BlueXP 백업 및 복구 구성 데이터는 백업이 저장되는 StorageGRID 버킷에 백업됩니다. 향후 BlueXP 커넥터 호스트 시스템에 문제가 있을 경우 새 커넥터를 배포하고 중요한 BlueXP 백업 및 복구 데이터를 복원할 수 있습니다.</block>
+  <block id="5e8c098d325749413b23d5eba5837aad" category="doc">어두운 사이트에서 BlueXP 백업 및 복구 데이터를 복원합니다</block>
+  <block id="b59cf7fafa2a88cc87255a95d75b59fa" category="paragraph">인터넷에 액세스할 수 없는 사이트에서 "비공개 모드" 또는 "다크 사이트"라고 하는 BlueXP 백업 및 복구를 사용하는 경우 백업이 저장되는 StorageGRID 버킷에 BlueXP 백업 및 복구 구성 데이터가 백업됩니다. 향후 BlueXP 커넥터 호스트 시스템에 문제가 있을 경우 새 커넥터를 배포하고 중요한 BlueXP 백업 및 복구 데이터를 복원할 수 있습니다.</block>
+  <block id="39be554c0f9c606fc89e879c11dfe9e9" category="paragraph">BlueXP Connector가 클라우드 공급업체에 배포되거나 인터넷에 액세스할 수 있는 자체 호스트 시스템에 구축된 SaaS 환경에서 BlueXP 백업 및 복구를 사용하는 경우 중요한 모든 BlueXP 백업 및 복구 구성 데이터가 클라우드에서 백업 및 보호됩니다. Connector에 문제가 있는 경우 새 Connector를 생성하고 작업 환경을 추가하면 백업 세부 정보가 자동으로 복원됩니다.</block>
+  <block id="71610d9ba03d16f64930e18ad93ed1ff" category="paragraph">다음 두 가지 유형의 데이터가 백업됩니다.</block>
+  <block id="3f90954724de2ab33270c2e29ef44d4c" category="list-text">BlueXP 백업 및 복구 데이터베이스 - 모든 볼륨, 백업 파일, 백업 정책 및 구성 정보 목록이 포함되어 있습니다.</block>
+  <block id="ae429398e7a8cba2d2c57d308c8ed88a" category="list-text">인덱싱된 카탈로그 파일 - 복원하려는 볼륨 데이터를 찾을 때 검색 및 복원 기능에 사용되는 자세한 인덱스를 포함합니다.</block>
+  <block id="c9cfba3160309eb4416746c049e4b9da" category="paragraph">이 데이터는 1일 1회 자정에 백업되며 각 파일의 최대 7개의 복사본이 유지됩니다. 커넥터가 여러 온-프레미스 ONTAP 작업 환경을 관리하는 경우 BlueXP 백업 및 복구 파일은 먼저 활성화된 작업 환경의 버킷에 위치합니다.</block>
+  <block id="33cc4fba89a0e27990f9826b52a31440" category="admonition">볼륨 데이터는 BlueXP 백업 및 복구 데이터베이스 또는 인덱싱된 카탈로그 파일에 포함되지 않습니다.</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">필요한 것</block>
+  <block id="35a2076fbcaa8ff6ef2d9b9528e86b68" category="paragraph">백업 파일이 저장되는 StorageGRID 버킷에서 최신 데이터베이스 및 인덱스 백업에 액세스해야 합니다.</block>
+  <block id="e53202674690c06ddcfdb1f7eb32a51c" category="list-text">BlueXP 백업 및 복구 MySQL 데이터베이스 파일</block>
+  <block id="0d106b3c1ec4b5f2dce1ea9aa708a3db" category="paragraph">이 파일은 버킷의 다음 위치에 있습니다<block ref="004f71688c8fd4622d305c92c30ed7bf" prefix=" " category="inline-code"></block>, 그리고 이름은 이다<block ref="76dfdaa4fa2f1fa24f016f6559440652" prefix=" " category="inline-code"></block>.</block>
+  <block id="9187ca15364232be9ebf6b59d5bc6421" category="list-text">인덱싱된 카탈로그 백업 zip 파일</block>
+  <block id="a4981f0083fe431764b930206324bfe8" category="paragraph">이 파일은 버킷의 다음 위치에 있습니다<block ref="9abc3fd112ebf9d8d228e5c5b3b930a4" prefix=" " category="inline-code"></block>, 그리고 이름은 이다<block ref="5f3198716099b7e0c9df490b9dd7b132" prefix=" " category="inline-code"></block>.</block>
+  <block id="b47ed0a876023d6bae71fb57f4671fc8" category="list-text">백업 위치에서 새 커넥터 호스트로 MySQL 백업을 복사합니다. 아래의 예제 파일 이름 "CBS_DB_Backup_23_05_2023.sql"을 사용합니다.</block>
+  <block id="56dd14a7bf28acd20f0a0435a86d17e0" category="list-text">인덱싱된 카탈로그 백업 zip 파일을 복사합니다. 예제 파일 이름 "Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip"을 백업 위치에서 "/opt/application/NetApp/CBS" 폴더의 새 커넥터 호스트로 사용합니다.</block>
+  <block id="39ba61f148a69dbb1215b6b10c98b11a" category="list-text">다음 명령을 사용하여 "Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip" 파일의 압축을 풉니다.</block>
+  <block id="3b3267745861675e9a5e88b689b4cda8" category="list-text">ls * 명령을 실행하여 "catalogdb1" 폴더가 하위 폴더 아래에 "changes" 및 "snapshots"와 함께 생성되었는지 확인하십시오.</block>
+  <block id="628b6da02e99f426a81f25cb6fc98d4a" category="summary">BlueXP 백업 및 복구 보고서를 사용하면 조직의 정의된 정책에 따라 중요한 데이터를 보호하고 규정 준수 프로세스에 대한 감사를 효율적으로 지원할 수 있습니다. 백업 인벤토리 보고서를 사용하면 특정 계정, 작업 환경 또는 SVM 인벤토리에 대한 모든 백업을 볼 수 있습니다.</block>
+  <block id="864720dc2dde0915fefa08788be26fb4" category="paragraph">BlueXP 백업 및 복구 보고서를 사용하면 조직의 정의된 정책에 따라 중요한 데이터를 보호하고 규정 준수 요구 사항에 대한 감사를 제공할 수 있습니다.</block>
+  <block id="3763c7668e8aeb422b9407d01d4e6481" category="paragraph">BlueXP 백업 및 복구 보고서를 통해 다음과 같은 작업을 수행할 수 있습니다.</block>
+  <block id="1f9ab6f8211cd0f71cb927f72e9fb635" category="list-text">* 운영 가시성 *: 데이터 보호, 백업 성공률 및 비즈니스 요구에 따른 백업 윈도우 정렬과 관련된 서비스 수준 계약을 모니터링합니다.</block>
+  <block id="8d1b84001f281cc291dc64f6b86aabe5" category="list-text">* 규정 준수 및 감사 *: 지속적인 규정 준수 모니터링을 위해 내부 및 외부 감사 프로세스에서 운영 및 인벤토리 보고서를 사용합니다.</block>
+  <block id="4fe5f2d8eac6fbbc5fe2b7afda003639" category="inline-link-macro">작업 모니터링에 대해 자세히 알아보십시오</block>
+  <block id="1cb1c0a360bde3d2b61c5fdf2d4f7784" category="admonition">보고서 활동은 모든 활동을 감사할 수 있도록 작업 모니터링 로그에서 모니터링됩니다. <block ref="59da704d8a63bf86e651e5839dfb67f7" category="inline-link-macro-rx"></block>.</block>
+  <block id="b9388c240794b8c3c4269e032a040c26" category="section-title">보고서 범위</block>
+  <block id="d4e9fdb94405dbff49a3feb26599c37d" category="paragraph">BlueXP 백업 및 복구 보고서는 다음과 같은 측면에 대한 정보를 제공합니다.</block>
+  <block id="3836890870b8ddc941f0e578f70711aa" category="list-text">* 커넥터 위치 *: 사내 또는 클라우드</block>
+  <block id="6ae02a56712ac674d3b26dbbcb432186" category="list-text">* 출처 *: Cloud Volumes ONTAP, 사내, 애플리케이션 또는 Kubernetes</block>
+  <block id="dd4543716a6056c2ae27a8132114fdf7" category="list-text">* 대상 *: 클라우드 공급자, NetApp StorageGRID 또는 ONTAP S3</block>
+  <block id="e692b7fe3cb28b404bc6ca3af827d329" category="list-text">* ONTAP 버전 *: 9.13.0</block>
+  <block id="cb43048793076d3b50ea5dc6ba1e276c" category="section-title">백업 인벤토리 보고서를 생성합니다</block>
+  <block id="744e03ca9de30802973248efa9a63423" category="paragraph">BlueXP 백업 및 복구 보고서 탭에서 백업 인벤토리 보고서를 생성하고 해당 내용을 필터링할 수 있습니다. 백업 인벤토리 보고서를 사용하면 특정 계정, 작업 환경 또는 SVM 인벤토리에 대한 모든 백업을 볼 수 있습니다.</block>
+  <block id="25d0ed1de7efcdaaece83057c2756e57" category="paragraph">백업 인벤토리 보고서는 다음 정보를 보여 줍니다.</block>
+  <block id="f00e42ce9cfb8f79aa0acd52b34455ab" category="list-text">고객, 작업 환경 및 SVM</block>
+  <block id="6edfddc7ea34dfa23f5f2a25a3af154f" category="list-text">보호 및 비보호 볼륨</block>
+  <block id="fe6088e55d445ff8c5e73198a4b10d33" category="list-text">백업 타겟</block>
+  <block id="44558cf0d95753fc793030cefd55087b" category="list-text">백업 정책이 적용되었습니다</block>
+  <block id="5a3d5f2f9c8335ce82c10c7357125bb4" category="list-text">암호화 스타일(공급자 관리 키 또는 사용자 관리 키)</block>
+  <block id="4f19973809c9f50819d754c5d361feaf" category="list-text">DataLock 및 랜섬웨어 보호 상태(거버넌스, 규정 준수 또는 없음)</block>
+  <block id="edb1f7df1c92279bbf8db022953e164b" category="list-text">아카이브 사용 상태입니다</block>
+  <block id="20e266a6449440b3d67b85ead1217fb1" category="list-text">백업 복사본 수입니다</block>
+  <block id="42cc4dfa35a0b138461f5a0c4d4e085a" category="list-text">백업 유형(예약된 백업 또는 사용자가 시작한 임시 백업)</block>
+  <block id="dd8c5eff0fd4dd0b3760e41db59bfb3a" category="list-text">스토리지 클래스</block>
+  <block id="765c798c0aa1aec3ca7ca68ec68f7e28" category="list-text">스냅샷 레이블</block>
+  <block id="c3701c973b22b5daa3d8508d20412d6a" category="admonition">백업 인벤토리 보고서에는 만료 또는 실패한 백업 정보가 포함되지 않습니다.</block>
+  <block id="eee2652f7acf21a40330ddedb0daf852" category="paragraph">보고서 상단에는 다음 정보를 보여주는 그래프가 있습니다.</block>
+  <block id="ccf68adbbbaa71c4ed09254c95dc35ed" category="list-text">하나 이상의 백업을 포함하는 범위의 볼륨 수입니다</block>
+  <block id="9bfb08d9b221f2ab6e12df721efa4f2e" category="list-text">총 비활성 볼륨 + 활성 볼륨</block>
+  <block id="4eb47739f755a1148ef510f3d10ca279" category="paragraph">백업 인벤토리 보고서는 다음 차트를 보여 줍니다.</block>
+  <block id="8aab504f5ceeb44f855ca81302865568" category="list-text">* 볼륨 백업 상태 *: 선택한 범위에 대해 보호되지 않은 볼륨과 비교하여 보호된 볼륨이 표시됩니다.</block>
+  <block id="c9ef4c767ef6317e3bedf50654e6f9db" category="list-text">* Backup Count 별 볼륨 *: 이 볼륨에 대해 사용 가능한 백업 복제본 수를 기준으로 볼륨을 그룹합니다.</block>
+  <block id="b775ae7fb34855ffeede56666da9a15c" category="list-text">상단 메뉴에서 * Reports * 를 선택합니다.</block>
+  <block id="5c40c1df71ece7a94ad95386b4e61685" category="list-text">백업 인벤토리 * 를 선택합니다.</block>
+  <block id="3b0a91a5ea7b77db2fb83f740b7d1303" category="list-text">보고서 작성 * 을 선택합니다.</block>
+  <block id="d2483952bd8a4702aa9c22f305a82129" category="list-text">계정, 작업 환경 및 SVM을 선택합니다.</block>
+  <block id="da8b2e21cf3fbf1deb6e54876d0bb30e" category="admonition">여러 작업 환경 및 SVM을 선택할 수 있습니다.</block>
+  <block id="e69ed523cba7630efc22d90d22be1746" category="list-text">지난 24시간, 주 또는 월의 기간을 선택합니다.</block>
+  <block id="7c6f87c6386a4b34232097d33f03a21f" category="list-text">(선택 사항) 작업 상태별로 결과를 필터링합니다.</block>
+  <block id="9c45376ca047b231750db710316d88f1" category="list-text">(선택 사항) * CSV 다운로드 * 를 선택하여 보고서 내용을 .csv 형식으로 내보냅니다.</block>
+  <block id="a28d17eeb154e6438fb5bb2ee152ad16" category="section-title">데이터 보호 작업 활동 보고서를 생성합니다</block>
+  <block id="d1a5e05b6fa32d7e732631d7be6bb196" category="paragraph">사전 예방 모니터링을 통해 에코시스템의 모든 리소스를 모니터링하는 데 필요한 노력을 줄일 수 있습니다. ONTAP 9.13.0부터 데이터 보호 작업 활동 보고서는 SLA 모니터링과 백업 및 복구 속도를 추적하는 데 사용할 수 있는 스냅샷, 백업, 클론 및 복원 작업에 대한 정보를 제공합니다.</block>
+  <block id="ff7551dc4db7de0fd9c26ce70b231cb9" category="paragraph">이 보고서는 Cloud Volumes ONTAP, 사내, 애플리케이션 및 Kubernetes의 BlueXP 백업 및 복구 작업에 적용됩니다.</block>
+  <block id="a85e760999107df75174b2541f8ad4e5" category="paragraph">데이터 보호 작업 활동 보고서에는 다음과 같은 정보가 표시됩니다.</block>
+  <block id="63a675511a9f5c9715e777ac4620c78c" category="list-text">작업 유형(백업 또는 복원)</block>
+  <block id="82cf382f9069c5ed2ac1e0548f6d3d23" category="list-text">리소스 이름(볼륨 또는 애플리케이션)</block>
+  <block id="79ea79a1991592553b64d7ab6d30bdc0" category="list-text">작업 상태입니다</block>
+  <block id="d9f1e4c446aaaad69b0db1ad13492e49" category="list-text">시작 및 종료 시간 및 기간</block>
+  <block id="42fc3afb43c7375dc439cb6b3bb8db01" category="list-text">백업 작업에 대한 정책 이름입니다</block>
+  <block id="4ab2deaef3b99e5d7928124135ff9b3d" category="list-text">백업 작업에 대한 스냅샷 레이블입니다</block>
+  <block id="a23288cd564e204da49126237f232303" category="paragraph">페이지 맨 위의 차트는 다음 정보를 표시합니다.</block>
+  <block id="38c5a4aed4718f2d4a82b9d8448f6dc6" category="list-text">유형별 작업</block>
+  <block id="51592292613d18b00665bf8dafc7b3fc" category="list-text">ONTAP 볼륨 백업 및 복원 작업의 수입니다</block>
+  <block id="d83a881b3706cd9ae49054eabbc7dce2" category="list-text">애플리케이션 백업 및 복원 작업의 수입니다</block>
+  <block id="3add170b591596e1f5c3e21fe9e57baa" category="list-text">가상 머신 백업 및 복원 작업 수입니다</block>
+  <block id="92a452f673c02a374b7cc5cf0a868c6a" category="list-text">Kubernetes 백업 및 복원 작업의 수입니다</block>
+  <block id="07536cd20b01777dd415a36c226a1f4a" category="list-text">일일 작업 활동</block>
+  <block id="a0a7952e2e9dc6eba09660f59b4d73a2" category="list-text">데이터 보호 작업 활동 * 을 선택합니다.</block>
+  <block id="c8b12aebf67be0b5d9913d39f23e9c8a" category="list-text">(선택 사항) 작업 상태, 작업 유형(백업 또는 복원) 및 리소스별로 결과를 필터링합니다.</block>
+  <block id="0c7db2bd63c891adb2c0fa4527805d72" category="paragraph">BlueXP 계정 및 개별 Cloud Volumes ONTAP 시스템에 대한 지원 등록이 필요합니다.</block>
+  <block id="28164bf9e881ddc9e7ff74744bfce180" category="paragraph">두 가지 유형의 일련 번호를 등록하면 지원 티켓 열기와 자동 케이스 생성 등의 기능을 사용할 수 있습니다. 아래 설명과 같이 BlueXP에 NetApp Support 사이트(NSS) 계정을 추가하여 등록을 완료합니다.</block>
+  <block id="e922b9aa0836a1d93e11cac0fe4c9004" category="paragraph">다음 클라우드 제공업체 솔루션에 대한 기술 지원은 해당 제품에 대한 BlueXP 설명서의 "도움말 얻기"를 참조하십시오.</block>
+  <block id="5a19febf1dcb23c10e8dcfde64ba764c" category="section-title">NetApp 지원을 위해 BlueXP 계정을 등록합니다</block>
+  <block id="6bbc2ba432f59ab65ee3d8ac5a58336e" category="paragraph">지원을 등록하고 지원 권한을 활성화하려면 BlueXP 계정의 한 사용자가 NetApp Support 사이트 계정을 BlueXP 로그인에 연결해야 합니다. NetApp 지원에 등록하는 방법은 NetApp Support 사이트(NSS) 계정이 이미 있는지 여부에 따라 다릅니다.</block>
+  <block id="b019ab068deba8494415cbd226ca0c4e" category="list-text">BlueXP 콘솔의 오른쪽 상단에서 설정 아이콘을 클릭하고 * 자격 증명 * 을 선택합니다.</block>
+  <block id="41e1e3cff4a07ce2ecc08e6c09f11092" category="list-text">사용자 자격 증명 * 을 클릭합니다.</block>
+  <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">NSS 자격 증명 추가 * 를 선택하고 NetApp Support 사이트(NSS) 인증 프롬프트를 따릅니다.</block>
+  <block id="8c916e828e9e5a3592c8cac4e25928be" category="list-text">등록 프로세스가 성공적으로 완료되었는지 확인하려면 도움말 아이콘을 클릭하고 * 지원 * 을 선택합니다.</block>
+  <block id="8add4eb0d3f6ce61d374f3df3ee4eadf" category="paragraph">리소스 * 페이지에 계정이 지원을 위해 등록되었다는 내용이 표시됩니다.</block>
+  <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">계정 일련 번호와 녹색 확인란이 표시된 스크린샷 및 지원을 위해 등록된 텍스트.</block>
+  <block id="3d183819a15163ef2e2e7d9d764254a9" category="paragraph"><block ref="3d183819a15163ef2e2e7d9d764254a9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d9a01bdcfab6f0a10fc126999b4d5988" category="paragraph">다른 BlueXP 사용자는 BlueXP 로그인과 NetApp Support 사이트 계정을 연결하지 않은 경우 동일한 지원 등록 상태를 볼 수 없습니다. 그러나 BlueXP 계정이 지원을 위해 등록되지 않은 것은 아닙니다. 계정에 있는 한 사용자가 이 단계를 따랐을 경우 계정이 등록되었습니다.</block>
+  <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">기존 사용권 및 제품 번호가 _NO_NSS인 기존 NetApp 고객인 경우 NSS 계정을 만들어 BlueXP 로그인과 연결해야 합니다.</block>
+  <block id="0499bba105f8a891a2c671f1ba99dd34" category="list-text">의 단계를 완료하여 새 NSS 계정을 BlueXP 로그인에 연결합니다 <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">NetApp Support 사이트 계정이 있으면 의 단계를 완료하여 계정을 BlueXP 로그인에 연결합니다 <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="3e616bae81890a6c8fae17c9b45af152" category="section-title">Cloud Volumes ONTAP 지원을 위해 NSS 자격 증명을 연결합니다</block>
+  <block id="d8f0da67cbab6e43f6d266bdab68cdc8" category="paragraph">Cloud Volumes ONTAP에 대해 다음 주요 워크플로를 사용하려면 NetApp Support 사이트 자격 증명을 BlueXP 계정과 연결해야 합니다.</block>
+  <block id="a0518a10626dc11fd00e2d20265ad240" category="list-text">지원을 위해 선불 종량제 Cloud Volumes ONTAP 시스템을 등록합니다</block>
+  <block id="321aadf78ef73521712291b7aba6411f" category="paragraph">NSS 계정을 제공하면 시스템에 대한 지원을 활성화하고 NetApp 기술 지원 리소스에 액세스할 수 있습니다.</block>
+  <block id="d51b2b497db445a16b1c9583c1abbb59" category="list-text">BYOL(Bring Your Own License) 방식으로 Cloud Volumes ONTAP 구축</block>
+  <block id="2ebfeabed40c2270d9fa8325080a4b3e" category="paragraph">BlueXP에서 사용권 키를 업로드하고 구입한 용어에 대한 구독을 활성화하려면 NSS 계정을 제공해야 합니다. 여기에는 기간 갱신을 위한 자동 업데이트가 포함됩니다.</block>
+  <block id="f5135b68b75a8404803a1eb438e40c5e" category="list-text">Cloud Volumes ONTAP 소프트웨어를 최신 릴리즈로 업그레이드하는 중입니다</block>
+  <block id="39f382b97080640c75604b5890f3a5d3" category="paragraph">NSS 자격 증명을 BlueXP 계정과 연결하는 것은 BlueXP 사용자 로그인과 연결된 NSS 계정과 다릅니다.</block>
+  <block id="e3bc6d35311568d55f1c8ea11984b964" category="paragraph">이러한 NSS 자격 증명은 특정 BlueXP 계정 ID와 연결됩니다. BlueXP 계정에 속한 사용자는 * 지원 &gt; NSS 관리 * 에서 이러한 자격 증명에 액세스할 수 있습니다.</block>
+  <block id="f1d083b91d676646b3b9c05e92adeceb" category="sidebar">데이터 보호를 모니터링합니다</block>
+  <block id="7b3531405cf0ef11d1ff0b6e4af62659" category="sidebar">어두운 사이트에서 BlueXP 백업 및 복구 데이터베이스를 복원합니다</block>
 </blocks>
