@@ -1138,37 +1138,26 @@
   <block id="7effdaab63f2a455255267b1c45a602d" category="section-title">계정 간 VNET 피어링을 설정합니다</block>
   <block id="7be5dff9f26dd0cfb7e5896d6142d4c7" category="list-text">Azure 포털에 로그인하고 집에서 가상 네트워크를 선택합니다.</block>
   <block id="24d6ea8c256f982be40d4e8e87a36c2c" category="list-text">구독 1로 사용 중인 가입을 선택하고 피어링을 설정할 VNET를 클릭합니다.</block>
-  <block id="010f020ec46dae654334c56b074681e9" category="paragraph"><block ref="010f020ec46dae654334c56b074681e9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ff903d724a3c43c1027ecc76bb702e6b" category="list-text">cbsnetwork * 를 선택하고 왼쪽 패널에서 * Pebsland * 를 클릭한 다음 * Add * 를 클릭합니다.</block>
-  <block id="48f2a3e5416499a845b82d79729c9d24" category="paragraph"><block ref="48f2a3e5416499a845b82d79729c9d24" category="inline-image-macro-rx" type="image"></block></block>
   <block id="29352d6eba72ea7dbb14542cfe329be6" category="list-text">피어링 페이지에 다음 정보를 입력한 다음 * 추가 * 를 클릭합니다.</block>
   <block id="35a314f287f704bbad5bca1d051178df" category="list-text">이 네트워크의 피어링 링크 이름: 임의의 이름을 지정하여 피어링 연결을 식별할 수 있습니다.</block>
   <block id="23a50db2830b340ce45406a69594314e" category="list-text">원격 가상 네트워크 피어링 링크 이름: 원격 VNET를 식별할 이름을 입력합니다.</block>
   <block id="23251ed1ab3cfb08802622b5c2f690d3" category="list-text">모든 선택 항목을 기본값으로 유지합니다.</block>
   <block id="f6158ca7f18c6d458f457bd8d96c59b3" category="list-text">구독에서 구독을 선택합니다. 2.</block>
   <block id="4949fa102af5d259068b046bbcf72842" category="list-text">가상 네트워크에서, 피어링을 설정할 서브스크립션 2의 가상 네트워크를 선택합니다.</block>
-  <block id="25e65bc02464ec916d34bab534d7035e" category="paragraph"><block ref="25e65bc02464ec916d34bab534d7035e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1995f9fb02d5dc1ec670c575158c4755" category="list-text">서브스크립션 2 VNET에서 동일한 단계를 수행하고 서브스크립션 1의 가입 및 원격 VNET 세부 정보를 지정합니다.</block>
-  <block id="70ad9b34a75d793ad5ca4592ae835d9e" category="paragraph"><block ref="70ad9b34a75d793ad5ca4592ae835d9e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="51578c8638d5ef3ad9f76229b740c313" category="paragraph">피어링 설정이 추가됩니다.</block>
-  <block id="daacd9916a3d67dff4ea461056675145" category="paragraph"><block ref="daacd9916a3d67dff4ea461056675145" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2aa38dadb98b1cc114f5605565fc8460" category="section-title">저장소 계정에 대한 개인 끝점을 만듭니다</block>
   <block id="65f2f7b74f3cf2f1a25c4c81a6aaa2ee" category="paragraph">이제 저장소 계정에 대한 개인 끝점을 만들어야 합니다. 이 예에서는 스토리지 계정이 구독 1에 생성되고 Cloud Volumes ONTAP 시스템이 구독 2에서 실행되고 있습니다.</block>
   <block id="720247e8961069a5c025366867b8b8fb" category="admonition">다음 작업을 수행하려면 네트워크 기여자 권한이 필요합니다.</block>
-  <block id="1da2c465a0473c669ecf45690f9c77f8" category="list-text">저장소 계정 &gt; 네트워킹 &gt; 개인 끝점 연결로 이동하고 * + 개인 끝점 * 을 클릭합니다.</block>
-  <block id="ab018e3a2da472dd06615e08149c8ae2" category="paragraph"><block ref="ab018e3a2da472dd06615e08149c8ae2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2e0fccb2492335abb1bf03e7895e57b1" category="list-text">개인 Endpoint_Basics_페이지에서 다음을 수행합니다.</block>
   <block id="dcf7853e5720d1d4006d6354680dfca5" category="list-text">끝점 이름을 입력합니다.</block>
   <block id="8632ba911e67cd674d7aa46e9c33ca03" category="list-text">영역을 선택합니다.</block>
-  <block id="8de80de63c22bf5501105fe1221042c7" category="paragraph"><block ref="8de80de63c22bf5501105fe1221042c7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="86429c7405c9ff23bac7996b6cc76306" category="list-text">Resource_page에서 타겟 하위 리소스를 * blob * 로 선택합니다.</block>
-  <block id="78ce42b66c723160afef603d60cfbd83" category="paragraph"><block ref="78ce42b66c723160afef603d60cfbd83" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4f45f5d0c19691a0eac82881ce091080" category="list-text">구성 페이지에서 다음을 수행합니다.</block>
   <block id="e17a8b8467cfbf9720f1af51cc6f6419" category="list-text">가상 네트워크 및 서브넷을 선택합니다.</block>
   <block id="a9faeeb34299d046e7a14a5d1df3950a" category="list-text">예 * 라디오 버튼을 클릭하여 "사설 DNS 영역과 통합"하십시오.</block>
-  <block id="cec5fb61420f116b9d3e7afb6183499d" category="paragraph"><block ref="cec5fb61420f116b9d3e7afb6183499d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="872d4b2a2e61a2a07fc61a362e17881d" category="list-text">Private DNS zone(개인 DNS 영역) 목록에서 올바른 지역에서 Private Zone(개인 영역)이 선택되어 있는지 확인하고 * Review(검토) + Create(생성) * 를 클릭합니다.</block>
-  <block id="865c712e84080e3a8a2a2e9f3ced5e13" category="paragraph"><block ref="865c712e84080e3a8a2a2e9f3ced5e13" category="inline-image-macro-rx" type="image"></block></block>
   <block id="547e2a5eac8fbdbb2c8f7a56f61c8cbe" category="paragraph">이제 스토리지 계정(서브스크립션 1)은 서브스크립션 2에서 실행 중인 Cloud Volumes ONTAP 시스템에 액세스할 수 있습니다.</block>
   <block id="5203ff4556ed5037a1fa6c4dbbdecaa2" category="list-text">다른 AWS 계정에서 백업을 생성하기 위해 필요한 설정</block>
   <block id="89a08cbf2161e1e600bebd7775c52152" category="paragraph">다음 다이어그램에서는 * public connection * 메서드와 구성 요소 간에 준비해야 하는 연결을 보여 줍니다. 사내에 설치한 Connector 또는 Azure VNET에 배포한 Connector를 사용할 수 있습니다.</block>
@@ -1291,9 +1280,6 @@
   <block id="ad3ed17097701c874fe6d082544e8ccb" category="list-text">볼륨 * 탭을 클릭하여 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 시스템에 대해 백업된 볼륨 목록을 표시합니다.</block>
   <block id="f50c680c14d8afac3d005a6dee0819cd" category="list-text">백업 설정 페이지에서 을 클릭합니다 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 정책 설정을 변경하려는 작업 환경의 경우 * 정책 관리 * 를 선택합니다.</block>
   <block id="9c230c0e21c24d1d4e90c857d5894cbf" category="list-text">Manage Policies_ 페이지에서 해당 작업 환경에서 변경할 백업 정책에 대해 * Edit * 를 클릭합니다.</block>
-  <block id="41b3017e09c02234f784bce8cad145cc" category="paragraph">참고 를 클릭할 수 있습니다 <block ref="6be018d461f0945956e868c034bab91d" category="inline-image-macro-rx" type="image"></block> 정책의 전체 세부 정보를 봅니다.</block>
-  <block id="9f02efef52b11198bc6f5331a1f0845b" category="list-text">Edit Policy_페이지에서 를 클릭합니다 <block ref="6be018d461f0945956e868c034bab91d" category="inline-image-macro-rx" type="image"></block> 스케줄 및/또는 백업 보존을 변경하려면 _ Labels &amp; Retention _ 섹션을 확장하고 * Save * 를 클릭합니다.</block>
-  <block id="d664f6c85ff8f12dd3e11609510142dc" category="list-text">Add New Policy_페이지에서 를 클릭합니다 <block ref="6be018d461f0945956e868c034bab91d" category="inline-image-macro-rx" type="image"></block> Labels &amp; Retention _ 섹션을 확장하여 스케줄 및 백업 보존을 정의하려면 * Save * 를 클릭합니다.</block>
   <block id="6ee3062ac668cf28f71bf489fd741bcd" category="inline-link-macro">DataLock 및 랜섬웨어 보호에 대해 자세히 알아보십시오</block>
   <block id="57cb86318c67c4a35e81edad7ab08d71" category="paragraph">임시 백업을 생성할 때 소스 볼륨에 스냅샷이 생성됩니다. 이 스냅샷은 일반 스냅샷 스케줄의 일부가 아니므로 회전되지 않습니다. 백업이 완료되면 소스 볼륨에서 이 스냅샷을 수동으로 삭제할 수 있습니다. 이렇게 하면 이 스냅샷과 관련된 블록을 해제할 수 있습니다. 스냅샷의 이름은 CBS-SNSHOT-adhoc 으로 시작됩니다.<block ref="7e565776b86561f26a3208af24c76dc9" category="inline-link-rx"></block>.</block>
   <block id="66f850eb747f4dcaaf562e34ad616b77" category="section-title">볼륨 백업에서 랜섬웨어 스캔을 실행합니다</block>
@@ -3260,7 +3246,6 @@
   <block id="8c77f5d3d64f827c40ceefa4640053e2" category="paragraph"><block ref="8c77f5d3d64f827c40ceefa4640053e2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7ef4f9c84de50739290a8a747d41cb8d" category="paragraph"><block ref="7ef4f9c84de50739290a8a747d41cb8d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c73a012d76ee166592a25a8ebd3e01ef" category="summary">BlueXP 백업 및 복구를 사용하면 소스 Cloud Volumes ONTAP 볼륨이 있는 위치와 다른 Azure 계정에 백업 파일을 생성할 수 있습니다. 이는 BlueXP 커넥터가 있는 계정과 다릅니다.</block>
-  <block id="47528e7beca17f8cf55f4a42e05d76e4" category="paragraph">BlueXP 백업 및 복구를 사용하면 소스 Cloud Volumes ONTAP 볼륨이 상주하는 위치와 다른 Azure 계정에서 백업 파일을 생성할 수 있습니다. 또한 두 계정은 BlueXP Connector가 있는 계정과 다를 수 있습니다.</block>
   <block id="4bd946b57d99bd5b3f564041e093db5c" category="list-text">Cloud Volumes ONTAP 시스템에서 BlueXP 백업 및 복구를 다시 활성화해 보십시오. 이 경우 성공적으로 수행되어야 합니다.</block>
   <block id="771af8d455877d836933c4cd418d328e" category="summary">각 ONTAP 시스템에 대해 BlueXP 백업 및 복구를 활성화할 때 설정하는 여러 클러스터 레벨 백업 설정을 변경할 수 있습니다. "기본" 백업 설정으로 적용되는 일부 설정을 수정할 수도 있습니다. 여기에는 스토리지 키 변경, 오브젝트 스토리지에 대한 백업 전송 속도, 기간별 스냅샷 복사본을 백업 파일로 내보낼 것인지 여부 등이 포함됩니다.</block>
   <block id="bc9c577416d12a6ca412691275080bbc" category="paragraph">작업 환경에 대해 BlueXP 백업 및 복구를 활성화하면 기본적으로 ONTAP는 무제한 대역폭을 사용하여 작업 환경의 볼륨에서 객체 스토리지로 백업 데이터를 전송할 수 있습니다. 백업 트래픽이 일반 사용자 워크로드에 영향을 주는 경우 전송 중에 사용되는 네트워크 대역폭의 양을 조절할 수 있습니다. 최대 전송 속도로 1에서 1,000 Mbps 사이의 값을 선택할 수 있습니다.</block>
@@ -3786,7 +3771,6 @@
   <block id="b9388c240794b8c3c4269e032a040c26" category="section-title">보고서 범위</block>
   <block id="d4e9fdb94405dbff49a3feb26599c37d" category="paragraph">BlueXP 백업 및 복구 보고서는 다음과 같은 측면에 대한 정보를 제공합니다.</block>
   <block id="3836890870b8ddc941f0e578f70711aa" category="list-text">* 커넥터 위치 *: 사내 또는 클라우드</block>
-  <block id="6ae02a56712ac674d3b26dbbcb432186" category="list-text">* 출처 *: Cloud Volumes ONTAP, 사내, 애플리케이션 또는 Kubernetes</block>
   <block id="dd4543716a6056c2ae27a8132114fdf7" category="list-text">* 대상 *: 클라우드 공급자, NetApp StorageGRID 또는 ONTAP S3</block>
   <block id="e692b7fe3cb28b404bc6ca3af827d329" category="list-text">* ONTAP 버전 *: 9.13.0</block>
   <block id="cb43048793076d3b50ea5dc6ba1e276c" category="section-title">백업 인벤토리 보고서를 생성합니다</block>
@@ -3864,4 +3848,36 @@
   <block id="e3bc6d35311568d55f1c8ea11984b964" category="paragraph">이러한 NSS 자격 증명은 특정 BlueXP 계정 ID와 연결됩니다. BlueXP 계정에 속한 사용자는 * 지원 &gt; NSS 관리 * 에서 이러한 자격 증명에 액세스할 수 있습니다.</block>
   <block id="f1d083b91d676646b3b9c05e92adeceb" category="sidebar">데이터 보호를 모니터링합니다</block>
   <block id="7b3531405cf0ef11d1ff0b6e4af62659" category="sidebar">어두운 사이트에서 BlueXP 백업 및 복구 데이터베이스를 복원합니다</block>
+  <block id="444a8054fb02fac3bf777cf53bfc46a2" category="paragraph">백업 및 복구는 권한 모델로 _ Azure 액세스 정책 _ 을(를) 지원합니다. Azure 역할 기반 액세스 제어 _ (Azure RBAC) 권한 모델은 현재 지원되지 않습니다.</block>
+  <block id="f101fabb54ec4d8b174645abe2ebf725" category="paragraph">BlueXP 백업 및 복구를 사용하면 소스 Cloud Volumes ONTAP 볼륨이 상주하는 위치와 다른 Azure 계정에서 백업 파일을 생성할 수 있습니다. 두 계정은 BlueXP Connector가 있는 계정과 다를 수 있습니다.</block>
+  <block id="07d34410905760bde20fdb63ed31144f" category="inline-image-macro">정액 요금제 1과 피어링을 설정할 VNET를 선택하는 스크린샷</block>
+  <block id="fb1dc02cd132935f4053af66afc48c60" category="paragraph"><block ref="fb1dc02cd132935f4053af66afc48c60" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="83e915c6e7e7062c9cd8608b5e3f2a01" category="inline-image-macro">가입 1을 위해 VNET용 피어링을 추가하는 스크린샷.</block>
+  <block id="dc5db5eb0a0b4ec35420ffab93b73ace" category="paragraph"><block ref="dc5db5eb0a0b4ec35420ffab93b73ace" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="709eb5d0485c10464b3571c76182a410" category="inline-image-macro">피어링을 설정할 구독 2와 VNET를 선택하는 스크린샷.</block>
+  <block id="a00f2c9eab0cd0391c31d7894688a92e" category="paragraph"><block ref="a00f2c9eab0cd0391c31d7894688a92e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="79520a9e99311190ee909e9f8d5dd60c" category="inline-image-macro">가입 2를 위해 VNET용 피어링을 추가하는 스크린샷.</block>
+  <block id="17939e4b4a2986d200c88aae6366e213" category="paragraph"><block ref="17939e4b4a2986d200c88aae6366e213" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="707727b212e0d31a584b632b8cd67ff6" category="inline-image-macro">피어링 구성 결과를 보여주는 스크린샷</block>
+  <block id="5a085bdfc0e83ffb98f87e8ff91cad9d" category="paragraph"><block ref="5a085bdfc0e83ffb98f87e8ff91cad9d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f5795d526ae72abf715b69fcc042d544" category="list-text">저장소 계정 &gt; 네트워킹 &gt; 개인 끝점 연결로 이동하고 * + 개인 끝점 * 을 클릭합니다.</block>
+  <block id="f254275661fff420bcb804a971000888" category="inline-image-macro">저장소 계정의 개인 끝점 구성을 여는 스크린샷.</block>
+  <block id="1e5251a20d1487ab70b1904135f48e64" category="paragraph"><block ref="1e5251a20d1487ab70b1904135f48e64" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ccdcc6bc4b20620f4a75b50e38f7dbd2" category="inline-image-macro">개인 끝점 기본 사항 페이지의 세부 정보를 보여 주는 스크린샷</block>
+  <block id="ea692baa5211d33eb5ba3eaf981083c9" category="paragraph"><block ref="ea692baa5211d33eb5ba3eaf981083c9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="18dc15061e7476362b8ef290cd96ae03" category="inline-image-macro">개인 끝점 리소스 페이지의 세부 정보를 보여 주는 스크린샷</block>
+  <block id="6d05ebaf7d4c763d545c7818e77f7daa" category="paragraph"><block ref="6d05ebaf7d4c763d545c7818e77f7daa" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c1dfe7d36721bb06cc5b4caa70a9a99d" category="inline-image-macro">개인 끝점 구성 페이지의 세부 정보를 보여 주는 스크린샷</block>
+  <block id="727ec019e03973afc5f16b2144de9e80" category="paragraph"><block ref="727ec019e03973afc5f16b2144de9e80" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fd1f1bbf131c989b07443ab96601cbbe" category="inline-image-macro">개인 끝점 구성 페이지에서 개인 영역 선택을 보여 주는 스크린샷</block>
+  <block id="fe5eb2266351d487097e58cd93818ab8" category="paragraph"><block ref="fe5eb2266351d487097e58cd93818ab8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e5d5b752cdb14505ba3ec9b2bd2be013" category="section-title">불일치 정책 레이블에 대한 추가 알림 알림입니다</block>
+  <block id="92c58fc811dad1461929803e5f5d9205" category="paragraph">새 백업 경고가 추가되었습니다. "스냅샷 정책 레이블이 일치하지 않아 백업 파일이 생성되지 않았습니다." 백업 정책에 정의된 _label_이 스냅샷 정책에 matching_label_이 없는 경우 백업 파일이 생성되지 않습니다. 볼륨 스냅샷 정책에 누락 레이블을 추가하려면 시스템 관리자 또는 ONTAP CLI를 사용해야 합니다.</block>
+  <block id="809c5429fbc9708f2c659ca056b2c098" category="paragraph"><block ref="1fa18ad5aa31d9e300f41aa2d9a59bdd" category="inline-link-rx"></block>.</block>
+  <block id="4dfad254c5822c7c53407757d42fec0e" category="list-text">* 소스 *: Cloud Volumes ONTAP 볼륨, 온프레미스 ONTAP 볼륨, 애플리케이션 또는 Kubernetes 영구 볼륨</block>
+  <block id="0231cb971bb3375c29d3f87768ec4489" category="inline-image-macro">아래쪽 화살표 버튼</block>
+  <block id="a4b9e2d363f6ae41eb2ce095cefe91de" category="paragraph">참고 를 클릭할 수 있습니다 <block ref="68009ec8a10651d6de3d648624efb837" category="inline-image-macro-rx" type="image"></block> 정책의 전체 세부 정보를 봅니다.</block>
+  <block id="ba85eaabcb89510a63df45c18680ba9a" category="list-text">Edit Policy_페이지에서 를 클릭합니다 <block ref="68009ec8a10651d6de3d648624efb837" category="inline-image-macro-rx" type="image"></block> 스케줄 및/또는 백업 보존을 변경하려면 _ Labels &amp; Retention _ 섹션을 확장하고 * Save * 를 클릭합니다.</block>
+  <block id="aafc4372a2c5748961cfe050c997ca42" category="list-text">Add New Policy_페이지에서 를 클릭합니다 <block ref="68009ec8a10651d6de3d648624efb837" category="inline-image-macro-rx" type="image"></block> Labels &amp; Retention _ 섹션을 확장하여 스케줄 및 백업 보존을 정의하려면 * Save * 를 클릭합니다.</block>
+  <block id="27b14a69b7d1dfde3096980cc202af91" category="sidebar">데이터 보호 범위에 대한 보고서를 생성합니다</block>
 </blocks>

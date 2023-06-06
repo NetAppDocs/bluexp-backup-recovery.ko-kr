@@ -280,6 +280,9 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.htm
 === 백업을 위한 Azure Blob 저장소 준비
 
 . 기본 Microsoft 관리 암호화 키를 사용하는 대신 정품 인증 마법사에서 데이터 암호화에 사용자 지정 관리 키를 사용할 수 있습니다. 이 경우 Azure 가입, 키 저장소 이름 및 키가 필요합니다. https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["자신의 키를 사용하는 방법을 확인하십시오"^].
++
+백업 및 복구는 권한 모델로 _ Azure 액세스 정책 _ 을(를) 지원합니다. Azure 역할 기반 액세스 제어 _ (Azure RBAC) 권한 모델은 현재 지원되지 않습니다.
+
 . 온프레미스 데이터 센터에서 VNET로 공용 인터넷을 통해 보다 안전하게 연결하려면 활성화 마법사에서 Azure 프라이빗 끝점을 구성하는 옵션이 있습니다. 이 경우 이 연결에 대한 VNET 및 서브넷을 알아야 합니다. https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview["개인 엔드포인트 사용에 대한 자세한 내용을 참조하십시오"^].
 
 

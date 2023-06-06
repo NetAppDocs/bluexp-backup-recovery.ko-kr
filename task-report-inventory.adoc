@@ -32,7 +32,7 @@ NOTE: 보고서 활동은 모든 활동을 감사할 수 있도록 작업 모니
 BlueXP 백업 및 복구 보고서는 다음과 같은 측면에 대한 정보를 제공합니다.
 
 * * 커넥터 위치 *: 사내 또는 클라우드
-* * 출처 *: Cloud Volumes ONTAP, 사내, 애플리케이션 또는 Kubernetes
+* * 소스 *: Cloud Volumes ONTAP 볼륨, 온프레미스 ONTAP 볼륨, 애플리케이션 또는 Kubernetes 영구 볼륨
 * * 대상 *: 클라우드 공급자, NetApp StorageGRID 또는 ONTAP S3
 * * ONTAP 버전 *: 9.13.0
 
