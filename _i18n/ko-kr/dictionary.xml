@@ -480,7 +480,6 @@
   <block id="168d35838d683733c740a323264bac1d" category="section-title">클라우드에서 백업 보기</block>
   <block id="c33fc98cec373e6cbd63a467d0d4c31d" category="inline-image-macro">아이콘을 클릭하여 작업을 선택합니다</block>
   <block id="cce0c57f1dd3c02ce23659f1d60e084c" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 해당 응용 프로그램에 대해 * 세부 정보 보기 * 를 클릭합니다.</block>
-  <block id="bfc776a7bcfd64bdb79a1cc9129389b5" category="list-text">Microsoft SQL Server 데이터베이스의 경우 각 백업의 전체 백업과 종료 날짜만 나열됩니다. 백업을 선택하고 데이터베이스를 온-프레미스 SnapCenter 서버로 복원할 수 있습니다.</block>
   <block id="2b1eee0a42e21027068e7df802c6472d" category="admonition">클라우드 보호를 설정하기 전에 생성된 백업은 복구에 표시되지 않습니다.</block>
   <block id="5c5b6e574410e26058b642e5352a6fcc" category="section-title">데이터베이스 레이아웃 변경</block>
   <block id="3aae671182c94c64ed27f9b2256eb996" category="list-text">설정 * 드롭다운에서 * SnapCenter 서버 * 를 클릭합니다.</block>
@@ -494,21 +493,7 @@
   <block id="faaa9a060b63aacd7addee167c6e8a89" category="paragraph">작업을 시작하면 작업이 시작되었다는 창이 나타납니다. 링크를 클릭하여 작업을 모니터링할 수 있습니다.</block>
   <block id="01bfab2b240fd3d6c6cdf0568c743360" category="list-text">각 하위 작업의 하위 작업 및 상태를 보려면 기본 작업을 클릭합니다.</block>
   <block id="a5996295dff80ec054089a5c1929ceca" category="section-title">CA 인증서를 구성합니다</block>
-  <block id="d06f6ee099078cedbc020bdd466c77ce" category="paragraph">CA 인증서가 있는 경우 루트 CA 인증서를 커넥터 컴퓨터에 수동으로 복사해야 합니다.</block>
   <block id="4839d2f25cc35b249d5db15efa1afd75" category="paragraph">* 단계 *</block>
-  <block id="ca13813f9bbda0fee941b11bc9a82513" category="list-text">Docker 에이전트에서 액세스할 수 있는 볼륨에 인증서를 복사합니다.</block>
-  <block id="f1a98c411b3d586c83f12a004f15734c" category="list-text">"cd /var/lib/docker/volumes/cloudmanager_snapcenter_volume/_data/mkdir sc_certs"</block>
-  <block id="b466e90a2c69435ee6e97f3cb0dfd4a1" category="list-text">"chmod 777 sc_certs"</block>
-  <block id="69418d2be0e53842b99f36236a6c07d0" category="list-text">RootCA 인증서 파일을 커넥터 컴퓨터의 위 폴더로 복사합니다.</block>
-  <block id="3250a589368ab4e3af465888f66d61e2" category="paragraph">'cp&lt;path on connector&gt;/&lt;filename&gt;/var/lib/docker/volumes/cloudmanager_snapcenter_volume/_data/sc_certs'</block>
-  <block id="e1a27f3458e49e9fc95659f39a22b898" category="list-text">Docker 에이전트에서 액세스할 수 있는 볼륨에 CRL 파일을 복사합니다.</block>
-  <block id="7fda4b78acc84d7c2270b1b6c5b8dd93" category="list-text">"cd /var/lib/docker/volumes/cloudmanager_snapcenter_volume/_data/mkdir sc_CRL"</block>
-  <block id="413163fb1a0f5c212808a5d532ab45bb" category="list-text">"chmod 777 sc_CRL"</block>
-  <block id="dfd0c43da9224f0c5537b66979a55189" category="list-text">CRL 파일을 커넥터 시스템의 위 폴더에 복사합니다.</block>
-  <block id="4db36e6fb99acd4baa9d9a99926204b6" category="paragraph">'cp&lt;path on connector&gt;/&lt;filename&gt;/var/lib/docker/volumes/cloudmanager_snapcenter_volume/_data/sc_CRL'</block>
-  <block id="f66a35b8c8476dffd82a65fd5e691b3b" category="list-text">인증서와 CRL 파일을 복사한 후 Cloud Backup for Apps 서비스를 다시 시작합니다.</block>
-  <block id="d9bedb6ca0e8e6bbd10eebe3f471507d" category="list-text">'SUDO Docker Exec cloudmanager_snapcenter SED-I's/skipSCCertValidation: true/skipSCCertValidation: false/g'/opt/NetApp/cloudmanager-snapcenter-agent/config/config.yml'</block>
-  <block id="9eb706636b25b810332dcdc9d194f80b" category="list-text">'SUDO Docker restart cloudmanager_snapcenter'를 선택합니다</block>
   <block id="16d4cdec56b3c490095eb1c28b330e1f" category="doc">Cloud Volumes ONTAP 데이터를 Google 클라우드 스토리지에 백업</block>
   <block id="1bb2c0187913772397ee94ba85aff22c" category="list-text">백업이 위치할 스토리지 공간에 대한 유효한 GCP 구독이 있습니다.</block>
   <block id="721df1cfc096c8fe936071e3747d828d" category="list-text">Google Cloud Project에는 사전 정의된 스토리지 관리자 역할이 있는 서비스 계정이 있습니다.</block>
@@ -662,41 +647,29 @@
   <block id="093c813823c463b6495f1ab6601f3c1a" category="paragraph">제어 파일 복원이 있는 전체 데이터베이스만 지원됩니다. 아카이브 로그가 AFS에 없는 경우 복구에 필요한 아카이브 로그가 포함된 위치를 지정해야 합니다.</block>
   <block id="8377760bcd9824d8b414e96454b1f639" category="list-text">필터 기준 * 필드에서 필터 * 유형 * 을 선택하고 드롭다운에서 * Oracle * 을 선택합니다.</block>
   <block id="356a014d650e5ff75127d5c7f8512c9b" category="list-text">복원하려는 데이터베이스에 해당하는 * View Details * 를 클릭하고 * Restore * 를 클릭합니다.</block>
-  <block id="1dbebac3a4764e845f4bce351937d6b4" category="list-text">복원 유형 페이지에서 다음 작업을 수행합니다.</block>
-  <block id="5fece95e369981cd56f2f39bd68e7428" category="list-text">전체 데이터베이스와 함께 제어 파일을 복원하려면 * 제어 파일 * 을 선택합니다.</block>
   <block id="e4602b24fbe5e3160ce64aa6ae40879b" category="paragraph">데이터베이스가 열려 있는 상태이고 복구를 위해 데이터베이스가 마운트된 상태여야 하는 경우 이 확인란을 선택한 경우에만 데이터베이스 상태가 변경됩니다.</block>
-  <block id="2365d9113b1bc87e6269c4e30fec989f" category="list-text">복구 범위 페이지에서 다음 작업을 수행합니다.</block>
   <block id="2ff2cf16b39b4e9577d64c948d199af9" category="list-text">복구 범위를 지정합니다.</block>
   <block id="61a6d655671eebbd633c1d84fae09e17" category="cell">만약...</block>
   <block id="5e2ad6fd9deb412d871137094ee43ef0" category="cell">수행할 작업...</block>
   <block id="88b89a3ecc8bae770512fd2757a77e5c" category="paragraph">마지막 트랜잭션으로 복구하려고 합니다</block>
   <block id="6b88fe93605b37a71fe57b312195af04" category="paragraph">모든 로그 * 를 선택합니다.</block>
   <block id="00c60421974c4b44bc58c184a86fbd8d" category="paragraph">특정 SCN(시스템 변경 번호)으로 복구하려는 경우</block>
-  <block id="5dbfc48b50c2e9d92b94241efe780a08" category="paragraph">SCN(시스템 변경 번호) * 까지 * 를 선택합니다.</block>
-  <block id="a131df3c4a6be3323871fa13b2ee8db4" category="paragraph">특정 데이터 및 시간으로 복구하려는 경우</block>
   <block id="5937168e92a38a60d4c1c57f8fcd693e" category="paragraph">날짜 및 시간 * 을 선택합니다.</block>
   <block id="f9e5e4d6cf47098ebd8fa6bc6e909e1d" category="paragraph">데이터베이스 호스트의 표준 시간대의 날짜 및 시간을 지정해야 합니다.</block>
   <block id="1c69cfcc6b3635cc197c0e3104cbd69f" category="paragraph">복구하기를 원하지 않습니다</block>
   <block id="2243d9f85be8c57105c8d2eaabc0b881" category="paragraph">No recovery * 를 선택합니다.</block>
-  <block id="48607cd1d278aa7004b0e2145533fde0" category="paragraph">외부 아카이브 로그 위치를 지정하려는 경우</block>
   <block id="5b5efc09105794c60a1df368de3f2626" category="list-text">복구 후 데이터베이스를 열려면 이 확인란을 선택합니다.</block>
   <block id="f6926e5d6abfa62c5d6ac4b2502f34a0" category="paragraph">RAC 설정에서는 복구에 사용되는 RAC 인스턴스만 복구 후 열립니다.</block>
   <block id="edf569ed393967b7a0079a7341765e10" category="list-text">세부 정보를 검토하고 * Restore * 를 클릭합니다.</block>
   <block id="86ec2a14bbb020ef6f3317be9dc1ae88" category="summary">SQL Server 데이터베이스를 클라우드에서 사내 SnapCenter 서버로 복원할 수 있습니다.</block>
   <block id="25cc2482c6aabbea855686d0229477f9" category="doc">SQL Server 데이터베이스를 복원합니다</block>
-  <block id="c87de8f0f235e22a2827fdcbc98c6525" category="paragraph">SQL Server 데이터베이스를 동일한 호스트 또는 대체 호스트로 복원할 수 있습니다. 로그 백업 복구 및 가용성 그룹의 재시딩은 지원되지 않습니다.</block>
   <block id="77fc9c04c5d3905b02c1cb2816c3ff56" category="list-text">필터 기준 * 필드에서 필터 * 유형 * 을 선택하고 드롭다운에서 * SQL * 을 선택합니다.</block>
   <block id="f99dd373d02a7eb7954d187b270ff262" category="list-text">사용 가능한 모든 백업을 보려면 * 세부 정보 보기 * 를 클릭합니다.</block>
   <block id="92fd09b3a3ba47a9aedc0bd313e6f6d3" category="list-text">백업을 선택하고 * 복원 * 을 클릭합니다.</block>
-  <block id="3fb7b85e502bd2e3141073936bd444dc" category="list-text">데이터베이스 파일을 복원할 위치를 선택합니다.</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">설명</block>
-  <block id="88fad46f0016d9b2e879793d579db695" category="paragraph">호스트 이름을 선택하고 데이터베이스 이름(선택 사항)을 입력한 다음 인스턴스를 선택하고 복구 경로를 지정합니다.</block>
   <block id="ee76979200a6d98dbc4fb09493e6e3fa" category="admonition">대체 경로에 제공된 파일 확장자는 원본 데이터베이스 파일의 파일 확장명과 동일해야 합니다.</block>
-  <block id="d43ed86d76b9ca21bec3b8663dc3ecc6" category="paragraph">Restore Scope 페이지에 * Restore the database to an alternate host * 옵션이 표시되지 않으면 브라우저 캐시를 지웁니다.</block>
-  <block id="2c1862acab2937e131b370bf16b90783" category="list-text">사전 복원 옵션 * 페이지에서 다음 옵션 중 하나를 선택합니다.</block>
   <block id="940df971899f651cb88b01e557f54200" category="list-text">같은 이름으로 데이터베이스를 복원하려면 * 복원 중에 같은 이름으로 데이터베이스 덮어쓰기 * 를 선택합니다.</block>
   <block id="a73ea294ef31ea4d248721452fc4d030" category="list-text">데이터베이스를 복원하고 기존 복제 설정을 유지하려면 * SQL 데이터베이스 복제 설정 유지 * 를 선택합니다.</block>
-  <block id="a8271fd3745fc8b71ff6bfd12f792572" category="list-text">사후 복원 옵션 * 페이지에서 추가 트랜잭션 로그를 복원하기 위한 데이터베이스 상태를 지정하려면 다음 옵션 중 하나를 선택합니다.</block>
   <block id="b7f1adca38b4833ff2351c144d5e8bd0" category="list-text">지금 필요한 모든 백업을 복원하는 경우 * 작동 가능하나 * 를 선택합니다.</block>
   <block id="f8c4ec8de5d78138befe1f81c75b738c" category="paragraph">이는 기본 동작으로, 커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있도록 합니다. 백업을 생성할 때까지 추가 트랜잭션 로그를 복원할 수 없습니다.</block>
   <block id="9a509ad7d001fb5ccb9a4a65a3ccd8eb" category="list-text">커밋되지 않은 트랜잭션을 롤백하지 않고 데이터베이스를 비작동 상태로 두려면 * 비작동, 사용 가능 * 을 선택합니다.</block>
@@ -966,11 +939,8 @@
   <block id="78166ce4ccceeedfbf6aeb8682851072" category="paragraph">* 이 작업에 대한 정보 *</block>
   <block id="b4aa547260f4fe266f03ec3a845576a5" category="section-title">VMware vSphere용 SnapCenter 플러그인을 편집합니다</block>
   <block id="4cc186df234138a57b2e8c5d8e5f7f8d" category="list-text">저장 * 을 클릭합니다.</block>
-  <block id="1b6f5433333a05ee720166b3bef29b73" category="section-title">보호 상태를 새로 고칩니다</block>
   <block id="2ffa396b01e2ea9f2f8a8e7307a1e28e" category="list-text">설정 * 드롭다운에서 * SnapCenter Plug-in for VMware vSphere * 를 클릭합니다.</block>
   <block id="418c5509e2171d55b0aee5c2ea4442b5" category="inline-image-macro">조치</block>
-  <block id="048b394365a250ed3a53a1b28e83733e" category="paragraph">새로운 변경 사항이 검색됩니다.</block>
-  <block id="3e99ccad833881d9a8aeec4e2665baae" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 데이터 저장소에 해당하는 * Refresh Protection * 을 클릭하여 변경 사항에 대한 클라우드 보호를 활성화합니다.</block>
   <block id="529795f55723488071425500df0ff5d6" category="summary">클라우드에서 가상 머신을 사내 SnapCenter로 복구할 수 있습니다.</block>
   <block id="b4851e92b19af0c5c82447fc0937709d" category="inline-link-macro">요구 사항</block>
   <block id="ceb4a235a226f19c172c9cf7c46d00dc" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 복원하려는 데이터 저장소에 해당하는 * View Details * 를 클릭합니다.</block>
@@ -989,7 +959,6 @@
   <block id="d511399444cf864b695600d159b7c93b" category="list-text">VMware vSphere 4.6P1 이상용 SnapCenter 플러그인</block>
   <block id="bff3cdd2fd5f993f3bc3fbbd3c43fb30" category="list-text">VMware vSphere 4.6P1용 SnapCenter 플러그인에서 하나 이상의 백업을 수행해야 합니다.</block>
   <block id="ad747f24f06324c9bc58eeaa274f014a" category="list-text">FlexGroup 볼륨 백업 및 복구는 지원되지 않으므로 데이터 저장소에 FlexGroup 볼륨이 없는지 확인합니다.</block>
-  <block id="d4e9a319924f580f8d8c025f39e06dc3" category="list-text">암호화된 볼륨 복원이 지원되지 않으므로 암호화된 볼륨이 없는지 확인합니다.</block>
   <block id="f8038513f93eb5ca7b2505674255b67b" category="list-text">필요한 리소스 그룹에서 " *_Recent * "를 비활성화합니다. 리소스 그룹에 대해 " *_Recent * "를 설정한 경우 해당 리소스 그룹의 백업을 클라우드의 데이터 보호에 사용할 수 없으며 이후에 복구 작업에 사용할 수 없습니다.</block>
   <block id="391eb750d98c55b72607ff6ec6311db2" category="list-text">가상 머신이 복구될 대상 데이터 저장소에 VMDK, VMX, VMSD 등과 같은 모든 가상 머신 파일의 복제본을 수용할 수 있는 공간이 충분한지 확인합니다.</block>
   <block id="6ee2c41b7a9bfae5bb618327d9499834" category="list-text">대상 데이터 저장소에 이전 복원 작업 실패의 restore_xxx_xxxxxx_filename 형식으로 오래된 가상 머신 파일이 없는지 확인합니다. 복구 작업을 트리거하기 전에 오래된 파일을 삭제해야 합니다.</block>
@@ -1291,7 +1260,6 @@
   <block id="1487a5e00d27aaaa91d1643104c20943" category="paragraph">랜섬웨어 스캔 열에 검사가 진행 중이라는 메시지가 표시됩니다.</block>
   <block id="15471566ffb385e256937957990dd60d" category="section-title">2022년 8월 18일</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link">자세한 정보</block>
-  <block id="d1e18cf16b83a90a2911458097d3358c" category="summary">백업 세부 정보를 보고 모든 작업의 상태를 모니터링합니다.</block>
   <block id="4639d0e2e2909a747265c2f704128bca" category="section-title">작업을 모니터링합니다</block>
   <block id="a5cae278ab84c15ead127cbc4d6b2fc5" category="paragraph">작업 환경에서 시작된 작업의 상태를 모니터링할 수 있습니다. 이렇게 하면 성공적으로 완료된 작업, 현재 진행 중인 작업 및 실패한 작업을 볼 수 있으므로 문제를 진단하고 해결할 수 있습니다.</block>
   <block id="e645e09bf2ae6466ce5a92513bf9c99b" category="section-title">백업 세부 정보를 봅니다</block>
@@ -1299,13 +1267,10 @@
   <block id="f713a5b618a13e567bd48c7c23bc1831" category="section-title">CA 서명 인증서를 구성합니다</block>
   <block id="134db136339131109beaeb48cea408f5" category="paragraph">환경에 추가 보안을 포함하려는 경우 CA 서명 인증서를 구성할 수 있습니다.</block>
   <block id="dbb66d78c3928dbc0e61b7f884e7d152" category="paragraph">커넥터는 자체 서명된 인증서를 사용하여 플러그인과 통신합니다. 자체 서명된 인증서는 설치 스크립트에 의해 키 저장소로 가져옵니다. 다음 단계를 수행하여 자체 서명된 인증서를 CA 서명 인증서로 바꿀 수 있습니다.</block>
-  <block id="d428ebb7ac02e1484781b38a799a4f99" category="paragraph">* 필요한 것 *</block>
-  <block id="adf00ddb8543fe1ed45bb8de32ba885b" category="paragraph">다음 명령을 실행하여 _&lt;base_mount_path&gt;_:'sudo docker 볼륨 ls | grep scs_cloud_volume | awk {'print$2'}|xargs sudo Docker 볼륨 검사 | grep 마운트 지점'을 가져올 수 있습니다</block>
   <block id="699212d80ab09d05f5a9a391baf6d544" category="list-text">Connector에 로그인합니다.</block>
   <block id="267fab2c93ee78a5b7b7c5cd3347f95d" category="paragraph">파일 이름은 certificate.pem 및 key.pem 이어야 합니다. certificate.pem에는 중간 CA 및 루트 CA와 같은 전체 인증서 체인이 있어야 합니다.</block>
   <block id="2efb3f1040cc3f0d3c2dd66f4495b045" category="list-text">name certificate.p12를 사용하여 인증서의 PKCS12 형식을 생성하고 _&lt;base_mount_path&gt;/client/certificate_에 유지합니다.</block>
   <block id="49bcc463a5065066b6e686b906f3e34e" category="list-text">플러그인 호스트에 로그인합니다.</block>
-  <block id="2ded4a2cc80040552b54bdd308ecb919" category="list-text">/var/opt/snapcenter/spl/etc_로 이동한 후 keytool 명령을 실행하여 certificate.p12 파일을 가져옵니다. keytool -v -importkeystore -srckeystore certificate.p12 -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype jks -srcstorephass SnapCenter -deststorephass SnapCenter -srcalalas agentcert -alias destagentcert -not프롬프트</block>
   <block id="0444de9e3c28e6b65560b207e6ea6eb4" category="list-text">루트 CA 및 중간 인증서를 가져옵니다. 키 도구-가져오기-trustcacerts-keystore keystore.jks-storepass SnapCenter-alias trustedca-file&lt;certificate.crt&gt;</block>
   <block id="22dfbb640fee5a33dc6e592f121a4423" category="list-text">SPL을 다시 시작합니다:'stemctl restart SPL'</block>
   <block id="7dc3629efca54d7a3c55707ca70b7456" category="list-text">alias_splkeystore_로 인증서와 키를 모두 포함하는 인증서의 PKCS12 형식을 만듭니다.</block>
@@ -1327,7 +1292,6 @@
   <block id="aeec20fb97ec5b367b439351c1c00204" category="list-text">응용 프로그램 페이지에서 정책을 사용하여 데이터베이스가 보호되지 않는 경우 * 정책 할당 * 을 클릭합니다.</block>
   <block id="114872d03378e25021c3cc928e318e8a" category="paragraph">하나 이상의 정책을 사용하여 데이터베이스를 보호하는 경우 를 클릭하여 더 많은 정책을 할당할 수 있습니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> &gt; * 정책 할당 *.</block>
   <block id="3c7ba9b9e3e6cc576a0786913d32d5df" category="list-text">정책을 선택하고 * Assign * 을 클릭합니다.</block>
-  <block id="098e4b45417a1ec0fafb90bed28e6424" category="paragraph">백업은 정책에 정의된 일정에 따라 생성됩니다.</block>
   <block id="556daa2892e6c333b040f2f9ed98a222" category="paragraph">정책을 할당한 후 애플리케이션의 필요 시 백업을 생성할 수 있습니다.</block>
   <block id="ca46a9979585fdf43309efe203535615" category="list-text">응용 프로그램 페이지에서 을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 응용 프로그램에 해당하는 을 클릭하고 * On-Demand Backup * 을 클릭합니다.</block>
   <block id="fe0a0332700b9a067272058245b48946" category="inline-link">스냅샷이 백업한 클론으로 인해 스냅샷 작업이 허용되지 않습니다</block>
@@ -1365,8 +1329,6 @@
   <block id="9358ddcf018549ad07e3696f1dff8b4c" category="list-text">보관 로그</block>
   <block id="bb139ed204a522e52c14c36896034ef9" category="list-text">온라인 로그</block>
   <block id="84e9072345f79cd7577657ba68cc442b" category="list-text">ASM 매개 변수 파일입니다.</block>
-  <block id="bc75c7043b8e7365f3c8207f2cc978cc" category="summary">데이터 파일, 제어 파일 또는 둘 모두를 복원한 다음 데이터베이스를 복구합니다.</block>
-  <block id="c48a955b9e2bd6b7c7d520e85a16d929" category="paragraph">데이터가 손실된 경우 데이터 파일, 제어 파일 또는 둘 모두를 복원한 다음 데이터베이스를 복구할 수 있습니다.</block>
   <block id="878f99c91be407d0f28af03c6c58cc11" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 복원하려는 데이터베이스에 해당하는 * 세부 정보 보기 * 를 클릭합니다.</block>
   <block id="843aa7f2a542d8c13efb89db29c10118" category="list-text">복원 범위 섹션에서 다음 작업을 수행합니다.</block>
   <block id="abad8f3214f3a57c46ff8ce273f3c2fa" category="paragraph">데이터 파일만 복구하려는 경우</block>
@@ -1530,16 +1492,8 @@
   <block id="054ebf0caef5f8ff3451668858653117" category="paragraph">기본 사이트와 보조 사이트 모두에 하나 이상의 백업이 있어야 합니다. 보조 장애로의 지연 페일오버 또는 사전 예방적 장애 조치를 수행할 수 있습니다.</block>
   <block id="4a0aa541ca6173a725ef17e920bc4470" category="list-text">HANA 바이너리, HANA 아카이브 로그 볼륨, HANA 공유 볼륨 등과 같은 NDV(Non-Data Volumes) 리소스</block>
   <block id="2f9bbcca9b6763c9b97b7fc28f8b1855" category="list-text">NVMe에 상주하는 Oracle 데이터베이스</block>
-  <block id="f806b720158d764a443413aa5a9a658d" category="doc">애플리케이션 백업을 마운트합니다</block>
-  <block id="939f2d392cf3c053138a7886bce3b67c" category="list-text">필터 기준 필드에서 * 유형 * 을 선택하고 드롭다운에서 * SAP HANA * 또는 * Oracle * 을 선택합니다.</block>
-  <block id="1f585f145f271e757924a10173abfa9a" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 보호된 응용 프로그램에 해당하는 * 세부 정보 보기 * 를 선택합니다.</block>
-  <block id="b8dceecbf6473264df0fee99aa880aa8" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 백업에 해당하는 항목을 선택하고 * Mount * 를 선택합니다.</block>
-  <block id="03d405c84bfe0e1a6364e500af6864b1" category="list-text">다음 중 하나를 지정합니다.</block>
-  <block id="86013e4eb67d3b4efa98a69c18999663" category="list-text">스냅샷이 아카이브 스토리지에 있는 경우 아카이브 스토리지에서 데이터를 검색하는 우선 순위를 지정합니다.</block>
-  <block id="8ece1a3075cf82b4a6288d5a36855ff2" category="list-text">Mount * 를 클릭합니다.</block>
   <block id="c4b2754c24325b7485882003d0c5d85a" category="admonition">SFR(단일 파일 복원)은 지원되지 않습니다.</block>
   <block id="39a39a3d5651d922f580216bf9d45b85" category="list-text">복구 및 복구 작업을 수행하는 데 필요한 상태로 데이터베이스의 상태를 변경하려면 * 데이터베이스 상태 * 를 선택합니다.</block>
-  <block id="7acc08861d4ed79ef851580e5f995af3" category="list-text">스냅샷이 아카이브 스토리지에 있는 경우 아카이브 스토리지에서 데이터를 복원하는 우선 순위를 지정합니다.</block>
   <block id="89d500a3ace67f6d47edb61231336589" category="section-title">애플리케이션의 클라우드 백업 개선</block>
   <block id="f617da6b50728500642eb376ab97b6f4" category="list-text">사용자 지정 정책을 생성합니다</block>
   <block id="eaec67d5f8f719a2f05b5ded5dc4ce60" category="list-text">아카이브 스토리지 지원</block>
@@ -1553,7 +1507,6 @@
   <block id="0265cbdb76704489ac9a7bbcaed7a2fd" category="paragraph">모든 정책을 볼 수 있습니다. 이러한 각 정책에 대해 세부 정보를 볼 때 연결된 모든 애플리케이션이 나열됩니다.</block>
   <block id="548ac4488bc12e098791c3b365f344a8" category="paragraph">연결된 애플리케이션이 나열됩니다.</block>
   <block id="fc85f5d8f0ed03c661f1f9db3972b018" category="admonition">응용 프로그램과 연결된 정책은 편집하거나 삭제할 수 없습니다.</block>
-  <block id="73c43b8b0d9e0b68dac6c6ffb29419df" category="list-text">SAP HANA 데이터베이스의 경우 각 백업의 데이터 백업 및 종료 날짜만 나열됩니다. 백업을 선택하고 마운트 작업을 수행할 수 있습니다.</block>
   <block id="00ee72b37f44d1aa703da6770529f465" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> SnapCenter 서버에 해당하는 * 등록 취소 * 를 클릭합니다.</block>
   <block id="4a938aa86ba9c09b265a5dc95f09a99c" category="summary">ONTAP에서 GCP로 애플리케이션 데이터를 백업하기 위한 몇 가지 단계를 완료합니다.</block>
   <block id="e7626d40bde0cb9f25e876222f0bb5fc" category="doc">사내 애플리케이션 데이터를 StorageGRID에 백업합니다</block>
@@ -1563,7 +1516,6 @@
   <block id="6c5cc1315b69c8256bbc33cf47a5a7ab" category="list-text">StorageGRID * 를 선택합니다.</block>
   <block id="e4f27df637464ead79d45fbf616da778" category="list-text">StorageGRID 서버의 FQDN과 StorageGRID 서버가 실행 중인 포트를 지정합니다.</block>
   <block id="8e9f3213cd82bd04250d546c82ac9bcc" category="paragraph">FQDN:port 형식으로 세부 정보를 입력합니다.</block>
-  <block id="351f25e3e7fc628f73a433013b9820a6" category="list-text">SnapCenter 서버 4.6 이상 다음 기능을 사용하려면 SnapCenter 서버 4.7을 사용해야 합니다.</block>
   <block id="29d7639a0c7b9ce1eeb1a132409265c0" category="paragraph">다음 이미지는 클라우드로 백업할 때의 각 구성 요소와 이러한 구성 요소 간에 준비해야 하는 연결을 보여 줍니다.</block>
   <block id="cba6a24686804eb1d7fea3608588a013" category="doc">온프레미스 애플리케이션 데이터를 Google Cloud에 백업합니다</block>
   <block id="fa860b204216c5fc8423fbeb3cc0cb75" category="list-text">클라우드 공급자로 * Google Cloud Platform * 을 선택합니다.</block>
@@ -2012,7 +1964,6 @@
   <block id="6b9ec885733dcee16db8c4d8dde6312a" category="inline-link-macro">Azure에서 Cloud Volumes ONTAP를 빠르게 시작합니다</block>
   <block id="c816d65f45a034b0842bc039567fcb6b" category="inline-link-macro">Google Cloud에서 Cloud Volumes ONTAP를 빠르게 시작합니다</block>
   <block id="2a60e5494e07cff54330378780f8e2a4" category="list-text">(선택 사항) 비용 최적화를 위해 일정 일 후에 오브젝트 저장소에서 아카이브 스토리지로 백업을 이동하려면 * Tier Backups to Archival * 확인란을 선택하고 백업을 아카이빙해야 하는 일 수를 입력합니다.</block>
-  <block id="d5b842bb75f6d0fd358e7a35f06b5354" category="summary">Oracle 데이터베이스의 예약된 백업 또는 주문형 백업을 생성합니다.</block>
   <block id="436faef9b95757e54b257ab16a914324" category="section-title">Oracle Database 백업을 생성합니다</block>
   <block id="64fdd98c3f2496dfbbb2e63478269d01" category="paragraph">미리 구성된 정책을 할당하거나 정책을 생성한 다음 데이터베이스에 할당할 수 있습니다. 정책이 할당되면 정책에 정의된 일정에 따라 백업이 생성됩니다.</block>
   <block id="531369e846100ce5d91871e142c23ed8" category="section-title">Oracle 데이터베이스의 필요 시 백업을 생성합니다</block>
@@ -2206,14 +2157,12 @@
   <block id="32403f6c910a8a0d4190a977cd4bb5a5" category="list-text">시스템 유형을 다중 테넌트 데이터베이스 컨테이너 또는 단일 컨테이너로 선택합니다.</block>
   <block id="e898199c829d90ae41784a78cdd2d6d9" category="list-text">SAP HANA 시스템 이름을 입력합니다.</block>
   <block id="a3df030ad26d42c5af0fcbd0e6f513d7" category="list-text">SAP HANA 시스템의 SID를 지정합니다.</block>
-  <block id="2c3f5c6b3c901543e2ee52841d3ba291" category="list-text">플러그인 호스트 를 선택합니다. (선택 사항) 호스트가 추가되지 않았거나 여러 호스트를 추가하려는 경우 * 플러그인 호스트 추가 * 를 클릭합니다.</block>
   <block id="d800d8f61fa1a641d5224e310e459b0c" category="list-text">HANA 시스템이 HANA 시스템 복제로 구성된 경우 * HSR(HANA 시스템 복제) 시스템 * 을 활성화합니다.</block>
   <block id="802a79f8e4284baac3abc3713a39791d" category="list-text">HDB 보안 사용자 저장소 키 * 텍스트 상자를 클릭하여 사용자 저장소 키 세부 정보를 추가합니다.</block>
   <block id="2145a09d2b376e7f0609f6fb4c6b5be5" category="paragraph">키 이름, 시스템 세부 정보, 사용자 이름 및 암호를 지정하고 * 키 추가 * 를 클릭합니다.</block>
   <block id="b53a101b6e60770ada5a46695bb46566" category="paragraph">사용자 저장소 키를 삭제하거나 수정할 수 있습니다.</block>
   <block id="50606df711052c72cb3650915aa18292" category="list-text">Storage Footprint * 페이지에서 * 스토리지 추가 * 를 클릭하고 다음을 수행합니다.</block>
   <block id="0b4d4df45dec0f187977abf3a0e77fca" category="list-text">작업 환경을 선택하고 NetApp 계정을 지정합니다.</block>
-  <block id="f338ba0747a9b1926962438feb3b1f6a" category="paragraph">Canvas * 페이지로 이동하여 새 작업 환경을 추가합니다</block>
   <block id="d253da62a1a7bf3e4d5c1adf904b607a" category="list-text">필요한 볼륨을 선택합니다.</block>
   <block id="160c15dad3c86fc7f11c9d0f725a510f" category="list-text">스토리지 추가 * 를 클릭합니다.</block>
   <block id="5d74f0257578ebb70b128ed79394919f" category="list-text">모든 세부 정보를 검토하고 * 시스템 추가 * 를 클릭합니다.</block>
@@ -2222,7 +2171,6 @@
   <block id="01f13da2dfcf737f54346ebf7f44db6f" category="list-text">시스템 유형 드롭다운에서 * 글로벌 비 데이터 볼륨 * 을 선택합니다.</block>
   <block id="5d9b8dbd580deb48e76c53d62ab7c6f3" category="list-text">SAP HANA 시스템의 관련 SID를 지정합니다.</block>
   <block id="9c40bb6f28c1548e2bec94c55bf9bf96" category="list-text">플러그인 호스트를 선택합니다</block>
-  <block id="b5e87b76d37fdb904487f6bc0c10bef7" category="paragraph">(선택 사항) 여러 호스트를 추가하려면 * 플러그인 호스트 추가 * 를 클릭하고 호스트 이름과 포트를 지정한 다음 * 호스트 추가 * 를 클릭합니다.</block>
   <block id="7322146fa0278b7076d42a67da3ca68f" category="section-title">사전 스크립트 및 포스트스크립트</block>
   <block id="6185a8cfc72f93e3f8af600e5e7f9606" category="paragraph">스크립트에 대해 지원되는 형식은 .sh, python 스크립트, perl 스크립트 등이 있습니다.</block>
   <block id="3c91acc7806c6fcfd2da29720998df5d" category="paragraph"><block ref="8a0444f402186e75dfce312a113251e3" prefix="" category="inline-code"></block></block>
@@ -2267,7 +2215,6 @@
   <block id="791d63ac899b8ad7fc56dc931d1fd29a" category="list-text">SSH 및 플러그인 포트를 지정합니다.</block>
   <block id="505ce6fed4446b13324d0562a28bb6ba" category="paragraph">기본 SSH 포트는 22이고 플러그인 포트는 8145입니다.</block>
   <block id="7494e5d74f494202f9ecbc9e400d55b4" category="list-text">(선택 사항) Connector와 호스트 간에 키 없는 인증이 활성화되지 않은 경우 호스트와 통신하는 데 사용할 SSH 개인 키를 지정해야 합니다.</block>
-  <block id="fd8b783cdb511cc4699a202fd9e6fa19" category="admonition">특정 호스트를 보기 위한 필터가 작동하지 않습니다. 필터에 호스트 이름을 지정하면 모든 호스트가 표시됩니다.</block>
   <block id="4f3297cde92a5de45c2448cbe652c2a3" category="list-text">사용자 이름, 암호 및 포트 세부 정보를 지정합니다.</block>
   <block id="4bee6fec011c2f7ac751849f160f0a3f" category="paragraph">데이터베이스가 ASM에 있는 경우 ASM 설정도 구성해야 합니다.</block>
   <block id="013e38cfdb2c6d0bb3f17b59760240ff" category="summary">BlueXP는 NetApp ONTAP 또는 Cloud Volumes ONTAP용 Amazon FSx에 상주하는 Oracle ® 데이터베이스의 효율적이고 애플리케이션 정합성이 보장된 정책 기반 백업 및 복원을 제공합니다.</block>
@@ -2282,7 +2229,6 @@
   <block id="d991e9a50dc0cf6a926e5fc91c5466f6" category="list-text">NFS v3 및 v4.1(dNFS 포함)</block>
   <block id="65191ea76e528516c2b69ba9b5993929" category="list-text">iSCSI with ASM(ASMFD, ASMLib 및 ASMUDEV)</block>
   <block id="e7c148fd9db2c4b380f00535117a8e6c" category="list-text">데이터베이스 레이아웃: Oracle Standard 및 Oracle Enterprise Standalone(레거시 및 멀티 테넌트 CDB 및 PDB)</block>
-  <block id="ec92fe8b7e318dfcde8d78c9bfe9eeb4" category="list-text">데이터베이스 버전: 12cR2, 18C, 19c 및 21c</block>
   <block id="f9b0b398cc489e9b9c51d5f0a02d79ef" category="list-text">호스트 추가 및 플러그인 구축</block>
   <block id="f1ad14bba418337bd66224d583d964a4" category="list-text">기본 원클릭 클론</block>
   <block id="3588abe13a84fd4299889022e29bf1cc" category="list-text">사용자 지정 클론 사양 파일을 사용한 고급 클론 생성</block>
@@ -2292,12 +2238,8 @@
   <block id="5669d4dde41a20620530fdebbd1d9492" category="list-text">백업, 복원, 클론 및 기타 작업 모니터링</block>
   <block id="9518d577aae2b3d43b6dd0f41fb999e1" category="list-text">Oracle 11g를 지원하지 않습니다</block>
   <block id="d67615cd9765a283fd8a9d06cd5d44a1" category="list-text">에서는 백업에 대한 마운트, 카탈로그 및 검증 작업을 지원하지 않습니다</block>
-  <block id="494c3084e3990387ac3b46cb5749bb65" category="list-text">RHEL 7.5 이상, SAP HANA 인증 8.x 플랫폼</block>
   <block id="504d22b0e020e0b365851eef08a1e4ca" category="list-text">SLES 12 SP5 이상 및 15 SPX 플랫폼은 SAP HANA 인증을 받았습니다</block>
   <block id="c7325743e6b1be5853672e4ed19d279b" category="list-text">데이터베이스 레이아웃:</block>
-  <block id="4f3c431044df2a4101e620b1add959d6" category="list-text">단일 컨테이너 버전 1.0SPS12</block>
-  <block id="d2175dc4d931807281b7620ca72ae84c" category="list-text">SAP HANA 다중 테넌트 데이터베이스 컨테이너(MDC) 2.0SPS4, 2.0SPS5, 2.0SPS6, 단일 또는 다중 테넌트 포함</block>
-  <block id="5682f0abdba997874b11dbf9e7941de0" category="list-text">SAP HANA 단일 호스트 시스템, SAP HANA 다중 호스트 시스템(대기 호스트 없음), HANA 시스템 복제</block>
   <block id="b31ef80025021b4e1a3674d3c6f7edd6" category="list-text">데이터베이스 호스트의 SAP HANA 플러그인</block>
   <block id="06f6598cf881ccbc6674a22fbae124a7" category="list-text">SAP HANA 시스템을 수동으로 추가합니다</block>
   <block id="4142e62814a391bb005b24bff331ca70" category="list-text">SAP HANA 데이터베이스 백업</block>
@@ -2510,7 +2452,6 @@
   <block id="62813012ad9cc198c144b40ee8b9d777" category="list-text">폴더 위로 마우스를 가져가 을 클릭할 수 있습니다 <block ref="f6625f52b1c71dcdec014baa14bc9e40" category="inline-image-macro-rx" type="image"></block> 행 끝에서 하위 폴더로 드릴다운한 다음 폴더를 선택합니다.</block>
   <block id="5d4acb09fec56e15b5468670a1788d81" category="inline-link">Canvas의 볼륨 세부 정보 페이지에서</block>
   <block id="92a755b6d9fa88006d2c9e3907a504a5" category="list-text">볼륨의 경우 원래 대상 작업 환경을 선택하거나 대체 작업 환경을 선택할 수 있습니다. FlexGroup 볼륨을 복원할 때 여러 Aggregate를 선택할 수 있습니다.</block>
-  <block id="8453fab1acf37cb3dad50bd528b75148" category="list-text">NFS 데이터 저장소만 지원됩니다. iSCSI/FC/NVMe 및 VVol 기반의 VMFS 데이터 저장소는 지원되지 않습니다.</block>
   <block id="898f472703342efc6d5adc298a7628c8" category="paragraph">정책을 생성하는 동안 처방자, postscript 및 종료 스크립트를 제공할 수 있습니다. 이러한 스크립트는 데이터 보호 작업 중에 HANA 호스트에서 실행됩니다.</block>
   <block id="c5b751b6877453fd04eb6340347e4511" category="paragraph">prescpt 및 PostScript는 호스트 관리자가 에 등록해야 합니다<block ref="91d372f85b001dba79ebc4129e5acd32" prefix=" " category="inline-code"></block> 파일.</block>
   <block id="0baab2619f15ec742e2bf8b60e516b39" category="paragraph">백업 워크플로우의 경우, 다음 환경 변수를 prescpt 및 PostScript의 일부로 사용할 수 있습니다.</block>
@@ -2688,8 +2629,6 @@
   <block id="09d402d9d90a8c43787a9b36dbc81909" category="paragraph">BlueXP에서 VMware vSphere 호스트용 SnapCenter 플러그인의 세부 정보를 편집할 수 있습니다.</block>
   <block id="8a27c524970cd13dc7b03f92b7043065" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 를 클릭하고 * 편집 * 을 선택합니다.</block>
   <block id="05c829c7b617d014c0186656453575ea" category="list-text">필요에 따라 세부 정보를 수정합니다.</block>
-  <block id="63e8ab93fb455764c3aae06f874e9f89" category="paragraph">새 볼륨이 데이터베이스에 추가되거나 정책 또는 리소스 그룹이 변경된 경우 보호 상태를 새로 고쳐야 합니다.</block>
-  <block id="b08753885f48b8d718edd5f9d9cd7ab7" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> VMware vSphere 호스트용 SnapCenter 플러그인에 따라 * Refresh * 를 클릭합니다.</block>
   <block id="9f7b95641e24cb882e149de39743a97c" category="paragraph">VMware vSphere 호스트용 SnapCenter 플러그인을 BlueXP와 통합하여 하나 이상의 데이터 저장소를 StorageGRID에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
   <block id="42d7d856cc8f6a2f82ed10cd8356e7d2" category="inline-link">BlueXP 배포 모드에 대해 자세히 알아보십시오</block>
   <block id="d7cfe6967f3004ef3386a27fe99a4610" category="inline-link">ONTAP S3와 타겟 통합</block>
@@ -2701,19 +2640,13 @@
   <block id="06548d8c3dd532a955281943d00e4ae0" category="paragraph">다음 이미지는 구성 요소 간의 관계를 보여 줍니다.</block>
   <block id="27af9a77d19fed3cc5992a809811dc11" category="paragraph">백업 복사본은 BlueXP가 클라우드 계정에 생성하는 객체 저장소에 저장됩니다. 클러스터/작업 환경당 하나의 오브젝트 저장소가 있으며 BlueXP에서는 다음과 같이 오브젝트 저장소의 이름을 지정합니다.<block ref="395f30b009fd80d4c1cba9bc07db445d" prefix=" " category="inline-code"></block>. 이 오브젝트 저장소를 삭제하지 마십시오.</block>
   <block id="610778054da9c0e7c61921555da9ddc9" category="paragraph">동일한 NetApp 계정에 여러 커넥터가 있는 경우 각 Connector는 동일한 백업 목록을 표시합니다. 여기에는 Cloud Volumes ONTAP 및 다른 커넥터의 온-프레미스 ONTAP 인스턴스와 연결된 백업이 포함됩니다.</block>
-  <block id="901e4135beeedb7bfd5ee52fd37bb24b" category="summary">SAP HANA 및 Oracle 백업을 지정된 호스트에 마운트할 수 있습니다.</block>
-  <block id="eb39fd3aff5524b4e17bd84f6095e3f8" category="paragraph">애플리케이션의 BlueXP 백업 및 복구를 사용하면 Oracle 및 HANA 백업을 대체 호스트에 마운트할 수 있습니다.</block>
-  <block id="2de9c7620c86709affe923e3290e0fed" category="paragraph">SnapCenter는 대체 호스트에 대한 Oracle 및 HANA 백업 복원을 지원하지 않습니다. 따라서 Oracle 및 HANA 백업을 대체 호스트에 마운트할 수 있는 마운트 옵션이 제공됩니다.</block>
   <block id="47abe672471325a3aa63fcd85f6e3367" category="list-text">NAS 환경의 경우 객체 저장소에서 복구된 볼륨을 내보낼 호스트의 FQDN 또는 IP 주소를 지정합니다.</block>
   <block id="831b20d8b0ff4f1e50aecadcdcdc885d" category="list-text">SAN 환경의 경우 오브젝트 저장소에서 복원된 볼륨의 LUN이 매핑될 호스트의 이니시에이터를 지정합니다.</block>
-  <block id="5b15111eecc9403b24904137915a535d" category="list-text">볼륨 이름에 추가할 접미사를 지정합니다.</block>
-  <block id="997e81d378ed6f87f7888840d98149d1" category="paragraph">이 작업은 지정된 호스트에 있는 스토리지만 마운트합니다. 파일 시스템을 수동으로 마운트하고 데이터베이스를 불러와야 합니다. 볼륨을 사용한 후에는 스토리지 관리자가 ONTAP 클러스터에서 볼륨을 삭제할 수 있습니다.</block>
   <block id="9ae1fbeadb6e0efc4e024384fb8a4f8d" category="inline-link">기술 자료 문서</block>
   <block id="cae5363be68b32a2a0c60f8507ae22b0" category="list-text">Oracle 데이터베이스를 가져오는 방법에 대한 자세한 내용은 을 참조하십시오.<block ref="1c9fee5518775de98a67ea9cec93df22" category="inline-link-rx"></block>.</block>
   <block id="5156a7436794ab08e12e595a0be6113a" category="inline-link">TR-4667: SnapCenter를 사용한 SAP 시스템 복사 워크플로우 개요</block>
   <block id="7e4508b00befcebd86a3b3bc3ad974fe" category="inline-link">TR-4667: SnapCenter를 사용한 SAP 시스템 클론 워크플로우 개요</block>
   <block id="59e37824aade8855ab656b060200f21a" category="list-text">SAP HANA 데이터베이스를 가져오는 방법에 대한 자세한 내용은 다음을 참조하십시오.<block ref="d22a7b2d0c3d2949e0261469ae872f8b" category="inline-link-rx"></block> 및<block ref="37841a7578d02975651b7678de450f40" category="inline-link-rx"></block>.</block>
-  <block id="0d3c05925243511d9e1b15741b72825f" category="paragraph">Oracle 데이터베이스는 백업이 생성된 동일한 호스트에만 복구할 수 있습니다. RAC 데이터베이스의 경우 데이터가 백업을 생성한 사내 노드로 복구됩니다.</block>
   <block id="94f31781acc8b09f1a2c51cc7c17d9bb" category="paragraph">상위 데이터베이스에서 하위 데이터베이스까지의 다양한 상태는 열기, 마운트, 시작 및 종료입니다.</block>
   <block id="a27f86f1478b6387e451780970eeec78" category="list-text">데이터베이스가 더 높은 상태이지만 복원 작업을 수행하려면 상태를 더 낮은 상태로 변경해야 하는 경우 이 확인란을 선택해야 합니다.</block>
   <block id="716078928e1b9c0191a857b90b4337aa" category="list-text">데이터베이스가 더 낮은 상태에 있지만 복원 작업을 수행하려면 상태를 더 높은 상태로 변경해야 하는 경우 확인란을 선택하지 않아도 데이터베이스 상태가 자동으로 변경됩니다.</block>
@@ -2723,24 +2656,15 @@
   <block id="86168283148ce2a703441df7c9eebd32" category="paragraph">SnapCenter 서버와 BlueXP 간의 통신이 가능하도록 포트가 열려 있는지 확인해야 합니다.</block>
   <block id="c70d5bad4ddff9626b3f3245da8a13fc" category="list-text">커넥터 * 드롭다운에서 커넥터를 선택합니다.</block>
   <block id="3fc4d8d6036d0b597c573a49c2122c6b" category="paragraph">등록된 SnapCenter 서버 호스트를 사용하여 보호되는 모든 응용 프로그램을 보려면 * 백업 및 복원 * &gt; * 응용 프로그램 * 을 클릭합니다. 기본적으로 응용 프로그램은 매일 자정에 자동으로 검색됩니다.</block>
-  <block id="04b22cf9476524fb1d1758cfb774a217" category="admonition">FQDN 또는 IP 주소를 사용하여 SnapCenter에 SVM을 추가하면 이러한 SVM에서 실행되는 애플리케이션을 보호할 수 없습니다. 애플리케이션의 BlueXP 백업 및 복구는 ONTAP 클러스터의 일부로 추가된 SnapCenter에서 검색된 SVM이나 이름으로 추가된 SVM만 인식합니다.</block>
   <block id="fab2808b23dc2c58cebadeb8767f0c1f" category="paragraph">다음 데이터베이스는 표시되지 않습니다.</block>
   <block id="17e2d63e3b45ecbfe13bcc32fec929d0" category="paragraph">* 시작하기 전에 *</block>
-  <block id="4c0d2c1f6ed034616024cc438a19bb8c" category="paragraph">SAP HANA 시스템은 중지된 상태여야 합니다. SAP HANA 시스템이 실행 중이면 처방된 내용을 제공하여 시스템을 중지할 수 있습니다.</block>
-  <block id="7c1f39b5139c4e5b5999656f65f34d14" category="paragraph">볼륨에 대해 백업을 설정하면 단일 파일 SnapRestore 작업이 수행됩니다.</block>
   <block id="db3bd7d3767b3b12b5447ace80a58f84" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 복원하려는 데이터 백업에 해당하고 * 복원 * 을 클릭합니다.</block>
   <block id="23701926ab09ecc0ff2d95c90bdeba8e" category="inline-link-macro">사전 스크립트 및 포스트스크립트</block>
   <block id="67e0624a3c366b8b2a884c6201b4c7fc" category="list-text">시스템 복원 * 페이지에서 스크립트를 입력합니다. <block ref="1775fd82cd452c1f6bfd5a9921fc22f3" category="inline-link-macro-rx"></block></block>
   <block id="bbed0144c2ba84aeb9db8036e00feff0" category="paragraph">* 다음 단계 *</block>
-  <block id="a7cbef2eea2534ec1e24148b2ad17a56" category="paragraph">백업을 생성한 동일한 SQL Server 호스트에 데이터베이스를 복구하려는 경우</block>
-  <block id="7968cad031e63ab507316a4b1b73504b" category="paragraph">백업이 생성된 동일한 호스트에 데이터베이스 복원 * 을 선택합니다.</block>
-  <block id="c2ea6921b6200ddbf7105e638f0cf324" category="paragraph">백업을 생성한 동일한 호스트 또는 다른 호스트에 있는 다른 SQL Server로 데이터베이스를 복구하려는 경우</block>
-  <block id="3c1c636f7680153fadea728a18acae8d" category="paragraph">대체 호스트로 데이터베이스 복원 * 을 선택합니다.</block>
   <block id="f45093e474e81b002e0fc86bd669de92" category="paragraph">ONTAP에서 Google 클라우드 플랫폼으로 애플리케이션 데이터를 백업하려면 몇 가지 단계를 완료하십시오.</block>
   <block id="5678a20b6637895d79a33f663b42dbc2" category="paragraph">BlueXP에서 검색할 클러스터 관리 LIF를 구성합니다. 애플리케이션 중 하나에 대한 작업 환경을 추가한 후 동일한 ONTAP 클러스터에 있는 다른 모든 애플리케이션에 다시 사용할 수 있습니다.</block>
   <block id="837d3589301e8037c200010dda94b0f0" category="paragraph">BlueXP 애플리케이션 백업 및 복구는 클러스터 관리자만 지원합니다.</block>
-  <block id="b6ab006e15763beb32e46fa733e431c5" category="list-text">Google Cloud Access Key 필드에서 데이터 암호화에 대한 키를 지정합니다.</block>
-  <block id="354cf0aa3581eabc1f6d8eceadc0a09c" category="list-text">Google Cloud Secret Key 필드에서 데이터 암호화에 대한 암호를 지정합니다.</block>
   <block id="d7b96aa97b3e598d4361c8900425e794" category="paragraph">BlueXP를 사용하면 ONTAP 작업 환경에 FSx를 생성하여 볼륨 및 추가 데이터 서비스를 추가하고 관리해야 합니다. 또한 BlueXP에서 퍼블릭 클라우드 환경 내의 리소스와 프로세스를 관리할 수 있도록 AWS에 Connector를 만들어야 합니다.</block>
   <block id="fb8b20b7f11dc7e27e25699346303340" category="paragraph">BlueXP 또는 AWS를 사용하여 ONTAP 작업 환경을 위한 FSx를 생성할 수 있습니다. AWS를 사용하여 생성한 경우 BlueXP에서 ONTAP 시스템용 FSx를 검색해야 합니다.</block>
   <block id="4c2f287db7a16e371d2d39b0cc02d906" category="paragraph">계정 관리자는 AWS에서 Connector를 생성하여 BlueXP가 퍼블릭 클라우드 환경 내의 리소스와 프로세스를 관리할 수 있도록 해야 합니다.</block>
@@ -2756,7 +2680,6 @@
   <block id="0dbcf5d30fb23b988f7e09251180eac1" category="paragraph">ONTAP에서 Microsoft Azure로 애플리케이션 데이터를 백업하려면 몇 가지 단계를 완료하십시오.</block>
   <block id="a9d053f343dbeb5aa5043e32e745a751" category="summary">운영 데이터베이스인 소스 SAP HANA 시스템에서 타겟 시스템으로 업데이트를 수행합니다.</block>
   <block id="3e1a90c2232c83a5583ba782a21c185a" category="doc">SAP HANA 타겟 시스템을 업데이트하세요</block>
-  <block id="955b7cb9ebc08be2e67ad7ad0d47fb58" category="paragraph">SAP HANA 소스 시스템의 데이터로 SAP HANA 타겟 시스템을 업데이트할 수 있습니다. 현재 운영 데이터를 테스트 시스템에 제공하는 데 사용할 수 있습니다. 클라우드 백업을 사용하면 소스 시스템에서 스냅샷 복사본을 선택하고 스냅샷 복사본을 기반으로 새 ANF 볼륨을 생성할 수 있습니다. 예제 스크립트를 사용할 수 있습니다. 이 스크립트는 데이터베이스 호스트에서 SAP HANA 데이터베이스를 복구하는 데 필요한 작업을 실행합니다.</block>
   <block id="6a2d5949052d8d9118cfcade0cfdd25c" category="list-text">첫 번째 업데이트 작업을 실행하기 전에 SAP HANA 타겟 시스템을 설치해야 합니다.</block>
   <block id="c1c067a0bb1a2fe75a7db399b7e238ad" category="list-text">소스 및 타겟 HANA 시스템을 수동으로 클라우드 백업에 추가해야 합니다.</block>
   <block id="e58cfb63a12429814fc30c5d8f0e8d76" category="list-text">소스 및 타겟 시스템에서 SAP HANA 데이터베이스 버전이 동일한지 확인합니다.</block>
@@ -2781,14 +2704,11 @@
   <block id="521e5b4ee67bb67042f49209b8653819" category="list-text">소스 시스템 및 스냅샷 복사본을 선택합니다.</block>
   <block id="445c03c33e1539bd0b41eb36082d3cb2" category="list-text">새 볼륨에 액세스할 수 있는 내보내기 주소를 입력합니다.</block>
   <block id="5b1b42f6958d8e1fc337204814ce7e96" category="list-text">ppt, postscript 및 on failure 스크립트 경로를 입력합니다. On failure 스크립트는 시스템 새로 고침 작업이 실패한 경우에만 실행됩니다.</block>
-  <block id="acf2bd1743649bdaf828543dd8da0582" category="list-text">SELECT * Delete associated SAP HANA Backups * only Snapshot copies be deleted. 타겟 시스템의 기존 백업이 있고 위의 옵션을 선택하지 않으면 시스템 새로 고침 작업이 실패합니다. Topology * 페이지에서 백업을 삭제할 수도 있습니다.</block>
   <block id="d687cb57e7c0a2bc72631659265b9d28" category="list-text">새로 고침 * 을 클릭합니다.</block>
   <block id="9efea5dc57ddf655c92c407f96dd1337" category="paragraph">애플리케이션 데이터를 클라우드에 백업하는 정책을 생성해야 합니다.</block>
-  <block id="c1da924b2941abda1419c07d1c092777" category="list-text">오브젝트 저장소에서 아카이브 스토리지로 백업을 이동하려면 ONTAP 9.10.1 이상 및 Amazon Web Services 또는 Azure를 클라우드 공급자로 사용해야 합니다.</block>
   <block id="301968c8dabe6b72a7e8efa9bd0258d1" category="paragraph">ONTAP에서 Amazon Web Services로 애플리케이션 데이터를 백업하려면 몇 가지 단계를 완료하십시오.</block>
   <block id="cb1dcbbb184441d625fca9abd37d5ec0" category="paragraph">미리 구성된 정책 또는 생성한 정책을 할당하여 백업을 생성할 수 있습니다.</block>
   <block id="3d146256911cef5ef0a1d7d23efbc8f2" category="section-title">Oracle 데이터베이스를 보호하기 위한 정책을 수립합니다</block>
-  <block id="bd6b9b974238317f7f6890d2738ba393" category="list-text">(선택 사항) 스냅샷을 보조 스토리지에 복제하기 위해 백업 성공 후 실행될 사후 스크립트의 사후 스크립트 경로 및 시간 초과 값을 입력합니다.</block>
   <block id="48b220d743ecd4aed0830258fdd63841" category="paragraph">필요에 따라 인수를 지정할 수도 있습니다.</block>
   <block id="0087a5b2d25d52f6c7c03528cde33505" category="paragraph">사후 스크립트는 _/var/opt/snapcenter/SPL/scripts_ 경로에 유지해야 합니다.</block>
   <block id="796c6a969f63d0d2aa5f429cbcc0c0c2" category="paragraph">SC_ORACLE_SID입니다</block>
@@ -2800,9 +2720,7 @@
   <block id="7039cfffcf417134ed36a0a81b82f21e" category="paragraph">sc_backup_policy_name입니다</block>
   <block id="b270cefdacc74d90a0ec88bed5fbf42d" category="paragraph">백업을 생성하는 데 사용되는 정책의 이름을 지정합니다.</block>
   <block id="35617fffed5e260abe14f10d109cebd7" category="paragraph">sc_primary_data_volume_full_path를 입력합니다</block>
-  <block id="caff1c693cd4d535af55e9126e0cfc71" category="paragraph">구분 기호로 ","를 사용하여 연결된 데이터 볼륨 경로를 지정합니다. ANF 볼륨의 경우 "/"_/{anfaccount}/{subscription_id}/{resource_group}/{capacity_pool}/{VolumeName}_을 사용하여 정보가 연결됩니다</block>
   <block id="6e794ea51a25be446f20e9a702898008" category="paragraph">SC_PRIMARY_ARCHIVELOGS_VOLUME_FULL_PATH를 선택합니다</block>
-  <block id="b6413db558b7e51cd7ad505a279d46a4" category="paragraph">구분 기호로 ","를 사용하여 연결된 아카이브 로그 볼륨 경로를 지정합니다. ANF 볼륨의 경우 "/"_/{anfaccount}/{subscription_id}/{resource_group}/{capacity_pool}/{VolumeName}_을 사용하여 연결된 정보의 경우</block>
   <block id="282c0097d05b4ae7f669fd32d1e62f62" category="paragraph">미리 구성된 정책을 할당하거나 정책을 생성한 다음 데이터베이스에 할당할 수 있습니다. 정책이 할당되면 정책에 정의된 일정에 따라 백업이 생성됩니다.</block>
   <block id="73eca09a61282d51974dd261aba5d480" category="admonition">서비스 계정(_SnapCenter-account-&lt;account_id&gt;_)은 예약된 백업 작업을 실행하는 데 사용됩니다.</block>
   <block id="40b3d494e45d44ea05a121d23431903f" category="list-text">큰 데이터베이스(250GB 이상)를 복원한 후 같은 데이터베이스에서 전체 온라인 백업을 수행하는 경우 다음 오류로 인해 작업이 실패할 수 있습니다.<block ref="2cdd9c86da283a1b59e3d14b0893d8e8" prefix=" " category="inline-code"></block></block>
@@ -2810,13 +2728,9 @@
   <block id="3f36c150e72924297a7e10562d91310d" category="list-text">데이터베이스 자격 증명: OS 사용자 인증이 비활성화된 경우 시스템 사용자가 동일한 호스트 또는 대상 호스트의 복제된 데이터베이스에 연결할 수 있도록 암호를 제공해야 합니다.</block>
   <block id="0f28904257dc0410709b59fc7dee3634" category="admonition">수신기가 타겟 호스트에서 실행 중인지 확인합니다.</block>
   <block id="29df1904737a953fe664af42457666a3" category="paragraph">정책 보기, 백업 보기, 데이터베이스 레이아웃, 정책 및 리소스 그룹의 변경 내용 보기, BlueXP UI의 모든 작업 모니터링을 통해 응용 프로그램 보호를 관리할 수 있습니다.</block>
-  <block id="fdd98406a18301162ef98ccf7f44618a" category="paragraph">를 실행하여 클라우드 확장 SnapCenter 정책을 볼 수도 있습니다<block ref="f391f53076a6f0bdd43ba78daeaf5394" prefix=" " category="inline-code"></block> SnapCenter의 cmdlet. cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 Get-Help command_name을 실행하여 얻을 수 있습니다.</block>
   <block id="54e5caa106ba057c6767f92dd1fc9585" category="admonition">백업이 나열되는 데 걸리는 시간은 ONTAP의 기본 복제 일정에 따라 다릅니다.</block>
-  <block id="1d8427f0001c9c5fa1123d7f927e5690" category="list-text">Oracle 데이터베이스의 경우 데이터 및 로그 백업, 각 백업에 대한 SCN(시스템 변경 번호), 각 백업에 대한 종료 날짜가 나열됩니다. 데이터 백업만 선택하고 데이터베이스를 온-프레미스 SnapCenter 서버로 복원할 수 있습니다.</block>
   <block id="131bf56dea076782b2ffcdb107f1c64d" category="list-text">Microsoft SQL Server 인스턴스의 경우 해당 인스턴스 아래에 있는 데이터베이스의 백업이 나열됩니다.</block>
-  <block id="d87aa7d62cde4d1f67058f700ccc1e31" category="paragraph">를 실행하여 이러한 백업을 볼 수도 있습니다<block ref="3b327888082d0a6615ac0b1cac5ce6dc" prefix=" " category="inline-code"></block> SnapCenter의 cmdlet. cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 Get-Help command_name을 실행하여 얻을 수 있습니다.</block>
   <block id="c38851ea84519272d9a64f525a014582" category="paragraph">데이터베이스에 볼륨이 추가되면 SnapCenter 서버는 정책 및 일정에 따라 새 볼륨에 스냅샷을 자동으로 레이블을 지정합니다. 이러한 새 볼륨에는 개체 저장소 끝점이 없으므로 다음 단계를 실행하여 볼륨을 새로 고쳐야 합니다.</block>
-  <block id="28b684a2798154656057bfadae25442b" category="list-text">클라우드 공급자를 구성한 후 애플리케이션에서 스토리지 볼륨을 제거하면 새 백업에 대해 SnapCenter 서버가 애플리케이션이 상주하는 스냅샷에 레이블을 지정합니다.</block>
   <block id="56fbe2f096aa64edf14cf6a040364521" category="list-text">제거된 볼륨이 다른 응용 프로그램에서 사용되지 않는 경우 개체 저장소 관계를 수동으로 삭제해야 합니다.</block>
   <block id="f41d81011039cf5b858be58b20be3d6c" category="list-text">애플리케이션 인벤토리를 업데이트하면 애플리케이션의 현재 스토리지 레이아웃이 포함됩니다.</block>
   <block id="a5e6ecead112df3e4d309c64d21be613" category="paragraph">SnapCenter 정책 또는 리소스 그룹이 변경된 경우 보호 관계를 새로 고쳐야 합니다.</block>
@@ -2845,32 +2759,22 @@
   <block id="32a864989b165c430348200b3f498a83" category="paragraph">플러그인을 설치한 후 애플리케이션 호스트에서 SSH 포트를 닫을 수 있습니다. 데이터 보호 작업에 SSH 포트가 필요하지 않습니다.</block>
   <block id="36813624055dc9b033fdb884e90d807e" category="admonition">SSH 개인 키는 애플리케이션의 어느 곳에나 저장되지 않으며 다른 작업에 사용되지 않습니다.</block>
   <block id="605c793b280b4feb7df272c466c6012c" category="list-text">구성 페이지에서 다음을 수행합니다.</block>
-  <block id="9d678ee764b7490535279d100a47d199" category="list-text">텍스트를 _ /etc/sudoers.d/snapcenter_file에 복사하여 비루트(sudo) 사용자에 대한 sudo 액세스를 구성합니다.</block>
-  <block id="84c043b7279ff048da6eac17746b54d4" category="list-text">확인란을 선택하고 * 다음 * 을 클릭합니다.</block>
   <block id="4e97b087f72ed090d712d63c6464209a" category="list-text">세부 정보를 검토하고 * 응용 프로그램 검색 * 을 클릭합니다.</block>
   <block id="3ab2f91e027d82cf137fafc5ba1fad46" category="list-text">Settings * 를 클릭하고 * Hosts * 를 선택하여 모든 호스트를 봅니다.</block>
   <block id="3861ca484ceba1ec4fe010195ae2a99f" category="list-text">설정 * 을 클릭하고 * 정책 * 을 선택하여 미리 구성된 정책을 봅니다. 사전 구성된 정책을 검토하여 요구 사항에 맞게 정책을 편집하거나 새 정책을 생성할 수 있습니다.</block>
-  <block id="f76505761d1d589d9c44949c0e7cf701" category="section-title">스크립트를 사용하여 플러그인을 설치하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다</block>
   <block id="9d7aeb2d1ce99eaf262e0aff84aa90fe" category="paragraph">Oracle 호스트 비루트 사용자 계정에 대한 SSH 키 기반 인증을 구성하고 다음 단계를 수행하여 플러그인을 설치합니다.</block>
   <block id="5e8a9d4736d645cf0f055d944e84951c" category="paragraph">커넥터에 대한 SSH 연결이 활성화되어 있는지 확인합니다.</block>
   <block id="0218f0e3f6d861fe204b02460991a162" category="list-text">플러그인이 설치된 호스트의 FQDN 또는 IP 주소를 지정합니다.</block>
   <block id="60aa5eaac0c85cbe7b7fd3bf7d9252a8" category="list-text">플러그인 패키지를 호스트에 복사할 때 사용하는 비 루트(sudo) 사용자를 지정합니다.</block>
   <block id="fa431b57e169cccce6b5507d5005b77b" category="list-text">호스트에 플러그인이 설치되어 있는지 확인하려면 확인란을 선택합니다.</block>
-  <block id="ad4653d249b9408ab0eaa97a7af2527e" category="list-text">텍스트를 에 복사하여 SnapCenter 사용자에 대한 sudo 액세스를 구성합니다<block ref="3b1b032b2f0ec7f73656946ca555b180" prefix=" " category="inline-code"></block> 파일.</block>
-  <block id="f37865521ab3241e236d5e5588a5f489" category="list-text">Connector에 제공된 스크립트를 사용하여 플러그인을 설치합니다.<block ref="ec229264169d10e0e522b26e5b6bac24" prefix=" " category="inline-code"></block></block>
-  <block id="f6118d5df254d948596a2eecbde7e309" category="paragraph">예를 들면 다음과 같습니다.<block ref="7b32029ad907f40b39cdf7478e332d44" prefix=" " category="inline-code"></block></block>
-  <block id="d39ba700b9d69e7870b27c911202c044" category="section-title">수동으로 플러그인을 설치하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다</block>
   <block id="1959cd86803d27b479ab4dc0fdcc5d6f" category="paragraph">Oracle 데이터베이스 호스트에서 SSH 키 기반 인증이 활성화되지 않은 경우 다음 수동 단계를 수행하여 플러그인을 설치한 다음 수동 옵션을 사용하여 UI에서 호스트를 추가해야 합니다.</block>
   <block id="2c917f45e0d46e5e12f53d249fc09dc1" category="list-text">Host details * 페이지에서 다음 작업을 수행합니다.</block>
   <block id="239e4e825f281583a76859b9e536037c" category="list-text">플러그인 패키지를 호스트에 복사할 때 사용할 sudo non-root(sudo) 사용자를 지정합니다.</block>
-  <block id="e7ff6e3c5dba88ceb1ef4a9bbbef074c" category="list-text">구성 * 페이지에서 다음 작업을 수행합니다.</block>
-  <block id="480a5ae9d6c54a41b779f14faf22d588" category="paragraph">플러그인 바이너리는 _ cd /var/lib/docker/volumes/service-manager-2_cloudmanager_scs_cloud_volume/_data/$(sudo docker PS | grep-Po "cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin_</block>
   <block id="53cd2db7b5189ffd4ede87d3128f9abc" category="list-text">SCP 또는 다른 대체 방법을 사용하여 각 Oracle 데이터베이스 호스트에 대해 _/home/&lt;non root user (sudo)&gt;/.SC_NetApp_path의 위 경로에서 copy_snapcenter_linux_host_plugin_scs.bin_</block>
   <block id="28cd1feed4d1442bb984e3c27e99d2ee" category="list-text">비 루트(sudo) 계정을 사용하여 Oracle 데이터베이스 호스트에 로그인합니다.</block>
   <block id="dc81da6c3b34e4764e2512da3b003dc6" category="list-text">디렉토리를 _/home/&lt;non root user&gt;/.sc_netapp/_로 변경하고 다음 명령을 실행하여 바이너리에 대한 실행 권한을 활성화합니다.<block ref="4cd88a831fa940d7f40686837061308c" prefix=" " category="inline-code"></block></block>
   <block id="7b6e585ad01188657c8452ae21b445b8" category="list-text">sudo SnapCenter 사용자로 Oracle 플러그인을 설치합니다.<block ref="f11871e64bd259821edac15d21de1875" prefix=" " category="inline-code"></block></block>
   <block id="576e31061b4a534413b8faf6e0741f32" category="list-text">Connector에서 아래 명령을 실행하여 커넥터에서 플러그인에 연결할 수 있는지 확인합니다.<block ref="673477aaa70ebb53bf7cf3d6ff85e120" prefix=" " category="inline-code"></block></block>
-  <block id="7a539986d48c2a7ad928e1216c8630e4" category="paragraph">BlueXP UI로 이동합니다.</block>
   <block id="4f392ad3504629d02ca4d2f772f8234d" category="paragraph">Oracle 데이터베이스에서 데이터 보호 작업을 수행하는 데 사용되는 데이터베이스 자격 증명을 구성해야 합니다.</block>
   <block id="810204a9d57850414619bb0519f68d56" category="list-text">데이터베이스에 대한 OS 인증이 비활성화된 경우 * 구성 * 을 클릭하여 데이터베이스 인증을 수정합니다.</block>
   <block id="170010a9200c605ccba180c86c7b8608" category="section-title">Oracle 데이터베이스용 SnapCenter 플러그인을 업그레이드하십시오</block>
@@ -2882,9 +2786,7 @@
   <block id="36c683b951ca9701b7d49ba16a2eb101" category="cell">UI를 사용하여 업그레이드합니다</block>
   <block id="d384bc48f0cd5d4f796e95e5b26bdde8" category="cell">명령줄을 사용하여 업그레이드합니다</block>
   <block id="91b9d8ab98c6819c2215b5a096f9712a" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 호스트에 해당되며 * Upgrade Plug-in * 을 클릭합니다.</block>
-  <block id="e54b1ad920c915cdfbc885b9413a05d2" category="list-text">확인란을 선택하고 * 업그레이드 * 를 클릭합니다.</block>
   <block id="bd6f38fd25832ee5daa13644079f4432" category="list-text">Connector VM에 로그인합니다.</block>
-  <block id="70a77b6528156a24011537684069cf35" category="list-text">다음 스크립트를 실행합니다.<block ref="1ab8c9e83ceb7576b93ce0608fc43b20" prefix=" " category="inline-code"></block></block>
   <block id="db963b5001e54344b1d81fb01040f0cd" category="paragraph">BlueXP를 사용하면 Cloud Volumes ONTAP 작업 환경을 만들어 볼륨 및 추가 데이터 서비스를 추가하고 관리해야 합니다. 또한 BlueXP에서 퍼블릭 클라우드 환경 내의 리소스와 프로세스를 관리할 수 있도록 클라우드 환경에 대한 Connector를 만들어야 합니다.</block>
   <block id="244b71b8d5b47f108e0fdc3d6e2f60ac" category="paragraph">클라우드 환경을 위한 Cloud Volumes ONTAP를 몇 가지 단계로 시작할 수 있습니다. 자세한 내용은 다음 중 하나를 참조하십시오.</block>
   <block id="1d5dd4cd891271a811fa694e18822996" category="paragraph">동일한 커넥터를 사용하여 Cloud Volumes ONTAP 작업 환경과 데이터베이스를 모두 관리해야 합니다.</block>
@@ -2892,8 +2794,6 @@
   <block id="7857a907559e9aa1d032fe9e9508406b" category="list-text">Cloud Volumes ONTAP 작업 환경과 데이터베이스가 서로 다른 VPC 또는 VNets에 있는 경우 VPC 또는 VNets를 살펴보는지 확인합니다.</block>
   <block id="6d5571dc24e5e0915d6576d87e5ac094" category="paragraph">ONTAP에서 StorageGRID로 애플리케이션 데이터를 백업하려면 몇 가지 단계를 완료하십시오.</block>
   <block id="678c7b4b57d185b0a32c6bb97f354282" category="list-text">클러스터 관리 LIF의 IP 주소를 지정합니다.</block>
-  <block id="35d45d5c5ce076e306b520a11aca5200" category="list-text">액세스 키 필드에서 데이터 암호화에 대한 키를 지정합니다.</block>
-  <block id="f42df8d50c905dc42d79abceb255aab1" category="list-text">암호 키 필드에 데이터 암호화에 대한 암호를 지정합니다.</block>
   <block id="256c6643ca1c733f72685d5a161161f5" category="section-title">2023년 4월 14일</block>
   <block id="c0c906f83c940d4d16ffb433d7a368ca" category="list-text">스크립트 기반 시스템 새로 고침을 지원합니다</block>
   <block id="b53bbb0902c6b7a25e7c1ac484d9fec2" category="list-text">Azure NetApp Files 백업이 구성된 경우 단일 파일 스냅샷 복원 지원</block>
@@ -2912,16 +2812,11 @@
   <block id="271bf2db00b3f9d0b5aad9d23db5b5b1" category="list-text">SnapCenter 사용자를 생성하고 비루트(sudo) 사용자에 대해 sudo를 구성해야 합니다. 자세한 내용은 을 참조하십시오 <block ref="6178ed5e7702fbe22f507b323e07e08d" category="inline-link-macro-rx"></block></block>
   <block id="a342ee864ee2041024682964d5eb2d2f" category="list-text">데이터베이스 호스트를 추가하기 전에 SAP HANA용 SnapCenter 플러그인을 설치해야 합니다.</block>
   <block id="66ae4dcc3f5b40460c5e2cdced87ec64" category="list-text">최신 버전의 플러그인이 설치되어 있는지 확인합니다. 플러그인을 업그레이드하려면 를 참조하십시오 <block ref="fa0725cff83262548be2bb3141141535" category="inline-xref-macro-rx"></block>.</block>
-  <block id="c18d0cdc327775e550cab4077e0cf8ed" category="inline-link">기술 자료 문서</block>
-  <block id="9d88c9b359895326421b4e498514fe63" category="admonition">BlueXP 커넥터 호스트에서 애플리케이션 호스트로의 연결에 실패한 경우 을 참조하십시오<block ref="67a241450d9432d1b6e52c4a1425fef2" category="inline-link-rx"></block> 를 참조하십시오.</block>
   <block id="b0f376f04f11f862cdd2470a02895bbb" category="paragraph">root(sudo) 사용자가 아닌 사용자를 만들어 플러그인을 설치합니다.</block>
-  <block id="64f154ed6fd8b78f604728f41be40e7b" category="list-text">sudoer.txt * 의 내용을 복사합니다. * sudo docker PS | grep -Po "cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin_</block>
-  <block id="4978d5558bdfd1b30fc95a5ca316fe16" category="list-text">루트 사용자 계정을 사용하여 SAP HANA 데이터베이스 호스트에 로그인합니다.</block>
   <block id="57c7c4c17c44f6adef8f52a8ca8d47ce" category="list-text">3단계에서 복사한 텍스트를 _/etc/sudoers.d/snapcenter_file에 복사하여 비루트 사용자에 대한 sudo 액세스를 구성합니다.</block>
   <block id="cf572248a3ec523ef7a5f32e697e77ae" category="paragraph">/etc/sudoers.d/snapcenter_file에 추가한 줄에서 _&lt;LINUXUSER&gt;_를 루트가 아닌 사용자로 바꾸고 _&lt;USER_HOME_DIRECTORY&gt;_를 _HOME/&lt;non-root-user&gt;_로 바꿉니다.</block>
   <block id="5e8ec7f8a9cc569c5d599a0f9c02c7da" category="section-title">스크립트를 사용하여 플러그인을 설치합니다</block>
   <block id="3848f62f8f097b98f19e7e88ebfef10c" category="paragraph">SAP HANA 호스트 비루트 사용자 계정에 대한 SSH 키 기반 인증을 구성하고 다음 단계를 수행하여 플러그인을 설치합니다.</block>
-  <block id="bbbbd900f257dbd3cc56c4ae54eefacb" category="paragraph">* 시작하기 전에 *</block>
   <block id="c9bb2e3da2133ca407c41ee65e8af768" category="list-text">Connector VM에 로그인합니다.</block>
   <block id="49ee3087348e8d44e1feda1917443987" category="cell">이름</block>
   <block id="e89ab59baea830bd940c300886c50efe" category="cell">필수입니다</block>
@@ -2941,7 +2836,6 @@
   <block id="6ffd4f25a50edc730a0d5f5b3289f2e8" category="paragraph">host_ssh_port</block>
   <block id="fa650b34a9dfeef3a2992bb1aa59bef8" category="paragraph">SAP HANA 호스트의 SSH 포트를 지정합니다</block>
   <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="paragraph">22</block>
-  <block id="bb95664f2027c51accfa12aee42e9193" category="paragraph">예를 들면, 다음과 같습니다.<block ref="854d96d87066812dd5dfb92365800f10" prefix=" " category="inline-code"></block></block>
   <block id="50ce6c3ec5bc71671b20c5c730c59279" category="paragraph">플러그인을 설치한 후에는 다음을 수행해야 합니다 <block ref="fe02bbafed1c03ea0c96e9474666c66f" category="inline-xref-macro-rx"></block>.</block>
   <block id="ab40cd46c3c9263b45ca4de0110e3309" category="section-title">플러그인을 수동으로 설치합니다</block>
   <block id="b11731c01840b06321e3728fd82d5c7b" category="paragraph">HANA 호스트에 SSH 키 기반 인증이 설정되어 있지 않은 경우 아래의 수동 단계를 수행하여 플러그인을 설치해야 합니다.</block>
@@ -2953,7 +2847,6 @@
   <block id="f35f5a5ebccba047b1925b74505fdfbe" category="paragraph">최신 새 기능 및 향상된 기능을 이용하려면 SAP HANA용 SnapCenter 플러그인을 업그레이드해야 합니다.</block>
   <block id="6c2313e6302e3ddccaf89724b45a5b06" category="list-text">다음 스크립트를 실행합니다.<block ref="9a9e1cb603fe75305e4d36be20ae9261" prefix=" " category="inline-code"></block></block>
   <block id="82079d60037e9d0df21acad72b86e52d" category="list-text">(선택 사항) HDBSQL OS 사용자를 수정합니다.</block>
-  <block id="bf5b83e4fce51c42d6592beefd18ac45" category="list-text">UI에서 SAP HANA 시스템을 수정하거나 제거할 수도 있고 REST API를 사용할 수도 있습니다.</block>
   <block id="1cb5dc89376339563335539bf6e6b34f" category="paragraph">SAP HANA 시스템을 제거하기 전에 관련된 모든 백업을 삭제하고 보호를 제거해야 합니다.</block>
   <block id="ed610882a056fb1f63c13e2a503a9aad" category="paragraph">멀티 테넌트 데이터베이스 컨테이너 또는 단일 컨테이너 유형 SAP HANA 시스템을 추가한 후 HANA 시스템의 비 데이터 볼륨을 추가할 수 있습니다.</block>
   <block id="d9242f06d616d0d0d92448044927a033" category="paragraph">사용 가능한 SAP HANA 데이터베이스를 검색하고 나면 이러한 리소스를 리소스 그룹에 추가하여 데이터 보호 작업을 수행할 수 있습니다.</block>
@@ -2975,13 +2868,11 @@
   <block id="04a609023441d405d7737b598e996ecc" category="paragraph">Oracle 또는 SAP HANA 호스트에 대한 커넥터 세부 정보를 업데이트한 후 다음을 수행하여 커넥터 세부 정보가 성공적으로 업데이트되었는지 확인하십시오.</block>
   <block id="c7a27796e5a5232935a8d038a0a6b895" category="list-text">BlueXP Connector VM에 로그인하고 다음 단계를 수행하십시오.</block>
   <block id="28c72bbdc4ab4ab6f8e9dc9141ef35b4" category="list-text">Connector에서 아래 명령을 실행하여 커넥터에서 플러그인에 연결할 수 있는지 확인합니다.<block ref="9544839ee9a7e2ffd7168a97cf30d0ba" prefix=" " category="inline-code"></block></block>
-  <block id="55f1f4b32fd8584ea3972f97a31dd31a" category="list-text">플러그인 호스트의 _/var/opt/snapcenter/spl/etc/_에 커넥터 VM의 _&lt;base_mount_path&gt;/client/certificate/_path 에서 certificate.p12를 복사합니다.</block>
   <block id="760915aa5f89cc3d82d6b1843f2f6bf5" category="section-title">BlueXP Connector에 CA 서명 인증서를 구성합니다</block>
   <block id="d8874bb71961b94426c411c146dd7e73" category="list-text">Connector가 플러그인과 연결할 때 CA 인증서를 클라이언트 인증서로 사용하려면 Connector에서 다음 단계를 수행하십시오.</block>
   <block id="7e2c20ec1886ae9be86114e609044897" category="list-text">커넥터의 _&lt;base_mount_path&gt;/client/certificate_에 있는 기존 파일을 모두 삭제합니다.</block>
   <block id="04bdfd410e0dd60a6ae2bf418bd38c2d" category="list-text">CA 서명 인증서와 키 파일을 커넥터의 _&lt;base_mount_path&gt;/client/certificate_에 복사합니다.</block>
   <block id="d1ba1deae444a2224e05679a25cf4156" category="paragraph">예: openssl pkcs12-inkey key.pem-in certificate.pem-export-out certificate.p12</block>
-  <block id="efa34c1a814317d46fe905ed7355d083" category="list-text">모든 중간 CA 및 루트 CA에 대한 certificate.p12 및 인증서를 _/var/opt/snapcenter/spl/etc/_의 플러그인 호스트에 복사합니다.</block>
   <block id="f3b0d1039ed9a07355614db78c13f344" category="admonition">중간 CA 및 루트 CA 인증서의 형식은 .crt 형식이어야 합니다.</block>
   <block id="a347bfd7f53d07f16ec44054dfa4cb80" category="list-text">플러그인 호스트에서 다음 단계를 수행하여 Connector에서 보낸 인증서의 유효성을 확인합니다.</block>
   <block id="0764cdf68f97f446e2b458ce7e48a75c" category="admonition">certificate.crt는 루트 CA 및 중간 CA의 인증서를 나타냅니다.</block>
@@ -2997,7 +2888,6 @@
   <block id="68553a1f6aeafb6e270057c83458f0ea" category="paragraph">CA 파일은 PEM 형식이어야 합니다.</block>
   <block id="f2a41ed5adc439ab3b0dc591d647b2c9" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 복원하려는 데이터베이스에 해당하는 을 클릭하고 * 복원 * 을 클릭합니다.</block>
   <block id="9a746f42430ce856d696ca2d13f1b5f4" category="list-text">데이터베이스를 복원할 복원 지점을 선택하고 * 원래 위치로 복원 * 을 클릭합니다.</block>
-  <block id="a7e4f5d7b5114b57c09100d5e6f4adbf" category="admonition">ASM 레이아웃에서 iSCSI에 대한 제어 파일 또는 제어 파일만 사용하여 데이터 파일을 복구하거나 테이블스페이스 및 PDB를 복구하는 것은 지원되지 않습니다.</block>
   <block id="8b37be1d68d16c03982c4f9e6bba4648" category="paragraph">SCN * 까지 * 를 선택하고 SCN을 지정합니다.</block>
   <block id="2c4a0cae210de8a6147e58041c3a6876" category="section-title">SAP HANA 데이터베이스를 보호하기 위한 정책을 수립합니다</block>
   <block id="b1c60225b9e714eec7a1db6d414766ec" category="list-text">(선택 사항) 스크립트를 지정합니다. <block ref="1775fd82cd452c1f6bfd5a9921fc22f3" category="inline-link-macro-rx"></block></block>
@@ -3028,7 +2918,6 @@
   <block id="71cb10bcaacfae27cc9bac41865e97f7" category="list-text">사내 보조 스토리지에서 백업 보호</block>
   <block id="f38022cdfb27bcdacebc0633036b927c" category="list-text">SAP HANA 애플리케이션 보호</block>
   <block id="0a2eb5b37c8e172647166550f43db124" category="list-text">VMware 환경에 있는 Oracle 및 SQL 애플리케이션 보호</block>
-  <block id="a6a03f085aaa031834153004299da2fc" category="list-text">백업을 마운트합니다</block>
   <block id="20bf35a5a6263705cb77bbd72a8cbce2" category="list-text">BlueXP의 정책과 레이블 또는 동일한 레이블이 없는 SnapCenter에서 최소 1일, 1주 또는 1개월 이상의 정책을 사용할 수 있습니다.</block>
   <block id="5422c69ce598c81146a4b7b614d9df97" category="list-text">ASM_diskstring 매개 변수에서 다음을 구성해야 합니다.</block>
   <block id="ee5ee458f53ce64efd817dfc25ec2b7c" category="list-text">AFD: * ASMFD를 사용하는 경우</block>
@@ -3408,7 +3297,6 @@
   <block id="ddc4eff2345788fc606fb71155e77e08" category="inline-image-macro">BlueXP 백업 및 복구가 백업 파일이 있는 사내 애플리케이션 및 대상 스토리지와 통신하는 방법을 보여주는 다이어그램입니다.</block>
   <block id="5900ca7e734dbd4ebfc5c92beb6901ad" category="paragraph"><block ref="5900ca7e734dbd4ebfc5c92beb6901ad" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e2b884e233698d79dba9ae1a61ec9653" category="doc">클라우드 네이티브 애플리케이션 데이터 보호</block>
-  <block id="eef768141b9dd395f1e8b3aeeac1b961" category="paragraph">애플리케이션의 BlueXP 백업 및 복구는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션에 일관된 데이터 보호 기능을 제공하는 SaaS 기반 서비스입니다. BlueXP 백업 및 복구는 다음과 같은 애플리케이션에 대해 효율적이고 일관된 정책 기반 보호 기능을 제공합니다.</block>
   <block id="8c7c81dd2ca4a5ab651c1cfb30a19c0e" category="sidebar">클라우드 네이티브 애플리케이션 데이터를 백업 및 복원합니다</block>
   <block id="1aac38ab9167eb6ae3a199d0a8bc7915" category="sidebar">Oracle 데이터베이스를 백업합니다</block>
   <block id="7394e84832837e7d0dc503d85eb3f36c" category="sidebar">SAP HANA 데이터베이스 백업</block>
@@ -3534,7 +3422,6 @@
   <block id="1ec47f8d2867e62133816fe5c965e4ea" category="list-text">BlueXP 백업 및 복구 PAYGO 라이센스의 경우 에 가입해야 합니다<block ref="2fad159ac15feeefc5347d9f8b6dbeab" category="inline-link-rx"></block>. BlueXP 백업 및 복구에 대한 청구는 이 구독을 통해 이루어집니다.</block>
   <block id="297636b2bcb79ee4ccd3bb7671403999" category="section-title">SAP HANA 데이터베이스 호스트를 삭제합니다</block>
   <block id="a2d13879a7b76ffe897fe8103b434355" category="paragraph">REST API만 사용하여 SAP HANA 데이터베이스 호스트를 제거할 수 있습니다.</block>
-  <block id="a8a535cce11f864e14e13eff6e6b9d73" category="list-text">UI를 사용하거나 아래 REST API를 사용하여 SAP HANA 데이터베이스 호스트와 연결된 모든 시스템을 삭제합니다.<block ref="f43e4584db76b7893255f556ed8c0765" prefix=" " category="inline-code"></block></block>
   <block id="b7f6974b5d69aff198f9237a0a2c094d" category="list-text">SAP HANA 데이터베이스 호스트를 제거하려면 다음 단계를 수행하십시오.</block>
   <block id="200afc5eca1ab2aaaf44d39b4e461f2a" category="list-text">REST API 가져오기를 사용하여 삭제해야 하는 SAP HANA 데이터베이스 호스트의 ID를 가져올 수 있습니다.<block ref="51dad906998af1627cfd8c445b8b43ab" prefix=" " category="inline-code"></block>
   <block ref="f95b70fdc3088560732a5ac135644506" prefix=" " category="inline-code"></block>
@@ -3562,7 +3449,6 @@
            <block ref="db764a9381e247045b4f4a6c09e121b0" prefix=" " category="inline-code"></block>
        <block ref="cbb184dd8e05c9709e5dcaedaa0495cf" prefix=" " category="inline-code"></block>
    <block ref="0fbd1776e1ad22c59a7080d35c7fd4db" prefix=" " category="inline-code"></block><block ref="cbb184dd8e05c9709e5dcaedaa0495cf" prefix=" " category="inline-code"></block></block>
-  <block id="cab82189f2bc3aa6ebb43c8830e47693" category="list-text">아래의 패치 API를 사용하여 호스트 이름 또는 플러그인 포트를 수정합니다.<block ref="1fcec45b91ad39b0aa8d1cf2b8d5e031" prefix=" " category="inline-code"></block></block>
   <block id="c325ed37b6a44d9e765cfd2dd7779cfb" category="paragraph">ONTAP 9.13.1 이상을 실행하는 온-프레미스 ONTAP 시스템의 경우 * 작업 모니터링 * 탭에서 이러한 지속적인 백업 작업과 같은 시스템 시작 작업을 사용할 수 있습니다. 이전 ONTAP 버전은 사용자가 시작한 작업만 표시합니다.</block>
   <block id="4e4c67e8658214022378968dae080ce5" category="list-text">"CVO Edge Cache" 패키지는 "CVO Professional" 패키지와 동일한 기능을 제공하지만 에 대한 지원도 포함합니다<block ref="0e8295000b498583f7b721745920fe19" category="inline-link-rx"></block> 서비스. Cloud Volumes ONTAP 시스템에서 3TiB의 용량 프로비저닝당 BlueXP 에지 캐싱 에지 시스템 1개를 구축할 수 있습니다. 이 옵션은 Azure 및 Google 마켓플레이스에서 사용할 수 있으며, 온프레미스 ONTAP 데이터를 백업할 수 없습니다.</block>
   <block id="83e6a84bd8ee7bed2013f07c3bd590c7" category="paragraph"><block ref="e8c794dc8a2003f8106407fa82df9679" category="inline-link-rx"></block>.</block>
@@ -3880,4 +3766,228 @@
   <block id="ba85eaabcb89510a63df45c18680ba9a" category="list-text">Edit Policy_페이지에서 를 클릭합니다 <block ref="68009ec8a10651d6de3d648624efb837" category="inline-image-macro-rx" type="image"></block> 스케줄 및/또는 백업 보존을 변경하려면 _ Labels &amp; Retention _ 섹션을 확장하고 * Save * 를 클릭합니다.</block>
   <block id="aafc4372a2c5748961cfe050c997ca42" category="list-text">Add New Policy_페이지에서 를 클릭합니다 <block ref="68009ec8a10651d6de3d648624efb837" category="inline-image-macro-rx" type="image"></block> Labels &amp; Retention _ 섹션을 확장하여 스케줄 및 백업 보존을 정의하려면 * Save * 를 클릭합니다.</block>
   <block id="27b14a69b7d1dfde3096980cc202af91" category="sidebar">데이터 보호 범위에 대한 보고서를 생성합니다</block>
+  <block id="1785898b30a72a71efa58cd74c5bd968" category="list-text">RHEL 7.6 이상</block>
+  <block id="b1045ab9180f3558b52a06f17084e8aa" category="list-text">SAP-HANA SPS07용 RHEL 8.1 이상</block>
+  <block id="0a3eb24ad165a9e7ad6ffd25324a35d4" category="list-text">SAP HANA 다중 테넌트 데이터베이스 컨테이너(MDC) 2.0SPS5, 2.0SPS6, 2.0SPS7(단일 또는 다중 테넌트 포함</block>
+  <block id="8b7b00164a9190e7c09cb2bb42cb001a" category="list-text">SAP HANA 단일 호스트 시스템, SAP HANA 다중 호스트 시스템, HANA 시스템 복제</block>
+  <block id="f8988e398a707101924ea388677409fc" category="list-text">SAP HANA 시스템은 중지된 상태여야 합니다.</block>
+  <block id="a8b45367ee0c14997ae4e895a47f4bcd" category="list-text">SAP HANA 시스템이 실행 중이면 처방된 내용을 제공하여 시스템을 중지할 수 있습니다.</block>
+  <block id="637b56dcab18156dd176f53be59f448d" category="list-text">볼륨에 대해 ANF 백업을 활성화하면 단일 파일 SnapRestore 작업이 수행됩니다.</block>
+  <block id="21d7c708fc3cf78318f0422c1804d895" category="list-text">비 데이터 볼륨 및 글로벌 비 데이터 볼륨의 경우 연결 및 복제 복원 작업이 수행됩니다.</block>
+  <block id="1f4c6214a19160f5513da3ce774b9aa3" category="list-text">연결 및 복사 복원 작업에 대한 서비스 품질(QoS) 값은 비 데이터 볼륨 또는 글로벌 비 데이터 볼륨의 소스 볼륨에서 선택됩니다.</block>
+  <block id="7c5673794ab84049a1575a551e904955" category="admonition">QoS는 "Manual" 유형의 용량 풀에만 적용할 수 있습니다.</block>
+  <block id="d8e8e1e9be8176a39942efc9316a29da" category="paragraph">연결 및 복사 복원 작업의 경우 Microsoft Azure 포털로 이동하여 볼륨을 선택하고 * Edit * 를 클릭한 다음 * Hide snapshot path * 를 활성화합니다.</block>
+  <block id="9ecc57e66b15cefd0125186929dc1975" category="admonition">호스트 이름은 HSR 복제에 사용되는 호스트의 호스트 이름과 같아야 합니다.</block>
+  <block id="4b5d09f1726d80469776849660024054" category="list-text">다음 위치에 있는 * sudoer.txt * 의 내용을 복사합니다. _/var/lib/docker/volumes/service-manager[1]-2_cloudmanager_scs_cloud_volume/_data/$(sudo docker PS|grep-Po" cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin_</block>
+  <block id="d15dde190bd80c4b67a19bec549b644a" category="list-text">루트 사용자 계정을 사용하여 SAP HANA 시스템 호스트에 로그인합니다.</block>
+  <block id="185df8fc7d6cba2b3dc4ddbb241610fe" category="paragraph-title">시작하기 전에</block>
+  <block id="2d38677e8a4946bdca4b843432495b0d" category="list-text">Connector에 제공된 스크립트를 사용하여 플러그인을 설치합니다.<block ref="712ebead777e5d0341cb4c470ac313e6" prefix=" " category="inline-code"></block></block>
+  <block id="5abd5d510cf81f893be3e40108c84360" category="paragraph">이전 커넥터를 사용하는 경우 다음 명령을 실행하여 플러그인을 설치합니다.<block ref="4dee3cdde0b3f689cacdf7828de5f241" prefix=" " category="inline-code"></block></block>
+  <block id="424ed2f4149fd72cf389b8445b00e1ab" category="paragraph">예를 들어, 'sudo bash /var/lib/docker/volumes/service-manager-2_cloudmanager_scs_cloud_volume/_data/scripts/linux_plugin_copy_and_install.sh -- host 10.0.1.1 -- username SnapCenter -- sshkey/netapp-ssh.ppk</block>
+  <block id="32ded8361c7915052bda371f53ac1cd2" category="paragraph">플러그인 바이너리는 _CD/var/lib/docker/volumes/service-manager[1]-2_cloudmanager_scs_cloud_volume/_data/$(sudo docker PS|grep-Po "cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin_</block>
+  <block id="2b331824c3cc83f2a2e03c85bb44862f" category="list-text">SnapCenter 사용자에 대해 sudo를 구성합니다. 자세한 내용은 을 참조하십시오 <block ref="5e3b9649d708169ed88a9a242f31b61c" category="inline-xref-macro-rx"></block>.</block>
+  <block id="a64a15a54bc15fd76d581f201d8597db" category="paragraph">이전 Connector를 사용하는 경우 다음 명령을 실행하여 플러그인을 업그레이드합니다.<block ref="54993491d663e6aaf93dc6ed29ee78c5" prefix=" " category="inline-code"></block></block>
+  <block id="c1c67d1a62632a7d21817e74b7a9b4b6" category="list-text">플러그인 호스트 를 선택합니다.
+(선택 사항) 호스트가 추가되지 않은 경우 * 플러그인 호스트 추가 * 를 클릭합니다.</block>
+  <block id="010678b7a184d05aec2abd32b800f89b" category="paragraph">왼쪽 탐색 창에서 BlueXP * Canvas * 를 선택하여 새 작업 환경을 추가합니다.</block>
+  <block id="6127a1470e4ac9558619287c2c509e80" category="paragraph">UI에서 SAP HANA 시스템을 수정하거나 제거할 수 있습니다.</block>
+  <block id="d65cdf24414c885f7a1b05c0cbb361d5" category="list-text">UI를 사용하거나 아래 REST API를 사용하여 SAP HANA 데이터베이스 호스트와 연결된 모든 시스템을 삭제합니다.<block ref="0c0baa47c52b612c6253de1836b4f5e6" prefix=" " category="inline-code"></block></block>
+  <block id="bfd23c3bc8b4cf882aac94054775463a" category="list-text">아래의 패치 API를 사용하여 호스트 이름 또는 플러그인 포트를 수정합니다.<block ref="3df630cb139718471dc01612fab9397c" prefix=" " category="inline-code"></block><block ref="f95b70fdc3088560732a5ac135644506" prefix=" " category="inline-code"></block><block ref="a37ea85e4042f80d9f4b6f965b1b2646" prefix=" " category="inline-code"></block><block ref="a783ebe0e7707148dae78011dee49146" prefix=" " category="inline-code"></block><block ref="cbb184dd8e05c9709e5dcaedaa0495cf" prefix=" " category="inline-code"></block></block>
+  <block id="51276db22ab007bf8378ddc5150c089e" category="section-title">2023년 7월 4일</block>
+  <block id="91abdc8faafafce1c7b76b1ecb8b37a6" category="list-text">SAP HANA 시스템</block>
+  <block id="bd8b9d76d990f261019903335a2c9e94" category="list-text">Azure NetApp Files 2차 보호 기능이 있는 비 데이터 볼륨 및 글로벌 비 데이터 볼륨의 연결 및 복사본 복원을 지원합니다</block>
+  <block id="0ba30ac65d6a9a5888d4dc02307879d6" category="list-text">Azure NetApp Files에서 Oracle 데이터베이스를 대체 위치로 복구할 수 있도록 지원합니다</block>
+  <block id="699e0e6ae8fec9f5e5e383a17f5ec630" category="list-text">Azure NetApp Files에서 Oracle 데이터베이스 백업의 Oracle RMAN(Recovery Manager) 카탈로그 작성을 지원합니다</block>
+  <block id="02794f70b3a16972197aaf346fca198e" category="list-text">데이터베이스 호스트를 유지 관리 모드로 전환하여 유지 관리 작업을 수행할 수 있습니다</block>
+  <block id="d7d2579b3be99740443be180188dedfc" category="list-text">대체 위치로 복원을 지원합니다</block>
+  <block id="b0e856a98075908a96697bb21ab6fe32" category="list-text">Oracle 데이터베이스 백업을 마운트할 수 있습니다</block>
+  <block id="9e9fa16d2206e067234a9dad53361ff4" category="list-text">GCP에서 아카이브 계층으로 백업 이동 지원</block>
+  <block id="e0d4183564323d306658a92b138bac87" category="section-title">가상 시스템의 BlueXP 백업 및 복구 기능 향상(하이브리드)</block>
+  <block id="64870b941ab2700a64f496038bfb77a9" category="list-text">NFS 및 VMFS 유형의 데이터 저장소 보호 지원</block>
+  <block id="c54bd2b10766a492ae36855e868d61eb" category="list-text">VMware vSphere 호스트용 SnapCenter 플러그인의 등록을 취소할 수 있습니다</block>
+  <block id="08c34207830d8869e05cd28a4543f5dc" category="list-text">최신 데이터 저장소 및 백업의 업데이트 및 검색을 지원합니다</block>
+  <block id="8b803eccc7b3025a4a30eb9283c44e50" category="list-text">AWS 액세스 키 필드에서 키를 지정합니다.</block>
+  <block id="6e3c30245930a39c89b2820d0afecc99" category="list-text">AWS 암호 키 필드에 암호를 지정합니다.</block>
+  <block id="da490d8bb350d1ff5d204e7bdf4b2c7d" category="list-text">Access Key 필드에서 키를 지정합니다.</block>
+  <block id="2eccdae60857b53f97fd58344a87c912" category="list-text">암호 키 필드에 암호를 지정합니다.</block>
+  <block id="9f3965b57de8600417ada26ea981d243" category="summary">데이터 파일, 제어 파일 또는 둘 다를 원래 위치로 복원한 다음 데이터베이스를 복구합니다.</block>
+  <block id="c53f851b0aefb905b53b1f7fb623300c" category="doc">클라우드 네이티브 Oracle 데이터베이스를 원래 위치로 복원합니다</block>
+  <block id="e7abe879ad8765bcf5e173bd23f0644d" category="paragraph">데이터가 손실된 경우 데이터 파일, 제어 파일 또는 둘 모두를 원래 위치로 복원한 다음 데이터베이스를 복구할 수 있습니다.</block>
+  <block id="a5233c6b5d691a32f2faf916f0baebe1" category="summary">SAP HANA 데이터베이스를 클라우드에서 사내 SnapCenter 서버로 복원할 수 있습니다.</block>
+  <block id="4916c64add300658e04310a106e04012" category="doc">SAP HANA 데이터베이스 복원</block>
+  <block id="33f890a5e5f85b7caf971e2a72c73036" category="paragraph">SAP HANA 데이터베이스를 동일한 호스트로 복원할 수 있습니다.</block>
+  <block id="4b214d6e7bd95c0516f3f50fc89a0e3e" category="list-text">필터 기준 * 필드에서 필터 * 유형 * 을 선택하고 드롭다운에서 * HANA * 를 선택합니다.</block>
+  <block id="839eae4432b00e9cfcdd83d532a31b83" category="list-text">복원 옵션 페이지에서 다음 중 하나를 지정합니다.</block>
+  <block id="eee7cd91c87d431eb526192fb8d8f8fa" category="list-text">스냅샷이 아카이브 스토리지에 있는 경우 아카이브 스토리지에서 데이터를 복원하는 우선 순위를 선택합니다.</block>
+  <block id="0a7a7ddc8742b5a7471a5c2d0a3cecb0" category="admonition">Amazon Web Services 또는 Microsoft Azure를 클라우드 공급자로 사용하는 경우에만 우선순위를 지정해야 합니다.</block>
+  <block id="cfca0342d906d31ff717aa42ed391bcb" category="list-text">소스 스토리지에 공간이 충분하지 않거나 소스 스토리지가 다운된 경우 * 스토리지 위치 변경 * 을 선택합니다.</block>
+  <block id="d0aa9f6dc927738d3c07012b7c8b6e03" category="list-text">스토리지 매핑 페이지에서 오브젝트 저장소에서 복원된 데이터가 저장될 대체 스토리지 위치 세부 정보를 지정합니다.</block>
+  <block id="d3cb840d450fe62742c860611a591afe" category="paragraph">이 작업은 지정된 호스트에서 선택한 백업의 스토리지 내보내기만 수행합니다. 파일 시스템을 수동으로 마운트하고 데이터베이스를 불러와야 합니다. 볼륨을 사용한 후에는 스토리지 관리자가 ONTAP 클러스터에서 볼륨을 삭제할 수 있습니다.</block>
+  <block id="ec0fc0ea2833a10faacc111a394e09d4" category="list-text">Amazon FSx for NetApp ONTAP에서 일일 자동 백업을 사용하는 경우, FSx가 복제된 볼륨에 백업을 생성했기 때문에 FSx for NetApp ONTAP의 복제된 볼륨을 BlueXP UI에서 삭제할 수 없습니다.
+FSx UI에서 볼륨에 대한 모든 백업을 삭제한 후 복제된 볼륨을 삭제한 다음 force 옵션을 사용하여 BlueXP UI에서 클론을 삭제해야 합니다.</block>
+  <block id="6899a442339528c09f4934aff2d6dea0" category="paragraph">애플리케이션을 위한 BlueXP 백업 및 복구는 NetApp 클라우드 스토리지에서 실행되는 애플리케이션을 위한 애플리케이션 정합성이 보장되는 데이터 보호 기능을 제공합니다. BlueXP 백업 및 복구는 다음과 같은 애플리케이션에 대해 효율적이고 일관된 정책 기반 보호 기능을 제공합니다.</block>
+  <block id="0de5e50912af670eb77f45ee57c4118d" category="list-text">Oracle RMAN을 사용하여 Azure NetApp Files에서 Oracle 데이터베이스 백업을 카탈로그로 작성할 수 있습니다</block>
+  <block id="d1873efc0cdf4c8e0d69264fb4d3b40f" category="list-text">Azure NetApp Files에서 Oracle 데이터베이스를 대체 위치로 복구</block>
+  <block id="822c8fbde1e65209f07f97e6791263d6" category="paragraph">Oracle 데이터베이스를 원래 위치 또는 대체 위치로 복구할 수 있습니다. RAC 데이터베이스의 경우 데이터가 백업을 생성한 사내 노드로 복구됩니다.</block>
+  <block id="a91a41f2fc1f089d3e56a267d2a78fd0" category="list-text">복원 옵션 페이지에서 데이터베이스 파일을 복원할 위치를 지정합니다.</block>
+  <block id="c69c60692525e502b22a94d63eaccc46" category="paragraph">원래 위치로 복구하려는 경우</block>
+  <block id="34c4d04aa0f3533b502e02796da12987" category="list-text">원래 위치로 복원 * 을 선택합니다.</block>
+  <block id="d3848423ad873508b35dee4f882c93c1" category="list-text">마지막 트랜잭션으로 복구하려면 * All Logs * 를 선택합니다.</block>
+  <block id="5d5be53ceca242c265f3132067176acf" category="list-text">특정 SCN으로 복구하려면 SCN(시스템 변경 번호) * 까지 * 를 선택합니다.</block>
+  <block id="80cf9881a37650ae16840f0f221e2119" category="list-text">특정 데이터와 시간으로 복구하려면 * 날짜 및 시간 * 을 선택합니다.</block>
+  <block id="29efffe1f66a8912fca8bb27c93fc1b8" category="list-text">복구하지 않으려면 * 복구 없음 * 을 선택합니다.</block>
+  <block id="6f99f4737d8256ed0337b7c17764757d" category="paragraph">일시적으로 다른 저장소로 복구한 다음 복원된 파일을 원래 위치로 복사하려는 경우</block>
+  <block id="fd6c41084988e4bb4645834e30b44ff5" category="list-text">저장 위치 변경 * 을 선택합니다.</block>
+  <block id="8ee01307d2746e8b138b043603eb24d9" category="list-text">스토리지 매핑 페이지에서 오브젝트 저장소에서 복원된 데이터가 일시적으로 저장되는 대체 스토리지 위치 세부 정보를 지정합니다.</block>
+  <block id="8c5b542e3bf5c33a79d410f3c7267c34" category="paragraph">사내 ONTAP 시스템을 선택하고 오브젝트 스토리지에 대한 클러스터 연결을 구성하지 않은 경우 오브젝트 저장소에 대한 추가 정보를 묻는 메시지가 표시됩니다.</block>
+  <block id="55ae1bb95429a03bb32d84800ae9f163" category="paragraph">대체 위치로 복구하려는 경우</block>
+  <block id="27f24f295039df910eea0a37a2292d0f" category="list-text">대체 위치로 복원 * 을 선택합니다.</block>
+  <block id="cd23b08068b5c308f9cc0772c3cf9b14" category="list-text">대체 스토리지로 복구하려면 다음을 수행하십시오.</block>
+  <block id="1fa7938e9e890feda45cc6a22d74fdee" category="list-text">스토리지 매핑 페이지에서 오브젝트 저장소의 데이터를 복원해야 하는 대체 스토리지 위치 세부 정보를 지정합니다.</block>
+  <block id="ac0523bc65b262ce835f34df8c1b4e7c" category="list-text">대상 호스트 페이지에서 데이터베이스를 마운트할 호스트를 선택합니다.</block>
+  <block id="1b50cce2092e44b8d753e84a4e2b37fc" category="list-text">(선택 사항) NAS 환경의 경우 객체 저장소에서 복구된 볼륨을 내보낼 호스트의 FQDN 또는 IP 주소를 지정합니다.</block>
+  <block id="947ae31041ad09b75ae3caa12466e713" category="list-text">(선택 사항) SAN 환경의 경우 오브젝트 저장소에서 복원된 볼륨의 LUN을 매핑할 호스트의 이니시에이터를 지정합니다.</block>
+  <block id="3f8fcf31f13e30a169bc12ea602aad5f" category="paragraph">Restore to alternate location * 옵션은 선택한 백업을 지정된 호스트에 마운트합니다. 데이터베이스를 수동으로 불러와야 합니다.</block>
+  <block id="da281acf30e2697bebbcc0a2910961f7" category="paragraph">백업을 마운트한 후에는 마운트 해제될 때까지 다시 마운트할 수 없습니다. UI에서 * Unmount * 옵션을 사용하여 백업을 마운트 해제할 수 있습니다.</block>
+  <block id="7783ec9741a5d8100dae820693d57a26" category="list-text">오브젝트 저장소에서 아카이브 스토리지로 백업을 이동하려면 필요한 ONTAP 버전을 사용하고 있는지 확인하십시오.</block>
+  <block id="fa150600eb6c4639a0aefa969e7b726b" category="list-text">아마존 웹 서비스를 사용하는 경우 ONTAP 9.10.1 이상을 사용해야 합니다</block>
+  <block id="4f4531e8c58b9c676a23551cf59b1c06" category="list-text">Microsoft Azure를 사용하는 경우 ONTAP 9.10.1 이상을 사용해야 합니다</block>
+  <block id="5da22ea309211ebae6d45637520d568b" category="list-text">Google Cloud를 사용하는 경우 ONTAP 9.12.1 이상을 사용해야 합니다</block>
+  <block id="829ef79af81d9034eb421e9cbdf77a86" category="summary">RMAN을 사용하거나 사용하지 않고 정책을 생성한 후 정책을 할당한 다음 Oracle 데이터베이스의 예약된 백업 또는 주문형 백업을 생성합니다.</block>
+  <block id="cc09ff41835529ce890483c46d2746a2" category="paragraph">미리 구성된 정책 또는 사용자가 생성한 정책을 할당하여 예약된 백업 또는 필요 시 백업을 생성할 수 있습니다.</block>
+  <block id="d9ccc4a878eb176bbc4bdeb40043c102" category="paragraph">Oracle RMAN(Recovery Manager)을 사용하여 정책을 생성하는 동안 카탈로그 작성을 설정한 경우 Oracle 데이터베이스 백업을 카탈로그로 작성할 수도 있습니다. RMAN(RMAN) 카탈로그는 Azure NetApp Files에 있는 데이터베이스에만 지원됩니다. 나중에 블록 레벨 복구 또는 테이블스페이스 시점 복구 작업에 카탈로그 작성된 백업을 사용할 수 있습니다. 카탈로그를 작성하려면 데이터베이스가 마운트됨 또는 상위 상태여야 합니다.</block>
+  <block id="43bcdb782c6bcef2a1a6f6add006442f" category="list-text">스케줄로 _DAILY_와 _weekly_를 선택한 경우 RMAN 카탈로그 작성을 활성화하려면 * Oracle Recovery Manager(RMAN) * 를 사용하여 카탈로그 백업 * 을 선택합니다.</block>
+  <block id="0e42c39fc72646ad7b9bc5ed660dbe4c" category="list-text">(선택 사항) 스냅샷을 보조 스토리지에 복사하는 등 성공적인 백업 이후에 실행될 스크립트 후 경로 및 사후 스크립트의 시간 초과 값을 입력합니다.</block>
+  <block id="f88100e0f75b544b4b4129b6dbb5b1e6" category="paragraph">구분 기호로 ","를 사용하여 연결된 데이터 볼륨 경로를 지정합니다.
+Azure NetApp Files 볼륨의 경우 "/"를 사용하여 정보가 연결됩니다.
+_/subscription/{subscription_id}/resourceGroups/{resource_group}/providers/{provider}/netAppAccounts/{anfaccount}/capacity_pool}/volumes/{VolumeName}_</block>
+  <block id="dd561949768325f8b1abeaee1393d385" category="paragraph">구분 기호로 ","를 사용하여 연결된 아카이브 로그 볼륨 경로를 지정합니다.
+Azure NetApp Files 볼륨의 경우 "/"를 사용하여 연결된 정보
+_/subscription/{subscription_id}/resourceGroups/{resource_group}/providers/{provider}/netAppAccounts/{anfaccount}/capacity_pool}/volumes/{VolumeName}_</block>
+  <block id="ccf68bfd874426d222b79d469e0c7f0f" category="section-title">RMAN 카탈로그 저장소를 구성합니다</block>
+  <block id="b88b3aad5e2c7ece60dc4d6f49a17ada" category="paragraph">복구 카탈로그 데이터베이스를 RMAN 카탈로그 저장소로 구성할 수 있습니다. 리포지토리를 구성하지 않으면 기본적으로 타겟 데이터베이스의 제어 파일이 RMAN 카탈로그 리포지토리가 됩니다.</block>
+  <block id="32e539a93a91890018053de197d9b00a" category="paragraph">RMAN 카탈로그 데이터베이스에 대상 데이터베이스를 수동으로 등록해야 합니다.</block>
+  <block id="7792cee0f3a708fd530892e9886c8603" category="list-text">응용 프로그램 페이지에서 을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> &gt; * 세부 정보 보기 *.</block>
+  <block id="acfd9b7cd105b5915e205004751b43f3" category="inline-image-macro">아이콘편집을 클릭합니다</block>
+  <block id="b00a221707125b5d4e595935f723df15" category="list-text">데이터베이스 세부 정보 섹션에서 을 클릭합니다 <block ref="7d06be0ccc38945b0518baa7154b671e" category="inline-image-macro-rx" type="image"></block> RMAN 카탈로그 리포지토리를 구성합니다.</block>
+  <block id="eda38ce807902e33848caf6dc25e5fbf" category="list-text">RMAN을 사용하여 백업을 카탈로그화할 자격 증명과 카탈로그 복구 데이터베이스의 TNS(Transparent Network Substrate) 이름을 지정합니다.</block>
+  <block id="cf653025c815c1388101aa5ad3d232b6" category="paragraph">백업은 정책에 정의된 일정에 따라 생성됩니다. 정책에서 RMAN 카탈로그를 활성화한 경우 워크플로우 끝에 있는 백업이 별도의 작업으로 카탈로그 작업을 시작합니다. 카탈로그 작성 진행률은 Job Monitor에서 확인할 수 있습니다. 카탈로그 작성 성공 시 * 백업 세부 정보 * 는 각 백업에 대한 카탈로그 상태를 표시합니다.</block>
+  <block id="9ad48007c11f79693890f30169cb4eae" category="paragraph">정책에서 RMAN 카탈로그를 활성화한 경우 워크플로우 끝에 있는 백업이 별도의 작업으로 카탈로그 작업을 시작합니다. 카탈로그 작성 진행률은 Job Monitor에서 확인할 수 있습니다. 카탈로그 작성 성공 시 * 백업 세부 정보 * 는 각 백업에 대한 카탈로그 상태를 표시합니다.</block>
+  <block id="75f97ec226c0d31fad1eb9f33cc140e8" category="list-text">Oracle 데이터베이스를 실행하는 Linux 시스템에 로그인하여 Oracle 데이터베이스 호스트에서 SnapCenter 사용자에 대한 sudo 액세스를 구성합니다.</block>
+  <block id="3e2df45d8c47bb5ed4fd257279c56694" category="list-text">BlueXP UI에 표시된 텍스트를 복사합니다.</block>
+  <block id="950a53f2e1e36a3ea8325438b86c9fe7" category="list-text">Linux 시스템에서 _/etc/sudoers.d/snapcenter_file을 생성하고 복사한 텍스트를 붙여 넣습니다.</block>
+  <block id="2b4417eb5baef793b1383a752e578791" category="list-text">BlueXP UI에서 확인란을 선택하고 * 다음 * 을 클릭합니다.</block>
+  <block id="27d67b03a509c3f9eb8e6b991e531cec" category="section-title">수동 옵션을 사용하여 UI에서 호스트를 추가하고 스크립트를 사용하여 플러그인을 설치합니다</block>
+  <block id="3901b048e12f9c28a6fcb7acf7aebc9b" category="list-text">Connector에 제공된 스크립트를 사용하여 플러그인을 설치합니다.<block ref="e8bc39df0ba78fac4a9f78aaa34c37b8" prefix=" " category="inline-code"></block></block>
+  <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">예를 들면 다음과 같습니다.</block>
+  <block id="96b65a782b5789cdec4e738e0f55aa1b" category="list-text"><block ref="52b32c38ed998ed0606238a0b041a008" prefix="" category="inline-code"></block></block>
+  <block id="2f354ae44131fd1dd7944c540fb42ff5" category="list-text"><block ref="0a1eb8567cc616e74effb37219629858" prefix="" category="inline-code"></block></block>
+  <block id="0614ba22444a23f98cc5b42e93649a22" category="list-text">BlueXP UI에서 세부 정보를 검토하고 * 응용 프로그램 검색 * 을 클릭합니다.</block>
+  <block id="fe961c77aa20102ff152c92b372a9fc1" category="section-title">수동 옵션을 사용하여 UI에서 호스트를 추가하고 플러그인을 수동으로 설치합니다</block>
+  <block id="e5e2c198622455bc3518abcd038359c2" category="list-text">Linux 시스템에서 _/etc/sudoers.d/snapcenter_file을 편집하고 복사된 텍스트를 붙여 넣습니다.</block>
+  <block id="d60c23e5f6f5aa25d3d3f975d6eec029" category="list-text">BlueXP UI에서 확인란을 선택하고 * 업그레이드 * 를 클릭합니다.</block>
+  <block id="d0deb2f0eae776d5137f98574920f9d3" category="list-text">다음 스크립트를 실행합니다.<block ref="950403b1e3f17ff45a138cbdec2133c6" prefix=" " category="inline-code"></block></block>
+  <block id="e99351a15c380639147513a65765c910" category="paragraph">이전 Connector를 사용하는 경우 다음 명령을 실행하여 플러그인을 업그레이드합니다.<block ref="07b2ad58cb48d0bd30ad84d6a6bdfd7d" prefix=" " category="inline-code"></block></block>
+  <block id="9bfef37a59ea84d9474c85061ccb5c6d" category="paragraph">SQL Server 데이터베이스를 원래 위치 또는 대체 위치로 복원할 수 있습니다.</block>
+  <block id="cc2de7a3d6d06ec140e204ae05b8a500" category="admonition">SFR(Single File Restore), 로그 백업 복구 및 가용성 그룹의 재시드는 지원되지 않습니다.</block>
+  <block id="7bc6d5a8a28607c76af17a625855d538" category="list-text">대상 호스트 페이지에서 호스트 이름을 선택하고 데이터베이스 이름(선택 사항)을 제공하며 인스턴스를 선택하고 복구 경로를 지정합니다.</block>
+  <block id="d475931bfdebb1c87cf700b06709d879" category="paragraph">일시적으로 다른 저장소로 복구한 다음 복원된 파일을 대체 위치로 복사하려는 경우</block>
+  <block id="0e5a01bda1012831a3b3173c9ab98649" category="list-text">Pre-operations * 에서 다음 옵션 중 하나를 선택합니다.</block>
+  <block id="5d4b51d10ee1c6aed71fa3e4fa28821c" category="list-text">사후 작업 * 섹션에서 추가 트랜잭션 로그를 복원하기 위한 데이터베이스 상태를 지정하려면 다음 옵션 중 하나를 선택합니다.</block>
+  <block id="612baf7b7b12b0d88be2fb266aa753ea" category="paragraph">를 실행하여 클라우드 확장 SnapCenter 정책을 볼 수도 있습니다<block ref="f391f53076a6f0bdd43ba78daeaf5394" prefix=" " category="inline-code"></block> SnapCenter의 cmdlet.
+cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 Get-Help 명령 이름을 실행하여 얻을 수 있습니다.</block>
+  <block id="af69dc7cd4dc656bb123feb33f035747" category="list-text">Oracle 데이터베이스의 경우 데이터 및 로그 백업, 각 백업에 대한 SCN(시스템 변경 번호), 각 백업에 대한 종료 날짜가 나열됩니다. 데이터 백업만 선택하고 데이터베이스를 원래 위치로 복원할 수 있습니다. 데이터 백업 및 로그 백업을 대체 위치에 마운트할 수 있습니다.</block>
+  <block id="1f9a864d31c14af73c5606a2029449f9" category="list-text">Microsoft SQL Server 데이터베이스의 경우 각 백업의 전체 백업과 종료 날짜만 나열됩니다. 백업을 선택하고 데이터베이스를 원래 위치 또는 대체 위치로 복원할 수 있습니다.</block>
+  <block id="f80bb777c2ca75acdab342d7be7a016b" category="list-text">SAP HANA 데이터베이스의 경우 각 백업의 데이터 백업 및 종료 날짜만 나열됩니다. 백업을 선택하고 지정된 호스트에서 스토리지 내보내기를 수행할 수 있습니다.</block>
+  <block id="c4f4faa6cc54361e4da29cb3c1dd2088" category="paragraph">를 실행하여 이러한 백업을 볼 수도 있습니다<block ref="3b327888082d0a6615ac0b1cac5ce6dc" prefix=" " category="inline-code"></block> SnapCenter의 cmdlet.
+cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 Get-Help 명령 이름을 실행하여 얻을 수 있습니다.</block>
+  <block id="523b61be98d84bb9177588a76b271f8f" category="section-title">백업을 비활성화합니다</block>
+  <block id="65ce18f02eba4a0be0d39136da491846" category="paragraph">SnapCenter 및 오브젝트 저장소 모두에서 오브젝트 저장소로 이동한 모든 백업을 삭제할 수 있습니다.</block>
+  <block id="00cbae26c86b52b87ef194472843dd3f" category="list-text">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 응용 프로그램에 해당하는 백업 비활성화를 클릭합니다.</block>
+  <block id="7854ceabfc5ceeb84919f6a7015a0c44" category="paragraph">기본적으로 이 확인란은 선택되어 있으며 SnapCenter 및 객체 저장소 모두에서 객체 저장소로 이동된 모든 백업을 삭제합니다.</block>
+  <block id="fcd8ce77655d8abcebadacc848ee133a" category="paragraph">이 확인란을 선택 취소하면 백업이 객체 저장소에만 유지되지만 애플리케이션 레벨 복구에 이러한 백업을 사용할 수 없습니다. 나중에 이 응용 프로그램에 대한 백업을 활성화하면 개체 저장소에 유지되는 백업이 복원용으로 나열되지 않습니다.</block>
+  <block id="1bdc84776f1113f6d21c22445857f895" category="list-text">백업 비활성화 * 를 클릭합니다.</block>
+  <block id="8c46d6aa3a74f5eb085b876b42a3c5ff" category="list-text">클라우드 공급자를 구성한 후 스토리지 볼륨이 애플리케이션에 추가되면 SnapCenter Server는 애플리케이션이 상주하는 새 백업에 대한 스냅샷을 레이블을 지정합니다.</block>
+  <block id="e0f5dbdaac57f847c9f35310d8a41cc2" category="section-title">BlueXP 커넥터에서 SnapCenter CA 서명 인증서를 구성합니다</block>
+  <block id="0f3b8667b6537f90523aa601bdf6def8" category="paragraph">커넥터가 SnapCenter의 인증서를 확인할 수 있도록 BlueXP 커넥터에서 SnapCenter CA 서명 인증서를 구성해야 합니다.</block>
+  <block id="51b591544f28a3badd8767ca6daa3902" category="paragraph">BlueXP 커넥터에서 _&lt;base_mount_path&gt;_를 가져오려면 다음 명령을 실행해야 합니다.<block ref="de984fbb154c75ab992a459b6a95e490" prefix=" " category="inline-code"></block></block>
+  <block id="433333be62d4d4d362de3413febe3441" category="list-text">커넥터에 로그인합니다.<block ref="ecf9d04460b74d536a3a3b2044f30c06" prefix=" " category="inline-code"></block></block>
+  <block id="c1e5f8a667d8822ea9c7c6d9a4656383" category="list-text">루트 CA 및 중간 CA 파일을 _&lt;base_mount_path&gt;/server/certificate_directory에 복사합니다.</block>
+  <block id="5186dc577d1eb0ae9a81a574c7e13b5a" category="paragraph">CA 파일은 .pem 형식이어야 합니다.</block>
+  <block id="22cd963dbab6ea6f4d15cb5aca107fd0" category="list-text">CRL 파일이 있는 경우 다음 단계를 수행하십시오.</block>
+  <block id="a2cec29e92b0da0b64989bb222a6a804" category="list-text"><block ref="3f08746afba397c9d6cde09f9a4347d9" prefix="" category="inline-code"></block></block>
+  <block id="b5162e395b476e71a98978f60106c99d" category="list-text">CRL 파일을 _&lt;base_mount_path&gt;/server/CRL_ 디렉터리에 복사합니다.</block>
+  <block id="c96f29b0f857bc7bc84063894bab83d2" category="list-text">cloudmanager_snapcenter에 연결하고 config.yml의 enableCACert를 true로 수정합니다.<block ref="282c9fd2b76585287b1b0ecd38643437" prefix=" " category="inline-code"></block></block>
+  <block id="2c8fbb9ba7aac728ae196cfe40cad477" category="list-text">cloudmanager_snapcenter 컨테이너를 다시 시작합니다.<block ref="db155b8f9ae2e0def6f6365599dcf526" prefix=" " category="inline-code"></block></block>
+  <block id="4450025c6d0f0d79f1e6b2cf9dbed823" category="paragraph">SnapCenter에서 양방향 SSL이 활성화된 경우 커넥터가 SnapCenter에 연결할 때 커넥터에서 CA 인증서를 클라이언트 인증서로 사용하려면 다음 단계를 수행해야 합니다.</block>
+  <block id="a0f83a253db22a151374b3423ef18668" category="paragraph">다음 명령을 실행하여 _&lt;base_mount_path&gt;_를 받아야 합니다.<block ref="de984fbb154c75ab992a459b6a95e490" prefix=" " category="inline-code"></block></block>
+  <block id="84a97c0ded9f792e6017253de93472ad" category="list-text">커넥터에 로그인합니다.<block ref="e310c052506802b693ddeef7840fe6eb" prefix=" " category="inline-code"></block></block>
+  <block id="5e743b0bfdd2c2ac539b7422ba9d2627" category="list-text">cloudmanager_snapcenter에 연결하고 config.yml의 sendCACert를 true로 수정합니다.<block ref="a54a94daee86bc9b0852ba17ae16e244" prefix=" " category="inline-code"></block></block>
+  <block id="c1974a952dac04f4212a0b7c4e9e9f00" category="list-text">SnapCenter에서 다음 단계를 수행하여 커넥터에서 보낸 인증서의 유효성을 검사합니다.</block>
+  <block id="8e7670a695e21bc0ca199992307f8537" category="list-text">SnapCenter 서버 호스트에 로그인합니다.</block>
+  <block id="951872b9b16258c40527a2df0f8f164a" category="list-text">시작 * &gt; * 검색 시작 * 을 클릭합니다.</block>
+  <block id="ccea8b458a4a9e69c817695d3097a6e8" category="list-text">MMC를 입력하고 * Enter * 를 누릅니다.</block>
+  <block id="86ce5961ef6624058f736d93459d1889" category="list-text">예 * 를 클릭합니다.</block>
+  <block id="a91b40878068e695e2195ab09e2532c3" category="list-text">파일 메뉴에서 * 스냅인 추가/제거 * 를 클릭합니다.</block>
+  <block id="c87d2860a22aabf89e847e134137ec01" category="list-text">인증서 * &gt; * 추가 * &gt; * 컴퓨터 계정 * &gt; * 다음 * 을 클릭합니다.</block>
+  <block id="8a98e9005f933018375aa7d0844d7240" category="list-text">로컬 컴퓨터 * &gt; * 마침 * 을 클릭합니다.</block>
+  <block id="a1f3074dd68e8d863afeec874bf78357" category="list-text">더 이상 콘솔에 추가할 스냅인이 없으면 * 확인 * 을 클릭합니다.</block>
+  <block id="bb4f335f0d25871a3b9c36796484e4bb" category="list-text">콘솔 트리에서 * 인증서 * 를 두 번 클릭합니다.</block>
+  <block id="62cf2c06af955668bade109f16b05be8" category="list-text">신뢰할 수 있는 루트 인증 기관 저장소 * 를 마우스 오른쪽 단추로 클릭합니다.</block>
+  <block id="f4139147b1b7b2fc4471626b33811546" category="list-text">인증서를 가져오려면 * 가져오기 * 를 클릭하고 * 인증서 가져오기 마법사 * 의 단계를 따릅니다.</block>
+  <block id="5f9593f53c029e05ad3fe317372bbbb7" category="paragraph">SAP HANA 소스 시스템의 데이터로 SAP HANA 타겟 시스템을 업데이트할 수 있습니다. 현재 운영 데이터를 테스트 시스템에 제공하는 데 사용할 수 있습니다. 클라우드 백업을 사용하면 소스 시스템에서 스냅샷 복사본을 선택하고 스냅샷 복사본을 기반으로 새 Azure NetApp Files 볼륨을 생성할 수 있습니다. 예제 스크립트를 사용할 수 있습니다. 이 스크립트는 데이터베이스 호스트에서 SAP HANA 데이터베이스를 복구하는 데 필요한 작업을 실행합니다.</block>
+  <block id="3205bfd250f7e652581ed45c1db8eb26" category="list-text">새 볼륨의 "최대 처리량 수"는 수동 QoS(서비스 품질) 용량 풀이 있는 대상 시스템의 볼륨에서 선택됩니다.
+자동 QoS 용량 풀의 경우 처리량은 소스 볼륨의 용량으로 정의됩니다.</block>
+  <block id="170cf8aa630273f26a308eb9c95fb49a" category="list-text">SnapCenter 서버 4.6 이상</block>
+  <block id="a60ee7cfb0bf03a2eb61a9b068a5f2bf" category="list-text">다음 기능을 사용하려면 SnapCenter Server 4.7 이상을 사용해야 합니다.</block>
+  <block id="d3456e6a0908a4918170d02ea0c3ee84" category="list-text">백업의 스토리지 내보내기입니다</block>
+  <block id="0d85057e25566698a3c3dc29d49db941" category="list-text">다음 기능을 사용하려면 SnapCenter 서버 4.9를 사용해야 합니다.</block>
+  <block id="b8507ca67617589814152570680713d8" category="list-text">Oracle 데이터베이스 백업을 마운트합니다</block>
+  <block id="b1736bc032b4a5b6d651f60785db87f7" category="list-text">대체 스토리지로 복원합니다</block>
+  <block id="94a7d215d3c763dcc4768c5097b88e2c" category="summary">백업 세부 정보를 보고, 모든 작업의 상태를 모니터링하고, 클론 삭제, 감사 데이터, 커넥터 세부 정보 업데이트, CA 인증서 구성 등을 수행할 수 있습니다. 호스트를 관리합니다.</block>
+  <block id="5dc8569ee9c4f42d7d835629adc7ef5f" category="section-title">Oracle 데이터베이스 호스트의 유지 관리</block>
+  <block id="e65824137d1687f7668c648115afc6be" category="paragraph">관리자는 데이터베이스 호스트를 유지 관리 모드로 수동으로 전환하여 호스트에 대한 유지 보수 작업을 수행할 수 있습니다. 업그레이드하는 동안 호스트는 자동으로 유지 관리 모드로 전환되고 업그레이드 후에는 호스트가 운영 모드로 자동 전환됩니다.</block>
+  <block id="88245f95c61cb1a029ac5e105d2dbcef" category="paragraph">호스트를 유지 관리 모드로 전환하면 주문형 작업이 실패하고 예약된 작업이 생략됩니다.</block>
+  <block id="24dbe2bfa0da14233c9640f8f2045469" category="admonition">호스트를 유지 관리 모드로 전환하기 전에 호스트의 리소스에 대해 실행 중인 작업이 있는지 확인할 수 없습니다.</block>
+  <block id="2e1065e3d9e82b45c25172fbe56bb3e1" category="list-text">BlueXP UI에서 * 보호 * &gt; * 백업 및 복구 * &gt; * 응용 프로그램 * 을 클릭합니다</block>
+  <block id="54f1dd1b4b0cee20fb648277e1e57564" category="list-text">애플리케이션 유형으로 * Oracle * 을 선택합니다.</block>
+  <block id="bff6c6e38317c708a017122ffff061d0" category="list-text">설정 * &gt; * 호스트 * 를 클릭합니다.</block>
+  <block id="315359e3c6323d4eda359054319c0815" category="list-text">다음 작업 중 하나를 수행합니다.</block>
+  <block id="15971321362e54e26bda28e4c56d8456" category="paragraph">호스트를 유지 관리 모드로 전환하려고 합니다</block>
+  <block id="efcc9127143453abf1916fb3c6d1389f" category="paragraph">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 호스트에 해당 * Enable maintenance mode * 를 선택합니다.</block>
+  <block id="4dc136998723b1723dd65fb967c4745d" category="paragraph">호스트를 유지 관리 모드에서 나오려고 합니다</block>
+  <block id="3261eb27fd899680f932574f52ee49e3" category="paragraph">을 클릭합니다 <block ref="2231c326e067595aca2fb0545475acf4" category="inline-image-macro-rx" type="image"></block> 유지 보수 중인 호스트에 대해 * Disable maintenance mode * 를 선택합니다.</block>
+  <block id="2cd898c5523193b070234ed5d34c815d" category="list-text">플러그인 호스트의 _/var/opt/snapcenter/spl/etc/_에 커넥터 VM의 _&lt;base_mount_path&gt;/client/certificate/_path 에서 certificate.pem을 복사합니다.</block>
+  <block id="d3794a65ac38525b0f295e41c150ee12" category="list-text">/var/opt/snapcenter/spl/etc_로 이동한 후 keytool 명령을 실행하여 certificate.p12 파일을 가져옵니다.<block ref="11eedec2593dcf6deecf4133d03a7613" prefix=" " category="inline-code"></block></block>
+  <block id="40827a860546af59127b7a2ff41eb4ce" category="list-text">다음 중 하나를 수행합니다.</block>
+  <block id="3a42f0d8ab8360d2ee5a9c291f78ccf8" category="list-text">다음 명령을 실행하여 _&lt;base_mount_path&gt;_를 가져옵니다.<block ref="22ab9e84fb8aba7e93d8b90366ddca59" prefix=" " category="inline-code"></block></block>
+  <block id="3717efafcaa340ed61240daf5d7a6b9b" category="list-text">Connector에서 모든 중간 CA 및 루트 CA에 대한 certificate.pem 및 인증서를 _/var/opt/snapcenter/spl/etc/_의 플러그인 호스트로 복사합니다.</block>
+  <block id="8309d51b12d4e82b3afcbb4d6e23db5d" category="list-text">/var/opt/snapcenter/spl/etc_로 이동한 후 keytool 명령을 실행하여 certificate.pem 파일을 가져옵니다.<block ref="11eedec2593dcf6deecf4133d03a7613" prefix=" " category="inline-code"></block></block>
+  <block id="91cbc61972a7259c684c934d00fd85b5" category="list-text">NFS 및 VMFS 데이터 저장소가 지원됩니다. VVOL은 지원되지 않습니다.</block>
+  <block id="f431fc6e7518bd51210319fc58e32482" category="list-text">VMFS 지원을 위해서는 VMware vSphere 호스트용 SnapCenter 플러그인이 4.9 이상에서 실행되고 있어야 합니다. VMware vSphere 호스트용 SnapCenter 플러그인이 이전 버전에서 4.9 릴리즈로 업그레이드된 경우 VMFS 데이터 저장소의 백업을 수행합니다.</block>
+  <block id="e15504865bb682eba5499bdedbb0d431" category="list-text">SLES 15 SP4</block>
+  <block id="0a75e301d6c943a1f7da2ccb563852e7" category="list-text">데이터베이스 버전: 19c 및 21c</block>
+  <block id="738c224049615eeb47fe5a57a6ea8f7c" category="section-title">리소스 및 백업 업데이트</block>
+  <block id="0e9cec251ac8debda34d029f4302d4eb" category="paragraph">애플리케이션에 추가된 최신 데이터 저장소 및 백업을 보려면 리소스와 백업을 새로 고쳐야 합니다. 그러면 리소스 및 백업 검색이 시작되고 최신 세부 정보가 표시됩니다.</block>
+  <block id="d4707d0210a19770ac7cf0959f935157" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> VMware vSphere 호스트용 SnapCenter 플러그인에 따라 * 리소스 및 백업 새로 고침 * 을 클릭합니다.</block>
+  <block id="aa8a6c50e00adebd857afeb3c163080e" category="section-title">정책 또는 리소스 그룹을 새로 고칩니다</block>
+  <block id="a663847f6a4dfe84a9e34d968b306aef" category="paragraph">정책 또는 리소스 그룹이 변경된 경우 보호 관계를 새로 고쳐야 합니다.</block>
+  <block id="9641f44e6995cb07bf37a72f99cf41b3" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 데이터 저장소에 대해 * 보호 새로 고침 * 을 클릭합니다.</block>
+  <block id="ecb0c28cd21006ad8c86d4be09edf297" category="section-title">VMware vSphere 호스트용 SnapCenter 플러그인 등록을 취소합니다</block>
+  <block id="3d61f1dcef482f1c526370542b798e50" category="paragraph">VMware vSphere 호스트용 SnapCenter 플러그인과 연결된 모든 데이터 저장소 및 가상 시스템은 보호되지 않습니다.</block>
+  <block id="6a45c59dd3a525bee9f5d9c555c1ff8a" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> VMware vSphere 호스트용 SnapCenter 플러그인에 해당하는 * 등록 취소 * 를 클릭합니다.</block>
+  <block id="f214ccf7f10c864a2d5f70f246aa9368" category="summary">Oracle 데이터베이스를 대체 위치로 복구합니다</block>
+  <block id="6163eb54f8c17422f33910630515d04e" category="doc">클라우드 네이티브 Oracle 데이터베이스를 대체 위치로 복원합니다</block>
+  <block id="513d85947ec55df9098ca673daa94533" category="paragraph">데이터가 손실된 경우 Oracle 데이터베이스를 Azure NetApp Files의 대체 위치로만 복원할 수 있습니다. 대체 위치는 다른 호스트 또는 동일한 호스트에 있을 수 있습니다.</block>
+  <block id="8054e2f4321c1d12e0899bddfa924dea" category="list-text">대체 호스트의 Oracle 버전이 원래 호스트의 버전과 동일한지 확인해야 합니다.</block>
+  <block id="37068a2a476a31b5220be55595037256" category="paragraph">복원 작업을 시작하는 동안 Oracle Home, 최대 볼륨 처리량, Oracle SID 및 데이터베이스 자격 증명을 제외한 구성을 수정할 수 없습니다.</block>
+  <block id="4c2903ebe5744535d728676fe4fb9b25" category="paragraph">전체 복구는 기본적으로 _ until cancel_set을 true로 설정하여 활성화됩니다.</block>
+  <block id="29dcac6a29f56130b9ac824001b7ad19" category="paragraph">복원된 데이터베이스에 대해 보관 로그 모드가 기본적으로 해제되어 있습니다. 필요한 경우 아카이브 로그 모드를 활성화하고 아카이브 로그를 NetApp 볼륨에 유지할 수 있습니다.</block>
+  <block id="327d9b8a40abd1b5188e8eb5d1170a14" category="list-text">데이터베이스를 복원할 복원 지점을 선택하고 * 대체 위치로 복원 * &gt; * 다음 * 을 클릭합니다.</block>
+  <block id="e25824b39e7838b25e70a2dab35d27e0" category="list-text">구성 페이지에서 대체 위치, SID, ORACLE_Home, 데이터베이스 자격 증명 및 스토리지 처리량의 세부 정보를 지정합니다.</block>
+  <block id="c47a899a25187f68c4798270c6b606ab" category="paragraph">데이터베이스 자격 증명의 경우 OS 사용자 인증이 비활성화된 경우 시스템 사용자가 동일한 호스트 또는 대상 호스트의 복원된 데이터베이스에 연결할 수 있도록 암호를 제공해야 합니다.</block>
+  <block id="796f6e2bb33076b9f7d561b0770887e6" category="list-text">다음 * 을 클릭하고 세부 정보를 검토한 후 * 복원 * 을 클릭합니다.</block>
+  <block id="65b7a936129faa2d1226305393934917" category="paragraph">복구 작업의 진행 상황은 Job Monitor 페이지에서 볼 수 있습니다. 작업이 완료된 후 * Discovery 새로 고침 * 을 클릭하여 복원된 데이터베이스를 확인합니다. 그러나 대체 위치로 복원되는 데이터베이스는 보호할 수 없습니다.</block>
+  <block id="abfc7c0c366258e23e15cd12a5f89811" category="sidebar">원래 위치로 복원합니다</block>
+  <block id="25e66e51214e8342374fa891a42988b3" category="sidebar">대체 위치로 복원합니다</block>
 </blocks>

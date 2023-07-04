@@ -32,22 +32,29 @@ summary: BlueXP 및 사내 SnapCenter와 애플리케이션을 위한 BlueXP 백
 
 * ONTAP 9.8 이상
 * BlueXP
-* SnapCenter 서버 4.6 이상 다음 기능을 사용하려면 SnapCenter 서버 4.7을 사용해야 합니다.
+* SnapCenter 서버 4.6 이상
 +
-** 사내 보조 스토리지에서 백업 보호
-** SAP HANA 애플리케이션 보호
-** VMware 환경에 있는 Oracle 및 SQL 애플리케이션 보호
-** 백업을 마운트합니다
-** 백업을 비활성화합니다
-** SnapCenter 서버 등록을 취소합니다
+** 다음 기능을 사용하려면 SnapCenter Server 4.7 이상을 사용해야 합니다.
++
+*** 사내 보조 스토리지에서 백업 보호
+*** SAP HANA 애플리케이션 보호
+*** VMware 환경에 있는 Oracle 및 SQL 애플리케이션 보호
+*** 백업의 스토리지 내보내기입니다
+*** 백업을 비활성화합니다
+*** SnapCenter 서버 등록을 취소합니다
+
+
+** 다음 기능을 사용하려면 SnapCenter 서버 4.9를 사용해야 합니다.
++
+*** Oracle 데이터베이스 백업을 마운트합니다
+*** 대체 스토리지로 복원합니다
+
+
 
 
 * SnapCenter 서버에서 응용 프로그램당 하나 이상의 백업을 사용할 수 있어야 합니다
 * BlueXP의 정책과 레이블 또는 동일한 레이블이 없는 SnapCenter에서 최소 1일, 1주 또는 1개월 이상의 정책을 사용할 수 있습니다.
 
-
-
-NOTE: FQDN 또는 IP 주소를 사용하여 SnapCenter에 SVM을 추가하면 이러한 SVM에서 실행되는 애플리케이션을 보호할 수 없습니다. 애플리케이션의 BlueXP 백업 및 복구는 ONTAP 클러스터의 일부로 추가된 SnapCenter에서 검색된 SVM이나 이름으로 추가된 SVM만 인식합니다.
 
 다음 이미지는 클라우드로 백업할 때의 각 구성 요소와 이러한 구성 요소 간에 준비해야 하는 연결을 보여 줍니다.
 

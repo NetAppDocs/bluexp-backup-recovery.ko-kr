@@ -56,6 +56,8 @@ Oracle 데이터베이스를 복제하기 전에 필수 구성 요소가 완료�
 * Azure NetApp Files에 있는 데이터베이스의 복제는 지원되지 않습니다.
 * Qtree에 상주하는 데이터베이스의 복제는 지원되지 않습니다.
 * 복제된 데이터베이스 백업은 지원되지 않습니다.
+* Amazon FSx for NetApp ONTAP에서 일일 자동 백업을 사용하는 경우, FSx가 복제된 볼륨에 백업을 생성했기 때문에 FSx for NetApp ONTAP의 복제된 볼륨을 BlueXP UI에서 삭제할 수 없습니다.
+FSx UI에서 볼륨에 대한 모든 백업을 삭제한 후 복제된 볼륨을 삭제한 다음 force 옵션을 사용하여 BlueXP UI에서 클론을 삭제해야 합니다.
 
 
 

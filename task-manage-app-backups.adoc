@@ -22,6 +22,7 @@ summary: 정책과 백업을 볼 수 있습니다. 데이터베이스, 정책 �
 
 모든 정책을 볼 수 있습니다. 이러한 각 정책에 대해 세부 정보를 볼 때 연결된 모든 애플리케이션이 나열됩니다.
 
+.단계
 . 백업 및 복구 * > * 응용 프로그램 * 을 클릭합니다.
 . 설정 * 드롭다운에서 * 정책 * 을 클릭합니다.
 . 세부 정보를 보려는 정책에 해당하는 * 세부 정보 보기 * 를 클릭합니다.
@@ -34,7 +35,8 @@ NOTE: 응용 프로그램과 연결된 정책은 편집하거나 삭제할 수 �
 
 
 
-를 실행하여 클라우드 확장 SnapCenter 정책을 볼 수도 있습니다 `Get-SmResources` SnapCenter의 cmdlet. cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 Get-Help command_name을 실행하여 얻을 수 있습니다.
+를 실행하여 클라우드 확장 SnapCenter 정책을 볼 수도 있습니다 `Get-SmResources` SnapCenter의 cmdlet.
+cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 Get-Help 명령 이름을 실행하여 얻을 수 있습니다.
 
 
 
@@ -42,6 +44,7 @@ NOTE: 응용 프로그램과 연결된 정책은 편집하거나 삭제할 수 �
 
 BlueXP UI에서 클라우드에 있는 백업을 볼 수 있습니다.
 
+.단계
 . 백업 및 복구 * > * 응용 프로그램 * 을 클릭합니다.
 . 을 클릭합니다 image:icon-action.png["아이콘을 클릭하여 작업을 선택합니다"] 해당 응용 프로그램에 대해 * 세부 정보 보기 * 를 클릭합니다.
 
@@ -49,16 +52,35 @@ BlueXP UI에서 클라우드에 있는 백업을 볼 수 있습니다.
 
 IMPORTANT: 백업이 나열되는 데 걸리는 시간은 ONTAP의 기본 복제 일정에 따라 다릅니다.
 
-* Oracle 데이터베이스의 경우 데이터 및 로그 백업, 각 백업에 대한 SCN(시스템 변경 번호), 각 백업에 대한 종료 날짜가 나열됩니다. 데이터 백업만 선택하고 데이터베이스를 온-프레미스 SnapCenter 서버로 복원할 수 있습니다.
-* Microsoft SQL Server 데이터베이스의 경우 각 백업의 전체 백업과 종료 날짜만 나열됩니다. 백업을 선택하고 데이터베이스를 온-프레미스 SnapCenter 서버로 복원할 수 있습니다.
+* Oracle 데이터베이스의 경우 데이터 및 로그 백업, 각 백업에 대한 SCN(시스템 변경 번호), 각 백업에 대한 종료 날짜가 나열됩니다. 데이터 백업만 선택하고 데이터베이스를 원래 위치로 복원할 수 있습니다. 데이터 백업 및 로그 백업을 대체 위치에 마운트할 수 있습니다.
+* Microsoft SQL Server 데이터베이스의 경우 각 백업의 전체 백업과 종료 날짜만 나열됩니다. 백업을 선택하고 데이터베이스를 원래 위치 또는 대체 위치로 복원할 수 있습니다.
 * Microsoft SQL Server 인스턴스의 경우 해당 인스턴스 아래에 있는 데이터베이스의 백업이 나열됩니다.
-* SAP HANA 데이터베이스의 경우 각 백업의 데이터 백업 및 종료 날짜만 나열됩니다. 백업을 선택하고 마운트 작업을 수행할 수 있습니다.
+* SAP HANA 데이터베이스의 경우 각 백업의 데이터 백업 및 종료 날짜만 나열됩니다. 백업을 선택하고 지정된 호스트에서 스토리지 내보내기를 수행할 수 있습니다.
 
 
 
 NOTE: 클라우드 보호를 설정하기 전에 생성된 백업은 복구에 표시되지 않습니다.
 
-를 실행하여 이러한 백업을 볼 수도 있습니다 `Get-SmBackup` SnapCenter의 cmdlet. cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 Get-Help command_name을 실행하여 얻을 수 있습니다.
+를 실행하여 이러한 백업을 볼 수도 있습니다 `Get-SmBackup` SnapCenter의 cmdlet.
+cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 Get-Help 명령 이름을 실행하여 얻을 수 있습니다.
+
+
+
+== 백업을 비활성화합니다
+
+SnapCenter 및 오브젝트 저장소 모두에서 오브젝트 저장소로 이동한 모든 백업을 삭제할 수 있습니다.
+
+.단계
+. 백업 및 복구 * > * 응용 프로그램 * 을 클릭합니다.
+. 을 클릭합니다 image:icon-action.png["아이콘을 클릭하여 작업을 선택합니다"] 응용 프로그램에 해당하는 백업 비활성화를 클릭합니다.
++
+기본적으로 이 확인란은 선택되어 있으며 SnapCenter 및 객체 저장소 모두에서 객체 저장소로 이동된 모든 백업을 삭제합니다.
+
++
+이 확인란을 선택 취소하면 백업이 객체 저장소에만 유지되지만 애플리케이션 레벨 복구에 이러한 백업을 사용할 수 없습니다. 나중에 이 응용 프로그램에 대한 백업을 활성화하면 개체 저장소에 유지되는 백업이 복원용으로 나열되지 않습니다.
+
+. 백업 비활성화 * 를 클릭합니다.
+
 
 
 
@@ -66,6 +88,7 @@ NOTE: 클라우드 보호를 설정하기 전에 생성된 백업은 복구에 �
 
 데이터베이스에 볼륨이 추가되면 SnapCenter 서버는 정책 및 일정에 따라 새 볼륨에 스냅샷을 자동으로 레이블을 지정합니다. 이러한 새 볼륨에는 개체 저장소 끝점이 없으므로 다음 단계를 실행하여 볼륨을 새로 고쳐야 합니다.
 
+.단계
 . 백업 및 복구 * > * 응용 프로그램 * 을 클릭합니다.
 . 설정 * 드롭다운에서 * SnapCenter 서버 * 를 클릭합니다.
 . 을 클릭합니다 image:icon-action.png["아이콘을 클릭하여 작업을 선택합니다"] 응용 프로그램을 호스팅하는 SnapCenter 서버에 해당하는 을 클릭하고 * 새로 고침 * 을 클릭합니다.
@@ -74,7 +97,7 @@ NOTE: 클라우드 보호를 설정하기 전에 생성된 백업은 복구에 �
 
 . 을 클릭합니다 image:icon-action.png["아이콘을 클릭하여 작업을 선택합니다"] 새 볼륨에 대한 클라우드 보호를 활성화하려면 응용 프로그램에 해당하는 * 보호 새로 고침 * 을 클릭합니다.
 +
-** 클라우드 공급자를 구성한 후 애플리케이션에서 스토리지 볼륨을 제거하면 새 백업에 대해 SnapCenter 서버가 애플리케이션이 상주하는 스냅샷에 레이블을 지정합니다.
+** 클라우드 공급자를 구성한 후 스토리지 볼륨이 애플리케이션에 추가되면 SnapCenter Server는 애플리케이션이 상주하는 새 백업에 대한 스냅샷을 레이블을 지정합니다.
 ** 제거된 볼륨이 다른 응용 프로그램에서 사용되지 않는 경우 개체 저장소 관계를 수동으로 삭제해야 합니다.
 ** 애플리케이션 인벤토리를 업데이트하면 애플리케이션의 현재 스토리지 레이아웃이 포함됩니다.
 
@@ -87,6 +110,7 @@ NOTE: 클라우드 보호를 설정하기 전에 생성된 백업은 복구에 �
 
 SnapCenter 정책 또는 리소스 그룹이 변경된 경우 보호 관계를 새로 고쳐야 합니다.
 
+.단계
 . 백업 및 복구 * > * 응용 프로그램 * 을 클릭합니다.
 . 을 클릭합니다 image:icon-action.png["아이콘을 클릭하여 작업을 선택합니다"] 응용 프로그램에 해당하는 을 클릭하고 * 보호 새로 고침 * 을 클릭합니다.
 
@@ -95,9 +119,16 @@ SnapCenter 정책 또는 리소스 그룹이 변경된 경우 보호 관계를 �
 
 == SnapCenter 서버 등록을 취소합니다
 
+.단계
 . 백업 및 복구 * > * 응용 프로그램 * 을 클릭합니다.
 . 설정 * 드롭다운에서 * SnapCenter 서버 * 를 클릭합니다.
 . 을 클릭합니다 image:icon-action.png["아이콘을 클릭하여 작업을 선택합니다"] SnapCenter 서버에 해당하는 * 등록 취소 * 를 클릭합니다.
++
+기본적으로 이 확인란은 선택되어 있으며 SnapCenter 및 객체 저장소 모두에서 객체 저장소로 이동된 모든 백업을 삭제합니다.
+
++
+이 확인란을 선택 취소하면 백업이 객체 저장소에만 유지되지만 애플리케이션 레벨 복구에 이러한 백업을 사용할 수 없습니다. 나중에 이 응용 프로그램에 대한 백업을 활성화하면 개체 저장소에 유지되는 백업이 복원용으로 나열되지 않습니다.
+
 
 
 
@@ -106,6 +137,7 @@ SnapCenter 정책 또는 리소스 그룹이 변경된 경우 보호 관계를 �
 
 모든 클라우드 백업 작업에 대한 작업이 생성됩니다. 각 작업의 일부로 수행되는 모든 작업과 모든 하위 작업을 모니터링할 수 있습니다.
 
+.단계
 . 백업 및 복구 * > * 작업 모니터링 * 을 클릭합니다.
 +
 작업을 시작하면 작업이 시작되었다는 창이 나타납니다. 링크를 클릭하여 작업을 모니터링할 수 있습니다.
@@ -117,34 +149,75 @@ SnapCenter 정책 또는 리소스 그룹이 변경된 경우 보호 관계를 �
 
 == CA 인증서를 구성합니다
 
-CA 인증서가 있는 경우 루트 CA 인증서를 커넥터 컴퓨터에 수동으로 복사해야 합니다.
+환경에 추가 보안을 포함하려는 경우 CA 서명 인증서를 구성할 수 있습니다.
 
-* 단계 *
 
-. Docker 에이전트에서 액세스할 수 있는 볼륨에 인증서를 복사합니다.
+
+=== BlueXP 커넥터에서 SnapCenter CA 서명 인증서를 구성합니다
+
+커넥터가 SnapCenter의 인증서를 확인할 수 있도록 BlueXP 커넥터에서 SnapCenter CA 서명 인증서를 구성해야 합니다.
+
+.시작하기 전에
+BlueXP 커넥터에서 _<base_mount_path>_를 가져오려면 다음 명령을 실행해야 합니다.
+`sudo docker volume ls | grep snapcenter_volume | awk {'print $2'} | xargs sudo docker volume inspect | grep Mountpoint`
+
+.단계
+. 커넥터에 로그인합니다.
+`cd <base_mount_path> mkdir -p server/certificate`
+. 루트 CA 및 중간 CA 파일을 _<base_mount_path>/server/certificate_directory에 복사합니다.
 +
-** "cd /var/lib/docker/volumes/cloudmanager_snapcenter_volume/_data/mkdir sc_certs"
-** "chmod 777 sc_certs"
+CA 파일은 .pem 형식이어야 합니다.
 
-
-. RootCA 인증서 파일을 커넥터 컴퓨터의 위 폴더로 복사합니다.
+. CRL 파일이 있는 경우 다음 단계를 수행하십시오.
 +
-'cp<path on connector>/<filename>/var/lib/docker/volumes/cloudmanager_snapcenter_volume/_data/sc_certs'
+.. `cd <base_mount_path> mkdir -p server/crl`
+.. CRL 파일을 _<base_mount_path>/server/CRL_ 디렉터리에 복사합니다.
 
-. Docker 에이전트에서 액세스할 수 있는 볼륨에 CRL 파일을 복사합니다.
+
+. cloudmanager_snapcenter에 연결하고 config.yml의 enableCACert를 true로 수정합니다.
+`sudo docker exec -t cloudmanager_snapcenter sed -i 's/enableCACert: false/enableCACert: true/g' /opt/netapp/cloudmanager-snapcenter/config/config.yml`
+. cloudmanager_snapcenter 컨테이너를 다시 시작합니다.
+`sudo docker restart cloudmanager_snapcenter`
+
+
+
+
+=== BlueXP Connector에 CA 서명 인증서를 구성합니다
+
+SnapCenter에서 양방향 SSL이 활성화된 경우 커넥터가 SnapCenter에 연결할 때 커넥터에서 CA 인증서를 클라이언트 인증서로 사용하려면 다음 단계를 수행해야 합니다.
+
+.시작하기 전에
+다음 명령을 실행하여 _<base_mount_path>_를 받아야 합니다.
+`sudo docker volume ls | grep snapcenter_volume | awk {'print $2'} | xargs sudo docker volume inspect | grep Mountpoint`
+
+.단계
+. 커넥터에 로그인합니다.
+`cd <base_mount_path> mkdir -p client/certificate`
+. CA 서명 인증서와 키 파일을 커넥터의 _<base_mount_path>/client/certificate_에 복사합니다.
 +
-** "cd /var/lib/docker/volumes/cloudmanager_snapcenter_volume/_data/mkdir sc_CRL"
-** "chmod 777 sc_CRL"
+파일 이름은 certificate.pem 및 key.pem 이어야 합니다. certificate.pem에는 중간 CA 및 루트 CA와 같은 전체 인증서 체인이 있어야 합니다.
 
-
-. CRL 파일을 커넥터 시스템의 위 폴더에 복사합니다.
+. name certificate.p12를 사용하여 인증서의 PKCS12 형식을 생성하고 _<base_mount_path>/client/certificate_에 유지합니다.
 +
-'cp<path on connector>/<filename>/var/lib/docker/volumes/cloudmanager_snapcenter_volume/_data/sc_CRL'
+예: openssl pkcs12-inkey key.pem-in certificate.pem-export-out certificate.p12
 
-. 인증서와 CRL 파일을 복사한 후 Cloud Backup for Apps 서비스를 다시 시작합니다.
+. cloudmanager_snapcenter에 연결하고 config.yml의 sendCACert를 true로 수정합니다.
+`sudo docker exec -t cloudmanager_snapcenter sed -i 's/sendCACert: false/sendCACert: true/g' /opt/netapp/cloudmanager-snapcenter/config/config.yml`
+. cloudmanager_snapcenter 컨테이너를 다시 시작합니다.
+`sudo docker restart cloudmanager_snapcenter`
+. SnapCenter에서 다음 단계를 수행하여 커넥터에서 보낸 인증서의 유효성을 검사합니다.
 +
-** 'SUDO Docker Exec cloudmanager_snapcenter SED-I's/skipSCCertValidation: true/skipSCCertValidation: false/g'/opt/NetApp/cloudmanager-snapcenter-agent/config/config.yml'
-** 'SUDO Docker restart cloudmanager_snapcenter'를 선택합니다
+.. SnapCenter 서버 호스트에 로그인합니다.
+.. 시작 * > * 검색 시작 * 을 클릭합니다.
+.. MMC를 입력하고 * Enter * 를 누릅니다.
+.. 예 * 를 클릭합니다.
+.. 파일 메뉴에서 * 스냅인 추가/제거 * 를 클릭합니다.
+.. 인증서 * > * 추가 * > * 컴퓨터 계정 * > * 다음 * 을 클릭합니다.
+.. 로컬 컴퓨터 * > * 마침 * 을 클릭합니다.
+.. 더 이상 콘솔에 추가할 스냅인이 없으면 * 확인 * 을 클릭합니다.
+.. 콘솔 트리에서 * 인증서 * 를 두 번 클릭합니다.
+.. 신뢰할 수 있는 루트 인증 기관 저장소 * 를 마우스 오른쪽 단추로 클릭합니다.
+.. 인증서를 가져오려면 * 가져오기 * 를 클릭하고 * 인증서 가져오기 마법사 * 의 단계를 따릅니다.
 
 
 

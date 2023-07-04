@@ -20,7 +20,8 @@ summary: SAP HANA 데이터베이스 백업을 시작하는 몇 가지 단계를
 [role="quick-margin-list"]
 * 운영 체제:
 +
-** RHEL 7.5 이상, SAP HANA 인증 8.x 플랫폼
+** RHEL 7.6 이상
+** SAP-HANA SPS07용 RHEL 8.1 이상
 ** SLES 12 SP5 이상 및 15 SPX 플랫폼은 SAP HANA 인증을 받았습니다
 
 
@@ -28,9 +29,8 @@ summary: SAP HANA 데이터베이스 백업을 시작하는 몇 가지 단계를
 * 스토리지 레이아웃: 데이터 및 로그 파일의 경우 Azure는 NFSv4.1만 지원합니다.
 * 데이터베이스 레이아웃:
 +
-** 단일 컨테이너 버전 1.0SPS12
-** SAP HANA 다중 테넌트 데이터베이스 컨테이너(MDC) 2.0SPS4, 2.0SPS5, 2.0SPS6, 단일 또는 다중 테넌트 포함
-** SAP HANA 단일 호스트 시스템, SAP HANA 다중 호스트 시스템(대기 호스트 없음), HANA 시스템 복제
+** SAP HANA 다중 테넌트 데이터베이스 컨테이너(MDC) 2.0SPS5, 2.0SPS6, 2.0SPS7(단일 또는 다중 테넌트 포함
+** SAP HANA 단일 호스트 시스템, SAP HANA 다중 호스트 시스템, HANA 시스템 복제
 
 
 * 데이터베이스 호스트의 SAP HANA 플러그인

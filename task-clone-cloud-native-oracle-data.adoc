@@ -23,12 +23,10 @@ NetApp ONTAP 또는 Cloud Volumes ONTAP용 Amazon FSx에 상주하는 Oracle 데
 * 실수로 삭제 또는 변경된 데이터를 복구합니다.
 
 
-* 시작하기 전에 *
-
+.시작하기 전에
 클론 개념을 이해하고 모든 요구 사항이 충족되는지 확인해야 합니다. link:concept-clone-cloud-native-oracle-concepts.html["자세한 정보"].
 
-* 단계 *
-
+.단계
 . 을 클릭합니다 image:icon-action.png["아이콘을 클릭하여 작업을 선택합니다"] 복제할 데이터베이스에 해당하는 을 클릭하고 * 세부 정보 보기 * 를 클릭합니다.
 . 을 클릭합니다 image:icon-action.png["아이콘을 클릭하여 작업을 선택합니다"] 데이터 백업에 해당하고 * Clone * 을 클릭합니다.
 . 클론 세부 정보 페이지에서 클론 옵션 중 하나를 선택합니다.

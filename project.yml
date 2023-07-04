@@ -97,8 +97,8 @@ sidebar:
         url: "/task-restore-oracle-data.html"
       - title: SQL Server 데이터베이스를 복원합니다
         url: "/task-restore-sql-data.html"
-    - title: 애플리케이션 백업을 마운트합니다
-      url: "/task-mount-app-backup.html"
+      - title: SAP HANA 데이터베이스 복원
+        url: "/task-restore-hana-backup.html"
   - title: 클라우드 네이티브 애플리케이션 데이터를 백업 및 복원합니다
     entries:
     - title: 클라우드 네이티브 애플리케이션 데이터 보호
@@ -133,7 +133,11 @@ sidebar:
         flavor: azure
         url: "/task-backup-cloud-native-sap-hana-data.html"
     - title: 클라우드 네이티브 Oracle 데이터베이스 복원
-      url: "/task-restore-cloud-native-oracle-data.html"
+      entries:
+      - title: 원래 위치로 복원합니다
+        url: "/task-restore-cloud-native-oracle-data-to-original-location.html"
+      - title: 대체 위치로 복원합니다
+        url: "/task-restore-cloud-native-oracle-data-to-alternate-location.html"
     - title: 클라우드 네이티브 SAP HANA 데이터베이스 복원
       flavor: azure
       url: "/task-restore-cloud-native-sap-hana-data.html"

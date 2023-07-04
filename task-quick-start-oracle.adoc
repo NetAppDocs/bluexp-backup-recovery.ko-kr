@@ -22,6 +22,7 @@ summary: 몇 가지 단계를 완료하여 Oracle 데이터베이스 백업을 �
 +
 ** RHEL 7.5 이상 및 8.x
 ** OL 7.5 이상 및 8.x
+** SLES 15 SP4
 
 
 * NetApp 클라우드 스토리지:
@@ -42,7 +43,7 @@ NOTE: Azure NetApp Files는 SAN 환경을 지원하지 않습니다.
 
 
 * 데이터베이스 레이아웃: Oracle Standard 및 Oracle Enterprise Standalone(레거시 및 멀티 테넌트 CDB 및 PDB)
-* 데이터베이스 버전: 12cR2, 18C, 19c 및 21c
+* 데이터베이스 버전: 19c 및 21c
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] BlueXP에 등록하십시오
