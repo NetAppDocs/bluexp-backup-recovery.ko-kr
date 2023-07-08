@@ -34,7 +34,7 @@ NOTE: "사내 ONTAP 시스템"에는 FAS, AFF 및 ONTAP Select 시스템이 포�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] BlueXP 커넥터를 준비합니다
 [role="quick-margin-para"]
-StorageGRID 또는 온-프레미스에 이미 Connector가 배포되어 있는 경우 모두 설정됩니다. 그렇지 않은 경우 ONTAP 데이터를 StorageGRID에 백업하려면 BlueXP 커넥터를 만들어야 합니다. 또한 StorageGRID에 연결할 수 있도록 커넥터에 대한 네트워크 설정을 사용자 지정해야 합니다.
+이미 구내에 Connector가 배포되어 있는 경우 모두 설정됩니다. 그렇지 않은 경우 ONTAP 데이터를 StorageGRID에 백업하려면 BlueXP 커넥터를 만들어야 합니다. 또한 StorageGRID에 연결할 수 있도록 커넥터에 대한 네트워크 설정을 사용자 지정해야 합니다.
 
 [role="quick-margin-para"]
 <<BlueXP 커넥터를 준비합니다,Connector를 생성하는 방법과 필요한 네트워크 설정을 정의하는 방법에 대해 알아봅니다.>>
@@ -73,7 +73,7 @@ StorageGRID 버킷을 생성하고 관리하기 위해 커넥터에 대한 권�
 
 다음 이미지는 온-프레미스 ONTAP 시스템을 StorageGRID에 백업할 때의 각 구성 요소와 이러한 시스템 간에 준비해야 하는 연결을 보여 줍니다.
 
-선택적으로 공용 또는 개인 연결을 사용하여 복제된 볼륨에 대해 보조 ONTAP 시스템에 연결할 수 있습니다.
+원하는 경우, 동일한 사내 위치의 보조 ONTAP 시스템에 연결하여 볼륨을 복제할 수도 있습니다.
 
 image:diagram_cloud_backup_onprem_storagegrid.png["BlueXP 백업 및 복구가 백업 파일이 있는 소스 시스템 및 대상 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다."]
 
@@ -113,6 +113,9 @@ BlueXP 커넥터는 BlueXP 기능을 위한 주요 소프트웨어입니다. ONT
 ==== 비공개 모드(어두운 사이트) 고려 사항
 
 * BlueXP 백업 및 복구 기능은 BlueXP 커넥터에 내장되어 있습니다. 비공개 모드로 설치된 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 link:whats-new.html["BlueXP 백업 및 복구 새로운 기능"] 각 BlueXP 백업 및 복구 릴리스의 새로운 기능을 보려면 새 기능을 사용하려면 의 단계를 따릅니다 https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode["Connector 소프트웨어를 업그레이드합니다"^].
++
+객체 스토리지에 대한 백업을 생성하는 것 외에도 Snapshot 복사본 및 복제된 볼륨을 예약 및 생성하는 기능을 포함하는 BlueXP 백업 및 복구의 새 버전을 사용하려면 BlueXP Connector 버전 3.9.31 이상을 사용해야 합니다. 따라서 모든 백업을 관리하기 위한 최신 릴리즈가 권장됩니다.
+
 * SaaS 환경에서 BlueXP 백업 및 복구를 사용하는 경우 BlueXP 백업 및 복구 구성 데이터가 클라우드에 백업됩니다. 인터넷에 액세스할 수 없는 사이트에서 BlueXP 백업 및 복구를 사용하는 경우 백업이 저장되는 StorageGRID 버킷에 BlueXP 백업 및 복구 구성 데이터가 백업됩니다. 비공개 모드 사이트에서 커넥터 오류가 발생한 경우 를 사용할 수 있습니다 link:reference-backup-cbs-db-in-dark-site.html["BlueXP 백업 및 복구 데이터를 새 커넥터로 복원합니다"^].
 
 
@@ -177,8 +180,8 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 
 오브젝트 스토리지에 접속하는 시스템에서 다음 요구사항을 구성해야 합니다.
 
-* 팬아웃 백업 아키텍처를 사용할 때는 운영 스토리지 시스템에 다음 설정을 구성해야 합니다.
-* 다중 구간 백업 아키텍처를 사용하는 경우 보조 스토리지 시스템에서 다음 설정을 구성해야 합니다.
+* 팬아웃 백업 아키텍처를 사용할 때는 _primary_storage 시스템에 다음 설정을 구성해야 합니다.
+* 다중 구간 백업 아키텍처를 사용하는 경우 _secondary_storage 시스템에서 다음 설정을 구성해야 합니다.
 
 
 다음 ONTAP 클러스터 네트워킹 요구사항이 필요합니다.
@@ -225,7 +228,7 @@ Cloud Volumes ONTAP 또는 온프레미스 시스템에 복제할 수 있으므�
 
 == StorageGRID를 백업 타겟으로 준비합니다
 
-StorageGRID는 다음 요구 사항을 충족해야 합니다. 를 참조하십시오 https://docs.netapp.com/us-en/storagegrid-116/["StorageGRID 설명서"^] 를 참조하십시오.
+StorageGRID는 다음 요구 사항을 충족해야 합니다. 를 참조하십시오 https://docs.netapp.com/us-en/storagegrid-117/["StorageGRID 설명서"^] 를 참조하십시오.
 
 지원되는 StorageGRID 버전:: StorageGRID 10.3 이상이 지원됩니다.
 +
@@ -235,7 +238,7 @@ StorageGRID는 다음 요구 사항을 충족해야 합니다. 를 참조하십�
 이전 백업을 클라우드 아카이브 스토리지에 계층화하려면 StorageGRID 시스템에서 버전 11.3 이상이 실행되고 있어야 합니다. 또한 StorageGRID 시스템이 BlueXP Canvas에서 검색되어야 합니다.
 
 --
-S3 자격 증명:: StorageGRID 스토리지에 대한 액세스를 제어하려면 S3 테넌트 계정을 생성해야 합니다. https://docs.netapp.com/us-en/storagegrid-116/admin/creating-tenant-account.html["자세한 내용은 StorageGRID 문서를 참조하십시오"^].
+S3 자격 증명:: StorageGRID 스토리지에 대한 액세스를 제어하려면 S3 테넌트 계정을 생성해야 합니다. https://docs.netapp.com/us-en/storagegrid-117/admin/creating-tenant-account.html["자세한 내용은 StorageGRID 문서를 참조하십시오"^].
 +
 --
 StorageGRID로 백업을 설정하면 백업 마법사에서 테넌트 계정에 대한 S3 액세스 키와 암호 키를 입력하라는 메시지가 표시됩니다. 테넌트 계정을 사용하면 BlueXP 백업 및 복구를 통해 백업을 저장하는 데 사용되는 StorageGRID 버킷을 인증하고 액세스할 수 있습니다. 키는 StorageGRID가 누가 요청하는지 알 수 있도록 필요합니다.
@@ -357,7 +360,7 @@ image:screenshot_sg_archive_to_cloud.png["StorageGRID에서 AWS S3 또는 Azure 
 [NOTE]
 ====
 * 한 번에 하나의 FlexGroup 볼륨에서만 백업을 활성화할 수 있습니다.
-* 선택한 볼륨의 SnapLock 설정도 동일해야 합니다. 모든 볼륨에 SnapLock Enterprise가 활성화되어 있거나 SnapLock가 비활성화되어 있어야 합니다. (SnapLock 준수 모드가 있는 볼륨은 현재 지원되지 않습니다.) 잠긴 볼륨과 잠금 해제된 볼륨의 조합을 선택할 수 없습니다.
+* 선택한 볼륨의 SnapLock 설정도 동일해야 합니다. 모든 볼륨에 SnapLock Enterprise가 활성화되어 있거나 SnapLock가 비활성화되어 있어야 합니다. (SnapLock 규정 준수 모드를 사용하는 볼륨은 현재 지원되지 않습니다.) 잠긴 볼륨과 잠금 해제된 볼륨의 조합을 선택할 수 없습니다.
 
 
 ====
@@ -406,10 +409,10 @@ NOTE: 선택한 볼륨에 이 단계에서 선택한 정책과 다른 스냅샷 
 ** * 백업 *: 볼륨을 오브젝트 스토리지에 백업합니다.
 
 
-. * 아키텍처 *: 복제 및 백업을 선택한 경우 다음 정보 흐름 중 하나를 선택합니다.
+. * 아키텍처 *: 복제 및 백업을 모두 선택한 경우 다음 정보 흐름 중 하나를 선택합니다.
 +
 ** * Cascading *: 운영 스토리지에서 보조 스토리지로, 그리고 보조 스토리지에서 객체 스토리지로 정보가 이동합니다.
-** * Fan Out *: 정보가 기본 스토리지에서 보조_로, _ 소스에서 객체 스토리지로 이동합니다.
+** * Fan Out *: 정보는 기본 스토리지에서 보조_로, _ 에서 객체 스토리지로 이동합니다.
 +
 이러한 아키텍처에 대한 자세한 내용은 을 참조하십시오 link:concept-protection-journey.html["보호 여정을 계획하십시오"].
 
@@ -498,6 +501,6 @@ S3 버킷은 입력한 S3 액세스 키와 비밀 키로 표시된 서비스 계
 == 다음 단계
 
 * 가능합니다 link:task-manage-backups-ontap.html["백업 파일 및 백업 정책을 관리합니다"^]. 여기에는 백업 시작 및 중지, 백업 삭제, 백업 스케줄 추가 및 변경 등이 포함됩니다.
-* 가능합니다 link:task-manage-backup-settings-ontap.html["클러스터 레벨 백업 설정을 관리합니다"^]. 여기에는 ONTAP가 클라우드 스토리지에 액세스하는 데 사용하는 스토리지 키 변경, 백업을 오브젝트 스토리지에 업로드하는 데 사용할 수 있는 네트워크 대역폭 변경, 이후 볼륨에 대한 자동 백업 설정 변경 등이 포함됩니다.
+* 가능합니다 link:task-manage-backup-settings-ontap.html["클러스터 레벨 백업 설정을 관리합니다"^]. 여기에는 백업을 객체 저장소에 업로드하는 데 사용할 수 있는 네트워크 대역폭 변경, 이후 볼륨에 대한 자동 백업 설정 변경 등이 포함됩니다.
 * 또한 가능합니다 link:task-restore-backups-ontap.html["백업 파일에서 볼륨, 폴더 또는 개별 파일을 복원합니다"^] 사내 ONTAP 시스템으로.
 
