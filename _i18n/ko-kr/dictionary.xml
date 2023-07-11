@@ -2761,7 +2761,6 @@
   <block id="404ad1bc321be3b042156261e6ba2b4f" category="paragraph">BlueXP 백업 및 복구는 작업 환경 마법사에서 기본적으로 활성화됩니다. 옵션을 활성 상태로 유지해야 합니다.</block>
   <block id="4f2a0931f8313551f535951dc36ca589" category="inline-xref">기존 시스템에서 BlueXP 백업 및 복구 활성화</block>
   <block id="c53a7ec6ddfd9f1e05e3e3cfcd2c964c" category="admonition">리소스 그룹의 이름을 선택하려면 * Cloud Volumes ONTAP 배포 시 * BlueXP 백업 및 복구를 비활성화합니다. 의 단계를 따릅니다 <block ref="a16f34e9e42db7156a23b1a727a1a752" category="inline-xref-macro-rx"></block> BlueXP 백업 및 복구를 활성화하고 리소스 그룹을 선택합니다.</block>
-  <block id="3c109ca3c8fa9a28c55f534f9e003b51" category="paragraph">BlueXP 백업 및 복구는 시스템에서 사용할 수 있으며 매일 볼륨을 백업하고 가장 최근 30개의 백업 복사본을 유지합니다.</block>
   <block id="b8a6a9c5fa81a9fc0842c6df5d41e302" category="paragraph">BlueXP 백업 및 복구는 작업 환경에서 바로 사용할 수 있습니다.</block>
   <block id="95c42891a35fe848a9c33b8c9e21abd6" category="paragraph">기본적으로 BlueXP 백업 및 복구는 비용 최적화를 위해 LRS(Local Redundancy)와 함께 Blob 컨테이너를 프로비저닝합니다. 데이터가 다른 영역 간에 복제되도록 하려면 이 설정을 영역 중복(ZRS)으로 변경할 수 있습니다. 에 대한 Microsoft 지침을 참조하십시오<block ref="c549763665cfbb93dbccfdbf667aa0f2" category="inline-link-rx"></block>.</block>
   <block id="a6824c9b13690f6bdd92d0879a455c1d" category="inline-link-macro">BlueXP 백업 및 복구에 대한 고지 사항</block>
@@ -3663,23 +3662,19 @@ cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 G
   <block id="ae8eba8963c30867457e97dd99e8fff7" category="list-text">국가별 키만 지원되며 글로벌 키는 지원되지 않습니다.</block>
   <block id="fdbd81a7d2b282a658a8b0e7b92cdebc" category="section-title">나만의 버킷을 만들어 보세요</block>
   <block id="74d8456ec74a0cc3a517057feb10fb90" category="paragraph">기본적으로 이 서비스는 사용자를 위해 버킷을 생성합니다. 또는 고유한 버킷을 사용하려는 경우 백업 활성화 마법사를 시작하기 전에 생성한 다음 마법사에서 해당 버킷을 선택할 수 있습니다.</block>
-  <block id="50af2238e1149fc4e9c6d4a91ec928b7" category="paragraph">고유한 버킷을 생성하는 경우 "NetApp-backup"의 버킷 이름을 사용해야 합니다.</block>
   <block id="d4ab2296bb945d417a8addf4512bf51b" category="section-title">볼륨 복제에 대한 ONTAP 네트워킹 요구 사항을 확인합니다</block>
   <block id="ea6fd0bb1b39590b996d07b96d466780" category="paragraph">BlueXP 백업 및 복구에서 백업을 활성화하기 전에 소스 및 대상 시스템이 ONTAP 버전 및 네트워킹 요구 사항을 충족하는지 확인하십시오.</block>
   <block id="d4bf25559c8ed55928a387cd23720e35" category="section-title">Cloud Volumes ONTAP 네트워킹 요구 사항</block>
-  <block id="f8ddaef2a077514c95bf1ab920675fc9" category="paragraph">인스턴스의 보안 그룹에는 필요한 인바운드 및 아웃바운드 규칙, 특히 ICMP 및 포트 11104 및 11105에 대한 규칙이 포함되어야 합니다. 이러한 규칙은 미리 정의된 보안 그룹에 포함되어 있습니다.</block>
   <block id="0736192094f1dc9a582442df0a017527" category="section-title">사내 ONTAP 네트워킹 요구사항</block>
   <block id="ab255acccc17b6b850a499063aaf4ef1" category="list-text">클러스터가 사내에 있는 경우 회사 네트워크와 클라우드 공급자의 가상 네트워크에 연결되어 있어야 합니다. 일반적으로 VPN 연결입니다.</block>
   <block id="1fbce003d68708feb24931b9e6366f50" category="list-text">ONTAP 클러스터는 추가 서브넷, 포트, 방화벽 및 클러스터 요구사항을 충족해야 합니다.</block>
   <block id="d7bb556723e915c43fe4fd9b0f90d545" category="inline-link">ONTAP 설명서에서 클러스터 피어링을 위한 사전 요구 사항을 확인하십시오</block>
-  <block id="3bab5731acdafc9aee7c0eb1d8b0217d" category="paragraph">Cloud Volumes ONTAP 또는 온프레미스 시스템에 복제할 수 있으므로 사내 ONTAP 시스템의 피어링 요구사항을 검토할 수 있습니다. 을 참조하십시오<block ref="f62b93c20d5bac3c11ab8a3b52ce12c9" category="inline-link-rx"></block>.</block>
   <block id="c08b01fe5c09939cdbabcb370734dad8" category="list-text">서로 다른 서브넷에 있는 두 Cloud Volumes ONTAP 시스템 간에 데이터를 복제하려면 서브넷을 함께 라우팅해야 합니다(기본 설정).</block>
   <block id="a8597301498b7ba277bd04c5d9cec26a" category="section-title">Cloud Volumes ONTAP에서 BlueXP 백업 및 복구를 활성화합니다</block>
   <block id="3a3585e7353e26db7ebd817873594905" category="paragraph">BluXP 백업 및 복구는 쉽게 활성화할 수 있습니다. 기존 Cloud Volumes ONTAP 시스템이 있는지 새 시스템이 있는지 여부에 따라 단계가 약간 다릅니다.</block>
   <block id="8a8476fd6836ec12c30dec20bc5004af" category="paragraph">* 새 시스템에서 BlueXP 백업 및 복구 활성화 *</block>
   <block id="901ae31ede407d1b2f9642db905682f2" category="list-text">BlueXP Canvas에서 * 작업 환경 추가 * 를 선택하고 클라우드 공급자를 선택한 다음 * 새로 추가 * 를 선택합니다. Create Cloud Volumes ONTAP * 를 선택합니다.</block>
   <block id="2804562bc1e662a5b5b8ecf3b0be67c6" category="admonition">백업 설정을 수정하거나 복제를 추가하려면 을 참조하십시오 <block ref="5cd1a7d7fa9fd41e0b8e095748eb7b5f" category="inline-link-macro-rx"></block>.</block>
-  <block id="8f68c2bda59a58c30828aa9f67c7f46d" category="paragraph">시스템에서 BlueXP 백업 및 복구가 활성화되어 매일 생성한 볼륨을 백업하고 최근 30개의 백업 복사본을 유지합니다.</block>
   <block id="fc90b8f1413f3c199581e8299d3f470a" category="paragraph">* 기존 시스템에서 BlueXP 백업 및 복구 활성화 *</block>
   <block id="f44b20d5d9a676a009838194fcecc749" category="list-text">BlueXP Canvas에서 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 * 를 선택합니다.</block>
   <block id="4ade5af203d6e65a0d4f2dfba9bb43b8" category="section-title">ONTAP 볼륨에서 백업을 활성화합니다</block>
@@ -3761,7 +3756,6 @@ cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 G
   <block id="0565cf043978c615b1f8f7cad9c764d4" category="paragraph">몇 가지 단계를 완료하여 사내 운영 ONTAP 시스템에서 보조 스토리지 시스템 및 Google 클라우드 스토리지로 볼륨 데이터 백업을 시작하십시오.</block>
   <block id="0c0bf2caafe0a0bcf95f58c110265658" category="admonition">"사내 ONTAP 시스템"에는 FAS, AFF 및 ONTAP Select 시스템이 포함됩니다.</block>
   <block id="8679d305959a742634fdc19258f41c4e" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 사용할 연결 방법을 식별합니다</block>
-  <block id="6cf819bd9293aa813cfa27132d7de812" category="paragraph">온프레미스 ONTAP 클러스터를 공용 인터넷을 통해 Google 클라우드 스토리지에 직접 연결할지, VPN 또는 Google 클라우드 상호 연결을 사용할지, 그리고 전용 IP 주소를 사용하는 전용 Google 액세스 인터페이스를 통해 트래픽을 라우팅할지 여부를 선택합니다.</block>
   <block id="8ec119f44cc76251903e9141fc7c49c4" category="paragraph"><block ref="d61bfca6e72207060fa33f0ff3f8d293" category="inline-xref-macro-rx"></block>.</block>
   <block id="b59dc58d729f5c77a50756af1a9eb983" category="paragraph">이미 Google Cloud 또는 구내에 Connector가 배포되어 있다면 모두 설정됩니다. 그렇지 않은 경우, BlueXP 커넥터를 생성하여 ONTAP 데이터를 Google Cloud 스토리지에 백업해야 합니다. 또한 Connector에 대한 네트워크 설정을 사용자 지정하여 Google Cloud에 연결해야 합니다.</block>
   <block id="1e4b37a7966ae0a6eb7927e68e223924" category="inline-xref">Connector를 생성하는 방법과 필요한 네트워크 설정을 정의하는 방법에 대해 알아봅니다.</block>
@@ -3983,7 +3977,6 @@ ifdef::AWS[]</block>
   <block id="9bdfbf10688e2b38e82b1ddeb1a0af32" category="paragraph">BlueXP 백업 및 복구는 볼륨의 초기 백업을 수행하기 시작합니다. 복제된 볼륨 및 백업 파일의 기본 전송에는 소스 데이터의 전체 복사본이 포함됩니다. 후속 전송에는 스냅샷 복사본에 포함된 운영 스토리지 데이터의 차등 복사본이 포함됩니다.</block>
   <block id="c6f935fce64d135ae3250df1beb9c2aa" category="doc">온프레미스 ONTAP 데이터를 Azure Blob 저장소에 백업</block>
   <block id="b26f7b31288fff69c8d3c7065e19c5d4" category="paragraph">몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 보조 스토리지 시스템 및 Azure Blob 저장소로 볼륨 데이터 백업을 시작하십시오.</block>
-  <block id="facdda46f755c89c58831dda3b15ddef" category="paragraph">공용 인터넷을 통해 온프레미스 ONTAP 클러스터를 Azure에 직접 연결할지, VPN 또는 Azure ExpressRoute를 사용할지, 그리고 프라이빗 VPC 엔드포인트 인터페이스를 통해 트래픽을 Azure로 라우팅할지 여부를 선택합니다.</block>
   <block id="57baa3c287eb66f99ca7a7281024c30a" category="paragraph">Azure VNET 또는 구내에 이미 Connector가 배포되어 있는 경우 모두 설정됩니다. 그렇지 않은 경우 ONTAP 데이터를 Azure Blob 저장소에 백업하려면 BlueXP 커넥터를 만들어야 합니다. 또한 Azure에 연결할 수 있도록 커넥터의 네트워크 설정을 사용자 지정해야 합니다.</block>
   <block id="9175d0745db62701ca4f4b1f795bc78e" category="paragraph">BlueXP에서 ONTAP 클러스터를 검색하고, 클러스터가 최소 요구 사항을 충족하는지 확인하고, 클러스터가 Azure에 연결될 수 있도록 네트워크 설정을 사용자 지정합니다.</block>
   <block id="45b0dc574541901afc9c84c2a03ebe28" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> Azure Blob을 백업 타겟으로 준비합니다</block>
@@ -4004,7 +3997,6 @@ ifdef::AWS[]</block>
   <block id="5e1b8f741e88cd7d205e1784bab10a4d" category="list-text">사용자 지정 역할에 대한 줄임표(*... *)를 선택한 다음 * Edit * 를 선택합니다.</block>
   <block id="148cf82a167a4c42f015c88ac109090a" category="list-text">JSON * 을 선택하고 다음 권한을 추가합니다.</block>
   <block id="6df6e5e28f7a16afde6dc4915de4a5ca" category="list-text">검토 + 업데이트 * 를 선택한 다음 * 업데이트 * 를 선택합니다.</block>
-  <block id="0deda7204e72e002187e85560cc2206f" category="paragraph">Azure 및 BlueXP의 라이센스 요구 사항을 확인해야 합니다.</block>
   <block id="dc6287483bb6663eb24a6b4a97292566" category="section-title">Azure Blob을 백업 타겟으로 준비합니다</block>
   <block id="e6a4bcd05aae8d20923024df759b8204" category="inline-link">자신의 키를 사용하는 방법에 대해 알아봅니다</block>
   <block id="7c6c6d3f55cf70ec4e78761174989411" category="list-text">기본 Microsoft 관리 암호화 키를 사용하는 대신 정품 인증 마법사에서 데이터 암호화에 사용자 지정 관리 키를 사용할 수 있습니다. 이 경우 Azure 가입, 키 저장소 이름 및 키가 필요합니다.<block ref="5499082d3ade4f2b56fcc95816a14476" category="inline-link-rx"></block>.</block>
@@ -4130,7 +4122,6 @@ ifdef::AWS[]</block>
   <block id="33f10a7c625758670c871505fd040a03" category="cell">보호 및 장기 보관을 위해 데이터를 클라우드에 백업합니다. 필요한 경우 백업에서 동일한 작업 환경 또는 다른 작업 환경으로 볼륨, 폴더 또는 개별 파일을 복원할 수 있습니다.</block>
   <block id="84d2eb5ebd4a59c9d3a33c1ddc7bf406" category="paragraph">스냅샷은 모든 백업 방법의 기반이며 백업 및 복구 서비스를 사용하는 데 필요합니다. 스냅샷 복사본은 볼륨의 읽기 전용 시점 이미지입니다. 마지막 스냅샷 복사본이 생성된 이후 파일에 대한 변경사항만 기록하므로 이미지는 최소한의 스토리지 공간을 소비하고 무시할 만한 성능 오버헤드를 발생시킵니다. 그림에 표시된 것처럼 볼륨에 생성된 스냅샷 복사본은 복제된 볼륨 및 백업 파일이 소스 볼륨의 변경 사항과 동기화된 상태로 유지하는 데 사용됩니다.</block>
   <block id="112d5b2e7f70a350b739f08063ce85af" category="paragraph">복제된 볼륨을 다른 ONTAP 스토리지 시스템에 생성하고 클라우드에 백업 파일을 생성하도록 선택할 수 있습니다. 또는 복제된 볼륨이나 백업 파일을 생성하도록 선택할 수 있습니다.</block>
-  <block id="f76d5fec0b4dd48f5a1f783d14d860b5" category="paragraph">요약하면 ONTAP 작업 환경에서 볼륨에 대해 생성할 수 있는 유효한 보호 흐름이나 모든 볼륨입니다.</block>
   <block id="f46d552561904382654668028ef332b7" category="list-text">소스 볼륨 -&gt; 스냅샷 복사본 -&gt; 복제된 볼륨 -&gt; 백업 파일</block>
   <block id="6e0f3f7af71dbdcd66969d229d562636" category="list-text">소스 볼륨 -&gt; 스냅샷 복사본 -&gt; 백업 파일</block>
   <block id="416d6dba97115e0823c4346a7315efbf" category="list-text">소스 볼륨 -&gt; 스냅샷 복사본 -&gt; 복제된 볼륨</block>
@@ -4156,10 +4147,8 @@ ifdef::AWS[]</block>
   <block id="2b769a9268eb2aee4276cba6c57ef0e9" category="cell">높음(공급자 비용)</block>
   <block id="f20b3ca4032bc39e75089941e59da9ae" category="section-title">사용할 백업 아키텍처</block>
   <block id="df2734a3248ea58d4bd1131a234481c4" category="paragraph">복제된 볼륨과 백업 파일을 모두 생성할 때 볼륨을 백업할 팬아웃 또는 캐스케이드 아키텍처를 선택할 수 있습니다.</block>
-  <block id="8601698382afe44631c1bb72709c3331" category="paragraph">fan-out_architecture는 스냅샷 복사본을 클라우드의 대상 스토리지 시스템과 백업 오브젝트 모두에 독립적으로 전송합니다.</block>
   <block id="fca2f290b176dda18963912f7b942907" category="inline-image-macro">복제된 볼륨 및 백업 파일을 생성하고 업데이트하는 데 볼륨의 스냅샷 복사본이 어떻게 사용되는지를 보여주는 다이어그램</block>
   <block id="ffd891a8050a93a047c73180f9384213" category="paragraph"><block ref="ffd891a8050a93a047c73180f9384213" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f7be3b6161c8430044f21d47653acb13" category="paragraph">cascade_architecture는 스냅샷 복사본을 대상 스토리지 시스템에 먼저 전송한 다음, 이 복제본을 클라우드의 백업 객체로 전송합니다.</block>
   <block id="47439f17d6378e02c6cc8d869a82c912" category="paragraph"><block ref="47439f17d6378e02c6cc8d869a82c912" category="inline-image-macro-rx" type="image"></block></block>
   <block id="500ecf85d81873182f0cadf3300f909e" category="section-title">서로 다른 아키텍처 선택 항목 비교</block>
   <block id="688c41a4a08a3e0f4011a51649a5a459" category="paragraph">이 표는 팬아웃 아키텍처와 캐스케이드 아키텍처를 비교한 것입니다.</block>
@@ -4176,16 +4165,8 @@ ifdef::AWS[]</block>
   <block id="a67640f7cdcc52eaa3b856d6e91a1c2b" category="list-text">기본 백업 정책은 매일 7개, 매주 52개의 스냅샷 복사본을 유지하여 매일 및 매주 Snapshot 복사본을 복제합니다.</block>
   <block id="1711f5c46c237530499df8bd10af41fc" category="paragraph">복제 또는 백업에 대한 사용자 지정 정책을 생성하는 경우 정책 레이블(예: "daily" 또는 "weekly")이 스냅샷 정책 또는 복제된 볼륨 및 백업 파일에 있는 레이블과 일치해야 합니다. System Manager 또는 ONTAP CLI(Command Line Interface)를 사용하여 사용자 지정 정책을 생성할 수 있습니다.</block>
   <block id="d4c627b86ea7fcc97aab9ca0d343fcbe" category="inline-link">ONTAP CLI를 사용하여 스냅샷 정책을 생성합니다</block>
-  <block id="a697a4067d71d212d6d90b5a40b65f6c" category="inline-link">ONTAP CLI를 사용하여 복제 정책을 생성합니다</block>
-  <block id="4852ced598798ace63321af55f321cf8" category="inline-link">System Manager를 사용하여 백업 정책을 생성합니다</block>
   <block id="350061f867dc1c5e72f04f985e74baee" category="inline-link">ONTAP CLI를 사용하여 백업 정책을 생성합니다</block>
-  <block id="a9ae4c6a697b11fdfda0bb4e732b5ea6" category="paragraph"><block ref="d8ea6acc45a89d2ab361031769419dd5" category="inline-link-rx"></block>
-<block ref="f13ee848e87c0aa36c394e684eee24d7" category="inline-link-rx"></block>
-<block ref="ec7e1f50f366316f4481f1b489263d62" category="inline-link-rx"></block>
-<block ref="d73f218743fa1184e2a040cf646f920f" category="inline-link-rx"></block></block>
-  <block id="d5221819c45343b141dfebcdd736932f" category="admonition">Cascading 아키텍처를 사용할 때 사용자 지정 정책을 만들려는 경우 복제된 볼륨이 생성될 보조 시스템에서 객체 백업 정책을 생성해야 합니다. 기본 정책을 사용하는 경우 모두 설정됩니다.</block>
   <block id="8cb2e913decbf9b532c186901104e076" category="inline-link-macro">새 백업 정책 추가</block>
-  <block id="6b411d4748b120033618a859a297c783" category="paragraph">BleXP 백업 및 복구 UI에서 객체 저장소 정책에 대한 백업을 생성할 수 있습니다. 의 섹션을 참조하십시오 <block ref="535e99780197daca673e274e7a26ba94" category="inline-link-macro-rx"></block> 를 참조하십시오. System Manager 또는 ONTAP CLI를 사용하여 스냅샷 및 복제 정책을 생성해야 합니다.</block>
   <block id="61dc4b0620e6a61c45bae3557cb28951" category="paragraph">다음은 사용자 지정 정책을 만들 때 도움이 될 수 있는 몇 가지 ONTAP CLI 명령 예입니다. 참고로 _admin_vserver(스토리지 VM)를 로 사용해야 합니다<block ref="f536bcc8fda7ee8ba21dea42b5b1c44d" prefix=" " category="inline-code"></block> 명령을 입력합니다.</block>
   <block id="dbb3987abbdf9be78435bfb97c6a1e83" category="cell">정책 설명</block>
   <block id="357b8b980947b6d9681d42119e03c9ad" category="cell">클라우드 백업 간소화</block>
@@ -4217,17 +4198,10 @@ ifdef::AWS[]</block>
   <block id="0f8751300c4a6857f8a492b7f39fba12" category="inline-link-macro">지원되는 전체 백업 대상 목록을 참조하십시오</block>
   <block id="df28403f823a8cccd6d3aa652ebe7892" category="paragraph">전체 인터넷 연결("표준 모드" 또는 "SaaS 모드"라고도 함)이 있는 사이트에서 BlueXP 백업 및 복구를 사용하는 경우 BlueXP에서 관리하는 온프레미스 ONTAP 또는 Cloud Volumes ONTAP 시스템에서 복제된 볼륨을 생성할 수 있습니다. 또한 지원되는 클라우드 공급자의 오브젝트 스토리지에 백업 파일을 생성할 수 있습니다. <block ref="53011d10cc707465ef24eb421fc1dc04" category="inline-link-macro-rx"></block>.</block>
   <block id="cd6458cee7347b844e32d364eccbaa5c" category="paragraph">유효한 커넥터 위치 목록에 대한 백업 파일을 만들려는 클라우드 공급자의 백업 항목을 참조하십시오. Connector를 Linux 시스템에 수동으로 설치하거나 특정 클라우드 공급자에 배포해야 하는 몇 가지 제한 사항이 있습니다.</block>
-  <block id="0b1927d444be0de7978184d22b87a396" category="list-text"><block ref="b4a611717e08ba4c0f2fa5390556e4e1" category="inline-link-macro-rx"></block>.</block>
-  <block id="73787881c6954ed3921a1d5b06187a75" category="list-text"><block ref="7f5adf3b5d9ef637dacd0fcd7017c33f" category="inline-link-macro-rx"></block>.</block>
   <block id="2e87d4ef1e0516d893da73de140af706" category="inline-link-macro">Cloud Volumes ONTAP 데이터를 Azure Blob에 백업합니다</block>
-  <block id="a2c543723fe6f91d3006330134ace7bf" category="list-text"><block ref="d0f49153a0d69289bf4d240d8900efdd" category="inline-link-macro-rx"></block>.</block>
   <block id="32f34f4c2eca6b21bfa54bfe2cf7ad10" category="inline-link-macro">온프레미스 ONTAP 데이터를 Azure Blob에 백업</block>
-  <block id="44f7f5461565516d1ed5aad1af7bb2fb" category="list-text"><block ref="9e6e068583778aa95480a42c46f57b8a" category="inline-link-macro-rx"></block>.</block>
   <block id="a6102a3b147e0d099222dfd5f8fa1b0b" category="inline-link-macro">Cloud Volumes ONTAP 데이터를 Google Cloud에 백업합니다</block>
-  <block id="4ea849b0335489aba8b4800f940ce2c9" category="list-text"><block ref="0746a14ab26f1c77013b1b74f69b0e83" category="inline-link-macro-rx"></block>.</block>
   <block id="ee45da3db51b4bd67f3174dd7bdd4bc3" category="inline-link-macro">사내 ONTAP 데이터를 Google Cloud에 백업합니다</block>
-  <block id="a1b5afc48ce1f15676f11eb72385bfbe" category="list-text"><block ref="7f2906feb9bed8771e4967ea2ed8b648" category="inline-link-macro-rx"></block>.</block>
-  <block id="116403f07f9b0bd589c333bd72de20e9" category="list-text"><block ref="80288d2da91f9794088785363d31b6b5" category="inline-link-macro-rx"></block>.</block>
   <block id="2714d7e7e24c727c2c54bb6ba96c4617" category="section-title">인터넷 연결이 제한된 사이트에 대한 지원</block>
   <block id="e5f27584b8554a76c0aba2da480263ad" category="paragraph">BlueXP 백업 및 복구는 제한된 인터넷 연결("제한 모드"라고도 함)을 사용하여 볼륨 데이터를 백업하는 사이트에서 사용할 수 있습니다. 이 경우 제한된 영역에 BlueXP 커넥터를 배포해야 합니다.</block>
   <block id="8f573a29259b458aa4c98898b8a3c1ab" category="list-text">AWS 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3에 백업할 수 있습니다. 자세한 내용은 를 참조하십시오 <block ref="b4a611717e08ba4c0f2fa5390556e4e1" category="inline-link-macro-rx"></block>.</block>
@@ -4320,4 +4294,61 @@ ifdef::AWS[]</block>
   <block id="e0db2fdf8995a741b4ad4157a88c1cae" category="paragraph">알림 센터에는 여러 백업 및 복원 이벤트가 표시되지만 다음 이벤트만 e-메일 알림을 트리거합니다.</block>
   <block id="45b54b60106a7f59e33240f6ddaac7e1" category="list-text">BlueXP 메뉴 모음에서 (<block ref="df7c8a71ca3da4359e40e121f18f87b9" category="inline-image-macro-rx" type="image"></block>)를 클릭합니다.</block>
   <block id="5beb7331041291762b098f18521055a9" category="list-text">알림을 검토합니다.</block>
+  <block id="07412ae70c8f432b19c5d424dc630dcf" category="paragraph">기본적으로 이 서비스는 사용자를 위해 버킷을 생성합니다. 고유한 버킷을 사용하려면 백업 활성화 마법사를 시작하기 전에 생성한 다음 마법사에서 해당 버킷을 선택할 수 있습니다.</block>
+  <block id="5ea0826986e3031f8bd8e643d1b37ce9" category="paragraph">고유한 버킷을 생성하는 경우 "NetApp-백업"의 버킷 이름을 사용해야 합니다.</block>
+  <block id="b79f5207c4b1f2d320c8d5fe3eb33f63" category="paragraph">인스턴스의 보안 그룹에는 필요한 인바운드 및 아웃바운드 규칙, 특히 ICMP 및 포트 11104 및 11105에 대한 규칙이 포함되어야 합니다. 이러한 규칙은 미리 정의된 보안 그룹에 포함되어 있습니다.</block>
+  <block id="e9926e61defd3a286477d3a785a7fd6a" category="paragraph">Cloud Volumes ONTAP 또는 온프레미스 시스템에 복제할 수 있으므로 사내 ONTAP 시스템의 피어링 요구사항을 검토할 수 있습니다.<block ref="f62b93c20d5bac3c11ab8a3b52ce12c9" category="inline-link-rx"></block>.</block>
+  <block id="d39d5fd7cc5ced3c60a045dedddc0e68" category="inline-link-macro">보호할 각 볼륨에서 백업을 활성화합니다</block>
+  <block id="a7ab7e41ab0b37b5c56042c5e14df4ff" category="paragraph">시스템에서 BlueXP 백업 및 복구가 활성화됩니다. 이러한 Cloud Volumes ONTAP 시스템에서 볼륨을 생성한 후 BlueXP 백업 및 복구 및 을 실행합니다 <block ref="70d7256195ed88e78bc7994f2215f899" category="inline-link-macro-rx"></block>.</block>
+  <block id="b7d972f6553934b1eea5e57436b58de2" category="paragraph">사내 ONTAP 클러스터를 공용 인터넷을 통해 Google Cloud 스토리지에 직접 연결할지, VPN 또는 Google Cloud Interconnect를 사용할지 여부를 선택하고 개인 IP 주소를 사용하는 전용 Google Access 인터페이스를 통해 트래픽을 라우팅할지 여부를 선택합니다.</block>
+  <block id="061189bcae2d45b758f44b801f0cafa0" category="paragraph">Connector에 대한 권한을 설정하여 Google Cloud 버킷을 생성하고 관리합니다. 또한, 온프레미스 ONTAP 클러스터에 대한 사용 권한을 설정해야 Google Cloud 버킷에 데이터를 읽고 쓸 수 있습니다.</block>
+  <block id="965fc2d93c14a05bf6aa6d11dccdf7f3" category="inline-xref">Google Cloud 환경에서 ONTAP 백업을 받을 수 있는 방법에 대해 알아보십시오.</block>
+  <block id="3142575a0ab456d6fc41027f31a44400" category="paragraph">선택적으로 기본 Google Cloud 암호화 키를 사용하는 대신 데이터 암호화에 대해 사용자 지정 관리 키를 설정할 수 있습니다. <block ref="24a7679356370a79eec97a5aa8f7e0f4" category="inline-xref-macro-rx"></block></block>
+  <block id="9ad048774cfb757660014ae8b3a5e963" category="paragraph">BlueXP 백업 및 복구는 쉽게 활성화할 수 있습니다. 기존 Cloud Volumes ONTAP 시스템이 있는지 새 시스템이 있는지 여부에 따라 단계가 약간 다릅니다.</block>
+  <block id="50ecfa827055391d1f79881e9faaa9d5" category="paragraph">작업 환경에서 직접 언제든지 기존 시스템에서 BlueXP 백업 및 복구를 사용할 수 있습니다.</block>
+  <block id="4dd14adc068a21e0671c3acde608dda6" category="paragraph"><block ref="4dd14adc068a21e0671c3acde608dda6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e357379ef349802fe3a5b7a0ea16b622" category="paragraph">공용 인터넷을 통해 온프레미스 ONTAP 클러스터를 Azure에 직접 연결할지, VPN 또는 Azure ExpressRoute를 사용할지, 그리고 프라이빗 VPC 엔드포인트 인터페이스를 통해 트래픽을 Azure로 라우팅할지 여부를 선택합니다.</block>
+  <block id="bda2bf5fb0b6ef0e110cf67c341d2f58" category="paragraph">Azure 및 BlueXP의 라이센스 요구 사항을 확인해야 합니다.</block>
+  <block id="219920185164037444cf297ee6db557a" category="section-title">Azure Blob 저장소 계정을 만듭니다</block>
+  <block id="f7fd8d98e8242ad43571b2edbb91b9fc" category="paragraph">기본적으로 이 서비스는 스토리지 계정을 생성합니다. 고유한 스토리지 계정을 사용하려면 백업 활성화 마법사를 시작하기 전에 계정을 생성한 다음 마법사에서 해당 스토리지 계정을 선택합니다.</block>
+  <block id="83da16eb347a649074af6b8a1c3d92ae" category="paragraph">자체 스토리지 계정을 생성하는 경우 "NetApp-backup"의 스토리지 계정 이름을 사용해야 합니다.</block>
+  <block id="1de16ec5bb8b26ffbf7189e724790630" category="paragraph">요약하면 ONTAP 작업 환경에서 볼륨에 대해 생성할 수 있는 유효한 보호 흐름은 다음과 같습니다.</block>
+  <block id="62fab0bd5cf92ab36f27224d46c5f233" category="paragraph">팬아웃 * 아키텍처는 스냅샷 복사본을 대상 스토리지 시스템과 클라우드의 백업 개체 모두에 독립적으로 전송합니다.</block>
+  <block id="f47293eaa2dd8607290525b210ac8d72" category="paragraph">계단식 * 아키텍처는 스냅샷 복사본을 대상 스토리지 시스템에 먼저 전송한 다음, 해당 시스템에서 복사본을 클라우드의 백업 개체로 전송합니다.</block>
+  <block id="3477dac7879a3f44096cb4f68455f180" category="inline-link">System Manager를 사용하여 스냅샷 정책을 생성합니다</block>
+  <block id="c614d93309389f7373130aa7f9186f5d" category="inline-link">System Manager를 사용하여 복제 정책을 생성합니다</block>
+  <block id="8a95d969b59555a0a73e2a674b580a6e" category="inline-link">ONTAP CLI를 사용하여 복제 정책을 생성합니다</block>
+  <block id="096dfb23f9de3e352342395b7762f0ba" category="inline-link">System Manager를 사용하여 백업 정책을 생성합니다</block>
+  <block id="b7ad321010459984fa60de2cd7631626" category="paragraph"><block ref="244560fcf5d380e290ecd4b178a412c9" category="inline-link-rx"></block>
+<block ref="d8ea6acc45a89d2ab361031769419dd5" category="inline-link-rx"></block>
+<block ref="6a671fae687ae09ed6ec2eb759a70329" category="inline-link-rx"></block>
+<block ref="76f9b86225921137bc166f71caebf3f1" category="inline-link-rx"></block>
+<block ref="21814359fa3d01fa463924248dc4810b" category="inline-link-rx"></block>
+<block ref="d73f218743fa1184e2a040cf646f920f" category="inline-link-rx"></block></block>
+  <block id="bf322ff91252b9377a00e3301a9fb8de" category="paragraph">* 참고: * System Manager를 사용할 때는 복제 정책의 정책 유형으로 * Asynchronous * 를 선택하고, * Asynchronous * 및 * Back to cloud * 를 선택하여 객체 정책에 백업합니다.</block>
+  <block id="8c84db8980c0dedab8ce56db7fdbd716" category="paragraph">BlueXP 백업 및 복구 UI에서 객체 저장소 정책에 대한 백업을 생성할 수 있습니다. 의 섹션을 참조하십시오 <block ref="535e99780197daca673e274e7a26ba94" category="inline-link-macro-rx"></block> 를 참조하십시오. System Manager 또는 ONTAP CLI를 사용하여 스냅샷 및 복제 정책을 생성해야 합니다.</block>
+  <block id="434e82511bf6b4566a7be6239e737769" category="cell">간단한 스냅샷 정책</block>
+  <block id="c404f3312a8eec0338ecbc78bdc024ec" category="cell"><block ref="cfcc1000298a724899b278b1bbdc36d0" prefix="" category="inline-code"></block></block>
+  <block id="cc5c8f317eab661af83024bda7eef553" category="section-title">내 정책은 어디에 있습니까?</block>
+  <block id="9c58074fed28efa853a138fdba79e26e" category="paragraph">백업 정책은 사용할 백업 아키텍처(팬 아웃 또는 계단식)에 따라 서로 다른 위치에 상주합니다. 복제 쌍 두 개의 ONTAP 스토리지 시스템 및 객체에 대한 백업이 스토리지 공급자를 대상으로 사용하기 때문에 복제 정책과 백업 정책은 동일한 방식으로 설계되지 않았습니다.</block>
+  <block id="7a1f25bd1db088139566bfc0df899cb7" category="paragraph">스냅샷 정책은 항상 운영 스토리지 시스템에 상주합니다.</block>
+  <block id="631c0944218c78537d6a82498f43a669" category="paragraph">복제 정책은 항상 보조 스토리지 시스템에 상주합니다.</block>
+  <block id="fc33e7c5f1bd8227aeae99689d9aafed" category="paragraph">소스 볼륨이 있는 시스템에 객체 백업 정책이 생성됩니다. 이 정책은 팬아웃 구성의 운영 클러스터이며, 계단식 구성의 경우 보조 클러스터입니다.</block>
+  <block id="724e50bbeb42e94a045cb1c6c16bd50e" category="paragraph">이러한 차이는 표에 나와 있습니다.</block>
+  <block id="4c0abf2d4c54820b8d33061abaf30759" category="cell">스냅샷 정책</block>
+  <block id="afce532bad172bcef50d75935d2ed43b" category="cell">복제 정책</block>
+  <block id="7759a4720271a1ab3b4e6b1c36a67058" category="cell">백업 정책</block>
+  <block id="98f03716d5ab40042e83bb54bfdb8ae3" category="cell">* 팬아웃 *</block>
+  <block id="074de7e7c226d5c60f8af14c20725352" category="cell">기본</block>
+  <block id="0c7d6cf19426e01dcfa32434828ed266" category="cell">보조</block>
+  <block id="d3e1c79e680fc97c2e4901838347539e" category="cell">* 계단식 *</block>
+  <block id="4f3e03eb9457fe07aacd5615dc75a081" category="paragraph">따라서 계단식 아키텍처를 사용할 때 사용자 지정 정책을 만들려면 복제된 볼륨이 생성될 보조 시스템에 복제 및 개체 백업 정책을 만들어야 합니다. 팬아웃 아키텍처를 사용할 때 사용자 지정 정책을 생성하려는 경우 복제된 볼륨이 생성될 보조 시스템에 복제 정책을 생성하고 기본 시스템의 객체 정책에 백업해야 합니다.</block>
+  <block id="c9edc6898a1228f4b0c190dac5f6dd15" category="paragraph">모든 ONTAP 시스템에 있는 기본 정책을 사용하는 경우 모두 설정됩니다.</block>
+  <block id="b4a611717e08ba4c0f2fa5390556e4e1" category="list-text"><block ref="b4a611717e08ba4c0f2fa5390556e4e1" category="inline-link-macro-rx"></block></block>
+  <block id="7f5adf3b5d9ef637dacd0fcd7017c33f" category="list-text"><block ref="7f5adf3b5d9ef637dacd0fcd7017c33f" category="inline-link-macro-rx"></block></block>
+  <block id="d0f49153a0d69289bf4d240d8900efdd" category="list-text"><block ref="d0f49153a0d69289bf4d240d8900efdd" category="inline-link-macro-rx"></block></block>
+  <block id="9e6e068583778aa95480a42c46f57b8a" category="list-text"><block ref="9e6e068583778aa95480a42c46f57b8a" category="inline-link-macro-rx"></block></block>
+  <block id="0746a14ab26f1c77013b1b74f69b0e83" category="list-text"><block ref="0746a14ab26f1c77013b1b74f69b0e83" category="inline-link-macro-rx"></block></block>
+  <block id="7f2906feb9bed8771e4967ea2ed8b648" category="list-text"><block ref="7f2906feb9bed8771e4967ea2ed8b648" category="inline-link-macro-rx"></block></block>
+  <block id="80288d2da91f9794088785363d31b6b5" category="list-text"><block ref="80288d2da91f9794088785363d31b6b5" category="inline-link-macro-rx"></block></block>
 </blocks>
