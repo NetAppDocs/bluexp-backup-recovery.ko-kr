@@ -405,7 +405,9 @@ NOTE: AWS 중국 지역에서 백업을 생성할 때는 IAM 정책의 All_Resou
 
 기본적으로 이 서비스는 사용자를 위해 버킷을 생성합니다. 또는 고유한 버킷을 사용하려는 경우 백업 활성화 마법사를 시작하기 전에 생성한 다음 마법사에서 해당 버킷을 선택할 수 있습니다.
 
-고유한 버킷을 생성하는 경우 "NetApp-backup"의 버킷 이름을 사용해야 합니다.  사용자 정의 이름을 사용해야 하는 경우 를 편집합니다 `ontapcloud-instance-policy-netapp-backup` 기존 CVO에 대한 IAMRole로 다음 목록을 S3 권한에 추가합니다. 을(를) 포함해야 합니다 `“Resource”: “arn:aws:s3:::*”` 버킷과 연결해야 하는 모든 필수 권한을 할당합니다.
+link:concept-protection-journey.html#do-you-want-to-create-your-own-object-storage-container["나만의 버킷을 만드는 방법에 대해 자세히 알아보세요"^].
+
+고유한 버킷을 생성하는 경우 "NetApp-backup"의 버킷 이름을 사용해야 합니다. 사용자 정의 이름을 사용해야 하는 경우 를 편집합니다 `ontapcloud-instance-policy-netapp-backup` 기존 CVO에 대한 IAMRole로 다음 목록을 S3 권한에 추가합니다. 을(를) 포함해야 합니다 `“Resource”: “arn:aws:s3:::*”` 버킷과 연결해야 하는 모든 필수 권한을 할당합니다.
 
 [%collapsible]
 ====

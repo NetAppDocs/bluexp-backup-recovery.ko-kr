@@ -204,7 +204,7 @@ BlueXP 백업 및 복구는 권한 모델로 _ Azure 액세스 정책 _ 을(를)
 
 기본적으로 이 서비스는 스토리지 계정을 생성합니다. 고유한 스토리지 계정을 사용하려면 백업 활성화 마법사를 시작하기 전에 계정을 생성한 다음 마법사에서 해당 스토리지 계정을 선택합니다.
 
-자체 스토리지 계정을 생성하는 경우 "NetApp-backup"의 스토리지 계정 이름을 사용해야 합니다.
+link:concept-protection-journey.html#do-you-want-to-create-your-own-object-storage-container["자체 스토리지 계정 생성에 대해 자세히 알아보십시오"^].
 
 
 

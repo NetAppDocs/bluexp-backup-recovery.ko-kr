@@ -39,7 +39,7 @@ summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 G
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["세 가지"] 라이센스 요구 사항을 확인합니다
 [role="quick-margin-para"]
-Azure 및 BlueXP의 라이센스 요구 사항을 모두 확인해야 합니다.
+Google Cloud와 BlueXP의 라이센스 요구 사항을 모두 확인해야 합니다.
 
 [role="quick-margin-para"]
 <<라이센스 요구 사항을 확인합니다>>.
@@ -170,7 +170,7 @@ cloudkms.keyRings.setIamPolicy
 
 기본적으로 이 서비스는 사용자를 위해 버킷을 생성합니다. 고유한 버킷을 사용하려면 백업 활성화 마법사를 시작하기 전에 생성한 다음 마법사에서 해당 버킷을 선택할 수 있습니다.
 
-고유한 버킷을 생성하는 경우 "NetApp-백업"의 버킷 이름을 사용해야 합니다.
+link:concept-protection-journey.html#do-you-want-to-create-your-own-object-storage-container["나만의 버킷을 만드는 방법에 대해 자세히 알아보세요"^].
 
 
 

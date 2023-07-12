@@ -4068,7 +4068,6 @@ ifdef::AWS[]</block>
   <block id="12486a40437a6b66be9b1d2eaf68dacb" category="list-text">(선택 사항) VPC 엔드포인트 인터페이스를 사용하여 전용 연결에 맞게 시스템을 구성합니다.</block>
   <block id="27481ab02cd2907ee58a87a01de37de2" category="list-text">서비스를 활성화하면 백업 마법사에서 액세스 키와 암호 키를 입력하라는 메시지가 표시됩니다. 이러한 자격 증명은 ONTAP 클러스터에 전달되므로 ONTAP는 S3 버킷으로 데이터를 백업 및 복원할 수 있습니다. 이를 위해서는 다음과 같은 권한을 가진 IAM 사용자를 생성해야 합니다.</block>
   <block id="b4bc25d0b351437deb290fa50a36f062" category="paragraph">을 참조하십시오<block ref="eb8d2636cc0b0f2875b50c1561ec0060" category="inline-link-rx"></block>.</block>
-  <block id="c181b492b4cbf6c3d96c1bf33c267105" category="paragraph">고유한 버킷을 생성하는 경우 "NetApp-backup"의 버킷 이름을 사용해야 합니다.  사용자 정의 이름을 사용해야 하는 경우 를 편집합니다<block ref="36f2cf0d90ddea374df0d9a8b6aa6300" prefix=" " category="inline-code"></block> 기존 CVO에 대한 IAMRole로 다음 목록을 S3 권한에 추가합니다. 을(를) 포함해야 합니다<block ref="a99022ed92fce54cbefc53cc3a7bb0a9" prefix=" " category="inline-code"></block> 버킷과 연결해야 하는 모든 필수 권한을 할당합니다.</block>
   <block id="50b086f5a622de5e2ad8e86ada10bc12" category="paragraph">"작업": [
     "S3:목록 버킷"
     "S3:GetBucketLocation"
@@ -4178,16 +4177,12 @@ ifdef::AWS[]</block>
   <block id="db270565c8d27ceb4c560fb612e8c79b" category="cell">다른 스토리지 시스템에 간편하게 복제</block>
   <block id="0031f3e3980ee36e7bce67e4ab330050" category="cell"><block ref="d729ae243e35ecc21969b4027e0429a7" prefix="" category="inline-code"></block><block ref="f6518963bbee054e787a4ec64472f9d7" prefix=" " category="inline-code"></block></block>
   <block id="898eebeb49b344efac276efd814f5bab" category="admonition">클라우드 간 관계를 백업하는 데는 볼트 정책만 사용할 수 있습니다.</block>
-  <block id="b525581d2726f992cf12f5fa0b914e9a" category="section-title">서비스를 통해 귀사에 적합한 클라우드 버킷을 생성하시겠습니까</block>
-  <block id="c33f69aaef2c584909007df275ae924e" category="paragraph">클라우드 스토리지에서 백업 파일을 생성할 때 기본적으로 백업 및 복구 서비스는 백업 파일이 상주할 버킷을 생성합니다. 특정 이름을 사용하거나 특수 속성을 할당하려면 직접 버킷을 생성할 수 있습니다. 고유한 버킷을 생성하려면 활성화 마법사를 시작하기 전에 생성해야 합니다.</block>
-  <block id="1f93482e7ce1539102ce8afbda0eec16" category="paragraph">BlueXP 또는 클라우드 공급업체에서 컨테이너를 생성할 수 있습니다.</block>
   <block id="7f9581f916c410bb9712768248a5f8a2" category="inline-link">BlueXP에서 S3 버킷을 생성합니다</block>
   <block id="bb967ee5957dc55c35085365e29e2925" category="list-text"><block ref="bb967ee5957dc55c35085365e29e2925" category="inline-link-rx"></block></block>
   <block id="5053e38dd4555ef7b16b9071608bc37f" category="inline-link">BlueXP에서 Azure Blob 저장소 계정을 만듭니다</block>
   <block id="87e23f726d6daf4192ff45e6d5c8318e" category="list-text"><block ref="87e23f726d6daf4192ff45e6d5c8318e" category="inline-link-rx"></block></block>
   <block id="60983b9ebaa7c40f57184dcb60af2fc0" category="inline-link">BlueXP에서 Google Cloud Storage 버킷을 생성합니다</block>
   <block id="5e91843f25a40c882d43652a02c8f50e" category="list-text"><block ref="5e91843f25a40c882d43652a02c8f50e" category="inline-link-rx"></block></block>
-  <block id="d8d588d7dcaf874629ffb1141c68dfad" category="paragraph">StorageGRID 시스템에서 백업을 생성할 때 자체 S3 버킷을 생성할 수 없습니다.</block>
   <block id="bd83bdfad11f4eb2160cecbaafa5771f" category="section-title">사용 중인 BlueXP Connector 배포 모드</block>
   <block id="4b758548b6a16028d0d7c1e443c285bd" category="paragraph">BlueXP를 사용하여 스토리지를 관리하는 경우 BlueXP 커넥터가 이미 설치되어 있습니다. BlueXP 백업 및 복구와 동일한 커넥터를 사용하려는 경우 모두 설정됩니다. 다른 Connector를 사용해야 하는 경우 백업 및 복구 구현을 시작하기 전에 설치해야 합니다.</block>
   <block id="40f7e0f171ae7f38e670d73e8a4c284b" category="paragraph">BlueXP는 비즈니스 및 보안 요구 사항을 충족하는 방식으로 BlueXP를 사용할 수 있는 다양한 배포 모드를 제공합니다. _표준 모드_ 는 BlueXP SaaS 계층을 활용하여 모든 기능을 제공하며, 연결 제한이 있는 조직에서는 _restricted mode_ 및 _private mode_를 사용할 수 있습니다.</block>
@@ -4270,8 +4265,6 @@ ifdef::AWS[]</block>
   <block id="6d50e6cd9c195849ff4bcb523527fb42" category="paragraph">이 새로운 기능과 사용자 인터페이스는 ONTAP 9.8 이상을 실행하는 클러스터에만 지원됩니다. 클러스터에 이전 버전의 소프트웨어가 있는 경우 이전 버전의 BlueXP 백업 및 복구를 계속 사용할 수 있습니다. 하지만 최신 기능을 사용하려면 지원되는 ONTAP 버전으로 업그레이드하는 것이 좋습니다. 이전 버전의 소프트웨어를 계속 사용하려면 다음 단계를 수행하십시오.</block>
   <block id="cbce457a0f1d693a7ec8fdef080284e8" category="list-text">백업 설정 페이지에서 * 이전 BlueXP 백업 및 복구 버전 표시 * 의 라디오 버튼을 클릭합니다.</block>
   <block id="6ad80584a8fba3d1fc876fd412e2b184" category="paragraph">그런 다음 이전 버전의 소프트웨어를 사용하여 이전 클러스터를 관리할 수 있습니다.</block>
-  <block id="098acc7a6e2aef2e0ffd66cabdde369e" category="section-title">오브젝트 스토리지에 백업하기 위한 버킷 생성 기능</block>
-  <block id="7882c4532e24f1cac41cc043cde436b7" category="paragraph">오브젝트 스토리지에서 백업 파일을 생성할 때 기본적으로 백업 및 복구 서비스는 오브젝트 스토리지에 버킷을 생성합니다. 특정 이름을 사용하거나 특수 속성을 할당하려면 직접 버킷을 생성할 수 있습니다. 고유한 버킷을 생성하려면 활성화 마법사를 시작하기 전에 생성해야 합니다.</block>
   <block id="ea600ff03360da539b9cf2f109798fac" category="paragraph">StorageGRID 시스템에 백업 파일을 생성할 때 이 기능은 현재 지원되지 않습니다.</block>
   <block id="f717a77f4fa4c437e114a568e845c80e" category="sidebar">클러스터 레벨에서 객체를 백업하는 설정을 관리합니다</block>
   <block id="a7b1a9069e674c0aac2afe848aefc5a0" category="sidebar">추가 볼륨에서 볼륨 백업을 사용하도록 설정합니다</block>
@@ -4295,7 +4288,6 @@ ifdef::AWS[]</block>
   <block id="45b54b60106a7f59e33240f6ddaac7e1" category="list-text">BlueXP 메뉴 모음에서 (<block ref="df7c8a71ca3da4359e40e121f18f87b9" category="inline-image-macro-rx" type="image"></block>)를 클릭합니다.</block>
   <block id="5beb7331041291762b098f18521055a9" category="list-text">알림을 검토합니다.</block>
   <block id="07412ae70c8f432b19c5d424dc630dcf" category="paragraph">기본적으로 이 서비스는 사용자를 위해 버킷을 생성합니다. 고유한 버킷을 사용하려면 백업 활성화 마법사를 시작하기 전에 생성한 다음 마법사에서 해당 버킷을 선택할 수 있습니다.</block>
-  <block id="5ea0826986e3031f8bd8e643d1b37ce9" category="paragraph">고유한 버킷을 생성하는 경우 "NetApp-백업"의 버킷 이름을 사용해야 합니다.</block>
   <block id="b79f5207c4b1f2d320c8d5fe3eb33f63" category="paragraph">인스턴스의 보안 그룹에는 필요한 인바운드 및 아웃바운드 규칙, 특히 ICMP 및 포트 11104 및 11105에 대한 규칙이 포함되어야 합니다. 이러한 규칙은 미리 정의된 보안 그룹에 포함되어 있습니다.</block>
   <block id="e9926e61defd3a286477d3a785a7fd6a" category="paragraph">Cloud Volumes ONTAP 또는 온프레미스 시스템에 복제할 수 있으므로 사내 ONTAP 시스템의 피어링 요구사항을 검토할 수 있습니다.<block ref="f62b93c20d5bac3c11ab8a3b52ce12c9" category="inline-link-rx"></block>.</block>
   <block id="d39d5fd7cc5ced3c60a045dedddc0e68" category="inline-link-macro">보호할 각 볼륨에서 백업을 활성화합니다</block>
@@ -4311,7 +4303,6 @@ ifdef::AWS[]</block>
   <block id="bda2bf5fb0b6ef0e110cf67c341d2f58" category="paragraph">Azure 및 BlueXP의 라이센스 요구 사항을 확인해야 합니다.</block>
   <block id="219920185164037444cf297ee6db557a" category="section-title">Azure Blob 저장소 계정을 만듭니다</block>
   <block id="f7fd8d98e8242ad43571b2edbb91b9fc" category="paragraph">기본적으로 이 서비스는 스토리지 계정을 생성합니다. 고유한 스토리지 계정을 사용하려면 백업 활성화 마법사를 시작하기 전에 계정을 생성한 다음 마법사에서 해당 스토리지 계정을 선택합니다.</block>
-  <block id="83da16eb347a649074af6b8a1c3d92ae" category="paragraph">자체 스토리지 계정을 생성하는 경우 "NetApp-backup"의 스토리지 계정 이름을 사용해야 합니다.</block>
   <block id="1de16ec5bb8b26ffbf7189e724790630" category="paragraph">요약하면 ONTAP 작업 환경에서 볼륨에 대해 생성할 수 있는 유효한 보호 흐름은 다음과 같습니다.</block>
   <block id="62fab0bd5cf92ab36f27224d46c5f233" category="paragraph">팬아웃 * 아키텍처는 스냅샷 복사본을 대상 스토리지 시스템과 클라우드의 백업 개체 모두에 독립적으로 전송합니다.</block>
   <block id="f47293eaa2dd8607290525b210ac8d72" category="paragraph">계단식 * 아키텍처는 스냅샷 복사본을 대상 스토리지 시스템에 먼저 전송한 다음, 해당 시스템에서 복사본을 클라우드의 백업 개체로 전송합니다.</block>
@@ -4351,4 +4342,26 @@ ifdef::AWS[]</block>
   <block id="0746a14ab26f1c77013b1b74f69b0e83" category="list-text"><block ref="0746a14ab26f1c77013b1b74f69b0e83" category="inline-link-macro-rx"></block></block>
   <block id="7f2906feb9bed8771e4967ea2ed8b648" category="list-text"><block ref="7f2906feb9bed8771e4967ea2ed8b648" category="inline-link-macro-rx"></block></block>
   <block id="80288d2da91f9794088785363d31b6b5" category="list-text"><block ref="80288d2da91f9794088785363d31b6b5" category="inline-link-macro-rx"></block></block>
+  <block id="7b3832e95a7a86d887ed057a6b56114c" category="inline-link-macro">나만의 버킷을 만드는 방법에 대해 자세히 알아보세요</block>
+  <block id="594ef985d417f60832e167b7a55944ba" category="paragraph"><block ref="90242aed4d9e662a807d0696ac4bc7d5" category="inline-link-macro-rx"></block>.</block>
+  <block id="11a8a2e103fceba512eb133362ab467a" category="inline-link-macro">자체 스토리지 계정 생성에 대해 자세히 알아보십시오</block>
+  <block id="b1864ef3e1c982ea79e143744ce2e778" category="paragraph"><block ref="5168b6a061fd7575c70ed688cdecff09" category="inline-link-macro-rx"></block>.</block>
+  <block id="24c3f29f7b3c09228614448507eb27eb" category="paragraph">고유한 버킷을 생성하는 경우 "NetApp-backup"의 버킷 이름을 사용해야 합니다. 사용자 정의 이름을 사용해야 하는 경우 를 편집합니다<block ref="36f2cf0d90ddea374df0d9a8b6aa6300" prefix=" " category="inline-code"></block> 기존 CVO에 대한 IAMRole로 다음 목록을 S3 권한에 추가합니다. 을(를) 포함해야 합니다<block ref="a99022ed92fce54cbefc53cc3a7bb0a9" prefix=" " category="inline-code"></block> 버킷과 연결해야 하는 모든 필수 권한을 할당합니다.</block>
+  <block id="28543445b2c93df38084996ffc019a63" category="section-title">고유한 오브젝트 스토리지 컨테이너를 생성하시겠습니까</block>
+  <block id="44f63148cdcdb30b0f9a4cc99944e0cb" category="paragraph">작업 환경의 객체 스토리지에서 백업 파일을 생성할 때 기본적으로 백업 및 복구 서비스는 구성한 객체 스토리지 계정의 백업 파일에 대한 컨테이너(버킷 또는 스토리지 계정)를 생성합니다. AWS 또는 GCP 버킷의 이름은 기본적으로 "NetApp-backup-&lt;uuid&gt;"입니다. Azure Blob 스토리지 계정의 이름은 "netappbackup &lt;uuid&gt;"입니다.</block>
+  <block id="f108f3b7f4cf5d3e79e581222e60586a" category="paragraph">특정 접두사를 사용하거나 특수 속성을 할당하려면 개체 공급자 계정에서 직접 컨테이너를 만들 수 있습니다. 고유한 컨테이너를 만들려면 활성화 마법사를 시작하기 전에 컨테이너를 만들어야 합니다. 컨테이너는 ONTAP 볼륨 백업 파일을 저장하는 데만 사용해야 합니다. 다른 용도로는 사용할 수 없습니다. 백업 활성화 마법사는 선택한 계정 및 자격 증명에 대해 프로비저닝된 컨테이너를 자동으로 검색하여 사용할 컨테이너를 선택할 수 있도록 합니다.</block>
+  <block id="e7be09e6760b058dbc55a8f59678d720" category="paragraph">BlueXP 또는 클라우드 공급업체에서 버킷을 생성할 수 있습니다.</block>
+  <block id="fa607f821bebd63b2cbc202d7f3eabec" category="paragraph">* 참고: * 현재 StorageGRID 시스템에서 백업을 생성할 때 자체 S3 버킷을 사용할 수 없습니다.</block>
+  <block id="2c76e45b50bb40cc15881a2f246e3c52" category="paragraph">"NetApp-backup-xxxxxx"와 다른 버킷 접두사를 사용하려는 경우 Connector IAM Role의 S3 권한을 수정해야 합니다. 자세한 내용은 AWS S3에 백업 생성에 대한 항목을 참조하십시오.</block>
+  <block id="85786e7ce9ad7b76a9107e6fc8914215" category="section-title">고급 버킷 설정</block>
+  <block id="0cacb53d99c416f2596b0157ce4f280d" category="paragraph">이전 백업 파일을 아카이브 스토리지로 이동하거나 DataLock 및 랜섬웨어 보호를 활성화하여 백업 파일을 잠그고 랜섬웨어가 발생할 수 있는 가능성이 있는지 스캔하려는 경우 특정 구성 설정으로 컨테이너를 생성해야 합니다.</block>
+  <block id="82ca9ca8a32b3a5b525d7ba630040a08" category="list-text">현재 클러스터에서 ONTAP 9.10.1 이상의 소프트웨어를 사용하는 경우 사용자 고유의 버킷에 있는 아카이브 스토리지가 AWS S3 스토리지에서 지원됩니다. 기본적으로 백업은 S3_Standard_storage 클래스에서 시작됩니다. 적절한 수명 주기 규칙을 사용하여 버킷을 만들어야 합니다.</block>
+  <block id="3d7057c39307e6a609e1b9cdaa358d36" category="list-text">30일 후 버킷의 전체 범위에 있는 오브젝트를 S3_Standard-IA_로 이동합니다.</block>
+  <block id="2941442c0abac11ede27eaf951f43a66" category="list-text">"smc_push_to_archive: true" 태그를 사용하여 객체를 _Glacier Flexible Retrieval_(이전 S3 Glacier)로 이동합니다.</block>
+  <block id="5659d14ca79ef74b1e0df2b8ec78dfc0" category="list-text">DataLock 및 랜섬웨어 보호는 클러스터에서 ONTAP 9.11.1 이상의 소프트웨어를 사용하는 경우 AWS 스토리지에서, ONTAP 9.12.1 이상의 소프트웨어를 사용하는 경우 Azure 스토리지에서 지원됩니다.</block>
+  <block id="d1e78885195470cf33cb8f9291c0bba6" category="list-text">AWS의 경우 30일 보존 기간을 사용하여 버킷에서 오브젝트 잠금을 활성화해야 합니다.</block>
+  <block id="bc8f2392396da79157f4c431c6896bbc" category="list-text">Azure의 경우 버전 수준 불변성을 지원하여 스토리지 클래스를 생성해야 합니다.</block>
+  <block id="e2f760131280f3fd361a50b428c7b92d" category="section-title">오브젝트 스토리지로 백업할 스토리지 컨테이너를 생성하는 기능</block>
+  <block id="414c40dd827c6738286ee0b333e39456" category="inline-link">오브젝트 스토리지 버킷을 생성하는 방법을 알아보십시오</block>
+  <block id="debda728f2e9b255111b127aed9dc8fd" category="paragraph">오브젝트 스토리지에서 백업 파일을 생성할 때 기본적으로 백업 및 복구 서비스는 오브젝트 스토리지에 버킷을 생성합니다. 특정 이름을 사용하거나 특수 속성을 할당하려면 직접 버킷을 생성할 수 있습니다. 고유한 버킷을 생성하려면 활성화 마법사를 시작하기 전에 생성해야 합니다.<block ref="2d2a00fa0eeaa888f8c689ec67e16ffe" category="inline-link-rx"></block>.</block>
 </blocks>

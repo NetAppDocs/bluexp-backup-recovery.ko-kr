@@ -329,6 +329,8 @@ storage.objects.update
 
 기본적으로 이 서비스는 사용자를 위해 버킷을 생성합니다. 또는 고유한 버킷을 사용하려는 경우 백업 활성화 마법사를 시작하기 전에 생성한 다음 마법사에서 해당 버킷을 선택할 수 있습니다.
 
+link:concept-protection-journey.html#do-you-want-to-create-your-own-object-storage-container["나만의 버킷을 만드는 방법에 대해 자세히 알아보세요"^].
+
 
 
 === 데이터 암호화를 위해 CMEK(Customer-Managed Encryption Key)를 설정합니다
