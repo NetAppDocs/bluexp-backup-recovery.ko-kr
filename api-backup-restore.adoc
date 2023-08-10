@@ -97,8 +97,6 @@ Header:
 
 다음 예에서는 Azure 클라우드의 East-US-2 영역에서 일일, 시간별, 주별 레이블이 설정된 새 정책이 적용된 작업 환경에서 BlueXP 백업 및 복구를 활성화하는 API 호출을 보여 줍니다. 이렇게 하면 작업 환경에서만 백업할 수 있지만 볼륨은 백업되지 않습니다.
 
-"자동 백업 사용":"참"을 선택하면 시스템에 이미 있는 모든 볼륨이 백업되고 이후 볼륨도 백업됩니다.
-
 .API 요청
 BlueXP 계정 ID를 사용하는 것을 확인할 수 있습니다 `account-DpTFcxN3`, BlueXP 커넥터 ID `iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients`, 및 사용자 토큰 `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rSXlPVFUzUWpZek1E…y6nyhBjwkeMwHc4ValobjUmju2x0xUH48g` 명령을 입력합니다.
 

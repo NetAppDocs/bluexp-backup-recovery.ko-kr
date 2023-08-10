@@ -66,6 +66,8 @@ sidebar:
       url: "/task-backup-onprem-to-gcp.html"
     - title: 사내 ONTAP를 StorageGRID로 백업합니다
       url: "/task-backup-onprem-private-cloud.html"
+    - title: 온프레미스 ONTAP를 ONTAP S3에 백업합니다
+      url: "/task-backup-onprem-to-ontap-s3.html"
     - title: ONTAP 백업을 관리합니다
       url: "/task-manage-backups-ontap.html"
     - title: ONTAP 백업에서 복원합니다
@@ -257,6 +259,8 @@ homepage:
       flavor: gcp
     - title: 사내 ONTAP에서 StorageGRID로
       url: task-backup-onprem-private-cloud.html
+    - title: 온프레미스 ONTAP에서 ONTAP S3로 마이그레이션
+      url: task-backup-onprem-to-ontap-s3.html
   - title: ONTAP 백업 파일을 관리합니다
     links:
     - title: 추가 볼륨에서 볼륨 백업을 사용하도록 설정합니다
@@ -342,6 +346,8 @@ homepage:
       url: https://bluexp.netapp.com/blog/topic/cloud-backup
     - title: BlueXP 백업 및 복구 활용 사례
       url: https://bluexp.netapp.com/cloud-backup
+    - title: BlueXP 백업 및 복구 비디오
+      url: https://youtube.com/playlist?list=PLdXI3bZJEw7modoLQEVUHoQ8DJyVk_1wU
     - title: BlueXP 웨비나
       url: https://bluexp.netapp.com/events
 product-family:

@@ -1,0 +1,440 @@
+---
+sidebar: sidebar 
+permalink: task-backup-onprem-to-ontap-s3.html 
+keywords: backing up, back up, backup, backup on-prem ontap, on-prem, on-premises, back up volumes, cloud backup, ontap s3 
+summary: '기본 온프레미스 ONTAP 시스템에서 볼륨 데이터의 백업을 시작하려면 몇 단계를 완료하십시오. 보조 ONTAP 스토리지 시스템(복제된 볼륨) 또는 S3 서버(백업 파일) 또는 이 둘 다로 구성된 ONTAP 시스템의 버킷 또는 둘 다로 백업을 전송할 수 있습니다.' 
+---
+= 온프레미스 ONTAP 데이터를 ONTAP S3에 백업합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+기본 온프레미스 ONTAP 시스템에서 볼륨 데이터의 백업을 시작하려면 몇 단계를 완료하십시오. 보조 ONTAP 스토리지 시스템(복제된 볼륨) 또는 S3 서버(백업 파일) 또는 이 둘 다로 구성된 ONTAP 시스템의 버킷 또는 둘 다로 백업을 전송할 수 있습니다.
+
+운영 온프레미스 ONTAP 시스템은 FAS, AFF 또는 ONTAP Select 시스템일 수 있습니다. 2차 ONTAP 시스템은 온프레미스 ONTAP 또는 Cloud Volumes ONTAP 시스템이 될 수 있습니다. 오브젝트 스토리지는 온프레미스 ONTAP 시스템 또는 S3(Simple Storage Service) 오브젝트 스토리지 서버를 활성화한 Cloud Volumes ONTAP 시스템에 있을 수 있습니다.
+
+
+
+== 빠른 시작
+
+다음 단계를 수행하여 빠르게 시작하십시오. 각 단계에 대한 자세한 내용은 이 항목의 다음 섹션을 참조하십시오.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1개"] 사용할 연결 방법을 식별합니다
+[role="quick-margin-para"]
+기본 온프레미스 ONTAP 클러스터를 복제를 위해 보조 ONTAP 클러스터에 연결하고, 오브젝트 스토리지에 백업하기 위해 S3 서버로 구성된 ONTAP 클러스터에 연결하는 방법을 검토합니다.
+
+[role="quick-margin-para"]
+<<연결 방법을 식별합니다,연결 방법을 식별합니다.>>
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] BlueXP 커넥터를 준비합니다
+[role="quick-margin-para"]
+BlueXP Connector를 이미 구축한 경우에는 모든 준비가 된 것입니다. 그렇지 않은 경우 ONTAP 데이터를 ONTAP S3에 백업하기 위해 BlueXP Connector를 생성해야 합니다. ONTAP S3에 연결할 수 있도록 커넥터의 네트워크 설정도 사용자 지정해야 합니다.
+
+[role="quick-margin-para"]
+<<BlueXP 커넥터를 준비합니다,Connector를 생성하는 방법과 필요한 네트워크 설정을 정의하는 방법에 대해 알아봅니다.>>
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["세 가지"] 라이센스 요구 사항을 확인합니다
+[role="quick-margin-para"]
+ONTAP 시스템과 BlueXP 백업 및 복구에 대한 라이센스 요구사항을 확인해야 합니다.
+
+[role="quick-margin-para"]
+<<라이센스 요구 사항을 확인합니다,라이센스 요구 사항을 확인합니다.>>
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"] ONTAP 클러스터를 준비합니다
+[role="quick-margin-para"]
+BlueXP에서 운영 및 2차 ONTAP 클러스터를 검색하고, 클러스터가 최소 요구사항을 충족하는지 확인하고, 클러스터가 ONTAP S3 오브젝트 스토리지에 연결될 수 있도록 네트워크 설정을 사용자 지정합니다.
+
+[role="quick-margin-para"]
+<<ONTAP 클러스터를 준비합니다,ONTAP 클러스터를 준비하는 방법에 대해 알아보십시오.>>
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["다섯"] ONTAP S3를 백업 타겟으로 준비합니다
+[role="quick-margin-para"]
+ONTAP S3 버킷을 관리할 수 있도록 커넥터에 대한 권한을 설정합니다. 또한 소스 온-프레미스 ONTAP 클러스터에 대한 권한을 설정하여 ONTAP S3 버킷에 데이터를 읽고 쓸 수 있도록 해야 합니다.
+
+[role="quick-margin-para"]
+<<ONTAP S3를 백업 타겟으로 준비합니다,ONTAP S3 환경에서 ONTAP 백업을 받을 수 있는 준비를 하는 방법에 대해 알아보십시오.>>
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["6개"] ONTAP 볼륨에서 백업을 활성화합니다
+[role="quick-margin-para"]
+기본 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * Enable > Backup Volumes * 를 클릭합니다. 그런 다음 설정 마법사에 따라 백업할 볼륨 및 사용할 스냅샷, 복제, 오브젝트에 대한 백업 정책을 선택합니다.
+
+[role="quick-margin-para"]
+<<ONTAP 볼륨에서 백업을 활성화합니다,ONTAP 볼륨에 대한 백업을 활성화합니다.>>
+
+
+
+== 연결 방법을 식별합니다
+
+ONTAP 시스템의 S3 버킷에 대한 백업을 생성할 수 있는 구성은 다양합니다. 아래에 두 가지 시나리오가 나와 있습니다.
+
+다음 이미지는 S3용으로 구성된 온프레미스 ONTAP 시스템의 운영 시스템과 이들 간에 준비해야 하는 연결을 통해 온프레미스 ONTAP 시스템에 백업할 때의 각 구성 요소를 보여줍니다. 또한, 볼륨을 복제하기 위한 동일한 온프레미스 위치에 있는 보조 ONTAP 시스템에 대한 연결을 보여줍니다.
+
+image:diagram_cloud_backup_onprem_ontap_s3.png["BlueXP 백업 및 복구가 백업 파일이 있는 소스 시스템 및 대상 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다."]
+
+커넥터 및 기본 온-프레미스 ONTAP 시스템이 인터넷 액세스 없이 온-프레미스 위치("전용" 모드 구축)에 설치된 경우 ONTAP S3 시스템은 동일한 온-프레미스 데이터 센터에 있어야 합니다.
+
+다음 이미지는 S3용으로 구성된 Cloud Volumes ONTAP 시스템으로 운영 온프레미스 ONTAP 시스템을 백업할 때의 각 구성 요소와 이러한 구성 요소 간에 준비해야 하는 연결을 보여줍니다. 또한 동일한 클라우드 공급자 환경에서 보조 Cloud Volumes ONTAP 시스템에 대한 연결을 표시하여 볼륨을 복제합니다.
+
+image:diagram_cloud_backup_onprem_ontap_s3_cloud.png["BlueXP 백업 및 복구가 백업 파일이 있는 소스 시스템 및 대상 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다."]
+
+이 시나리오에서는 Cloud Volumes ONTAP 시스템이 구축된 동일한 클라우드 공급자 환경에 커넥터를 배포해야 합니다.
+
+
+
+== BlueXP 커넥터를 준비합니다
+
+BlueXP 커넥터는 BlueXP 기능을 위한 주요 소프트웨어입니다. ONTAP 데이터를 백업하고 복원하려면 커넥터가 필요합니다.
+
+
+
+=== 커넥터를 작성하거나 전환합니다
+
+데이터를 ONTAP S3에 백업하는 경우 온프레미스 또는 클라우드에서 BlueXP Connector를 사용할 수 있어야 합니다. 새 커넥터를 설치하거나 현재 선택한 커넥터가 이 위치 중 하나에 있는지 확인해야 합니다. 온-프레미스 커넥터는 인터넷 액세스 여부에 관계없이 사이트에 설치할 수 있습니다.
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["커넥터에 대해 자세히 알아보십시오"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#how-to-create-a-connector["클라우드 환경에 Connector를 설치합니다"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["인터넷에 액세스할 수 있는 Linux 호스트에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["인터넷에 액세스하지 않고 Linux 호스트에 커넥터 설치"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html["커넥터 간 전환"^]
+
+
+
+
+=== 커넥터 네트워킹 요구 사항을 준비합니다
+
+커넥터가 설치된 네트워크에서 다음 연결을 사용할 수 있는지 확인합니다.
+
+* 포트 443을 통해 ONTAP S3 서버에 대한 HTTPS 연결
+* 포트 443을 통해 소스 ONTAP 클러스터 관리 LIF에 HTTPS 연결
+* 포트 443을 통해 BlueXP 백업 및 복구에 대한 아웃바운드 인터넷 연결(커넥터가 "어두운" 사이트에 설치된 경우 필요하지 않음)
+
+
+
+
+==== 비공개 모드(어두운 사이트) 고려 사항
+
+BlueXP 백업 및 복구 기능은 BlueXP 커넥터에 내장되어 있습니다. 비공개 모드로 설치된 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 link:whats-new.html["BlueXP 백업 및 복구 새로운 기능"] 각 BlueXP 백업 및 복구 릴리스의 새로운 기능을 보려면 새 기능을 사용하려면 의 단계를 따릅니다 https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode["Connector 소프트웨어를 업그레이드합니다"^].
+
+표준 SaaS 환경에서 BlueXP 백업 및 복구를 사용하는 경우 BlueXP 백업 및 복구 구성 데이터가 클라우드에 백업됩니다. 인터넷에 액세스할 수 없는 사이트에서 BlueXP 백업 및 복구를 사용하는 경우 BlueXP 백업 및 복구 구성 데이터가 백업이 저장되는 ONTAP S3 버킷에 백업됩니다. 비공개 모드 사이트에서 커넥터 오류가 발생한 경우 를 사용할 수 있습니다 link:reference-backup-cbs-db-in-dark-site.html["BlueXP 백업 및 복구 데이터를 새 커넥터로 복원합니다"^].
+
+
+
+== 라이센스 요구 사항을 확인합니다
+
+클러스터에 대한 BlueXP 백업 및 복구를 활성화하려면 먼저 NetApp에서 BYOL 백업 및 복구 라이센스를 구입하여 활성화해야 합니다. 오브젝트 스토리지로 백업 및 복원할 수 있는 라이센스입니다. 스냅샷 복사본 또는 복제된 볼륨을 생성하는 데 라이센스가 필요하지 않습니다. 이 라이센스는 계정에 사용되며 여러 시스템에서 사용할 수 있습니다.
+
+라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 NetApp의 일련 번호가 필요합니다. link:task-licensing-cloud-backup.html#use-a-bluexp-backup-and-recovery-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"].
+
+
+TIP: ONTAP S3에 파일을 백업할 때는 PAYGO 라이센스가 지원되지 않습니다.
+
+
+
+== ONTAP 클러스터를 준비합니다
+
+소스 사내 ONTAP 시스템과 보조 온프레미스 ONTAP 또는 Cloud Volumes ONTAP 시스템을 준비해야 합니다.
+
+ONTAP 클러스터를 준비하려면 다음 단계를 수행해야 합니다.
+
+* BlueXP에서 ONTAP 시스템을 검색합니다
+* ONTAP 시스템 요구 사항을 확인합니다
+* 오브젝트 스토리지에 데이터를 백업하기 위한 ONTAP 네트워킹 요구 사항을 확인합니다
+* 볼륨 복제에 대한 ONTAP 네트워킹 요구 사항을 확인합니다
+
+
+
+
+=== BlueXP에서 ONTAP 시스템을 검색합니다
+
+BlueXP Canvas에서 소스 온-프레미스 ONTAP 시스템과 보조 온-프레미스 ONTAP 또는 Cloud Volumes ONTAP 시스템을 모두 사용할 수 있어야 합니다.
+
+클러스터를 추가하려면 클러스터 관리 IP 주소와 admin 사용자 계정의 암호를 알아야 합니다.
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["클러스터를 검색하는 방법에 대해 알아보십시오"^].
+
+
+
+=== ONTAP 시스템 요구 사항을 확인합니다
+
+다음 ONTAP 요구 사항이 충족되는지 확인합니다.
+
+* 최소 ONTAP 9.8, ONTAP 9.8P13 이상이 권장됩니다.
+* SnapMirror 라이센스(프리미엄 번들 또는 데이터 보호 번들의 일부로 포함)
++
+* 참고: * BlueXP 백업 및 복구를 사용할 때는 "하이브리드 클라우드 번들"이 필요하지 않습니다.
+
++
+자세한 내용을 알아보십시오 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["클러스터 라이센스를 관리합니다"^].
+
+* 시간 및 시간대가 올바르게 설정되었습니다. 자세한 내용을 알아보십시오 https://docs.netapp.com/us-en/ontap/system-admin/manage-cluster-time-concept.html["클러스터 시간을 구성합니다"^].
+* 데이터를 복제하려는 경우 데이터를 복제하기 전에 소스 및 대상 시스템에서 호환되는 ONTAP 버전이 실행되고 있는지 확인해야 합니다.
++
+https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["SnapMirror 관계에 대한 호환되는 ONTAP 버전을 봅니다"^].
+
+
+
+
+
+=== 오브젝트 스토리지에 데이터를 백업하기 위한 ONTAP 네트워킹 요구 사항을 확인합니다
+
+객체 스토리지에 접속하는 시스템에서 다음 요구 사항을 충족해야 합니다.
+
+[NOTE]
+====
+* 팬아웃 백업 아키텍처를 사용하는 경우 _PRIMARY_STORAGE 시스템에 설정을 구성해야 합니다.
+* 다중 구간 백업 아키텍처를 사용하는 경우 _secondary_storage 시스템에서 설정을 구성해야 합니다.
++
+link:concept-protection-journey.html#which-backup-architecture-will-you-use["백업 아키텍처 유형에 대해 자세히 알아보십시오"^].
+
+
+
+====
+다음 ONTAP 클러스터 네트워킹 요구사항이 필요합니다.
+
+* ONTAP 클러스터는 백업 및 복원 작업을 위해 사용자 지정 포트를 인터클러스터 LIF에서 ONTAP S3 서버로의 HTTPS 연결을 시작합니다. 백업 설정 중에 포트를 구성할 수 있습니다.
++
+ONTAP는 오브젝트 스토리지 간에 데이터를 읽고 씁니다. 오브젝트 스토리지는 한 번도 시작되고, 응답 하기만 합니다.
+
+* ONTAP를 사용하려면 Connector에서 클러스터 관리 LIF로 인바운드 연결이 필요합니다.
+* 인터클러스터 LIF는 백업할 볼륨을 호스팅하는 각 ONTAP 노드에 필요합니다. LIF는 ONTAP가 오브젝트 스토리지에 연결하는 데 사용해야 하는 _IPspace_와 연결되어 있어야 합니다. https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspace에 대해 자세히 알아보십시오"^].
++
+BlueXP 백업 및 복구를 설정할 때 사용할 IPspace를 묻는 메시지가 표시됩니다. 각 LIF가 연결되는 IPspace를 선택해야 합니다. 이는 여러분이 생성한 "기본" IPspace 또는 사용자 지정 IPspace가 될 수 있습니다.
+
+* 노드의 인터클러스터 LIF는 오브젝트 저장소에 액세스할 수 있습니다(Connector가 "어두운" 사이트에 설치된 경우 필요하지 않음).
+* 볼륨이 있는 스토리지 VM에 대해 DNS 서버가 구성되었습니다. 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["SVM을 위한 DNS 서비스 구성"^].
+* 를 사용하는 경우 기본값이 아닌 다른 IPspace를 사용하는 경우 개체 저장소에 대한 액세스를 얻기 위해 정적 라우트를 생성해야 할 수 있습니다.
+* 필요한 경우 방화벽 규칙을 업데이트하여 ONTAP에서 지정한 포트(일반적으로 포트 443)를 통해 객체 스토리지로 BlueXP 백업 및 복구 서비스 연결을 허용하고 포트 53(TCP/UDP)을 통해 스토리지 VM에서 DNS 서버로 이름 확인 트래픽을 허용합니다.
+
+
+
+
+=== 볼륨 복제에 대한 ONTAP 네트워킹 요구 사항을 확인합니다
+
+BlueXP 백업 및 복구에서 백업을 활성화하기 전에 소스 및 대상 시스템이 다음과 같은 네트워킹 요구사항을 충족하는지 확인하십시오.
+
+
+
+==== Cloud Volumes ONTAP 네트워킹 요구 사항
+
+인스턴스의 보안 그룹에는 필요한 인바운드 및 아웃바운드 규칙, 특히 ICMP 및 포트 11104 및 11105에 대한 규칙이 포함되어야 합니다. 이러한 규칙은 미리 정의된 보안 그룹에 포함되어 있습니다.
+
+
+
+==== 사내 ONTAP 네트워킹 요구사항
+
+* 클러스터가 사내에 있는 경우 회사 네트워크와 클라우드 공급자의 가상 네트워크에 연결되어 있어야 합니다. 일반적으로 VPN 연결입니다.
+* ONTAP 클러스터는 추가 서브넷, 포트, 방화벽 및 클러스터 요구사항을 충족해야 합니다.
++
+Cloud Volumes ONTAP 또는 온프레미스 시스템에 복제할 수 있으므로 사내 ONTAP 시스템의 피어링 요구사항을 검토할 수 있습니다. https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["ONTAP 설명서에서 클러스터 피어링을 위한 사전 요구 사항을 확인하십시오"^].
+
+
+
+
+
+== ONTAP S3를 백업 타겟으로 준비합니다
+
+오브젝트 스토리지 백업에 사용할 ONTAP 클러스터에서 S3(Simple Storage Service) 오브젝트 스토리지 서버를 활성화해야 합니다. 를 참조하십시오 https://docs.netapp.com/us-en/ontap/s3-config/index.html["ONTAP S3 설명서"^] 를 참조하십시오.
+
+* 참고: * 이 클러스터를 BlueXP Canvas로 검색할 수 있지만 S3 오브젝트 스토리지 서버로 식별되지 않으며, 소스 작업 환경을 이 S3 작업 환경으로 끌어다 놓아 백업 활성화를 시작할 수 없습니다.
+
+이 ONTAP 시스템은 다음 요구 사항을 충족해야 합니다.
+
+지원되는 ONTAP 버전:: 온프레미스 ONTAP 시스템을 사용하려면 ONTAP 9.8 이상이 필요합니다.
+Cloud Volumes ONTAP 시스템에는 ONTAP 9.9.1 이상이 필요합니다.
+S3 자격 증명:: ONTAP S3 스토리지에 대한 액세스를 제어하려면 S3 사용자를 생성해야 합니다. https://docs.netapp.com/us-en/ontap/s3-config/create-s3-user-task.html["자세한 내용은 ONTAP S3 문서를 참조하십시오"^].
++
+--
+ONTAP S3에 대한 백업을 설정하면 백업 마법사에서 사용자 계정에 대한 S3 액세스 키와 비밀 키를 입력하라는 메시지를 표시합니다. 사용자 계정을 사용하면 BlueXP 백업 및 복구를 통해 백업을 저장하는 데 사용되는 ONTAP S3 버킷을 인증하고 액세스할 수 있습니다. 키는 ONTAP S3에서 요청을 보낸 사람을 인식하기 위해 필요합니다.
+
+이러한 액세스 키는 다음 권한을 가진 사용자와 연결되어야 합니다.
+
+[source, json]
+----
+"s3:ListAllMyBuckets",
+"s3:ListBucket",
+"s3:GetObject",
+"s3:PutObject",
+"s3:DeleteObject",
+"s3:CreateBucket"
+----
+--
+
+
+
+
+== ONTAP 볼륨에서 백업을 활성화합니다
+
+사내 작업 환경에서 언제든지 직접 백업을 활성화할 수 있습니다.
+
+마법사는 다음과 같은 주요 단계를 안내합니다.
+
+* 백업할 볼륨을 선택합니다
+* 백업 전략 및 정책 정의
+* 선택 사항을 검토합니다
+
+
+또한 가능합니다 <<API 명령을 표시합니다>> 검토 단계에서 코드를 복사하여 향후 작업 환경에 대한 백업 활성화를 자동화할 수 있습니다.
+
+
+
+=== 마법사를 시작합니다
+
+.단계
+. 다음 방법 중 하나를 사용하여 백업 및 복구 활성화 마법사에 액세스합니다.
++
+** BlueXP 캔버스에서 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 > 볼륨 백업 * 을 선택합니다.
+** 백업 및 복구 표시줄에서 * 볼륨 * 을 선택합니다. 볼륨 탭에서 * 작업(...) * 옵션을 선택하고 단일 볼륨에 대해 * 백업 활성화 * 를 선택합니다(복제 또는 객체 스토리지에 대한 백업이 아직 활성화되지 않음).
+
+
++
+마법사의 소개 페이지에는 로컬 스냅샷, 복제 및 백업을 포함한 보호 옵션이 표시됩니다. 이 단계에서 두 번째 옵션을 사용한 경우 하나의 볼륨이 선택된 상태로 백업 전략 정의 페이지가 나타납니다.
+
+. 다음 옵션을 계속합니다.
++
+** BlueXP Connector가 이미 있는 경우 모든 설정이 완료된 것입니다. 다음 * 을 선택하기만 하면 됩니다.
+** BlueXP Connector가 없는 경우 * Add a Connector * 옵션이 나타납니다. 을 참조하십시오 <<BlueXP 커넥터를 준비합니다>>.
+
+
+
+
+
+
+=== 백업할 볼륨을 선택합니다
+
+보호할 볼륨을 선택합니다. 보호된 볼륨은 스냅샷 정책, 복제 정책, 개체 백업 정책 중 하나 이상이 있는 볼륨입니다.
+
+FlexVol 또는 FlexGroup 볼륨을 보호하도록 선택할 수 있지만 작업 환경에 대한 백업을 활성화할 때는 이러한 볼륨을 혼합하여 선택할 수 없습니다. 자세한 내용은 를 참조하십시오 link:task-manage-backups-ontap.html#activate-backup-on-additional-volumes-in-a-working-environment["작업 환경에서 추가 볼륨에 대한 백업을 활성화합니다"] (FlexVol 또는 FlexGroup)를 선택합니다.
+
+[NOTE]
+====
+* 한 번에 하나의 FlexGroup 볼륨에서만 백업을 활성화할 수 있습니다.
+* 선택한 볼륨의 SnapLock 설정은 동일해야 합니다. 모든 볼륨에 SnapLock Enterprise가 활성화되어 있거나 SnapLock가 비활성화되어 있어야 합니다. (SnapLock 준수 모드가 있는 볼륨은 현재 지원되지 않습니다.)
+
+
+====
+.단계
+선택한 볼륨에 이미 스냅샷 또는 복제 정책이 적용된 경우 나중에 선택한 정책이 이러한 기존 정책을 덮어쓰게 됩니다.
+
+. 볼륨 선택 페이지에서 보호할 볼륨을 선택합니다.
++
+** 선택적으로 특정 볼륨 유형, 스타일 등의 볼륨만 표시하도록 행을 필터링하여 선택을 쉽게 할 수 있습니다.
+** 첫 번째 볼륨을 선택한 후 모든 FlexVol 볼륨을 선택할 수 있습니다(FlexGroup 볼륨은 한 번에 하나씩 선택할 수 있음). 기존 FlexVol 볼륨을 모두 백업하려면 먼저 볼륨 하나를 선택한 다음 제목 행의 확인란을 선택합니다. (image:button_backup_all_volumes.png[""])를 클릭합니다.
+** 개별 볼륨을 백업하려면 각 볼륨에 대한 확인란을 선택합니다(image:button_backup_1_volume.png[""])를 클릭합니다.
+
+
+. 다음 * 을 선택합니다.
+
+
+
+
+=== 백업 전략을 정의합니다
+
+백업 전략을 정의하려면 다음 옵션을 구성해야 합니다.
+
+* 보호 옵션: 로컬 스냅샷, 복제 및 객체 스토리지로의 백업 옵션 중 하나 또는 모든 백업 옵션을 구현할지 여부
+* 아키텍처: 팬아웃 또는 캐스케이딩 백업 아키텍처 사용 여부
+* 로컬 스냅샷 정책
+* 복제 타겟 및 정책입니다
+* 오브젝트 스토리지 정보(공급자, 암호화, 네트워킹, 백업 정책 및 엑스포트 옵션)에 백업
+
+
+.단계
+. 백업 전략 정의 페이지에서 다음 중 하나 또는 모두를 선택합니다. 기본적으로 세 가지가 모두 선택됩니다.
++
+** * 로컬 스냅샷 *: 로컬 스냅샷 복사본을 생성합니다.
+** * 복제 *: 다른 ONTAP 스토리지 시스템에 복제된 볼륨을 생성합니다.
+** * 백업 *: S3용으로 구성된 ONTAP 시스템의 버킷에 볼륨을 백업합니다.
+
+
+. * 아키텍처 *: 복제 및 백업을 모두 선택한 경우 다음 정보 흐름 중 하나를 선택합니다.
++
+** * Cascading *: 백업 데이터는 운영 시스템에서 보조 시스템으로 이동한 다음 보조 시스템에서 객체 스토리지로 전송됩니다.
+** * Fan Out *: 백업 데이터는 운영 시스템에서 보조 시스템으로, 그리고 _ 운영 시스템에서 객체 스토리지로 전송됩니다.
++
+이러한 아키텍처에 대한 자세한 내용은 을 참조하십시오 link:concept-protection-journey.html#which-backup-architecture-will-you-use["보호 여정을 계획하십시오"].
+
+
+
+. * 로컬 스냅샷 *: 기존 스냅샷 정책을 선택합니다.
++
+
+TIP: 사용자 지정 정책을 만들려면 System Manager 또는 ONTAP CLI를 사용합니다 `snapmirror policy create` 명령. 을 참조하십시오.
+
+. * 복제 *: * 복제 * 를 선택한 경우 다음 옵션을 설정합니다.
++
+** * 복제 타겟 *: 대상 작업 환경과 SVM을 선택합니다. 선택적으로 대상 애그리게이트(또는 FlexGroup 볼륨의 애그리게이트)와 복제된 볼륨 이름에 추가할 접두사 또는 접미사를 선택합니다.
+** * 복제 정책 *: 기존 복제 정책을 선택합니다.
+
+
+. * 백업 대상 *: * 백업 * 을 선택한 경우 다음 옵션을 설정합니다.
++
+** * 공급자 *: * ONTAP S3 * 를 선택합니다.
+** * 공급자 설정 *: S3 서버 FQDN 세부 정보, 포트 및 사용자의 액세스 키와 비밀 키를 입력합니다.
++
+액세스 키와 암호 키는 ONTAP 클러스터에서 S3 버킷에 액세스할 수 있도록 하기 위해 생성한 사용자를 위한 것입니다.
+
+** * 네트워킹 *: 백업할 볼륨이 상주하는 소스 ONTAP 클러스터에서 IPspace를 선택합니다. 이 IPspace용 인터클러스터 LIF는 아웃바운드 인터넷 액세스를 가져야 합니다( 커넥터가 "어두운" 사이트에 설치된 경우 필요하지 않음).
++
+
+TIP: 올바른 IPspace를 선택하면 BlueXP 백업 및 복구 기능을 통해 ONTAP에서 ONTAP S3 오브젝트 스토리지로의 연결을 설정할 수 있습니다.
+
+** * 백업 정책 *: 기존 백업 정책을 선택합니다.
++
+
+TIP: 사용자 지정 정책을 만들려면 System Manager 또는 ONTAP CLI를 사용합니다 `snapmirror policy create` 명령. 을 참조하십시오.
+
+
+
++
+** * 기존 스냅샷 복사본을 객체 스토리지에 백업 파일로 내보내기 *: 이 작업 환경에서 방금 선택한 백업 스케줄 레이블과 일치하는 볼륨에 대한 로컬 스냅샷 복사본이 있는 경우(예: 매일, 매주 등) 이 추가 프롬프트가 표시됩니다. 볼륨에 대한 완벽한 보호를 보장하기 위해 모든 기록 스냅샷이 객체 스토리지에 백업 파일로 복제되도록 하려면 이 확인란을 선택합니다.
+
+
+. 다음 * 을 선택합니다.
+
+
+
+
+=== 선택 사항을 검토합니다
+
+이 기회를 통해 선택 사항을 검토하고 필요한 경우 조정할 수 있습니다.
+
+.단계
+. 검토 페이지에서 선택 항목을 검토합니다.
+. 필요에 따라 스냅샷 정책 레이블을 복제 및 백업 정책 레이블과 자동으로 동기화 * 확인란을 선택합니다. 이렇게 하면 복제 및 백업 정책의 레이블과 일치하는 레이블이 있는 스냅샷이 생성됩니다. 정책이 일치하지 않으면 백업이 생성되지 않습니다.
+. 백업 활성화 * 를 선택합니다.
+
+
+.결과
+BlueXP 백업 및 복구는 볼륨의 초기 백업을 수행하기 시작합니다. 복제된 볼륨 및 백업 파일의 기본 전송에는 소스 데이터의 전체 복사본이 포함됩니다. 후속 전송에는 스냅샷 복사본에 포함된 운영 스토리지 데이터의 차등 복사본이 포함됩니다.
+
+복제된 볼륨이 대상 클러스터에 생성되며, 이 볼륨은 기본 스토리지 볼륨과 동기화됩니다.
+
+S3 버킷은 입력한 S3 액세스 키와 비밀 키로 표시된 서비스 계정에 생성되고 백업 파일이 여기에 저장됩니다.
+
+백업 상태를 모니터링할 수 있도록 볼륨 백업 대시보드가 표시됩니다.
+
+을 사용하여 백업 및 복원 작업의 상태를 모니터링할 수도 있습니다 link:task-monitor-backup-jobs.html["작업 모니터링 패널"^].
+
+
+
+=== API 명령을 표시합니다
+
+백업 및 복구 활성화 마법사에서 사용되는 API 명령을 표시하고 선택적으로 복사할 수 있습니다. 향후 작업 환경에서 백업 활성화를 자동화하기 위해 이 작업을 수행할 수 있습니다.
+
+.단계
+. 백업 및 복구 활성화 마법사에서 * API 요청 보기 * 를 선택합니다.
+. 명령을 클립보드로 복사하려면 * 복사 * 아이콘을 선택합니다.
+
+
+
+
+== 다음 단계
+
+* 가능합니다 link:task-manage-backups-ontap.html["백업 파일 및 백업 정책을 관리합니다"^]. 여기에는 백업 시작 및 중지, 백업 삭제, 백업 스케줄 추가 및 변경 등이 포함됩니다.
+* 가능합니다 link:task-manage-backup-settings-ontap.html["클러스터 레벨 백업 설정을 관리합니다"^]. 여기에는 백업을 객체 저장소에 업로드하는 데 사용할 수 있는 네트워크 대역폭 변경, 이후 볼륨에 대한 자동 백업 설정 변경 등이 포함됩니다.
+* 또한 가능합니다 link:task-restore-backups-ontap.html["백업 파일에서 볼륨, 폴더 또는 개별 파일을 복원합니다"^] 사내 ONTAP 시스템으로.
+

@@ -201,12 +201,12 @@ NOTE: 클라우드 간 관계를 백업하는 데는 볼트 정책만 사용할 
 
 BlueXP 또는 클라우드 공급업체에서 버킷을 생성할 수 있습니다.
 
-* https://docs.netapp.com/us-en/bluexp-s3-storage/task-add-s3-bucket.html["BlueXP에서 S3 버킷을 생성합니다"]
+* https://docs.netapp.com/us-en/bluexp-s3-storage/task-add-s3-bucket.html["BlueXP에서 Amazon S3 버킷을 생성합니다"]
 * https://docs.netapp.com/us-en/bluexp-blob-storage/task-add-blob-storage.html["BlueXP에서 Azure Blob 저장소 계정을 만듭니다"]
 * https://docs.netapp.com/us-en/bluexp-google-cloud-storage/task-add-gcp-bucket.html["BlueXP에서 Google Cloud Storage 버킷을 생성합니다"]
 
 
-* 참고: * 현재 StorageGRID 시스템에서 백업을 생성할 때 자체 S3 버킷을 사용할 수 없습니다.
+* 참고: * 현재 StorageGRID 시스템 또는 ONTAP S3에 백업을 생성할 때 자신의 S3 버킷을 사용할 수 없습니다.
 
 "NetApp-backup-xxxxxx"와 다른 버킷 접두사를 사용하려는 경우 Connector IAM Role의 S3 권한을 수정해야 합니다. 자세한 내용은 AWS S3에 백업 생성에 대한 항목을 참조하십시오.
 
@@ -274,6 +274,7 @@ ifdef::gcp[]
 endif::gcp[]
 
 * link:task-backup-onprem-private-cloud.html["사내 ONTAP 데이터를 StorageGRID에 백업합니다"]
+* link:task-backup-onprem-to-ontap-s3.html["온프레미스 ONTAP를 ONTAP S3에 백업합니다"]
 
 
 
@@ -302,7 +303,8 @@ endif::azure[]
 
 BlueXP 백업 및 복구는 인터넷 연결이 없는 사이트("비공개 모드" 또는 "다크" 사이트라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 경우 동일한 사이트의 Linux 호스트에 BlueXP 커넥터를 배포해야 합니다.
 
-* 로컬 사내 ONTAP 시스템에서 로컬 NetApp StorageGRID 시스템으로 데이터를 백업할 수 있습니다. 자세한 내용은 를 참조하십시오  link:task-backup-onprem-private-cloud.html["사내 ONTAP 데이터를 StorageGRID에 백업합니다"] 를 참조하십시오.
+* 로컬 사내 ONTAP 시스템에서 로컬 NetApp StorageGRID 시스템으로 데이터를 백업할 수 있습니다. 자세한 내용은 를 참조하십시오 link:task-backup-onprem-private-cloud.html["사내 ONTAP 데이터를 StorageGRID에 백업합니다"] 를 참조하십시오.
+* 로컬 온프레미스 ONTAP 시스템의 데이터를 S3 오브젝트 스토리지용으로 구성된 로컬 온프레미스 ONTAP 시스템 또는 Cloud Volumes ONTAP 시스템으로 백업할 수 있습니다. 자세한 내용은 를 참조하십시오 link:task-backup-onprem-to-ontap-s3.html["온프레미스 ONTAP 데이터를 ONTAP S3에 백업합니다"] 를 참조하십시오.
 ifdef::AWS[]
 
 
