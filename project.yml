@@ -64,6 +64,8 @@ sidebar:
     - title: 사내 ONTAP를 Google Cloud로 백업합니다
       flavor: gcp
       url: "/task-backup-onprem-to-gcp.html"
+    - title: 온프레미스 ONTAP를 ONTAP S3에 백업합니다
+      url: "/task-backup-onprem-to-ontap-s3.html"
     - title: 사내 ONTAP를 StorageGRID로 백업합니다
       url: "/task-backup-onprem-private-cloud.html"
     - title: 온프레미스 ONTAP를 ONTAP S3에 백업합니다
@@ -257,6 +259,8 @@ homepage:
     - title: 온프레미스 ONTAP에서 Google Cloud로
       url: task-backup-onprem-to-gcp.html
       flavor: gcp
+    - title: 온프레미스 ONTAP에서 ONTAP S3로 마이그레이션
+      url: task-backup-onprem-to-ontap-s3.html
     - title: 사내 ONTAP에서 StorageGRID로
       url: task-backup-onprem-private-cloud.html
     - title: 온프레미스 ONTAP에서 ONTAP S3로 마이그레이션
