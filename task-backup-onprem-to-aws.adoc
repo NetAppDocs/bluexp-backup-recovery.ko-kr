@@ -307,7 +307,6 @@ Cloud Volumes ONTAP 또는 온프레미스 시스템에 복제할 수 있으므�
               "s3:GetObjectRetention",
               "s3:DeleteObjectVersionTagging",
               "s3:PutBucketObjectLockConfiguration",
-              "s3:ListBucketByTags",
               "s3:DeleteObjectVersion",
               "s3:GetObjectTagging",
               "s3:PutBucketVersioning",
