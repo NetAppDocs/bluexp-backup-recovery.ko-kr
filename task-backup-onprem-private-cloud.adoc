@@ -362,7 +362,7 @@ FlexVol 또는 FlexGroup 볼륨을 보호하도록 선택할 수 있지만 작�
 [NOTE]
 ====
 * 한 번에 하나의 FlexGroup 볼륨에서만 백업을 활성화할 수 있습니다.
-* 선택한 볼륨의 SnapLock 설정은 동일해야 합니다. 모든 볼륨에 SnapLock Enterprise가 활성화되어 있거나 SnapLock가 비활성화되어 있어야 합니다. (SnapLock 준수 모드가 있는 볼륨은 현재 지원되지 않습니다.)
+* 선택한 볼륨의 SnapLock 설정은 동일해야 합니다. 모든 볼륨에 SnapLock Enterprise가 활성화되어 있거나 SnapLock가 비활성화되어 있어야 합니다. (SnapLock 준수 모드가 있는 볼륨에는 ONTAP 9.14 이상이 필요합니다.)
 
 
 ====
@@ -416,13 +416,19 @@ NOTE: 선택한 볼륨에 이 단계에서 선택한 정책과 다른 스냅샷 
 . * 로컬 스냅샷 *: 기존 스냅샷 정책을 선택합니다.
 +
 
-TIP: 사용자 지정 정책을 만들려면 System Manager 또는 ONTAP CLI를 사용합니다 `snapmirror policy create` 명령. 을 참조하십시오.
+TIP: 사용자 지정 정책을 생성하려면 을 참조하십시오
+link:task-create-policies-ontap.html["정책을 생성합니다"].
 
 . * 복제 *: 다음 옵션을 설정합니다.
 +
 ** * 복제 타겟 *: 대상 작업 환경과 SVM을 선택합니다. 선택적으로 대상 애그리게이트 또는 애그리게이트 및 복제된 볼륨 이름에 추가할 접두사 또는 접미사를 선택합니다.
 ** * 복제 정책 *: 기존 복제 정책을 선택합니다.
 
+
++
+
+TIP: 사용자 지정 정책을 생성하려면 을 참조하십시오
+link:task-create-policies-ontap.html["정책을 생성합니다"].
 
 . * 백업 대상 *: * 백업 * 을 선택한 경우 다음 옵션을 설정합니다.
 +
@@ -436,10 +442,11 @@ TIP: 사용자 지정 정책을 만들려면 System Manager 또는 ONTAP CLI를 
 
 TIP: 올바른 IPspace를 선택하면 BlueXP 백업 및 복구 기능이 ONTAP에서 StorageGRID 오브젝트 스토리지로의 연결을 설정할 수 있습니다.
 
-** * 백업 정책 *: 기존 백업 정책을 선택합니다.
+** * 백업 정책 *: 기존 객체 저장소 백업 정책을 선택합니다.
 +
 
-TIP: 사용자 지정 정책을 만들려면 System Manager 또는 ONTAP CLI를 사용합니다 `snapmirror policy create` 명령. 을 참조하십시오.
+TIP: 사용자 지정 정책을 생성하려면 을 참조하십시오
+link:task-create-policies-ontap.html["정책을 생성합니다"].
 
 +
 클러스터에서 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 _ 을(를) 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호하도록 선택할 수 있습니다. _DataLock_은 백업 파일이 수정되거나 삭제되지 않도록 보호하고, 백업 파일을 검색하여 백업 파일에서 랜섬웨어 공격의 증거를 찾습니다. link:concept-cloud-backup-policies.html#datalock-and-ransomware-protection["사용 가능한 DataLock 설정에 대해 자세히 알아보십시오"^].

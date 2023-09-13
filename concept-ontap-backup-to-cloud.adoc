@@ -179,13 +179,10 @@ Cloud Volumes ONTAP | 사내 ONTAP 시스템
 BlueXP 백업 및 복구는 다음 유형의 볼륨을 지원합니다.
 
 * FlexVol 읽기-쓰기 볼륨
-* SnapMirror 데이터 보호(DP) 타겟 볼륨
-* SnapLock 엔터프라이즈 볼륨(ONTAP 9.11.1 이상 필요)
-+
-** SnapLock Compliance 볼륨은 현재 지원되지 않습니다.
-
-
 * FlexGroup 볼륨(ONTAP 9.12.1 이상 필요)
+* SnapLock 엔터프라이즈 볼륨(ONTAP 9.11.1 이상 필요)
+* SnapLock Compliance 볼륨(ONTAP 9.14 이상 필요)
+* SnapMirror 데이터 보호(DP) 타겟 볼륨
 
 
 의 섹션을 참조하십시오 <<제한 사항,백업 및 복원 제한 사항>> 추가 요구 사항 및 제한 사항

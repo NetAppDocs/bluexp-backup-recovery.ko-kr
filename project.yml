@@ -46,6 +46,8 @@ sidebar:
       url: "/concept-ontap-backup-to-cloud.html"
     - title: 보호 여정을 계획하십시오
       url: "/concept-protection-journey.html"
+    - title: ONTAP 볼륨에 대한 정책을 관리합니다
+      url: "/task-create-policies-ontap.html"
     - title: Cloud Volumes ONTAP를 Amazon S3에 백업합니다
       flavor: aws
       url: "/task-backup-to-s3.html"
