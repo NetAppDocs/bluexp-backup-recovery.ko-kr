@@ -306,9 +306,9 @@ Cloud Volumes ONTAP 시스템에서 Azure 스토리지로 백업을 생성할 �
 
 
 
-=== 어두운 사이트에 있는 Cloud Volumes ONTAP 시스템의 데이터를 백업하는 기능
+=== 아웃바운드 연결이 제한된 사이트의 Cloud Volumes ONTAP 시스템 데이터를 백업하는 기능
 
-이제 AWS 및 Azure 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3 또는 Azure Blob으로 백업할 수 있습니다. 이 작업을 수행하려면 상업 지역의 Linux 호스트에 커넥터를 설치하고 Cloud Volumes ONTAP 시스템도 배포해야 합니다. 을 참조하십시오 https://docs.netapp.com/us-en/bluexp-backup-recovery/task-backup-to-s3.html["Cloud Volumes ONTAP 데이터를 Amazon S3에 백업"] 및 https://docs.netapp.com/us-en/bluexp-backup-recovery/task-backup-to-azure.html["Azure Blob에 Cloud Volumes ONTAP 데이터 백업"].
+이제 AWS 및 Azure 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3 또는 Azure Blob으로 백업할 수 있습니다. 이렇게 하려면 커머셜 지역의 Linux 호스트에 커넥터를 "제한 모드"로 설치하고 Cloud Volumes ONTAP 시스템도 배포해야 합니다. 을 참조하십시오 https://docs.netapp.com/us-en/bluexp-backup-recovery/task-backup-to-s3.html["Cloud Volumes ONTAP 데이터를 Amazon S3에 백업"] 및 https://docs.netapp.com/us-en/bluexp-backup-recovery/task-backup-to-azure.html["Azure Blob에 Cloud Volumes ONTAP 데이터 백업"].
 
 
 
