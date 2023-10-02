@@ -1960,7 +1960,6 @@
   <block id="80ce9d537bd04197e7c7cc4227525715" category="list-text"><block ref="9c6f56f3012c2178f15d4346495a0a67" prefix="" category="inline-code"></block></block>
   <block id="4014cba1d3679d7444ccb96338d9ee36" category="list-text"><block ref="8e0864f8129f5d2b658668b9103e83a5" prefix="" category="inline-code"></block></block>
   <block id="139e90f4554bdc4681ca70203e695cd5" category="list-text"><block ref="28e5f48e9f12d4928897b706c15e527a" prefix="" category="inline-code"></block></block>
-  <block id="0375f4855be072c7d856a0233cc21de9" category="section-title">클라우드 공급자 솔루션 지원</block>
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="inline-link-macro">Azure NetApp Files</block>
   <block id="b0cee72642f5457a71ddd0b49efb6d93" category="inline-link-macro">Google Cloud용 Cloud Volumes Service</block>
   <block id="67b74e19355f9340daf7f62ceb8233d5" category="list-text">Connector와 Azure Synapse SQL 서비스 간의 통신을 위해 포트 1433이 열려 있어야 합니다.</block>
@@ -3134,9 +3133,7 @@
   <block id="07536cd20b01777dd415a36c226a1f4a" category="list-text">일일 작업 활동</block>
   <block id="a0a7952e2e9dc6eba09660f59b4d73a2" category="list-text">데이터 보호 작업 활동 * 을 선택합니다.</block>
   <block id="c8b12aebf67be0b5d9913d39f23e9c8a" category="list-text">(선택 사항) 작업 상태, 작업 유형(백업 또는 복원) 및 리소스별로 결과를 필터링합니다.</block>
-  <block id="0c7db2bd63c891adb2c0fa4527805d72" category="paragraph">BlueXP 계정 및 개별 Cloud Volumes ONTAP 시스템에 대한 지원 등록이 필요합니다.</block>
   <block id="28164bf9e881ddc9e7ff74744bfce180" category="paragraph">두 가지 유형의 일련 번호를 등록하면 지원 티켓 열기와 자동 케이스 생성 등의 기능을 사용할 수 있습니다. 아래 설명과 같이 BlueXP에 NetApp Support 사이트(NSS) 계정을 추가하여 등록을 완료합니다.</block>
-  <block id="e922b9aa0836a1d93e11cac0fe4c9004" category="paragraph">다음 클라우드 제공업체 솔루션에 대한 기술 지원은 해당 제품에 대한 BlueXP 설명서의 "도움말 얻기"를 참조하십시오.</block>
   <block id="5a19febf1dcb23c10e8dcfde64ba764c" category="section-title">NetApp 지원을 위해 BlueXP 계정을 등록합니다</block>
   <block id="6bbc2ba432f59ab65ee3d8ac5a58336e" category="paragraph">지원을 등록하고 지원 권한을 활성화하려면 BlueXP 계정의 한 사용자가 NetApp Support 사이트 계정을 BlueXP 로그인에 연결해야 합니다. NetApp 지원에 등록하는 방법은 NetApp Support 사이트(NSS) 계정이 이미 있는지 여부에 따라 다릅니다.</block>
   <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">NSS 자격 증명 추가 * 를 선택하고 NetApp Support 사이트(NSS) 인증 프롬프트를 따릅니다.</block>
@@ -4574,4 +4571,9 @@ ONTAP S3</block>
   <block id="a856f192005c2a27d642572c6eabcaf3" category="sidebar">Kubernetes 클러스터를 Amazon S3에 백업합니다</block>
   <block id="d8aa0af6f24f3e5cbb56b502233a7241" category="sidebar">Kubernetes 클러스터를 Azure Blob에 백업합니다</block>
   <block id="f91d920c6ff7bb789d8210aebe92e10e" category="sidebar">Kubernetes 클러스터를 Google Cloud에 백업합니다</block>
+  <block id="ece19bab46695021f109a5e50f08bebe" category="paragraph">BlueXP 및 해당 스토리지 솔루션 및 서비스와 관련된 기술 지원을 받으려면 지원을 등록해야 합니다. Cloud Volumes ONTAP 시스템의 주요 워크플로우를 사용하려면 지원 등록도 필요합니다.</block>
+  <block id="8a3d807608e632d188a288fc5f4aa7eb" category="paragraph">지원을 등록한다고 해서 클라우드 공급자 파일 서비스에 대한 NetApp 지원이 활성화되지 않습니다. 클라우드 공급자의 파일 서비스, 자체 인프라 또는 서비스를 사용하는 솔루션과 관련된 기술 지원은 해당 제품의 BlueXP 설명서에서 "도움말 얻기"를 참조하십시오.</block>
+  <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">클라우드 공급자의 파일 서비스에 대한 지원을 받습니다</block>
+  <block id="f6185bb12f5e53c800be8cda7fbca65b" category="paragraph">클라우드 공급자의 파일 서비스, 자체 인프라 또는 서비스를 사용하는 솔루션과 관련된 기술 지원은 해당 제품의 BlueXP 설명서에서 "도움말 얻기"를 참조하십시오.</block>
+  <block id="3880ae5df9fdc4d0fc4a6d00a2239530" category="paragraph">BlueXP 및 해당 스토리지 솔루션 및 서비스에 관한 기술 지원을 받으려면 아래에 설명된 지원 옵션을 사용하십시오.</block>
 </blocks>
