@@ -16,7 +16,7 @@ summary: BlueXP 및 사내 SnapCenter와 애플리케이션을 위한 BlueXP 백
 [role="lead"]
 애플리케이션을 위한 BlueXP 백업 및 복구는 사내 ONTAP에서 클라우드 공급자까지 애플리케이션 정합성이 보장되는 스냅샷을 위한 데이터 보호 기능을 제공합니다.
 
-온프레미스 ONTAP 시스템에서 Amazon Web Services, Microsoft Azure, Google Cloud Platform 및 StorageGRID로 Oracle, Microsoft SQL 및 SAP HANA 애플리케이션 데이터를 백업할 수 있습니다.
+Oracle, Microsoft SQL, SAP HANA, MongoDB, MySQL, 또한 온프레미스 ONTAP 시스템에서 Amazon Web Services, Microsoft Azure, Google Cloud Platform 및 StorageGRID까지 PostgreSQL 애플리케이션 데이터를 수집합니다.
 
 응용 프로그램의 BlueXP 백업 및 복구에 대한 자세한 내용은 다음을 참조하십시오.
 
@@ -44,16 +44,17 @@ summary: BlueXP 및 사내 SnapCenter와 애플리케이션을 위한 BlueXP 백
 *** SnapCenter 서버 등록을 취소합니다
 
 
-** 다음 기능을 사용하려면 SnapCenter 서버 4.9를 사용해야 합니다.
+** 다음 기능을 사용하려면 SnapCenter Server 4.9 이상을 사용해야 합니다.
 +
 *** Oracle 데이터베이스 백업을 마운트합니다
 *** 대체 스토리지로 복원합니다
 
 
+** MongoDB, MySQL 및 PostgreSQL 애플리케이션을 보호하려면 SnapCenter Server 4.9P1을 사용해야 합니다
 
 
 * SnapCenter 서버에서 응용 프로그램당 하나 이상의 백업을 사용할 수 있어야 합니다
-* BlueXP의 정책과 레이블 또는 동일한 레이블이 없는 SnapCenter에서 최소 1일, 1주 또는 1개월 이상의 정책을 사용할 수 있습니다.
+* SnapCenter에서 BlueXP 정책에 규정된 것과 동일한 레이블이나 레이블이 없는 1일, 주간 또는 월별 정책 이상
 
 
 다음 이미지는 클라우드로 백업할 때의 각 구성 요소와 이러한 구성 요소 간에 준비해야 하는 연결을 보여 줍니다.

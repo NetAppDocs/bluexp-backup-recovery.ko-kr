@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
-permalink: task-quick-start-oracle.html 
-keywords: Cloud Manager, BlueXP, configuration, support, Oracle 
-summary: 몇 가지 단계를 완료하여 Oracle 데이터베이스 백업을 시작하십시오. 
+permalink: task-quick-start-sql.html 
+keywords: Cloud Manager, BlueXP, configuration, support, SQL server 
+summary: 몇 가지 단계를 완료하여 Microsoft SQL Server 데이터베이스 백업을 시작합니다. 
 ---
 = 빠른 시작
 :hardbreaks:
@@ -20,30 +20,28 @@ summary: 몇 가지 단계를 완료하여 Oracle 데이터베이스 백업을 �
 [role="quick-margin-list"]
 * 운영 체제:
 +
-** RHEL 7.5 이상 및 8.x
-** OL 7.5 이상 및 8.x
-** SLES 15 SP4
+** Windows 2016
+** 윈도우즈 2019
+** Windows 2022
 
 
-* NetApp 클라우드 스토리지:
+* NetApp 클라우드 스토리지:Amazon FSx for NetApp ONTAP
+* 스토리지 레이아웃: SAN(iSCSI)
 +
-** NetApp ONTAP용 Amazon FSx
-** Cloud Volumes ONTAP
-** Azure NetApp Files
+NAS 구성은 지원되지 않습니다.
 
-
-* 스토리지 레이아웃:
+* 데이터베이스 버전:
 +
-** NFS v3 및 v4.1(dNFS 포함)
-** iSCSI with ASM(ASMFD, ASMLib 및 ASMUDEV)
+** Microsoft SQL Server 2016
+** Microsoft SQL Server 2019
+** Microsoft SQL Server 2022
+
+
+* 데이터베이스 구성:
 +
-
-NOTE: Azure NetApp Files는 SAN 환경을 지원하지 않습니다.
-
+** 독립 실행형
 
 
-* 데이터베이스 레이아웃: Oracle Standard 및 Oracle Enterprise Standalone(레거시 및 멀티 테넌트 CDB 및 PDB)
-* 데이터베이스 버전: 19c 및 21c
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] BlueXP에 등록하십시오

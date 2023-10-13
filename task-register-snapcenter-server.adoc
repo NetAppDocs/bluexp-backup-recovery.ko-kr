@@ -67,6 +67,9 @@ SnapCenter 서버와 BlueXP 간의 통신이 가능하도록 포트가 열려 �
 ** HANA 바이너리, HANA 아카이브 로그 볼륨, HANA 공유 볼륨 등과 같은 NDV(Non-Data Volumes) 리소스
 
 
+* MongoDB
+* MySQL
+* PostgreSQL
 
 
 다음 데이터베이스는 표시되지 않습니다.

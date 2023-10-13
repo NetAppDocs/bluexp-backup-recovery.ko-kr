@@ -282,8 +282,9 @@ FQDN 또는 IP 주소를 사용하여 Connector가 데이터베이스 호스트�
 `chmod +x snapcenter_linux_host_plugin_scs.bin`
 . sudo SnapCenter 사용자로 Oracle 플러그인을 설치합니다.
 `./snapcenter_linux_host_plugin_scs.bin -i silent -DSPL_USER=<non-root>`
-. 플러그인 호스트의 커넥터 VM의 _/var/opt/snapcenter/spl/etc/_에서 _certificate.p12_from_<base_mount_path>/client/certificate/_path를 _ /var/opt/snapcenter/spl/etc/_로 복사합니다.
-. /var/opt/snapcenter/spl/etc_로 이동하고 keytool 명령을 실행하여 인증서를 가져옵니다. keytool -v -importkeystore -srckeystore certificate.p12 -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype jks -srcstorephass SnapCenter -deststorephass SnapCenter -srcalalas agentcert -alias destagentcert -not프롬프트
+. copy_certificate.pem_from_<base_mount_path>/client/certificate/_path 커넥터 VM의 경로를 플러그인 호스트의 _/var/opt/snapcenter/spl/etc/_로 복사합니다.
+. _/var/opt/snapcenter/spl/etc_로 이동하고 keytool 명령을 실행하여 certificate.pem을 가져옵니다.
+`keytool -import -alias agentcert -file certificate.pem -keystore keystore.jks -deststorepass snapcenter -noprompt`
 . SPL을 다시 시작합니다:'stemctl restart SPL'
 . Connector에서 아래 명령을 실행하여 커넥터에서 플러그인에 연결할 수 있는지 확인합니다.
 `docker exec -it cloudmanager_scs_cloud curl -ik \https://<FQDN or IP of the plug-in host>:<plug-in port>/PluginService/Version --cert /config/client/certificate/certificate.pem --key /config/client/certificate/key.pem`

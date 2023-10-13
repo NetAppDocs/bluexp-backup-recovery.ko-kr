@@ -58,7 +58,7 @@ root(sudo) 사용자가 아닌 사용자를 만들어 플러그인을 설치합�
 .단계
 . Connector VM에 로그인합니다.
 . SnapCenter Linux 호스트 플러그인 바이너리를 다운로드합니다. S UDO Docker Exec - IT cloudmanager_scs_cloud curl-X get 'http://127.0.0.1/deploy/downloadLinuxPlugin'`[]
-. 다음 위치에 있는 * sudoer.txt * 의 내용을 복사합니다. _/var/lib/docker/volumes/service-manager[1]-2_cloudmanager_scs_cloud_volume/_data/$(sudo docker PS|grep-Po" cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin_
+. sudoer.txt * 의 내용을 _/var/lib/docker/volumes/service-manager-2_cloudmanager_scs_cloud_volume/$(sudo Docker PS | grep-po "cloudManager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin_
 . 루트 사용자 계정을 사용하여 SAP HANA 시스템 호스트에 로그인합니다.
 . 3단계에서 복사한 텍스트를 _/etc/sudoers.d/snapcenter_file에 복사하여 비루트 사용자에 대한 sudo 액세스를 구성합니다.
 +
@@ -160,7 +160,7 @@ HANA 호스트에 SSH 키 기반 인증이 설정되어 있지 않은 경우 아
 . Connector VM에 로그인합니다.
 . SnapCenter Linux 호스트 플러그인 바이너리를 다운로드합니다. S UDO Docker Exec - IT cloudmanager_scs_cloud curl-X get 'http://127.0.0.1/deploy/downloadLinuxPlugin'`[]
 +
-플러그인 바이너리는 _CD/var/lib/docker/volumes/service-manager[1]-2_cloudmanager_scs_cloud_volume/_data/$(sudo docker PS|grep-Po "cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin_
+플러그인 바이너리는 _ cd /var/lib/docker/volumes/service-manager-2_cloudmanager_scs_cloud_volume/_data/$(sudo docker PS | grep-Po "cloudmanager_scs_cloud:. *? "|SED-e's/ *$/'|cut-F2-d":")/SC-Linux-host-plugin_
 
 . SCP 또는 다른 대체 방법을 사용하여 각 SAP HANA 데이터베이스 호스트에 대한 _/home/<non root user (sudo)>/.SC_NetApp_path의 위 경로에서 copy_snapcenter_linux_host_plugin_scs.bin_
 . 비 루트(sudo) 계정을 사용하여 SAP HANA 데이터베이스 호스트에 로그인합니다.
@@ -168,8 +168,9 @@ HANA 호스트에 SSH 키 기반 인증이 설정되어 있지 않은 경우 아
 `chmod +x snapcenter_linux_host_plugin_scs.bin`
 . sudo SnapCenter 사용자로 SAP HANA 플러그인을 설치합니다.
 `./snapcenter_linux_host_plugin_scs.bin -i silent -DSPL_USER=<non-root>`
-. 플러그인 호스트의 커넥터 VM의 _/var/opt/snapcenter/spl/etc/_에서 _certificate.p12_from_<base_mount_path>/client/certificate/_path를 _ /var/opt/snapcenter/spl/etc/_로 복사합니다.
-. /var/opt/snapcenter/spl/etc_로 이동하고 keytool 명령을 실행하여 인증서를 가져옵니다. keytool -v -importkeystore -srckeystore certificate.p12 -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype jks -srcstorephass SnapCenter -deststorephass SnapCenter -srcalalas agentcert -alias destagentcert -not프롬프트
+. copy_certificate.pem_from_<base_mount_path>/client/certificate/_path 커넥터 VM의 경로를 플러그인 호스트의 _/var/opt/snapcenter/spl/etc/_로 복사합니다.
+. /var/opt/snapcenter/spl/etc_로 이동하고 keytool 명령을 실행하여 인증서를 가져옵니다.
+`keytool -import -alias agentcert -file certificate.pem -keystore keystore.jks -deststorepass snapcenter -noprompt`
 . SPL을 다시 시작합니다:'stemctl restart SPL'
 . Connector에서 아래 명령을 실행하여 커넥터에서 플러그인에 연결할 수 있는지 확인합니다.
 `docker exec -it cloudmanager_scs_cloud curl -ik \https://<FQDN or IP of the plug-in host>:<plug-in port>/PluginService/Version --cert  config/client/certificate/certificate.pem --key /config/client/certificate/key.pem`
@@ -207,20 +208,18 @@ HANA 호스트에 SSH 키 기반 인증이 설정되어 있지 않은 경우 아
 
 * 단계 *
 
-. BlueXP * UI에서 * 보호 * > * 백업 및 복구 * > * 응용 프로그램 * 을 클릭합니다.
-. 응용 프로그램 검색 * 을 클릭합니다.
-. Cloud Native * > * SAP HANA * 를 선택하고 * Next * 를 클릭합니다.
-. 응용 프로그램 * 페이지에서 * 시스템 추가 * 를 클릭합니다.
+. BlueXP * UI에서 * Protection * > * Backup and Recovery * > * Applications * 를 선택합니다.
+. Discover Applications * 를 선택합니다.
+. Cloud Native * > * SAP HANA * 를 선택하고 * Next * 를 선택합니다.
+. 응용 프로그램 * 페이지에서 * 시스템 추가 * 를 선택합니다.
 . 시스템 세부 정보 * 페이지에서 다음 작업을 수행합니다.
 +
-.. 시스템 유형을 다중 테넌트 데이터베이스 컨테이너 또는 단일 컨테이너로 선택합니다.
+.. 시스템 유형 을 멀티 테넌트 데이터베이스 컨테이너 또는 글로벌 비 데이터 볼륨 으로 선택합니다.
 .. SAP HANA 시스템 이름을 입력합니다.
 .. SAP HANA 시스템의 SID를 지정합니다.
-.. (선택 사항) HDBSQL OS 사용자를 수정합니다.
-.. 플러그인 호스트 를 선택합니다.
-(선택 사항) 호스트가 추가되지 않은 경우 * 플러그인 호스트 추가 * 를 클릭합니다.
+.. (선택 사항) OSDB 사용자를 수정합니다.
 .. HANA 시스템이 HANA 시스템 복제로 구성된 경우 * HSR(HANA 시스템 복제) 시스템 * 을 활성화합니다.
-.. HDB 보안 사용자 저장소 키 * 텍스트 상자를 클릭하여 사용자 저장소 키 세부 정보를 추가합니다.
+.. HDB 보안 사용자 저장소 키 * 텍스트 상자를 선택하여 사용자 저장소 키 세부 정보를 추가합니다.
 +
 키 이름, 시스템 세부 정보, 사용자 이름 및 암호를 지정하고 * 키 추가 * 를 클릭합니다.
 
@@ -229,18 +228,36 @@ HANA 호스트에 SSH 키 기반 인증이 설정되어 있지 않은 경우 아
 
 
 
-. 다음 * 을 클릭합니다.
-. Storage Footprint * 페이지에서 * 스토리지 추가 * 를 클릭하고 다음을 수행합니다.
+. 다음 * 을 선택합니다.
+. 호스트 세부 정보 * 페이지에서 다음 작업을 수행합니다.
++
+.. Add new host * 또는 * use existing host * 를 선택합니다.
+.. USING SSH * 또는 * Manual * 을 선택합니다.
++
+수동 의 경우 호스트 FQDN 또는 IP, 커넥터, 사용자 이름, SSH 포트, 플러그인 포트를 입력합니다. 필요에 따라 SSH 개인 키를 추가하고 검증합니다.
+
++
+SSH의 경우 호스트 FQDN 또는 IP, 커넥터, 사용자 이름 및 플러그인 포트를 입력합니다.
+
+.. 다음 * 을 선택합니다.
+
+
+. 호스트 구성 * 페이지에서 구성 요구 사항이 충족되는지 확인합니다.
++
+확인란을 선택하여 확인합니다.
+
+. 다음 * 을 선택합니다.
+. Storage Footprint * 페이지에서 * Add Storage * 를 선택하고 다음을 수행합니다.
 +
 .. 작업 환경을 선택하고 NetApp 계정을 지정합니다.
 +
 왼쪽 탐색 창에서 BlueXP * Canvas * 를 선택하여 새 작업 환경을 추가합니다.
 
 .. 필요한 볼륨을 선택합니다.
-.. 스토리지 추가 * 를 클릭합니다.
+.. Add Storage * 를 선택합니다.
 
 
-. 모든 세부 정보를 검토하고 * 시스템 추가 * 를 클릭합니다.
+. 모든 세부 정보를 검토하고 * Add System * 을 선택합니다.
 
 
 UI에서 SAP HANA 시스템을 수정하거나 제거할 수 있습니다.
@@ -249,43 +266,9 @@ SAP HANA 시스템을 제거하기 전에 관련된 모든 백업을 삭제하�
 
 
 
-=== SAP HANA 데이터베이스 호스트를 삭제합니다
-
-REST API만 사용하여 SAP HANA 데이터베이스 호스트를 제거할 수 있습니다.
-
-* 단계 *
-
-. UI를 사용하거나 아래 REST API를 사용하여 SAP HANA 데이터베이스 호스트와 연결된 모든 시스템을 삭제합니다.
-`DELETE /saphana/anf/systems/(id)`
-. SAP HANA 데이터베이스 호스트를 제거하려면 다음 단계를 수행하십시오.
-+
-.. REST API 가져오기를 사용하여 삭제해야 하는 SAP HANA 데이터베이스 호스트의 ID를 가져올 수 있습니다.
-`GET /saphana/hosts`
-   `{`
-    `"num_records": 1,`
-    `"records": [`
-        `{`
-            `"id": "c9a6849f-29ea-45c5-a17f-a1e78ad2a30e",`
-            `"host_name": "galaxy-vm134.netapp.com",`
-            `"port": 443,`
-            `"agent_id": "n3TrgkGvnTOFTJJNBxeh3oPxG8AcrcHeclients"`
-       
-`}`
-    `]`
-`}`
-.. 아래 REST API에서 ID를 전달하여 SAP HANA 데이터베이스 호스트를 삭제합니다.
-`DELETE /saphana/hosts/(id)`
-.. 아래 명령을 사용하여 데이터베이스 호스트에서 SAP HANA Linux 플러그인을 제거합니다.
-`/opt/NetApp/snapcenter/spl/installation/plugins/uninstall`
-
-
-
-
-
-
 === 비 데이터 볼륨 추가
 
-멀티 테넌트 데이터베이스 컨테이너 또는 단일 컨테이너 유형 SAP HANA 시스템을 추가한 후 HANA 시스템의 비 데이터 볼륨을 추가할 수 있습니다.
+멀티 테넌트 데이터베이스 컨테이너 유형 SAP HANA 시스템을 추가한 후 HANA 시스템의 비 데이터 볼륨을 추가할 수 있습니다.
 
 사용 가능한 SAP HANA 데이터베이스를 검색하고 나면 이러한 리소스를 리소스 그룹에 추가하여 데이터 보호 작업을 수행할 수 있습니다.
 
@@ -301,7 +284,7 @@ REST API만 사용하여 SAP HANA 데이터베이스 호스트를 제거할 수 
 
 === 글로벌 비 데이터 볼륨 추가
 
-멀티 테넌트 데이터베이스 컨테이너 또는 단일 컨테이너 유형 SAP HANA 시스템을 추가한 후 HANA 시스템의 글로벌 비 데이터 볼륨을 추가할 수 있습니다.
+멀티 테넌트 데이터베이스 컨테이너 유형 SAP HANA 시스템을 추가한 후 HANA 시스템의 글로벌 비 데이터 볼륨을 추가할 수 있습니다.
 
 * 단계 *
 
@@ -313,39 +296,14 @@ REST API만 사용하여 SAP HANA 데이터베이스 호스트를 제거할 수 
 +
 .. 시스템 유형 드롭다운에서 * 글로벌 비 데이터 볼륨 * 을 선택합니다.
 .. SAP HANA 시스템 이름을 입력합니다.
+
+
+. . 호스트 세부 정보 * 페이지에서 다음 작업을 수행합니다.
++
 .. SAP HANA 시스템의 관련 SID를 지정합니다.
 .. 플러그인 호스트를 선택합니다
 .. 다음 * 을 클릭합니다.
 .. 모든 세부 정보를 검토하고 * 시스템 추가 * 를 클릭합니다.
 
 
-
-
-
-
-=== SAP HANA 데이터베이스 호스트를 수정합니다
-
-SAP HANA 데이터베이스 호스트를 추가한 후 REST API를 사용하여 호스트 이름 또는 플러그인 포트를 수정할 수 있습니다.
-
-* 단계 *
-
-. REST API 가져오기를 사용하여 삭제해야 하는 SAP HANA 데이터베이스 호스트의 ID를 가져올 수 있습니다. `GET /saphana/hosts`
-   `{`
-    `"num_records": 1,`
-    `"records": [`
-        `{`
-            `"id": "c9a6849f-29ea-45c5-a17f-a1e78ad2a30e",`
-            `"host_name": "galaxy-vm134.netapp.com",`
-            `"port": 443,`
-            `"agent_id": "n3TrgkGvnTOFTJJNBxeh3oPxG8AcrcHeclients"`
-       
-`}`
-    `]`
-`}`
-. 아래의 패치 API를 사용하여 호스트 이름 또는 플러그인 포트를 수정합니다.
-`PATCH /saphana/hosts/(id)`
-`{`
-`"host_name": "vm136.dummy.com",`
-`"port": 8145,`
-`}`
 

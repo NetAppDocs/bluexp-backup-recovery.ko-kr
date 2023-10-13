@@ -1,0 +1,328 @@
+---
+sidebar: sidebar 
+permalink: task-backup-cloud-native-sql-data.html 
+keywords: BlueXP, scheduled backups, on-demand backups, create policy, SQL database 
+summary: 정책을 만들고 정책을 할당한 다음 SQL 데이터베이스의 필요 시 백업을 만듭니다. 
+---
+= 클라우드 네이티브 Microsoft SQL Server 데이터베이스를 백업
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+생성한 정책을 할당하여 예약된 백업 또는 필요 시 백업을 생성할 수 있습니다.
+
+
+
+== 백업 정책을 생성합니다
+
+이 API를 실행하여 백업 정책을 생성할 수 있습니다.
+
+'POST snapcenter.cloudmanager.cloud.netapp.com/api/mssql/backup/policies' 를 참조하십시오
+
+자세한 내용은 다음을 참조하십시오. https://snapcenter.cloudmanager.cloud.netapp.com/api-doc/#/MSSQL%20Backup%20Policies/MSSQLBackupPolicyService_CreateMSSQLBackupPolicy[]
+
+이 API를 사용하면 BlueXP UI의 * Job Monitor * 탭에서 추적할 수 있는 작업이 생성됩니다.
+
+
+
+=== 매개 변수
+
+|===
+| 이름 | 유형 | 필수 요소입니다 
+
+
+ a| 
+이름
+ a| 
+문자열
+ a| 
+참
+
+
+
+ a| 
+백업 유형
+ a| 
+문자열
+ a| 
+참
+
+
+
+ a| 
+Copy_only_backup(복사 전용 백업)
+ a| 
+문자열
+ a| 
+거짓
+
+
+
+ a| 
+시스템 정의입니다
+ a| 
+문자열
+ a| 
+거짓
+
+
+
+ a| 
+백업_이름_형식
+ a| 
+문자열
+ a| 
+참
+
+
+
+ a| 
+schedule_type입니다
+ a| 
+문자열
+ a| 
+참
+
+
+
+ a| 
+start_time을 선택합니다
+ a| 
+번호
+ a| 
+참
+
+
+
+ a| 
+시간_간격
+ a| 
+번호
+ a| 
+참
+
+
+
+ a| 
+분_간격
+ a| 
+번호
+ a| 
+참
+
+
+
+ a| 
+retention_type을 선택합니다
+ a| 
+문자열
+ a| 
+참
+
+
+
+ a| 
+retention_count입니다
+ a| 
+번호
+ a| 
+참
+
+
+
+ a| 
+end_time을 선택합니다
+ a| 
+번호
+ a| 
+참
+
+|===
+
+
+=== 응답
+
+API가 정상적으로 실행되면 응답 코드 201이 표시됩니다.
+
+예:
+
+[listing]
+----
+{
+    "_links": {
+    "self": {
+        "href": "/api/resourcelink"
+      }
+    }
+}
+----
+
+
+== SQL 데이터베이스 인스턴스에 정책을 할당합니다
+
+이 API를 실행하여 SQL 데이터베이스 인스턴스에 정책을 할당할 수 있습니다.
+
+'POST snapcenter.cloudmanager.cloud.netapp.com/api/mssql/instances/{id}/policy-assignment' 를 참조하십시오
+
+여기서, _id_는 DISCOVER 데이터베이스 인스턴스 API를 실행하여 얻은 MSSQL 인스턴스 ID입니다. 자세한 내용은 을 참조하십시오 link:task-add-sqlhost-install-plugin-sql.html#discover-the-database-instances["데이터베이스 인스턴스를 검색합니다"].
+
+여기서 ID 배열이 입력됩니다. 예를 들면 다음과 같습니다.
+
+[listing]
+----
+[
+  "c9f3e68d-1f9c-44dc-b9af-72a9dfc54320"
+]
+----
+자세한 내용은 다음을 참조하십시오. https://snapcenter.cloudmanager.cloud.netapp.com/api-doc/#/MSSQL%20Policy%20Assignment/PostMSSQLInstanceAssignPolicyRequest[]
+
+이 API를 사용하면 BlueXP UI의 * Job Monitor * 탭에서 추적할 수 있는 작업이 생성됩니다.
+
+
+
+=== 응답
+
+API가 정상적으로 실행되면 응답 코드 202가 출력된다.
+
+예:
+
+[listing]
+----
+{
+  "job": {
+    "_links": {
+      "self": {
+        "href": "/api/resourcelink"
+      }
+    },
+    "uuid": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+  }
+}
+----
+
+
+== 필요 시 백업을 생성합니다
+
+이 API를 실행하여 주문형 백업을 생성할 수 있습니다.
+
+'POST snapcenter.cloudmanager.cloud.netapp.com/api/mssql/backups' 를 참조하십시오
+
+자세한 내용은 다음을 참조하십시오. https://snapcenter.cloudmanager.cloud.netapp.com/api-doc/#/MSSQL%20Backups/CreateMSSQLBackupRequest[]
+
+이 API를 사용하면 BlueXP UI의 * Job Monitor * 탭에서 추적할 수 있는 작업이 생성됩니다.
+
+
+
+=== 매개 변수
+
+|===
+| 이름 | 유형 | 필수 요소입니다 
+
+
+ a| 
+ID입니다
+
+
+NOTE: MSSQL 데이터베이스 인스턴스의 ID입니다.
+ a| 
+문자열
+ a| 
+참
+
+
+
+ a| 
+resource_type입니다
+ a| 
+문자열
+ a| 
+참
+
+
+
+ a| 
+policy_id입니다
+ a| 
+문자열
+ a| 
+참
+
+
+
+ a| 
+schedule_type입니다
+ a| 
+문자열
+ a| 
+참
+
+|===
+
+
+=== 응답
+
+API가 정상적으로 실행되면 응답 코드 202가 출력된다.
+
+예:
+
+[listing]
+----
+{
+  "job": {
+    "_links": {
+      "self": {
+        "href": "/api/resourcelink"
+      }
+    },
+    "uuid": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+  }
+}
+----
+
+
+== 백업을 봅니다
+
+이러한 API를 실행하여 모든 백업을 나열하고 특정 백업의 세부 정보를 볼 수도 있습니다.
+
+'snapcenter.cloudmanager.cloud.netapp.com/api/mssql/backups' 다운로드하십시오
+
+'snapcenter.cloudmanager.cloud.netapp.com/api/mssql/backups/{id}' 다운로드하십시오
+
+자세한 내용은 다음을 참조하십시오. https://snapcenter.cloudmanager.cloud.netapp.com/api-doc/#/MSSQL%20Backups/MSSQLGetBackupsRequest[]
+
+
+
+=== 응답
+
+API가 정상적으로 실행되면 응답 코드 200이 출력된다.
+
+예:
+
+[listing]
+----
+{
+    "total_records": 1,
+    "num_records": 1,
+    "records": [
+        {
+            "backup_id": "602d7796-8074-43fc-a178-eee8c78566ac",
+            "resource_id": "a779578d-cf78-46f3-923d-b9223255938c",
+            "backup_name": "Hourly_policy2_scspa2722211001_NAMEDINSTANCE1_2023_08_08_07_02_01_81269_0",
+            "policy_name": "policy2",
+            "schedule_type": "Hourly",
+            "start_time": "2023-08-08T07:02:10.203Z",
+            "end_time": "0001-01-01T00:00:00Z",
+            "backup_status": "success",
+            "backup_type": "FullBackup"
+        }
+    ],
+    "_links": {
+        "next": {}
+    }
+}
+----

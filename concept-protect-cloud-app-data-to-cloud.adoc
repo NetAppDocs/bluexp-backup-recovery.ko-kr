@@ -18,6 +18,7 @@ summary: BlueXP는 NetApp ONTAP 또는 Cloud Volumes ONTAP용 Amazon FSx에 상�
 
 * NetApp ONTAP, Cloud Volumes ONTAP 및 Azure NetApp Files용 Amazon FSx에 상주하는 Oracle 데이터베이스입니다
 * Azure NetApp Files에 상주하는 SAP HANA 시스템
+* Amazon FSx for NetApp ONTAP에 상주하는 Microsoft SQL Server 데이터베이스
 
 
 
@@ -139,4 +140,37 @@ UI, 스크립트 또는 수동으로 플러그인을 배포할 수 있습니다.
 
 * HSR 구성의 경우 2노드 HSR만 지원됩니다(1개의 기본 및 1개의 보조).
 * 복원 작업 중에 PS가 실패할 경우 잔상이 트리거되지 않습니다
+
+
+
+
+== Microsoft SQL Server 데이터베이스 보호
+
+
+
+=== 피처
+
+* 호스트를 수동으로 추가하고 플러그인을 구축합니다
+* 데이터베이스를 수동으로 검색합니다
+* Amazon FSx for NetApp ONTAP에 상주하는 SQL Server 인스턴스를 백업합니다
++
+** 필요 시 백업
+** 정책을 기반으로 예약된 백업
+** Microsoft SQL Server 인스턴스의 로그 백업
+
+
+* 데이터베이스를 원래 위치로 복원합니다
+
+
+
+
+=== 제한 사항
+
+* 백업은 SQL Server 인스턴스에 대해서만 지원됩니다
+* FCI(Failover Cluster Instance) 구성은 지원되지 않습니다
+* BlueXP UI는 SQL 데이터베이스별 작업을 지원하지 않습니다
++
+모든 Microsoft SQL Server 데이터베이스별 작업은 REST API를 실행하여 수행됩니다.
+
+* 대체 위치로 복구할 수 없습니다
 
