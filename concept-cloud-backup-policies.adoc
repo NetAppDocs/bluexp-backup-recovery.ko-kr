@@ -66,6 +66,7 @@ https://bluexp.netapp.com/blog/cbs-blg-the-bluexp-feature-that-protects-backups-
 ====
 * DataLock 및 랜섬웨어 보호를 사용하려는 경우 첫 번째 백업 정책을 생성하고 해당 클러스터에 대한 BlueXP 백업 및 복구를 활성화할 때 활성화해야 합니다.
 * DataLock 및 랜섬웨어 보호는 구성된 후에는 클러스터에 대해 비활성화할 수 없습니다. 클러스터에서 이 기능을 활성화하지 마십시오.
+* BlueXP가 볼륨 데이터를 복원할 때 백업 파일에서 랜섬웨어를 검사하면 백업 파일의 콘텐츠에 액세스하는 데 클라우드 공급자가 추가 이그레스 비용이 발생합니다.
 
 
 ====
