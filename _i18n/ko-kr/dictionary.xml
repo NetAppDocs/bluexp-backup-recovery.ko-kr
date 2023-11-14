@@ -576,7 +576,6 @@
   <block id="7d3786abf2ebb473a5ba70b680734525" category="section-title">BYOL 라이센스 고려사항</block>
   <block id="7425d5f89a4e332992c97c91d4ed6317" category="list-text">백업이 라이센스 용량의 80%에 도달한 경우 제한에 도달하면 다시 한 번 백업을 수행합니다</block>
   <block id="d8ea74d0bc0e6f3c5be22312a953d7fb" category="list-text">라이센스가 만료되기 30일 전에 라이센스가 만료되고 라이센스가 만료되면 다시 만료됩니다</block>
-  <block id="b02a15fbd7729c5f87ea7b28e29e6fd5" category="list-text">사용 중인 계정에 마켓플레이스 계정이 있는 경우 백업 서비스가 계속 실행되지만 PAYGO 라이센스 모델로 이전됩니다. 백업이 사용 중인 용량에 대한 비용이 청구됩니다.</block>
   <block id="6bf80475cfcaeeaa5036e79e644302f5" category="summary">몇 가지 단계를 완료하여 GKE Kubernetes 클러스터의 영구 볼륨에서 Google Cloud 스토리지로 데이터 백업을 시작하십시오.</block>
   <block id="9cb5c4f70a9ab55a2786587a76bd9009" category="doc">Kubernetes 영구 볼륨 데이터를 Google Cloud 스토리지에 백업</block>
   <block id="f97ff4c8e3feb5c1c023b5056582794b" category="list-text">클러스터는 해당 백엔드 스토리지에 대해 GCP에서 Cloud Volumes ONTAP를 사용해야 합니다.</block>
@@ -626,7 +625,6 @@
   <block id="de00c1e27be1485dd099e4cd2aaa554d" category="sidebar">백업을 삭제합니다</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">블로그 커뮤니티</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 커뮤니티</block>
-  <block id="cedae03e22c7bb2c103685dfa74cddab" category="paragraph">BYOL은 1TiB 단위로 기간 기반(12, 24 또는 36개월) _ 및 _ 용량 기반 예를 들어, 1년, 최대 용량(10TiB)에 대해 서비스 사용을 위해 NetApp에 비용을 지불합니다.</block>
   <block id="2af55e36133bee199e6856aa4e468486" category="paragraph">볼륨 * (새 볼륨으로)을 원래 작업 환경, 동일한 클라우드 계정을 사용하는 다른 작업 환경 또는 온프레미스 ONTAP 시스템으로 복원할 수 있습니다.</block>
   <block id="49b3fb49db06a6317743033ac39be690" category="paragraph">원래 작업 환경의 볼륨, 동일한 클라우드 계정을 사용하는 다른 작업 환경의 볼륨 또는 온프레미스 ONTAP 시스템의 볼륨으로 * 파일 * 을 복원할 수 있습니다.</block>
   <block id="2cfe9659cdef6b61005a35e5ad1c7305" category="paragraph">여러 파일을 선택하면 모든 파일이 선택한 동일한 대상 볼륨으로 복원됩니다. 따라서 파일을 다른 볼륨으로 복원하려면 복원 프로세스를 여러 번 실행해야 합니다.</block>
@@ -761,7 +759,6 @@
   <block id="b97f160a229c063bdce958beafa0f695" category="cell">Azure 사내 ONTAP 시스템의 Cloud Volumes ONTAP endif::Azure []ifdef::GCP[]</block>
   <block id="a9f8eef7fdd18a9397fd96b661adbbf3" category="cell">Google 사내 ONTAP 시스템의 Cloud Volumes ONTAP::GCP []</block>
   <block id="7f4e982bcc5753d9d97c31f1f4d46a2b" category="paragraph">백업 서비스에 대한 비용을 지불하는 방법에는 세 가지가 있습니다. 첫 번째 옵션은 클라우드 공급자를 구독하는 것입니다. 구독하면 매월 요금을 지불할 수 있습니다. 두 번째 옵션은 연간 계약을 얻는 것입니다. 세 번째 옵션은 NetApp에서 직접 라이센스를 구매하는 것입니다. 를 읽습니다 <block ref="b839456cc57645a9392f4db60a4f044a" category="inline-xref-macro-rx"></block> 섹션을 참조하십시오.</block>
-  <block id="5f5358182364ef304e26de4fc2395537" category="list-text">BYOL 라이센스에서 허용하는 것보다 더 많은 데이터를 백업하는 경우 용량제 가입형 모델을 통해 데이터 백업을 계속 수행할 수 있습니다. 예를 들어, 10TiB BYOL 라이센스가 있는 경우 PAYGO 구독을 통해 10TiB를 초과하는 모든 용량이 충전됩니다.</block>
   <block id="20e92bedd41f67c18b032dfcce8e6443" category="list-text">Cloud Volumes ONTAP 데이터와 사내 ONTAP 데이터를 백업할 수 있는 "클라우드 백업" 패키지</block>
   <block id="cb59b87e00d11222bfd9159d0d23836f" category="section-title">시작하기</block>
   <block id="b3080cdc3d4f3f5baa6015e73aeff8f4" category="paragraph">이 API는 다음과 같은 응답을 반환합니다. occm.[0].[agent].[AGENTID] * 의 출력을 구문 분석하여 에이전트 ID를 검색할 수 있습니다.</block>
@@ -831,7 +828,6 @@
   <block id="38692e39e588de5b1294ee4cca656080" category="list-text">* BYOL *: 모든 클라우드 공급자와 함께 사용할 수 있는 NetApp에서 구입한 라이센스</block>
   <block id="9757bd87f9a5ff6758600430092b3955" category="paragraph">PAYGO 구독을 처음 등록하면 30일 무료 평가판을 사용할 수 있습니다.</block>
   <block id="421539f25601331f9f5f1e59cdb43e21" category="section-title">연간 계약</block>
-  <block id="49a09607b95f46b9056878d3c4fdbc41" category="paragraph">AWS를 사용할 경우 12개월, 24개월 또는 36개월 조건에서 2가지 연간 계약을 사용할 수 있습니다.</block>
   <block id="cf6d8dee9b177c1138ae0ee4e07dc2f3" category="inline-link-macro">연간 계약을 설정하는 방법에 대해 알아봅니다</block>
   <block id="cc0eb7dbb8893977120a22b09b8c4ca0" category="paragraph"><block ref="f5d5ae39791d9eaf9e8591b7cfcc3b96" category="inline-link-macro-rx"></block>.</block>
   <block id="d461a54e93e8dcbd189b38f0ff2865bc" category="list-text">FlexVol 읽기-쓰기 볼륨</block>
@@ -840,7 +836,6 @@
   <block id="de76148f38881d048b0371c5472a1c65" category="list-text">연간 백업은 1월 1일 자정 직후에 시작됩니다.</block>
   <block id="c04e9a5a6565b2a7f08b4191d93602f6" category="inline-link">이러한 용량 기반 라이센스 패키지에 대해 자세히 알아보십시오</block>
   <block id="66145e361f72b54aa011f59d543dfb08" category="section-title">연간 계약을 사용합니다</block>
-  <block id="2ad823c02fc1acdb11ec531ccd53e0f5" category="paragraph">AWS를 사용할 경우 에서 2개의 연간 계약을 얻을 수 있습니다<block ref="7e9391e5068ba3345180f0de3723960c" category="inline-link-rx"></block> Cloud Volumes ONTAP 및 사내 ONTAP 시스템: 1년, 2년 또는 3년 조건으로 제공됩니다.</block>
   <block id="376da794bc45a0b27e3c757018f00f1c" category="paragraph">다음 다이어그램에서는 * public connection * 메서드와 구성 요소 간에 준비해야 하는 연결을 보여 줍니다. 사내에 설치한 Connector나 AWS VPC에 구축한 Connector를 사용할 수 있습니다.</block>
   <block id="ea7f03756f7c008946dd9175a5fb9557" category="paragraph">다음 다이어그램에서는 * private connection * 메서드와 구성 요소 간에 준비해야 하는 연결을 보여 줍니다. 사내에 설치한 Connector나 AWS VPC에 구축한 Connector를 사용할 수 있습니다.</block>
   <block id="2e379f93711508ab69eec06837dd271c" category="inline-link">끝점 목록을 참조하십시오</block>
@@ -1400,9 +1395,7 @@
   <block id="228129642e2d421577991251a19c55f5" category="list-text">이후 볼륨에 대한 초기 기본 백업 파일에 기간별 스냅샷 복사본이 포함되는지 여부를 변경합니다</block>
   <block id="057d6c600d485e4ee55de2a7a7001dc5" category="paragraph">제한된 * 라디오 버튼을 선택하고 사용할 수 있는 최대 대역폭을 입력하거나 * 무제한 * 을 선택하여 제한이 없음을 나타냅니다.</block>
   <block id="8ceedd80ab3ad72f595a01a7d5ea8d33" category="inline-link">가격 세부 정보는 BlueXP Marketplace 오퍼링으로 이동하십시오</block>
-  <block id="e43ad9b040def21d45a51d9708f62291" category="list-text">AWS:<block ref="51e50f75a76548a6f8d655afc8a2e3ab" category="inline-link-rx"></block>.</block>
   <block id="0b781a3ed3b0bf571ebc9b36f9d4056e" category="list-text">Azure(Azure):<block ref="477b4f8f0e4ff2940c9440f2ccae1310" category="inline-link-rx"></block>.</block>
-  <block id="c5239741c1af7be2743703f3c8355874" category="list-text">GCP:<block ref="f4b12042f5e9960850cb7df978f53391" category="inline-link-rx"></block>.</block>
   <block id="4322c3f27520935653ca079f29ce7835" category="inline-link">BlueXP Marketplace 백업 서비스</block>
   <block id="687ea0908739e5e54201ce20b273affd" category="paragraph">가능합니다 <block ref="547d123be3159c364b1c9ac7f7ffe3ae" category="inline-link-macro-rx"></block>. 또한 가능합니다 <block ref="091cc4395662354f7a5868ee2318ef97" category="inline-link-macro-rx"></block> GCP(동일한 지역)의 동일한 또는 다른 Kubernetes 클러스터의 새 볼륨으로.</block>
   <block id="e0f4a3fe1d4244e87316e2896879d0bb" category="paragraph">찾아보기 및 복원의 경우 커넥터를 다음 위치에 설치할 수 있습니다.</block>
@@ -2445,7 +2438,6 @@
   <block id="37e76b4487b7832f9128b16818135e42" category="paragraph">BlueXP 백업 및 복구는 사용량 기반 라이센스를 선불 종량제 모델로 제공합니다. 클라우드 공급자의 마켓플레이스를 통해 구독한 후에는 백업된 데이터의 경우 GiB당 요금을 지불하면 됩니다. 이 경우 즉시 지불이 이루어집니다. 클라우드 공급자가 월별 요금을 청구합니다.</block>
   <block id="4fea63f3003bca68c0d871a18bd18f49" category="paragraph"><block ref="da925d164976c4809988045a567b800b" category="inline-link-macro-rx"></block>.</block>
   <block id="e9318a32b2a89c8bc9343f1169144931" category="list-text">Cloud Volumes ONTAP 및 BlueXP 백업 및 복구를 번들로 제공할 수 있는 "CVO Professional" 계획입니다. 여기에는 이 라이센스에 대해 청구된 Cloud Volumes ONTAP 볼륨에 대한 무제한 백업이 포함됩니다(백업 용량은 라이센스에 포함되지 않음).</block>
-  <block id="2b1667b4af67db4fa2bb15919e8aa0c9" category="list-text">Azure를 사용할 경우 NetApp에서 프라이빗 오퍼를 요청한 다음 BlueXP 백업 및 복구 활성화 중에 Azure Marketplace에서 가입할 때 계획을 선택할 수 있습니다.</block>
   <block id="1f4752c64c2bf1f4ec37455cfd1541c6" category="list-text">GCP를 사용할 경우, BlueXP 백업 및 복구 활성화 중에 Google Cloud 마켓플레이스를 구독할 때 NetApp에서 프라이빗 제안을 요청하고 계획을 선택할 수 있습니다.</block>
   <block id="33022c637d4dd3f13525c167e5f29568" category="section-title">BlueXP 백업 및 복구의 작동 방식</block>
   <block id="831cb37bc0e6807bf3de1b27cba3fa9a" category="inline-image-macro">BlueXP 백업 및 복구가 백업 파일이 있는 소스 시스템 및 대상 객체 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다.</block>
@@ -2524,15 +2516,11 @@
   <block id="e0465a59592d7ef09030b010cdc13806" category="list-text">BlueXP 백업 및 복구 BYOL(Bring-Your-Own-License)은 BlueXP 계정과 연결된 모든 시스템에서 사용할 수 있는 부동 라이센스입니다. 따라서 기존 BYOL 라이센스에서 충분한 백업 용량을 제공하는 경우 다른 BYOL 라이센스를 구입할 필요가 없습니다.</block>
   <block id="96678658f63f300507ecf10ca356941c" category="inline-link-macro">BlueXP 백업 및 복구 사용과 관련된 비용에 대해 자세히 알아보십시오.</block>
   <block id="bdb22ceb7e956464d69db51ce1582f49" category="paragraph"><block ref="bdb22ceb7e956464d69db51ce1582f49" category="inline-link-macro-rx"></block></block>
-  <block id="55a386f7e817e1b8f08941af1c697e0e" category="paragraph">BlueXP 백업 및 복구 30일 무료 평가판은 클라우드 공급자 마켓플레이스의 선불 종량제 구독에서 사용할 수 있습니다. 무료 평가판은 마켓플레이스 목록에 등록할 때 시작됩니다. Cloud Volumes ONTAP 시스템을 배포할 때 마켓플레이스 가입 비용을 지불하고 10일 후에 BlueXP 백업 및 복구 무료 평가판을 시작하면 20일 내에 무료 평가판을 사용할 수 있습니다.</block>
   <block id="aca2e72b026ee1e0a7582484746f43ed" category="inline-link-macro">작동 환경에서 BlueXP 백업 및 복구 등록을 취소합니다</block>
   <block id="e54090ec02cffc5025d030f0a386c9e2" category="paragraph">무료 평가판이 종료되면 중단 없이 자동으로 PAYGO 구독으로 전환됩니다. BlueXP 백업 및 복구를 계속 사용하지 않기로 결정한 경우에만 가능합니다 <block ref="c2935260c294740f9f8b38e657590234" category="inline-link-macro-rx"></block> 평가판 사용 기간이 끝나기 전에는 요금이 부과되지 않습니다.</block>
   <block id="094ba72a3fdb39776632245f235f26be" category="section-title">BlueXP 백업 및 복구 PAYGO 구독을 사용합니다</block>
   <block id="c04968186bb3df4bd0331429c63f8641" category="paragraph">BlueXP 백업 및 복구를 위한 몇 가지 PAYGO 계획이 있습니다.</block>
   <block id="c02893129433d085ea6dfbc155a79562" category="paragraph">다음 링크를 사용하여 클라우드 공급자 마켓플레이스에서 BlueXP 백업 및 복구를 구독하십시오.</block>
-  <block id="cdf5556d637c931d7fb6a645af6fc805" category="paragraph">연간 계약을 구매하여 BlueXP 백업 및 복구에 대한 비용을 매년 지불합니다.</block>
-  <block id="3d573f2479f035108ed1f84b5258233d" category="paragraph">Azure를 사용하는 경우 NetApp 세일즈 담당자에게 연간 계약을 구매하도록 문의하십시오. 이 계약은 Azure 마켓플레이스에서 프라이빗 오퍼로 제공됩니다. NetApp이 프라이빗 오퍼를 공유하면 BlueXP 백업 및 복구 활성화 중에 Azure Marketplace에서 가입할 때 연간 계획을 선택할 수 있습니다.</block>
-  <block id="908abf4dd9a1ea00edbe55bea91d6964" category="paragraph">GCP를 사용할 경우 NetApp 세일즈 담당자에게 연간 계약을 구매할 것을 문의하십시오. 이 계약은 Google Cloud Marketplace에서 프라이빗 오퍼로 제공됩니다. NetApp이 프라이빗 오퍼를 공유하면 BlueXP 백업 및 복구 활성화 중에 Google Cloud 마켓플레이스를 구독할 때 연간 계획을 선택할 수 있습니다.</block>
   <block id="1ef27d8ce33d6626bd77a4ae3f7b5f47" category="section-title">BlueXP 백업 및 복구 BYOL 라이센스 사용</block>
   <block id="5cf4ead1ec9d21f6de70fb6080bd7481" category="paragraph">BYOL BlueXP 백업 및 복구 라이센스는 BlueXP 계정과 연결된 모든 시스템에서 전체 용량을 공유하는 부동 라이센스입니다. ONTAP 시스템의 경우 CLI 명령을 실행하여 필요한 용량을 대략적으로 계산할 수 있습니다<block ref="2a47fed7b3c4b7d59e03f10c018cf5cc" prefix=" " category="inline-code"></block> 백업할 볼륨에 대해 선택합니다.</block>
   <block id="78eb4db020e2c993d3997277acf3700c" category="section-title">BlueXP 백업 및 복구 라이센스 파일을 얻습니다</block>
@@ -4766,4 +4754,22 @@ ONTAP S3</block>
   <block id="f1f644db5655e70aeceadaa6b299010c" category="list-text">BlueXP가 볼륨 데이터를 복원할 때 백업 파일에서 랜섬웨어를 검사하면 백업 파일의 콘텐츠에 액세스하는 데 클라우드 공급자가 추가 이그레스 비용이 발생합니다.</block>
   <block id="705d7d5204c001ada8d7869c065a6a70" category="list-text">아카이브 오브젝트 스토리지로 이동한 백업 파일에서 볼륨 데이터를 복구하려는 경우 클라우드 제공업체에서 GiB당 검색 비용과 요청당 비용이 추가로 부과됩니다.</block>
   <block id="832fd1c3441239683a98428c909ca909" category="list-text">볼륨 데이터를 복원하는 동안 백업 파일에서 랜섬웨어를 검사하려는 경우(클라우드 백업에 DataLock 및 랜섬웨어 보호를 활성화한 경우) 클라우드 공급자로부터 추가 송신 비용이 발생합니다.</block>
+  <block id="aff1f6e6b4bed13be2c27f1b42f5b97f" category="paragraph">클라우드 공급자 마켓플레이스에서 용량제 구독에 등록하는 경우 BlueXP 백업 및 복구 30일 무료 평가판을 사용할 수 있습니다. 무료 평가판은 마켓플레이스 목록에 등록할 때 시작됩니다. Cloud Volumes ONTAP 시스템 구축 시 마켓플레이스 가입에 대한 요금을 지불하고 10일 후에 BlueXP 백업 및 복구 무료 평가판을 시작하면 20일 남짓으로 무료 평가판을 사용할 수 있습니다.</block>
+  <block id="09734c1f0feb893a640f1a5c4dad5854" category="list-text">BYOL 라이센스에서 허용하는 것보다 많은 데이터를 백업하는 경우 용량제 구독을 통해 데이터 백업 및 복원 작업이 계속 수행됩니다. 예를 들어, 10TiB BYOL 라이센스가 있는 경우 PAYGO 구독을 통해 10TiB를 초과하는 모든 용량이 충전됩니다.</block>
+  <block id="a2c77009268b32dd5ee44eefd572a848" category="list-text">AWS:<block ref="4eba767fa6da020c510fbb6b63a04b03" category="inline-link-rx"></block>.</block>
+  <block id="c42a35e18b9a672d50dd1af0d6eaf448" category="list-text">Google 클라우드:<block ref="f4b12042f5e9960850cb7df978f53391" category="inline-link-rx"></block>.</block>
+  <block id="cdd7e27784d77ec2073f18280c473cb5" category="paragraph">연간 계약을 구매하여 BlueXP 백업 및 복구에 대한 비용을 매년 지불합니다. 1년, 2년 또는 3년 기간으로 제공됩니다.</block>
+  <block id="dcaf9868abba1a1ccf50c6343a3d5818" category="paragraph">AWS를 사용할 경우 에서 2개의 연간 계약을 얻을 수 있습니다<block ref="85c21eb306ec4bcbda7252ca6117fc5c" category="inline-link-rx"></block> Cloud Volumes ONTAP 및 온프레미스 ONTAP 시스템의 경우:</block>
+  <block id="bd0202b4a5e368ede75c41822527f8dd" category="inline-link">Azure 마켓플레이스 페이지</block>
+  <block id="94a1eabef6a9a1dbf89023a74aae6ed4" category="paragraph">Azure를 사용하는 경우 에서 두 개의 연간 계약을 사용할 수 있습니다<block ref="d5a65c1c4876b0fa6968c9e08ffea7e8" category="inline-link-rx"></block> Cloud Volumes ONTAP 및 온프레미스 ONTAP 시스템의 경우:</block>
+  <block id="f201c550f444b5128aeb063bf930d1e2" category="inline-link">구독을 Azure 자격 증명에 연결합니다</block>
+  <block id="f6dfd502be982b0f0b182273d94e2cf7" category="paragraph">이 옵션을 사용하려면 마켓플레이스 페이지에서 구독을 설정한 다음<block ref="81924c3896adc46721210987cc1f149c" category="inline-link-rx"></block>. BlueXP에서 하나의 활성 구독만 Azure 자격 증명에 할당할 수 있으므로 이 연간 계약 구독을 사용하여 Cloud Volumes ONTAP 시스템에 대한 비용도 지불하셔야 합니다.</block>
+  <block id="b7cee6af996f21267fdad2eebd5f4c54" category="paragraph">이 옵션을 사용하려면 Cloud Volumes ONTAP 작업 환경을 생성할 때 연간 계약을 설정하면 BlueXP가 Azure 마켓플레이스를 구독하라는 메시지를 표시합니다.</block>
+  <block id="ab788bf4fa445771d4446e36e923ffe4" category="paragraph">GCP를 사용할 경우 NetApp 세일즈 담당자에게 연간 계약을 구매할 것을 문의하십시오. 이 계약은 Google Cloud Marketplace에서 프라이빗 오퍼로 제공됩니다.</block>
+  <block id="c71d991dee047ce8fa870270654b44c0" category="paragraph">NetApp이 프라이빗 오퍼를 공유하면 BlueXP 백업 및 복구 활성화 중에 Google Cloud 마켓플레이스를 구독할 때 연간 계획을 선택할 수 있습니다.</block>
+  <block id="17ffabdffcf9cad7bd6ae2054c4f6e24" category="list-text">사용 중인 계정에 마켓플레이스 PAYGO 계정이 있는 경우 백업 서비스는 계속 실행되지만 PAYGO 라이센스 모델로 전환됩니다. 백업이 사용 중인 용량에 대한 비용이 청구됩니다.</block>
+  <block id="727c837c47e40b96ddd39f15636181fe" category="list-text">복제 정책을 관리합니다</block>
+  <block id="61f06895b4fcad7d6460158ccfc33c17" category="paragraph">BYOL은 기간 기반(1, 2 또는 3년) _ 및 _ 용량 - 1TiB 단위로 사용합니다. 예를 들어, 1년, 최대 용량(10TiB)에 대해 서비스 사용을 위해 NetApp에 비용을 지불합니다.</block>
+  <block id="bc74d224d8eebb9d1f7a6a0cca3c6a3d" category="paragraph">AWS를 사용하는 경우 1, 2 또는 3년 기간에 대해 2개의 연간 계약을 사용할 수 있습니다.</block>
+  <block id="a31db27d8aef7db23d51910ceb960041" category="paragraph">Azure를 사용하는 경우 1, 2 또는 3년 기간에 대해 2개의 연간 계약을 사용할 수 있습니다.</block>
 </blocks>

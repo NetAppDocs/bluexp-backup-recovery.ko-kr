@@ -51,6 +51,7 @@ BlueXP 백업 및 복구는 NetApp의 SnapMirror 데이터 복제 기술을 활�
 +
 ** 한 번에 여러 FlexVol 볼륨을 2차 시스템으로 복제합니다.
 ** UI를 사용하여 복제된 볼륨을 소스 시스템 또는 다른 시스템으로 복원합니다.
+** 복제 정책을 관리합니다
 
 
 
@@ -261,7 +262,7 @@ BlueXP 백업 및 복구는 다음 소비 모델에서 사용할 수 있습니�
 
 === 각자 보유한 라이센스를 가지고 오시기 바랍니다
 
-BYOL은 1TiB 단위로 기간 기반(12, 24 또는 36개월) _ 및 _ 용량 기반 예를 들어, 1년, 최대 용량(10TiB)에 대해 서비스 사용을 위해 NetApp에 비용을 지불합니다.
+BYOL은 기간 기반(1, 2 또는 3년) _ 및 _ 용량 - 1TiB 단위로 사용합니다. 예를 들어, 1년, 최대 용량(10TiB)에 대해 서비스 사용을 위해 NetApp에 비용을 지불합니다.
 
 서비스를 활성화하기 위해 BlueXP 디지털 전자지갑 페이지에 입력한 일련 번호를 받게 됩니다. 두 제한 중 하나에 도달하면 라이센스를 갱신해야 합니다. Backup BYOL 라이센스는 와 관련된 모든 소스 시스템에 적용됩니다 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-netapp-accounts.html["BlueXP 계정"^].
 
@@ -283,7 +284,7 @@ PAYGO 구독을 처음 등록하면 30일 무료 평가판을 사용할 수 있�
 
 ifdef::aws[]
 
-AWS를 사용할 경우 12개월, 24개월 또는 36개월 조건에서 2가지 연간 계약을 사용할 수 있습니다.
+AWS를 사용하는 경우 1, 2 또는 3년 기간에 대해 2개의 연간 계약을 사용할 수 있습니다.
 
 * Cloud Volumes ONTAP 데이터와 사내 ONTAP 데이터를 백업할 수 있는 '클라우드 백업' 계획
 * Cloud Volumes ONTAP 및 BlueXP 백업 및 복구를 번들로 제공할 수 있는 "CVO Professional" 계획입니다. 여기에는 이 라이센스에 대해 청구된 Cloud Volumes ONTAP 볼륨에 대한 무제한 백업이 포함됩니다(백업 용량은 라이센스에 포함되지 않음).
@@ -293,7 +294,11 @@ endif::aws[]
 
 ifdef::azure[]
 
-Azure를 사용할 경우 NetApp에서 프라이빗 오퍼를 요청한 다음 BlueXP 백업 및 복구 활성화 중에 Azure Marketplace에서 가입할 때 계획을 선택할 수 있습니다.
+Azure를 사용하는 경우 1, 2 또는 3년 기간에 대해 2개의 연간 계약을 사용할 수 있습니다.
+
+* Cloud Volumes ONTAP 데이터와 사내 ONTAP 데이터를 백업할 수 있는 '클라우드 백업' 계획
+* Cloud Volumes ONTAP 및 BlueXP 백업 및 복구를 번들로 제공할 수 있는 "CVO Professional" 계획입니다. 여기에는 이 라이센스에 대해 청구된 Cloud Volumes ONTAP 볼륨에 대한 무제한 백업이 포함됩니다(백업 용량은 라이센스에 포함되지 않음).
+
 
 endif::azure[]
 

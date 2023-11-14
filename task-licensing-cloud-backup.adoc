@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-licensing-cloud-backup.html 
-keywords: license, licensing, install, updating license, paygo license, byol license, nlf, license generator, backup license, add backup license, update backup license, annual 
+keywords: license, licensing, updating license, paygo license, byol license, nlf, license generator, backup license, add backup license, update backup license, annual 
 summary: 'BlueXP 백업 및 복구는 클라우드 공급자로부터 용량제로(pay-as-you-go) 또는 연간 시장 가입 서비스를 구입하거나 NetApp에서 구입한 자체 라이센스를 구입하여 라이센스를 구입할 수 있습니다. 작업 환경에서 BlueXP 백업 및 복구를 활성화하고, 프로덕션 데이터의 백업을 만들고, 백업 데이터를 프로덕션 시스템으로 복원하려면 유효한 라이센스가 필요합니다.' 
 ---
 = BlueXP 백업 및 복구에 대한 라이센스를 설정합니다
@@ -30,7 +30,7 @@ link:concept-ontap-backup-to-cloud.html#cost["BlueXP 백업 및 복구 사용과
 
 == 30일 무료 평가판
 
-BlueXP 백업 및 복구 30일 무료 평가판은 클라우드 공급자 마켓플레이스의 선불 종량제 구독에서 사용할 수 있습니다. 무료 평가판은 마켓플레이스 목록에 등록할 때 시작됩니다. Cloud Volumes ONTAP 시스템을 배포할 때 마켓플레이스 가입 비용을 지불하고 10일 후에 BlueXP 백업 및 복구 무료 평가판을 시작하면 20일 내에 무료 평가판을 사용할 수 있습니다.
+클라우드 공급자 마켓플레이스에서 용량제 구독에 등록하는 경우 BlueXP 백업 및 복구 30일 무료 평가판을 사용할 수 있습니다. 무료 평가판은 마켓플레이스 목록에 등록할 때 시작됩니다. Cloud Volumes ONTAP 시스템 구축 시 마켓플레이스 가입에 대한 요금을 지불하고 10일 후에 BlueXP 백업 및 복구 무료 평가판을 시작하면 20일 남짓으로 무료 평가판을 사용할 수 있습니다.
 
 무료 평가판이 종료되면 중단 없이 자동으로 PAYGO 구독으로 전환됩니다. BlueXP 백업 및 복구를 계속 사용하지 않기로 결정한 경우에만 가능합니다 link:task-manage-backups-ontap.html#unregistering-bluexp-backup-and-recovery-for-a-working-environment["작동 환경에서 BlueXP 백업 및 복구 등록을 취소합니다"] 평가판 사용 기간이 끝나기 전에는 요금이 부과되지 않습니다.
 
@@ -41,7 +41,7 @@ BlueXP 백업 및 복구 30일 무료 평가판은 클라우드 공급자 마켓
 사용한 만큼만 지불하는 용량제 방식을 사용하면 클라우드 공급업체에 오브젝트 스토리지 비용을 지불하고, NetApp 백업 라이센스 비용을 단일 정액제로 지불할 수 있습니다. 무료 평가판을 가지고 있거나 BYOL(Bring Your Own License)을 사용하는 경우에도 가입해야 합니다.
 
 * 구독하면 무료 평가판이 종료된 후에도 서비스가 중단되지 않습니다. 평가판이 종료되면 백업하는 데이터의 양에 따라 매시간 요금이 부과됩니다.
-* BYOL 라이센스에서 허용하는 것보다 더 많은 데이터를 백업하는 경우 용량제 가입형 모델을 통해 데이터 백업을 계속 수행할 수 있습니다. 예를 들어, 10TiB BYOL 라이센스가 있는 경우 PAYGO 구독을 통해 10TiB를 초과하는 모든 용량이 충전됩니다.
+* BYOL 라이센스에서 허용하는 것보다 많은 데이터를 백업하는 경우 용량제 구독을 통해 데이터 백업 및 복원 작업이 계속 수행됩니다. 예를 들어, 10TiB BYOL 라이센스가 있는 경우 PAYGO 구독을 통해 10TiB를 초과하는 모든 용량이 충전됩니다.
 
 
 무료 평가판 사용 중 또는 BYOL 라이센스를 초과하지 않는 경우 용량제 구독을 통해 요금이 부과되지 않습니다.
@@ -62,7 +62,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#
 
 ifdef::aws[]
 
-* AWS: https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["가격 세부 정보는 BlueXP Marketplace 오퍼링으로 이동하십시오"^].
+* AWS: https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4["가격 세부 정보는 BlueXP Marketplace 오퍼링으로 이동하십시오"^].
 
 
 endif::aws[]
@@ -76,7 +76,7 @@ endif::azure[]
 
 ifdef::gcp[]
 
-* GCP: https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["가격 세부 정보는 BlueXP Marketplace 오퍼링으로 이동하십시오"^].
+* Google 클라우드: https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["가격 세부 정보는 BlueXP Marketplace 오퍼링으로 이동하십시오"^].
 
 
 endif::gcp[]
@@ -85,11 +85,13 @@ endif::gcp[]
 
 == 연간 계약을 사용합니다
 
-연간 계약을 구매하여 BlueXP 백업 및 복구에 대한 비용을 매년 지불합니다.
+연간 계약을 구매하여 BlueXP 백업 및 복구에 대한 비용을 매년 지불합니다. 1년, 2년 또는 3년 기간으로 제공됩니다.
+
+시장에서 연간 계약을 맺은 경우, 모든 BlueXP 백업 및 복구 소비에 대해 해당 계약에 대해 비용이 청구됩니다. BYOL은 연간 시장 계약을 혼합 및 일치시킬 수 없습니다.
 
 ifdef::aws[]
 
-AWS를 사용할 경우 에서 2개의 연간 계약을 얻을 수 있습니다 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS 마켓플레이스 페이지를 참조하십시오"^] Cloud Volumes ONTAP 및 사내 ONTAP 시스템: 1년, 2년 또는 3년 조건으로 제공됩니다.
+AWS를 사용할 경우 에서 2개의 연간 계약을 얻을 수 있습니다 https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWS 마켓플레이스 페이지를 참조하십시오"^] Cloud Volumes ONTAP 및 온프레미스 ONTAP 시스템의 경우:
 
 * Cloud Volumes ONTAP 데이터와 사내 ONTAP 데이터를 백업할 수 있는 '클라우드 백업' 계획
 +
@@ -108,17 +110,30 @@ endif::aws[]
 
 ifdef::azure[]
 
-Azure를 사용하는 경우 NetApp 세일즈 담당자에게 연간 계약을 구매하도록 문의하십시오. 이 계약은 Azure 마켓플레이스에서 프라이빗 오퍼로 제공됩니다. NetApp이 프라이빗 오퍼를 공유하면 BlueXP 백업 및 복구 활성화 중에 Azure Marketplace에서 가입할 때 연간 계획을 선택할 수 있습니다.
+Azure를 사용하는 경우 에서 두 개의 연간 계약을 사용할 수 있습니다 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-bluexp["Azure 마켓플레이스 페이지"^] Cloud Volumes ONTAP 및 온프레미스 ONTAP 시스템의 경우:
+
+* Cloud Volumes ONTAP 데이터와 사내 ONTAP 데이터를 백업할 수 있는 '클라우드 백업' 계획
++
+이 옵션을 사용하려면 마켓플레이스 페이지에서 구독을 설정한 다음 https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html#subscribe["구독을 Azure 자격 증명에 연결합니다"^]. BlueXP에서 하나의 활성 구독만 Azure 자격 증명에 할당할 수 있으므로 이 연간 계약 구독을 사용하여 Cloud Volumes ONTAP 시스템에 대한 비용도 지불하셔야 합니다.
+
+* Cloud Volumes ONTAP 및 BlueXP 백업 및 복구를 번들로 제공할 수 있는 "CVO Professional" 계획입니다. 여기에는 라이센스를 사용하는 Cloud Volumes ONTAP 시스템에 대한 무제한 백업이 포함됩니다(백업 용량은 라이센스 용량에 포함되지 않음). 이 옵션을 사용하면 사내 ONTAP 데이터를 백업할 수 없습니다.
++
+를 참조하십시오 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAP 라이센스 항목을 참조하십시오"^] 이 라이센스 옵션에 대해 자세히 알아보십시오.
+
++
+이 옵션을 사용하려면 Cloud Volumes ONTAP 작업 환경을 생성할 때 연간 계약을 설정하면 BlueXP가 Azure 마켓플레이스를 구독하라는 메시지를 표시합니다.
+
+
 
 endif::azure[]
 
 ifdef::gcp[]
 
-GCP를 사용할 경우 NetApp 세일즈 담당자에게 연간 계약을 구매할 것을 문의하십시오. 이 계약은 Google Cloud Marketplace에서 프라이빗 오퍼로 제공됩니다. NetApp이 프라이빗 오퍼를 공유하면 BlueXP 백업 및 복구 활성화 중에 Google Cloud 마켓플레이스를 구독할 때 연간 계획을 선택할 수 있습니다.
+GCP를 사용할 경우 NetApp 세일즈 담당자에게 연간 계약을 구매할 것을 문의하십시오. 이 계약은 Google Cloud Marketplace에서 프라이빗 오퍼로 제공됩니다.
+
+NetApp이 프라이빗 오퍼를 공유하면 BlueXP 백업 및 복구 활성화 중에 Google Cloud 마켓플레이스를 구독할 때 연간 계획을 선택할 수 있습니다.
 
 endif::gcp[]
-
-시장에서 연간 계약을 맺은 경우, 모든 BlueXP 백업 및 복구 소비에 대해 해당 계약에 대해 비용이 청구됩니다. BYOL은 연간 시장 계약을 혼합 및 일치시킬 수 없습니다.
 
 
 
@@ -238,7 +253,7 @@ BlueXP 백업 및 복구 라이센스를 사용할 경우, 백업하는 모든 �
 
 BYOL 라이센스가 만료되면 다음 두 가지 상황이 발생할 수 있습니다.
 
-* 사용 중인 계정에 마켓플레이스 계정이 있는 경우 백업 서비스가 계속 실행되지만 PAYGO 라이센스 모델로 이전됩니다. 백업이 사용 중인 용량에 대한 비용이 청구됩니다.
+* 사용 중인 계정에 마켓플레이스 PAYGO 계정이 있는 경우 백업 서비스는 계속 실행되지만 PAYGO 라이센스 모델로 전환됩니다. 백업이 사용 중인 용량에 대한 비용이 청구됩니다.
 * 사용 중인 계정에 마켓플레이스 계정이 없는 경우 백업 서비스가 계속 실행되지만 경고가 계속 표시됩니다.
 
 
