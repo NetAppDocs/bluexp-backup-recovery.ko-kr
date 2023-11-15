@@ -4772,4 +4772,7 @@ ONTAP S3</block>
   <block id="61f06895b4fcad7d6460158ccfc33c17" category="paragraph">BYOL은 기간 기반(1, 2 또는 3년) _ 및 _ 용량 - 1TiB 단위로 사용합니다. 예를 들어, 1년, 최대 용량(10TiB)에 대해 서비스 사용을 위해 NetApp에 비용을 지불합니다.</block>
   <block id="bc74d224d8eebb9d1f7a6a0cca3c6a3d" category="paragraph">AWS를 사용하는 경우 1, 2 또는 3년 기간에 대해 2개의 연간 계약을 사용할 수 있습니다.</block>
   <block id="a31db27d8aef7db23d51910ceb960041" category="paragraph">Azure를 사용하는 경우 1, 2 또는 3년 기간에 대해 2개의 연간 계약을 사용할 수 있습니다.</block>
+  <block id="aa4c67fd3731395f4450c9686b20f799" category="section-title">작업 모니터에서 예약된 작업을 지원합니다</block>
+  <block id="314b40130d46a229c3a19dc5e2e23aa4" category="paragraph">BlueXP 백업 및 복구 작업 모니터는 이전에 모니터링된 예약된 볼륨-오브젝트 저장소 백업 및 복원 작업이지만 UI 또는 API를 통해 예약된 로컬 스냅샷, 복제, 백업 및 복원 작업은 모니터링하지 않습니다.</block>
+  <block id="04c6b318fe9c7f19ae925a90e52c6569" category="paragraph">이제 BlueXP 백업 및 복구 작업 모니터에 로컬 스냅샷, 복제 및 오브젝트 스토리지로의 백업에 대해 예약된 작업이 포함됩니다.</block>
 </blocks>

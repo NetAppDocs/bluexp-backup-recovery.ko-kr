@@ -362,12 +362,7 @@ NOTE: AWS 중국 지역에서 백업을 생성할 때는 IAM 정책의 All_Resou
             "Resource": "arn:aws:s3:::netapp-backup-*",
             "Effect": "Allow",
             "Sid": "backupPolicy"
-        }
-    ]
-}
-{
-    "Version": "2012-10-17",
-    "Statement": [
+        },
         {
             "Action": [
                 "s3:ListBucket",
