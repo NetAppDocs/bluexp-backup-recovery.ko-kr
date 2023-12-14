@@ -466,10 +466,6 @@ link:concept-protection-journey.html#do-you-want-to-create-your-own-object-stora
 
 .단계
 . Amazon VPC 콘솔 또는 명령줄을 사용하여 인터페이스 엔드포인트 구성을 생성합니다. https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html["Amazon S3에 AWS PrivateLink를 사용하는 방법에 대한 자세한 내용을 참조하십시오"^].
-. BlueXP 커넥터와 관련된 보안 그룹 구성을 수정합니다. 정책을 "사용자 지정"("전체 액세스"에서)으로 변경해야 하며 반드시 다음을 수행해야 합니다 <<S3 권한 설정,백업 정책에서 S3 권한을 추가합니다>> 앞서 설명한 것처럼.
-+
-image:screenshot_backup_aws_sec_group.png["Connector와 연결된 AWS 보안 그룹의 스크린샷"]
-
 +
 개인 엔드포인트와 통신하는 데 포트 80(HTTP)을 사용하는 경우 모두 설정됩니다. 지금 클러스터에서 BlueXP 백업 및 복구를 활성화할 수 있습니다.
 
