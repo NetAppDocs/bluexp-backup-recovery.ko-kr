@@ -649,7 +649,6 @@
   <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">커뮤니티</block>
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">문서화</block>
-  <block id="80b1b0d2b1ebf2b3cba2d25759801afd" category="list-text">mailto:ng-cloudmanager-feedback@netapp.com [피드백 이메일]</block>
   <block id="5c37edf1ec718afd1ab9a5a51043e0ce" category="paragraph">다음 단계를 수행하여 빠르게 시작하십시오. 각 단계에 대한 자세한 내용은 이 항목의 다음 섹션을 참조하십시오.</block>
   <block id="db41e7a8de9567fec002e93320c428ad" category="inline-xref">VPC 엔드포인트 인터페이스를 설정하는 방법을 확인하십시오.</block>
   <block id="66aa360897a3e9eeca6d5cd1ad876df5" category="list-text">클러스터는 Connector에서 클러스터 관리 LIF로 인바운드 HTTPS 연결을 필요로 합니다.</block>
@@ -815,7 +814,6 @@
   <block id="360446e3fb6e2087ba1eda4d6e9eafde" category="list-text">노드의 인터클러스터 LIF는 오브젝트 저장소에 액세스할 수 있습니다(Connector가 "어두운" 사이트에 설치된 경우 필요하지 않음).</block>
   <block id="f6428d68ab8312cad4e05d9222dbabc5" category="inline-link">인터넷에 액세스하지 않고 Linux 호스트에 커넥터 설치</block>
   <block id="f4cec0313eb4678996dc68cfe81c6f4f" category="inline-link">Connector 소프트웨어를 업그레이드합니다</block>
-  <block id="9fe942ae01924dd657ce7f1996246cc6" category="section-title">인터넷 연결이 없는 사이트에 대한 지원</block>
   <block id="664bf8c6e31ba8a710f5213d1874cd18" category="list-text">백업 라이센스 파일이 있는 경우(어두운 사이트에 설치할 때 필요) * 라이센스 파일 업로드 * 옵션을 선택하고 메시지에 따라 파일을 첨부합니다.</block>
   <block id="6f44a1bf2246f054fd573ae9473909b6" category="inline-link">오프라인 사이트에 커넥터를 설치하는 방법을 알아봅니다</block>
   <block id="38692e39e588de5b1294ee4cca656080" category="list-text">* BYOL *: 모든 클라우드 공급자와 함께 사용할 수 있는 NetApp에서 구입한 라이센스</block>
@@ -1284,7 +1282,6 @@
   <block id="9a3db1abe5491d0eb9bb5d125981356c" category="paragraph">문제를 해결하는 데 도움이 되는 문서를 찾으려면 BlueXP 기술 자료를 검색하십시오.</block>
   <block id="00c5fef3bb9d593ae96bf5d2ee60354a" category="paragraph">BlueXP 커뮤니티에 가입하여 진행 중인 토론을 팔로우하거나 새 토론을 만드십시오.</block>
   <block id="a4a6c2ea0078252eac2d74ef3e6c917c" category="paragraph">현재 보고 있는 BlueXP 문서입니다.</block>
-  <block id="6702efec14563f45f1ee2f8c613b8ad8" category="paragraph">저희는 귀하의 의견을 소중하게 생각합니다. BlueXP 개선에 도움이 되는 피드백을 제출하십시오.</block>
   <block id="d63bf50426f4c712554faec55b30c548" category="list-text">* 서비스 *: 문제와 관련된 서비스를 선택합니다. 예를 들어, 서비스 내의 워크플로우 또는 기능과 관련된 기술 지원 문제에 해당하는 BlueXP를 예로 들 수 있습니다.</block>
   <block id="aa996e20900197b0ea41485ada083d8c" category="paragraph">작업 환경 목록은 서비스의 상단 배너에서 선택한 BlueXP 계정, 작업 영역 및 커넥터의 범위 내에 있습니다.</block>
   <block id="d4f4c5ccc817cf84f5825246d829cabe" category="list-text">Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다.</block>
@@ -3893,24 +3890,17 @@ ifdef::AWS[]</block>
   <block id="60983b9ebaa7c40f57184dcb60af2fc0" category="inline-link">BlueXP에서 Google Cloud Storage 버킷을 생성합니다</block>
   <block id="5e91843f25a40c882d43652a02c8f50e" category="list-text"><block ref="5e91843f25a40c882d43652a02c8f50e" category="inline-link-rx"></block></block>
   <block id="bd83bdfad11f4eb2160cecbaafa5771f" category="section-title">사용 중인 BlueXP Connector 배포 모드</block>
-  <block id="4b758548b6a16028d0d7c1e443c285bd" category="paragraph">BlueXP를 사용하여 스토리지를 관리하는 경우 BlueXP 커넥터가 이미 설치되어 있습니다. BlueXP 백업 및 복구와 동일한 커넥터를 사용하려는 경우 모두 설정됩니다. 다른 Connector를 사용해야 하는 경우 백업 및 복구 구현을 시작하기 전에 설치해야 합니다.</block>
   <block id="40f7e0f171ae7f38e670d73e8a4c284b" category="paragraph">BlueXP는 비즈니스 및 보안 요구 사항을 충족하는 방식으로 BlueXP를 사용할 수 있는 다양한 배포 모드를 제공합니다. _표준 모드_ 는 BlueXP SaaS 계층을 활용하여 모든 기능을 제공하며, 연결 제한이 있는 조직에서는 _restricted mode_ 및 _private mode_를 사용할 수 있습니다.</block>
   <block id="fb67e88bd0479a55df78c8a83275d5e7" category="inline-link">BlueXP 배포 모드에 대한 비디오를 시청하십시오</block>
   <block id="72e192cdf7601017af8b339164635167" category="paragraph"><block ref="2f5063518a76fb11ac58b566cf1a20ab" category="inline-link-rx"></block>.
 <block ref="86b5ac5922ab7c62d6a8a3ff686cf32a" category="inline-link-rx"></block>.</block>
-  <block id="b41bae1862cc28338655904ad32e407e" category="section-title">완벽한 인터넷 연결이 가능한 사이트 지원</block>
   <block id="0f8751300c4a6857f8a492b7f39fba12" category="inline-link-macro">지원되는 전체 백업 대상 목록을 참조하십시오</block>
-  <block id="df28403f823a8cccd6d3aa652ebe7892" category="paragraph">전체 인터넷 연결("표준 모드" 또는 "SaaS 모드"라고도 함)이 있는 사이트에서 BlueXP 백업 및 복구를 사용하는 경우 BlueXP에서 관리하는 온프레미스 ONTAP 또는 Cloud Volumes ONTAP 시스템에서 복제된 볼륨을 생성할 수 있습니다. 또한 지원되는 클라우드 공급자의 오브젝트 스토리지에 백업 파일을 생성할 수 있습니다. <block ref="53011d10cc707465ef24eb421fc1dc04" category="inline-link-macro-rx"></block>.</block>
-  <block id="cd6458cee7347b844e32d364eccbaa5c" category="paragraph">유효한 커넥터 위치 목록에 대한 백업 파일을 만들려는 클라우드 공급자의 백업 항목을 참조하십시오. Connector를 Linux 시스템에 수동으로 설치하거나 특정 클라우드 공급자에 배포해야 하는 몇 가지 제한 사항이 있습니다.</block>
   <block id="2e87d4ef1e0516d893da73de140af706" category="inline-link-macro">Cloud Volumes ONTAP 데이터를 Azure Blob에 백업합니다</block>
   <block id="32f34f4c2eca6b21bfa54bfe2cf7ad10" category="inline-link-macro">온프레미스 ONTAP 데이터를 Azure Blob에 백업</block>
   <block id="a6102a3b147e0d099222dfd5f8fa1b0b" category="inline-link-macro">Cloud Volumes ONTAP 데이터를 Google Cloud에 백업합니다</block>
   <block id="ee45da3db51b4bd67f3174dd7bdd4bc3" category="inline-link-macro">사내 ONTAP 데이터를 Google Cloud에 백업합니다</block>
-  <block id="2714d7e7e24c727c2c54bb6ba96c4617" category="section-title">인터넷 연결이 제한된 사이트에 대한 지원</block>
-  <block id="e5f27584b8554a76c0aba2da480263ad" category="paragraph">BlueXP 백업 및 복구는 제한된 인터넷 연결("제한 모드"라고도 함)을 사용하여 볼륨 데이터를 백업하는 사이트에서 사용할 수 있습니다. 이 경우 제한된 영역에 BlueXP 커넥터를 배포해야 합니다.</block>
   <block id="8f573a29259b458aa4c98898b8a3c1ab" category="list-text">AWS 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3에 백업할 수 있습니다. 자세한 내용은 를 참조하십시오 <block ref="b4a611717e08ba4c0f2fa5390556e4e1" category="inline-link-macro-rx"></block>.</block>
   <block id="322dc3fe4f51cc3ad6da0648bfc1aaf0" category="list-text">Azure 상용 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Azure Blob으로 백업할 수 있습니다. 자세한 내용은 를 참조하십시오 <block ref="d0f49153a0d69289bf4d240d8900efdd" category="inline-link-macro-rx"></block>.</block>
-  <block id="ef96453aea07412d08268c286055e516" category="paragraph">BlueXP 백업 및 복구는 인터넷 연결이 없는 사이트("비공개 모드" 또는 "다크" 사이트라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 경우 동일한 사이트의 Linux 호스트에 BlueXP 커넥터를 배포해야 합니다.</block>
   <block id="b9f0ffe30c24fa412122cf8fe6926b64" category="summary">ONTAP 볼륨 데이터의 백업은 백업을 생성한 위치, 스냅샷 복사본, 복제된 볼륨 및/또는 오브젝트 스토리지에 저장된 백업에서 사용할 수 있습니다. 이러한 백업 위치에서 특정 시점의 데이터를 복원할 수 있습니다. 백업 파일에서 전체 ONTAP 볼륨을 복원하거나 몇 개의 파일만 복원해야 하는 경우 폴더 또는 개별 파일을 복원할 수 있습니다.</block>
   <block id="bb03c52ec2a68c9eed4513c8ecf6c24d" category="doc">백업 파일에서 ONTAP 데이터를 복원합니다</block>
   <block id="d3d3d7f1f9c466e1fcd09795d11d7fda" category="paragraph">ONTAP 볼륨 데이터의 백업은 오브젝트 스토리지에 저장된 Snapshot 복사본, 복제된 볼륨 및 백업 등 백업을 생성한 위치에서 사용할 수 있습니다. 이러한 백업 위치에서 특정 시점의 데이터를 복원할 수 있습니다. 백업 파일에서 전체 ONTAP 볼륨을 복원하거나 몇 개의 파일만 복원해야 하는 경우 폴더 또는 개별 파일을 복원할 수 있습니다.</block>
@@ -4775,4 +4765,13 @@ ONTAP S3</block>
   <block id="d022d12f96f41872be0c2dbe7f553aa5" category="list-text">보고서 선택에 따라 보고서 탭(로컬 스냅샷, 복제 또는 백업)을 검토합니다.</block>
   <block id="93f66acb069f7a06ab0ee856c98d2746" category="paragraph"><block ref="93f66acb069f7a06ab0ee856c98d2746" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f803143ce95b805b1f67a186b607f0a2" category="paragraph">정책, 스냅샷 레이블, 작업 유형(보호, 복원, 보존 또는 기타), 볼륨의 사용자 지정 태그 및 보호 유형(로컬 스냅샷, 복제 또는 클라우드에 백업) 등의 여러 필터를 사용하여 작업 모니터링 페이지에서 작업을 필터링할 수 있습니다.</block>
+  <block id="ed1a67a206c44665ed4e8af600e8efb0" category="admonition">스냅샷의 이름이 고유해야 합니다. 그렇지 않으면 복구 작업이 제대로 작동하지 않습니다.</block>
+  <block id="1dc07a81431924d105e577843fab46a1" category="paragraph">BlueXP를 사용하여 스토리지를 관리하는 경우 BlueXP 커넥터가 이미 설치되어 있습니다. BlueXP 백업 및 복구와 동일한 커넥터를 사용하려는 경우 모두 설정됩니다. 다른 Connector를 사용해야 하는 경우 백업 및 복구 구현을 시작하기 전에 해당 Connector를 배포해야 합니다.</block>
+  <block id="a291b3163a4794d9131365f0a3dcc467" category="section-title">표준 모드 사용 시 지원</block>
+  <block id="df8cd79f58be84231ee05f3d91442113" category="paragraph">BlueXP 백업 및 복구는 완벽한 인터넷 연결을 통해 표준 모드 사이트에서 완벽하게 지원됩니다. 이 경우 BlueXP에서 관리하는 모든 온프레미스 ONTAP 또는 Cloud Volumes ONTAP 시스템에서 복제된 볼륨을 생성하고, 지원되는 모든 클라우드 공급자의 오브젝트 스토리지에 백업 파일을 생성할 수 있습니다. <block ref="53011d10cc707465ef24eb421fc1dc04" category="inline-link-macro-rx"></block>.</block>
+  <block id="655545eef6e8f8de57e231bcae036156" category="paragraph">유효한 커넥터 위치 목록에 대한 백업 파일을 만들려는 클라우드 공급자의 백업 항목을 참조하십시오. 커넥터가 특정 클라우드 공급자에 배포되거나 Linux 시스템에 수동으로 설치되는 경우 몇 가지 제한이 있을 수 있습니다.</block>
+  <block id="ef4fa6e95e8fb4a58af199a2ba2b425e" category="section-title">제한된 모드 사용 시 지원</block>
+  <block id="1667d929b1ab016a8cfa3414df6283ee" category="paragraph">BlueXP 백업 및 복구는 제한된 인터넷 연결을 통해 제한된 모드 사이트에서 지원됩니다. 이 경우 제한된 클라우드 공급자 세트에만 백업 파일을 생성할 수 있습니다. BlueXP Connector를 제한된 지역에 구축해야 합니다.</block>
+  <block id="43c11931374ad33282cc54a70addc852" category="section-title">비공개 모드를 사용할 때 지원됩니다</block>
+  <block id="db8e2db8da88a405c16b644f4e2e7271" category="paragraph">BlueXP 백업 및 복구는 인터넷에 연결되지 않은 프라이빗 모드 사이트에서 지원됩니다. 이 경우 제한된 오브젝트 스토리지 공급자 세트에만 백업 파일을 생성할 수 있습니다. BlueXP Connector를 동일한 온프레미스 사이트의 Linux 호스트에 구축해야 합니다.</block>
 </blocks>
