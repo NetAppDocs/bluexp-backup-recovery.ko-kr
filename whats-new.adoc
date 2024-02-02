@@ -18,6 +18,18 @@ BlueXP 백업 및 복구의 새로운 기능에 대해 알아보십시오.
 
 
 
+== 2024년 2월 1일
+
+
+
+=== 가상 머신을 위한 BlueXP 백업 및 복구 기능 개선
+
+* 가상 시스템을 대체 위치로 복구하는 기능을 지원합니다
+* 데이터 저장소 보호 해제 지원
+
+
+
+
 == 2023년 12월 15일
 
 
@@ -70,14 +82,6 @@ BlueXP 백업 및 복구를 통해 클라우드 스토리지에서 Cloud Volumes
 Cloud Volumes ONTAP 대상 시스템에서 ONTAP 버전 9.13.0 이상을 실행해야 합니다. https://docs.netapp.com/us-en/bluexp-backup-recovery/task-restore-backups-ontap.html["데이터 복원에 대해 자세히 알아보십시오"].
 
 BlueXP 백업 및 복구 작업 모니터에는 빠른 복원 작업의 진행률에 대한 정보도 표시됩니다.
-
-
-
-=== 온프레미스 ONTAP 데이터를 StorageGRID 버킷 보존이 증가
-
-이제 StorageGRID는 BlueXP 백업 및 복구의 온프레미스 ONTAP 데이터 백업을 단일 버킷에 최대 30개까지 유지할 수 있습니다. 이전에는 버킷에 최대 7개의 백업이 있었습니다.
-
-https://docs.netapp.com/us-en/bluexp-backup-recovery/task-backup-onprem-private-cloud.html["사내 ONTAP 데이터를 StorageGRID에 백업하는 방법에 대해 자세히 알아보십시오"].
 
 
 

@@ -182,15 +182,9 @@ BlueXP 백업 및 복구 BYOL 라이센스의 경우, 라이센스 기간 및 �
         },
 ----
 ====
-[NOTE]
-====
-AWS GovCloud 또는 AWS 중국 지역에서 백업을 생성하는 경우 위와 아래의 권한 집합의 All_Resource_section에서 AWS 리소스 이름 "arn"을 변경해야 합니다.
 
-* AWS GovCloud 지역의 경우 "AWS"를 "AWS-us-gov"로 변경해야 합니다(예 `arn:aws-us-gov:s3:::netapp-backup-*`.
-* AWS 중국 지역의 경우 "AWS"를 "AWS-cn"으로 변경해야 합니다(예 `arn:aws-cn:s3:::netapp-backup-*`.
+NOTE: AWS 중국 지역에서 백업을 생성할 때는 IAM 정책의 All_Resource_섹션에서 AWS 리소스 이름 "arn"을 "AWS"에서 "AWS-cn"으로 변경해야 합니다 `arn:aws-cn:s3:::netapp-backup-*`.
 
-
-====
 필요한 AWS Cloud Volumes ONTAP 권한:: Cloud Volumes ONTAP 시스템에서 ONTAP 9.12.1 이상의 소프트웨어를 실행하는 경우, 권한이 있는 작업 환경을 제공하는 IAM 역할에는 최신 버전의 BlueXP 백업 및 복구를 위한 새로운 S3 권한 세트가 포함되어야 합니다 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-set-up-iam-roles.html["Cloud Volumes ONTAP 정책"^].
 +
 --

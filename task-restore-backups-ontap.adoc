@@ -23,9 +23,6 @@ ONTAP 볼륨 데이터의 백업은 오브젝트 스토리지에 저장된 Snaps
 
 백업 파일에서 운영 시스템으로 데이터를 복원하려면 유효한 BlueXP 백업 및 복구 라이센스가 필요합니다.
 
-
-NOTE: 스냅샷의 이름이 고유해야 합니다. 그렇지 않으면 복구 작업이 제대로 작동하지 않습니다.
-
 요약하면, 볼륨 데이터를 ONTAP 작업 환경으로 복원하는 데 사용할 수 있는 유효한 플로입니다.
 
 * 백업 파일 -> 복원된 볼륨
@@ -234,13 +231,10 @@ image:screenshot_restore_volume_selection.png["Restore Dashboard에서 Restore V
 
 . Select Source_페이지에서 복원하려는 볼륨의 백업 파일로 이동합니다. 복원할 날짜/시간 스탬프가 있는 * Working Environment *, * Volume * 및 * Backup * 파일을 선택합니다.
 +
-필요에 따라 사용자 지정 태그를 검색하여 특정 태그가 있는 볼륨만 나열합니다.
-
-+
-image:screenshot_restore_select_volume_snapshot2.png["복원할 작업 환경, 볼륨 및 볼륨 백업 파일을 선택하는 스크린샷."]
-
-+
 Location * 열에는 백업 파일(스냅샷)이 * Local * (소스 시스템의 스냅샷 복사본), * Secondary * (보조 ONTAP 시스템의 복제된 볼륨) 또는 * Object Storage * (오브젝트 스토리지의 백업 파일)인지 여부가 표시됩니다. 복원할 파일을 선택합니다.
+
++
+image:screenshot_restore_select_volume_snapshot.png["복원할 작업 환경, 볼륨 및 볼륨 백업 파일을 선택하는 스크린샷."]
 
 . 다음 * 을 클릭합니다.
 +
