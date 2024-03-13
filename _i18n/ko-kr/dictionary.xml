@@ -932,7 +932,6 @@
   <block id="57beb7405f0a1c7bc500e793294e4d80" category="list-text">S3:GetBucketLocation</block>
   <block id="2575b79b2cd768a027306db8b9e8614a" category="list-text">S3:GetObjectVersion</block>
   <block id="e3e16bb73c0250a6a229fb457b4f957e" category="section-title">제한 사항</block>
-  <block id="6c28e9f31a1540537e96cfb66aff6920" category="list-text">백업 정책에 아카이브 스토리지를 구성한 경우 DataLock 및 랜섬웨어 보호를 사용할 수 없습니다.</block>
   <block id="96832c8d3beeed50f75c2178388e9ff6" category="list-text">DataLock을 활성화하면 모든 볼륨 백업이 잠깁니다. 단일 클러스터에 대해 잠긴 볼륨 백업과 잠기지 않은 볼륨 백업을 혼합하여 사용할 수 없습니다.</block>
   <block id="f5ef24e218bb7a52732b62958bb89c68" category="list-text">백업 파일에서 랜섬웨어 공격을 검색하고 감염된 백업을 자동으로 제거/교체합니다.</block>
   <block id="3f28b1a3a0b3b6c8294e56323ec13e18" category="list-text">오래된 백업 파일을 아카이브 스토리지에 계층화하여 비용 절감</block>
@@ -1052,8 +1051,6 @@
   <block id="5a7e671d36e7ddbd948f2001988ffe33" category="inline-link">자세한 내용은 StorageGRID 문서를 참조하십시오</block>
   <block id="168036087bcdae960471ab9c23a03efa" category="list-text">오브젝트 저장소 버킷에서 StorageGRID 오브젝트 버전 관리를 수동으로 활성화할 수는 없습니다.</block>
   <block id="7ada527d1dd84b409531cc41597f383e" category="paragraph">원래 작업 환경의 볼륨, 동일한 클라우드 계정을 사용하는 다른 작업 환경의 볼륨 또는 온프레미스 ONTAP 시스템의 볼륨으로 * 폴더 * 를 복원할 수 있습니다.</block>
-  <block id="d04e8ed2daf2cfbac4df96c77bda4638" category="cell">폴더 스타일 구조를 탐색하여 단일 백업 파일 내에서 볼륨, 폴더 또는 파일을 찾습니다</block>
-  <block id="7a035a915239cf76211880a31a8e3764" category="cell">전체 또는 일부 볼륨 이름, 전체 폴더/파일 이름, 크기 범위 및 추가 검색 필터를 사용하여 * 모든 백업 파일 * 에서 볼륨, 폴더 또는 파일을 검색합니다</block>
   <block id="abbf2484b45da9fd7be677fe96c511eb" category="inline-xref">찾아보기 및 amp; 복원을 사용하여 폴더와 파일을 복원합니다</block>
   <block id="17c981b300f2af812caf64b9a2093463" category="list-text"><block ref="19fee869bed89515b1fdf17b227a6fea" category="inline-xref-macro-rx"></block></block>
   <block id="8996e9eaff78ab540aab279a66de20ac" category="inline-xref">검색 및 amp;Restore를 사용하여 볼륨, 폴더 및 파일을 복원합니다</block>
@@ -2733,7 +2730,6 @@
   <block id="fa1ec4e51afd35e28a50d8d0539c45d1" category="paragraph">UI, 스크립트 또는 수동으로 플러그인을 배포할 수 있습니다.</block>
   <block id="c870531773e82c374eb4125c8029e25e" category="inline-link">커넥터 간 전환</block>
   <block id="f7ee644dab1f17ea82c6cfcd19e39fae" category="paragraph">각 백업 정책은 백업 파일에 적용할 수 있는 _Labels &amp; Retention_ 섹션을 제공합니다. 볼륨에 적용된 스냅샷 정책은 BlueXP 백업 및 복구 또는 백업 파일이 인식하는 정책 중 하나여야 합니다.</block>
-  <block id="1152b46be2b09f9273e95c2cb3ead800" category="paragraph">이 두 기능 모두 백업 파일을 보호하므로 랜섬웨어 공격이 시도할 경우 언제든지 데이터를 복구할 수 있는 유효한 백업 파일이 있습니다. 백업을 일정 기간 동안 잠그고 유지해야 하는 특정 규정 요구 사항을 충족하는 것도 도움이 됩니다. DataLock 및 랜섬웨어 보호가 활성화되면 BlueXP 백업 및 복구 활성화의 일부로 프로비저닝되는 클라우드 버킷에서 오브젝트 잠금 및 오브젝트 버전 관리가 활성화됩니다.</block>
   <block id="f3ec603ab9c35660f371c0fc057b7fd1" category="list-text">클러스터는 ONTAP 9.11.1 이상을 실행해야 합니다</block>
   <block id="4f411ed71b5f872404c482a3c45285e2" category="list-text">클러스터는 ONTAP 9.12.1 이상을 실행해야 합니다</block>
   <block id="43757ece62940efe206ed418c8c8f76b" category="list-text">StorageGRID 시스템은 11.6.0.3 이상을 실행해야 합니다</block>
@@ -2763,7 +2759,6 @@
   <block id="40d2dc321bf0d1e8c62d93ca99421fb6" category="inline-link">자세한 내용은 BlueXP 배포 모드를 참조하십시오</block>
   <block id="98eef7e95983b72b4d417c12eaef0df7" category="inline-link">Azure에서 표준 모드로 커넥터 배포(전체 인터넷 액세스)</block>
   <block id="25ea6f476e6d2e28d6075e5526758673" category="inline-link">제한된 모드로 커넥터 설치(제한된 아웃바운드 액세스)</block>
-  <block id="b5e4425a80571820c3fc81b638ce52be" category="summary">BlueXP 백업 및 복구 서비스(클라우드 백업)는 온프레미스 및 클라우드 모두에서 NetApp ONTAP 데이터, Kubernetes 영구 볼륨, 데이터베이스 및 가상 시스템에 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.</block>
   <block id="d1ce73c34fafec004ce6d188a1769e33" category="list-text">커넥터는 전체 인터넷 액세스("표준 모드")가 있는 사이트나 제한된 인터넷 연결("제한 모드")으로 설치할 수 있습니다.</block>
   <block id="0e58108645de369af6e83522b7945f2b" category="inline-link">표준 모드(전체 인터넷 액세스)로 AWS에 커넥터 구축</block>
   <block id="5d8a63e586bb4dfbba4ae7d992161e1c" category="admonition">시스템의 ONTAP 버전이 9.13.1 미만인 경우, 백업 파일이 DataLock 및 랜섬웨어로 구성되어 있으면 폴더나 파일을 복원할 수 없습니다. 이 경우 백업 파일에서 전체 볼륨을 복원한 다음 필요한 파일에 액세스할 수 있습니다.</block>
@@ -3785,7 +3780,6 @@ ifdef::AWS[]</block>
   <block id="639b6c8b0a4b4e6743387986d9aba196" category="paragraph">BlueXP 백업 및 복구는 볼륨의 초기 백업을 수행하기 시작합니다. 복제된 볼륨 및 백업 파일의 기본 전송에는 운영 스토리지 시스템 데이터의 전체 복사본이 포함됩니다. 후속 전송에는 스냅샷 복사본에 포함된 기본 데이터의 차등 복사본이 포함됩니다.</block>
   <block id="fab7b62aef677a7dfc0c2e880e574c3e" category="paragraph">S3 버킷은 입력한 S3 액세스 키와 비밀 키로 표시된 서비스 계정에 생성되고 백업 파일이 여기에 저장됩니다. 백업 상태를 모니터링할 수 있도록 볼륨 백업 대시보드가 표시됩니다.</block>
   <block id="ed551a4fb3427a3e9827d73589a57272" category="admonition">이러한 정책 설정은 객체 스토리지로의 백업에만 해당됩니다. 이러한 설정은 스냅샷 또는 복제 정책에 영향을 주지 않습니다. 스냅샷 및 복제에 대한 유사한 정책 설정이 나중에 추가됩니다.</block>
-  <block id="17fe40afa4bdb095e9bf108ac5b5b34c" category="paragraph">DataLock은 변경 불가능한 스토리지라고도 하는 특정 기간 동안 백업 파일이 수정되거나 삭제되지 않도록 보호합니다. 이 기능은 오브젝트 스토리지 공급자의 기술을 '오브젝트 잠금'에 사용합니다. 백업 파일이 잠기고 유지되는 기간을 DataLock 보존 기간이라고 합니다. 이 값은 사용자가 정의한 백업 정책 스케줄 및 보존 설정과 14일 버퍼를 기반으로 합니다. 30일 미만의 모든 DataLock 보존 정책은 최소 30일로 반올림됩니다.</block>
   <block id="9c4425b75076fc68c1827b9effcc5a6b" category="summary">BlueXP 백업 및 복구 서비스를 사용하면 소스 볼륨의 복사본을 최대 3개까지 생성하여 데이터를 보호할 수 있습니다. 볼륨에서 이 서비스를 활성화할 때 선택할 수 있는 옵션은 여러 가지가 있으므로 준비가 되도록 선택 사항을 검토해야 합니다.</block>
   <block id="abb8243f73c63e089a9cc6cdf95785b2" category="paragraph">다음 옵션을 살펴보겠습니다.</block>
   <block id="9aa0d02835133517fefa42429e73ace5" category="list-text">스냅샷 복사본, 복제된 볼륨 및/또는 클라우드로 백업 등 사용할 보호 기능이 제공됩니다</block>
@@ -3877,8 +3871,6 @@ ifdef::AWS[]</block>
   <block id="385ec83416d2acacbf83c42099e5828e" category="list-text">복제된 볼륨 -&gt; 복원된 볼륨</block>
   <block id="294431832876ce9e39076e7ab6f99361" category="list-text">Snapshot 복사본 -&gt; 복원된 볼륨</block>
   <block id="d111236cacc86fadca19453883d94b63" category="paragraph">이 표에서는 두 가지 방법의 기능을 비교합니다.</block>
-  <block id="69c1077679bcc01dbd9a597c194c6524" category="cell">클라우드에서 복구할 경우 계정당 필요한 추가 버킷 및 퍼블릭 클라우드 공급자 리소스가 필요합니다</block>
-  <block id="c97cce3cb42ee080e929331eb7a9798e" category="cell">클라우드에서 복구할 경우 백업 및 볼륨에서 검색 결과를 검색할 때 추가 비용이 필요합니다</block>
   <block id="36bce3524e4446bfe42ccad6f813430a" category="paragraph">이 표는 백업 파일이 있는 위치를 기준으로 유효한 복원 작업 목록을 제공합니다.</block>
   <block id="a09aa546b6aa449c6baf91e8d0ebb636" category="cell">백업 유형</block>
   <block id="cdabcc59f5dffd726bced2c44fc05f05" category="cell">* 볼륨 복원 *</block>
@@ -3916,7 +3908,6 @@ ifdef::AWS[]</block>
   <block id="ad6bf5019644500ff1f18cebc8bf54f5" category="list-text">Filter by_영역에서 필터 기준을 선택합니다. 예를 들어 데이터가 있는 작업 환경과 파일 형식(예: .jpeg 파일)을 선택할 수 있습니다. 또는 오브젝트 스토리지에서 사용 가능한 스냅샷 복사본 또는 백업 파일 내에서만 결과를 검색하려면 백업 위치 유형을 선택할 수 있습니다.</block>
   <block id="ad87a13113d9bb0f9c5379dc1a793fcb" category="list-text">복원할 데이터가 있는 리소스를 찾고 * 모든 백업 보기 * 를 클릭하여 일치하는 볼륨, 폴더 또는 파일이 포함된 모든 백업 파일을 표시합니다.</block>
   <block id="66786dceb7a3e837a21752a2db70307e" category="list-text">데이터를 복원하는 데 사용할 백업 파일을 찾고 * 복원 * 을 클릭합니다.</block>
-  <block id="1b2207e0e63b5e8d114fd13b0ecb4a7e" category="paragraph">검색 결과에 파일이 포함된 로컬 볼륨 스냅샷 복사본도 포함됩니다. 클라우드 백업 파일 또는 스냅샷 복사본에서 복원할 수 있습니다.</block>
   <block id="98ed4c44ab8a3c8a5b08f8e91a585c40" category="list-text">BYOL 라이센스를 사용하는 경우 PAYGO 구독을 등록하는 것이 좋습니다. BYOL 라이센스에서 허용하는 것보다 더 많은 데이터를 백업하거나 라이센스 기간이 만료되면 용량제 가입형 모델을 통해 백업이 계속 진행되므로 서비스가 중단되지 않습니다.</block>
   <block id="f717b8ed4d751174af9f9438951b9a4f" category="section-title">2023년 7월 6일</block>
   <block id="10ffd42b58d1ced7127bffaff7185e32" category="section-title">이제 BlueXP 백업 및 복구에는 스냅샷 복사본 및 복제된 볼륨을 예약 및 생성하는 기능이 포함되어 있습니다</block>
@@ -4561,20 +4552,16 @@ ONTAP S3</block>
   <block id="fb2530f9293a4ba59cfd3ca6492bb972" category="section-title">2023년 10월 23일</block>
   <block id="176b76bad16e5fd8729393946eb26540" category="paragraph">BlueXP 백업 및 복구를 통해 클라우드 스토리지에서 Cloud Volumes ONTAP 시스템으로 볼륨을 "빠르게 복원"할 수 있습니다. 빠른 복원은 가능한 한 빨리 볼륨에 대한 액세스를 제공해야 하는 재해 복구 상황에 이상적입니다. 빠른 복원은 전체 백업 파일을 복원하는 대신 백업 파일의 메타데이터를 볼륨으로 복원합니다.</block>
   <block id="209a2213c8478f88b6a43752e3a502ac" category="paragraph">백업 파일에서 볼륨을 복원할 때 BlueXP 백업 및 복구는 백업의 데이터를 사용하여 _new_volume을 생성합니다. 오브젝트 스토리지의 백업을 사용하는 경우 데이터를 원래 작업 환경의 볼륨, 소스 작업 환경과 동일한 클라우드 계정에 있는 다른 작업 환경 또는 사내 ONTAP 시스템에 복원할 수 있습니다.</block>
-  <block id="896c3888b79484c9760825887d60adb2" category="paragraph">ONTAP 9.13.0 이상을 사용하여 클라우드 백업을 Cloud Volumes ONTAP 시스템으로 복원하는 경우 "빠른 복원" 작업을 수행할 수 있습니다. 빠른 복원은 가능한 한 빨리 볼륨에 대한 액세스를 제공해야 하는 재해 복구 상황에 이상적입니다. 빠른 복원은 전체 백업 파일을 복원하는 대신 백업 파일의 메타데이터를 볼륨으로 복원합니다. 빠른 복원은 성능이나 지연 시간에 민감한 애플리케이션에는 권장되지 않으며 아카이빙된 스토리지의 백업에는 지원되지 않습니다.</block>
   <block id="d32e1d93e3ad3960f0013d75a50ca107" category="admonition">빠른 복원은 클라우드 백업이 생성된 소스 시스템에서 ONTAP 9.12.1 이상을 실행 중인 경우에만 FlexGroup 볼륨에 대해 지원됩니다. 또한 소스 시스템에서 ONTAP 9.11.0 이상을 실행 중인 경우에만 SnapLock 볼륨에 대해 지원됩니다.</block>
   <block id="2f7ffcf09fd8291d200be9f94baef41d" category="list-text">복원된 볼륨에 사용할 이름을 입력하고 볼륨이 상주하는 스토리지 VM 및 Aggregate를 선택합니다. FlexGroup 볼륨을 복원할 때 여러 애그리게이트를 선택해야 합니다. 기본적으로 * &lt;source_volume_name&gt;_restore * 가 볼륨 이름으로 사용됩니다.</block>
-  <block id="fcde2c072e8aee2aa6a09b37c7ceee0a" category="paragraph">ONTAP 9.13.0 이상을 사용하여 오브젝트 스토리지에서 Cloud Volumes ONTAP 시스템으로 백업을 복원할 때 "빠른 복원" 작업을 수행할 수 있습니다.</block>
   <block id="8744543543bca2e8e7812d7c7a8f7f81" category="paragraph">백업 파일에서 _full volume_을(를) 복원하면 BlueXP 백업 및 복구에서 백업의 데이터를 사용하여 _new_volume을(를) 생성합니다. 데이터를 원래 작업 환경에서 볼륨 형태로 복원하거나, 소스 작업 환경과 동일한 클라우드 계정에 있는 다른 작업 환경 또는 사내 ONTAP 시스템에 복원할 수 있습니다.</block>
   <block id="a6d6bf68742281a10bad1dc24bbe8bfc" category="paragraph">폴더 또는 파일 _ 을(를) 원래 볼륨 위치, 동일한 작업 환경의 다른 볼륨, 동일한 클라우드 계정을 사용하는 다른 작업 환경 또는 온-프레미스 ONTAP 시스템의 볼륨으로 복원할 수 있습니다.</block>
-  <block id="0662a540906c0c217caad41d6b214451" category="list-text">빠른 복원은 클라우드 백업이 생성된 소스 시스템에서 ONTAP 9.12.1 이상을 실행 중인 경우에만 FlexGroup 볼륨에 대해 지원됩니다. SnapLock 볼륨의 빠른 복원은 클라우드 백업이 생성된 소스 시스템에서 ONTAP 9.11.0 이상을 실행 중인 경우에만 지원됩니다. FlexVol 볼륨에 대한 최소 요구사항은 없습니다.</block>
   <block id="9ea8586e1304278c3a05061b433c1169" category="list-text">볼륨의 경우 원래 대상 작업 환경을 선택하거나 대체 작업 환경을 선택할 수 있습니다. FlexGroup 볼륨을 복원할 때 여러 애그리게이트를 선택해야 합니다.</block>
   <block id="161194bbe48a2135489734e9a8253dbc" category="list-text">* 로컬 스냅샷 *: 기존 스냅샷 정책을 선택하거나 생성합니다.</block>
   <block id="86f7231a6add4e3af6c22d160f1fef1b" category="admonition">백업을 활성화하기 전에 사용자 지정 정책을 생성하려면 을 참조하십시오 <block ref="63a3f471efcfd7e4daa79f468df674ce" category="inline-link-macro-rx"></block>.</block>
   <block id="e55e33fb51399237a97d05cee7b9666a" category="list-text">* 복제 정책 *: 기존 복제 정책을 선택하거나 생성합니다.</block>
   <block id="467647313d3b271591c978d30d0a3f45" category="admonition">복제를 활성화하기 전에 사용자 지정 정책을 생성하려면 을 참조하십시오 <block ref="63a3f471efcfd7e4daa79f468df674ce" category="inline-link-macro-rx"></block>.</block>
   <block id="2283ed1c2d2204e889a93d07486e3a8b" category="list-text">* 백업 정책 *: 기존 객체 백업 저장소 정책을 선택하거나 생성합니다.</block>
-  <block id="94564c9b3e87da6b96d2202774fb278d" category="list-text">클라우드 스토리지에서 Cloud Volumes ONTAP 시스템으로 볼륨을 "빠르게 복원"할 수 있습니다. 볼륨에 대한 액세스를 최대한 빨리 제공해야 하는 재해 복구 상황에 적합합니다.</block>
   <block id="19fe226921eb8023a05c222ee84c5db8" category="paragraph">백업은 백업 유형에 따라 서로 다른 위치에 있음:</block>
   <block id="fc2fd0a50056e9aa6d11714c9450981b" category="list-text">복제를 위해 한 번에 하나의 FlexGroup 볼륨만 선택할 수 있습니다. 각 FlexGroup 볼륨에 대해 백업을 별도로 활성화해야 합니다.</block>
   <block id="3a3d9f6ee5fa05f3aa042e0258eebf58" category="list-text">정책에 할당된 볼륨이 없을 때 백업 정책을 생성하거나 편집하는 경우 보존되는 백업의 수는 최대 1018개입니다. 정책에 볼륨을 할당한 후 정책을 편집하여 최대 4000개의 백업을 생성할 수 있습니다.</block>
@@ -4646,7 +4633,6 @@ ONTAP S3</block>
   <block id="5d8aef9555e5438ddeff623786db2956" category="summary">알려진 제한 사항은 이 제품 릴리스에서 지원하지 않거나 올바르게 상호 운용되지 않는 기능을 식별합니다. 이러한 제한 사항을 주의 깊게 검토하십시오.</block>
   <block id="482723983a4f2af954e36ff41e567451" category="doc">알려진 제한 사항</block>
   <block id="aa0373aa24c3795f9860b49e074ec0b5" category="section-title">ONTAP 볼륨에 대한 백업 및 복구 제한 사항</block>
-  <block id="5a8f207b587cd09b18047f9ee3e8cdc1" category="paragraph">AWS, Azure 또는 Google 클라우드 스토리지를 사용할 경우 특정 일 후에 오래된 백업 파일을 저렴한 아카이브 스토리지 클래스/액세스 계층으로 이동할 수 있습니다. 또한 표준 클라우드 스토리지에 기록하지 않고 백업 파일을 아카이빙 스토리지로 즉시 전송하도록 선택할 수 있습니다. 백업 파일을 보관 저장소로 직접 전송하려면 * 0 * 을 "며칠 후 보관"으로 입력하십시오. 이 기능은 클라우드 백업에서 데이터에 액세스할 필요가 거의 없는 사용자나 테이프 백업 솔루션을 교체하는 사용자에게 특히 유용합니다.</block>
   <block id="0bfadff6ad45440425fe5f23292524af" category="paragraph">아카이브 계층의 데이터는 필요할 때 즉시 액세스할 수 없으며 검색 비용이 더 많이 필요하므로 백업 파일을 보관하기로 결정하기 전에 백업 파일에서 데이터를 복원해야 하는 빈도를 고려해야 합니다.</block>
   <block id="09e167bf2b5bda581990fa1f93a488dc" category="list-text">DataLock을 설정한 경우에는 보관 저장소를 사용할 수 없습니다.</block>
   <block id="324aabe08d5432a326f39205133865e5" category="list-text">0 * 일(즉시 보관)을 선택한 후에는 보관 정책을 변경할 수 없습니다.</block>
@@ -4771,4 +4757,57 @@ ONTAP S3</block>
   <block id="4e1f7d458412b18adef0e5ff0db2eee8" category="section-title">2024년 2월 1일</block>
   <block id="a409179aac0b12213b3fa77e0a22bd61" category="list-text">가상 시스템을 대체 위치로 복구하는 기능을 지원합니다</block>
   <block id="9c75b0f26dddf07ed827e32aaf28bee9" category="list-text">데이터 저장소 보호 해제 지원</block>
+  <block id="1e4355acc1dfc611f2f5aa191e3468f4" category="list-text">클라우드 스토리지에서 Cloud Volumes ONTAP 시스템 또는 온프레미스 시스템으로 _ 빠른 복원 _ 을(를) 수행하는 기능. 볼륨에 대한 액세스를 최대한 빨리 제공해야 하는 재해 복구 상황에 적합합니다.</block>
+  <block id="196996ba80340493c0f9064d3dd14aa5" category="summary">BlueXP 백업 및 복구 서비스는 온프레미스와 클라우드 모두에서 NetApp ONTAP 데이터, Kubernetes 영구 볼륨, 데이터베이스 및 가상 머신(VM)에 대한 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.</block>
+  <block id="2d67cd05b64a3416bc8bae12b4ef5685" category="section-title">2024년 3월 12일</block>
+  <block id="e713d6072685bf32f36150e9f76ce0c1" category="section-title">클라우드 백업에서 사내 ONTAP 볼륨으로 "빠른 복원"을 수행할 수 있습니다</block>
+  <block id="5a9ee632cba573d0f7355f7d12d908ca" category="paragraph">이제 클라우드 스토리지에서 온프레미스 ONTAP 타겟 볼륨으로 _ 빠른 복원 _ 을(를) 수행할 수 있습니다. 이전에는 Cloud Volumes ONTAP 시스템에만 빠른 복원을 수행할 수 있었습니다. 빠른 복원은 가능한 한 빨리 볼륨에 대한 액세스를 제공해야 하는 재해 복구 상황에 이상적입니다. 빠른 복원은 전체 볼륨 복원보다 훨씬 빠르며 클라우드 스냅샷에서 ONTAP 타겟 볼륨으로 메타데이터를 복원합니다. 소스는 AWS S3, Azure Blob, Google Cloud Services 또는 NetApp StorageGRID에서 가져올 수 있습니다.</block>
+  <block id="07f61dfe973846130f7066ef7bc459ef" category="paragraph">온프레미스 ONTAP 대상 시스템에서 ONTAP 버전 9.14.1 이상을 실행해야 합니다.</block>
+  <block id="1a68bb97275f0f5acd506d7ad906fa05" category="paragraph">검색 및 복원 프로세스가 아닌 찾아보기 및 복원 프로세스를 사용하여 이 작업을 수행할 수 있습니다.</block>
+  <block id="2c3b2694da8405de44d10ad024f9a37a" category="paragraph">자세한 내용은 을 참조하십시오<block ref="d2c90c25b1a6379e29db7390401794cc" category="inline-link-rx"></block>.</block>
+  <block id="0b15186b9aa75ae921c55dd69591ae94" category="section-title">스냅샷 및 복제 복제본에서 파일 및 폴더를 복구하는 기능</block>
+  <block id="8f859da29f9bc64e255dd02fc2821d0a" category="paragraph">이전에는 AWS, Azure 및 Google Cloud Services의 백업 사본에서만 파일과 폴더를 복원할 수 있었습니다. 이제 로컬 스냅샷 복사본 및 복제 복사본에서 파일과 폴더를 복원할 수 있습니다.</block>
+  <block id="71931edd27b41979c47f73ca3194f9c3" category="paragraph">이 기능은 찾아보기 및 복원 프로세스를 사용하는 것이 아니라 검색 및 복원 프로세스를 사용하여 수행할 수 있습니다.</block>
+  <block id="014fb6165915bb2267eed517efab9cb5" category="cell">폴더 스타일 구조를 탐색하여 단일 백업 파일 내에서 볼륨, 폴더 또는 파일을 찾습니다.</block>
+  <block id="c601431e32ca59eda5545781d799fc84" category="cell">전체 볼륨 이름, 일부 또는 전체 폴더/파일 이름, 크기 범위 및 추가 검색 필터를 사용하여 * 모든 백업 파일 * 에서 볼륨, 폴더 또는 파일을 검색합니다.</block>
+  <block id="ba3b7ed6a9e20a17536af523c17d7d72" category="cell">클라우드에서 복구할 경우 계정당 추가 버킷 및 퍼블릭 클라우드 공급자 리소스가 필요합니다.</block>
+  <block id="e4da0c30ee3e36e87eec129bd901c319" category="cell">클라우드에서 복구할 경우 검색 결과를 위해 백업과 볼륨을 스캔할 때 추가 비용이 필요합니다.</block>
+  <block id="bc7f13477d0119c48bad565ccf971e6a" category="cell">빠른 복원이 지원됩니다.</block>
+  <block id="acf00c252198c9be0294aaf561c5d662" category="cell">빠른 복원은 지원되지 않습니다.</block>
+  <block id="4392d15c8884c7cc66b17ff794eb41d2" category="cell">* 개체 저장소(백업) *</block>
+  <block id="a4e7ccecf7c1ff2d3e2de88d9f7559d4" category="cell">* 기본 (스냅샷) * 에서</block>
+  <block id="c1ad4111606308626e152e2bc5089a8b" category="cell">* 보조 시스템에서(복제) *</block>
+  <block id="a019a781742609ed7930e84dd4bbbfe7" category="cell">대상 작업 환경으로
+
+ifdef::AWS[]</block>
+  <block id="508c69ac69618e417c42c1ec4f1802fe" category="cell">AWS의 Cloud Volumes ONTAP
+사내 ONTAP 시스템
+
+엔디프::AWS[]
+
+
+
+ifdef::Azure[]</block>
+  <block id="a57e78a7b424a1f155d5c251bf4bfe16" category="cell">Azure의 Cloud Volumes ONTAP
+사내 ONTAP 시스템
+
+엔디프::Azure[]
+
+
+
+ifdef::GCP[]</block>
+  <block id="f6bc09197fbc5599ccf48032f3ead672" category="cell">온프레미스 ONTAP 시스템으로 전환</block>
+  <block id="c1b52fe790511b9298f4b5f6a53599f4" category="paragraph">ONTAP 9.13.0 이상을 사용하는 Cloud Volumes ONTAP 시스템 또는 ONTAP 9.14.1을 실행하는 사내 ONTAP 시스템으로 클라우드 백업을 복원할 때 _QUICK RESTORY_OPERATION을 수행할 수 있습니다. 빠른 복원은 가능한 한 빨리 볼륨에 대한 액세스를 제공해야 하는 재해 복구 상황에 이상적입니다. 빠른 복원은 전체 백업 파일을 복원하는 대신 백업 파일의 메타데이터를 볼륨으로 복원합니다. 빠른 복원은 성능이나 지연 시간에 민감한 애플리케이션에는 권장되지 않으며 아카이빙된 스토리지의 백업에는 지원되지 않습니다.</block>
+  <block id="7a2007148011e973184940a379d2cfeb" category="paragraph">ONTAP 9.13.0 이상을 사용하여 오브젝트 스토리지에서 Cloud Volumes ONTAP 시스템으로 백업을 복원하거나 ONTAP 9.14.1을 실행하는 사내 ONTAP 시스템으로 백업을 복원할 때 _QUICK RESTORE_OPERATION을 수행할 수 있습니다.</block>
+  <block id="83d21a839062d4ca006d1f2910616c06" category="list-text">다음 * 을 클릭하여 일반 복원 또는 빠른 복원 프로세스를 수행할지 선택합니다.</block>
+  <block id="0c3da5360ee5d0f95ea59ce872785636" category="inline-image-macro">일반 및 빠른 복원 프로세스를 보여 주는 스크린샷</block>
+  <block id="dccddafd5c384963cd964ee3029e662a" category="paragraph"><block ref="dccddafd5c384963cd964ee3029e662a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2618b905cdc9e04055a7d6a5328eebfb" category="list-text">* Normal restore * : 고성능이 필요한 볼륨에 일반 복원을 사용합니다. 복원 프로세스가 완료될 때까지 볼륨을 사용할 수 없습니다.</block>
+  <block id="64063115b259542737cce343064e3233" category="list-text">* 빠른 복원 * : 복원 된 볼륨 및 데이터는 즉시 사용할 수 있습니다. 빠른 복원 프로세스 중에 데이터 액세스가 평소보다 느려질 수 있으므로 고성능이 필요한 볼륨에는 이 기능을 사용하지 마십시오.</block>
+  <block id="406385bac6b7601aab1eff5d8a317cc3" category="paragraph">결과는 로컬 볼륨 스냅샷 복사본과 검색에 파일이 포함된 원격 복제 볼륨을 식별합니다. 클라우드 백업 파일, 스냅샷 복사본 또는 복제된 볼륨에서 복원을 선택할 수 있습니다.</block>
+  <block id="6b1625dd335c098ed2ca98e2429bd8b5" category="paragraph">이 두 기능 모두 백업 파일을 보호하므로 랜섬웨어 공격이 시도할 경우 언제든지 데이터를 복구할 수 있는 유효한 백업 파일이 있습니다. 백업을 일정 기간 동안 잠그고 유지해야 하는 특정 규정 요구 사항을 충족하는 것도 도움이 됩니다. DataLock 및 랜섬웨어 차단 옵션이 활성화되어 있으면 BlueXP 백업 및 복구 활성화의 일부로 프로비저닝된 클라우드 버킷에서 오브젝트 잠금 및 오브젝트 버전 관리가 활성화됩니다.</block>
+  <block id="b03c01f8cf077f9dee5804db15487474" category="paragraph">DataLock은 백업 파일이 특정 기간 동안 수정되거나 삭제되지 않도록 보호합니다(_inmutable storage_라고도 함). 이 기능은 "오브젝트 잠금"에 오브젝트 스토리지 공급자의 기술을 사용합니다. 백업 파일이 잠겨 있고 유지되는 기간을 DataLock Retention Period라고 합니다. 이는 정의한 백업 정책 일정 및 보존 설정과 14일 버퍼를 기반으로 합니다. 30일 미만의 모든 DataLock 보존 정책은 최소 30일로 반올림됩니다.</block>
+  <block id="d1fe7d408368bfebc413888300892008" category="list-text">백업 정책에 아카이브 스토리지를 구성한 경우에는 DataLock 및 랜섬웨어 방지 기능을 사용할 수 없습니다.</block>
+  <block id="7bdfdec65541ae8037e909dd7d0643dd" category="paragraph">AWS, Azure 또는 Google 클라우드 스토리지를 사용할 경우 오래된 백업 파일을 저렴한 아카이브 스토리지 클래스로 이동하거나 특정 일 후에 액세스 계층으로 이동할 수 있습니다. 또한 표준 클라우드 스토리지에 기록하지 않고 백업 파일을 아카이빙 스토리지로 즉시 전송하도록 선택할 수 있습니다. 백업 파일을 보관 저장소로 직접 전송하려면 * 0 * 을 "며칠 후 보관"으로 입력하십시오. 이 기능은 클라우드 백업에서 데이터에 액세스할 필요가 거의 없는 사용자나 테이프 백업 솔루션을 교체하는 사용자에게 특히 유용합니다.</block>
+  <block id="8e867c14e8b5b20149da48500624662f" category="list-text">모든 데이터 블록을 아카이빙 클라우드 스토리지로 전송하기 위해 "0"을 선택한 경우에도 메타데이터 블록이 항상 표준 클라우드 스토리지에 기록됩니다.</block>
 </blocks>
