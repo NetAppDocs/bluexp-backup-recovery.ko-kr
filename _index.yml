@@ -1,0 +1,133 @@
+---
+indexpage:
+  title: BlueXP 백업 및 복구 설명서
+  summary: BlueXP 백업 및 복구 서비스는 온프레미스와 클라우드 모두에서 NetApp ONTAP 데이터, Kubernetes 영구 볼륨,
+    데이터베이스 및 가상 머신(VM)에 대한 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.
+  keywords: bluexp, bluexp backup recovery, ontap, kubernetes, virtual machines, vm,
+    on-premises, data protection
+  lead: BlueXP 백업 및 복구 서비스는 온프레미스와 클라우드 모두에서 NetApp ONTAP 데이터, Kubernetes 영구 볼륨, 데이터베이스
+    및 가상 머신에 대해 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.
+  tiles:
+  - title: 시작하십시오
+    links:
+    - title: BlueXP 백업 및 복구에 대해 알아보십시오
+      url: concept-backup-to-cloud.html
+    - title: 새로운 소식
+      url: whats-new.html
+    - title: 라이센스를 설정합니다
+      url: task-licensing-cloud-backup.html
+    - title: 백업 및 복원 작업의 상태를 모니터링합니다
+      url: task-monitor-backup-jobs.html
+    - title: 데이터 보호 범위에 대한 보고서를 생성합니다
+      url: task-report-inventory.html
+  - title: ONTAP 데이터를 클라우드에 백업합니다
+    links:
+    - title: Cloud Volumes ONTAP를 Amazon S3에 백업합니다
+      url: task-backup-to-s3.html
+      flavor: aws
+    - title: Cloud Volumes ONTAP를 Azure Blob에 백업합니다
+      url: task-backup-to-azure.html
+      flavor: azure
+    - title: Cloud Volumes ONTAP을 Google Cloud에 백업합니다
+      url: task-backup-to-gcp.html
+      flavor: gcp
+    - title: 사내 ONTAP를 Amazon S3에 백업
+      url: task-backup-onprem-to-aws.html
+      flavor: aws
+    - title: 온프레미스 ONTAP를 Azure Blob에 백업
+      url: task-backup-onprem-to-azure.html
+      flavor: azure
+    - title: 사내 ONTAP를 Google Cloud로 백업합니다
+      url: task-backup-onprem-to-gcp.html
+      flavor: gcp
+    - title: 온프레미스 ONTAP를 ONTAP S3에 백업합니다
+      url: task-backup-onprem-to-ontap-s3.html
+    - title: 사내 ONTAP를 StorageGRID로 백업합니다
+      url: task-backup-onprem-private-cloud.html
+  - title: ONTAP 백업 파일을 관리합니다
+    links:
+    - title: ONTAP 시스템의 백업을 관리합니다
+      url: task-manage-backups-ontap.html
+    - title: ONTAP 볼륨에 대한 정책을 관리합니다
+      url: task-create-policies-ontap.html
+    - title: 오브젝트에 백업 정책 옵션(DataLock 및 랜섬웨어 방어)
+      url: concept-cloud-backup-policies.html
+    - title: 고급 설정에서 객체로 백업 옵션을 관리합니다
+      url: task-manage-backup-settings-ontap.html
+    - title: 복제 관계를 관리합니다
+      url: task-manage-backups-ontap.html#manage-the-replication-relationship-with-the-source-volume
+  - title: 애플리케이션 데이터를 클라우드에 백업
+    links:
+    - title: 사내 애플리케이션 데이터를 Amazon Web Services에 백업합니다
+      flavor: aws
+      url: task-backup-app-data-to-aws.html
+    - title: 사내 애플리케이션 데이터를 Microsoft Azure에 백업합니다
+      flavor: azure
+      url: task-backup-app-data-to-azure.html
+    - title: 온프레미스 애플리케이션 데이터를 Google Cloud에 백업합니다
+      flavor: gcp
+      url: task-backup-app-data-to-gcp.html
+    - title: 사내 애플리케이션 데이터를 StorageGRID에 백업합니다
+      url: task-backup-app-data-to-storagegrid.html
+    - title: 클라우드 네이티브 Oracle 데이터베이스 백업
+      url: task-backup-cloud-native-oracle-data.html
+    - title: 클라우드 네이티브 SAP HANA 데이터베이스 백업
+      flavor: azure
+      url: task-backup-cloud-native-sap-hana-data.html
+    - title: 클라우드 네이티브 SQL Server 데이터베이스를 백업합니다
+      url: task-backup-cloud-native-sql-data.html
+  - title: 데이터 저장소를 클라우드에 백업합니다
+    links:
+    - title: Amazon Web Services에 데이터 저장소를 백업합니다
+      flavor: aws
+      url: task-backup-vm-data-to-aws.html
+    - title: Microsoft Azure에 데이터 저장소를 백업합니다
+      flavor: azure
+      url: task-backup-vm-data-to-azure.html
+    - title: 데이터 저장소를 Google Cloud Platform으로 백업합니다
+      flavor: gcp
+      url: task-backup-vm-data-to-gcp.html
+    - title: StorageGRID에 데이터 저장소를 백업합니다
+      url: task-backup-vm-data-to-storagegrid.html
+  - title: 클라우드에서 데이터 복원
+    links:
+    - title: ONTAP 볼륨 데이터를 복원합니다
+      url: task-restore-backups-ontap.html
+    - title: 사내 Oracle 애플리케이션 데이터를 복원합니다
+      url: task-restore-oracle-data.html
+    - title: 온프레미스 SQL Server 애플리케이션 데이터를 복원합니다
+      url: task-restore-sql-data.html
+    - title: 클라우드 네이티브 Oracle 애플리케이션 데이터를 복원합니다
+      url: task-restore-cloud-native-oracle-data.html
+    - title: 클라우드 네이티브 SAP HANA 애플리케이션 데이터를 복원합니다
+      flavor: azure
+      url: task-restore-cloud-native-sap-hana-data.html
+    - title: 클라우드 네이티브 SQL Server 데이터를 복원합니다
+      url: task-restore-cloud-native-sql-data.html
+    - title: 가상 머신 데이터를 복구합니다
+      url: task-restore-vm-data.html
+    - title: Kubernetes 볼륨 데이터를 복원합니다
+      url: task-restore-backups-kubernetes.html
+  - title: Kubernetes 데이터를 클라우드에 백업합니다
+    links:
+    - title: Kubernetes 클러스터를 Amazon S3에 백업합니다
+      url: task-backup-kubernetes-to-s3.html
+      flavor: aws
+    - title: Kubernetes 클러스터를 Azure Blob에 백업합니다
+      url: task-backup-kubernetes-to-azure.html
+      flavor: azure
+    - title: Kubernetes 클러스터를 Google Cloud에 백업합니다
+      url: task-backup-kubernetes-to-gcp.html
+      flavor: gcp
+  - title: 블로그 및 커뮤니티
+    links:
+    - title: NetApp 커뮤니티
+      url: https://community.netapp.com/t5/Public-Cloud-Services/ct-p/CDS
+    - title: BlueXP 백업 및 복구 블로그
+      url: https://bluexp.netapp.com/blog/topic/cloud-backup
+    - title: BlueXP 백업 및 복구 활용 사례
+      url: https://bluexp.netapp.com/cloud-backup
+    - title: BlueXP 백업 및 복구 비디오
+      url: https://youtube.com/playlist?list=PLdXI3bZJEw7modoLQEVUHoQ8DJyVk_1wU
+    - title: BlueXP 웨비나
+      url: https://bluexp.netapp.com/events

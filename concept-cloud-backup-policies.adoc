@@ -4,7 +4,7 @@ permalink: concept-cloud-backup-policies.html
 keywords: backing up, back up, backup, back up volumes, cloud backup, backup policies, policies, schedules 
 summary: BlueXP 백업 및 복구를 사용하면 사내 ONTAP 및 Cloud Volumes ONTAP 시스템에 대한 다양한 구성 설정으로 백업 정책을 생성할 수 있습니다. 
 ---
-= BlueXP 백업 및 복구 정책 구성 설정
+= 오브젝트에 백업 정책 옵션
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,14 @@ summary: BlueXP 백업 및 복구를 사용하면 사내 ONTAP 및 Cloud Volumes
 
 
 [role="lead"]
-BlueXP 백업 및 복구를 사용하면 사내 ONTAP 및 Cloud Volumes ONTAP 시스템에 대한 다양한 구성 설정으로 백업 정책을 생성할 수 있습니다.
+BlueXP 백업 및 복구를 사용하면 온프레미스 ONTAP 및 Cloud Volumes ONTAP 시스템에 대한 다양한 설정으로 백업 정책을 생성할 수 있습니다.
 
 
-NOTE: 이러한 정책 설정은 객체 스토리지로의 백업에만 해당됩니다. 이러한 설정은 스냅샷 또는 복제 정책에 영향을 주지 않습니다. 스냅샷 및 복제에 대한 유사한 정책 설정이 나중에 추가됩니다.
+NOTE: 이러한 정책 설정은 오브젝트 백업 스토리지에만 해당됩니다. 이러한 설정은 스냅샷 또는 복제 정책에 영향을 주지 않습니다. 스냅샷 및 복제에 대한 유사한 정책 설정이 나중에 추가됩니다.
 
 
 
-== 백업 스케줄
+== 백업 스케줄 옵션
 
 BlueXP 백업 및 복구를 사용하면 각 작업 환경(클러스터)에 대해 고유한 스케줄로 여러 백업 정책을 생성할 수 있습니다. RPO(복구 시점 목표)가 다른 볼륨에 서로 다른 백업 정책을 할당할 수 있습니다.
 
@@ -52,7 +52,7 @@ image:screenshot_backup_schedule_settings.png["백업 정책을 생성할 때의
 
 
 
-== DataLock 및 랜섬웨어 보호
+== DataLock 및 랜섬웨어 보호 옵션
 
 BlueXP 백업 및 복구는 볼륨 백업에 대한 DataLock 및 랜섬웨어 보호를 지원합니다. 이러한 기능을 사용하여 백업 파일을 잠그고 검색하여 백업 파일에서 잠재적인 랜섬웨어를 감지할 수 있습니다. 이 설정은 클러스터에 대한 볼륨 백업에 대한 추가 보호를 원할 때 백업 정책에 정의할 수 있는 선택적 설정입니다.
 
@@ -64,8 +64,8 @@ https://bluexp.netapp.com/blog/cbs-blg-the-bluexp-feature-that-protects-backups-
 
 [CAUTION]
 ====
-* DataLock 및 랜섬웨어 보호를 사용하려는 경우 첫 번째 백업 정책을 생성하고 해당 클러스터에 대한 BlueXP 백업 및 복구를 활성화할 때 활성화해야 합니다.
-* DataLock 및 랜섬웨어 보호는 구성된 후에는 클러스터에 대해 비활성화할 수 없습니다. 클러스터에서 이 기능을 활성화하지 마십시오.
+* DataLock 및 랜섬웨어 보호를 사용하려는 경우 첫 번째 백업 정책을 생성하고 해당 클러스터에 대해 BlueXP 백업 및 복구를 활성화할 때 사용하도록 설정할 수 있습니다. 나중에 BlueXP 백업 및 복구 고급 설정을 사용하여 활성화할 수 있습니다.
+* 비용 절감을 위해 구성된 클러스터의 경우 DataLock 및 랜섬웨어 보호를 해제할 수 있습니다.
 * BlueXP가 볼륨 데이터를 복원할 때 백업 파일에서 랜섬웨어를 검사하면 백업 파일의 콘텐츠에 액세스하는 데 클라우드 공급자가 추가 이그레스 비용이 발생합니다.
 
 
@@ -98,6 +98,9 @@ DataLock은 백업 파일이 특정 기간 동안 수정되거나 삭제되지 �
 
 * 백업 파일이 생성된 경우
 +
+선택적으로 예약된 랜섬웨어 검사를 활성화 또는 비활성화할 수 있습니다.
+
++
 클라우드 스토리지에 처음 기록될 때는 백업 파일에 대해 검사가 수행되지 않지만 * next * 백업 파일이 기록될 때는 검사가 수행됩니다. 예를 들어 화요일의 주별 백업 스케줄이 설정되어 있는 경우 14일 화요일에 백업이 생성됩니다. 그리고 화요일에 또 다른 백업이 생성됩니다. 랜섬웨어 스캔은 현재 14번째 백업 파일에서 실행됩니다.
 
 * 백업 파일에서 데이터를 복원하려고 할 때
@@ -112,11 +115,15 @@ DataLock은 백업 파일이 특정 기간 동안 수정되거나 삭제되지 �
 
 
 
-=== DataLock 및 랜섬웨어 보호 설정
+=== DataLock 및 랜섬웨어 차단 옵션
 
 각 백업 정책은 백업 파일에 적용할 수 있는 _DataLock 및 랜섬웨어 방지_ 섹션을 제공합니다.
 
 image:screenshot_datalock_ransomware_settings.png["백업 정책을 생성할 때 AWS, Azure 및 StorageGRID의 DataLock 및 랜섬웨어 보호 설정 스크린샷"]
+
+예약된 랜섬웨어 보호 검사는 기본적으로 사용하도록 설정됩니다. 스캔 빈도의 기본 설정은 7일입니다. 검사는 최신 스냅샷 복사본에만 수행됩니다. 고급 설정 페이지의 옵션을 사용하여 최신 스냅샷 복사본에 대해 예약된 랜섬웨어 검사를 사용하거나 사용하지 않도록 설정할 수 있습니다. 이 기능을 활성화하면 기본적으로 7일마다 스캔이 수행됩니다. 이 일정을 일 또는 주로 변경하거나 사용하지 않도록 설정하여 비용을 절감할 수 있습니다.
+
+을 참조하십시오 link:manage-backup-settings-ontap.html["고급 설정 페이지에서 랜섬웨어 보호 옵션을 업데이트하는 방법"].
 
 각 백업 정책에 대해 다음 설정 중에서 선택할 수 있습니다.
 
@@ -209,6 +216,9 @@ ifdef::aws[]
 ** Connector는 클라우드 또는 사내에 구축할 수 있습니다
 ** 다음 S3 권한은 Connector에 권한을 제공하는 IAM 역할의 일부여야 합니다. 이러한 리소스는 리소스 "arn:AWS:S3::NetApp-backup- *"의 "backupS3Policy" 섹션에 있습니다.
 +
+.AWS S3 사용 권한
+[%collapsible]
+====
 *** S3:GetObjectVersionTagging
 *** S3:GetBuckketObjectLockConfiguration
 *** S3:GetObjectVersionAcl
@@ -235,10 +245,11 @@ ifdef::aws[]
 *** S3:PutObjectRetention
 *** S3:GetBucketLocation
 *** S3:GetObjectVersion
+
+
+====
 +
 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html["필요한 권한을 복사하여 붙여넣을 수 있는 정책의 전체 JSON 형식을 봅니다"^].
-
-
 
 
 
@@ -265,6 +276,9 @@ endif::azure[]
 ** Connector를 사내에 구축해야 합니다(인터넷 접속 유무에 관계없이 사이트에 설치할 수 있음).
 ** 다음 S3 권한은 Connector에 권한을 제공하는 IAM 역할의 일부여야 합니다.
 +
+.StorageGRID S3 사용 권한
+[%collapsible]
+====
 *** S3:GetObjectVersionTagging
 *** S3:GetBuckketObjectLockConfiguration
 *** S3:GetObjectVersionAcl
@@ -292,6 +306,7 @@ endif::azure[]
 *** S3:GetObjectVersion
 
 
+====
 
 
 
@@ -304,13 +319,13 @@ endif::azure[]
 * BlueXP 백업 및 복구를 활성화할 때 선택하는 DataLock 옵션은 해당 클러스터의 모든 백업 정책에 사용해야 합니다.
 * 단일 클러스터에서 여러 DataLock 모드를 사용할 수 없습니다.
 * DataLock을 활성화하면 모든 볼륨 백업이 잠깁니다. 단일 클러스터에 대해 잠긴 볼륨 백업과 잠기지 않은 볼륨 백업을 혼합하여 사용할 수 없습니다.
-* DataLock 및 랜섬웨어 보호는 DataLock 및 랜섬웨어 보호가 활성화된 백업 정책을 사용하여 새 볼륨 백업에 적용됩니다. BlueXP 백업 및 복구가 활성화된 후에는 이 기능을 활성화할 수 없습니다.
+* DataLock 및 랜섬웨어 보호는 DataLock 및 랜섬웨어 보호가 활성화된 백업 정책을 사용하여 새 볼륨 백업에 적용됩니다. 나중에 고급 설정 옵션을 사용하여 이 기능을 활성화 또는 비활성화할 수 있습니다.
 * FlexGroup 볼륨은 ONTAP 9.13.1 이상을 사용하는 경우에만 DataLock 및 랜섬웨어 보호를 사용할 수 있습니다.
 
 
 
 
-== 보관 저장 설정
+== 아카이브 스토리지 옵션
 
 AWS, Azure 또는 Google 클라우드 스토리지를 사용할 경우 오래된 백업 파일을 저렴한 아카이브 스토리지 클래스로 이동하거나 특정 일 후에 액세스 계층으로 이동할 수 있습니다. 또한 표준 클라우드 스토리지에 기록하지 않고 백업 파일을 아카이빙 스토리지로 즉시 전송하도록 선택할 수 있습니다. 백업 파일을 보관 저장소로 직접 전송하려면 * 0 * 을 "며칠 후 보관"으로 입력하십시오. 이 기능은 클라우드 백업에서 데이터에 액세스할 필요가 거의 없는 사용자나 테이프 백업 솔루션을 교체하는 사용자에게 특히 유용합니다.
 
