@@ -891,7 +891,6 @@
   <block id="f6494bde8c5d58e1a40bf174c8083f96" category="paragraph">이 작동 방식에 대한 몇 가지 예를 살펴보겠습니다.</block>
   <block id="4f326e1a4453cc79600c1df4374d2c22" category="list-text">매일 30회, 매주 7회, 12회 월별 백업을 생성하는 백업 정책을 생성하는 경우 3회의 잠금 보존 기간이 있습니다. "30일" 백업은 44일(30일 + 14일 버퍼) 동안 유지되고 "7주" 백업은 9주(7주 + 14일) 동안 보존되며 "12개월" 백업은 12개월(14일 추가)동안 보존됩니다.</block>
   <block id="57f10edfffe2adcbce7ee7a76dc7702f" category="section-title">랜섬웨어 보호란 무엇입니까</block>
-  <block id="6178bb3c1b6a8af3ec3a7000d38df00e" category="paragraph">랜섬웨어 스캔은 백업 및 복원 프로세스의 3지점에서 수행됩니다.</block>
   <block id="f656e9389b65beefa5f22506a262c68a" category="list-text">백업 파일에서 데이터를 복원하려고 할 때</block>
   <block id="d71c7fafb5eead8d41c2869b8c551f6a" category="paragraph">백업 파일에서 데이터를 복원하기 전에 스캔을 실행하도록 선택하거나 이 검사를 건너뛸 수 있습니다.</block>
   <block id="826c19d01b527f2701cc3460b9c889de" category="list-text">수동</block>
@@ -4832,7 +4831,6 @@ ifdef::AWS[]</block>
   <block id="8bf75ab26f222aaa987f761ede723ee0" category="list-text">비용 절감을 위해 구성된 클러스터의 경우 DataLock 및 랜섬웨어 보호를 해제할 수 있습니다.</block>
   <block id="943aed8f26021fcc91ef6a9745099eea" category="list-text">백업 파일이 생성된 경우</block>
   <block id="645f12199dae2b82a1985743cbc3e647" category="section-title">DataLock 및 랜섬웨어 차단 옵션</block>
-  <block id="637724eb17b7ab6645d22693fe456ad6" category="paragraph">을 참조하십시오 <block ref="2afb661236a3c9beb84de46fcd5481e6" category="inline-link-macro-rx"></block>.</block>
   <block id="28393e8d0c5d4d42b764689c3d805dd0" category="example-title">AWS S3 사용 권한</block>
   <block id="1ddec8739d8c1b2f7db7d9f2fe4b6069" category="example-title">StorageGRID S3 사용 권한</block>
   <block id="5f77078b118458f75a8520575b6a518e" category="list-text">DataLock 및 랜섬웨어 보호는 DataLock 및 랜섬웨어 보호가 활성화된 백업 정책을 사용하여 새 볼륨 백업에 적용됩니다. 나중에 고급 설정 옵션을 사용하여 이 기능을 활성화 또는 비활성화할 수 있습니다.</block>
@@ -4881,7 +4879,19 @@ ifdef::AWS[]</block>
   <block id="b33f77825564d0f55040ed5d93e2c980" category="paragraph">선택적으로 랜섬웨어 검사를 활성화 또는 비활성화할 수 있습니다.</block>
   <block id="3d2cb9cb8024f89584734e08517bb28b" category="paragraph">랜섬웨어 차단 검사는 기본적으로 활성화됩니다. 스캔 빈도의 기본 설정은 7일입니다. 검사는 최신 스냅샷 복사본에만 수행됩니다. 고급 설정 페이지의 옵션을 사용하여 최신 스냅샷 복사본에 대해 랜섬웨어 검사를 사용하거나 사용하지 않도록 설정할 수 있습니다. 이 기능을 활성화하면 기본적으로 7일마다 스캔이 수행됩니다.</block>
   <block id="957d64bd15bd14f95e14523883ec693d" category="paragraph">고급 설정 페이지를 사용하여 각 ONTAP 시스템에 대해 BlueXP 백업 및 복구를 활성화할 때 설정하는 클러스터 레벨의 오브젝트 백업 스토리지 설정을 변경할 수 있습니다. "기본" 백업 설정으로 적용되는 일부 설정을 수정할 수도 있습니다. 여기에는 백업 전송 속도, 기록 스냅샷 복사본을 백업 파일로 엑스포트할지 여부, 작업 환경에 대한 랜섬웨어 검사를 활성화 또는 비활성화하는 작업이 포함됩니다.</block>
-  <block id="1de2d42f8d4e8f2645cb745b40a766d0" category="list-text">작업 환경에 대한 랜섬웨어 검사 활성화 또는 비활성화</block>
   <block id="32a5c26baa0363b9a3a4a05896b16fd9" category="section-title">랜섬웨어 검사 활성화 또는 비활성화</block>
   <block id="141cfd8e9a336cee5d12da1ba56da9be" category="list-text">랜섬웨어 검사 * 를 활성화 또는 비활성화합니다.</block>
+  <block id="036182c87f807859656a494ecad4b91a" category="paragraph">랜섬웨어 검사는 백업 및 복원 프로세스에서 다음 시점에서 수행됩니다.</block>
+  <block id="823af9cc6541e49164fb4b1c88f90a63" category="paragraph">이 일정을 일 또는 주로 변경하거나 사용하지 않도록 설정하여 비용을 절감할 수 있습니다.</block>
+  <block id="55649d2d8f62541abb30107f9893fa87" category="paragraph">을 참조하십시오 <block ref="f39da789221971f7f372bd122012c224" category="inline-link-macro-rx"></block>.</block>
+  <block id="b7f7a148311340334982dc88e5a67d85" category="list-text">작업 환경에 대한 랜섬웨어 검사(예약 검사 등)를 사용 또는 사용 안 함</block>
+  <block id="2e6f82dd9de52a1127366dd526b46fcb" category="paragraph">예약된 랜섬웨어 검사는 최신 스냅샷 복사본에만 실행됩니다.</block>
+  <block id="753626f8e1f5bd64d141de3a2128da9a" category="paragraph">예약된 랜섬웨어 검사가 비활성화되었더라도 주문형 검사를 수행할 수 있으며 복원 작업 중에는 검사가 계속 발생합니다.</block>
+  <block id="e80157cb62f595a86effb45e1dfb4df2" category="list-text">Scheduled 랜섬웨어 검사 * 를 선택합니다.</block>
+  <block id="1491d983e19f493f0131d8289237002e" category="list-text">필요에 따라 매주 기본 스캔을 일 또는 주로 변경합니다.</block>
+  <block id="67c431ab59134db0cd95c9d00af66831" category="list-text">검사를 실행할 빈도를 일 또는 주 단위로 설정합니다.</block>
+  <block id="701c188698e8adc8e0dffa2a107bf9f4" category="section-title">2024년 4월 30일</block>
+  <block id="24c8d17b3d2e5d56e90675c0755252e0" category="section-title">예약된 랜섬웨어 검사를 활성화 또는 비활성화합니다</block>
+  <block id="1d5d9f598ed0ef9d579321fc5f2dea76" category="paragraph">이전에는 랜섬웨어 검사를 활성화 또는 비활성화할 수 있었지만 예약된 검사에 대해서는 그렇게 할 수 없었습니다.</block>
+  <block id="c05a6e1c401ef496decb0a82c8e569e3" category="paragraph">이 릴리즈에서는 이제 고급 설정 페이지의 옵션을 사용하여 최신 스냅샷 복사본에 대해 예약된 랜섬웨어 검사를 사용하거나 사용하지 않도록 설정할 수 있습니다. 이 기능을 활성화하면 기본적으로 스캔이 매주 수행됩니다. 이 일정을 일 또는 주로 변경하거나 사용하지 않도록 설정하여 비용을 절감할 수 있습니다.</block>
 </blocks>
