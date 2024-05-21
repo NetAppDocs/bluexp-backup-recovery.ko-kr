@@ -98,7 +98,7 @@ indexpage:
     - title: 온프레미스 SQL Server 애플리케이션 데이터를 복원합니다
       url: task-restore-sql-data.html
     - title: 클라우드 네이티브 Oracle 애플리케이션 데이터를 복원합니다
-      url: task-restore-cloud-native-oracle-data.html
+      url: task-restore-cloud-native-oracle-data-to-original-location.html
     - title: 클라우드 네이티브 SAP HANA 애플리케이션 데이터를 복원합니다
       flavor: azure
       url: task-restore-cloud-native-sap-hana-data.html

@@ -5,7 +5,6 @@
   <block id="677bc0580cb25ec1cc210c28e0ca26a7" category="inline-xref">아카이브 스토리지에서 데이터 복원</block>
   <block id="c84f9bdf2de63c378b4a57466b3e08bc" category="inline-link">S3 스토리지 클래스에 대해 알아보십시오</block>
   <block id="da714780eb0a2a3ce15dd3c59d515474" category="paragraph"><block ref="fa9857a8e7d680b812395a24af3527ff" category="inline-link-rx"></block>.</block>
-  <block id="8d48e4dda22be2effe1ea5edec4201bf" category="section-title">아카이브 스토리지에서 데이터 복원</block>
   <block id="6ff825aba191f5952e0a944d29e5b588" category="paragraph">오래된 백업 파일을 아카이브 스토리지에 저장하는 것은 Standard 또는 Standard-IA 스토리지에 비해 훨씬 저렴하지만, 복원 작업을 위해 아카이브 스토리지에 있는 백업 파일의 데이터에 액세스하는 데 시간이 더 오래 걸리고 비용이 더 많이 듭니다.</block>
   <block id="aa4bcc14fab2741a82824021af984730" category="list-text">Amazon S3 Glacier 및 Amazon S3 Glacier Deep Archive에서 데이터를 복원하는 데 비용이 얼마나 드나요?</block>
   <block id="53477849757a1eb0babf766af2e44628" category="list-text">Amazon S3 Glacier에서 데이터를 검색할 때 3가지 복원 우선순위를 선택할 수 있으며, Amazon S3 Glacier Deep Archive에서 데이터를 검색할 경우 2가지 복원 우선순위를 선택할 수 있습니다. S3 Glacier Deep Archive 비용 미만 S3 Glacier:</block>
@@ -195,7 +194,6 @@
   <block id="0f1ea22cd0984db20cd17e018271788e" category="section-title">클러스터당 사용자 지정 가능한 백업 스케줄 및 보존 설정</block>
   <block id="5a86b6d60f717e520ba76b93bf1a3243" category="paragraph">범주 또는 간격에 대한 최대 백업 수에 도달하면 오래된 백업이 제거되므로 항상 최신 백업이 유지됩니다.</block>
   <block id="6afa359ae2adeabaa8893b6d6e04b569" category="inline-link-macro">볼륨의 필요 시 백업을 생성합니다</block>
-  <block id="1095f97c4bec173a213de0ca32a85186" category="paragraph">참고: 이 작업은 수행할 수 있습니다 <block ref="b7b6bc0e70e244618e72450b932ffb57" category="inline-link-macro-rx"></block> 예약된 백업에서 생성된 백업 파일 외에 언제든지 Backup Dashboard에서 백업 파일을 생성할 수 있습니다.</block>
   <block id="c1855e2778d4090a158417283de29dbc" category="admonition">데이터 보호 볼륨의 백업 보존 기간은 소스 SnapMirror 관계에 정의된 보존 기간과 동일합니다. 원하는 경우 API를 사용하여 변경할 수 있습니다.</block>
   <block id="ddc789c5369e25049124726fc1e7b889" category="section-title">FabricPool 계층화 정책 고려 사항</block>
   <block id="e41bdc3c8d9b10f20f980345e66e82c3" category="list-text">FabricPool 계층 볼륨의 첫 번째 백업을 수행하려면 오브젝트 저장소에서 모든 로컬 및 모든 계층화된 데이터를 읽어야 합니다. 백업 작업에서는 오브젝트 스토리지의 콜드 데이터를 "재가열"하지 않습니다.</block>
@@ -234,7 +232,6 @@
   <block id="da4fb5c6e93e74d3df8527599fa62642" category="paragraph">120</block>
   <block id="834584c768066ae32da6d93ce603642d" category="doc">Azure 아카이브 계층 및 복원 검색 시간</block>
   <block id="8fb345995433b95f0008d77ee6840097" category="paragraph">백업 파일이 처음 생성될 때는 _Cool_access 계층에 저장됩니다. 이 계층은 자주 액세스하지 않는 데이터를 저장하는 데 최적화되어 있지만 필요할 때 즉시 액세스할 수 있습니다.</block>
-  <block id="6fd192e87d4bb2c6b2a6ed47a38e69f6" category="paragraph">소스 클러스터에서 ONTAP 9.10.1 이상이 실행 중인 경우 추가 비용 최적화를 위해 일정 일(일반적으로 30일 이상) 후에 _Cool_to_Azure Archive_storage에서 백업을 계층화하도록 선택할 수 있습니다. 이 계층의 데이터는 필요할 때 즉시 액세스할 수 없으며 검색 비용을 더 높여야 하기 때문에 이러한 아카이브 백업 파일에서 데이터를 복원해야 하는 빈도를 고려해야 합니다. 에 대한 다음 섹션을 참조하십시오 <block ref="a877e7ca3014076607c0c931133681b8" category="inline-xref-macro-rx"></block>.</block>
   <block id="07e61ccfcb604b4d08fc03603677751d" category="inline-link">Azure Blob 액세스 계층에 대해 알아보십시오</block>
   <block id="e298f51ca48eff0d92cee75ca43aaa3a" category="paragraph"><block ref="ac0a406faf148be2b386c73b962697e7" category="inline-link-rx"></block>.</block>
   <block id="3ae75226b076757df064bb407b8fb4ff" category="paragraph">오래된 백업 파일을 아카이브 스토리지에 저장하는 것은 Cool 스토리지보다 훨씬 저렴하지만, 복원 작업을 위해 Azure Archive의 백업 파일에서 데이터에 액세스하는 데 더 많은 시간이 걸리고 비용이 더 많이 듭니다.</block>
@@ -280,7 +277,6 @@
   <block id="c7a220fc58ccea879a68f706ca98ac0c" category="list-text">변경 사항을 적용하려면 * 저장 * 을 클릭합니다.</block>
   <block id="8764d766d622ae40812776b15d742a79" category="inline-xref">백업을 삭제합니다</block>
   <block id="35ca84c9ac716ce66e06cc6b1cf45a92" category="inline-xref">해당 작업 환경의 볼륨에 정책을 적용합니다</block>
-  <block id="08cdc078320307d73fe3da23cd24ca2d" category="paragraph">작업 환경의 특정 볼륨에 새 백업 정책을 적용하려면 먼저 작업 환경에 백업 정책을 추가해야 합니다. 그러면 됩니다 <block ref="b42a84e654e63c87505d24dafe97d92c" category="inline-xref-macro-rx"></block>.</block>
   <block id="b0c8709479ef86a9f56014938f57b9c1" category="list-text">백업 설정 페이지에서 을 클릭합니다 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 새 정책을 추가할 작업 환경의 경우 * 정책 관리 * 를 선택합니다.</block>
   <block id="4bd2ed8c1b753600a5017d620739e8ae" category="list-text">Manage Policies_ 페이지에서 * Add New Policy * 를 클릭합니다.</block>
   <block id="70cb98fb549b7f6231a7cfd59ef47a25" category="inline-image-macro">정책 관리 페이지의 새 정책 추가 단추를 보여 주는 스크린샷</block>
@@ -417,7 +413,6 @@
   <block id="8425d41c6f9d3b6f077b56c4d49651a4" category="paragraph">두 복원 방법을 모두 사용하려면 먼저 고유한 리소스 요구 사항에 맞게 환경을 구성해야 합니다. 이러한 요구 사항은 아래 섹션에 설명되어 있습니다.</block>
   <block id="91679e5e03d41aefa89ddfa7649b05d2" category="paragraph">사용할 복원 작업 유형에 대한 요구 사항 및 복원 단계를 참조하십시오.</block>
   <block id="ab298a1df9e049ac3ba4c02e893cc475" category="inline-xref">Browse &amp; amp; Restore를 사용하여 볼륨을 복원합니다</block>
-  <block id="380f9eb66bdfb4e5051453ff8bdcd0aa" category="list-text"><block ref="b8a07354ed62d0e3c05c83c3517bc38b" category="inline-xref-macro-rx"></block></block>
   <block id="f0a32293e7110abfd30f9402fa924815" category="inline-link-macro">Azure 아카이브 스토리지에서 복원에 대해 자세히 알아보십시오</block>
   <block id="b23bca1a2a7f2ec270c7be93eb3d5720" category="inline-link-macro">AWS 아카이브 스토리지에서 복원하는 방법에 대해 자세히 알아보십시오</block>
   <block id="3137db9876bc57bceab513dbed918445" category="section-title">Browse &amp; Restore 지원되는 작업 환경 및 객체 스토리지 공급자</block>
@@ -453,7 +448,6 @@
   <block id="0e91ac4b1796171d6157fb39c3ef5d78" category="paragraph"><block ref="0e91ac4b1796171d6157fb39c3ef5d78" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0e1ef98c65a1f9d57f1fbd8e4f3b46da" category="list-text">위와 같이 * 대상 폴더 선택 * 을 선택한 경우:</block>
   <block id="3f25e82b6a6ddd7bce8047cf9c5eb6cf" category="list-text">폴더를 선택할 수 있습니다.</block>
-  <block id="1c60eafb2bcc4dfa9a04abebcbb62b4e" category="section-title">검색 및 복원을 사용하여 ONTAP 데이터를 복원합니다</block>
   <block id="87e12bc1b54923f05d8d8365d473b744" category="paragraph"><block ref="ca127c5e9bec15815ed41459177c241d" category="inline-link-macro-rx"></block>.</block>
   <block id="42c4ab8961cdba5beaf8c8b46bfb4bc4" category="paragraph">시작하기 전에 복원하려는 볼륨이나 파일의 이름이나 위치를 알고 있어야 합니다.</block>
   <block id="08f59a930621019b7b2d289b74ed3bf2" category="section-title">검색 및 복원 지원되는 작업 환경 및 오브젝트 스토리지 공급자</block>
@@ -773,8 +767,6 @@
   <block id="f487cfb88239842615093e7eb26153a0" category="cell">추가 클라우드 공급자 비용은 필요하지 않습니다</block>
   <block id="1b1bae9a1c274fd71b57fe957acf95e0" category="paragraph"><block ref="40cf1b022c7194f1fda41ab0b0dcc94c" category="inline-link-macro-rx"></block>.</block>
   <block id="7af0d0a640485c14ebea27a93041e711" category="list-text">StorageGRID에서 복구할 때 StorageGRID 서버의 FQDN과 ONTAP이 StorageGRID와 HTTPS 통신에 사용해야 하는 포트를 입력하고, 객체 스토리지에 액세스하는 데 필요한 액세스 키 및 비밀 키를 선택하고, 대상 볼륨이 상주할 ONTAP 클러스터의 IPspace를 선택합니다.</block>
-  <block id="e4b253d57f3284f01d23fe6d890c954f" category="paragraph"><block ref="cacf15576b46da141d22ed2be2ccc0c6" category="inline-link-macro-rx"></block>.</block>
-  <block id="953633132ca38597559bcac180010ac2" category="paragraph"><block ref="e84408fa2ad67b16ce499fc31f7f4f81" category="inline-link-macro-rx"></block>.</block>
   <block id="77a738d7362cefd8d0f8a59020626e57" category="list-text">파일이 복원됩니다.</block>
   <block id="1d6668f1da3f3283d445855e6b6b3ded" category="list-text">Google 클라우드 스토리지에서 복원할 때 대상 볼륨이 있는 ONTAP 클러스터에 IPspace를 입력하고 오브젝트 스토리지에 액세스하는 데 필요한 액세스 키 및 비밀 키를 입력합니다.</block>
   <block id="0d19370f4d82f4437295b4a20f7af2b6" category="list-text">StorageGRID에서 복구할 때 StorageGRID 서버의 FQDN과 ONTAP이 StorageGRID과의 HTTPS 통신에 사용해야 하는 포트를 입력하고, 오브젝트 스토리지에 액세스하는 데 필요한 액세스 키 및 비밀 키, 대상 볼륨이 있는 ONTAP 클러스터의 IPspace를 입력합니다.</block>
@@ -1035,8 +1027,6 @@
   <block id="9ee754e4742a85085c00a0da15114de7" category="section-title">보관 저장 설정</block>
   <block id="7efe72f6baeb19dc4e15e1feb217b66a" category="inline-image-macro">백업 정책을 생성할 때의 아카이브 정책 설정 스크린샷</block>
   <block id="bff3ba9699160e0c8d9eccbf41cf51f7" category="paragraph"><block ref="bff3ba9699160e0c8d9eccbf41cf51f7" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2e5732b07b5a367d6ae6bf311bb4e064" category="paragraph">을 참조하십시오 <block ref="94012c1ab2bd0160a2654e7678395191" category="inline-link-macro-rx"></block> 사용 가능한 일정 옵션에 대한 자세한 내용은 를 참조하십시오.</block>
-  <block id="330ec284275e2a903b785453c26a379b" category="paragraph">을 참조하십시오 <block ref="b960bc47dc855085c33b2bb2182e9e16" category="inline-link-macro-rx"></block> 이전 백업 파일 아카이빙에 대한 자세한 내용은 를 참조하십시오.</block>
   <block id="7e7595ef438d9d19d857be29daa1e8d2" category="list-text">인터넷 HTTP 통신을 위해 프록시 서버를 사용하지 않고 커넥터를 구성해야 합니다 *. Connector에 대해 HTTP 프록시 서버를 구성한 경우 검색 및 바꾸기 기능을 사용할 수 없습니다.</block>
   <block id="7b2b7c08da06dd437ae98c50b4ace20f" category="inline-link">필요한 권한을 복사하여 붙여넣을 수 있는 정책의 전체 JSON 형식을 봅니다</block>
   <block id="9644265a314e497bc18814e1694c3d27" category="paragraph">다음 링크에서 새로 고침 토큰을 생성해야 합니다. https://services.cloud.netapp.com/refresh-token/. 새로 고침 토큰은 사용자 토큰을 생성하는 데 사용할 영숫자 문자열입니다.</block>
@@ -1045,9 +1035,7 @@
   <block id="168036087bcdae960471ab9c23a03efa" category="list-text">오브젝트 저장소 버킷에서 StorageGRID 오브젝트 버전 관리를 수동으로 활성화할 수는 없습니다.</block>
   <block id="7ada527d1dd84b409531cc41597f383e" category="paragraph">원래 작업 환경의 볼륨, 동일한 클라우드 계정을 사용하는 다른 작업 환경의 볼륨 또는 온프레미스 ONTAP 시스템의 볼륨으로 * 폴더 * 를 복원할 수 있습니다.</block>
   <block id="abbf2484b45da9fd7be677fe96c511eb" category="inline-xref">찾아보기 및 amp; 복원을 사용하여 폴더와 파일을 복원합니다</block>
-  <block id="17c981b300f2af812caf64b9a2093463" category="list-text"><block ref="19fee869bed89515b1fdf17b227a6fea" category="inline-xref-macro-rx"></block></block>
   <block id="8996e9eaff78ab540aab279a66de20ac" category="inline-xref">검색 및 amp;Restore를 사용하여 볼륨, 폴더 및 파일을 복원합니다</block>
-  <block id="67e7c5cb86f955703ed9f6730af64fd6" category="list-text"><block ref="2695406f56a43b731bc71bc11df2f690" category="inline-xref-macro-rx"></block></block>
   <block id="860f07d2ed109437af4b64fd8713b385" category="paragraph">아카이브 스토리지에 있는 백업 파일에서 볼륨을 복원하는 데는 아카이브 계층 및 복원 우선 순위에 따라 몇 분 또는 몇 시간이 걸릴 수 있습니다. Job Monitoring* 탭을 클릭하여 복구 진행률을 확인할 수 있습니다.</block>
   <block id="27816218998e04ffd3077d0806e7798b" category="paragraph">ONTAP 볼륨 백업에서 일부 파일만 복원해야 하는 경우 전체 볼륨을 복원하는 대신 폴더 또는 개별 파일을 복원하도록 선택할 수 있습니다. 폴더 및 파일을 원래 작업 환경의 기존 볼륨이나 동일한 클라우드 계정을 사용하는 다른 작업 환경으로 복원할 수 있습니다. 또한 온프레미스 ONTAP 시스템의 볼륨에 폴더 및 파일을 복원할 수 있습니다.</block>
   <block id="502b9bcf8737b06b486f332278870bbf" category="list-text">FILE_RESTORE 작업을 수행하려면 ONTAP 버전이 9.6 이상이어야 합니다.</block>
@@ -1082,7 +1070,6 @@
   <block id="35823b9a43e6a86ef9fc8613d01ca7e0" category="list-text">볼륨, 폴더 또는 파일이 복원됩니다.</block>
   <block id="03a6f07a65b68a9b91d1456b096d425e" category="inline-image-macro">검색 및 앰프, 복원을 사용하여 볼륨, 폴더 또는 파일 복원 작업을 수행하는 흐름을 보여 주는 다이어그램</block>
   <block id="326eb26933ce22b49d0c6ddf7a6e6180" category="paragraph"><block ref="1d155a4bab8461674fe4d884066d77ce" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d8f72a8a92dc78e63f20c27cea79ddbe" category="paragraph">먼저 해 <block ref="9314b8a97cab98202a58ea7476f5d80f" category="inline-xref-macro-rx"></block>검색 및 복원을 사용하여 볼륨, 폴더 및 파일을 복원할 수 있습니다. 이를 통해 광범위한 필터를 사용하여 모든 백업 파일에서 복원하려는 정확한 파일 또는 볼륨을 찾을 수 있습니다.</block>
   <block id="6a1045c38df0108483f2877a13921a70" category="list-text">복원 검색 페이지에서 다음을 수행합니다.</block>
   <block id="50804d8e3eafe9323d24fb2bfd7d13dc" category="list-text">검색 표시줄 _ 에서 전체 또는 부분 볼륨 이름, 폴더 이름 또는 파일 이름을 입력합니다.</block>
   <block id="46937cc6416c5746cc8a700eea0e8703" category="list-text">리소스 유형 * 볼륨 *, * 파일 *, * 폴더 * 또는 * 모두 * 를 선택합니다.</block>
@@ -1301,8 +1288,6 @@
   <block id="640156748fd6680aeca09007465da5e8" category="paragraph">DataLock 및 랜섬웨어 보호를 사용하여 잠근 백업 파일은 삭제할 수 없습니다. 잠긴 백업 파일을 하나 이상 선택한 경우 UI에서 "삭제" 옵션을 사용할 수 없습니다.</block>
   <block id="48bb8a8f162e1bb06f8d835e1fe576be" category="paragraph">볼륨에 대한 백업 관계를 삭제하면 새 백업 파일 생성을 중지하고 소스 볼륨을 삭제하지만 기존의 모든 백업 파일은 보존하려는 경우에 아카이빙 메커니즘이 제공됩니다. 따라서 나중에 필요할 경우 백업 파일에서 볼륨을 복원하는 동시에 소스 스토리지 시스템의 공간을 지울 수 있습니다.</block>
   <block id="1173c80b35af26bafcc4b74670bfa9c8" category="inline-link">여기서 볼륨을 삭제합니다</block>
-  <block id="363dd40a6bd97f0a2141aad89ca63628" category="inline-link-macro">볼륨에 대한 모든 백업을 삭제합니다</block>
-  <block id="a608a5b2ba3f4fc5d8688ccb62bd58c6" category="admonition">관계가 삭제된 후에는 개별 볼륨 백업 파일을 삭제할 수 없습니다. 그러나, <block ref="bb956afafe9f01650c0afdf910a172df" category="inline-link-macro-rx"></block> 모든 백업 파일을 제거하려는 경우</block>
   <block id="75bbbcfb0d1b2d6943bf646b047718bf" category="inline-image-macro">단일 볼륨의 백업 관계를 삭제하는 방법을 보여 주는 스크린샷</block>
   <block id="b2915a1c35fde4ad968abffe7bdbcb2c" category="paragraph"><block ref="b2915a1c35fde4ad968abffe7bdbcb2c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c669c23edafe470b3fd44da0d90e43a1" category="inline-link-macro">고급 설정 페이지에서 선택합니다</block>
@@ -1392,7 +1377,6 @@
   <block id="cc8b0535948da368f832027c19b7f853" category="list-text">일련 번호 필드에 위에서 사용된 계정 일련 번호(960xxxx)를 복사해 주십시오. 이렇게 하면 계정 처리 속도가 빨라집니다.</block>
   <block id="e57e5c06a7f562addb87315f013677ab" category="inline-link-macro">Google 아카이브 스토리지에서 복원하는 방법에 대해 자세히 알아보십시오</block>
   <block id="9412087e43270b75b90fb61a57336ae4" category="paragraph"><block ref="3c746f2f3db6e0c7091d37b11706df4d" category="inline-link-macro-rx"></block>.</block>
-  <block id="a4601bed84cfcc515268c444afd2de52" category="paragraph"><block ref="bb0b0cd162d3c161f2efdc6c31126950" category="inline-link-macro-rx"></block>. Google 아카이브 스토리지 계층의 백업 파일은 거의 즉시 복원되며 복원 우선 순위가 필요하지 않습니다.</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">결과</block>
   <block id="149fb738a290d4d7e242bb7a559fed06" category="inline-link-macro">이러한 요구 사항에 대한 자세한 내용을 참조하십시오</block>
   <block id="fd69c5cf902969e6fb71d043085ddee6" category="paragraph-title">결과</block>
@@ -1410,8 +1394,6 @@
   <block id="f0f8593cf8d423b69e3ba1407f6f5b05" category="inline-link">새로운 온프레미스 Linux 호스트에 새 커넥터를 설치합니다</block>
   <block id="bac8f03e2f29846dbab5b2b784213272" category="list-text">인덱싱된 카탈로그 파일을 복원합니다</block>
   <block id="f19661624edbf73361ae75955e672733" category="paragraph">시스템이 정상적으로 작동하는지 확인한 후에는 새 백업 파일을 생성하는 것이 좋습니다.</block>
-  <block id="ee8d56e3bf2ec5617d7b8febb655c287" category="list-text">다음 명령을 사용하여 MySQL Docker 컨테이너에 백업을 복사합니다.</block>
-  <block id="bb319ca7a8d748d2ce5adf7548a5803c" category="list-text">다음 명령을 사용하여 MySQL 컨테이너 셸을 입력합니다.</block>
   <block id="1a411806f1f54597b7259137d2e753db" category="paragraph">암호를 입력합니다.</block>
   <block id="3ec8f556a760c1ea438f0c8012517d09" category="paragraph">표시된 볼륨이 원래 환경에 있던 볼륨과 동일한지 확인합니다.</block>
   <block id="202fec1254d856dde5dee6e53f5eb9e9" category="inline-link">온프레미스 ONTAP 작업 환경을 모두 살펴보십시오</block>
@@ -1902,14 +1884,12 @@
   <block id="858f352aed10fc578bc936929dbfe50b" category="paragraph">온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템에서 11.4 이상을 사용하는 경우 이전 백업 파일을 퍼블릭 클라우드 아카이브 스토리지에 아카이브할 수 있습니다.</block>
   <block id="1ecce3a208a223602d1ac42d27ccd9df" category="paragraph">+** AWS의 경우 AWS_S3 Glacier_또는 _S3 Glacier Deep Archive_storage에 백업을 계층화할 수 있습니다. <block ref="f7fa7b0a9e810d8c500bcf785a34f359" category="inline-link-macro-rx"></block>.</block>
   <block id="862c21f94072591ed68930b5432494ac" category="paragraph">+** Azure의 경우 이전 백업을 _Azure Archive_storage에 계층화할 수 있습니다. <block ref="2f91ed687cd1d1d6d8235865263a43ff" category="inline-link-macro-rx"></block>.</block>
-  <block id="441c18d944ac4c193a895113937933f0" category="paragraph">를 누릅니다<block ref="363267dd6106568fded10aaeda2ee302" category="inline-link-macro-rx"></block>.</block>
   <block id="8e735e680b7368147fd11864544dafdc" category="list-text">Azure Synapse Analytics 리소스 공급자("Microsoft.Synapse")를 구독에 등록해야 합니다.<block ref="66e7a06283e2f9b1945c2e3b539d5c17" category="inline-link-rx"></block>. 리소스 공급자를 등록하려면 구독 * 소유자 * 또는 * 참가자 * 여야 합니다.</block>
   <block id="e3b4f8fa8b10978799c7afb6af895d2a" category="inline-image-macro">더하기 기호 단추</block>
   <block id="63a6a88c066880c5ac42394a22803ca6" category="inline-image-macro">새로 고침</block>
   <block id="801ab24683a4a8c433c6eb40c48bcd9d" category="inline-image-macro">다운로드</block>
   <block id="fb1b06f0a66663d0b3bfa0401405a807" category="list-text">변경 불가능한 백업 파일은 보존 기간 동안 잠기고 보호되도록 만듭니다.</block>
   <block id="4df1a85d32abc942958400f1bc79add0" category="paragraph">현재 백업 대상이 Amazon S3, Azure Blob 또는 NetApp StorageGRID인 경우 지원을 사용할 수 있습니다. 다른 스토리지 제공업체 대상은 향후 릴리스에 추가될 예정입니다.</block>
-  <block id="3ab813cb58ced99c324082878fbc9261" category="paragraph">온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템에서 11.4 이상을 사용하는 경우 특정 일 후에 이전 백업 파일을 퍼블릭 클라우드 아카이브 스토리지에 아카이브할 수 있습니다. 현재 AWS S3 Glacier/S3 Glacier Deep Archive 또는 Azure Archive 스토리지 계층을 지원합니다. <block ref="363267dd6106568fded10aaeda2ee302" category="inline-link-macro-rx"></block>.</block>
   <block id="27e92fcddc23071f7a376e1c06fa20d6" category="list-text">MetroCluster 지원:</block>
   <block id="6413e2887d9fc1bca42a1d8fa137281d" category="list-text">현재 FlexGroup 볼륨의 백업은 지원되지 않습니다.</block>
   <block id="374f4526af8df5d7623354dc7ae40010" category="section-title">복구 제한 사항</block>
@@ -1938,7 +1918,6 @@
   <block id="dad1e43ee4bc95d547de4b89294b34b2" category="list-text">활성화 마법사를 사용하면 기존 리소스 그룹을 사용하여 백업을 저장할 Blob 컨테이너를 관리하거나 새 리소스 그룹을 만들 수 있습니다.</block>
   <block id="ffb1d9a265e376f6a3298be0531504f5" category="inline-image-macro">StorageGRID에서 AWS S3 또는 Azure Blob으로 백업 파일을 아카이빙하는 데 필요한 정보의 스크린샷</block>
   <block id="f87b4b2f51abea38ed1fffa1cc2fe4e9" category="paragraph"><block ref="f87b4b2f51abea38ed1fffa1cc2fe4e9" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="da0f161911ade8ba5f822031519efb79" category="list-text">클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 시스템에서 버전 11.4 이상을 사용하는 경우 특정 일 수 후에 이전 백업을 퍼블릭 클라우드 아카이브 계층에 계층화하도록 선택할 수 있습니다. 현재 AWS S3 Glacier/S3 Glacier Deep Archive 또는 Azure Archive 스토리지 계층을 지원합니다. <block ref="c2797d22435b48dabeada89d48523cd9" category="inline-xref-macro-rx"></block>.</block>
   <block id="40046bfa2e6f2f907ffbc04727e57d99" category="admonition">Azure에서 StorageGRID 시스템으로 데이터를 복원할 때는 높은 우선 순위가 지원되지 않습니다.</block>
   <block id="d3d6642cce936e1e178fb7a0f2dfc58f" category="list-text">를 사용하여 폴더의 하위 수준을 탐색할 수 있습니다 <block ref="f6625f52b1c71dcdec014baa14bc9e40" category="inline-image-macro-rx" type="image"></block> 버튼을 클릭하여 특정 파일을 찾습니다.</block>
   <block id="62813012ad9cc198c144b40ee8b9d777" category="list-text">폴더 위로 마우스를 가져가 을 클릭할 수 있습니다 <block ref="f6625f52b1c71dcdec014baa14bc9e40" category="inline-image-macro-rx" type="image"></block> 행 끝에서 하위 폴더로 드릴다운한 다음 폴더를 선택합니다.</block>
@@ -2469,7 +2448,6 @@
   <block id="96678658f63f300507ecf10ca356941c" category="inline-link-macro">BlueXP 백업 및 복구 사용과 관련된 비용에 대해 자세히 알아보십시오.</block>
   <block id="bdb22ceb7e956464d69db51ce1582f49" category="paragraph"><block ref="bdb22ceb7e956464d69db51ce1582f49" category="inline-link-macro-rx"></block></block>
   <block id="aca2e72b026ee1e0a7582484746f43ed" category="inline-link-macro">작동 환경에서 BlueXP 백업 및 복구 등록을 취소합니다</block>
-  <block id="e54090ec02cffc5025d030f0a386c9e2" category="paragraph">무료 평가판이 종료되면 중단 없이 자동으로 PAYGO 구독으로 전환됩니다. BlueXP 백업 및 복구를 계속 사용하지 않기로 결정한 경우에만 가능합니다 <block ref="c2935260c294740f9f8b38e657590234" category="inline-link-macro-rx"></block> 평가판 사용 기간이 끝나기 전에는 요금이 부과되지 않습니다.</block>
   <block id="094ba72a3fdb39776632245f235f26be" category="section-title">BlueXP 백업 및 복구 PAYGO 구독을 사용합니다</block>
   <block id="c04968186bb3df4bd0331429c63f8641" category="paragraph">BlueXP 백업 및 복구를 위한 몇 가지 PAYGO 계획이 있습니다.</block>
   <block id="c02893129433d085ea6dfbc155a79562" category="paragraph">다음 링크를 사용하여 클라우드 공급자 마켓플레이스에서 BlueXP 백업 및 복구를 구독하십시오.</block>
@@ -2497,7 +2475,6 @@
   <block id="d70158cbe3d27c50e0d0084d0e2de55a" category="paragraph">작업 환경에 대해 BlueXP 백업 및 복구를 활성화하면 처음에 선택한 모든 볼륨이 사용자가 정의한 기본 백업 정책을 사용하여 백업됩니다. RPO(복구 지점 목표)가 다른 특정 볼륨에 서로 다른 백업 정책을 할당하려면 해당 클러스터에 대한 추가 정책을 생성한 다음 해당 정책을 다른 볼륨에 할당할 수 있습니다.</block>
   <block id="0e0be9ba931ce338721ad79ef94ce582" category="list-text">이 클러스터에 대해 BlueXP 백업 및 복구를 활성화할 때 초기 정책에서 _DataLock 및 랜섬웨어 보호_를 활성화한 경우 생성한 추가 정책은 동일한 DataLock 설정(거버넌스 또는 규정 준수)으로 구성해야 합니다. 그리고 BlueXP 백업 및 복구를 활성화할 때 _DataLock 및 랜섬웨어 보호_를 활성화하지 않은 경우 DataLock을 사용하는 새 정책을 생성할 수 없습니다.</block>
   <block id="fad93ca72d69f3c96e90c9dd91575804" category="list-text">AWS에서 백업을 생성할 때 BlueXP 백업 및 복구를 활성화할 때 첫 번째 백업 정책에서 _S3 Glacier_또는 _S3 Glacier Deep Archive_를 선택한 경우 해당 계층은 해당 클러스터에 대한 향후 백업 정책에 사용할 수 있는 유일한 아카이브 계층이 됩니다. 첫 번째 백업 정책에서 아카이브 계층을 선택하지 않은 경우 _S3 Glacier_는 이후 정책에 대한 유일한 아카이브 옵션입니다.</block>
-  <block id="0abd8676736bf0004d7c3dfe1d7d84bc" category="paragraph">이 클러스터에 대해 BlueXP 백업 및 복구를 활성화할 때 _DataLock 및 랜섬웨어 보호를 활성화한 경우 주문형 백업도 DataLock으로 구성되고 보존 기간은 30일입니다. 애드혹 백업에는 랜섬웨어 스캔이 지원되지 않습니다. <block ref="9735b9b89fbfc01e5e59dd9cae927830" category="inline-link-macro-rx"></block>.</block>
   <block id="d99dbec9e129fae3d2af16de204bf685" category="paragraph">BlueXP 백업 및 복구를 사용하면 단일 백업 파일을 삭제하거나, 볼륨에 대한 모든 백업을 삭제하거나, 작업 환경에서 모든 볼륨의 모든 백업을 삭제할 수 있습니다. 백업이 더 이상 필요하지 않거나 소스 볼륨을 삭제하고 모든 백업을 제거하려는 경우 모든 백업을 삭제할 수 있습니다.</block>
   <block id="d59a13b57c5e2706923c61e62bee2e46" category="admonition">백업이 있는 작업 환경 또는 클러스터를 삭제하려면 * 시스템을 삭제하기 전에 * 백업을 삭제해야 합니다. 시스템을 삭제할 때 BlueXP 백업 및 복구는 자동으로 백업을 삭제하지 않으며, 시스템이 삭제된 후 백업을 삭제할 수 있도록 UI에 현재 지원이 없습니다. 나머지 백업에 대한 오브젝트 스토리지 비용은 계속해서 청구됩니다.</block>
   <block id="b5412d7989235296fcffa07cbdc14f4a" category="paragraph">작업 환경에 대해 BlueXP 백업 및 복구를 비활성화하면 시스템의 각 볼륨의 백업이 비활성화되며 볼륨 복원 기능도 비활성화됩니다. 기존 백업은 삭제되지 않습니다. 이 작업 환경에서 백업 서비스의 등록을 취소하지 않습니다. 기본적으로 모든 백업 및 복원 작업을 일정 기간 동안 일시 중지할 수 있습니다.</block>
@@ -2554,7 +2531,6 @@
   <block id="e7abaddb0f4517d0be715be9b3734101" category="paragraph"><block ref="e7abaddb0f4517d0be715be9b3734101" category="inline-image-macro-rx" type="image"></block></block>
   <block id="167ad7df13dea30d4df6fa06947396fe" category="summary">BlueXP 백업 및 복구는 하나의 Google 아카이브 스토리지 클래스 및 대부분의 지역을 지원합니다.</block>
   <block id="0718118055dc2edc791fa29a90a786fe" category="section-title">BlueXP 백업 및 복구를 위한 Google 아카이브 스토리지 클래스 지원</block>
-  <block id="2675b391654ae179f83f2893ef5337eb" category="paragraph">사내 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일(일반적으로 30일 이상) 이후 BlueXP 백업 및 복구 UI의 _Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. 이 계층의 데이터는 높은 검색 비용이 필요하므로 이러한 아카이브 백업 파일에서 데이터를 복원해야 하는 빈도를 고려해야 합니다. 에 대한 섹션을 참조하십시오 <block ref="a877e7ca3014076607c0c931133681b8" category="inline-xref-macro-rx"></block>.</block>
   <block id="c2e5d30cd0abf0804ca8396b9b1f8c56" category="paragraph">이러한 유형의 수명 주기 규칙을 사용하여 BlueXP 백업 및 복구를 구성할 때 Google 계정에서 버킷을 설정할 때 수명 주기 규칙을 구성하지 않아야 합니다.</block>
   <block id="993e951005a20173ae0c8c379739a8f1" category="summary">BlueXP 백업 및 복구의 새로운 기능에 대해 알아보십시오.</block>
   <block id="fd3d1ba9a2328492349b6ebea92fe728" category="doc">BlueXP 백업 및 복구의 새로운 기능</block>
@@ -2577,7 +2553,6 @@
   <block id="c893816e7a773a744b9ed4b6a86aa940" category="paragraph">기본적으로 BlueXP 백업 및 복구는 비용 최적화를 위해 LRS(Local Redundancy)와 함께 Blob 컨테이너를 프로비저닝합니다. BlueXP 백업 및 복구가 활성화된 후 데이터가 다른 영역 간에 복제되도록 하려면 이 설정을 ZRS(Zone Redundancy)로 변경할 수 있습니다. 에 대한 Microsoft 지침을 참조하십시오<block ref="c549763665cfbb93dbccfdbf667aa0f2" category="inline-link-rx"></block>.</block>
   <block id="404ad1bc321be3b042156261e6ba2b4f" category="paragraph">BlueXP 백업 및 복구는 작업 환경 마법사에서 기본적으로 활성화됩니다. 옵션을 활성 상태로 유지해야 합니다.</block>
   <block id="4f2a0931f8313551f535951dc36ca589" category="inline-xref">기존 시스템에서 BlueXP 백업 및 복구 활성화</block>
-  <block id="c53a7ec6ddfd9f1e05e3e3cfcd2c964c" category="admonition">리소스 그룹의 이름을 선택하려면 * Cloud Volumes ONTAP 배포 시 * BlueXP 백업 및 복구를 비활성화합니다. 의 단계를 따릅니다 <block ref="a16f34e9e42db7156a23b1a727a1a752" category="inline-xref-macro-rx"></block> BlueXP 백업 및 복구를 활성화하고 리소스 그룹을 선택합니다.</block>
   <block id="b8a6a9c5fa81a9fc0842c6df5d41e302" category="paragraph">BlueXP 백업 및 복구는 작업 환경에서 바로 사용할 수 있습니다.</block>
   <block id="95c42891a35fe848a9c33b8c9e21abd6" category="paragraph">기본적으로 BlueXP 백업 및 복구는 비용 최적화를 위해 LRS(Local Redundancy)와 함께 Blob 컨테이너를 프로비저닝합니다. 데이터가 다른 영역 간에 복제되도록 하려면 이 설정을 영역 중복(ZRS)으로 변경할 수 있습니다. 에 대한 Microsoft 지침을 참조하십시오<block ref="c549763665cfbb93dbccfdbf667aa0f2" category="inline-link-rx"></block>.</block>
   <block id="a6824c9b13690f6bdd92d0879a455c1d" category="inline-link-macro">BlueXP 백업 및 복구에 대한 고지 사항</block>
@@ -2759,7 +2734,6 @@
   <block id="ad05f3c2a42e28f22c97d13c62c20e21" category="paragraph">를 참조하십시오<block ref="fe3dd1b4143f543014e8974529e1079b" category="inline-link-rx"></block> 이 라이센스 옵션에 대해 자세히 알아보십시오.</block>
   <block id="4d6157a62532904beb4910b24be9f6fb" category="paragraph">선택적으로 사용하지 않을 Cloud Volumes ONTAP에 대해 할당되지 않은 노드 기반 라이센스가 있는 경우 동일한 달러 당량 및 만료 날짜가 있는 BlueXP 백업 및 복구 라이센스로 전환할 수 있습니다.<block ref="f4c32a82791cf9fc58c736c0aed05092" category="inline-link-rx"></block>.</block>
   <block id="30fc689a9c3cd4222329fe3a4c818a33" category="paragraph">드롭다운 목록에서 NetApp Support 사이트 계정을 사용할 수 없는 경우<block ref="06a3bc9d474b5d4e44d1a2733cac785a" category="inline-link-rx"></block>.</block>
-  <block id="bd2181ebe83d3e14c692cc0ecf0b8124" category="paragraph">라이센스가 부여된 기간이 만료일에 가까워지고 있거나 라이센스가 부여된 용량이 한도에 도달한 경우 백업 UI에서 알림을 받게 됩니다. 이 상태는 BlueXP 디지털 지갑 페이지 및 에도 표시됩니다<block ref="b553b83f4f3ab8ad7adf12f36cefd6a6" category="inline-link-rx"></block>.</block>
   <block id="6da26906aaee33f2713c2ade001a6c1c" category="paragraph">BlueXP는 웹 기반 콘솔에서 액세스할 수 있습니다. BlueXP를 시작할 때 첫 번째 단계는 기존 NetApp Support 사이트 자격 증명을 사용하거나 NetApp 클라우드 로그인을 생성하여 등록하는 것입니다. 자세한 내용은 을 참조하십시오 <block ref="3d0080f10d263832ae8d693dec77976c" category="inline-link-macro-rx"></block>.</block>
   <block id="694f23a894c7ab8f8ca341d42f4a872a" category="paragraph">BlueXP에 등록하면 웹 기반 콘솔에서 로그인할 수 있습니다. 자세한 내용은 을 참조하십시오 <block ref="26287b6dbb93c9f00b57f2d18838bae3" category="inline-link-macro-rx"></block>.</block>
   <block id="cd6d41c57830d090b559d13f4cb1acca" category="paragraph">사용자, 서비스 계정, 작업 영역 및 커넥터를 관리하여 계정을 관리할 수 있습니다. 자세한 내용은 을 참조하십시오 <block ref="3b8087b18103c5a86a32656fd8065ecb" category="inline-link-macro-rx"></block>.</block>
@@ -3169,7 +3143,6 @@ cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 G
   <block id="d3456e6a0908a4918170d02ea0c3ee84" category="list-text">백업의 스토리지 내보내기입니다</block>
   <block id="b8507ca67617589814152570680713d8" category="list-text">Oracle 데이터베이스 백업을 마운트합니다</block>
   <block id="b1736bc032b4a5b6d651f60785db87f7" category="list-text">대체 스토리지로 복원합니다</block>
-  <block id="94a7d215d3c763dcc4768c5097b88e2c" category="summary">백업 세부 정보를 보고, 모든 작업의 상태를 모니터링하고, 클론 삭제, 감사 데이터, 커넥터 세부 정보 업데이트, CA 인증서 구성 등을 수행할 수 있습니다. 호스트를 관리합니다.</block>
   <block id="5dc8569ee9c4f42d7d835629adc7ef5f" category="section-title">Oracle 데이터베이스 호스트의 유지 관리</block>
   <block id="e65824137d1687f7668c648115afc6be" category="paragraph">관리자는 데이터베이스 호스트를 유지 관리 모드로 수동으로 전환하여 호스트에 대한 유지 보수 작업을 수행할 수 있습니다. 업그레이드하는 동안 호스트는 자동으로 유지 관리 모드로 전환되고 업그레이드 후에는 호스트가 운영 모드로 자동 전환됩니다.</block>
   <block id="88245f95c61cb1a029ac5e105d2dbcef" category="paragraph">호스트를 유지 관리 모드로 전환하면 주문형 작업이 실패하고 예약된 작업이 생략됩니다.</block>
@@ -3318,7 +3291,6 @@ cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 G
   <block id="92d8395661fc73838db0cbf4aba93fe5" category="cell">소스 볼륨과 타겟 볼륨 간의 데이터 보호 관계를 삭제합니다. 즉, 볼륨 간에 데이터 복제가 더 이상 발생하지 않습니다. 이 작업은 데이터 액세스를 위해 대상 볼륨을 활성화하지 않습니다. 즉, 읽기-쓰기가 되지 않습니다. 이 작업을 수행하면 시스템 간에 다른 데이터 보호 관계가 없는 경우 클러스터 피어 관계 및 스토리지 VM(SVM) 피어 관계도 삭제됩니다.</block>
   <block id="616bc3352ef3eb19ce7189272555ea24" category="paragraph">작업을 선택하면 BlueXP에서 관계를 업데이트합니다.</block>
   <block id="0ce8d63d4994f1d55a979cecaac4fc58" category="section-title">작업 환경의 모든 백업 파일을 삭제합니다</block>
-  <block id="6b8f63c8ef98440d33861174ffb90cc2" category="paragraph">작업 환경의 오브젝트 스토리지에 대한 모든 백업을 삭제해도 이 작업 환경의 볼륨에 대한 향후 백업이 비활성화되지는 않습니다. 작업 환경에서 모든 볼륨의 백업 생성을 중지하려면 백업을 비활성화할 수 있습니다 <block ref="d1964673468c58ea1746cfa9741b745a" category="inline-xref-macro-rx"></block>.</block>
   <block id="b7726bf807f669806d064d7e428c02fc" category="paragraph">이 작업은 스냅샷 복사본 또는 복제된 볼륨에 영향을 주지 않습니다. 이러한 유형의 백업 파일은 삭제되지 않습니다.</block>
   <block id="0c7a693eba5a0f2f80ac9cdb747411a8" category="section-title">볼륨에 대한 단일 백업 파일을 삭제합니다</block>
   <block id="e300bd32052d102b8a28f9965281effd" category="paragraph">더 이상 필요하지 않은 경우 단일 백업 파일을 삭제할 수 있습니다. 여기에는 볼륨 스냅샷 복사본의 단일 백업 또는 오브젝트 스토리지의 백업 삭제가 포함됩니다.</block>
@@ -3609,7 +3581,6 @@ GCP에서 BlueXP는 Google Cloud Storage 버킷을 위한 저장소 계정이 �
   <block id="ae23bee4c78e8568b6dddf5191feac02" category="list-text">ONTAP 시스템의 경우 FSx에서 데이터를 복제하거나 FSx에서 데이터를 복제할 수 없습니다.</block>
   <block id="0c23616cc33d59b54422397ae3ade277" category="list-text">볼륨의 일회성 복제를 생성하는 기능은 지원되지 않습니다.</block>
   <block id="21d64258a41a5b12606a567cacffa6cc" category="list-text">온프레미스 ONTAP 시스템에서 복제를 생성할 때 대상 Cloud Volumes ONTAP 시스템의 ONTAP 버전이 9.8, 9.9 또는 9.11인 경우 미러 볼트 정책만 허용됩니다.</block>
-  <block id="70fd0d5da8464033c7ff5b8ef964dc64" category="section-title">개체 백업 제한</block>
   <block id="2ad2934a6b663d3e1150684467ab796f" category="list-text">디렉토리/폴더 복구는 현재 복제 및/또는 로컬 스냅샷에서 지원되지 않습니다.</block>
   <block id="7766a2f89be98923b575fe6eb519d31e" category="paragraph">이 설정은 작업 환경의 볼륨에 대해 구성할 수 있는 다른 복제 관계에 할당된 대역폭에 영향을 주지 않습니다.</block>
   <block id="861cb48bf82afb2d1addc6ef6c8ff905" category="doc">사내 ONTAP 데이터를 StorageGRID에 백업합니다</block>
@@ -3769,7 +3740,6 @@ GCP에서 BlueXP는 Google Cloud Storage 버킷을 위한 저장소 계정이 �
   <block id="416d6dba97115e0823c4346a7315efbf" category="list-text">소스 볼륨 -&gt; 스냅샷 복사본 -&gt; 복제된 볼륨</block>
   <block id="8d4622541c56b47641b741cdbe4f8ddf" category="paragraph">다음 표에서는 세 가지 백업 방법에 대한 일반적인 비교를 보여 줍니다. 일반적으로 오브젝트 스토리지 공간은 사내 디스크 스토리지에 비해 저렴하지만, 클라우드에서 데이터를 자주 복원한다고 생각하는 경우 클라우드 공급자를 통한 대피 비용을 통해 비용을 절감할 수 있습니다. 클라우드에 있는 백업 파일에서 데이터를 복원해야 하는 빈도를 확인해야 합니다.</block>
   <block id="e2a9bf899dffb889ffbede3dd4e5cc0e" category="inline-link-macro">보관 저장 설정</block>
-  <block id="d55eb6c501a441c7d0dea092acee6757" category="paragraph">이 기준 외에도 클라우드 스토리지는 DataLock 및 랜섬웨어 보호 기능을 사용하는 경우 추가 보안 옵션을 제공하며 이전 백업 파일에 대한 아카이브 스토리지 클래스를 선택하면 비용을 추가로 절약할 수 있습니다. <block ref="492dec6eb028f140c092b28cfb259760" category="inline-link-macro-rx"></block> 및 <block ref="a57ecb59892033dcb01091d0db7f437d" category="inline-link-macro-rx"></block>.</block>
   <block id="ddb99ca7cced831bad7ef70c4a866fbf" category="cell">백업 속도</block>
   <block id="e1cc17541eaf2c504e414ddff25f2eab" category="cell">백업 비용</block>
   <block id="ffe53eb9663918ea5038c796f2cb2f26" category="cell">복원 속도</block>
@@ -3902,7 +3872,6 @@ GCP에서 BlueXP는 Google Cloud Storage 버킷을 위한 저장소 계정이 �
   <block id="b7d972f6553934b1eea5e57436b58de2" category="paragraph">사내 ONTAP 클러스터를 공용 인터넷을 통해 Google Cloud 스토리지에 직접 연결할지, VPN 또는 Google Cloud Interconnect를 사용할지 여부를 선택하고 개인 IP 주소를 사용하는 전용 Google Access 인터페이스를 통해 트래픽을 라우팅할지 여부를 선택합니다.</block>
   <block id="061189bcae2d45b758f44b801f0cafa0" category="paragraph">Connector에 대한 권한을 설정하여 Google Cloud 버킷을 생성하고 관리합니다. 또한, 온프레미스 ONTAP 클러스터에 대한 사용 권한을 설정해야 Google Cloud 버킷에 데이터를 읽고 쓸 수 있습니다.</block>
   <block id="965fc2d93c14a05bf6aa6d11dccdf7f3" category="inline-xref">Google Cloud 환경에서 ONTAP 백업을 받을 수 있는 방법에 대해 알아보십시오.</block>
-  <block id="3142575a0ab456d6fc41027f31a44400" category="paragraph">선택적으로 기본 Google Cloud 암호화 키를 사용하는 대신 데이터 암호화에 대해 사용자 지정 관리 키를 설정할 수 있습니다. <block ref="24a7679356370a79eec97a5aa8f7e0f4" category="inline-xref-macro-rx"></block></block>
   <block id="9ad048774cfb757660014ae8b3a5e963" category="paragraph">BlueXP 백업 및 복구는 쉽게 활성화할 수 있습니다. 기존 Cloud Volumes ONTAP 시스템이 있는지 새 시스템이 있는지 여부에 따라 단계가 약간 다릅니다.</block>
   <block id="50ecfa827055391d1f79881e9faaa9d5" category="paragraph">작업 환경에서 직접 언제든지 기존 시스템에서 BlueXP 백업 및 복구를 사용할 수 있습니다.</block>
   <block id="4dd14adc068a21e0671c3acde608dda6" category="paragraph"><block ref="4dd14adc068a21e0671c3acde608dda6" category="inline-image-macro-rx" type="image"></block></block>
@@ -4098,7 +4067,6 @@ ONTAP S3</block>
 ** StorageGRID에서 BlueXP는 S3 버킷에 기존 테넌트 계정을 사용합니다.</block>
   <block id="fd749272599b095f7a34398408b6b874" category="paragraph">를 누릅니다
 ** ONTAP S3의 경우 BlueXP는 S3 버킷에 대한 기존 사용자 계정을 사용합니다.</block>
-  <block id="4ccb5cdbd86084205ce720c00322b5ec" category="paragraph">향후 클러스터의 대상 오브젝트 저장소를 변경하려면 가 필요합니다 <block ref="f6e1bc3e19f78af5ecdbf1a616ed4b9f" category="inline-link-macro-rx"></block>그런 다음 새로운 클라우드 공급자 정보를 사용하여 BlueXP 백업 및 복구를 활성화합니다.</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -4232,7 +4200,6 @@ ONTAP S3</block>
   <block id="88b38144f5678f838e589bb3f66fb7c3" category="inline-link">아카이브 스토리지 설정에 대해 자세히 알아보십시오</block>
   <block id="de7befde4d7cc6f9bdfc275272097393" category="list-text">(선택 사항) 백업이 수정되거나 삭제되지 않도록 하려면 * DataLock 및 랜섬웨어 방지 * 옵션을 선택하십시오.</block>
   <block id="2d9688ca19f23219c0b4f9a9455f77b5" category="paragraph">클러스터에서 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock_and_Ransomware protection_을 구성하여 백업이 삭제되지 않도록 보호할 수 있습니다.</block>
-  <block id="8b8b4afe72e073cb2f31b19794927e17" category="paragraph"><block ref="a1590ca0a57c2e20ed40ac0f3384a5af" category="inline-link-macro-rx"></block>.</block>
   <block id="fb6e9d876191a4c0c156e739e377be59" category="section-title">정책을 편집합니다</block>
   <block id="b633d734395141aa32f026fd1762bc20" category="paragraph">사용자 지정 스냅샷, 복제 또는 백업 정책을 편집할 수 있습니다.</block>
   <block id="dab1e1444e686afc30710bb64ca8164a" category="paragraph">백업 정책을 변경하면 해당 정책을 사용하는 모든 볼륨에 영향을 줍니다.</block>
@@ -4566,7 +4533,6 @@ ONTAP S3</block>
 <block ref="76f9b86225921137bc166f71caebf3f1" category="inline-link-rx"></block>
 <block ref="21814359fa3d01fa463924248dc4810b" category="inline-link-rx"></block>
 <block ref="d73f218743fa1184e2a040cf646f920f" category="inline-link-rx"></block></block>
-  <block id="d0c161747fe8a725393203f97ccd685c" category="paragraph">BlueXP 백업 및 복구 UI에서 오브젝트 스토리지 정책에 대한 스냅샷, 복제 및 백업을 생성할 수 있습니다. 의 섹션을 참조하십시오 <block ref="535e99780197daca673e274e7a26ba94" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="22edee525474fff8dff91ac36bee6386" category="paragraph">BlueXP 백업 및 복구를 사용하여 보조 ONTAP 시스템에서 복제된 볼륨을 생성하려는 경우 소스 및 대상 시스템이 다음 네트워킹 요구사항을 충족하는지 확인하십시오.</block>
   <block id="f1d5b892646c28fdb747b890f0787976" category="section-title">백업 활성화 중 3-2-1 백업 정책 생성</block>
   <block id="1a169799fb63ccdda2e672c25d0ab2d2" category="paragraph">이전에는 스냅샷, 복제 또는 백업을 시작하기 전에 사용자 지정 정책을 생성해야 했습니다. 이제 백업 활성화 프로세스 중에 BlueXP 백업 및 복구 UI를 사용하여 정책을 생성할 수 있습니다.</block>
@@ -4581,7 +4547,6 @@ ONTAP S3</block>
   <block id="7c28f64a5610cc1e75581e2ea3dc7138" category="paragraph">의 섹션을 참조하십시오 <block ref="ac80a7f05dc0391b19d593c75503912d" category="inline-link-macro-rx"></block> 추가 요구 사항 및 제한 사항</block>
   <block id="7082ff4f578c0dfc350f7dba294cc6af" category="paragraph">특정 클라우드 스토리지를 사용할 경우 특정 기간 동안 오래된 백업 파일을 보다 저렴한 스토리지 클래스/액세스 계층으로 이동할 수 있습니다. 또한 표준 클라우드 스토리지에 기록하지 않고 백업 파일을 아카이빙 스토리지로 즉시 전송하도록 선택할 수 있습니다. DataLock을 설정한 경우에는 아카이브 스토리지를 사용할 수 없습니다.</block>
   <block id="10d6dae9dea0d7acf070167883c1271a" category="list-text">(선택 사항) 특정 일 수 후에 오래된 백업 파일을 저렴한 스토리지 클래스나 액세스 계층으로 이동하려면 * Archive * 옵션을 선택하고 데이터가 보관되기 전까지 경과할 일 수를 지정합니다. 백업 파일을 보관 저장소로 직접 전송하려면 "보관 일수 이후"로 * 0 * 을 입력합니다.</block>
-  <block id="e19fdb00900d5bd2fa83624f8c18a460" category="paragraph"><block ref="0c2d0936bf813db900df081191632aa8" category="inline-link-macro-rx"></block>.</block>
   <block id="5d8aef9555e5438ddeff623786db2956" category="summary">알려진 제한 사항은 이 제품 릴리스에서 지원하지 않거나 올바르게 상호 운용되지 않는 기능을 식별합니다. 이러한 제한 사항을 주의 깊게 검토하십시오.</block>
   <block id="482723983a4f2af954e36ff41e567451" category="doc">알려진 제한 사항</block>
   <block id="aa0373aa24c3795f9860b49e074ec0b5" category="section-title">ONTAP 볼륨에 대한 백업 및 복구 제한 사항</block>
@@ -4672,8 +4637,6 @@ ONTAP S3</block>
         "S3:PutObjectRetention"
         ]
     “리소스”:“arn:AWS:S3:::*”,</block>
-  <block id="55082684c888abf218793c0bd2f3b5e4" category="paragraph">표준 공용 인터넷 연결을 사용하려는 경우 모든 권한은 Connector에 의해 설정되며 다른 작업은 필요하지 않습니다. 이 연결 유형은 에 나와 있습니다 <block ref="b1224f75874af139b1e7a51a1da970e9" category="inline-link-macro-rx"></block>.</block>
-  <block id="ca301c03d4c5ce91946df8b15f3dbe5f" category="paragraph">사내 데이터 센터에서 VPC로 인터넷을 통해 보다 안전하게 연결하려면 백업 활성화 마법사에서 AWS PrivateLink 연결을 선택하는 옵션이 있습니다. VPN 또는 AWS Direct Connect를 사용하여 프라이빗 IP 주소를 사용하는 VPC 엔드포인트 인터페이스를 통해 사내 시스템을 연결하려는 경우 필요합니다. 이 연결 유형은 에 나와 있습니다 <block ref="0f7afb920fb200721cfd6111e33f99d4" category="inline-link-macro-rx"></block>.</block>
   <block id="4adab5b6b391c43cf0cfd73c09d5bdf8" category="inline-xref">백업 정책에서 S3 권한을 추가합니다</block>
   <block id="f59bbb6de7b8eafb6ccb2f617135ff84" category="list-text">BlueXP 커넥터와 관련된 보안 그룹 구성을 수정합니다. 정책을 "사용자 지정"("전체 액세스"에서)으로 변경해야 하며 반드시 다음을 수행해야 합니다 <block ref="52cd24ecfd99d5b16a10d03c54f9d16b" category="inline-xref-macro-rx"></block> 앞서 설명한 것처럼.</block>
   <block id="54979ba354582c6f2824abc12558cf5a" category="inline-image-macro">Connector와 연결된 AWS 보안 그룹의 스크린샷</block>
@@ -4819,9 +4782,7 @@ ifdef::AWS[]</block>
   <block id="e3414eaea3759c338f18072fbecaa19f" category="paragraph">예약된 랜섬웨어 보호 검사는 기본적으로 사용하도록 설정됩니다. 스캔 빈도의 기본 설정은 7일입니다. 검사는 최신 스냅샷 복사본에만 수행됩니다. 예약된 스캔을 비활성화하여 비용을 절감할 수 있습니다. 고급 설정 페이지의 옵션을 사용하여 최신 스냅샷 복사본에 대해 예약된 랜섬웨어 검사를 사용하거나 사용하지 않도록 설정할 수 있습니다. 이 기능을 활성화하면 기본적으로 스캔이 매주 수행됩니다. 이 일정을 일 또는 주로 변경하거나 사용하지 않도록 설정하여 비용을 절감할 수 있습니다.</block>
   <block id="0518809725b483d8fb74affb68a52a55" category="paragraph">자세한 내용은 다음 정보를 참조하십시오.</block>
   <block id="56a32d1b7ebb6e4b6fd9b4fdf452a545" category="inline-link-macro">DataLock 및 랜섬웨어 방어의 작동 방식</block>
-  <block id="62ca9cbc3f8aec602122840db4b03221" category="list-text"><block ref="59f4f37319067dbfb884709419e3ff51" category="inline-link-macro-rx"></block>.</block>
   <block id="76b58aa0d11cd1d400e558a828802ece" category="inline-link-macro">고급 설정 페이지에서 랜섬웨어 보호 옵션을 업데이트하는 방법</block>
-  <block id="54561f4f95cd53f018b8034daddb9371" category="list-text"><block ref="2afb661236a3c9beb84de46fcd5481e6" category="inline-link-macro-rx"></block>.</block>
   <block id="45167bc71bd7fe459b6a35c45730024a" category="doc">오브젝트에 백업 정책 옵션</block>
   <block id="bb4705a61e0f0eca2849677cf42a43e5" category="paragraph">BlueXP 백업 및 복구를 사용하면 온프레미스 ONTAP 및 Cloud Volumes ONTAP 시스템에 대한 다양한 설정으로 백업 정책을 생성할 수 있습니다.</block>
   <block id="216ef706f9f25f4eb179f940b530a4d5" category="admonition">이러한 정책 설정은 오브젝트 백업 스토리지에만 해당됩니다. 이러한 설정은 스냅샷 또는 복제 정책에 영향을 주지 않습니다. 스냅샷 및 복제에 대한 유사한 정책 설정이 나중에 추가됩니다.</block>
@@ -4871,7 +4832,6 @@ ifdef::AWS[]</block>
   <block id="d09fe30f62c514ce3f7fb2767974cf23" category="sidebar">BlueXP 백업 및 복구 비디오</block>
   <block id="f93e4e0ba0745745e36a3b67b14a8a5b" category="sidebar">BlueXP 웨비나</block>
   <block id="ed775139b29f7dce72403b2625d88609" category="paragraph">소스 클러스터에서 ONTAP 9.10.1 이상이 실행 중인 경우 추가 비용 최적화를 위해 일정 일(일반적으로 30일 이상) 후에 백업을 _S3 Glacier_또는 _S3 Glacier Deep Archive_storage로 계층화하도록 선택할 수 있습니다. "0" 또는 1-999일로 설정할 수 있습니다. "0"일로 설정한 경우 나중에 1-999일로 변경할 수 없습니다.</block>
-  <block id="8d9d296798f83841991dd908e86cc79b" category="paragraph">이러한 계층의 데이터는 필요할 때 즉시 액세스할 수 없으며 검색 비용을 더 높여야 하기 때문에 이러한 아카이브 백업 파일에서 데이터를 복원해야 하는 빈도를 고려해야 합니다. 에 대한 섹션을 참조하십시오 <block ref="a877e7ca3014076607c0c931133681b8" category="inline-xref-macro-rx"></block>.</block>
   <block id="d48498af5a5419c6130b506ce86226aa" category="paragraph">이 릴리즈에서 고급 설정 페이지의 옵션을 사용하여 최신 스냅샷 복사본에 대한 랜섬웨어 검사를 사용하거나 사용하지 않도록 설정할 수 있습니다. 이 기능을 활성화하면 기본적으로 스캔이 매주 수행됩니다.</block>
   <block id="b9efb0b81ee5dede04d703accaa3ac50" category="list-text"><block ref="b9efb0b81ee5dede04d703accaa3ac50" category="inline-link-rx"></block></block>
   <block id="4987d2d58127a881e304bbe4ce3b5f7b" category="list-text"><block ref="4987d2d58127a881e304bbe4ce3b5f7b" category="inline-link-rx"></block></block>
@@ -4894,4 +4854,66 @@ ifdef::AWS[]</block>
   <block id="24c8d17b3d2e5d56e90675c0755252e0" category="section-title">예약된 랜섬웨어 검사를 활성화 또는 비활성화합니다</block>
   <block id="1d5d9f598ed0ef9d579321fc5f2dea76" category="paragraph">이전에는 랜섬웨어 검사를 활성화 또는 비활성화할 수 있었지만 예약된 검사에 대해서는 그렇게 할 수 없었습니다.</block>
   <block id="c05a6e1c401ef496decb0a82c8e569e3" category="paragraph">이 릴리즈에서는 이제 고급 설정 페이지의 옵션을 사용하여 최신 스냅샷 복사본에 대해 예약된 랜섬웨어 검사를 사용하거나 사용하지 않도록 설정할 수 있습니다. 이 기능을 활성화하면 기본적으로 스캔이 매주 수행됩니다. 이 일정을 일 또는 주로 변경하거나 사용하지 않도록 설정하여 비용을 절감할 수 있습니다.</block>
+  <block id="8e0e573826fedf587c60fd10640e17c8" category="paragraph">소스 클러스터에서 ONTAP 9.10.1 이상이 실행 중인 경우 추가 비용 최적화를 위해 일정 일(일반적으로 30일 이상) 후에 _Cool_to_Azure Archive_storage에서 백업을 계층화하도록 선택할 수 있습니다. 이 계층의 데이터는 필요할 때 즉시 액세스할 수 없으며 검색 비용을 더 높여야 하기 때문에 이러한 아카이브 백업 파일에서 데이터를 복원해야 하는 빈도를 고려해야 합니다. 에 대한 다음 섹션을 참조하십시오 <block ref="7b911fb03c2e33c305d56e0261aa7b5a" category="inline-xref-macro-rx"></block>.</block>
+  <block id="bab29573e33c31960ca3e23e51a0db21" category="section-title">아카이브 스토리지에서 데이터 복원</block>
+  <block id="7fe9efb1a5fafb19fa9b6e7fc992c504" category="paragraph"><block ref="e235420362596a5fcbb7fdd4a3380e91" category="inline-link-macro-rx"></block>.</block>
+  <block id="3c466b40e15796ebb4120cf801b8cb93" category="paragraph"><block ref="072e0f84c1263277af127585d1cb18c3" category="inline-link-macro-rx"></block>.</block>
+  <block id="a9dc8bb5efaac75ae86c6a34933da8e4" category="paragraph">이러한 계층의 데이터는 필요할 때 즉시 액세스할 수 없으며 검색 비용을 더 높여야 하기 때문에 이러한 아카이브 백업 파일에서 데이터를 복원해야 하는 빈도를 고려해야 합니다. 에 대한 섹션을 참조하십시오 <block ref="7b911fb03c2e33c305d56e0261aa7b5a" category="inline-xref-macro-rx"></block>.</block>
+  <block id="bdb79327f3712ed9f0d2910964ca17d6" category="paragraph">를 누릅니다
+<block ref="6a96d9b5ed55776b5555946cb02fa548" category="inline-link-macro-rx"></block>.</block>
+  <block id="2dc37cecffdd7077ba99c0ba111ad347" category="section-title">오브젝트로 백업 제한 사항</block>
+  <block id="215d6f1bc8d7005b7bb981d9a3dc7b78" category="section-title">RHEL 8+를 Podman과 함께 사용할 때의 제한 사항</block>
+  <block id="38c44a50a75c15410df928f63928acf8" category="section-title">단일 파일 복구는 지원되지 않습니다</block>
+  <block id="8d98ce1c70029af5a2d95ea5cd356016" category="paragraph">Podman을 사용할 때는 단일 파일 복원 및 디렉토리 복원을 위한 찾아보기 및 복원 기능이 지원되지 않습니다. Podman을 사용할 때 다른 모든 유형의 복원 작업이 지원되므로 이 문제가 해결될 때까지 다음과 같은 다른 방법을 사용하여 데이터를 복원할 수 있습니다.</block>
+  <block id="dbeaadfb952b8aa57d00264751776087" category="list-text">복제된 볼륨이 있는 경우 복제된 볼륨에서 파일 또는 폴더를 복원합니다.</block>
+  <block id="e647cb9e3bb11f1dcf4383ae4ae00f0f" category="list-text">검색 및 복원 기능을 사용하여 클라우드 백업에서 파일 또는 폴더를 복원합니다.</block>
+  <block id="b760ac1d9088cf17812b95299a0f4c97" category="list-text">찾아보기 및 복원을 사용하여 클라우드 백업에서 볼륨을 복원한 다음 필요한 파일이나 폴더에 액세스합니다.</block>
+  <block id="58cbbdff8232fafaffb4ad6a56acd87a" category="section-title">클라우드 백업의 랜섬웨어 검사는 지원되지 않습니다</block>
+  <block id="f1c936121149a4d66e8504719aa508b6" category="inline-link-macro">랜섬웨어 검사를 비활성화하는 방법을 알아보십시오</block>
+  <block id="346753a5d3dc5273a067b86995fbd568" category="paragraph">Podman 엔진을 사용할 때는 클라우드 백업에서 랜섬웨어에 대한 검사가 지원되지 않습니다. 클라우드 백업에 DataLock 및 랜섬웨어 기능을 사용 중인 경우 랜섬웨어 검사를 비활성화해야 합니다. <block ref="f4c28073f17b68c88ffe0b411369b71f" category="inline-link-macro-rx"></block>.</block>
+  <block id="74fcd9275dc8f4544c3f2e6da14c3a0f" category="cell">docker 명령</block>
+  <block id="9865e302853628bbfe9f8357d9e7514f" category="cell">Podman 명령</block>
+  <block id="62fbf3095f1e89aabae3804682809c2b" category="cell"><block ref="3d14b961bb7289e76bff64ac921cba5d" prefix="" category="inline-code"></block></block>
+  <block id="bf7ecaf7643e3be49e45cd82469534f1" category="cell"><block ref="55285eccf27fa61af2e97ac2832bdc01" prefix="" category="inline-code"></block></block>
+  <block id="2bd2b4226296570c863270e08d511da0" category="list-text">Docker 또는 Podman 컨테이너를 사용하는지 여부에 따라 다음 명령 중 하나를 사용하여 MySQL Docker 컨테이너에 백업을 복사합니다.</block>
+  <block id="4b049f120edc0f4092d8d8e236ea964b" category="list-text">Docker 또는 Podman 컨테이너를 사용하는지 여부에 따라 다음 명령 중 하나를 사용하여 MySQL 컨테이너 셸을 입력합니다.</block>
+  <block id="d5523b519e89c779f9a7f347736d28f5" category="paragraph">이 클러스터에 대해 BlueXP 백업 및 복구를 활성화할 때 _DataLock 및 랜섬웨어 보호를 활성화한 경우 주문형 백업도 DataLock으로 구성되고 보존 기간은 30일입니다. 애드혹 백업에는 랜섬웨어 스캔이 지원되지 않습니다. <block ref="25ebe908c09aa768262b63d88362088a" category="inline-link-macro-rx"></block>.</block>
+  <block id="3dd10969d67f6fda874725e718125867" category="paragraph">작업 환경의 특정 볼륨에 새 백업 정책을 적용하려면 먼저 작업 환경에 백업 정책을 추가해야 합니다. 그러면 됩니다 <block ref="1cac790bb65320561949ed86d1f04116" category="inline-xref-macro-rx"></block>.</block>
+  <block id="26df5a69757b9c77f32d1ff3fd841a9a" category="paragraph">작업 환경의 오브젝트 스토리지에 대한 모든 백업을 삭제해도 이 작업 환경의 볼륨에 대한 향후 백업이 비활성화되지는 않습니다. 작업 환경에서 모든 볼륨의 백업 생성을 중지하려면 백업을 비활성화할 수 있습니다 <block ref="f309acb77998d5759c37adab9747d61c" category="inline-xref-macro-rx"></block>.</block>
+  <block id="ccabb5f58c34ffd48f5d3b3d41985f1a" category="admonition">관계가 삭제된 후에는 개별 볼륨 백업 파일을 삭제할 수 없습니다. 그러나 볼륨에 대한 모든 백업을 삭제할 수는 있습니다.</block>
+  <block id="150316ac807c8abc9de05ff5720178a5" category="paragraph">사용자가 비용을 부담하지 않는 한, 클라우드 공급자가 백업 용량에 대한 오브젝트 스토리지 비용에 대해 계속 청구한다는 점에 유의하십시오 <block ref="f0fba6094ff5354e1300b0446d643e3c" category="inline-xref-macro-rx"></block>.</block>
+  <block id="43f4c1811765abf291168aea7f16a205" category="paragraph">클러스터에서 ONTAP 9.12.1 이상을 사용하고 StorageGRID 시스템에서 버전 11.4 이상을 사용하는 경우 특정 일 수 후에 이전 백업을 퍼블릭 클라우드 아카이브 계층에 계층화하도록 선택할 수 있습니다. 현재 AWS S3 Glacier/S3 Glacier Deep Archive 또는 Azure Archive 스토리지 계층을 지원합니다. <block ref="bf8884094e353a761ed88341de6eaf54" category="inline-xref-macro-rx"></block>.</block>
+  <block id="4ec233ea13ab88b2246fbb211a91665c" category="paragraph">표준 공용 인터넷 연결을 사용하려는 경우 모든 권한은 Connector에 의해 설정되며 다른 작업은 필요하지 않습니다. 이 연결 유형은 에 나와 있습니다 <block ref="38757d2cfcaca456ef39c830b3fbfbb6" category="inline-link-macro-rx"></block>.</block>
+  <block id="4d9403aeb0d455887fedd3ace41764e0" category="paragraph">사내 데이터 센터에서 VPC로 인터넷을 통해 보다 안전하게 연결하려면 백업 활성화 마법사에서 AWS PrivateLink 연결을 선택하는 옵션이 있습니다. VPN 또는 AWS Direct Connect를 사용하여 프라이빗 IP 주소를 사용하는 VPC 엔드포인트 인터페이스를 통해 사내 시스템을 연결하려는 경우 필요합니다. 이 연결 유형은 에 나와 있습니다 <block ref="95f59ac3cbae4d92bede28fe387b5a78" category="inline-link-macro-rx"></block>.</block>
+  <block id="caa885480c7f4468155c50bb7cba287c" category="paragraph">향후 클러스터의 대상 오브젝트 저장소를 변경하려면 가 필요합니다 <block ref="0803b5afe80028804e210e739e19196f" category="inline-link-macro-rx"></block>그런 다음 새로운 클라우드 공급자 정보를 사용하여 BlueXP 백업 및 복구를 활성화합니다.</block>
+  <block id="67ee3e110e87eac0b86854c053955b09" category="paragraph">을 참조하십시오 <block ref="9fa061420d8aeb542eb735868c0b4774" category="inline-link-macro-rx"></block> 사용 가능한 일정 옵션에 대한 자세한 내용은 를 참조하십시오.</block>
+  <block id="0cea8da3cde1bdaa18b1319b2caa671d" category="paragraph">참고: 이 작업은 수행할 수 있습니다 <block ref="bc0dfd7f8044b0b340611816d4c4a208" category="inline-link-macro-rx"></block> 예약된 백업에서 생성된 백업 파일 외에 언제든지 Backup Dashboard에서 백업 파일을 생성할 수 있습니다.</block>
+  <block id="39f52aced1ac5da5b707ad1260c4dfa7" category="list-text"><block ref="ad89171cbd1732b91a32da37731e903d" category="inline-link-macro-rx"></block>.</block>
+  <block id="e0488eb5e46e8b3559f678fb3375fe83" category="list-text"><block ref="f39da789221971f7f372bd122012c224" category="inline-link-macro-rx"></block>.</block>
+  <block id="82b1ab2145f9360167878fb0aab9d78e" category="paragraph">온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템에서 11.4 이상을 사용하는 경우 특정 일 후에 이전 백업 파일을 퍼블릭 클라우드 아카이브 스토리지에 아카이브할 수 있습니다. 현재 AWS S3 Glacier/S3 Glacier Deep Archive 또는 Azure Archive 스토리지 계층을 지원합니다. <block ref="6a96d9b5ed55776b5555946cb02fa548" category="inline-link-macro-rx"></block>.</block>
+  <block id="28af018ba458f766dcff23f60abd6827" category="paragraph">을 참조하십시오 <block ref="25e09e861cb627cbcd0c16e5c08ee6d8" category="inline-link-macro-rx"></block> 이전 백업 파일 아카이빙에 대한 자세한 내용은 를 참조하십시오.</block>
+  <block id="5a1f79c0f67abb568ef997350bce7081" category="paragraph">사내 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일(일반적으로 30일 이상) 이후 BlueXP 백업 및 복구 UI의 _Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. 이 계층의 데이터는 높은 검색 비용이 필요하므로 이러한 아카이브 백업 파일에서 데이터를 복원해야 하는 빈도를 고려해야 합니다. 에 대한 섹션을 참조하십시오 <block ref="7b911fb03c2e33c305d56e0261aa7b5a" category="inline-xref-macro-rx"></block>.</block>
+  <block id="12d9e3e6bca9c44523088ebe2b508205" category="paragraph">선택적으로 기본 Google Cloud 암호화 키를 사용하는 대신 데이터 암호화에 대해 사용자 지정 관리 키를 설정할 수 있습니다. <block ref="679b21076509c1a4c895226f7171e8ce" category="inline-xref-macro-rx"></block></block>
+  <block id="9274d8b34594d54c9ded6bce60335530" category="paragraph">무료 평가판이 종료되면 중단 없이 자동으로 PAYGO 구독으로 전환됩니다. BlueXP 백업 및 복구를 계속 사용하지 않기로 결정한 경우에만 가능합니다 <block ref="45d31e67fc33e9fa27a1cf49eda4f564" category="inline-link-macro-rx"></block> 평가판 사용 기간이 끝나기 전에는 요금이 부과되지 않습니다.</block>
+  <block id="9513e83b962e2a3ffa6edc4b46feac25" category="paragraph">라이센스가 부여된 기간이 만료일에 가까워지고 있거나 라이센스가 부여된 용량이 한도에 도달한 경우 백업 UI에서 알림을 받게 됩니다. 이 상태는 BlueXP 디지털 지갑 페이지 및 에도 표시됩니다<block ref="62b97dd999de3571d07e2528cb6b6363" category="inline-link-rx"></block>.</block>
+  <block id="323d3770e08ff241402a0c3bcc2b9fed" category="summary">백업 세부 정보를 보고, 모든 작업의 상태를 모니터링하고, 클론 삭제, 데이터 감사, 커넥터 세부 정보 업데이트, CA 인증서 구성 등을 수행할 수 있습니다. 호스트를 관리합니다.</block>
+  <block id="6e76cf157a9da4f73d4367380e942a3f" category="paragraph">이 기준 외에도 클라우드 스토리지는 DataLock 및 랜섬웨어 보호 기능을 사용하는 경우 추가 보안 옵션을 제공하며 이전 백업 파일에 대한 아카이브 스토리지 클래스를 선택하면 비용을 추가로 절약할 수 있습니다. <block ref="41f5d0363680f0f70edb05636427b12e" category="inline-link-macro-rx"></block> 및 <block ref="60091673d77ccc83382ea728fd21045e" category="inline-link-macro-rx"></block>.</block>
+  <block id="2261f52224f9790614adc76ab2aa2301" category="paragraph">BlueXP 백업 및 복구 UI에서 오브젝트 스토리지 정책에 대한 스냅샷, 복제 및 백업을 생성할 수 있습니다. 의 섹션을 참조하십시오 <block ref="af61bc22e239d5322bb7ae1ef7c5ffac" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="2159bd9a6e8b2b983d8bb6cc43b01d98" category="admonition">리소스 그룹의 이름을 선택하려면 * Cloud Volumes ONTAP 배포 시 * BlueXP 백업 및 복구를 비활성화합니다. 의 단계를 따릅니다 <block ref="c917f8f516b9e0eb9478f5642522460c" category="inline-xref-macro-rx"></block> BlueXP 백업 및 복구를 활성화하고 리소스 그룹을 선택합니다.</block>
+  <block id="188fd7f75e50a8a882a75c15dcb630a1" category="section-title">2024년 5월 17일</block>
+  <block id="c817ad6139f116906ee3d7991cfdcba9" category="section-title">온프레미스 커넥터에 RHEL 8 및 RHEL 9를 사용할 때의 제한 사항</block>
+  <block id="5462103113dfca7582cf43f266db09a2" category="inline-link">호스트 요구 사항</block>
+  <block id="6aa3862f9073595cb60208eb918da431" category="paragraph">BlueXP Connector 버전 3.9.40은 에 언급된 운영 체제 및 위치와 관계없이 RHEL 8 또는 9 호스트에 Connector 소프트웨어를 수동으로 설치하는 데 특정 버전의 Red Hat Enterprise Linux 버전 8 및 9를 지원합니다<block ref="9b2a96babeed2ab711a4327ec7f34b5c" category="inline-link-rx"></block>. 이러한 최신 RHEL 버전에는 Docker 엔진 대신 Podman 엔진이 필요합니다. 현재 BlueXP 백업 및 복구에는 Podman 엔진을 사용할 때 두 가지 제한 사항이 있습니다.</block>
+  <block id="a12249435e2897b8262bf872eceb315c" category="paragraph">을 참조하십시오<block ref="b39c49af0833241002651f8610590fbf" category="inline-link-rx"></block> 를 참조하십시오.</block>
+  <block id="c6472844da6003c7b7e74ed16527d122" category="paragraph">다음 절차에는 새로운 Podman 지침이 포함되어 있습니다.</block>
+  <block id="92617b18f6079084c5380cf97f72f43a" category="list-text"><block ref="92617b18f6079084c5380cf97f72f43a" category="inline-link-rx"></block></block>
+  <block id="b682afa0ff8a1d136b51d3115421ac1b" category="list-text"><block ref="b682afa0ff8a1d136b51d3115421ac1b" category="inline-link-rx"></block></block>
+  <block id="8c10b03d547a79f12e4be387cd008855" category="list-text"><block ref="64106766a0115c58ac1976a627dae78e" category="inline-xref-macro-rx"></block></block>
+  <block id="657950c649165660c2b1df5994cc6ea1" category="list-text"><block ref="0198cacb5a3b3b848a16a5896a6b781e" category="inline-xref-macro-rx"></block></block>
+  <block id="c3c8ae924b0105406a696e4e3b08bd56" category="list-text"><block ref="28c71e441e3fed1e54d5e765ca1c9c87" category="inline-xref-macro-rx"></block></block>
+  <block id="6372a6d3f936c959504f2d36c657d180" category="paragraph"><block ref="4f9cff8e4a6e88cc7252cb113726df28" category="inline-link-macro-rx"></block>.</block>
+  <block id="6288a3651b56c4ff8019c4565a5a4dae" category="paragraph"><block ref="dd554c4e2639dc0ce343470be2537c01" category="inline-link-macro-rx"></block>.</block>
+  <block id="b48f6c0f91c12dc372d780831385f2f3" category="paragraph"><block ref="9cd661f11a3d57e0743695d693a10908" category="inline-link-macro-rx"></block>. Google 아카이브 스토리지 계층의 백업 파일은 거의 즉시 복원되며 복원 우선 순위가 필요하지 않습니다.</block>
+  <block id="8ba7d24c75d9a4c060c33cf7a127b666" category="section-title">검색 및 복원을 사용하여 ONTAP 데이터를 복원합니다</block>
+  <block id="c3bc11d3bdd05e4f1cbcfd5dcc1639fe" category="paragraph">먼저 해 <block ref="e49782369984109313e45bc161ecdd2d" category="inline-xref-macro-rx"></block>검색 및 복원을 사용하여 볼륨, 폴더 및 파일을 복원할 수 있습니다. 이를 통해 광범위한 필터를 사용하여 모든 백업 파일에서 복원하려는 정확한 파일 또는 볼륨을 찾을 수 있습니다.</block>
 </blocks>

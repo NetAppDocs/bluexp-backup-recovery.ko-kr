@@ -363,7 +363,7 @@ endif::gcp[]
 를 누릅니다
 ** ONTAP S3의 경우 BlueXP는 S3 버킷에 대한 기존 사용자 계정을 사용합니다.
 
-향후 클러스터의 대상 오브젝트 저장소를 변경하려면 가 필요합니다 link:task-manage-backups-ontap.html#unregistering-bluexp-backup-and-recovery-for-a-working-environment["작업 환경의 BlueXP 백업 및 복구 등록 취소"^]그런 다음 새로운 클라우드 공급자 정보를 사용하여 BlueXP 백업 및 복구를 활성화합니다.
+향후 클러스터의 대상 오브젝트 저장소를 변경하려면 가 필요합니다 link:task-manage-backups-ontap.html#unregister-bluexp-backup-and-recovery-for-a-working-environment["작업 환경의 BlueXP 백업 및 복구 등록 취소"^]그런 다음 새로운 클라우드 공급자 정보를 사용하여 BlueXP 백업 및 복구를 활성화합니다.
 
 
 
@@ -378,9 +378,9 @@ NOTE: 볼륨에 적용된 스냅샷 정책에는 복제 정책 및 개체 백업
 
 범주 또는 간격에 대한 최대 백업 수에 도달하면 오래된 백업이 제거되므로 항상 최신 백업을 사용할 수 있습니다. 즉, 사용되지 않는 백업은 공간을 계속 차지하지 않습니다.
 
-을 참조하십시오 link:concept-cloud-backup-policies.html#backup-schedules["백업 스케줄"^] 사용 가능한 일정 옵션에 대한 자세한 내용은 를 참조하십시오.
+을 참조하십시오 link:concept-cloud-backup-policies.html["백업 스케줄"^] 사용 가능한 일정 옵션에 대한 자세한 내용은 를 참조하십시오.
 
-참고: 이 작업은 수행할 수 있습니다 link:task-manage-backups-ontap.html#creating-a-manual-volume-backup-at-any-time["볼륨의 필요 시 백업을 생성합니다"] 예약된 백업에서 생성된 백업 파일 외에 언제든지 Backup Dashboard에서 백업 파일을 생성할 수 있습니다.
+참고: 이 작업은 수행할 수 있습니다 link:task-manage-backups-ontap.html#create-a-manual-volume-backup-at-any-time["볼륨의 필요 시 백업을 생성합니다"] 예약된 백업에서 생성된 백업 파일 외에 언제든지 Backup Dashboard에서 백업 파일을 생성할 수 있습니다.
 
 
 TIP: 데이터 보호 볼륨의 백업 보존 기간은 소스 SnapMirror 관계에 정의된 보존 기간과 동일합니다. 원하는 경우 API를 사용하여 변경할 수 있습니다.
@@ -403,8 +403,8 @@ TIP: 데이터 보호 볼륨의 백업 보존 기간은 소스 SnapMirror 관계
 
 자세한 내용은 다음 정보를 참조하십시오.
 
-* link:concept-cloud-backup-policies.html#datalock-and-ransomware-protection["DataLock 및 랜섬웨어 방어의 작동 방식"].
-* link:manage-backup-settings-ontap.html["고급 설정 페이지에서 랜섬웨어 보호 옵션을 업데이트하는 방법"].
+* link:concept-cloud-backup-policies.html#datalock-and-ransomware-protection-options["DataLock 및 랜섬웨어 방어의 작동 방식"].
+* link:task-manage-backup-settings-ontap.html["고급 설정 페이지에서 랜섬웨어 보호 옵션을 업데이트하는 방법"].
 
 
 
@@ -448,11 +448,11 @@ endif::gcp[]
 
 * StorageGRID에서 백업은 _Standard_storage 클래스와 연결됩니다.
 +
-온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템에서 11.4 이상을 사용하는 경우 특정 일 후에 이전 백업 파일을 퍼블릭 클라우드 아카이브 스토리지에 아카이브할 수 있습니다. 현재 AWS S3 Glacier/S3 Glacier Deep Archive 또는 Azure Archive 스토리지 계층을 지원합니다. link:task-backup-onprem-private-cloud.html#preparing-to-archive-older-backup-files-to-public-cloud-storage["StorageGRID에서 백업 파일 아카이빙에 대해 자세히 알아보십시오"^].
+온프레미스 클러스터가 ONTAP 9.12.1 이상을 사용하고 있고 StorageGRID 시스템에서 11.4 이상을 사용하는 경우 특정 일 후에 이전 백업 파일을 퍼블릭 클라우드 아카이브 스토리지에 아카이브할 수 있습니다. 현재 AWS S3 Glacier/S3 Glacier Deep Archive 또는 Azure Archive 스토리지 계층을 지원합니다. link:task-backup-onprem-private-cloud.html#prepare-to-archive-older-backup-files-to-public-cloud-storage["StorageGRID에서 백업 파일 아카이빙에 대해 자세히 알아보십시오"^].
 
 
 
-을 참조하십시오 link:concept-cloud-backup-policies.html#archival-storage-settings["보관 저장 설정"] 이전 백업 파일 아카이빙에 대한 자세한 내용은 를 참조하십시오.
+을 참조하십시오 link:concept-cloud-backup-policies.html#archival-storage-options["보관 저장 설정"] 이전 백업 파일 아카이빙에 대한 자세한 내용은 를 참조하십시오.
 
 
 

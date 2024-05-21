@@ -64,7 +64,7 @@ NOTE: 복제된 볼륨 또는 백업 파일의 초기 생성에는 소스 데이
 
 다음 표에서는 세 가지 백업 방법에 대한 일반적인 비교를 보여 줍니다. 일반적으로 오브젝트 스토리지 공간은 사내 디스크 스토리지에 비해 저렴하지만, 클라우드에서 데이터를 자주 복원한다고 생각하는 경우 클라우드 공급자를 통한 대피 비용을 통해 비용을 절감할 수 있습니다. 클라우드에 있는 백업 파일에서 데이터를 복원해야 하는 빈도를 확인해야 합니다.
 
-이 기준 외에도 클라우드 스토리지는 DataLock 및 랜섬웨어 보호 기능을 사용하는 경우 추가 보안 옵션을 제공하며 이전 백업 파일에 대한 아카이브 스토리지 클래스를 선택하면 비용을 추가로 절약할 수 있습니다. link:concept-cloud-backup-policies.html#datalock-and-ransomware-protection["DataLock 및 랜섬웨어 보호에 대해 자세히 알아보십시오"] 및 link:concept-cloud-backup-policies.html#archival-storage-settings["보관 저장 설정"].
+이 기준 외에도 클라우드 스토리지는 DataLock 및 랜섬웨어 보호 기능을 사용하는 경우 추가 보안 옵션을 제공하며 이전 백업 파일에 대한 아카이브 스토리지 클래스를 선택하면 비용을 추가로 절약할 수 있습니다. link:concept-cloud-backup-policies.html#datalock-and-ransomware-protection-options["DataLock 및 랜섬웨어 보호에 대해 자세히 알아보십시오"] 및 link:concept-cloud-backup-policies.html#archival-storage-options["보관 저장 설정"].
 
 [cols="18,18,22,18,22"]
 |===
@@ -120,7 +120,7 @@ NetApp에서 제공하는 기본 정책을 사용하여 백업을 만들거나 �
 
 복제 또는 백업에 대한 사용자 지정 정책을 생성하는 경우 정책 레이블(예: "daily" 또는 "weekly")이 스냅샷 정책 또는 복제된 볼륨 및 백업 파일에 있는 레이블과 일치해야 합니다.
 
-BlueXP 백업 및 복구 UI에서 오브젝트 스토리지 정책에 대한 스냅샷, 복제 및 백업을 생성할 수 있습니다. 의 섹션을 참조하십시오 link:task-manage-backups-ontap.html#add-a-new-backup-policy["새 백업 정책 추가"] 를 참조하십시오.
+BlueXP 백업 및 복구 UI에서 오브젝트 스토리지 정책에 대한 스냅샷, 복제 및 백업을 생성할 수 있습니다. 의 섹션을 참조하십시오 link:task-manage-backups-ontap.html#add-a-new-backup-to-cloud-policy["새 백업 정책 추가"] 를 참조하십시오.
 
 BlueXP 백업 복구를 사용하여 사용자 지정 정책을 생성하는 것 외에도 System Manager 또는 ONTAP CLI(명령줄 인터페이스)를 사용할 수 있습니다.
 

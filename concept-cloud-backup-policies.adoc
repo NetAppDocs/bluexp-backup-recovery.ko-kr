@@ -399,4 +399,5 @@ ifdef::azure[]
 
 endif::azure[]
 
-를 누릅니다link:task-backup-onprem-private-cloud.html#preparing-to-archive-older-backup-files-to-public-cloud-storage["StorageGRID에서 백업 파일 아카이빙에 대해 자세히 알아보십시오"^].
+를 누릅니다
+link:task-backup-onprem-private-cloud.html#prepare-to-archive-older-backup-files-to-public-cloud-storage["StorageGRID에서 백업 파일 아카이빙에 대해 자세히 알아보십시오"^].

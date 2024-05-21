@@ -241,7 +241,7 @@ BlueXP 백업 및 복구는 작업 환경 마법사에서 기본적으로 활성
 을 참조하십시오 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["Azure에서 Cloud Volumes ONTAP 실행"^] Cloud Volumes ONTAP 시스템 생성에 대한 요구 사항 및 세부 정보를 확인하십시오.
 
 
-NOTE: 리소스 그룹의 이름을 선택하려면 * Cloud Volumes ONTAP 배포 시 * BlueXP 백업 및 복구를 비활성화합니다. 의 단계를 따릅니다 <<enabling-bluexp-backup-and-recovery-on-an-existing-system,기존 시스템에서 BlueXP 백업 및 복구 활성화>> BlueXP 백업 및 복구를 활성화하고 리소스 그룹을 선택합니다.
+NOTE: 리소스 그룹의 이름을 선택하려면 * Cloud Volumes ONTAP 배포 시 * BlueXP 백업 및 복구를 비활성화합니다. 의 단계를 따릅니다 <<enable-bluexp-backup-and-recovery-on-cloud-volumes-ontap,기존 시스템에서 BlueXP 백업 및 복구 활성화>> BlueXP 백업 및 복구를 활성화하고 리소스 그룹을 선택합니다.
 
 .단계
 . BlueXP Canvas에서 * 작업 환경 추가 * 를 선택하고 클라우드 공급자를 선택한 다음 * 새로 추가 * 를 선택합니다. Create Cloud Volumes ONTAP * 를 선택합니다.

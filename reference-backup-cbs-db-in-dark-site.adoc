@@ -73,17 +73,27 @@ BlueXP 백업 및 복구 시스템을 작동 상태로 되돌리기 위해 수�
 === BlueXP 백업 및 복구 데이터베이스를 복원합니다
 
 . 백업 위치에서 새 커넥터 호스트로 MySQL 백업을 복사합니다. 아래의 예제 파일 이름 "CBS_DB_Backup_23_05_2023.sql"을 사용합니다.
-. 다음 명령을 사용하여 MySQL Docker 컨테이너에 백업을 복사합니다.
+. Docker 또는 Podman 컨테이너를 사용하는지 여부에 따라 다음 명령 중 하나를 사용하여 MySQL Docker 컨테이너에 백업을 복사합니다.
 +
 [source, cli]
 ----
 docker cp CBS_DB_Backup_23_05_2023.sql ds_mysql_1:/.
 ----
-. 다음 명령을 사용하여 MySQL 컨테이너 셸을 입력합니다.
++
+[source, cli]
+----
+podman cp CBS_DB_Backup_23_05_2023.sql ds_mysql_1:/.
+----
+. Docker 또는 Podman 컨테이너를 사용하는지 여부에 따라 다음 명령 중 하나를 사용하여 MySQL 컨테이너 셸을 입력합니다.
 +
 [source, cli]
 ----
 docker exec -it ds_mysql_1 sh
+----
++
+[source, cli]
+----
+podman exec -it ds_mysql_1 sh
 ----
 . 컨테이너 셸에서 "env"를 배포합니다.
 . MySQL DB 패스워드가 필요합니다. 따라서 "mysql_root_password" 키의 값을 복사합니다.

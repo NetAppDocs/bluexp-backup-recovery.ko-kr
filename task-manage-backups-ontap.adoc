@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-manage-backups-ontap.html 
-keywords: cloud backup, cloud backup service, backup schedule, change schedule, change backup schedule, modify schedule, modify backup schedule, retention, backup retention, delete, delete backups, deleting, deleting backups, disable, disable backups, turn off backups, disable cloud backup, turn off cloud backup 
+keywords: cloud backup, cloud backup service, backup schedule, change schedule, change backup schedule, modify schedule, modify backup schedule, retention, backup retention, delete, delete backups, deleting, deleting backups, disable, disable backups, turn off backups, disable cloud backup, turn off cloud backup, bluexp 
 summary: 백업 일정을 변경하고, 새 백업 정책을 만들고, 볼륨 백업을 활성화/비활성화하고, 백업을 일시 중지하고, 백업을 삭제하는 등 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다. 여기에는 스냅샷 복사본, 복제된 볼륨 및 오브젝트 스토리지의 백업 파일을 포함한 모든 유형의 백업이 포함됩니다. 
 ---
 = ONTAP 시스템의 백업을 관리합니다
@@ -136,7 +136,7 @@ image:screenshot_manage_backup_settings.png["여러 볼륨을 선택한 후 사�
 
 백업 이름에는 타임 스탬프가 포함되어 있어 다른 예약된 백업에서 필요 시 백업을 식별할 수 있습니다.
 
-이 클러스터에 대해 BlueXP 백업 및 복구를 활성화할 때 _DataLock 및 랜섬웨어 보호를 활성화한 경우 주문형 백업도 DataLock으로 구성되고 보존 기간은 30일입니다. 애드혹 백업에는 랜섬웨어 스캔이 지원되지 않습니다. link:concept-cloud-backup-policies.html#datalock-and-ransomware-protection["DataLock 및 랜섬웨어 보호에 대해 자세히 알아보십시오"^].
+이 클러스터에 대해 BlueXP 백업 및 복구를 활성화할 때 _DataLock 및 랜섬웨어 보호를 활성화한 경우 주문형 백업도 DataLock으로 구성되고 보존 기간은 30일입니다. 애드혹 백업에는 랜섬웨어 스캔이 지원되지 않습니다. link:concept-cloud-backup-policies.html#datalock-and-ransomware-protection-options["DataLock 및 랜섬웨어 보호에 대해 자세히 알아보십시오"^].
 
 임시 백업을 생성할 때 소스 볼륨에 스냅샷이 생성됩니다. 이 스냅샷은 일반 스냅샷 스케줄의 일부가 아니므로 회전되지 않습니다. 백업이 완료되면 소스 볼륨에서 이 스냅샷을 수동으로 삭제할 수 있습니다. 이렇게 하면 이 스냅샷과 관련된 블록을 해제할 수 있습니다. 스냅샷의 이름은 CBS-SNSHOT-adhoc 으로 시작됩니다. https://docs.netapp.com/us-en/ontap/san-admin/delete-all-existing-snapshot-copies-volume-task.html["ONTAP CLI를 사용하여 스냅샷을 삭제하는 방법을 알아봅니다"^].
 
@@ -323,7 +323,7 @@ endif::gcp[]
 
 작업 환경에 대해 BlueXP 백업 및 복구를 활성화하면 처음에 선택한 모든 볼륨이 사용자가 정의한 기본 백업 정책을 사용하여 백업됩니다. RPO(복구 지점 목표)가 다른 특정 볼륨에 서로 다른 백업 정책을 할당하려면 해당 클러스터에 대한 추가 정책을 생성한 다음 해당 정책을 다른 볼륨에 할당할 수 있습니다.
 
-작업 환경의 특정 볼륨에 새 백업 정책을 적용하려면 먼저 작업 환경에 백업 정책을 추가해야 합니다. 그러면 됩니다 <<Changing the policy assigned to existing volumes,해당 작업 환경의 볼륨에 정책을 적용합니다>>.
+작업 환경의 특정 볼륨에 새 백업 정책을 적용하려면 먼저 작업 환경에 백업 정책을 추가해야 합니다. 그러면 됩니다 <<기존 볼륨에 할당된 백업 설정을 변경합니다,해당 작업 환경의 볼륨에 정책을 적용합니다>>.
 
 [NOTE]
 ====
@@ -390,7 +390,7 @@ CAUTION: 백업이 있는 작업 환경 또는 클러스터를 삭제하려면 *
 
 === 작업 환경의 모든 백업 파일을 삭제합니다
 
-작업 환경의 오브젝트 스토리지에 대한 모든 백업을 삭제해도 이 작업 환경의 볼륨에 대한 향후 백업이 비활성화되지는 않습니다. 작업 환경에서 모든 볼륨의 백업 생성을 중지하려면 백업을 비활성화할 수 있습니다 <<Deactivating BlueXP backup and recovery for a working environment,참조하십시오>>.
+작업 환경의 오브젝트 스토리지에 대한 모든 백업을 삭제해도 이 작업 환경의 볼륨에 대한 향후 백업이 비활성화되지는 않습니다. 작업 환경에서 모든 볼륨의 백업 생성을 중지하려면 백업을 비활성화할 수 있습니다 <<작업 환경의 BlueXP 백업 및 복구를 비활성화합니다,참조하십시오>>.
 
 이 작업은 스냅샷 복사본 또는 복제된 볼륨에 영향을 주지 않습니다. 이러한 유형의 백업 파일은 삭제되지 않습니다.
 
@@ -449,7 +449,7 @@ image:screenshot_delete_one_backup.png["단일 백업 파일을 삭제하는 방
 BlueXP 백업 및 복구 사용자 인터페이스에서 소스 볼륨을 삭제할 수 없습니다. 하지만 Canvas에서 볼륨 세부 정보 페이지를 열 수 있습니다 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-volumes.html#manage-volumes["여기서 볼륨을 삭제합니다"].
 
 
-NOTE: 관계가 삭제된 후에는 개별 볼륨 백업 파일을 삭제할 수 없습니다. 그러나, link:task-manage-backups-ontap.html#deleting-all-backup-files-for-a-volume["볼륨에 대한 모든 백업을 삭제합니다"] 모든 백업 파일을 제거하려는 경우
+NOTE: 관계가 삭제된 후에는 개별 볼륨 백업 파일을 삭제할 수 없습니다. 그러나 볼륨에 대한 모든 백업을 삭제할 수는 있습니다.
 
 .단계
 . 볼륨 * 탭에서 을 클릭합니다 image:screenshot_horizontal_more_button.gif["추가 아이콘"] 소스 볼륨에 대해 * 백업 * > * 관계 삭제 * 를 선택합니다.
@@ -464,7 +464,7 @@ image:screenshot_delete_relationship_single.png["단일 볼륨의 백업 관계�
 
 작업 환경에 대해 BlueXP 백업 및 복구를 비활성화하면 시스템의 각 볼륨의 백업이 비활성화되며 볼륨 복원 기능도 비활성화됩니다. 기존 백업은 삭제되지 않습니다. 이 작업 환경에서 백업 서비스의 등록을 취소하지 않습니다. 기본적으로 모든 백업 및 복원 작업을 일정 기간 동안 일시 중지할 수 있습니다.
 
-사용자가 비용을 부담하지 않는 한, 클라우드 공급자가 백업 용량에 대한 오브젝트 스토리지 비용에 대해 계속 청구한다는 점에 유의하십시오 <<작업 환경의 모든 백업 파일을 삭제하는 중입니다,백업을 삭제합니다>>.
+사용자가 비용을 부담하지 않는 한, 클라우드 공급자가 백업 용량에 대한 오브젝트 스토리지 비용에 대해 계속 청구한다는 점에 유의하십시오 <<백업을 삭제합니다,백업을 삭제합니다>>.
 
 .단계
 . 볼륨 * 탭에서 * 백업 설정 * 을 선택합니다.
