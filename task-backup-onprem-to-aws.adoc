@@ -462,7 +462,7 @@ image:screenshot_backup_aws_sec_group.png["Connector와 연결된 AWS 보안 그
 +
 image:screenshot_endpoint_dns_aws_console.png["AWS 콘솔에서 VPC 엔드포인트의 DNS 이름 스크린샷"]
 
-. VPC S3 엔드포인트에서 인증서를 가져옵니다. 당신은 이렇게 합니다 https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["BlueXP Connector를 호스팅하는 VM에 로그인합니다"^] 다음 명령을 실행합니다. 엔드포인트의 DNS 이름을 입력할 때 "*"를 대체하여 "bucket"을 앞에 추가합니다.
+. VPC S3 엔드포인트에서 인증서를 가져옵니다. 당신은 이렇게 합니다 https://docs.netapp.com/us-en/bluexp-setup-admin/task-maintain-connectors.html#connect-to-the-linux-vm["BlueXP Connector를 호스팅하는 VM에 로그인합니다"^] 다음 명령을 실행합니다. 엔드포인트의 DNS 이름을 입력할 때 "*"를 대체하여 "bucket"을 앞에 추가합니다.
 +
 [source, text]
 ----

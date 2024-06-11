@@ -2766,7 +2766,6 @@
   <block id="c0b041ab0557d62205d9f7c2fbff6598" category="paragraph"><block ref="1dea076a83901241f0583b1eba278b63" category="inline-link-rx"></block>.</block>
   <block id="b8c4390ff667478ec0b60750dee2c4c7" category="list-text"><block ref="b8c4390ff667478ec0b60750dee2c4c7" category="inline-link-rx"></block></block>
   <block id="c89f481c3b46af99ed7620462173a07c" category="list-text"><block ref="c89f481c3b46af99ed7620462173a07c" category="inline-link-rx"></block></block>
-  <block id="2aeeba0020a7848f7902186fbd8cb9e8" category="list-text"><block ref="2aeeba0020a7848f7902186fbd8cb9e8" category="inline-link-rx"></block></block>
   <block id="f2952cd66b2c1d62b092c2ae5559eabf" category="list-text">StorageGRID는 이어야 합니다<block ref="27661aa20e8b873c50bd0587758b98a1" category="inline-link-rx"></block>.</block>
   <block id="c2e1ae9092ad1a2b4bccebec9b7fbd42" category="list-text">있는 경우<block ref="a7e016fe79f350912ccb5dfe261d7ecb" category="inline-link-rx"></block> 또는<block ref="d3d508974cb975126e687a6961f332c5" category="inline-link-rx"></block> 어카운트의 경우 인덱싱된 카탈로그는 클라우드에 구축된 Connector와 마찬가지로 클라우드 공급자에 저장됩니다. (두 자격 증명이 모두 있는 경우 기본적으로 AWS가 선택됩니다.)</block>
   <block id="fea98b7ef5d8a09fc1a41665820ca44e" category="paragraph">데이터베이스가 호스팅되는 ONTAP 작업 환경용 FSx를 만들어야 합니다. 자세한 내용은 을 참조하십시오 <block ref="99bdda3a8ebb4e92b4deac45aac1de8f" category="inline-link-macro-rx"></block> 및 <block ref="221c300fec5ef905fe42ac89652a6952" category="inline-link-macro-rx"></block>.</block>
@@ -2780,7 +2779,6 @@
   <block id="c6d0aba5a4df18df97543934ad4a1185" category="list-text"><block ref="c6d0aba5a4df18df97543934ad4a1185" category="inline-link-rx"></block></block>
   <block id="548e6841e3441d35da2414e7a61ba449" category="paragraph">을 참조하십시오<block ref="d6cf51858c4dc41eb58119fabea29b51" category="inline-link-rx"></block> Cloud Volumes ONTAP 시스템 생성에 대한 요구 사항 및 세부 정보를 확인하십시오.</block>
   <block id="187e15fe582f53b6ed739ea360c9f408" category="list-text">마법사의 페이지를 완료하여 에 설명된 대로 시스템을 구축합니다<block ref="d6cf51858c4dc41eb58119fabea29b51" category="inline-link-rx"></block>.</block>
-  <block id="19876dc921287243c303e7c43a14df3f" category="cell">의 지침을 따릅니다<block ref="814636d53832f91c925bc44c968204b3" category="inline-link-rx"></block> 사용하는 클라우드 공급자에 따라 다릅니다.</block>
   <block id="190883b84e441e0bd227971c892ce575" category="list-text">Kubernetes 클러스터를 BlueXP 작업 환경으로 발견했습니다.<block ref="7327129ba68875466d1d1f22b67d23f4" category="inline-link-rx"></block>.</block>
   <block id="3c1c17ea503d5e9470f8439096f625f6" category="paragraph">이 단계는 사용자가 있을 때만 필요합니다<block ref="677834f72462157379b8c91854842dcc" category="inline-link-rx"></block>.</block>
   <block id="327e32511f0c97676e41ea866aac0721" category="list-text">포트 443을 통해 BlueXP 백업 및 복구 서비스 및 Google Cloud 스토리지에 HTTPS로 연결합니다 <block ref="e228b87eff1d3a92b4544cd5652fc5ad" category="inline-link-rx"></block>)</block>
@@ -2817,7 +2815,6 @@
   <block id="c490eac8fe2144e59b599caa7ff364f2" category="list-text">포트 443을 통해 BlueXP 백업 및 복구 서비스 및 S3 오브젝트 스토리지에 HTTPS로 연결합니다 <block ref="63b337bf4559a585c3373707ecfcc413" category="inline-link-rx"></block>)</block>
   <block id="aa91817c0e1d6a16a1f290ad2357d467" category="list-text">AWS 및 AWS GovCloud 배포에는 추가 인바운드 및 아웃바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오<block ref="ed3ada480c52b8e0c09a903c9cf52508" category="inline-link-rx"></block> 를 참조하십시오.</block>
   <block id="94bf6d31d85a9e7f628b488ba9a25200" category="list-text">다음 S3 권한(최신 버전)이 있는지 확인합니다<block ref="d97dc29944250663fe9dd52fa43d79d7" category="inline-link-rx"></block>)는 Connector에 권한을 제공하는 IAM 역할의 일부입니다. 그렇지 않은 경우 를 참조하십시오<block ref="484fb6182b52563a51349e6fb7cb2cb6" category="inline-link-rx"></block>.</block>
-  <block id="a6b673d310713aa4bdd09f8fd19acf66" category="list-text">VPC S3 엔드포인트에서 인증서를 가져옵니다. 당신은 이렇게 합니다<block ref="bee792b855389ef4e6c81f6aa6136d00" category="inline-link-rx"></block> 다음 명령을 실행합니다. 엔드포인트의 DNS 이름을 입력할 때 "*"를 대체하여 "bucket"을 앞에 추가합니다.</block>
   <block id="b46213c291fe93c05313fa11bc5d273c" category="paragraph">백업 복사본은 와 연결됩니다<block ref="94ce6f448900468e79b10f5ddbf648fe" category="inline-link-rx"></block> BlueXP 커넥터가 있는 위치.</block>
   <block id="2bda192204fc86d57a53bf80ec29ad65" category="list-text">포트 443을 통해 BlueXP 백업 및 복구 서비스 및 Blob 개체 스토리지에 HTTPS로 연결합니다 <block ref="73abec29c95edc01ed78226396cb9d9e" category="inline-link-rx"></block>)</block>
   <block id="586fb4ce14563af75d1816e73c9d868a" category="list-text">Azure 및 Azure Government 배포에는 추가 인바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오<block ref="179e195cc8e81b19d72f9ddb7460e81f" category="inline-link-rx"></block> 를 참조하십시오.</block>
@@ -2827,7 +2824,6 @@
   <block id="cb6a777dd3c6e43b0dc441d38519d219" category="paragraph"><block ref="cb6a777dd3c6e43b0dc441d38519d219" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e65065c4fd326b9f3a1eeb9453c30d73" category="paragraph"><block ref="e65065c4fd326b9f3a1eeb9453c30d73" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2ea260929e27ffcb623c8aa35689bd18" category="paragraph"><block ref="2ea260929e27ffcb623c8aa35689bd18" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0736ad21b3bf8224269719357e7aadda" category="paragraph">새 BlueXP 커넥터를 설치할 때 원래 커넥터에 설치한 것과 동일한 소프트웨어 릴리스를 다운로드해야 합니다. BlueXP 백업 및 복구 데이터베이스 구조를 정기적으로 변경하면 새 소프트웨어 릴리스가 원래 데이터베이스 백업과 호환되지 않을 수 있습니다. 가능합니다<block ref="d1d5d87c9450fbe53d901c1b5aa0b756" category="inline-link-rx"></block>.</block>
   <block id="6c962f0e820a4789f1eba2c1a38f944d" category="list-text"><block ref="6c962f0e820a4789f1eba2c1a38f944d" category="inline-link-rx"></block></block>
   <block id="9859429ce021a771d55011bbad61663d" category="list-text"><block ref="95020d92addc538671ad8a553222768a" category="inline-link-rx"></block>.</block>
   <block id="dd356e8ea63119f95e3666d6db68f47e" category="paragraph">을 사용하여 원래 커넥터 설정에 설정했던 ONTAP 작업 환경과 연관된 StorageGRID 시스템의 세부 정보를 추가합니다<block ref="84b7c1fcfbca071b9004578261b65308" category="inline-link-rx"></block>.</block>
@@ -3596,7 +3592,6 @@ GCP에서 BlueXP는 Google Cloud Storage 버킷을 위한 저장소 계정이 �
   <block id="c34e06cffb92365ae6ffa2950eebec86" category="paragraph">커넥터와 사내 ONTAP 시스템이 인터넷에 연결되지 않은 사내 위치("어두운 사이트")에 설치된 경우 StorageGRID 시스템은 동일한 사내 데이터 센터에 있어야 합니다. 다크 사이트 구성에서는 이전 백업 파일을 퍼블릭 클라우드에 아카이빙하는 기능이 지원되지 않습니다.</block>
   <block id="090245d8e86ce328b1076df6d6efa387" category="paragraph">데이터를 StorageGRID에 백업할 때 BlueXP 커넥터를 사내에서 사용할 수 있어야 합니다. 새 커넥터를 설치하거나 현재 선택한 커넥터가 사내에 있는지 확인해야 합니다. 커넥터는 인터넷에 접속하거나 접속하지 않고 사이트에 설치할 수 있습니다.</block>
   <block id="dd61dca07c56e04220c21764b917992f" category="section-title">커넥터 네트워킹 요구 사항을 준비합니다</block>
-  <block id="420f74958ffaef4d8f08ce850e97c52e" category="list-text">BlueXP 백업 및 복구 기능은 BlueXP 커넥터에 내장되어 있습니다. 비공개 모드로 설치된 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 <block ref="f2b1fe06debcbb7b96badbcb85471310" category="inline-link-macro-rx"></block> 각 BlueXP 백업 및 복구 릴리스의 새로운 기능을 보려면 새 기능을 사용하려면 의 단계를 따릅니다<block ref="164e4794420610da956934de57a9da8a" category="inline-link-rx"></block>.</block>
   <block id="2c4e4b23bf49a867077416ba2dd23a7d" category="list-text">SaaS 환경에서 BlueXP 백업 및 복구를 사용하는 경우 BlueXP 백업 및 복구 구성 데이터가 클라우드에 백업됩니다. 인터넷에 액세스할 수 없는 사이트에서 BlueXP 백업 및 복구를 사용하는 경우 백업이 저장되는 StorageGRID 버킷에 BlueXP 백업 및 복구 구성 데이터가 백업됩니다. 비공개 모드 사이트에서 커넥터 오류가 발생한 경우 를 사용할 수 있습니다 <block ref="21b30d1009822b1f508f80c6007a3164" category="inline-link-macro-rx"></block>.</block>
   <block id="113b5e7186c305ad07d9c9c046e30198" category="list-text">사용 중인 IPspace가 기본과 다른 경우 오브젝트 스토리지에 액세스하려면 정적 라우트를 생성해야 할 수 있습니다.</block>
   <block id="08cdeb7ce64fda06111111c8fea66510" category="section-title">StorageGRID를 백업 타겟으로 준비합니다</block>
@@ -4916,4 +4911,9 @@ ifdef::AWS[]</block>
   <block id="b48f6c0f91c12dc372d780831385f2f3" category="paragraph"><block ref="9cd661f11a3d57e0743695d693a10908" category="inline-link-macro-rx"></block>. Google 아카이브 스토리지 계층의 백업 파일은 거의 즉시 복원되며 복원 우선 순위가 필요하지 않습니다.</block>
   <block id="8ba7d24c75d9a4c060c33cf7a127b666" category="section-title">검색 및 복원을 사용하여 ONTAP 데이터를 복원합니다</block>
   <block id="c3bc11d3bdd05e4f1cbcfd5dcc1639fe" category="paragraph">먼저 해 <block ref="e49782369984109313e45bc161ecdd2d" category="inline-xref-macro-rx"></block>검색 및 복원을 사용하여 볼륨, 폴더 및 파일을 복원할 수 있습니다. 이를 통해 광범위한 필터를 사용하여 모든 백업 파일에서 복원하려는 정확한 파일 또는 볼륨을 찾을 수 있습니다.</block>
+  <block id="c6f5c592a27c54c4a47031416aebf062" category="cell">의 지침을 따릅니다<block ref="571ca7d044081e209bcef30efa5d6ace" category="inline-link-rx"></block> 사용하는 클라우드 공급자에 따라 다릅니다.</block>
+  <block id="a454364b080d416ad203233987bc1148" category="paragraph">새 BlueXP 커넥터를 설치할 때 원래 커넥터에 설치한 것과 동일한 소프트웨어 릴리스를 다운로드해야 합니다. BlueXP 백업 및 복구 데이터베이스 구조를 정기적으로 변경하면 새 소프트웨어 릴리스가 원래 데이터베이스 백업과 호환되지 않을 수 있습니다. 가능합니다<block ref="2e0a24ee8438c92516f1c39f0bf156f8" category="inline-link-rx"></block>.</block>
+  <block id="df0ff0042be8059301b11ae842882f69" category="list-text"><block ref="df0ff0042be8059301b11ae842882f69" category="inline-link-rx"></block></block>
+  <block id="26a96558efb5aff5b97e24187bdedaaa" category="list-text">BlueXP 백업 및 복구 기능은 BlueXP 커넥터에 내장되어 있습니다. 비공개 모드로 설치된 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 <block ref="f2b1fe06debcbb7b96badbcb85471310" category="inline-link-macro-rx"></block> 각 BlueXP 백업 및 복구 릴리스의 새로운 기능을 보려면 새 기능을 사용하려면 의 단계를 따릅니다<block ref="2d7f0c488acd05ac12707e13e58fd7d1" category="inline-link-rx"></block>.</block>
+  <block id="8adbc3c324aa6698c29b0a7962b11b00" category="list-text">VPC S3 엔드포인트에서 인증서를 가져옵니다. 당신은 이렇게 합니다<block ref="b93c91598d8e86da04085f6831b06e68" category="inline-link-rx"></block> 다음 명령을 실행합니다. 엔드포인트의 DNS 이름을 입력할 때 "*"를 대체하여 "bucket"을 앞에 추가합니다.</block>
 </blocks>
