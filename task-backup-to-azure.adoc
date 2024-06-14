@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-backup-to-azure.html 
-keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, azure, azure blob, back up volumes, cloud backup 
+keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, azure, azure blob, back up volumes, cloud backup, bluexp, bluexp backup and recovery 
 summary: Cloud Volumes ONTAP 시스템에서 Azure Blob 저장소로 볼륨 데이터 백업을 시작하려면 몇 가지 단계를 완료하십시오. 
 ---
 = Cloud Volumes ONTAP 데이터를 Azure Blob 저장소에 백업합니다
@@ -232,7 +232,7 @@ Cloud Volumes ONTAP 또는 온프레미스 시스템에 복제할 수 있으므�
 
 == Cloud Volumes ONTAP에서 BlueXP 백업 및 복구를 활성화합니다
 
-BluXP 백업 및 복구는 쉽게 활성화할 수 있습니다. 기존 Cloud Volumes ONTAP 시스템이 있는지 새 시스템이 있는지 여부에 따라 단계가 약간 다릅니다.
+BlueXP 백업 및 복구는 쉽게 활성화할 수 있습니다. 기존 Cloud Volumes ONTAP 시스템이 있는지 새 시스템이 있는지 여부에 따라 단계가 약간 다릅니다.
 
 * 새 시스템에서 BlueXP 백업 및 복구 활성화 *
 

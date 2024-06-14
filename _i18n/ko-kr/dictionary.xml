@@ -3337,7 +3337,6 @@ cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 G
   <block id="d7bb556723e915c43fe4fd9b0f90d545" category="inline-link">ONTAP 설명서에서 클러스터 피어링을 위한 사전 요구 사항을 확인하십시오</block>
   <block id="c08b01fe5c09939cdbabcb370734dad8" category="list-text">서로 다른 서브넷에 있는 두 Cloud Volumes ONTAP 시스템 간에 데이터를 복제하려면 서브넷을 함께 라우팅해야 합니다(기본 설정).</block>
   <block id="a8597301498b7ba277bd04c5d9cec26a" category="section-title">Cloud Volumes ONTAP에서 BlueXP 백업 및 복구를 활성화합니다</block>
-  <block id="3a3585e7353e26db7ebd817873594905" category="paragraph">BluXP 백업 및 복구는 쉽게 활성화할 수 있습니다. 기존 Cloud Volumes ONTAP 시스템이 있는지 새 시스템이 있는지 여부에 따라 단계가 약간 다릅니다.</block>
   <block id="8a8476fd6836ec12c30dec20bc5004af" category="paragraph">* 새 시스템에서 BlueXP 백업 및 복구 활성화 *</block>
   <block id="901ae31ede407d1b2f9642db905682f2" category="list-text">BlueXP Canvas에서 * 작업 환경 추가 * 를 선택하고 클라우드 공급자를 선택한 다음 * 새로 추가 * 를 선택합니다. Create Cloud Volumes ONTAP * 를 선택합니다.</block>
   <block id="2804562bc1e662a5b5b8ecf3b0be67c6" category="admonition">백업 설정을 수정하거나 복제를 추가하려면 을 참조하십시오 <block ref="5cd1a7d7fa9fd41e0b8e095748eb7b5f" category="inline-link-macro-rx"></block>.</block>
@@ -4916,4 +4915,8 @@ ifdef::AWS[]</block>
   <block id="df0ff0042be8059301b11ae842882f69" category="list-text"><block ref="df0ff0042be8059301b11ae842882f69" category="inline-link-rx"></block></block>
   <block id="26a96558efb5aff5b97e24187bdedaaa" category="list-text">BlueXP 백업 및 복구 기능은 BlueXP 커넥터에 내장되어 있습니다. 비공개 모드로 설치된 경우 새 기능에 액세스하려면 커넥터 소프트웨어를 정기적으로 업데이트해야 합니다. 를 확인하십시오 <block ref="f2b1fe06debcbb7b96badbcb85471310" category="inline-link-macro-rx"></block> 각 BlueXP 백업 및 복구 릴리스의 새로운 기능을 보려면 새 기능을 사용하려면 의 단계를 따릅니다<block ref="2d7f0c488acd05ac12707e13e58fd7d1" category="inline-link-rx"></block>.</block>
   <block id="8adbc3c324aa6698c29b0a7962b11b00" category="list-text">VPC S3 엔드포인트에서 인증서를 가져옵니다. 당신은 이렇게 합니다<block ref="b93c91598d8e86da04085f6831b06e68" category="inline-link-rx"></block> 다음 명령을 실행합니다. 엔드포인트의 DNS 이름을 입력할 때 "*"를 대체하여 "bucket"을 앞에 추가합니다.</block>
+  <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">지원 지역</block>
+  <block id="90463a14d4c78ea524911daef7d9cf71" category="paragraph">BlueXP 백업 및 복구는 다수의 Amazon Web Services, Microsoft Azure 및 Google Cloud 지역에서 Cloud Volumes ONTAP을 통해 지원됩니다.</block>
+  <block id="6c6a0225cb0a619d8872981b7be0ac95" category="inline-link">글로벌 지역 지도를 사용하여 자세히 알아보세요</block>
+  <block id="dac27b02289e52ad3bf6be2e625f4031" category="paragraph"><block ref="70c5fe87a2dc0f089282cb7307d783bf" category="inline-link-rx"></block></block>
 </blocks>
