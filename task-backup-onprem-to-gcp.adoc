@@ -29,43 +29,28 @@ NOTE: "사내 ONTAP 시스템"에는 FAS, AFF 및 ONTAP Select 시스템이 포�
 [role="quick-margin-para"]
 사내 ONTAP 클러스터를 공용 인터넷을 통해 Google Cloud 스토리지에 직접 연결할지, VPN 또는 Google Cloud Interconnect를 사용할지 여부를 선택하고 개인 IP 주소를 사용하는 전용 Google Access 인터페이스를 통해 트래픽을 라우팅할지 여부를 선택합니다.
 
-[role="quick-margin-para"]
-<<연결 방법을 식별합니다>>.
-
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] BlueXP 커넥터를 준비합니다
 [role="quick-margin-para"]
 Google Cloud Platform VPC에 이미 Connector를 구축한 경우 원하는 대로 설정할 수 있습니다. 그렇지 않은 경우, BlueXP 커넥터를 생성하여 ONTAP 데이터를 Google Cloud 스토리지에 백업해야 합니다. 또한 Connector에 대한 네트워크 설정을 사용자 지정하여 Google Cloud에 연결해야 합니다.
-
-[role="quick-margin-para"]
-<<BlueXP 커넥터를 준비합니다,Connector를 생성하는 방법과 필요한 네트워크 설정을 정의하는 방법에 대해 알아봅니다.>>
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["세 가지"] 라이센스 요구 사항을 확인합니다
 [role="quick-margin-para"]
 Google Cloud와 BlueXP의 라이센스 요구 사항을 모두 확인해야 합니다.
 
-[role="quick-margin-para"]
-을 참조하십시오 <<라이센스 요구 사항을 확인합니다>>.
-
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"] ONTAP 클러스터를 준비합니다
 [role="quick-margin-para"]
 BlueXP에서 ONTAP 클러스터를 검색하고, 클러스터가 최소 요구 사항을 충족하는지 확인하고, 클러스터가 Google Cloud에 연결될 수 있도록 네트워크 설정을 사용자 지정합니다.
-
-[role="quick-margin-para"]
-<<ONTAP 클러스터를 준비합니다,ONTAP 클러스터를 준비하는 방법에 대해 알아보십시오.>>
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["다섯"] Google Cloud를 백업 타겟으로 준비합니다
 [role="quick-margin-para"]
 Connector에 대한 권한을 설정하여 Google Cloud 버킷을 생성하고 관리합니다. 또한, 온프레미스 ONTAP 클러스터에 대한 사용 권한을 설정해야 Google Cloud 버킷에 데이터를 읽고 쓸 수 있습니다.
 
 [role="quick-margin-para"]
-선택적으로 기본 Google Cloud 암호화 키를 사용하는 대신 데이터 암호화에 대해 사용자 지정 관리 키를 설정할 수 있습니다. <<Prepare Google Cloud storage as your backup target,Google Cloud 환경에서 ONTAP 백업을 받을 수 있는 방법에 대해 알아보십시오.>>
+선택적으로 기본 Google Cloud 암호화 키를 사용하는 대신 데이터 암호화에 대해 사용자 지정 관리 키를 설정할 수 있습니다.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["6개"] ONTAP 볼륨에서 백업을 활성화합니다
 [role="quick-margin-para"]
 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * Enable > Backup Volumes * 를 클릭합니다. 그런 다음 설정 마법사의 지시에 따라 사용할 복제 및 백업 정책과 백업할 볼륨을 선택합니다.
-
-[role="quick-margin-para"]
-<<ONTAP 볼륨에서 백업을 활성화합니다>>.
 
 
 
