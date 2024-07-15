@@ -31,6 +31,9 @@ ONTAP 볼륨 데이터의 백업은 오브젝트 스토리지에 저장된 Snaps
 
 
 
+NOTE: ONTAP 데이터 복원과 관련된 제한 사항은 를 link:reference-limitations.html["ONTAP 볼륨에 대한 백업 및 복구 제한 사항"]참조하십시오.
+
+
 
 == 복구 대시보드
 

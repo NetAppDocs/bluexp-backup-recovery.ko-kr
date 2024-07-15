@@ -3783,8 +3783,6 @@ GCP에서 BlueXP는 Google Cloud Storage 버킷을 위한 저장소 계정이 �
   <block id="bd83bdfad11f4eb2160cecbaafa5771f" category="section-title">사용 중인 BlueXP Connector 배포 모드</block>
   <block id="40f7e0f171ae7f38e670d73e8a4c284b" category="paragraph">BlueXP는 비즈니스 및 보안 요구 사항을 충족하는 방식으로 BlueXP를 사용할 수 있는 다양한 배포 모드를 제공합니다. _표준 모드_ 는 BlueXP SaaS 계층을 활용하여 모든 기능을 제공하며, 연결 제한이 있는 조직에서는 _restricted mode_ 및 _private mode_를 사용할 수 있습니다.</block>
   <block id="fb67e88bd0479a55df78c8a83275d5e7" category="inline-link">BlueXP 배포 모드에 대한 비디오를 시청하십시오</block>
-  <block id="72e192cdf7601017af8b339164635167" category="paragraph"><block ref="2f5063518a76fb11ac58b566cf1a20ab" category="inline-link-rx"></block>.
-<block ref="86b5ac5922ab7c62d6a8a3ff686cf32a" category="inline-link-rx"></block>.</block>
   <block id="0f8751300c4a6857f8a492b7f39fba12" category="inline-link-macro">지원되는 전체 백업 대상 목록을 참조하십시오</block>
   <block id="2e87d4ef1e0516d893da73de140af706" category="inline-link-macro">Cloud Volumes ONTAP 데이터를 Azure Blob에 백업합니다</block>
   <block id="32f34f4c2eca6b21bfa54bfe2cf7ad10" category="inline-link-macro">온프레미스 ONTAP 데이터를 Azure Blob에 백업</block>
@@ -4858,7 +4856,6 @@ ifdef::AWS[]</block>
   <block id="2dc37cecffdd7077ba99c0ba111ad347" category="section-title">오브젝트로 백업 제한 사항</block>
   <block id="215d6f1bc8d7005b7bb981d9a3dc7b78" category="section-title">RHEL 8+를 Podman과 함께 사용할 때의 제한 사항</block>
   <block id="38c44a50a75c15410df928f63928acf8" category="section-title">단일 파일 복구는 지원되지 않습니다</block>
-  <block id="8d98ce1c70029af5a2d95ea5cd356016" category="paragraph">Podman을 사용할 때는 단일 파일 복원 및 디렉토리 복원을 위한 찾아보기 및 복원 기능이 지원되지 않습니다. Podman을 사용할 때 다른 모든 유형의 복원 작업이 지원되므로 이 문제가 해결될 때까지 다음과 같은 다른 방법을 사용하여 데이터를 복원할 수 있습니다.</block>
   <block id="dbeaadfb952b8aa57d00264751776087" category="list-text">복제된 볼륨이 있는 경우 복제된 볼륨에서 파일 또는 폴더를 복원합니다.</block>
   <block id="e647cb9e3bb11f1dcf4383ae4ae00f0f" category="list-text">검색 및 복원 기능을 사용하여 클라우드 백업에서 파일 또는 폴더를 복원합니다.</block>
   <block id="b760ac1d9088cf17812b95299a0f4c97" category="list-text">찾아보기 및 복원을 사용하여 클라우드 백업에서 볼륨을 복원한 다음 필요한 파일이나 폴더에 액세스합니다.</block>
@@ -4919,4 +4916,8 @@ ifdef::AWS[]</block>
   <block id="90463a14d4c78ea524911daef7d9cf71" category="paragraph">BlueXP 백업 및 복구는 다수의 Amazon Web Services, Microsoft Azure 및 Google Cloud 지역에서 Cloud Volumes ONTAP을 통해 지원됩니다.</block>
   <block id="6c6a0225cb0a619d8872981b7be0ac95" category="inline-link">글로벌 지역 지도를 사용하여 자세히 알아보세요</block>
   <block id="dac27b02289e52ad3bf6be2e625f4031" category="paragraph"><block ref="70c5fe87a2dc0f089282cb7307d783bf" category="inline-link-rx"></block></block>
+  <block id="a0833f9e76bfd36f87ee1d758fbe0cf4" category="paragraph"><block ref="2f5063518a76fb11ac58b566cf1a20ab" category="inline-link-rx"></block>.. <block ref="1335d5eb0bcdbaf6050d71dc83f5893f" category="inline-link-rx"></block>..</block>
+  <block id="baa1235434f9122bbcf4cd93c72c3ed3" category="list-text">DP 볼륨을 백업한 다음 이 볼륨에 대한 SnapMirror 관계를 해제하기로 결정한 경우, SnapMirror 관계를 삭제하거나 SnapMirror 방향을 반대로 바꾸지 않는 한 해당 볼륨에 파일을 복원할 수 없습니다.</block>
+  <block id="97a40c9bbf6946a2928acd09286296b8" category="paragraph">Podman에서 실행되는 BlueXP 커넥터를 사용할 때는 단일 파일 복원 및 디렉토리 복원을 위한 찾아보기 및 복원 기능이 지원되지 않습니다(RHEL 8 또는 9에서 실행할 때 수동으로 생성된 BlueXP 커넥터). Podman을 사용할 때 다른 모든 유형의 복원 작업이 지원되므로 이 문제가 해결될 때까지 다음과 같은 다른 방법을 사용하여 데이터를 복원할 수 있습니다.</block>
+  <block id="210a764f3461866061c80320620c0eec" category="admonition">ONTAP 데이터 복원과 관련된 제한 사항은 를 <block ref="15bd83aed33bf3bd63f2e9166e3e91ba" category="inline-link-macro-rx"></block>참조하십시오.</block>
 </blocks>
