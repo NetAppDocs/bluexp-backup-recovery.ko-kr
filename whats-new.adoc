@@ -18,6 +18,48 @@ BlueXP 백업 및 복구의 새로운 기능에 대해 알아보십시오.
 
 
 
+== 2024년 7월 22일
+
+
+
+=== 1GB 미만의 볼륨을 복원합니다
+
+이 릴리스에서는 이제 ONTAP에서 만든 1GB 미만의 볼륨을 복원할 수 있습니다. ONTAP를 사용하여 만들 수 있는 최소 볼륨 크기는 20MB입니다.
+
+
+
+=== DataLock 비용을 줄이는 방법에 대한 팁
+
+DataLock 기능은 지정된 기간 동안 백업 파일이 수정되거나 삭제되지 않도록 보호합니다. 이 기능은 랜섬웨어 공격으로부터 파일을 보호하는 데 도움이 됩니다.
+
+DataLock에 대한 자세한 내용과 관련 비용을 줄이는 방법에 대한 팁은 을 link:concept-cloud-backup-policies.html["오브젝트에 백업 정책 설정"]참조하십시오.
+
+
+
+=== AWS IAM 역할 어디서나 통합
+
+AWS(Amazon Web Services) ID 및 액세스 관리(IAM) 역할 Anywhere 서비스를 사용하면 AWS의 words_outside_of AWS에 대한 IAM 역할 및 단기 자격 증명을 사용하여 AWS API에 안전하게 액세스할 수 있으며, 이때 words_on_AWS에 IAM 역할을 사용하는 것과 같은 방법으로 AWS API에 안전하게 액세스할 수 있습니다. 어디서나 개인 키 인프라 및 AWS 토큰을 사용할 경우 장기 AWS 액세스 키와 비밀 키가 필요하지 않습니다. 이렇게 하면 자격 증명을 더 자주 순환할 수 있으므로 보안이 향상됩니다.
+
+이 릴리스에서 AWS IAM 역할 Anywhere 서비스에 대한 지원은 기술 미리 보기입니다.
+
+이는 및 백업에 link:task-backup-to-s3.html["Cloud Volumes ONTAP를 AWS에 백업"] link:task-backup-onprem-to-aws.html["온프레미스 ONTAP 데이터를 AWS에 백업"]적용됩니다.
+
+을 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-July-2024-Release/ba-p/453993["BlueXP 백업 및 복구 2024년 7월 릴리즈 블로그"]참조하십시오.
+
+
+
+=== 이제 FlexGroup 폴더 또는 디렉토리 복원을 사용할 수 있습니다
+
+이전에는 FlexVol 볼륨을 복원할 수 있었지만 FlexGroup 폴더 또는 디렉토리를 복원할 수 없었습니다. ONTAP 9.15.1 P2에서는 찾아보기 및 복원 옵션을 사용하여 FlexGroup 폴더를 복원할 수 있습니다.
+
+이 릴리스에서 FlexGroup 폴더 복원에 대한 지원은 기술 미리 보기입니다.
+
+자세한 내용은 을 link:task-restore-backups-ontap.html#restore-folders-and-files-using-browse-restore["찾아보기 및 amp; 복원을 사용하여 폴더와 파일을 복원합니다"]참조하십시오.
+
+수동으로 활성화하는 방법에 대한 자세한 내용은 을 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-July-2024-Release/ba-p/453993["BlueXP 백업 및 복구 2024년 7월 릴리즈 블로그"]참조하십시오.
+
+
+
 == 2024년 5월 17일
 
 

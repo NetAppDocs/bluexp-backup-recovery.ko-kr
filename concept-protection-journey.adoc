@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-protection-journey.html 
-keywords: backing up, restoring, recovery, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, on-premises ontap, onprem, replication, backup and recovery 
+keywords: backing up, restoring, recovery, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, storage grid, back up volumes, cloud backup, restore volumes, on-premises ontap, onprem, replication, backup and recovery 
 summary: BlueXP 백업 및 복구 서비스를 사용하면 소스 볼륨의 복사본을 최대 3개까지 생성하여 데이터를 보호할 수 있습니다. 볼륨에서 이 서비스를 활성화할 때 선택할 수 있는 옵션은 여러 가지가 있으므로 준비가 되도록 선택 사항을 검토해야 합니다. 
 ---
 = 보호 여정을 계획하십시오

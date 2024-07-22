@@ -1036,7 +1036,6 @@
   <block id="abbf2484b45da9fd7be677fe96c511eb" category="inline-xref">찾아보기 및 amp; 복원을 사용하여 폴더와 파일을 복원합니다</block>
   <block id="8996e9eaff78ab540aab279a66de20ac" category="inline-xref">검색 및 amp;Restore를 사용하여 볼륨, 폴더 및 파일을 복원합니다</block>
   <block id="860f07d2ed109437af4b64fd8713b385" category="paragraph">아카이브 스토리지에 있는 백업 파일에서 볼륨을 복원하는 데는 아카이브 계층 및 복원 우선 순위에 따라 몇 분 또는 몇 시간이 걸릴 수 있습니다. Job Monitoring* 탭을 클릭하여 복구 진행률을 확인할 수 있습니다.</block>
-  <block id="27816218998e04ffd3077d0806e7798b" category="paragraph">ONTAP 볼륨 백업에서 일부 파일만 복원해야 하는 경우 전체 볼륨을 복원하는 대신 폴더 또는 개별 파일을 복원하도록 선택할 수 있습니다. 폴더 및 파일을 원래 작업 환경의 기존 볼륨이나 동일한 클라우드 계정을 사용하는 다른 작업 환경으로 복원할 수 있습니다. 또한 온프레미스 ONTAP 시스템의 볼륨에 폴더 및 파일을 복원할 수 있습니다.</block>
   <block id="502b9bcf8737b06b486f332278870bbf" category="list-text">FILE_RESTORE 작업을 수행하려면 ONTAP 버전이 9.6 이상이어야 합니다.</block>
   <block id="cee5f78cfda5fc2f3b24ce19bdf5119a" category="section-title">폴더 및 파일 복원 프로세스</block>
   <block id="f3c6f7e9aebf0c7de403d55832a37318" category="list-text">볼륨 백업에서 폴더 또는 하나 이상의 파일을 복원하려면 * 복원 * 탭을 클릭하고 _찾아보기 및 복원_ 아래에서 * 파일 또는 폴더 복원 * 을 클릭합니다.</block>
@@ -2163,8 +2162,6 @@
   <block id="b3bc75275539de4c7c9d62e8364e4698" category="paragraph">각 Oracle 데이터베이스 호스트에 Oracle용 SnapCenter 플러그인을 설치하고, 데이터베이스 호스트를 추가하고, 호스트에서 데이터베이스를 검색하여 정책을 할당하고, 백업을 생성해야 합니다.</block>
   <block id="30436b64a4369e46b473bc1b1401fd34" category="list-text">데이터베이스 호스트에 대해 SSH가 설정된 경우 다음 방법 중 하나를 사용하여 플러그인을 설치할 수 있습니다.</block>
   <block id="19818bd6e255e679bcd2b558dcd8be72" category="list-text">SSH 옵션을 사용하여 플러그인을 설치하고 UI에서 호스트를 추가합니다. <block ref="eef94e573988b9bcf7576ada9279c21d" category="inline-xref-macro-rx"></block>.</block>
-  <block id="f5a95c52f600ae7a2606dd65afc76a31" category="list-text">스크립트를 사용하여 플러그인을 설치하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다. <block ref="2d45e41162034e715ba3307387fe903d" category="inline-xref-macro-rx"></block>.</block>
-  <block id="18410e518914ad15f77ada9d10f41c85" category="list-text">SSH가 비활성화된 경우 수동으로 플러그인을 설치하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다. <block ref="ca0ca6018928b52917635161072180d8" category="inline-xref-macro-rx"></block>.</block>
   <block id="16bc078ea4ad4b47daa61cfa55cec4cc" category="inline-link-macro">BlueXP 커넥터 호스트에서 애플리케이션 데이터베이스 호스트로의 연결을 확인하지 못했습니다</block>
   <block id="bb3d3d1149be85da9f3488d99e38818a" category="paragraph">연결 문제를 해결하는 방법에 대한 자세한 내용은 을 참조하십시오 <block ref="dc781d2e4005ea48d6ecaf05b5c8bdc7" category="inline-link-macro-rx"></block>.</block>
   <block id="f9b1747cec7918dca1e5047effaf3259" category="inline-link-macro">커넥터 세부 정보를 업데이트합니다</block>
@@ -2388,7 +2385,6 @@
   <block id="584eab89c38498b5c5274ae652e93c92" category="paragraph">BlueXP 백업 및 복구를 설정할 때 사용할 IPspace를 묻는 메시지가 표시됩니다. 각 LIF가 연결되는 IPspace를 선택해야 합니다. 이는 여러분이 생성한 "기본" IPspace 또는 사용자 지정 IPspace가 될 수 있습니다.</block>
   <block id="83d4153ed0b73bf98f157af1a9cede5d" category="list-text">필요한 경우 방화벽 규칙을 업데이트하여 포트 443을 통해 ONTAP에서 객체 스토리지로 BlueXP 백업 및 복구 연결을 허용하고 포트 53(TCP/UDP)을 통해 스토리지 VM에서 DNS 서버로 이름 확인 트래픽을 허용합니다.</block>
   <block id="2ac4b31a1e8119be12fc66295f51743e" category="paragraph">BlueXP 백업 및 복구 "검색 및 복원" 기능을 사용하려면 Connector 역할에 특정 권한이 있어야 Google Cloud BigQuery 서비스에 액세스할 수 있습니다. 아래 사용 권한을 확인하고 정책을 수정해야 하는 경우 단계를 따릅니다.</block>
-  <block id="490d27127d1be5dafeff633874e98723" category="paragraph">백업을 설정할 때는 특정 권한이 있는 서비스 계정에 대한 저장소 액세스 키를 제공해야 합니다. 서비스 계정을 사용하면 BlueXP 백업 및 복구를 통해 백업을 저장하는 데 사용되는 클라우드 스토리지 버킷을 인증하고 액세스할 수 있습니다. Google Cloud Storage가 누가 요청을 하는지 알 수 있도록 키가 필요합니다.</block>
   <block id="f20f604abbd5f4c6fa3dce28e510083d" category="paragraph">백업 서비스를 구성할 때 나중에 BlueXP 백업 및 복구에 키를 입력해야 합니다.</block>
   <block id="aa7686a1bb9a5c6e028ddc3bb91488c6" category="list-text">저장소 계정과 연결된 서비스 에이전트에는 BlueXP 백업 및 복구에 의해 "CryptoKey Encryptter/Decrypter(roles/cloudkms.crypterDecrypter)" IAM 역할이 할당됩니다.</block>
   <block id="f978572d4b7f3863b262587adb3dab80" category="list-text">클러스터에 대한 BlueXP 백업 및 복구를 활성화하려면 먼저 Google에서 PAYGO(Pay-as-You-Go) BlueXP Marketplace 서비스에 가입하거나 NetApp에서 BYOL 백업 및 복구 라이센스를 구입하여 활성화해야 합니다. 이러한 라이센스는 사용자 계정용이며 여러 시스템에서 사용할 수 있습니다.</block>
@@ -3337,7 +3333,6 @@ cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 G
   <block id="a8597301498b7ba277bd04c5d9cec26a" category="section-title">Cloud Volumes ONTAP에서 BlueXP 백업 및 복구를 활성화합니다</block>
   <block id="8a8476fd6836ec12c30dec20bc5004af" category="paragraph">* 새 시스템에서 BlueXP 백업 및 복구 활성화 *</block>
   <block id="901ae31ede407d1b2f9642db905682f2" category="list-text">BlueXP Canvas에서 * 작업 환경 추가 * 를 선택하고 클라우드 공급자를 선택한 다음 * 새로 추가 * 를 선택합니다. Create Cloud Volumes ONTAP * 를 선택합니다.</block>
-  <block id="2804562bc1e662a5b5b8ecf3b0be67c6" category="admonition">백업 설정을 수정하거나 복제를 추가하려면 을 참조하십시오 <block ref="5cd1a7d7fa9fd41e0b8e095748eb7b5f" category="inline-link-macro-rx"></block>.</block>
   <block id="fc90b8f1413f3c199581e8299d3f470a" category="paragraph">* 기존 시스템에서 BlueXP 백업 및 복구 활성화 *</block>
   <block id="f44b20d5d9a676a009838194fcecc749" category="list-text">BlueXP Canvas에서 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 * 활성화 * 를 선택합니다.</block>
   <block id="4ade5af203d6e65a0d4f2dfba9bb43b8" category="section-title">ONTAP 볼륨에서 백업을 활성화합니다</block>
@@ -3416,7 +3411,6 @@ cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 G
   <block id="4fe600ffd12f47bf3dd1572a88dd9c01" category="paragraph">BlueXP에서 ONTAP 클러스터를 검색하고, 클러스터가 최소 요구 사항을 충족하는지 확인하고, 클러스터가 Google Cloud에 연결될 수 있도록 네트워크 설정을 사용자 지정합니다.</block>
   <block id="ebd76416ef870c00fade106068d5e4a7" category="inline-xref">ONTAP 클러스터를 준비하는 방법에 대해 알아보십시오.</block>
   <block id="8db80556c0aafbdfdf9a31fd06ad9f66" category="paragraph"><block ref="63ac2cb8ed6b5e1a480ae04ed133cee6" category="inline-xref-macro-rx"></block></block>
-  <block id="52f2d33185b5d0760fde801c7c14e04f" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> Google Cloud를 백업 타겟으로 준비합니다</block>
   <block id="4f678d696dc9c7564f67b0e43a8f509a" category="paragraph">Azure 버킷을 생성하고 관리하기 위한 Connector의 권한을 설정합니다. 또한, 온프레미스 ONTAP 클러스터에 대한 사용 권한을 설정해야 Azure 버킷에 데이터를 읽고 쓸 수 있습니다.</block>
   <block id="140993c9957beab179c4418f6efee0e0" category="inline-xref">Azure 환경에서 ONTAP 백업을 받을 수 있도록 준비하는 방법에 대해 알아보십시오.</block>
   <block id="8384c2af974a15d97a9b9f3794602ca9" category="paragraph">선택적으로 기본 Azure 암호화 키를 사용하는 대신 데이터 암호화에 대해 사용자 지정 관리 키를 설정할 수 있습니다. <block ref="e52cf46a280a91ebefdd71696394d452" category="inline-xref-macro-rx"></block></block>
@@ -4783,7 +4777,6 @@ ifdef::AWS[]</block>
   <block id="645f12199dae2b82a1985743cbc3e647" category="section-title">DataLock 및 랜섬웨어 차단 옵션</block>
   <block id="28393e8d0c5d4d42b764689c3d805dd0" category="example-title">AWS S3 사용 권한</block>
   <block id="1ddec8739d8c1b2f7db7d9f2fe4b6069" category="example-title">StorageGRID S3 사용 권한</block>
-  <block id="5f77078b118458f75a8520575b6a518e" category="list-text">DataLock 및 랜섬웨어 보호는 DataLock 및 랜섬웨어 보호가 활성화된 백업 정책을 사용하여 새 볼륨 백업에 적용됩니다. 나중에 고급 설정 옵션을 사용하여 이 기능을 활성화 또는 비활성화할 수 있습니다.</block>
   <block id="2ed85c9d8759c48194524d439a552ff0" category="section-title">아카이브 스토리지 옵션</block>
   <block id="e5c31b44cc452f945aec38b328ab97da" category="section-title">기존 클라우드 백업 정책을 편집합니다</block>
   <block id="d3b3f333837b21ed08dfd04c10e48346" category="section-title">새 클라우드 백업 정책을 추가합니다</block>
@@ -4917,4 +4910,54 @@ ifdef::AWS[]</block>
   <block id="6fbe1cea473e2020956491cc962bda52" category="paragraph">소스 클러스터에서 ONTAP 9.10.1 이상이 실행 중인 경우 추가 비용 최적화를 위해 일정 일(일반적으로 30일 이상) 후에 _Cool_to_Azure Archive_storage에서 백업을 계층화하도록 선택할 수 있습니다. 이 계층의 데이터는 필요할 때 즉시 액세스할 수 없으며 검색 비용을 더 높여야 하기 때문에 이러한 아카이브 백업 파일에서 데이터를 복원해야 하는 빈도를 고려해야 합니다. 이 페이지의 보관 저장소에서 데이터 복원에 대한 섹션을 참조하십시오.</block>
   <block id="1cc47ef834e284795bab8becbe58ccfb" category="paragraph">사내 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일(일반적으로 30일 이상) 이후 BlueXP 백업 및 복구 UI의 _Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. 이 계층의 데이터는 높은 검색 비용이 필요하므로 이러한 아카이브 백업 파일에서 데이터를 복원해야 하는 빈도를 고려해야 합니다. 이 페이지의 보관 저장소에서 데이터 복원에 대한 섹션을 참조하십시오.</block>
   <block id="d8e36d6c03fc165135350c7550f92b0a" category="paragraph">선택적으로 기본 Google Cloud 암호화 키를 사용하는 대신 데이터 암호화에 대해 사용자 지정 관리 키를 설정할 수 있습니다.</block>
+  <block id="0b9052c66b4ef4c91263dcf2c8581f33" category="list-text">DataLock 및 랜섬웨어 보호는 DataLock 및 랜섬웨어 보호가 활성화된 백업 정책을 사용하여 새 볼륨 백업에 적용됩니다. 나중에 고급 설정 옵션을 사용하여 이러한 기능을 활성화 또는 비활성화할 수 있습니다.</block>
+  <block id="ccbf8c45039ba817be81bbf5fa2a7521" category="section-title">DataLock 비용을 줄이는 방법에 대한 팁</block>
+  <block id="fe678e2fcc09672ea124b748f97633cc" category="paragraph">DataLock 기능을 활성 상태로 유지하면서 랜섬웨어 스캔 기능을 활성화 또는 비활성화할 수 있습니다. 추가 비용을 방지하려면 예약된 랜섬웨어 검사를 사용하지 않도록 설정하면 됩니다. 이를 통해 보안 설정을 사용자 지정하고 클라우드 공급자가 비용을 발생시키지 않도록 할 수 있습니다.</block>
+  <block id="ad67d474e8005ade444d72671d5b14f2" category="paragraph">예약된 랜섬웨어 검사를 비활성화하더라도 필요 시 검사를 수행할 수 있습니다.</block>
+  <block id="d3ee7c87ac2ae18b1e773ebabea0ee2e" category="paragraph">다양한 보호 수준을 선택할 수 있습니다.</block>
+  <block id="af7638f7a1ad25e7f7541cb09e590ba7" category="list-text">* DataLock_without_ransomware scans *: 거버넌스 또는 규정 준수 모드일 수 있는 대상 스토리지의 백업 데이터를 보호합니다.</block>
+  <block id="55edcf1a7d70eb272dbcec4fb91942d6" category="list-text">* 거버넌스 모드 *: 관리자가 보호된 데이터를 덮어쓰거나 삭제할 수 있는 유연성을 제공합니다.</block>
+  <block id="fcf9f3f8233ccccdace8c9f5e7a9ea42" category="list-text">* 규정 준수 모드 *: 보존 기간이 만료될 때까지 완전한 불완전성을 제공합니다. 따라서 엄격한 규제가 적용되는 환경에서 가장 엄격한 데이터 보안 요구 사항을 충족할 수 있습니다. 수명주기 동안에는 데이터를 덮어쓰거나 수정할 수 없으므로 백업 복사본을 가장 강력하게 보호할 수 있습니다.</block>
+  <block id="615fc78dc97f95f4ed9be1fd5668d1c4" category="admonition">Microsoft Azure는 대신 잠금 및 잠금 해제 모드를 사용합니다.</block>
+  <block id="42b2f7bad0fae50cc138173e28666296" category="list-text">* DataLock_with_ransomware scans *: 데이터에 대한 추가적인 보안 계층을 제공합니다. 이 기능은 백업 복사본 변경 시도를 감지하는 데 도움이 됩니다. 시도하면 새 버전의 데이터가 신중하게 생성됩니다. 스캔 주파수는 1, 2, 3, 4, 5, 6일 또는 7일. 스캔을 7일마다 로 설정하면 비용이 크게 감소합니다.</block>
+  <block id="cb48f77184f9795e5ccef662bca48410" category="paragraph">DataLock 비용을 줄이는 방법에 대한 자세한 내용은 을 참조하십시오 <block ref="6bf14a4871219441054a20f511413643" category="inline-link-rx"></block></block>
+  <block id="6a401c7d1c81a127fcd1224768c6edaf" category="inline-link">BlueXP 백업 및 복구 TCO(총 소유 비용) 계산기</block>
+  <block id="e62bcce3f6b56efa6b52ab5d87b9850f" category="paragraph">또한 를 방문하여 DataLock과 관련된 비용을 추정할 수<block ref="53f0527bd2dbcfab03738578b80110f5" category="inline-link-rx"></block>있습니다.</block>
+  <block id="ec0522344cdf94ed9ff238d26e67e7d4" category="list-text">스크립트를 사용하여 플러그인을 설치하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다. <block ref="cd0002a5ce0991e4ff737bdcb461a17b" category="inline-xref-macro-rx"></block>..</block>
+  <block id="3fcdf51146a0f2de312a4a1a6ba1f507" category="list-text">SSH가 비활성화된 경우 수동으로 플러그인을 설치하고 수동 옵션을 사용하여 UI에서 호스트를 추가합니다. <block ref="df2b89845fbeb0321ae65da8f07b18ce" category="inline-xref-macro-rx"></block>..</block>
+  <block id="a331fd828c6eb830ffdf677817c5f035" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 커넥터를 위한 네트워킹을 준비합니다</block>
+  <block id="2d04634b3cbe9bddda24c70e3fe058c1" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 라이센스 요구 사항을 확인합니다</block>
+  <block id="c5b3c5fbdaa1657e6943a110d8413405" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> ONTAP 클러스터를 준비합니다</block>
+  <block id="0bec69ffb331a84c17da2695bd9890f4" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> Google Cloud를 백업 대상으로 준비합니다</block>
+  <block id="12e67aac3e7f9227cc35f8f047d7dc74" category="inline-image-macro">7번</block>
+  <block id="0e41efd085d01e393e196b57625ec5fb" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block> ONTAP 볼륨에 대한 백업을 활성화합니다</block>
+  <block id="ed63cc305ac61371afe05971b5fa71c3" category="paragraph">사용자 지정 역할을 사용하는 특정 권한이 있는 서비스 계정에 대한 스토리지 액세스 키를 제공해야 합니다. 서비스 계정을 사용하면 BlueXP 백업 및 복구를 통해 백업을 저장하는 데 사용되는 클라우드 스토리지 버킷을 인증하고 액세스할 수 있습니다. Google Cloud Storage가 누가 요청을 하는지 알 수 있도록 키가 필요합니다.</block>
+  <block id="c3440827f50a036dae81cd2e84081afc" category="list-text">Google Cloud Project에 사용 권한이 축소된 사용자 지정 역할을 가진 서비스 계정이 있습니다.</block>
+  <block id="110c0a25d695ec4a8714d64d458cdc24" category="admonition">Google Cloud Storage 버킷에 액세스하기 위한 BlueXP 백업 및 복구를 활성화하는 서비스 계정에 더 이상 스토리지 관리자 역할이 필요하지 않습니다.</block>
+  <block id="3959d8bcb4c6224d3d44d552e82f0df6" category="paragraph">Connector에 대한 권한을 설정하여 Google Cloud 버킷을 생성하고 관리합니다.</block>
+  <block id="965fc2d93c14a05bf6aa6d11dccdf7f3" category="inline-xref">Google Cloud 환경에서 ONTAP 백업을 받을 수 있는 방법에 대해 알아보십시오.</block>
+  <block id="ea64f83c7a3c2712595bc9229113d35b" category="paragraph">선택적으로 기본 Google Cloud 암호화 키를 사용하는 대신 데이터 암호화에 맞게 사용자 지정 관리형 키를 설정할 수 있습니다. <block ref="4513dc5134abe27f5500c4191aea3d5e" category="inline-xref-macro-rx"></block></block>
+  <block id="e2220c538d5ed850f5ecb8375389dad3" category="list-text">Google Cloud Project에 사용자 지정 역할을 가진 서비스 계정이 있어야 합니다.<block ref="bb9056f672c7da9a9c8e1e60191fd39c" category="inline-link-rx"></block>..</block>
+  <block id="f6b23a9e657d0c84ca0f004a895e6b12" category="admonition">백업 설정을 수정하거나 복제를 추가하려면 을 <block ref="437ca1df9d07fa739678476083489c0d" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="031305d7be8e01cb27587340a16572f8" category="paragraph">ONTAP 볼륨 백업에서 몇 개의 파일만 복원해야 하는 경우 전체 볼륨을 복원하는 대신 폴더 또는 개별 파일을 복원하도록 선택할 수 있습니다. 폴더 및 파일을 원래 작업 환경의 기존 볼륨이나 동일한 클라우드 계정을 사용하는 다른 작업 환경으로 복원할 수 있습니다. 또한 온프레미스 ONTAP 시스템의 볼륨에 폴더 및 파일을 복원할 수 있습니다.</block>
+  <block id="87eb849ca11537b79f083ee5fbad6738" category="list-text">ONTAP 9.15.1 P2에서는 찾아보기 및 복원 옵션을 사용하여 FlexGroup 폴더를 복원할 수 있습니다.</block>
+  <block id="57bb710d517f010c4fce20687ec1c6ff" category="list-text">찾아보기 및 복원 옵션을 사용하여 FlexGroup 디렉토리를 복원하려면 ONTAP 버전이 9.15.1 P2 이상이어야 합니다.</block>
+  <block id="ba874eb3ffbdba518b95ce26bc81a861" category="section-title">2024년 7월 22일</block>
+  <block id="9d5f0e2f1682000ac365243e21301823" category="section-title">1GB 미만의 볼륨을 복원합니다</block>
+  <block id="a429eb8c690c0a48131f4ae1267eafd1" category="paragraph">이 릴리스에서는 이제 ONTAP에서 만든 1GB 미만의 볼륨을 복원할 수 있습니다. ONTAP를 사용하여 만들 수 있는 최소 볼륨 크기는 20MB입니다.</block>
+  <block id="f959c5a51fb8f2a9e9c0063bbb8adb63" category="paragraph">DataLock 기능은 지정된 기간 동안 백업 파일이 수정되거나 삭제되지 않도록 보호합니다. 이 기능은 랜섬웨어 공격으로부터 파일을 보호하는 데 도움이 됩니다.</block>
+  <block id="4822bd9fd85c6d5438ecd9963b5c6897" category="paragraph">DataLock에 대한 자세한 내용과 관련 비용을 줄이는 방법에 대한 팁은 을 <block ref="d72e0969f8971a4b91ad44a04438bfb9" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="79cfacda817c1e599649823ffa32c8d7" category="section-title">AWS IAM 역할 어디서나 통합</block>
+  <block id="bebfb016f9defe9a78fff65f418f213b" category="paragraph">AWS(Amazon Web Services) ID 및 액세스 관리(IAM) 역할 Anywhere 서비스를 사용하면 AWS의 words_outside_of AWS에 대한 IAM 역할 및 단기 자격 증명을 사용하여 AWS API에 안전하게 액세스할 수 있으며, 이때 words_on_AWS에 IAM 역할을 사용하는 것과 같은 방법으로 AWS API에 안전하게 액세스할 수 있습니다. 어디서나 개인 키 인프라 및 AWS 토큰을 사용할 경우 장기 AWS 액세스 키와 비밀 키가 필요하지 않습니다. 이렇게 하면 자격 증명을 더 자주 순환할 수 있으므로 보안이 향상됩니다.</block>
+  <block id="24c6cf6b2747b390a5d9eb672e1d54d4" category="paragraph">이 릴리스에서 AWS IAM 역할 Anywhere 서비스에 대한 지원은 기술 미리 보기입니다.</block>
+  <block id="75a3bff844d1c7ffb01e7ef22ab82b4d" category="inline-link-macro">Cloud Volumes ONTAP를 AWS에 백업</block>
+  <block id="4e6ae608536b374d1b71a28785ef9a8b" category="inline-link-macro">온프레미스 ONTAP 데이터를 AWS에 백업</block>
+  <block id="ff4c4976afafd2cd191e5316fe16ee05" category="paragraph">이는 및 백업에 <block ref="36745b46d10b0daef886af9c3561dc82" category="inline-link-macro-rx"></block> <block ref="28610eddc6cc2d865303aa5fe254d6ff" category="inline-link-macro-rx"></block>적용됩니다.</block>
+  <block id="ddc7fe4301c8a4aa6a14e1843c25f30b" category="inline-link">BlueXP 백업 및 복구 2024년 7월 릴리즈 블로그</block>
+  <block id="f1db3a8ee789ee9607754f5f8a9871b1" category="paragraph">을<block ref="7de2d0863d92330816fac8b7768edb68" category="inline-link-rx"></block>참조하십시오.</block>
+  <block id="5ab4d79a28b46b39467c24096b99316f" category="section-title">이제 FlexGroup 폴더 또는 디렉토리 복원을 사용할 수 있습니다</block>
+  <block id="a821e6c079044462f6ffc9a01ed28fc9" category="paragraph">이전에는 FlexVol 볼륨을 복원할 수 있었지만 FlexGroup 폴더 또는 디렉토리를 복원할 수 없었습니다. ONTAP 9.15.1 P2에서는 찾아보기 및 복원 옵션을 사용하여 FlexGroup 폴더를 복원할 수 있습니다.</block>
+  <block id="cd4619af82dfe7627dc934e29e85a6e9" category="paragraph">이 릴리스에서 FlexGroup 폴더 복원에 대한 지원은 기술 미리 보기입니다.</block>
+  <block id="9b7af6cb2e410e55ce793003b7110047" category="paragraph">자세한 내용은 을 <block ref="07023d18b01371174abc5a157da41b99" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="707304f314bfa71975e8ffb352535092" category="paragraph">수동으로 활성화하는 방법에 대한 자세한 내용은 을<block ref="7de2d0863d92330816fac8b7768edb68" category="inline-link-rx"></block>참조하십시오.</block>
 </blocks>

@@ -275,7 +275,7 @@ image:screenshot_backup_cvo_enable.png["작업 환경을 선택한 후 사용할
 
 
 
-TIP: 백업 설정을 수정하거나 복제를 추가하려면 을 참조하십시오 link:../task-manage-backups-ontap.html["ONTAP 백업을 관리합니다"].
+TIP: 백업 설정을 수정하거나 복제를 추가하려면 을 link:task-manage-backups-ontap.html["ONTAP 백업을 관리합니다"]참조하십시오.
 
 
 
