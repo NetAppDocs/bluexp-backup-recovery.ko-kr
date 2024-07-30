@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-ontap-backup-to-cloud.html 
-keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, billing, cost, on-premises ontap, onprem 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, billing, cost, on-premises ontap, onprem, bluexp, bluexp backup and recovery 
 summary: BlueXP 백업 및 복구 서비스는 ONTAP 볼륨 데이터의 보호 및 장기 아카이브를 위한 백업 및 복원 기능을 제공합니다. 클라우드 내 복사본 1개와 함께 서로 다른 2개의 스토리지 시스템에 소스 데이터의 복사본을 3개 가지고 있는 3-2-1 전략을 구현할 수 있습니다. 
 ---
 = BlueXP 백업 및 복구를 사용하여 ONTAP 볼륨 데이터를 보호합니다
@@ -191,7 +191,6 @@ BlueXP 백업 및 복구는 다음 유형의 볼륨을 지원합니다.
 * FlexVol 읽기-쓰기 볼륨
 * FlexGroup 볼륨(ONTAP 9.12.1 이상 필요)
 * SnapLock 엔터프라이즈 볼륨(ONTAP 9.11.1 이상 필요)
-* SnapLock Compliance 볼륨(ONTAP 9.14 이상 필요)
 * SnapMirror 데이터 보호(DP) 타겟 볼륨
 
 
