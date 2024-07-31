@@ -467,7 +467,7 @@ DataLock 및 랜섬웨어 보호를 사용하여 백업 파일을 구성했거�
 
 클러스터가 ONTAP 9.12.1 이상을 실행 중인 경우 AWS China Beijing(cn-North-1) 및 Ningxia(cn-북서쪽-1) 지역이 백업 파일의 대상으로 지원됩니다.
 
-BlueXP Connector에 할당된 IAM 정책은 all_Resource_sections의 AWS 리소스 이름 "arn"을 "AWS"에서 "AWS-cn"로 변경해야 합니다. 예를 들어 "arn:AWS-cn:S3::NetApp-backup- *"를 변경할 수 있습니다. 을 참조하십시오 https://docs.netapp.com/us-en/bluexp-backup-recovery/task-backup-to-s3.html["Cloud Volumes ONTAP 데이터를 Amazon S3에 백업"] 및 https://docs.netapp.com/us-en/bluexp-backup-recovery/task-backup-onprem-to-aws.html["사내 ONTAP 데이터를 Amazon S3에 백업"] 를 참조하십시오.
+BlueXP Connector에 할당된 IAM 정책은 all_Resource_sections의 AWS 리소스 이름 "arn"을 "AWS"에서 "AWS-cn"로 변경해야 합니다. 예를 들어 "arn:AWS-cn:S3::NetApp-backup- *"를 변경할 수 있습니다. 자세한 내용은 및 를 https://docs.netapp.com/us-en/bluexp-backup-recovery/task-backup-to-s3.html["Cloud Volumes ONTAP 데이터를 Amazon S3에 백업합니다"] https://docs.netapp.com/us-en/bluexp-backup-recovery/task-backup-onprem-to-aws.html["온프레미스 ONTAP 데이터를 Amazon S3에 백업합니다"] 참조하십시오.
 
 
 

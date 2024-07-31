@@ -69,13 +69,6 @@ indexpage:
       url: task-backup-app-data-to-gcp.html
     - title: 사내 애플리케이션 데이터를 StorageGRID에 백업합니다
       url: task-backup-app-data-to-storagegrid.html
-    - title: 클라우드 네이티브 Oracle 데이터베이스 백업
-      url: task-backup-cloud-native-oracle-data.html
-    - title: 클라우드 네이티브 SAP HANA 데이터베이스 백업
-      flavor: azure
-      url: task-backup-cloud-native-sap-hana-data.html
-    - title: 클라우드 네이티브 SQL Server 데이터베이스를 백업합니다
-      url: task-backup-cloud-native-sql-data.html
   - title: 데이터 저장소를 클라우드에 백업합니다
     links:
     - title: Amazon Web Services에 데이터 저장소를 백업합니다
@@ -97,13 +90,6 @@ indexpage:
       url: task-restore-oracle-data.html
     - title: 온프레미스 SQL Server 애플리케이션 데이터를 복원합니다
       url: task-restore-sql-data.html
-    - title: 클라우드 네이티브 Oracle 애플리케이션 데이터를 복원합니다
-      url: task-restore-cloud-native-oracle-data-to-original-location.html
-    - title: 클라우드 네이티브 SAP HANA 애플리케이션 데이터를 복원합니다
-      flavor: azure
-      url: task-restore-cloud-native-sap-hana-data.html
-    - title: 클라우드 네이티브 SQL Server 데이터를 복원합니다
-      url: task-restore-cloud-native-sql-data.html
     - title: 가상 머신 데이터를 복구합니다
       url: task-restore-vm-data.html
     - title: Kubernetes 볼륨 데이터를 복원합니다
