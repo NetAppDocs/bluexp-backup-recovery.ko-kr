@@ -1,12 +1,12 @@
 ---
 indexpage:
   title: BlueXP 백업 및 복구 설명서
-  summary: BlueXP 백업 및 복구 서비스는 온프레미스와 클라우드 모두에서 NetApp ONTAP 데이터, Kubernetes 영구 볼륨,
-    데이터베이스 및 가상 머신(VM)에 대한 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.
-  keywords: bluexp, bluexp backup recovery, ontap, kubernetes, virtual machines, vm,
-    on-premises, data protection
-  lead: BlueXP 백업 및 복구 서비스는 온프레미스와 클라우드 모두에서 NetApp ONTAP 데이터, Kubernetes 영구 볼륨, 데이터베이스
-    및 가상 머신에 대해 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.
+  summary: BlueXP  백업 및 복구 서비스는 온프레미스와 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 머신(VM)에
+    대한 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.
+  keywords: bluexp, bluexp backup recovery, ontap, virtual machine, vm, on-premises,
+    data protection
+  lead: BlueXP 백업 및 복구 서비스는 온프레미스와 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 시스템에 효율적이고
+    안전하며 비용 효율적인 데이터 보호를 제공합니다.
   tiles:
   - title: 시작하십시오
     links:
@@ -92,19 +92,6 @@ indexpage:
       url: task-restore-sql-data.html
     - title: 가상 머신 데이터를 복구합니다
       url: task-restore-vm-data.html
-    - title: Kubernetes 볼륨 데이터를 복원합니다
-      url: task-restore-backups-kubernetes.html
-  - title: Kubernetes 데이터를 클라우드에 백업합니다
-    links:
-    - title: Kubernetes 클러스터를 Amazon S3에 백업합니다
-      url: task-backup-kubernetes-to-s3.html
-      flavor: aws
-    - title: Kubernetes 클러스터를 Azure Blob에 백업합니다
-      url: task-backup-kubernetes-to-azure.html
-      flavor: azure
-    - title: Kubernetes 클러스터를 Google Cloud에 백업합니다
-      url: task-backup-kubernetes-to-gcp.html
-      flavor: gcp
   - title: 블로그 및 커뮤니티
     links:
     - title: NetApp 커뮤니티
