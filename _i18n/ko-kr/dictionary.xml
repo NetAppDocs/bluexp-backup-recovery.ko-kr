@@ -3043,7 +3043,6 @@ ONTAP S3</block>
   <block id="3b2352f9f987ea3f850c59d97818e5b2" category="cell">BlueXP 백업 및 복구 Ad-hoc 스냅샷 생성 작업 실패</block>
   <block id="7dfd6144b0880ea61dc9ca44cde23608" category="cell">BlueXP 백업 및 복구 임시 복제 작업 실패</block>
   <block id="44fb2635a11260b2cc484928766b933c" category="cell">BlueXP 백업 및 복구 복제 일시 중지 작업 실패</block>
-  <block id="ebc078a09fc4b31b91b35b54aa44f5c4" category="cell">BlueXP 백업 및 복구 복제 브레이크 작업 실패</block>
   <block id="c55e60943b328ba5333135136a72eed3" category="cell">BlueXP 백업 및 복구 복제 재동기화 작업 실패</block>
   <block id="5e67cebd99d17acfd6723171138a26c0" category="cell">BlueXP 백업 및 복구 복제로 작업 실패</block>
   <block id="148858fe75d91455e16176a0e57a23a4" category="cell">BlueXP 백업 및 복구 복제를 역방향 재동기화 작업 실패</block>
@@ -3735,4 +3734,5 @@ ifdef::AWS[]</block>
   <block id="0d80ea71f9929ca6943ff4f16a27de3e" category="list-text">"Workload" 열을 사용할 수 있으므로 페이지를 필터링하여 볼륨, 애플리케이션 및 가상 머신 등의 백업 서비스에 대한 작업을 볼 수 있습니다.</block>
   <block id="756733f39050e99f4221fe80d10ea604" category="sidebar">BlueXP 백업 및 복구 서비스는 온프레미스와 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 시스템에 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.</block>
   <block id="e117f11185531a360eff8bfed09af453" category="sidebar">BlueXP  백업 및 복구 서비스는 온프레미스와 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 머신(VM)에 대한 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.</block>
+  <block id="0760245e68680af16b611d238a130354" category="cell">BlueXP  백업 및 복구 복제 중단 작업 실패</block>
 </blocks>
