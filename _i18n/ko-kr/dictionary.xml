@@ -2610,7 +2610,6 @@ GCP에서 BlueXP는 Google Cloud Storage 버킷을 위한 저장소 계정이 �
   <block id="7d43c1b3e8a80ec6b8eab793bca8c4ad" category="paragraph">Azure 지역에 이미 Connector가 배포되어 있는 경우 모두 설정됩니다. 그렇지 않은 경우 Azure에 BlueXP 커넥터를 설치하여 Cloud Volumes ONTAP 데이터를 Azure Blob 저장소에 백업해야 합니다. 커넥터는 전체 인터넷 액세스("표준 모드")가 있는 사이트나 제한된 인터넷 연결("제한 모드")으로 설치할 수 있습니다.</block>
   <block id="dd7dc066cb6a0b619ef397e8b37b57c3" category="list-text">Azure 포털에서 가상 머신 서비스를 엽니다.</block>
   <block id="91290ff1408f6a65a206632246cf7a18" category="paragraph">정품 인증 마법사에서 기본 Microsoft 관리 암호화 키를 사용하는 대신 고객이 관리하는 키를 사용하여 데이터를 암호화할 수 있습니다. 이 경우 Azure 가입, 키 저장소 이름 및 키가 있어야 합니다.<block ref="50f2f49feb0afd07f1969b5faf2ca775" category="inline-link-rx"></block>.</block>
-  <block id="7bd09fb790fc1d94719af4adc4a6e47e" category="paragraph">BlueXP 백업 및 복구는 권한 모델로 _ Azure 액세스 정책 _ 을(를) 지원합니다. Azure 역할 기반 액세스 제어 _ (Azure RBAC) 권한 모델은 현재 지원되지 않습니다.</block>
   <block id="03b5f9f162d01e816da54e835c8a9015" category="list-text">클라우드 공급자로 * Microsoft Azure * 를 선택하고 단일 노드 또는 HA 시스템을 선택합니다.</block>
   <block id="23f0f5eeb1888d644970aec01dce912f" category="list-text">마법사의 페이지를 완료하여 BlueXP 백업 및 복구를 배포합니다.</block>
   <block id="88a7904e700f31e4cf7bb57f46eb7a09" category="list-text">백업을 시작하려면 을 계속 진행합니다 <block ref="cf0309d29ec4628c69a24a15a021ad35" category="inline-xref-macro-rx"></block>.</block>
@@ -3735,4 +3734,6 @@ ifdef::AWS[]</block>
   <block id="756733f39050e99f4221fe80d10ea604" category="sidebar">BlueXP 백업 및 복구 서비스는 온프레미스와 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 시스템에 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.</block>
   <block id="e117f11185531a360eff8bfed09af453" category="sidebar">BlueXP  백업 및 복구 서비스는 온프레미스와 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 머신(VM)에 대한 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다.</block>
   <block id="0760245e68680af16b611d238a130354" category="cell">BlueXP  백업 및 복구 복제 중단 작업 실패</block>
+  <block id="3da2387f3963d6425b4b1d6b322f70c3" category="inline-link">Azure Key Vault Managed HSM이란?</block>
+  <block id="d02466e22d28fb26badb969e9549aef1" category="paragraph">BlueXP  백업 및 복구는 _Azure 액세스 정책_, _Azure 역할 기반 액세스 제어_(Azure RBAC) 권한 모델 및 _HSM(관리되는 하드웨어 보안 모델)( 참조)을<block ref="c4dbe37ac52a9ba2f5defa0c652294d5" category="inline-link-rx"></block> 지원합니다.</block>
 </blocks>
