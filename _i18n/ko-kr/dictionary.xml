@@ -692,7 +692,6 @@
   <block id="292f9f5eb65ebf40fd71fda6e8b093e7" category="list-text">매주 및 매월 볼륨에 대한 백업 파일이 생성됩니다</block>
   <block id="921b747c1abfd997d26a273c0b62011b" category="section-title">DataLock이란 무엇입니까</block>
   <block id="f6494bde8c5d58e1a40bf174c8083f96" category="paragraph">이 작동 방식에 대한 몇 가지 예를 살펴보겠습니다.</block>
-  <block id="4f326e1a4453cc79600c1df4374d2c22" category="list-text">매일 30회, 매주 7회, 12회 월별 백업을 생성하는 백업 정책을 생성하는 경우 3회의 잠금 보존 기간이 있습니다. "30일" 백업은 44일(30일 + 14일 버퍼) 동안 유지되고 "7주" 백업은 9주(7주 + 14일) 동안 보존되며 "12개월" 백업은 12개월(14일 추가)동안 보존됩니다.</block>
   <block id="57f10edfffe2adcbce7ee7a76dc7702f" category="section-title">랜섬웨어 보호란 무엇입니까</block>
   <block id="f656e9389b65beefa5f22506a262c68a" category="list-text">백업 파일에서 데이터를 복원하려고 할 때</block>
   <block id="d71c7fafb5eead8d41c2869b8c551f6a" category="paragraph">백업 파일에서 데이터를 복원하기 전에 스캔을 실행하도록 선택하거나 이 검사를 건너뛸 수 있습니다.</block>
@@ -944,8 +943,6 @@
   <block id="cc52989062051281d16ab44b8c24cbef" category="list-text">8번째 주에 첫 번째 주별 백업이 제거되고 8번째 주에 대한 새 주별 백업이 추가됩니다(최대 7개의 주별 백업 유지).</block>
   <block id="1d7733f94633408426a8b5de97f97f13" category="list-text">13번째 달에는 첫 번째 월별 백업이 제거되고 13번째 달의 새 월별 백업이 추가됩니다(최대 12개의 월별 백업 유지).</block>
   <block id="105cf1dd74d7a9079245d031f91df8b0" category="paragraph">이 기능은 소스 볼륨에 대한 보호 기능을 제공하지 않으며 해당 소스 볼륨의 백업에만 사용됩니다. NetApp 사용<block ref="2e57621b97dadc1cef3dd80d75e83676" category="inline-link-rx"></block>또는 일부 를 누릅니다<block ref="086d55e347fe71de47923b356a73187b" category="inline-link-rx"></block> 소스 볼륨을 보호합니다.</block>
-  <block id="f88d31c8fba76a471a02f0b65a9ac963" category="list-text">12개의 보존 기간을 사용하여 월별 백업 스케줄을 생성하는 경우 각 백업은 삭제하기 전에 12개월(14일 추가) 동안 잠깁니다.</block>
-  <block id="bf7c437191fdcde55e7d7e2fc049c230" category="list-text">24개의 보존 기간을 사용하여 시간별 백업 일정을 생성하는 경우 백업이 24시간 동안 잠겨 있다고 생각할 수 있습니다. 그러나 이 기간이 최소 30일 미만이므로 각 백업은 44일(30일 + 14일 버퍼) 동안 잠기고 보존됩니다.</block>
   <block id="c545a26c4ed6190e3a8c71826161a528" category="paragraph">클라우드 스토리지에 처음 기록될 때는 백업 파일에 대해 검사가 수행되지 않지만 * next * 백업 파일이 기록될 때는 검사가 수행됩니다. 예를 들어 화요일의 주별 백업 스케줄이 설정되어 있는 경우 14일 화요일에 백업이 생성됩니다. 그리고 화요일에 또 다른 백업이 생성됩니다. 랜섬웨어 스캔은 현재 14번째 백업 파일에서 실행됩니다.</block>
   <block id="83933361b1e2abf7e7f406666cc9c104" category="list-text">AWS의 경우:</block>
   <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">고객 수준 계정이 있는 경우 하나 이상의 NSS 계정을 추가할 수 있습니다.</block>
@@ -1021,7 +1018,6 @@
   <block id="913602150aeb49c0e5c994a9ee6fbba1" category="list-text">클러스터에 생성된 이후의 모든 볼륨에 적용할 백업 정책을 생성합니다.</block>
   <block id="0dba7856897347ca5b431db6b55637a4" category="list-text">볼륨 백업을 유지하면서 불필요한 소스 볼륨을 아카이브할 수 있도록 백업 관계를 삭제합니다.</block>
   <block id="4755986530a007b5ad8c149510339cdd" category="inline-link">NetApp SnapMirror 클라우드 기술</block>
-  <block id="230cb0e580e943163f3909777583f34f" category="paragraph">백업 보존 기간은 백업 스케줄 보존 기간과 동일하며, 14일을 더한 값입니다. 예를 들어, _5_개의 복제본을 보존한 _weekly_backups는 각 백업 파일을 5주 동안 잠급니다. _6_복제본이 보존되는 _Monthly_backups는 각 백업 파일을 6개월 동안 잠급니다.</block>
   <block id="fb03128f43a982e985025c970d7947c6" category="paragraph">백업에 다른 AWS 계정을 사용하려면 BlueXP에서 대상 AWS 계정 자격 증명을 추가하고 "S3:PutBucketPolicy" 및 "S3:PutBucketOwnershipControls" 권한을 BlueXP에 제공하는 IAM 역할에 추가해야 합니다.</block>
   <block id="30d334a4a47bf8bcc0a713cea94b6d98" category="list-text">또한 가능합니다 <block ref="691b942cd3d613931fde06fad7da9248" category="inline-link-macro-rx"></block> Google의 Cloud Volumes ONTAP 시스템 또는 온프레미스 ONTAP 시스템으로.</block>
   <block id="90262b49b516aea0770d54c5389860ab" category="list-text">소스 시스템에서 "연간" 스냅샷을 제거할지 여부를 변경합니다</block>
@@ -1539,7 +1535,6 @@
   <block id="37e76b4487b7832f9128b16818135e42" category="paragraph">BlueXP 백업 및 복구는 사용량 기반 라이센스를 선불 종량제 모델로 제공합니다. 클라우드 공급자의 마켓플레이스를 통해 구독한 후에는 백업된 데이터의 경우 GiB당 요금을 지불하면 됩니다. 이 경우 즉시 지불이 이루어집니다. 클라우드 공급자가 월별 요금을 청구합니다.</block>
   <block id="4fea63f3003bca68c0d871a18bd18f49" category="paragraph"><block ref="da925d164976c4809988045a567b800b" category="inline-link-macro-rx"></block>.</block>
   <block id="e9318a32b2a89c8bc9343f1169144931" category="list-text">Cloud Volumes ONTAP 및 BlueXP 백업 및 복구를 번들로 제공할 수 있는 "CVO Professional" 계획입니다. 여기에는 이 라이센스에 대해 청구된 Cloud Volumes ONTAP 볼륨에 대한 무제한 백업이 포함됩니다(백업 용량은 라이센스에 포함되지 않음).</block>
-  <block id="1f4752c64c2bf1f4ec37455cfd1541c6" category="list-text">GCP를 사용할 경우, BlueXP 백업 및 복구 활성화 중에 Google Cloud 마켓플레이스를 구독할 때 NetApp에서 프라이빗 제안을 요청하고 계획을 선택할 수 있습니다.</block>
   <block id="33022c637d4dd3f13525c167e5f29568" category="section-title">BlueXP 백업 및 복구의 작동 방식</block>
   <block id="831cb37bc0e6807bf3de1b27cba3fa9a" category="inline-image-macro">BlueXP 백업 및 복구가 백업 파일이 있는 소스 시스템 및 대상 객체 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다.</block>
   <block id="93ad9cd182842eb85c4af00f0080a13b" category="paragraph"><block ref="93ad9cd182842eb85c4af00f0080a13b" category="inline-image-macro-rx" type="image"></block></block>
@@ -1710,7 +1705,6 @@
   <block id="703a23cc0f04926bc0f88cc7699dbb25" category="summary">BlueXP 백업 및 복구를 사용하면 사내 ONTAP 및 Cloud Volumes ONTAP 시스템에 대한 다양한 구성 설정으로 백업 정책을 생성할 수 있습니다.</block>
   <block id="9eea85cb75720c2962892ce404724c85" category="paragraph">BlueXP 백업 및 복구를 사용하면 각 작업 환경(클러스터)에 대해 고유한 스케줄로 여러 백업 정책을 생성할 수 있습니다. RPO(복구 시점 목표)가 다른 볼륨에 서로 다른 백업 정책을 할당할 수 있습니다.</block>
   <block id="2565631610247b4b3c1e22a4efb7394f" category="paragraph">BlueXP 백업 및 복구는 볼륨 백업에 대한 DataLock 및 랜섬웨어 보호를 지원합니다. 이러한 기능을 사용하여 백업 파일을 잠그고 검색하여 백업 파일에서 잠재적인 랜섬웨어를 감지할 수 있습니다. 이 설정은 클러스터에 대한 볼륨 백업에 대한 추가 보호를 원할 때 백업 정책에 정의할 수 있는 선택적 설정입니다.</block>
-  <block id="c88e14329d462b276ba5448f60ca13e0" category="paragraph">이 마지막 사례에서는 각 백업 파일이 44일 동안 잠겨 있는 경우, 일반적으로 1시간/24시간 보존 정책으로 보존되는 것보다 더 많은 백업 파일이 포함됩니다. 일반적으로 BlueXP 백업 및 복구가 25번째 백업 파일을 생성할 때 가장 오래된 백업을 삭제하여 최대 보존 시간을 24로 유지합니다(정책에 따라). DataLock 보존 설정은 이 경우 백업 정책의 정책 보존 설정을 재정의합니다. 이 경우 백업 파일이 개체 저장소에 장기간 저장되므로 스토리지 비용이 영향을 받을 수 있습니다.</block>
   <block id="fabcd9ebb5b6eb0b33f162417010c768" category="list-text">BlueXP 백업 및 복구를 활성화할 때 선택하는 DataLock 옵션은 해당 클러스터의 모든 백업 정책에 사용해야 합니다.</block>
   <block id="683fc015ec20f6233b25343bf3daea19" category="paragraph">사내 클러스터에서 ONTAP 9.12.1 이상을 사용하는 경우 추가 비용 최적화를 위해 특정 일 후에 BlueXP 백업 및 복구 UI의 _Archive_storage에 이전 백업을 계층화하도록 선택할 수 있습니다. <block ref="60cdd04e7131e97598ce1c583d8c9a5e" category="inline-link-macro-rx"></block>.</block>
   <block id="01492017a2321f7b3f8484fd1f8aa8d7" category="sidebar">BlueXP 백업 및 복구 문서</block>
@@ -3086,7 +3080,6 @@ ONTAP S3</block>
   <block id="38da59f967f6f913365cf5cefb459344" category="inline-link">데이터 복원에 대해 자세히 알아보십시오</block>
   <block id="7b3040066d7e59383891bdcb2977076f" category="paragraph"><block ref="bfc7bc1f2f7fff3212c093c1fc6b6317" category="inline-link-rx"></block>.</block>
   <block id="52cc7bb26d5185a2c3b92b71a3d6e319" category="section-title">SnapLock 볼륨의 백업 및 복원을 위한 추가 지원</block>
-  <block id="4cb4cd292be9258bfc850d1aa644d9f6" category="paragraph">이제 백업 및 복구를 통해 SnapLock Compliance 또는 SnapLock 엔터프라이즈 보호 모드를 사용하여 구성된 FlexVol 및 FlexGroup 볼륨을 모두 백업할 수 있습니다. 클러스터에서 ONTAP 9.14 이상을 실행해야 합니다. SnapLock 엔터프라이즈 모드를 사용한 FlexVol 볼륨 백업은 ONTAP 버전 9.11.1 이후로 지원됩니다. 이전 ONTAP 릴리즈에서는 SnapLock 보호 볼륨의 백업을 지원하지 않습니다.</block>
   <block id="115e674b1dc0942f53bc91e279bbd7eb" category="inline-link">ONTAP 데이터 보호에 대해 자세히 알아보십시오</block>
   <block id="5ea7c922bf64f9c4520ccdf833e34e39" category="paragraph"><block ref="287ce1c3ffcd9fd04ac3fb9608fef690" category="inline-link-rx"></block>.</block>
   <block id="7b666c0edc9876b87778d0969629cfbf" category="list-text">백업 및 복구 표시줄에서 * 볼륨 * 을 선택합니다. 볼륨 탭에서 * 작업 * 을 선택합니다 <block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block> 아이콘을 클릭하고 단일 볼륨에 대해 * 백업 활성화 * 를 선택합니다(복제 또는 객체 스토리지에 대한 백업이 이미 활성화되어 있지 않음).</block>
@@ -3329,8 +3322,6 @@ ONTAP S3</block>
   <block id="17ffabdffcf9cad7bd6ae2054c4f6e24" category="list-text">사용 중인 계정에 마켓플레이스 PAYGO 계정이 있는 경우 백업 서비스는 계속 실행되지만 PAYGO 라이센스 모델로 전환됩니다. 백업이 사용 중인 용량에 대한 비용이 청구됩니다.</block>
   <block id="727c837c47e40b96ddd39f15636181fe" category="list-text">복제 정책을 관리합니다</block>
   <block id="61f06895b4fcad7d6460158ccfc33c17" category="paragraph">BYOL은 기간 기반(1, 2 또는 3년) _ 및 _ 용량 - 1TiB 단위로 사용합니다. 예를 들어, 1년, 최대 용량(10TiB)에 대해 서비스 사용을 위해 NetApp에 비용을 지불합니다.</block>
-  <block id="bc74d224d8eebb9d1f7a6a0cca3c6a3d" category="paragraph">AWS를 사용하는 경우 1, 2 또는 3년 기간에 대해 2개의 연간 계약을 사용할 수 있습니다.</block>
-  <block id="a31db27d8aef7db23d51910ceb960041" category="paragraph">Azure를 사용하는 경우 1, 2 또는 3년 기간에 대해 2개의 연간 계약을 사용할 수 있습니다.</block>
   <block id="aa4c67fd3731395f4450c9686b20f799" category="section-title">작업 모니터에서 예약된 작업을 지원합니다</block>
   <block id="314b40130d46a229c3a19dc5e2e23aa4" category="paragraph">BlueXP 백업 및 복구 작업 모니터는 이전에 모니터링된 예약된 볼륨-오브젝트 저장소 백업 및 복원 작업이지만 UI 또는 API를 통해 예약된 로컬 스냅샷, 복제, 백업 및 복원 작업은 모니터링하지 않습니다.</block>
   <block id="04c6b318fe9c7f19ae925a90e52c6569" category="paragraph">이제 BlueXP 백업 및 복구 작업 모니터에 로컬 스냅샷, 복제 및 오브젝트 스토리지로의 백업에 대해 예약된 작업이 포함됩니다.</block>
@@ -3468,7 +3459,6 @@ ifdef::GCP[]</block>
   <block id="64063115b259542737cce343064e3233" category="list-text">* 빠른 복원 * : 복원 된 볼륨 및 데이터는 즉시 사용할 수 있습니다. 빠른 복원 프로세스 중에 데이터 액세스가 평소보다 느려질 수 있으므로 고성능이 필요한 볼륨에는 이 기능을 사용하지 마십시오.</block>
   <block id="406385bac6b7601aab1eff5d8a317cc3" category="paragraph">결과는 로컬 볼륨 스냅샷 복사본과 검색에 파일이 포함된 원격 복제 볼륨을 식별합니다. 클라우드 백업 파일, 스냅샷 복사본 또는 복제된 볼륨에서 복원을 선택할 수 있습니다.</block>
   <block id="6b1625dd335c098ed2ca98e2429bd8b5" category="paragraph">이 두 기능 모두 백업 파일을 보호하므로 랜섬웨어 공격이 시도할 경우 언제든지 데이터를 복구할 수 있는 유효한 백업 파일이 있습니다. 백업을 일정 기간 동안 잠그고 유지해야 하는 특정 규정 요구 사항을 충족하는 것도 도움이 됩니다. DataLock 및 랜섬웨어 차단 옵션이 활성화되어 있으면 BlueXP 백업 및 복구 활성화의 일부로 프로비저닝된 클라우드 버킷에서 오브젝트 잠금 및 오브젝트 버전 관리가 활성화됩니다.</block>
-  <block id="b03c01f8cf077f9dee5804db15487474" category="paragraph">DataLock은 백업 파일이 특정 기간 동안 수정되거나 삭제되지 않도록 보호합니다(_inmutable storage_라고도 함). 이 기능은 "오브젝트 잠금"에 오브젝트 스토리지 공급자의 기술을 사용합니다. 백업 파일이 잠겨 있고 유지되는 기간을 DataLock Retention Period라고 합니다. 이는 정의한 백업 정책 일정 및 보존 설정과 14일 버퍼를 기반으로 합니다. 30일 미만의 모든 DataLock 보존 정책은 최소 30일로 반올림됩니다.</block>
   <block id="d1fe7d408368bfebc413888300892008" category="list-text">백업 정책에 아카이브 스토리지를 구성한 경우에는 DataLock 및 랜섬웨어 방지 기능을 사용할 수 없습니다.</block>
   <block id="7bdfdec65541ae8037e909dd7d0643dd" category="paragraph">AWS, Azure 또는 Google 클라우드 스토리지를 사용할 경우 오래된 백업 파일을 저렴한 아카이브 스토리지 클래스로 이동하거나 특정 일 후에 액세스 계층으로 이동할 수 있습니다. 또한 표준 클라우드 스토리지에 기록하지 않고 백업 파일을 아카이빙 스토리지로 즉시 전송하도록 선택할 수 있습니다. 백업 파일을 보관 저장소로 직접 전송하려면 * 0 * 을 "며칠 후 보관"으로 입력하십시오. 이 기능은 클라우드 백업에서 데이터에 액세스할 필요가 거의 없는 사용자나 테이프 백업 솔루션을 교체하는 사용자에게 특히 유용합니다.</block>
   <block id="8e867c14e8b5b20149da48500624662f" category="list-text">모든 데이터 블록을 아카이빙 클라우드 스토리지로 전송하기 위해 "0"을 선택한 경우에도 메타데이터 블록이 항상 표준 클라우드 스토리지에 기록됩니다.</block>
@@ -3736,4 +3726,14 @@ ifdef::AWS[]</block>
   <block id="0760245e68680af16b611d238a130354" category="cell">BlueXP  백업 및 복구 복제 중단 작업 실패</block>
   <block id="3da2387f3963d6425b4b1d6b322f70c3" category="inline-link">Azure Key Vault Managed HSM이란?</block>
   <block id="d02466e22d28fb26badb969e9549aef1" category="paragraph">BlueXP  백업 및 복구는 _Azure 액세스 정책_, _Azure 역할 기반 액세스 제어_(Azure RBAC) 권한 모델 및 _HSM(관리되는 하드웨어 보안 모델)( 참조)을<block ref="c4dbe37ac52a9ba2f5defa0c652294d5" category="inline-link-rx"></block> 지원합니다.</block>
+  <block id="fe796f1ffea18cd2a88640b34b7f0cb3" category="paragraph">DataLock은 백업 파일이 특정 기간 동안 수정되거나 삭제되지 않도록 보호합니다(_inmutable storage_라고도 함). 이 기능은 "오브젝트 잠금"에 오브젝트 스토리지 공급자의 기술을 사용합니다. 백업 파일이 잠기고 유지되는 기간을 DataLock 보존 기간이라고 합니다. 이 값은 정의한 백업 정책 일정 및 보존 설정과 최대 31일 버퍼를 기반으로 합니다. 31일 미만의 모든 DataLock 보존 정책은 최소 31일로 반올림됩니다.</block>
+  <block id="43885e8086b7b4ee79571e89e8dbf796" category="list-text">12개의 보존 기간을 포함하는 월별 백업 스케줄을 생성하는 경우 각 백업은 삭제되기 전에 12개월 동안 잠깁니다(최대 31일 버퍼 포함).</block>
+  <block id="69bdcf216a01f07d336a8529971a218c" category="list-text">매일 30회, 매주 7회, 12회 월별 백업을 생성하는 백업 정책을 생성하는 경우 3회의 잠금 보존 기간이 있습니다. "30일" 백업은 44일(30일 + 최대 31일 버퍼) 동안 보존되고, "7주" 백업은 9주(7주 + 최대 31일 버퍼) 보존되며, "12개월" 백업은 12개월(최대 31일 버퍼 포함) 동안 보존됩니다.</block>
+  <block id="c395960914e1c3b46d1af972702771a1" category="list-text">24개의 보존 기간을 사용하여 시간별 백업 일정을 생성하는 경우 백업이 24시간 동안 잠겨 있다고 생각할 수 있습니다. 그러나 최소 30일 미만이므로 각 백업은 44일(30일 + 최대 31일 버퍼) 동안 잠기고 보존됩니다.</block>
+  <block id="6a3efe56245054dfcaa2b2515d7d3ea7" category="paragraph">이 마지막 사례에서는 각 백업 파일이 30일 동안 잠기면(최대 31일 버퍼 포함) 일반적으로 시간별 보존 정책을 사용할 때보다 더 많은 백업 파일이 생성됩니다. 일반적으로 BlueXP 백업 및 복구가 25번째 백업 파일을 생성할 때 가장 오래된 백업을 삭제하여 최대 보존 시간을 24로 유지합니다(정책에 따라). DataLock 보존 설정은 이 경우 백업 정책의 정책 보존 설정을 재정의합니다. 이 경우 백업 파일이 개체 저장소에 장기간 저장되므로 스토리지 비용이 영향을 받을 수 있습니다.</block>
+  <block id="92e4e78220fae3f6988f7215aa66d0a3" category="paragraph">AWS를 사용하는 경우 1, 2 또는 3년 기간에 대해 2개의 연간 계약을 사용할 수 있습니다.</block>
+  <block id="ed20f9f9ce04512430634d23ddd27d79" category="paragraph">Azure를 사용하는 경우 1, 2 또는 3년 기간에 대해 2개의 연간 계약을 사용할 수 있습니다.</block>
+  <block id="f88ca0c86817c46ef8ec699cdf83665c" category="paragraph">GCP를 사용하는 경우 NetApp에 전용 혜택을 요청한 다음 BlueXP  백업 및 복구 활성화 중에 Google Cloud 마켓플레이스에 가입할 때 계획을 선택할 수 있습니다.</block>
+  <block id="78505512ebd89d20931322ac265d9153" category="paragraph">백업 보존 기간은 백업 스케줄 보존 기간 및 최대 31일 버퍼와 동일합니다. 예를 들어, _5_개의 복제본을 보존한 _weekly_backups는 각 백업 파일을 5주 동안 잠급니다. _6_복제본이 보존되는 _Monthly_backups는 각 백업 파일을 6개월 동안 잠급니다.</block>
+  <block id="741aaba68ff71f579469a40cd8f92b4f" category="paragraph">백업 및 복구 이제 SnapLock Enterprise 보호 모드를 사용하여 구성된 FlexVol 및 FlexGroup 볼륨을 모두 백업할 수 있습니다. 클러스터에서 ONTAP 9.14 이상을 실행해야 합니다. SnapLock 엔터프라이즈 모드를 사용한 FlexVol 볼륨 백업은 ONTAP 버전 9.11.1 이후로 지원됩니다. 이전 ONTAP 릴리즈에서는 SnapLock 보호 볼륨의 백업을 지원하지 않습니다.</block>
 </blocks>
