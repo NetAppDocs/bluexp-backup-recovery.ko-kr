@@ -271,7 +271,7 @@ BlueXP 백업 및 복구는 다음 소비 모델에서 사용할 수 있습니�
 
 BYOL은 기간 기반(1, 2 또는 3년) _ 및 _ 용량 - 1TiB 단위로 사용합니다. 예를 들어, 1년, 최대 용량(10TiB)에 대해 서비스 사용을 위해 NetApp에 비용을 지불합니다.
 
-서비스를 활성화하기 위해 BlueXP 디지털 전자지갑 페이지에 입력한 일련 번호를 받게 됩니다. 두 제한 중 하나에 도달하면 라이센스를 갱신해야 합니다. Backup BYOL 라이센스는 와 관련된 모든 소스 시스템에 적용됩니다 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-netapp-accounts.html["BlueXP 계정"^].
+서비스를 활성화하기 위해 BlueXP 디지털 전자지갑 페이지에 입력한 일련 번호를 받게 됩니다. 두 제한 중 하나에 도달하면 라이센스를 갱신해야 합니다. 백업 BYOL 라이센스는 BlueXP  조직 또는 계정과 연결된 모든 소스 시스템에 적용됩니다.
 
 link:task-licensing-cloud-backup.html#use-a-bluexp-backup-and-recovery-byol-license["BYOL 라이센스 관리 방법에 대해 알아보십시오"].
 
