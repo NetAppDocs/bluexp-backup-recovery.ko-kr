@@ -3477,9 +3477,6 @@ ifdef::AWS[]</block>
   <block id="fc2e47deb6b2e0b0b69b4d23d0c52dc0" category="paragraph">* 고급 버킷 설정 *</block>
   <block id="48aa998a6b6a592f5d7a4dccd6c981e5" category="paragraph">BlueXP 백업 및 복구가 전체 인터넷 연결이 있는 사이트에서 사용되는 경우(_standard mode_ 또는 _sas mode_라고도 함), BlueXP가 관리하는 온프레미스 ONTAP 또는 Cloud Volumes ONTAP 시스템에서 복제된 볼륨을 생성할 수 있습니다. 또한 지원되는 모든 클라우드 공급자의 오브젝트 스토리지에 백업 파일을 생성할 수 있습니다. <block ref="53011d10cc707465ef24eb421fc1dc04" category="inline-link-macro-rx"></block>.</block>
   <block id="353c8b9b4f3b8d79cf3de34b62dedb85" category="paragraph">유효한 커넥터 위치 목록은 백업 파일을 생성할 클라우드 공급자에 대한 다음 백업 절차 중 하나를 참조하십시오. Connector를 Linux 시스템에 수동으로 설치하거나 특정 클라우드 공급자에 배포해야 하는 몇 가지 제한 사항이 있습니다.</block>
-  <block id="cd7822bfaba52280932b79873329daf7" category="paragraph">BlueXP 백업 및 복구는 인터넷 연결이 제한된 사이트(_restricted mode_라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 경우 제한된 영역에 BlueXP 커넥터를 배포해야 합니다.</block>
-  <block id="1b2ae8fd4fbb8aea97c2363d0b2cc03f" category="list-text">AWS 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3에 백업할 수 있습니다. <block ref="b4a611717e08ba4c0f2fa5390556e4e1" category="inline-link-macro-rx"></block>.</block>
-  <block id="5ffa64fdc5f25941da3f4d7d719fc76d" category="list-text">Azure 상용 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Azure Blob으로 백업할 수 있습니다.  <block ref="d0f49153a0d69289bf4d240d8900efdd" category="inline-link-macro-rx"></block>.</block>
   <block id="a93164b5de348a4fb06ecfebdb6861a8" category="paragraph">BlueXP 백업 및 복구는 인터넷에 연결되지 않은 사이트(_private mode_ 또는 _dark_sites라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 경우 동일한 사이트의 Linux 호스트에 BlueXP 커넥터를 배포해야 합니다.</block>
   <block id="2a7f31b421ebd440283eff6d94322a3b" category="list-text">로컬 사내 ONTAP 시스템에서 로컬 NetApp StorageGRID 시스템으로 데이터를 백업할 수 있습니다.  <block ref="80288d2da91f9794088785363d31b6b5" category="inline-link-macro-rx"></block>.</block>
   <block id="12df54ded49a677ce2708bf5c0651425" category="list-text">로컬 온프레미스 ONTAP 시스템의 데이터를 S3 오브젝트 스토리지용으로 구성된 로컬 온프레미스 ONTAP 시스템 또는 Cloud Volumes ONTAP 시스템으로 백업할 수 있습니다. <block ref="033f1a63473843a2d0a7ec99f2bb4e1c" category="inline-link-macro-rx"></block>.
@@ -3571,8 +3568,6 @@ ifdef::AWS[]</block>
   <block id="346753a5d3dc5273a067b86995fbd568" category="paragraph">Podman 엔진을 사용할 때는 클라우드 백업에서 랜섬웨어에 대한 검사가 지원되지 않습니다. 클라우드 백업에 DataLock 및 랜섬웨어 기능을 사용 중인 경우 랜섬웨어 검사를 비활성화해야 합니다. <block ref="f4c28073f17b68c88ffe0b411369b71f" category="inline-link-macro-rx"></block>.</block>
   <block id="74fcd9275dc8f4544c3f2e6da14c3a0f" category="cell">docker 명령</block>
   <block id="9865e302853628bbfe9f8357d9e7514f" category="cell">Podman 명령</block>
-  <block id="62fbf3095f1e89aabae3804682809c2b" category="cell"><block ref="3d14b961bb7289e76bff64ac921cba5d" prefix="" category="inline-code"></block></block>
-  <block id="bf7ecaf7643e3be49e45cd82469534f1" category="cell"><block ref="55285eccf27fa61af2e97ac2832bdc01" prefix="" category="inline-code"></block></block>
   <block id="2bd2b4226296570c863270e08d511da0" category="list-text">Docker 또는 Podman 컨테이너를 사용하는지 여부에 따라 다음 명령 중 하나를 사용하여 MySQL Docker 컨테이너에 백업을 복사합니다.</block>
   <block id="4b049f120edc0f4092d8d8e236ea964b" category="list-text">Docker 또는 Podman 컨테이너를 사용하는지 여부에 따라 다음 명령 중 하나를 사용하여 MySQL 컨테이너 셸을 입력합니다.</block>
   <block id="d5523b519e89c779f9a7f347736d28f5" category="paragraph">이 클러스터에 대해 BlueXP 백업 및 복구를 활성화할 때 _DataLock 및 랜섬웨어 보호를 활성화한 경우 주문형 백업도 DataLock으로 구성되고 보존 기간은 30일입니다. 애드혹 백업에는 랜섬웨어 스캔이 지원되지 않습니다. <block ref="25ebe908c09aa768262b63d88362088a" category="inline-link-macro-rx"></block>.</block>
@@ -3756,4 +3751,10 @@ ifdef::AWS[]</block>
   <block id="2f080abae9949a746e32fbd78d3382f7" category="paragraph">DataLock에 대한 자세한 내용과 관련 비용을 줄이는 방법에 대한 팁은 을<block ref="116b2987b0e6fcf4c15ff7c1a1a47ed3" category="inline-link-rx"></block>참조하십시오.</block>
   <block id="b1b12c3c76c5dc414df3c68e8a811c2a" category="paragraph">자세한 내용은 을<block ref="ef40acf6b73cf65ed40d9b8f7f6be1c3" category="inline-link-rx"></block>참조하십시오.</block>
   <block id="2a26ca1d77691991f2402c219881a81b" category="paragraph">특정 접두사를 사용하거나 특수 속성을 할당하려면 개체 공급자 계정에서 직접 컨테이너를 만들 수 있습니다. 고유한 컨테이너를 만들려면 활성화 마법사를 시작하기 전에 컨테이너를 만들어야 합니다. BlueXP  백업 및 복구는 모든 버킷 및 공유 버킷을 사용할 수 있습니다. 백업 활성화 마법사는 선택한 계정 및 자격 증명에 대해 프로비저닝된 컨테이너를 자동으로 검색하여 사용할 컨테이너를 선택할 수 있도록 합니다.</block>
+  <block id="3a66ab30f960deed7e2d6dbe5675eebc" category="paragraph">BlueXP 백업 및 복구는 인터넷 연결이 제한된 사이트(_restricted mode_라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 경우 대상 클라우드 지역에 BlueXP  Connector를 배포해야 합니다.</block>
+  <block id="c042a7ac26c00953bd87e1129908e5c7" category="list-text">AWS 상업 지역에 설치된 온프레미스 ONTAP 시스템 또는 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3로 백업할 수 있습니다. <block ref="b4a611717e08ba4c0f2fa5390556e4e1" category="inline-link-macro-rx"></block>..</block>
+  <block id="eb908336fca360ed35207a1e198562b2" category="list-text">온프레미스 ONTAP 시스템 또는 Azure 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Azure Blob에 백업할 수 있습니다. <block ref="d0f49153a0d69289bf4d240d8900efdd" category="inline-link-macro-rx"></block>..</block>
+  <block id="ba69c078d6c88577ac4045721cf8bc4b" category="cell"><block ref="1db7b4242367cddbadaf1e041e531c76" prefix="" category="inline-code"></block></block>
+  <block id="e23da6bf724f3225b25342aa20aab822" category="cell"><block ref="1e8904cbbffb7eff1de96297f70cd53e" prefix="" category="inline-code"></block></block>
+  <block id="7a912606781d54fe98a96090d0cd3c74" category="paragraph">백업에 5개 이상의 볼륨이 활성화된 경우 BlueXP  백업 및 복구는 한 번에 5개의 볼륨만 초기화합니다. 이러한 작업이 완료되면 5개의 하위 작업의 다음 일괄 처리를 생성하여 다음 세트를 시작하고 모든 볼륨이 초기화될 때까지 계속됩니다.</block>
 </blocks>
