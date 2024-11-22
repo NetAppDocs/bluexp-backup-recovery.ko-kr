@@ -270,69 +270,7 @@ Cloud Volumes ONTAP 또는 온프레미스 시스템에 복제할 수 있으므�
 
 
 .단계
-. 다음 S3 권한(최신 버전)이 있는지 확인합니다 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html["BlueXP 정책"^])는 Connector에 권한을 제공하는 IAM 역할의 일부입니다. 그렇지 않은 경우 를 참조하십시오 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 설명서: IAM 정책 편집"].
-+
-[%collapsible]
-====
-[source, json]
-----
-{
-          "Sid": "backupPolicy",
-          "Effect": "Allow",
-          "Action": [
-              "s3:DeleteBucket",
-              "s3:GetLifecycleConfiguration",
-              "s3:PutLifecycleConfiguration",
-              "s3:PutBucketTagging",
-              "s3:ListBucketVersions",
-              "s3:GetObject",
-              "s3:DeleteObject",
-              "s3:PutObject",
-              "s3:ListBucket",
-              "s3:ListAllMyBuckets",
-              "s3:GetBucketTagging",
-              "s3:GetBucketLocation",
-              "s3:GetBucketPolicyStatus",
-              "s3:GetBucketPublicAccessBlock",
-              "s3:GetBucketAcl",
-              "s3:GetBucketPolicy",
-              "s3:PutBucketPolicy",
-              "s3:PutBucketOwnershipControls",
-              "s3:PutBucketPublicAccessBlock",
-              "s3:PutEncryptionConfiguration",
-              "s3:GetObjectVersionTagging",
-              "s3:GetBucketObjectLockConfiguration",
-              "s3:GetObjectVersionAcl",
-              "s3:PutObjectTagging",
-              "s3:DeleteObjectTagging",
-              "s3:GetObjectRetention",
-              "s3:DeleteObjectVersionTagging",
-              "s3:PutBucketObjectLockConfiguration",
-              "s3:DeleteObjectVersion",
-              "s3:GetObjectTagging",
-              "s3:PutBucketVersioning",
-              "s3:PutObjectVersionTagging",
-              "s3:GetBucketVersioning",
-              "s3:BypassGovernanceRetention",
-              "s3:PutObjectRetention",
-              "s3:GetObjectVersion",
-              "athena:StartQueryExecution",
-              "athena:GetQueryResults",
-              "athena:GetQueryExecution",
-              "glue:GetDatabase",
-              "glue:GetTable",
-              "glue:CreateTable",
-              "glue:CreateDatabase",
-              "glue:GetPartitions",
-              "glue:BatchCreatePartition",
-              "glue:BatchDeletePartition"
-          ],
-          "Resource": [
-              "arn:aws:s3:::netapp-backup-*"
-          ]
-      }
-----
-====
+. 커넥터에 필요한 권한이 있는지 확인합니다. 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html["BlueXP  정책 권한"].
 +
 
 NOTE: AWS 중국 지역에서 백업을 생성할 때는 IAM 정책의 All_Resource_섹션에서 AWS 리소스 이름 "arn"을 "AWS"에서 "AWS-cn"으로 변경해야 합니다 `arn:aws-cn:s3:::netapp-backup-*`.

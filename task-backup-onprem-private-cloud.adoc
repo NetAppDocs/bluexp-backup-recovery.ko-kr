@@ -231,6 +231,8 @@ Cloud Volumes ONTAP 또는 온프레미스 시스템에 복제할 수 있으므�
 
 StorageGRID는 다음 요구 사항을 충족해야 합니다. 를 참조하십시오 https://docs.netapp.com/us-en/storagegrid-117/["StorageGRID 설명서"^] 를 참조하십시오.
 
+StorageGRID의 DataLock 및 랜섬웨어 차단 요구사항에 대한 자세한 내용은 을 참조하십시오link:concept-cloud-backup-policies.html["오브젝트에 백업 정책 옵션"].
+
 지원되는 StorageGRID 버전:: StorageGRID 10.3 이상이 지원됩니다.
 +
 --

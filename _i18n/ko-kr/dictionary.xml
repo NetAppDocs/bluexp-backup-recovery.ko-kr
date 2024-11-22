@@ -1857,7 +1857,6 @@
   <block id="72e4241b97e5dcf5222db5c1346cd6e5" category="paragraph">를 누릅니다<block ref="0675f343561e34593b3974118982449f" category="inline-link-rx"></block> 백업 대상은 Canvas에 작업 환경으로 있으며, 온프레미스 ONTAP 작업 환경을 대상으로 끌어서 클라우드 백업 설정 마법사를 시작할 수 있습니다.</block>
   <block id="c490eac8fe2144e59b599caa7ff364f2" category="list-text">포트 443을 통해 BlueXP 백업 및 복구 서비스 및 S3 오브젝트 스토리지에 HTTPS로 연결합니다 <block ref="63b337bf4559a585c3373707ecfcc413" category="inline-link-rx"></block>)</block>
   <block id="aa91817c0e1d6a16a1f290ad2357d467" category="list-text">AWS 및 AWS GovCloud 배포에는 추가 인바운드 및 아웃바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오<block ref="ed3ada480c52b8e0c09a903c9cf52508" category="inline-link-rx"></block> 를 참조하십시오.</block>
-  <block id="94bf6d31d85a9e7f628b488ba9a25200" category="list-text">다음 S3 권한(최신 버전)이 있는지 확인합니다<block ref="d97dc29944250663fe9dd52fa43d79d7" category="inline-link-rx"></block>)는 Connector에 권한을 제공하는 IAM 역할의 일부입니다. 그렇지 않은 경우 를 참조하십시오<block ref="484fb6182b52563a51349e6fb7cb2cb6" category="inline-link-rx"></block>.</block>
   <block id="b46213c291fe93c05313fa11bc5d273c" category="paragraph">백업 복사본은 와 연결됩니다<block ref="94ce6f448900468e79b10f5ddbf648fe" category="inline-link-rx"></block> BlueXP 커넥터가 있는 위치.</block>
   <block id="2bda192204fc86d57a53bf80ec29ad65" category="list-text">포트 443을 통해 BlueXP 백업 및 복구 서비스 및 Blob 개체 스토리지에 HTTPS로 연결합니다 <block ref="73abec29c95edc01ed78226396cb9d9e" category="inline-link-rx"></block>)</block>
   <block id="586fb4ce14563af75d1816e73c9d868a" category="list-text">Azure 및 Azure Government 배포에는 추가 인바운드 보안 그룹 규칙이 필요합니다. 을 참조하십시오<block ref="179e195cc8e81b19d72f9ddb7460e81f" category="inline-link-rx"></block> 를 참조하십시오.</block>
@@ -3561,9 +3560,6 @@ ifdef::AWS[]</block>
   <block id="dbeaadfb952b8aa57d00264751776087" category="list-text">복제된 볼륨이 있는 경우 복제된 볼륨에서 파일 또는 폴더를 복원합니다.</block>
   <block id="e647cb9e3bb11f1dcf4383ae4ae00f0f" category="list-text">검색 및 복원 기능을 사용하여 클라우드 백업에서 파일 또는 폴더를 복원합니다.</block>
   <block id="b760ac1d9088cf17812b95299a0f4c97" category="list-text">찾아보기 및 복원을 사용하여 클라우드 백업에서 볼륨을 복원한 다음 필요한 파일이나 폴더에 액세스합니다.</block>
-  <block id="58cbbdff8232fafaffb4ad6a56acd87a" category="section-title">클라우드 백업의 랜섬웨어 검사는 지원되지 않습니다</block>
-  <block id="f1c936121149a4d66e8504719aa508b6" category="inline-link-macro">랜섬웨어 검사를 비활성화하는 방법을 알아보십시오</block>
-  <block id="346753a5d3dc5273a067b86995fbd568" category="paragraph">Podman 엔진을 사용할 때는 클라우드 백업에서 랜섬웨어에 대한 검사가 지원되지 않습니다. 클라우드 백업에 DataLock 및 랜섬웨어 기능을 사용 중인 경우 랜섬웨어 검사를 비활성화해야 합니다. <block ref="f4c28073f17b68c88ffe0b411369b71f" category="inline-link-macro-rx"></block>.</block>
   <block id="74fcd9275dc8f4544c3f2e6da14c3a0f" category="cell">docker 명령</block>
   <block id="9865e302853628bbfe9f8357d9e7514f" category="cell">Podman 명령</block>
   <block id="2bd2b4226296570c863270e08d511da0" category="list-text">Docker 또는 Podman 컨테이너를 사용하는지 여부에 따라 다음 명령 중 하나를 사용하여 MySQL Docker 컨테이너에 백업을 복사합니다.</block>
@@ -3757,4 +3753,20 @@ ifdef::AWS[]</block>
   <block id="7a912606781d54fe98a96090d0cd3c74" category="paragraph">백업에 5개 이상의 볼륨이 활성화된 경우 BlueXP  백업 및 복구는 한 번에 5개의 볼륨만 초기화합니다. 이러한 작업이 완료되면 5개의 하위 작업의 다음 일괄 처리를 생성하여 다음 세트를 시작하고 모든 볼륨이 초기화될 때까지 계속됩니다.</block>
   <block id="542b4404b0cd2b4cf01b81a3a97b2c20" category="inline-link">Data Infrastructure Insights 및 Cloud Secure를 참조하십시오</block>
   <block id="5212f7d39ed0f1c16c365beda23afc75" category="paragraph">이 기능은 소스 볼륨에 대한 보호 기능을 제공하지 않으며 해당 소스 볼륨의 백업에만 사용됩니다. NetApp 또는 의 일부를<block ref="086d55e347fe71de47923b356a73187b" category="inline-link-rx"></block> 사용하여<block ref="17959d7def942fae173290691e2a40ae" category="inline-link-rx"></block> 소스 볼륨을 보호합니다.</block>
+  <block id="46206fcd0fa4af78eefe04f1bd8d42c6" category="list-text">온프레미스 볼륨을 위한 SnapLock Compliance(ONTAP 9 .14 이상 필요)</block>
+  <block id="c4357ca22c7a0a7b40dcc64dcd915aad" category="paragraph">StorageGRID의 DataLock 및 랜섬웨어 차단 요구사항에 대한 자세한 내용은 을 참조하십시오<block ref="cb8de3051c432af9d9d024226709f28f" category="inline-link-macro-rx"></block>.</block>
+  <block id="e44dd1be7752eb1b45f88c82336a3d7d" category="inline-link">BlueXP  정책 권한</block>
+  <block id="3cf1245b58a388120f82dc669e62f015" category="list-text">커넥터에 필요한 권한이 있는지 확인합니다. 자세한 내용은 을 참조하십시오<block ref="291c868684ffc00e2f96b2378d7b7449" category="inline-link-rx"></block>.</block>
+  <block id="008c6d012aabba0e44e2b94f8259635c" category="section-title">2024년 11월 22일</block>
+  <block id="3c97d3b45dd14b2958c1e0e304230aa0" category="paragraph">이 BlueXP  백업 및 복구 릴리스에는 다음 업데이트가 포함되어 있습니다.</block>
+  <block id="517624d736bd2a385ee8cda71584112f" category="section-title">SnapLock Compliance 및 SnapLock Enterprise 보호 모드</block>
+  <block id="139da935670a9f985194d3241917c359" category="paragraph">BlueXP  백업 및 복구 기능은 이제 SnapLock Compliance 또는 SnapLock Enterprise 보호 모드를 사용하여 구성된 FlexVol 및 FlexGroup 온프레미스 볼륨을 모두 백업할 수 있습니다. 클러스터에서 ONTAP 9.14 이상을 실행해야 합니다. SnapLock 엔터프라이즈 모드를 사용한 FlexVol 볼륨 백업은 ONTAP 버전 9.11.1 이후로 지원됩니다. 이전 ONTAP 릴리즈에서는 SnapLock 보호 볼륨의 백업을 지원하지 않습니다.</block>
+  <block id="9ddb3e6714694f5c7f619d474fec8169" category="paragraph">에서 지원되는 볼륨의 전체 목록을<block ref="9e68a582cc487ad29425f5a4796c9e45" category="inline-link-rx"></block> 참조하십시오.</block>
+  <block id="fec92c3dfb6a0b3db498488c7f4d2f29" category="section-title">볼륨 페이지에서 검색 및 복원 프로세스를 위한 인덱싱</block>
+  <block id="20d3b0b7cfe7a9f3dcfdb0faa9398efd" category="paragraph">검색 및 복원을 사용하려면 볼륨 데이터를 복원할 각 소스 작업 환경에서 "인덱싱"을 활성화해야 합니다. 따라서 인덱스화된 카탈로그에서 모든 볼륨의 백업 파일을 추적할 수 있습니다. 이제 볼륨 페이지에 인덱싱 상태가 표시됩니다.</block>
+  <block id="cd9b31737e78e0a0a755acc12151f766" category="list-text">인덱싱됨: 볼륨이 인덱싱되었습니다.</block>
+  <block id="02e4eb80c967f3b9add2ba16a690eef2" category="list-text">진행 중</block>
+  <block id="838534d879f74e7af515a7de57e72b71" category="list-text">인덱싱되지 않았습니다</block>
+  <block id="73d4d0de3c5f56849f3c1a290a6681f2" category="list-text">인덱싱이 일시 중지되었습니다</block>
+  <block id="cb48cbf342305a9ae53e02e21fcb644c" category="list-text">활성화되지 않음</block>
 </blocks>
