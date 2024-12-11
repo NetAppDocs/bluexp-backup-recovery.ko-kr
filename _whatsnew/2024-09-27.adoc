@@ -1,0 +1,21 @@
+= Browse and Restore를 사용하여 RHEL 8 또는 9에서 Podman을 지원합니다
+:allow-uri-read: 
+
+
+
+
+=== Browse and Restore를 사용하여 RHEL 8 또는 9에서 Podman을 지원합니다
+
+이제 BlueXP  백업 및 복구는 Podman 엔진을 사용하여 RHEL(Red Hat Enterprise Linux) 버전 8 및 9에서 파일 및 폴더 복원을 지원합니다. 이는 BlueXP  백업 및 복구 찾아보기 및 복원 방법에 적용됩니다.
+
+BlueXP  커넥터 버전 3.9.40은 에 언급된 운영 체제 외에 위치에 관계없이 RHEL 8 또는 9 호스트에 커넥터 소프트웨어를 수동으로 설치할 수 있도록 특정 버전의 Red Hat Enterprise Linux 버전 8 및 9를 https://docs.netapp.com/us-en/bluexp-setup-admin/task-prepare-private-mode.html#step-3-review-host-requirements["호스트 요구 사항"^] 지원합니다. 이러한 최신 RHEL 버전에는 Docker 엔진 대신 Podman 엔진이 필요합니다. 이전에는 BlueXP  백업 및 복구에 Podman 엔진을 사용할 때 두 가지 제한 사항이 있었습니다. 이러한 제한 사항은 제거되었습니다.
+
+https://docs.netapp.com/us-en/bluexp-backup-recovery/task-restore-backups-ontap.html["백업 파일에서 ONTAP 데이터를 복원하는 방법에 대해 자세히 알아보십시오"]..
+
+
+
+=== 빠른 카탈로그 인덱싱으로 검색 및 복원 향상
+
+이 릴리스에는 기본 인덱싱을 훨씬 빠르게 완료할 수 있는 향상된 카탈로그 인덱스가 포함되어 있습니다. 인덱싱 속도가 빨라지면 검색 및 복원 기능을 보다 빠르게 사용할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-backup-recovery/task-restore-backups-ontap.html["백업 파일에서 ONTAP 데이터를 복원하는 방법에 대해 자세히 알아보십시오"]..

@@ -94,12 +94,6 @@ AWS(Amazon Web Services) ID 및 액세스 관리(IAM) 역할 Anywhere 서비스�
 
 이 릴리스에서 AWS IAM 역할 Anywhere 서비스에 대한 지원은 기술 미리 보기입니다.
 
-ifdef::aws[]
-
-이는 에 link:task-backup-to-s3.html["Cloud Volumes ONTAP를 AWS에 백업"]적용됩니다. 이는 에 link:task-backup-onprem-to-aws.html["온프레미스 ONTAP 데이터를 AWS에 백업"]적용됩니다.
-
-endif::aws[]
-
 을 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-July-2024-Release/ba-p/453993["BlueXP 백업 및 복구 2024년 7월 릴리즈 블로그"]참조하십시오.
 
 
