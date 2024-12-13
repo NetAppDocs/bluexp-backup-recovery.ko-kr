@@ -3769,4 +3769,5 @@ ifdef::AWS[]</block>
   <block id="73d4d0de3c5f56849f3c1a290a6681f2" category="list-text">인덱싱이 일시 중지되었습니다</block>
   <block id="cb48cbf342305a9ae53e02e21fcb644c" category="list-text">활성화되지 않음</block>
   <block id="8ce617f9e6329a3aea4d9a3a19e56086" category="list-text">데이터 저장소를 백업하는 볼륨이 BlueXP  백업 및 복구 -&gt; 볼륨 탭에서 이미 보호되어 있는 경우(BlueXP  백업 및 복구 -&gt; 가상 머신) 탭에서 동일한 데이터 저장소를 다시 보호할 수 없습니다.</block>
+  <block id="569af965dbd3ebb866de69518b576d23" category="admonition">복원 작업이 완료되지 않으면 작업 모니터에 복구 작업이 실패했음을 표시할 때까지 복원 프로세스를 다시 시도하지 마십시오. 작업 모니터에 복구 작업이 실패했다고 표시되기 전에 복구 프로세스를 다시 시도하면 복구 작업이 다시 실패합니다. 작업 모니터 상태가 "실패"로 표시되면 복원 프로세스를 다시 시도할 수 있습니다.</block>
 </blocks>

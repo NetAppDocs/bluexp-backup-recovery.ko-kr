@@ -142,8 +142,12 @@ RAC 설정에서는 복구에 사용되는 RAC 인스턴스만 복구 후 열립
 . 세부 정보를 검토하고 * Restore * 를 클릭합니다.
 
 
+.결과
 Restore to alternate location * 옵션은 선택한 백업을 지정된 호스트에 마운트합니다. 데이터베이스를 수동으로 불러와야 합니다.
 
 백업을 마운트한 후에는 마운트 해제될 때까지 다시 마운트할 수 없습니다. UI에서 * Unmount * 옵션을 사용하여 백업을 마운트 해제할 수 있습니다.
 
 Oracle 데이터베이스를 가져오는 방법에 대한 자세한 내용은 을 참조하십시오. https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Manager/How_to_bring_up_Oracle_Database_in_another_NFS_host_after_mounting_storage_from_backup_in_Cloud_Backup_for_Applications["기술 자료 문서"].
+
+
+NOTE: 복원 작업이 완료되지 않으면 작업 모니터에 복구 작업이 실패했음을 표시할 때까지 복원 프로세스를 다시 시도하지 마십시오. 작업 모니터에 복구 작업이 실패했다고 표시되기 전에 복구 프로세스를 다시 시도하면 복구 작업이 다시 실패합니다. 작업 모니터 상태가 "실패"로 표시되면 복원 프로세스를 다시 시도할 수 있습니다.
