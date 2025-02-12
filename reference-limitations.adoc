@@ -20,6 +20,19 @@ summary: 알려진 제한 사항은 이 제품 릴리스에서 지원하지 않�
 
 == ONTAP 볼륨에 대한 백업 및 복구 제한 사항
 
+* BlueXP  백업 및 복구 Cloud Volume ONTAP를 AWS 중국 지역(베이징 및 Ningxia 포함)의 오브젝트 저장소에 백업하지만, 먼저 ID 및 액세스 관리(IAM) 정책을 수동으로 수정해야 할 수 있습니다.
++
+AWS에서 커넥터를 생성하는 방법에 대한 자세한 내용은 을 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-aws-bluexp.html["AWS에 커넥터 설치"^]참조하십시오.
+
++
+블로그 게시물에 대한 자세한 내용은 을 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-Feature-Blog-May-23-Updates/ba-p/444052["BlueXP  백업 및 복구 기능 블로그 2023년 5월"^]참조하십시오.
+
+* BlueXP  백업 및 복구는 Microsoft Azure 중국 지역을 지원하지 않습니다.
++
+Azure에서 커넥터를 만드는 방법에 대한 자세한 내용은 을 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-azure-bluexp.html["Azure에 커넥터 설치"^]참조하십시오.
+
+
+
 
 
 === 복제 제한 사항
@@ -55,6 +68,7 @@ FlexVol 볼륨에는 제한이 없습니다. 작업 환경에서 모든 FlexVol 
 +
 ** 백업은 ONTAP 보조 백업에서만 지원됩니다.
 ** 볼륨에 적용되는 스냅샷 정책은 일별, 주별, 월별 등을 포함하여 BlueXP 백업 및 복구에서 인식하는 정책 중 하나여야 합니다 기본 "sm_created" 정책(* 미러 모든 스냅샷 * 에 사용됨)이 인식되지 않으며 백업할 수 있는 볼륨 목록에 DP 볼륨이 표시되지 않습니다.
+** SVM-DR과 볼륨 백업 및 복구는 소스 또는 대상에서 백업을 수행하는 경우 완전히 독립적으로 작동합니다. 유일한 제한은 SVM-DR이 SnapMirror 클라우드 관계를 복제하지 않는다는 것입니다. SVM이 2차 위치에서 온라인 상태가 될 때 DR 시나리오에서는 SnapMirror 클라우드 관계를 수동으로 업데이트해야 합니다.
 
 
 

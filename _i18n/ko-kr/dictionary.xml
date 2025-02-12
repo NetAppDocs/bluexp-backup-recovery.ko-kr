@@ -3759,4 +3759,13 @@ ifdef::AWS[]</block>
   <block id="f179e47ab5bf8661b5b27f915bed468d" category="list-text"><block ref="f179e47ab5bf8661b5b27f915bed468d" category="inline-link-rx"></block></block>
   <block id="6990fc7ee6c7db5f6430ee974dfb8cfa" category="paragraph">다음은 사용자 지정 정책을 만들 때 유용할 수 있는 ONTAP CLI 명령 몇 가지 예입니다. 이러한 명령에서 _admin_vserver(스토리지 VM)를 사용해야<block ref="f536bcc8fda7ee8ba21dea42b5b1c44d" prefix=" " category="inline-code"></block> 합니다.</block>
   <block id="aca1b97d5bf0573ac64cc6e0f6f4dc09" category="cell">단순한 스냅샷 정책</block>
+  <block id="f5ccb197277a619c88128af4cd2e1114" category="list-text">BlueXP  백업 및 복구 Cloud Volume ONTAP를 AWS 중국 지역(베이징 및 Ningxia 포함)의 오브젝트 저장소에 백업하지만, 먼저 ID 및 액세스 관리(IAM) 정책을 수동으로 수정해야 할 수 있습니다.</block>
+  <block id="cd10ae990b1a676dcb9da574833197dc" category="inline-link">AWS에 커넥터 설치</block>
+  <block id="bfd50db7da0325053eeebfa5cb52b3a4" category="paragraph">AWS에서 커넥터를 생성하는 방법에 대한 자세한 내용은 을<block ref="ed99b863e2b8e641bb0c2fedb58f3636" category="inline-link-rx"></block>참조하십시오.</block>
+  <block id="fe99cb308e076a8fe35419694145d10e" category="inline-link">BlueXP  백업 및 복구 기능 블로그 2023년 5월</block>
+  <block id="2753f358d85a358faa8e64a04217f62d" category="paragraph">블로그 게시물에 대한 자세한 내용은 을 <block ref="a5e59c531cbb1038287f1b734bd79714" category="inline-link-rx"></block>참조하십시오.</block>
+  <block id="c6e0dd289d2bd12103cead1918541bfb" category="list-text">BlueXP  백업 및 복구는 Microsoft Azure 중국 지역을 지원하지 않습니다.</block>
+  <block id="698b05231bfe12b062cbf4a5381b3d2f" category="inline-link">Azure에 커넥터 설치</block>
+  <block id="e65cf67a9fbc4609855f67bb18ecf589" category="paragraph">Azure에서 커넥터를 만드는 방법에 대한 자세한 내용은 을<block ref="eb0bd2c194a1c467beaf233333f1c26d" category="inline-link-rx"></block>참조하십시오.</block>
+  <block id="757ec8d082a1a9becacdf32c01678f5b" category="list-text">SVM-DR과 볼륨 백업 및 복구는 소스 또는 대상에서 백업을 수행하는 경우 완전히 독립적으로 작동합니다. 유일한 제한은 SVM-DR이 SnapMirror 클라우드 관계를 복제하지 않는다는 것입니다. SVM이 2차 위치에서 온라인 상태가 될 때 DR 시나리오에서는 SnapMirror 클라우드 관계를 수동으로 업데이트해야 합니다.</block>
 </blocks>
