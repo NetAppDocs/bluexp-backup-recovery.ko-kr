@@ -342,9 +342,6 @@
   <block id="304514e0e009199a95060650dbf9337e" category="inline-link">AWS Glue 서버리스 데이터 통합 서비스</block>
   <block id="0848cf03c413f3904ce1aede12f02101" category="list-text">볼륨 백업에서 볼륨이나 파일을 복원하려면 _Search &amp; Restore_ 아래에서 * 검색 및 복원 * 을 클릭합니다.</block>
   <block id="721f0292b89494d52fd3ab7655e44491" category="paragraph">검색 및 복원을 사용하려면 볼륨 또는 파일을 복원할 각 소스 작업 환경에서 "인덱싱"을 활성화해야 합니다. 따라서 인덱싱된 카탈로그를 통해 모든 볼륨과 모든 백업 파일을 추적할 수 있어 검색이 매우 빠르고 효율적입니다.</block>
-  <block id="8c3d8e8290011affd1cc36d8fb6ca3a8" category="paragraph">작업 환경의 인덱싱 활성화하기:</block>
-  <block id="77b424e494cba30c234da205f975c6ba" category="list-text">작업 환경이 인덱싱되지 않은 경우, 복구 대시보드의 _Search &amp; Restore_ 아래에서 * 작업 환경에 대한 인덱싱 사용 * 을 클릭하고 작업 환경에 대해 * 인덱싱 사용 * 을 클릭합니다.</block>
-  <block id="3c672ca6b1c8663911932efdc7cb9761" category="list-text">하나 이상의 작업 환경이 이미 인덱싱된 경우, 복구 대시보드의 _Search &amp; Restore_ 아래에서 * 인덱싱 설정 * 을 클릭하고 작업 환경에 대해 * 인덱싱 사용 * 을 클릭합니다.</block>
   <block id="d76950a27877cc1b2fad2a533be5bd70" category="paragraph">모든 서비스가 프로비저닝되고 인덱싱된 카탈로그가 활성화되면 작업 환경이 "활성"으로 표시됩니다.</block>
   <block id="22a8553a7fcf088b4624bfb22aca2c00" category="inline-image-macro">인덱싱된 카탈로그를 활성화한 작업 환경을 보여 주는 스크린샷</block>
   <block id="2e6096622065e7d9092ff099425f8bf0" category="paragraph"><block ref="2e6096622065e7d9092ff099425f8bf0" category="inline-image-macro-rx" type="image"></block></block>
@@ -2578,8 +2575,6 @@ GCP에서 BlueXP는 Google Cloud Storage 버킷을 위한 저장소 계정이 �
   <block id="12486a40437a6b66be9b1d2eaf68dacb" category="list-text">(선택 사항) VPC 엔드포인트 인터페이스를 사용하여 전용 연결에 맞게 시스템을 구성합니다.</block>
   <block id="27481ab02cd2907ee58a87a01de37de2" category="list-text">서비스를 활성화하면 백업 마법사에서 액세스 키와 암호 키를 입력하라는 메시지가 표시됩니다. 이러한 자격 증명은 ONTAP 클러스터에 전달되므로 ONTAP는 S3 버킷으로 데이터를 백업 및 복원할 수 있습니다. 이를 위해서는 다음과 같은 권한을 가진 IAM 사용자를 생성해야 합니다.</block>
   <block id="b4bc25d0b351437deb290fa50a36f062" category="paragraph">을 참조하십시오<block ref="eb8d2636cc0b0f2875b50c1561ec0060" category="inline-link-rx"></block>.</block>
-  <block id="e2eb08f750d15308f8411635e75fc5e7" category="inline-link">사용자 키 사용 방법을 참조하십시오</block>
-  <block id="de4ef5a5f97836ab944189954e7907e4" category="paragraph">대신 기본 키를 사용하는 대신 고객이 관리하는 키를 데이터 암호화에 사용하려면 BlueXP 백업 및 복구 마법사를 시작하기 전에 암호화 관리 키가 이미 설정되어 있어야 합니다.<block ref="4f334d1f128fd0a003f5f48bc9fc4cbc" category="inline-link-rx"></block>.</block>
   <block id="b08fc812a1a1619370d32b6eda413475" category="inline-link">Amazon S3에 AWS PrivateLink를 사용하는 방법에 대한 자세한 내용을 참조하십시오</block>
   <block id="13cd6093990a3e2c61bd412a51d79d85" category="list-text">Amazon VPC 콘솔 또는 명령줄을 사용하여 인터페이스 엔드포인트 구성을 생성합니다.<block ref="305e52fbffac106a7d23bf32a329bc5d" category="inline-link-rx"></block>.</block>
   <block id="901a404d02799cf2fc58dfa5d97923ad" category="paragraph">백업에 대한 Amazon S3 대상이 Canvas에서 작업 환경으로 존재하는 경우 ONTAP 클러스터를 Amazon S3 오브젝트 스토리지로 끌 수 있습니다.</block>
@@ -3707,4 +3702,59 @@ ifdef::AWS[]</block>
   <block id="757ec8d082a1a9becacdf32c01678f5b" category="list-text">SVM-DR과 볼륨 백업 및 복구는 소스 또는 대상에서 백업을 수행하는 경우 완전히 독립적으로 작동합니다. 유일한 제한은 SVM-DR이 SnapMirror 클라우드 관계를 복제하지 않는다는 것입니다. SVM이 2차 위치에서 온라인 상태가 될 때 DR 시나리오에서는 SnapMirror 클라우드 관계를 수동으로 업데이트해야 합니다.</block>
   <block id="2fb18b7eb7edfd6ac0fa8586ecbd9a12" category="inline-link">디지털 지갑을 사용하여 라이선스를 추가하는 방법에 대해 알아봅니다</block>
   <block id="e2a36029181f04d6208811edf66b0c62" category="paragraph"><block ref="039fd09b60dad6f86188402eac2ef738" category="inline-link-rx"></block>..</block>
+  <block id="9126fc20b93ed61d342990460cdaaa43" category="doc">고성능 인덱싱</block>
+  <block id="c31a2ae5c0b165eb1cee78223b508907" category="paragraph">BlueXP  백업 및 복구에는 소스 작업 환경에서 데이터를 보다 효율적으로 인덱싱할 수 있는 업데이트된 인덱싱 기능이 도입되었습니다. 새로운 인덱싱 기능에는 UI 업데이트, 데이터 복원 검색 및 복원 방법의 향상된 성능, 글로벌 검색 기능으로 업그레이드 및 향상된 확장성 등이 포함됩니다.</block>
+  <block id="135dcb5e7fddaabc736ce2d72074e3bf" category="paragraph">개선된 사항은 다음과 같습니다.</block>
+  <block id="2fd910d863c39557d994a40fedd27b38" category="list-text">* 폴더 통합 *: 업데이트된 버전은 특정 식별자가 포함된 이름을 사용하여 폴더를 그룹화하여 인덱싱 프로세스를 원활하게 합니다.</block>
+  <block id="415e39ccfe49c5161a2a27cbc19cbaac" category="list-text">* Parquet 파일 압축 *: 업데이트된 버전은 각 볼륨을 인덱싱하는 데 사용되는 파일 수를 줄여 프로세스를 단순화하고 추가 데이터베이스가 필요하지 않습니다.</block>
+  <block id="c53ca191fcf89c8c42d05fd203ce3d03" category="list-text">* 더 많은 세션으로 스케일 아웃 *: 새로운 버전은 인덱싱 작업을 처리하기 위해 더 많은 세션을 추가하여 프로세스 속도를 높입니다.</block>
+  <block id="9ad2108ab54a2f84cdce51c70aedf218" category="list-text">* 다중 인덱스 컨테이너 지원 * : 새 버전은 인덱싱 작업을 더 잘 관리하고 배포하기 위해 여러 컨테이너를 사용합니다.</block>
+  <block id="4a3dba07ec28235aef40beaad924f29a" category="list-text">* 분할 색인 워크플로 * : 새 버전은 인덱싱 프로세스를 두 부분으로 분할하여 효율성을 향상시킵니다.</block>
+  <block id="4524da26c6e536d9203dad25cbe67e46" category="list-text">* 향상된 동시성 * : 새로운 버전을 사용하면 동시에 디렉토리를 삭제하거나 이동할 수 있으므로 인덱싱 프로세스가 빨라집니다.</block>
+  <block id="4cd005b9bd7832f2f50d7bfa9ef8c5bd" category="paragraph-title">이 기능의 이점은 누구입니까?</block>
+  <block id="c0b0a9d9f7b65ce3e277b13bce1241d3" category="paragraph">새로운 인덱싱 기능은 모든 신규 고객이 사용할 수 있습니다.</block>
+  <block id="eb3dc66c3f5547559da4bd69622b70f1" category="paragraph-title">인덱싱을 활성화하려면 어떻게 해야 합니까?</block>
+  <block id="1928ef25d05266e1052541c930f2737c" category="paragraph">데이터를 복원하는 검색 및 복원 방법을 사용하려면 먼저 볼륨 또는 파일을 복원하려는 각 소스 작업 환경에서 "인덱싱"을 활성화해야 합니다. 따라서 인덱스화된 카탈로그가 모든 볼륨과 모든 백업 파일을 추적할 수 있어 빠르고 효율적으로 검색할 수 있습니다.</block>
+  <block id="d28994d1a9691ce26fcae71b9a05d1bc" category="paragraph">검색 및 복원을 수행할 때 "인덱싱 사용" 옵션을 선택하여 소스 작업 환경에서 인덱싱을 활성화합니다.</block>
+  <block id="6b14c6e0d643870ea727335d7739df30" category="inline-link">검색 및 복원 을 사용하여 ONTAP 데이터를 복원하는 방법</block>
+  <block id="9031cfd1bcd3de043cd6391f098dc91b" category="paragraph">자세한 내용은 설명서를<block ref="7ae860a58fb7c028461eb3a0f3043711" category="inline-link-rx"></block>참조하십시오.</block>
+  <block id="2d31667baed414ccd330141663dac284" category="paragraph-title">지원되는 배율</block>
+  <block id="b2ec30cb49afbacbac6cc89a95133887" category="paragraph">새 인덱싱 기능은 다음을 지원합니다.</block>
+  <block id="3201cddda2c272104ed2ef30674f361a" category="list-text">3분 이내에 글로벌 검색 효율성 향상</block>
+  <block id="5386e74ecf10139fea9af2308674b2f3" category="list-text">최대 50억 개의 파일</block>
+  <block id="ed6f4100c4fab2301cff975ad76b4882" category="list-text">클러스터당 최대 5000개의 볼륨</block>
+  <block id="1154c1f5439a3f20019e89d49f3ba075" category="list-text">볼륨당 최대 100,000개의 스냅샷 지원</block>
+  <block id="bca4b5a9086c6c17f64be092486e45ad" category="list-text">기준 색인에 대한 최대 시간은 7일 미만입니다. 실제 시간은 환경에 따라 다릅니다.</block>
+  <block id="783d72b35e6b2ea46fd074f6f0960e45" category="section-title">글로벌 검색 성능 향상</block>
+  <block id="66fba34c17d26bb2c0e9b396915f9a4f" category="paragraph">이번 릴리스에는 글로벌 검색 성능 향상도 포함되어 있습니다. 이제 진행률 표시기 및 파일 수와 검색에 걸리는 시간을 포함하여 보다 자세한 검색 결과가 표시됩니다. 검색 및 색인화를 위한 전용 컨테이너를 통해 5분 이내에 글로벌 검색이 완료됩니다.</block>
+  <block id="ba7df4741bd77385c236fcf981dd357a" category="paragraph">글로벌 검색과 관련된 고려 사항은 다음과 같습니다.</block>
+  <block id="03602fc4621dad9ee00f9e5d533ff5ea" category="list-text">새 인덱스는 시간별 스냅샷으로 레이블이 지정된 스냅샷에 대해 수행되지 않습니다.</block>
+  <block id="2bacd7c8c96302172c5d0324d784cf03" category="list-text">새로운 인덱싱 기능은 FlexVol의 스냅샷에만 작동하며, FlexGroups의 스냅샷에는 작동하지 않습니다.</block>
+  <block id="9a817228de7a6ae8f0c7de31a40bf58e" category="list-text">BlueXP  백업 및 복구는 NVE(NetApp Volume Encryption) 및 ONTAP에서 NAE(NetApp Aggregate Encryption)가 활성화된 오브젝트 스토리지에 볼륨을 백업하지 않습니다.</block>
+  <block id="c638f77e97a62d0d11f775816222d62a" category="inline-link">NetApp 볼륨 암호화 구성 개요</block>
+  <block id="3553f96cf9281793975488d9cea2ab17" category="paragraph">이러한 암호화 유형에 대한 설명은 을 <block ref="4e5be28408ee7dfd001133bf87f0a28f" category="inline-link-rx"></block>참조하십시오.</block>
+  <block id="e00d7f7aeae26763ad3c75c98433f2e9" category="list-text">SnapMirror 정책의 스케줄을 사용하여 SnapMirror 대상 볼륨에 장기 보존 스냅샷이 설정된 경우, 스냅샷이 대상 볼륨에 직접 생성됩니다. 이 경우 BlueXP  백업 및 복구를 사용하여 이러한 볼륨을 백업하지 마십시오. 이러한 스냅샷은 객체 스토리지로 이동하지 않습니다.</block>
+  <block id="01413f389bd4cf68af61ca2a62ee7d87" category="paragraph">대신 기본 키를 사용하는 대신 고객이 관리하는 키를 데이터 암호화에 사용하려면 BlueXP 백업 및 복구 마법사를 시작하기 전에 암호화 관리 키가 이미 설정되어 있어야 합니다.</block>
+  <block id="81d60e20c02d2dc4f1f049ef17d9c0f3" category="inline-link">Cloud Volumes ONTAP에서 자체 아마존 암호화 키를 사용하는 방법을 참조하십시오</block>
+  <block id="88ccd2720227f5c1164c6497d4ae47f6" category="paragraph"><block ref="8ab54e2b609b251be3bd34cf7a9c9391" category="inline-link-rx"></block>..</block>
+  <block id="76cbe937e740eca839bf63ad19034f3f" category="inline-link">BlueXP  백업 및 복구에 자체 Amazon 암호화 키를 사용하는 방법을 참조하십시오</block>
+  <block id="6fdce727e6de4160eacd28b15da69c4f" category="paragraph"><block ref="a3f58d2c0ba0e72062adb488b84ae17c" category="inline-link-rx"></block>..</block>
+  <block id="f92649b1217dc96d6552e63d3b09c966" category="paragraph">인덱싱된 카탈로그 v2에 대한 자세한 내용은 인덱싱된 카탈로그를 사용하는 방법에 대한 아래 섹션을 참조하십시오.</block>
+  <block id="166abda58938787377e1425ec8d5bfe0" category="paragraph">인덱싱된 카탈로그는 작업 환경의 모든 볼륨 및 백업 파일에 대한 메타데이터를 저장하는 데이터베이스입니다. 검색 및 복원 기능에서 복원하려는 데이터가 포함된 백업 파일을 빠르게 찾는 데 사용됩니다.</block>
+  <block id="ace26ef20d7de77728de7522bd26d7de" category="paragraph-title">인덱싱된 카탈로그 v2 기능</block>
+  <block id="c63a5bc5fc4b32b1bff45d50374410d4" category="paragraph">2025년 2월에 출시된 인덱싱 카탈로그 v2에는 더 효율적이고 사용하기 쉬운 새로운 기능이 추가되었습니다. 이 버전은 성능이 크게 향상되었으며 모든 신규 고객에게 기본적으로 사용됩니다.</block>
+  <block id="e45e80a3aa32c47a9d6ef311dd8f2980" category="paragraph">v2와 관련하여 다음 고려 사항을 검토하십시오.</block>
+  <block id="b98d519952606f96dcc615efa4f4e85c" category="list-text">인덱스 카탈로그 v2는 미리 보기 모드에서 사용할 수 있습니다.</block>
+  <block id="951398abbe6e1c3079efe911a6951621" category="list-text">기존 고객이며 Catalog v2를 사용하려면 환경을 완전히 다시 인덱싱해야 합니다.</block>
+  <block id="eb720e0effbb1828841ea62695a758b9" category="list-text">Catalog v2는 스냅샷 레이블이 있는 스냅샷만 인덱싱합니다.</block>
+  <block id="2c3a11da75201509ee9fcbd0114229d0" category="list-text">BlueXP  백업 및 복구는 "시간별" SnapMirror 레이블을 사용하여 스냅샷을 인덱싱하지 않습니다. "시간별" SnapMirror 레이블을 사용하여 스냅샷을 인덱싱하려면 v2가 미리보기 모드에 있는 동안 스냅샷을 수동으로 활성화해야 합니다.</block>
+  <block id="30de1e9ffcdc3df41ad87fe991035205" category="list-text">BlueXP  백업 및 복구는 카탈로그 v2를 통해서만 BlueXP  백업 및 복구로 보호되는 작업 환경과 관련된 볼륨 및 스냅숏을 인덱싱합니다. BlueXP  플랫폼에서 검색된 다른 작업 환경은 인덱싱되지 않습니다.</block>
+  <block id="cba8da890b429c54fa89c60426136832" category="paragraph">인덱싱된 카탈로그 v2는 다음을 지원합니다.</block>
+  <block id="46428b76e969ff123fba9ae4f0798b31" category="paragraph-title">작업 환경에 대해 인덱싱된 카탈로그를 사용하도록 설정합니다</block>
+  <block id="e7a2b56d589698a713ae6f0ee11d094a" category="list-title">작업 환경에 대해 인덱싱을 활성화하는 단계:</block>
+  <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">다음 중 하나를 수행합니다.</block>
+  <block id="a3d610bf46189d3cbce48f595c45499f" category="list-text">인덱싱된 작업 환경이 없는 경우 복원 대시보드의 _Search &amp; Restore_ 아래에서 * 작업 환경에 대한 인덱싱 활성화 * 를 선택합니다.</block>
+  <block id="4d15abe2ea84fc45daf040e94beae3f3" category="list-text">하나 이상의 작업 환경이 이미 인덱싱된 경우 복원 대시보드의 _Search &amp; Restore_ 아래에서 * 인덱싱 설정 * 을 클릭합니다.</block>
+  <block id="96c51ce828ef9cc79ee2121bdd9dc630" category="list-text">작업 환경에 대해 * 인덱싱 활성화 * 를 선택합니다.</block>
+  <block id="09d7c2dac047caa965175fead07159aa" category="section-title">2025년 2월 21일</block>
 </blocks>
