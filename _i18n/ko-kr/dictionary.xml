@@ -3208,7 +3208,6 @@ ONTAP S3</block>
   <block id="b7cee6af996f21267fdad2eebd5f4c54" category="paragraph">이 옵션을 사용하려면 Cloud Volumes ONTAP 작업 환경을 생성할 때 연간 계약을 설정하면 BlueXP가 Azure 마켓플레이스를 구독하라는 메시지를 표시합니다.</block>
   <block id="ab788bf4fa445771d4446e36e923ffe4" category="paragraph">GCP를 사용할 경우 NetApp 세일즈 담당자에게 연간 계약을 구매할 것을 문의하십시오. 이 계약은 Google Cloud Marketplace에서 프라이빗 오퍼로 제공됩니다.</block>
   <block id="c71d991dee047ce8fa870270654b44c0" category="paragraph">NetApp이 프라이빗 오퍼를 공유하면 BlueXP 백업 및 복구 활성화 중에 Google Cloud 마켓플레이스를 구독할 때 연간 계획을 선택할 수 있습니다.</block>
-  <block id="727c837c47e40b96ddd39f15636181fe" category="list-text">복제 정책을 관리합니다</block>
   <block id="61f06895b4fcad7d6460158ccfc33c17" category="paragraph">BYOL은 기간 기반(1, 2 또는 3년) _ 및 _ 용량 - 1TiB 단위로 사용합니다. 예를 들어, 1년, 최대 용량(10TiB)에 대해 서비스 사용을 위해 NetApp에 비용을 지불합니다.</block>
   <block id="aa4c67fd3731395f4450c9686b20f799" category="section-title">작업 모니터에서 예약된 작업을 지원합니다</block>
   <block id="314b40130d46a229c3a19dc5e2e23aa4" category="paragraph">BlueXP 백업 및 복구 작업 모니터는 이전에 모니터링된 예약된 볼륨-오브젝트 저장소 백업 및 복원 작업이지만 UI 또는 API를 통해 예약된 로컬 스냅샷, 복제, 백업 및 복원 작업은 모니터링하지 않습니다.</block>
@@ -3730,7 +3729,6 @@ ifdef::AWS[]</block>
   <block id="ba7df4741bd77385c236fcf981dd357a" category="paragraph">글로벌 검색과 관련된 고려 사항은 다음과 같습니다.</block>
   <block id="03602fc4621dad9ee00f9e5d533ff5ea" category="list-text">새 인덱스는 시간별 스냅샷으로 레이블이 지정된 스냅샷에 대해 수행되지 않습니다.</block>
   <block id="2bacd7c8c96302172c5d0324d784cf03" category="list-text">새로운 인덱싱 기능은 FlexVol의 스냅샷에만 작동하며, FlexGroups의 스냅샷에는 작동하지 않습니다.</block>
-  <block id="9a817228de7a6ae8f0c7de31a40bf58e" category="list-text">BlueXP  백업 및 복구는 NVE(NetApp Volume Encryption) 및 ONTAP에서 NAE(NetApp Aggregate Encryption)가 활성화된 오브젝트 스토리지에 볼륨을 백업하지 않습니다.</block>
   <block id="c638f77e97a62d0d11f775816222d62a" category="inline-link">NetApp 볼륨 암호화 구성 개요</block>
   <block id="3553f96cf9281793975488d9cea2ab17" category="paragraph">이러한 암호화 유형에 대한 설명은 을 <block ref="4e5be28408ee7dfd001133bf87f0a28f" category="inline-link-rx"></block>참조하십시오.</block>
   <block id="e00d7f7aeae26763ad3c75c98433f2e9" category="list-text">SnapMirror 정책의 스케줄을 사용하여 SnapMirror 대상 볼륨에 장기 보존 스냅샷이 설정된 경우, 스냅샷이 대상 볼륨에 직접 생성됩니다. 이 경우 BlueXP  백업 및 복구를 사용하여 이러한 볼륨을 백업하지 마십시오. 이러한 스냅샷은 객체 스토리지로 이동하지 않습니다.</block>
@@ -3757,4 +3755,14 @@ ifdef::AWS[]</block>
   <block id="4d15abe2ea84fc45daf040e94beae3f3" category="list-text">하나 이상의 작업 환경이 이미 인덱싱된 경우 복원 대시보드의 _Search &amp; Restore_ 아래에서 * 인덱싱 설정 * 을 클릭합니다.</block>
   <block id="96c51ce828ef9cc79ee2121bdd9dc630" category="list-text">작업 환경에 대해 * 인덱싱 활성화 * 를 선택합니다.</block>
   <block id="09d7c2dac047caa965175fead07159aa" category="section-title">2025년 2월 21일</block>
+  <block id="30ba4ee29fda0b7285b4297943459cf9" category="doc">SMB 스냅샷 탐색</block>
+  <block id="024bc4989e66777454fa98cbaf9a7d3e" category="paragraph">이 BlueXP  백업 및 복구 업데이트는 고객이 SMB 환경에서 로컬 스냅샷을 찾을 수 없는 문제를 해결했습니다.</block>
+  <block id="151a83fcfdad3b420d256dbc19095068" category="section-title">AWS GovCloud 환경 업데이트</block>
+  <block id="c4ff0af994997811a9867969c1b26bf3" category="paragraph">이 BlueXP  백업 및 복구 업데이트는 TLS 인증서 오류로 인해 UI가 AWS GovCloud 환경에 연결되지 않는 문제를 해결했습니다. IP 주소 대신 BlueXP  커넥터 호스트 이름을 사용하여 문제를 해결했습니다.</block>
+  <block id="a758068ed72f0a6858316a7ff791b4ba" category="section-title">백업 정책 보존 제한</block>
+  <block id="7937af8bb9aecdab11a666bfc7946c61" category="paragraph">이전에는 BlueXP  백업 및 복구 UI에서 백업을 999개로 제한했지만 CLI에서는 백업을 더 허용했습니다. 이제 최대 4,000개의 볼륨을 백업 정책에 연결할 수 있으며 백업 정책에 연결되지 않은 1,018개의 볼륨을 포함할 수 있습니다. 이 업데이트에는 이러한 제한을 초과하지 않는 추가 유효성 검사가 포함되어 있습니다.</block>
+  <block id="d5479e738a91b3a64956ed9f9e81bc5a" category="section-title">SnapMirror Cloud 재동기화</block>
+  <block id="06476618a5631fabf79c4d5ebe8b60b0" category="paragraph">이 업데이트는 SnapMirror 관계가 삭제된 후에 지원되지 않는 ONTAP 버전에 대한 BlueXP  백업 및 복구에서 SnapMirror Cloud 재동기화를 시작할 수 없도록 합니다.</block>
+  <block id="23bb8a9252b3eccc5dbbed85d71a4b89" category="list-text">데이터를 백업할 때 BlueXP  백업 및 복구에서는 NVE(NetApp Volume Encryption)가 유지되지 않습니다. 즉, 데이터가 타겟으로 전송되는 동안 NVE 볼륨의 암호화된 데이터는 해독되고 암호화가 유지되지 않습니다.</block>
+  <block id="499d067ffbbd553e23809aa38aa67bfa" category="section-title">2025년 3월 17일</block>
 </blocks>

@@ -55,7 +55,7 @@ FlexVol 볼륨에는 제한이 없습니다. 작업 환경에서 모든 FlexVol 
 
 === 오브젝트로 백업 제한 사항
 
-* BlueXP  백업 및 복구는 NVE(NetApp Volume Encryption) 및 ONTAP에서 NAE(NetApp Aggregate Encryption)가 활성화된 오브젝트 스토리지에 볼륨을 백업하지 않습니다.
+* 데이터를 백업할 때 BlueXP  백업 및 복구에서는 NVE(NetApp Volume Encryption)가 유지되지 않습니다. 즉, 데이터가 타겟으로 전송되는 동안 NVE 볼륨의 암호화된 데이터는 해독되고 암호화가 유지되지 않습니다.
 +
 이러한 암호화 유형에 대한 설명은 을 https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["NetApp 볼륨 암호화 구성 개요"^]참조하십시오.
 

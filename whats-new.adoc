@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, backup, restore, bluexp, bluexp backup and recovery' 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, backup, restore, bluexp, bluexp backup and recovery, protection' 
 summary: BlueXP 백업 및 복구의 새로운 기능에 대해 알아보십시오. 
 ---
 = BlueXP 백업 및 복구의 새로운 기능
@@ -15,6 +15,36 @@ summary: BlueXP 백업 및 복구의 새로운 기능에 대해 알아보십시�
 
 [role="lead"]
 BlueXP 백업 및 복구의 새로운 기능에 대해 알아보십시오.
+
+
+
+== 2025년 3월 17일
+
+이 BlueXP  백업 및 복구 릴리스에는 다음 업데이트가 포함되어 있습니다.
+
+
+
+=== SMB 스냅샷 탐색
+
+이 BlueXP  백업 및 복구 업데이트는 고객이 SMB 환경에서 로컬 스냅샷을 찾을 수 없는 문제를 해결했습니다.
+
+
+
+=== AWS GovCloud 환경 업데이트
+
+이 BlueXP  백업 및 복구 업데이트는 TLS 인증서 오류로 인해 UI가 AWS GovCloud 환경에 연결되지 않는 문제를 해결했습니다. IP 주소 대신 BlueXP  커넥터 호스트 이름을 사용하여 문제를 해결했습니다.
+
+
+
+=== 백업 정책 보존 제한
+
+이전에는 BlueXP  백업 및 복구 UI에서 백업을 999개로 제한했지만 CLI에서는 백업을 더 허용했습니다. 이제 최대 4,000개의 볼륨을 백업 정책에 연결할 수 있으며 백업 정책에 연결되지 않은 1,018개의 볼륨을 포함할 수 있습니다. 이 업데이트에는 이러한 제한을 초과하지 않는 추가 유효성 검사가 포함되어 있습니다.
+
+
+
+=== SnapMirror Cloud 재동기화
+
+이 업데이트는 SnapMirror 관계가 삭제된 후에 지원되지 않는 ONTAP 버전에 대한 BlueXP  백업 및 복구에서 SnapMirror Cloud 재동기화를 시작할 수 없도록 합니다.
 
 
 
