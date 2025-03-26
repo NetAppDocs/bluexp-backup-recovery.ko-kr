@@ -3641,7 +3641,6 @@ ifdef::AWS[]</block>
   <block id="3a66ab30f960deed7e2d6dbe5675eebc" category="paragraph">BlueXP 백업 및 복구는 인터넷 연결이 제한된 사이트(_restricted mode_라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 경우 대상 클라우드 지역에 BlueXP  Connector를 배포해야 합니다.</block>
   <block id="c042a7ac26c00953bd87e1129908e5c7" category="list-text">AWS 상업 지역에 설치된 온프레미스 ONTAP 시스템 또는 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3로 백업할 수 있습니다. <block ref="b4a611717e08ba4c0f2fa5390556e4e1" category="inline-link-macro-rx"></block>..</block>
   <block id="eb908336fca360ed35207a1e198562b2" category="list-text">온프레미스 ONTAP 시스템 또는 Azure 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Azure Blob에 백업할 수 있습니다. <block ref="d0f49153a0d69289bf4d240d8900efdd" category="inline-link-macro-rx"></block>..</block>
-  <block id="ba69c078d6c88577ac4045721cf8bc4b" category="cell"><block ref="1db7b4242367cddbadaf1e041e531c76" prefix="" category="inline-code"></block></block>
   <block id="e23da6bf724f3225b25342aa20aab822" category="cell"><block ref="1e8904cbbffb7eff1de96297f70cd53e" prefix="" category="inline-code"></block></block>
   <block id="7a912606781d54fe98a96090d0cd3c74" category="paragraph">백업에 5개 이상의 볼륨이 활성화된 경우 BlueXP  백업 및 복구는 한 번에 5개의 볼륨만 초기화합니다. 이러한 작업이 완료되면 5개의 하위 작업의 다음 일괄 처리를 생성하여 다음 세트를 시작하고 모든 볼륨이 초기화될 때까지 계속됩니다.</block>
   <block id="542b4404b0cd2b4cf01b81a3a97b2c20" category="inline-link">Data Infrastructure Insights 및 Cloud Secure를 참조하십시오</block>
@@ -3765,4 +3764,5 @@ ifdef::AWS[]</block>
   <block id="06476618a5631fabf79c4d5ebe8b60b0" category="paragraph">이 업데이트는 SnapMirror 관계가 삭제된 후에 지원되지 않는 ONTAP 버전에 대한 BlueXP  백업 및 복구에서 SnapMirror Cloud 재동기화를 시작할 수 없도록 합니다.</block>
   <block id="23bb8a9252b3eccc5dbbed85d71a4b89" category="list-text">데이터를 백업할 때 BlueXP  백업 및 복구에서는 NVE(NetApp Volume Encryption)가 유지되지 않습니다. 즉, 데이터가 타겟으로 전송되는 동안 NVE 볼륨의 암호화된 데이터는 해독되고 암호화가 유지되지 않습니다.</block>
   <block id="499d067ffbbd553e23809aa38aa67bfa" category="section-title">2025년 3월 17일</block>
+  <block id="c11347a85201b35f4b0302aff21bc226" category="cell"><block ref="c9017d174080d415365a112c68422e95" prefix="" category="inline-code"></block></block>
 </blocks>

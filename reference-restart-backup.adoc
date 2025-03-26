@@ -38,10 +38,10 @@ BlueXP 백업 및 복구 기능은 BlueXP 커넥터에 내장되어 있습니다
 | 커넥터 위치 | docker 명령 | Podman 명령 
 
 
-| 클라우드 구현 | `docker restart cloudmanager_cbs` | `podman restart cloudmanager cbs` 
+| 클라우드 구현 | `docker restart cloudmanager_cbs` | `podman restart cloudmanager_cbs` 
 
 
-| 인터넷 액세스가 가능한 수동 설치 | `docker restart cloudmanager_cbs` | `podman restart cloudmanager cbs` 
+| 인터넷 액세스가 가능한 수동 설치 | `docker restart cloudmanager_cbs` | `podman restart cloudmanager_cbs` 
 
 
 | 인터넷 액세스 없이 수동 설치 | `docker restart ds_cloudmanager_cbs_1` | `podman restart ds_cloudmanager_cbs_1` 
