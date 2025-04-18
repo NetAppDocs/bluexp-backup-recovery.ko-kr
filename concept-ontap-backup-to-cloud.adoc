@@ -194,6 +194,9 @@ BlueXP 백업 및 복구는 다음 유형의 볼륨을 지원합니다.
 * SnapMirror 데이터 보호(DP) 타겟 볼륨
 
 
+
+NOTE: BlueXP  백업 및 복구는 FlexCache 볼륨의 백업을 지원하지 않습니다.
+
 의 섹션을 참조하십시오 link:reference-limitations.html#backup-to-object-limitations["백업 및 복원 제한 사항"] 추가 요구 사항 및 제한 사항
 
 

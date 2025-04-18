@@ -3765,4 +3765,28 @@ ifdef::AWS[]</block>
   <block id="23bb8a9252b3eccc5dbbed85d71a4b89" category="list-text">데이터를 백업할 때 BlueXP  백업 및 복구에서는 NVE(NetApp Volume Encryption)가 유지되지 않습니다. 즉, 데이터가 타겟으로 전송되는 동안 NVE 볼륨의 암호화된 데이터는 해독되고 암호화가 유지되지 않습니다.</block>
   <block id="499d067ffbbd553e23809aa38aa67bfa" category="section-title">2025년 3월 17일</block>
   <block id="c11347a85201b35f4b0302aff21bc226" category="cell"><block ref="c9017d174080d415365a112c68422e95" prefix="" category="inline-code"></block></block>
+  <block id="46c8a90c914cf567466d573545fb57d9" category="doc">향상된 볼륨 대시보드(미리 보기)</block>
+  <block id="d4400da5c041019019538ea47e6a4d7e" category="paragraph">이제 볼륨 대시보드가 10초 이내에 로드되므로 훨씬 빠르고 효율적인 인터페이스를 제공합니다. 이 Preview 버전은 일부 고객에게 제공되며 이러한 개선 사항을 조기에 확인할 수 있습니다.</block>
+  <block id="a43e01afb7862afba8cef123bb022bd8" category="section-title">UI 개선</block>
+  <block id="d631beb153bc97ac47e69041180f2bda" category="paragraph">이 릴리스는 인터페이스를 단순화함으로써 사용자 경험을 향상시킵니다.</block>
+  <block id="7945214ab9edda2604c048e3254b6820" category="list-text">볼륨 테이블에서 애그리게이트 열을 제거하고 V2 대시보드의 볼륨 테이블에서 스냅샷 정책, 백업 정책 및 복제 정책 열을 제거하면 레이아웃이 보다 간소화됩니다.</block>
+  <block id="1f4ea4d0a55155c1ea9271081e2e118f" category="list-text">드롭다운 목록에서 활성화되지 않은 작업 환경을 제외하면 인터페이스가 덜 복잡해지고 탐색이 더 효율적으로 수행되며 로딩 속도가 빨라집니다.</block>
+  <block id="c42ae4d1274def078f227f6b5526ed38" category="list-text">태그 열에서 정렬을 사용할 수 없지만 중요한 정보에 쉽게 액세스할 수 있도록 태그를 계속 볼 수 있습니다.</block>
+  <block id="ee5a89c90c463c21f6188d8945b6a165" category="list-text">보호 아이콘의 라벨을 제거하면 더 깔끔한 외관을 연출하고 로딩 시간을 줄일 수 있습니다.</block>
+  <block id="4deca0db77c0cb1d491b7636aff218c4" category="list-text">작업 환경 활성화 프로세스 중에 대화 상자에 로드 아이콘이 표시되어 검색 프로세스가 완료될 때까지 피드백을 제공하여 시스템 운영에 대한 투명성과 신뢰도를 높입니다.</block>
+  <block id="e933dec5f784259760ab3c9400fb8e0b" category="section-title">타사 Wasabi 개체 저장소 지원(Preview)</block>
+  <block id="57a83bf4b6d8f755d141ebf2bb282ed3" category="paragraph">BlueXP  백업 및 복구는 이제 Wasabi에 중점을 두고 타사 오브젝트 스토어까지 지원을 확장하고 있습니다. 이 새로운 미리 보기 기능을 사용하면 백업 및 복구 요구에 S3 호환 오브젝트 저장소를 활용할 수 있습니다.</block>
+  <block id="da21b58c44ce1975cb8550ec689df5b3" category="section-title">Wasabi 시작하기</block>
+  <block id="f3afa8b48aa14a1da6a21d82ad964f5d" category="paragraph">이 기능을 사용하려면 BlueXP  UI 내에서 플래그를 활성화해야 합니다. 그런 다음 타사 오브젝트 저장소에 대한 연결 정보를 입력하고 백업 및 복구 워크플로에 통합할 수 있습니다.</block>
+  <block id="9b6d9b582a741bc832b2557c16d31b09" category="section-title">미리보기 모드 제한</block>
+  <block id="fdf10a1d090d444123d00414152f7943" category="paragraph">이 기능이 미리 보기에 있는 동안 다음 제한 사항을 고려하십시오.</block>
+  <block id="7ebc42140a656312f7a985f14e55f3a6" category="list-text">BYOB(Bring Your Own Bucket)는 지원되지 않습니다.</block>
+  <block id="1361fc3308297e6892c65225fef43d57" category="list-text">정책에서 DataLock을 사용하도록 설정할 수 없습니다.</block>
+  <block id="250e26d77f45f9c60f2e7d28e0011265" category="list-text">정책에서 아카이브 모드를 사용하도록 설정하는 것은 지원되지 않습니다.</block>
+  <block id="b86033acef55ce16df9b8accc019fc9d" category="list-text">온프레미스 ONTAP 환경만 지원됩니다.</block>
+  <block id="5ba05bcaf18ef618c0ef794d4ae3e855" category="list-text">MetroCluster는 지원되지 않습니다.</block>
+  <block id="2a9854e98da75bbc07132378bef6de4d" category="list-text">버킷 수준 암호화를 활성화하는 옵션은 지원되지 않습니다.</block>
+  <block id="f98d5407ffd34a829996a4bb36d6e582" category="paragraph">이 미리 보기를 진행하는 동안 이 새로운 기능을 살펴보고 전체 기능이 배포되기 전에 타사 개체 저장소와의 통합에 대한 피드백을 제공하는 것이 좋습니다.</block>
+  <block id="c2539a9855f013822344851d0fcb1184" category="admonition">BlueXP  백업 및 복구는 FlexCache 볼륨의 백업을 지원하지 않습니다.</block>
+  <block id="801c0fa0d304ca22d8afec06189bcf93" category="section-title">2025년 4월 16일</block>
 </blocks>

@@ -31,6 +31,7 @@ AWS에서 커넥터를 생성하는 방법에 대한 자세한 내용은 을 htt
 +
 Azure에서 커넥터를 만드는 방법에 대한 자세한 내용은 을 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-azure-bluexp.html["Azure에 커넥터 설치"^]참조하십시오.
 
+* BlueXP  백업 및 복구는 FlexCache 볼륨의 백업을 지원하지 않습니다.
 
 
 
