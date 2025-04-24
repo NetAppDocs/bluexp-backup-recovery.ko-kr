@@ -1216,7 +1216,6 @@
   <block id="47088be6cbcb439bd7241ec72edf3a91" category="section-title">ONTAP 클러스터와 StorageGRID 시스템에 대해 알아보십시오</block>
   <block id="8a817b57889a6e642ad7fb06e7b26c80" category="section-title">StorageGRID 환경 세부 정보를 설정합니다</block>
   <block id="95405ad3ad814456093255e6d36ee69e" category="inline-link">BlueXP API</block>
-  <block id="ed28e31454bb8c9849e6271a030b2762" category="paragraph">데이터를 StorageGRID에 백업하는 각 ONTAP 시스템에 대해 이러한 단계를 수행해야 합니다.</block>
   <block id="3f1b9decb18d57a001f26c7273adeddc" category="list-text">다음 OAuth/token API를 사용하여 인증 토큰을 추출합니다.</block>
   <block id="f2b2dd8a7061a4f2836de5feda40a45e" category="paragraph">이 API는 다음과 같은 응답을 반환합니다. 아래와 같이 인증 토큰을 검색할 수 있습니다.</block>
   <block id="74e96d8b9d4abdf183199553dd665e53" category="list-text">Tenancy/external/resource API를 사용하여 작업 환경 ID와 X-Agent-ID를 추출합니다.</block>
@@ -3800,6 +3799,7 @@ ifdef::AWS[]</block>
   <block id="6c9913da2722f6c96e97b9d6aa37bb46" category="paragraph">BlueXP  백업 및 복구 시스템을 작동 상태로 되돌리려면 다음 작업을 수행해야 합니다.</block>
   <block id="da2ba8762d0dcb78945a22c9a375fffa" category="inline-link">DarkSite Cloud Backup: MySQL 및 인덱스화된 카탈로그 백업 및 복원</block>
   <block id="bb10a63044b830cc42091d93b78fd668" category="paragraph">다음 정보는 BlueXP  3.9.xx부터 개인 모드 설치에 적용됩니다. 이전 버전의 경우 다음 절차를<block ref="2da286ce66fc5078574abb0f7864085c" category="inline-link-rx"></block> 따르십시오.</block>
-  <block id="e29798cefe7dc354983bc30c2c9fccdf" category="paragraph">IP 주소, 사용자 이름 및 암호는 사용자 지정 값이지만 계정 이름은 그렇지 않습니다. 계정 이름은 항상 "account-DARKSITE1"입니다.</block>
   <block id="2decbd35e1c4f4abc73df06a5256970a" category="list-text">BlueXP  백업 및 복구 데이터베이스를 작업 환경과 연결된 StorageGRID 시스템의 세부 정보로 업데이트합니다. 아래와 같이 StorageGRID의 정규화된 도메인 이름과 액세스 키 및 스토리지 키를 입력해야 합니다.</block>
+  <block id="241380d8d42b823d8bd7c25c9fc3014f" category="paragraph">StorageGRID에 데이터를 백업하는 각 시스템에 대해 이러한 단계를 수행해야 합니다.</block>
+  <block id="cd6c5272ababe8075a9145908c571172" category="paragraph">IP 주소, 사용자 이름 및 암호는 사용자 지정 값이지만 계정 이름은 그렇지 않습니다. 계정 이름은 항상 "account-DARKSITE1"입니다. 또한 사용자 이름은 이메일 형식 이름을 사용해야 합니다.</block>
 </blocks>
