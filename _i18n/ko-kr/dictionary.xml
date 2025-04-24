@@ -1641,13 +1641,9 @@
   <block id="132598d89b5e84bc5af9cc03e23a4175" category="list-text">필요한 경우 방화벽 규칙을 업데이트하여 포트 443을 통해 ONTAP에서 객체 스토리지로 BlueXP 백업 및 복구 연결을 허용하고 포트 53(TCP/UDP)을 통해 스토리지 VM에서 DNS 서버로 이름 확인 트래픽을 허용합니다.</block>
   <block id="0767994029638623b0279d117f71bcc7" category="list-text">클러스터에 대해 BlueXP 백업 및 복구를 활성화하려면 먼저 AWS에서 PAYGO(Pay-as-you-Go) BlueXP Marketplace 오퍼링을 구독하거나 NetApp에서 BYOL 백업 및 복구 라이센스를 구입하여 활성화해야 합니다. 이러한 라이센스는 사용자 계정용이며 여러 시스템에서 사용할 수 있습니다.</block>
   <block id="f98bd8688162885c52860bed1262784f" category="paragraph">개인 엔드포인트와 통신하는 데 포트 80(HTTP)을 사용하는 경우 모두 설정됩니다. 지금 클러스터에서 BlueXP 백업 및 복구를 활성화할 수 있습니다.</block>
-  <block id="edff5ebe6fa75b91836dac47d7940449" category="section-title">BlueXP 백업 및 복구 데이터를 새 커넥터로 복원합니다</block>
-  <block id="815289240ead1921d67ba2c1e806a37b" category="paragraph">온-프레미스 커넥터에 심각한 장애가 발생한 경우 새 커넥터를 설치한 다음 BlueXP 백업 및 복구 데이터를 새 커넥터에 복원해야 합니다.</block>
-  <block id="eced51eb44e5e285c2a52b0b05c4b03b" category="paragraph">BlueXP 백업 및 복구 시스템을 작동 상태로 되돌리기 위해 수행해야 하는 4가지 작업은 다음과 같습니다.</block>
   <block id="6b7f0194ee0161c1ec6ef481e87fdaa2" category="list-text">BlueXP 백업 및 복구 데이터베이스를 복원합니다</block>
   <block id="a68527cebf1aaeae64bda2645985b661" category="list-text">다음 명령을 사용하여 BlueXP 백업 및 복구 MySQL DB를 복원합니다.</block>
   <block id="391b3817ffe9fe659a3a443a7fba86f2" category="list-text">다음 SQL 명령을 사용하여 BlueXP 백업 및 복구 MySQL DB가 올바르게 복원되었는지 확인합니다.</block>
-  <block id="dc79d96009c6f59868049e029c8bb68e" category="list-text">작업 환경과 관련된 StorageGRID 시스템의 세부 정보로 BlueXP 백업 및 복구 데이터베이스를 업데이트합니다. 아래와 같이 StorageGRID의 정규화된 도메인 이름과 액세스 키 및 스토리지 키를 입력해야 합니다.</block>
   <block id="119ce87fb0068eaf943265dcfa7867a2" category="section-title">BlueXP 백업 및 복구 설정을 확인합니다</block>
   <block id="703a23cc0f04926bc0f88cc7699dbb25" category="summary">BlueXP 백업 및 복구를 사용하면 사내 ONTAP 및 Cloud Volumes ONTAP 시스템에 대한 다양한 구성 설정으로 백업 정책을 생성할 수 있습니다.</block>
   <block id="9eea85cb75720c2962892ce404724c85" category="paragraph">BlueXP 백업 및 복구를 사용하면 각 작업 환경(클러스터)에 대해 고유한 스케줄로 여러 백업 정책을 생성할 수 있습니다. RPO(복구 시점 목표)가 다른 볼륨에 서로 다른 백업 정책을 할당할 수 있습니다.</block>
@@ -1846,8 +1842,6 @@
   <block id="f1a109ae8d953da8e05cf5534df6b22b" category="list-text">이제 BlueXP 백업 및 복구 UI 및 API에서 시작된 사용자 시작 백업 및 복원 작업과 이러한 진행 중인 백업 작업을 ONTAP 9.13.0 이상을 실행하는 Cloud Volumes ONTAP 시스템의 * 작업 모니터링 * 탭에서 사용할 수 있습니다. 이전 ONTAP 버전은 사용자가 시작한 작업만 표시합니다.</block>
   <block id="732b0ab66e04245a9430107793fd1d96" category="paragraph"><block ref="3422a8d7040fc7a0bf0d737d556a20c0" category="inline-link-rx"></block>.</block>
   <block id="5e8c098d325749413b23d5eba5837aad" category="doc">어두운 사이트에서 BlueXP 백업 및 복구 데이터를 복원합니다</block>
-  <block id="39be554c0f9c606fc89e879c11dfe9e9" category="paragraph">BlueXP Connector가 클라우드 공급업체에 배포되거나 인터넷에 액세스할 수 있는 자체 호스트 시스템에 구축된 SaaS 환경에서 BlueXP 백업 및 복구를 사용하는 경우 중요한 모든 BlueXP 백업 및 복구 구성 데이터가 클라우드에서 백업 및 보호됩니다. Connector에 문제가 있는 경우 새 Connector를 생성하고 작업 환경을 추가하면 백업 세부 정보가 자동으로 복원됩니다.</block>
-  <block id="71610d9ba03d16f64930e18ad93ed1ff" category="paragraph">다음 두 가지 유형의 데이터가 백업됩니다.</block>
   <block id="3f90954724de2ab33270c2e29ef44d4c" category="list-text">BlueXP 백업 및 복구 데이터베이스 - 모든 볼륨, 백업 파일, 백업 정책 및 구성 정보 목록이 포함되어 있습니다.</block>
   <block id="ae429398e7a8cba2d2c57d308c8ed88a" category="list-text">인덱싱된 카탈로그 파일 - 복원하려는 볼륨 데이터를 찾을 때 검색 및 복원 기능에 사용되는 자세한 인덱스를 포함합니다.</block>
   <block id="33cc4fba89a0e27990f9826b52a31440" category="admonition">볼륨 데이터는 BlueXP 백업 및 복구 데이터베이스 또는 인덱싱된 카탈로그 파일에 포함되지 않습니다.</block>
@@ -3420,7 +3414,6 @@ ifdef::AWS[]</block>
   <block id="e5c31b44cc452f945aec38b328ab97da" category="section-title">기존 클라우드 백업 정책을 편집합니다</block>
   <block id="d3b3f333837b21ed08dfd04c10e48346" category="section-title">새 클라우드 백업 정책을 추가합니다</block>
   <block id="6c08aad63d31acac8bc5248c2bfd34f2" category="paragraph">클러스터에서 ONTAP 9.11.1 이상을 사용하는 경우 _DataLock 및 랜섬웨어 보호 _ 을(를) 구성하여 삭제와 랜섬웨어 공격으로부터 백업을 보호하도록 선택할 수 있습니다. _DataLock_ 은(는) 백업 파일을 수정 또는 삭제하지 못하도록 보호하고 _Ransomware Protection_ 은(는) 백업 파일을 검사하여 랜섬웨어 공격의 증거를 찾습니다.</block>
-  <block id="427911e9853111f28c07f559c3b84c6a" category="paragraph">인터넷 액세스가 없는 사이트에서 BlueXP 백업 및 복구를 사용하는 경우(_private mode_라고 함) BlueXP 백업 및 복구 구성 데이터는 백업이 저장되는 StorageGRID 또는 ONTAP S3 버킷에 백업됩니다. 향후 BlueXP 커넥터 호스트 시스템에 문제가 있을 경우 새 커넥터를 배포하고 중요한 BlueXP 백업 및 복구 데이터를 복원할 수 있습니다.</block>
   <block id="27b14a69b7d1dfde3096980cc202af91" category="sidebar">데이터 보호 범위에 대한 보고서를 생성합니다</block>
   <block id="c1d2d81968b4f89d4185d4baf66ba468" category="sidebar">ONTAP 데이터를 클라우드에 백업합니다</block>
   <block id="4c371e6c984a858ae1f9d8d607a2cfd4" category="sidebar">ONTAP 백업 파일을 관리합니다</block>
@@ -3777,7 +3770,6 @@ ifdef::AWS[]</block>
   <block id="e933dec5f784259760ab3c9400fb8e0b" category="section-title">타사 Wasabi 개체 저장소 지원(Preview)</block>
   <block id="57a83bf4b6d8f755d141ebf2bb282ed3" category="paragraph">BlueXP  백업 및 복구는 이제 Wasabi에 중점을 두고 타사 오브젝트 스토어까지 지원을 확장하고 있습니다. 이 새로운 미리 보기 기능을 사용하면 백업 및 복구 요구에 S3 호환 오브젝트 저장소를 활용할 수 있습니다.</block>
   <block id="da21b58c44ce1975cb8550ec689df5b3" category="section-title">Wasabi 시작하기</block>
-  <block id="f3afa8b48aa14a1da6a21d82ad964f5d" category="paragraph">이 기능을 사용하려면 BlueXP  UI 내에서 플래그를 활성화해야 합니다. 그런 다음 타사 오브젝트 저장소에 대한 연결 정보를 입력하고 백업 및 복구 워크플로에 통합할 수 있습니다.</block>
   <block id="9b6d9b582a741bc832b2557c16d31b09" category="section-title">미리보기 모드 제한</block>
   <block id="fdf10a1d090d444123d00414152f7943" category="paragraph">이 기능이 미리 보기에 있는 동안 다음 제한 사항을 고려하십시오.</block>
   <block id="7ebc42140a656312f7a985f14e55f3a6" category="list-text">BYOB(Bring Your Own Bucket)는 지원되지 않습니다.</block>
@@ -3789,4 +3781,25 @@ ifdef::AWS[]</block>
   <block id="f98d5407ffd34a829996a4bb36d6e582" category="paragraph">이 미리 보기를 진행하는 동안 이 새로운 기능을 살펴보고 전체 기능이 배포되기 전에 타사 개체 저장소와의 통합에 대한 피드백을 제공하는 것이 좋습니다.</block>
   <block id="c2539a9855f013822344851d0fcb1184" category="admonition">BlueXP  백업 및 복구는 FlexCache 볼륨의 백업을 지원하지 않습니다.</block>
   <block id="801c0fa0d304ca22d8afec06189bcf93" category="section-title">2025년 4월 16일</block>
+  <block id="0c9e9a971e295d08b39001ef71ddfca9" category="paragraph">타사 스토리지를 개체 저장소로 사용하려면 BlueXP  커넥터 내에서 플래그를 설정해야 합니다. 그런 다음 타사 오브젝트 저장소에 대한 연결 정보를 입력하고 백업 및 복구 워크플로에 통합할 수 있습니다.</block>
+  <block id="09c224692df6f6a3d6045847d63b5e86" category="list-text">SSH를 사용하여 커넥터에 연결합니다.</block>
+  <block id="d4abc9f6a0f7759f15272b587badc33b" category="list-text">BlueXP  백업 및 복구 CBS 서버 컨테이너로 이동합니다.</block>
+  <block id="e5b842eef10876fd5aec5be48ecec9b3" category="list-text">VIM 또는 다른 편집기를 통해 폴더 내에서 파일을<block ref="2245023265ae4cf87d02c8b6ba991139" prefix=" " category="inline-code"></block> 엽니다<block ref="a4f5e59b80d929d30eba10ee00d7450d" prefix=" " category="inline-code"></block>.</block>
+  <block id="14ee6952f3be48ef4395f003ecfdac2c" category="list-text">modify<block ref="05e4358c747c33d991f9217e4b509fcc" prefix=" " category="inline-code"></block>:false to:true로<block ref="05e4358c747c33d991f9217e4b509fcc" prefix=" " category="inline-code"></block> 변경합니다.</block>
+  <block id="08c4f5aee4f8b6cabdcd558ad1452ad2" category="list-text">변경 사항을 저장합니다.</block>
+  <block id="4b891dca63ef1ab4f9daab8d3bd76368" category="list-text">컨테이너에서 나갑니다.</block>
+  <block id="3dc3e984a5412f225aea00167c9309bf" category="list-text">BlueXP  백업 및 복구 CBS 서버 컨테이너를 다시 시작합니다.</block>
+  <block id="15c66d710af89e601163f082e2d62e63" category="paragraph">컨테이너가 다시 켜지면 BlueXP  백업 및 복구 UI를 엽니다. 백업을 시작하거나 백업 전략을 편집하면 AWS, Microsoft Azure, Google Cloud, StorageGRID 및 ONTAP S3의 다른 백업 공급자와 함께 새로운 공급업체 "S3 호환"이 표시됩니다.</block>
+  <block id="78097a3e132faf1442e6668a39b8040c" category="inline-link-macro">타사 오브젝트 저장소 지원</block>
+  <block id="b1da0655bbf0fa38d6ccffac2f8f51db" category="admonition">BlueXP  백업 및 복구는 미리 보기 옵션으로 타사 오브젝트 저장소에 대한 지원을 확장합니다. 이 미리 보기 기능을 사용하면 백업 및 복구 요구에 S3 호환 오브젝트 저장소를 활용할 수 있습니다. 이 미리 보기 기능을 사용하는 방법에 대한 자세한 <block ref="01bf6a646623e07aa807ece43107b9ce" category="inline-link-macro-rx"></block>내용은 섹션을 참조하십시오.</block>
+  <block id="b60143d8607e2a12a97d5dc98902b3a3" category="paragraph">인터넷 액세스가 없는 사이트에서 BlueXP 백업 및 복구를 사용하는 경우(_private mode_라고 함) BlueXP 백업 및 복구 구성 데이터는 백업이 저장되는 StorageGRID 또는 ONTAP S3 버킷에 백업됩니다. BlueXP  커넥터 호스트 시스템에 문제가 있는 경우 새 커넥터를 배포하고 중요한 BlueXP  백업 및 복구 데이터를 복원할 수 있습니다.</block>
+  <block id="400d95f0927e7eaac4a93498115f8b4f" category="paragraph">BlueXP  Connector가 클라우드 공급자로 구축된 SaaS 환경 또는 인터넷에 연결된 자체 호스트 시스템에서 BlueXP  백업 및 복구를 사용하면 중요한 모든 BlueXP  백업 및 복구 구성 데이터가 클라우드에 백업 및 보호됩니다. Connector에 문제가 있는 경우 새 Connector를 생성하고 작업 환경을 추가하면 백업 세부 정보가 자동으로 복원됩니다.</block>
+  <block id="28f81c5bbd7730901f36546c0e51e06f" category="paragraph">백업되는 데이터 유형에는 두 가지가 있습니다.</block>
+  <block id="7aa13416e899895bea151695a08fc22d" category="section-title">BlueXP  백업 및 복구 데이터를 새 BlueXP  커넥터로 복원합니다</block>
+  <block id="11c11cb03c79f4af018caa66bf0c66d4" category="paragraph">온-프레미스 BlueXP  커넥터에 심각한 오류가 발생한 경우 새 커넥터를 설치한 다음 BlueXP  백업 및 복구 데이터를 새 커넥터로 복원해야 합니다.</block>
+  <block id="6c9913da2722f6c96e97b9d6aa37bb46" category="paragraph">BlueXP  백업 및 복구 시스템을 작동 상태로 되돌리려면 다음 작업을 수행해야 합니다.</block>
+  <block id="da2ba8762d0dcb78945a22c9a375fffa" category="inline-link">DarkSite Cloud Backup: MySQL 및 인덱스화된 카탈로그 백업 및 복원</block>
+  <block id="bb10a63044b830cc42091d93b78fd668" category="paragraph">다음 정보는 BlueXP  3.9.xx부터 개인 모드 설치에 적용됩니다. 이전 버전의 경우 다음 절차를<block ref="2da286ce66fc5078574abb0f7864085c" category="inline-link-rx"></block> 따르십시오.</block>
+  <block id="e29798cefe7dc354983bc30c2c9fccdf" category="paragraph">IP 주소, 사용자 이름 및 암호는 사용자 지정 값이지만 계정 이름은 그렇지 않습니다. 계정 이름은 항상 "account-DARKSITE1"입니다.</block>
+  <block id="2decbd35e1c4f4abc73df06a5256970a" category="list-text">BlueXP  백업 및 복구 데이터베이스를 작업 환경과 연결된 StorageGRID 시스템의 세부 정보로 업데이트합니다. 아래와 같이 StorageGRID의 정규화된 도메인 이름과 액세스 키 및 스토리지 키를 입력해야 합니다.</block>
 </blocks>
