@@ -4,7 +4,7 @@ permalink: task-manage-vm-data-in-cloud.html
 keywords: manage backups, virtual machines, view datastores, view virtual machines, edit 
 summary: 데이터 저장소와 가상 머신을 보고 VMware vSphere 인스턴스용 SnapCenter 플러그인을 편집할 수 있습니다. 
 ---
-= 데이터 저장소 및 가상 머신 데이터 보호 관리
+= BlueXP 백업 및 복구를 통해 데이터 저장소 및 가상 머신 데이터의 보호를 관리하세요
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 데이터 저장소와 가상 머신을 보고 VMware vSphere 인스턴
 
 
 [role="lead"]
-데이터를 백업 및 복원하기 전에 정책, 데이터 저장소 및 가상 시스템을 볼 수 있습니다. 데이터베이스, 정책 또는 리소스 그룹의 변경에 따라 BlueXP UI에서 업데이트를 볼 수 있습니다.
+BlueXP 백업 및 복구를 사용하면 데이터를 백업하고 복원하기 전에 정책, 데이터 저장소 및 가상 머신을 볼 수 있습니다. 데이터베이스, 정책 또는 리소스 그룹의 변경에 따라 BlueXP UI에서 업데이트를 볼 수 있습니다.
 
 
 

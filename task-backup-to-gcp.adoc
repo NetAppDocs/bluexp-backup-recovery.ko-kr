@@ -4,7 +4,7 @@ permalink: task-backup-to-gcp.html
 keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, gcp, google cloud, back up volumes, cloud backup, bluexp, bluexp backup and recovery 
 summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 Google Cloud 스토리지로 볼륨 데이터 백업을 시작하십시오. 
 ---
-= Cloud Volumes ONTAP 데이터를 Google 클라우드 스토리지에 백업합니다
+= BlueXP 백업 및 복구를 사용하여 Cloud Volumes ONTAP 데이터를 Google Cloud Storage에 백업합니다.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 G
 
 
 [role="lead"]
-몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 Google 클라우드 스토리지로 볼륨 데이터 백업을 시작하십시오.
+BlueXP 백업 및 복구에서 몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 Google Cloud Storage로 볼륨 데이터를 백업하세요.
 
 
 
@@ -74,7 +74,7 @@ Google Cloud Storage에 볼륨을 백업하기 전에 다음 요구 사항을 �
 image:diagram_cloud_backup_cvo_google.png["BlueXP 백업 및 복구가 백업 파일이 있는 소스 시스템 및 대상 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다."]
 
 지원되는 ONTAP 버전:: 최소 ONTAP 9.8, ONTAP 9.8P13 이상이 권장됩니다.
-지원되는 GCP 지역:: BlueXP 백업 및 복구는 모든 GCP 지역에서 지원됩니다 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP가 지원되는 경우"^].
+지원되는 GCP 지역:: BlueXP 백업 및 복구는 모든 GCP 지역에서 지원됩니다.
 GCP 서비스 계정:: Google Cloud Project에 사용자 지정 역할을 가진 서비스 계정이 있어야 합니다. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-creating-gcp-service-account.html["서비스 계정을 만드는 방법에 대해 알아봅니다"^]..
 
 

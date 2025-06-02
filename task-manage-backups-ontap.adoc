@@ -4,7 +4,7 @@ permalink: task-manage-backups-ontap.html
 keywords: cloud backup, cloud backup service, backup schedule, change schedule, change backup schedule, modify schedule, modify backup schedule, retention, backup retention, delete, delete backups, deleting, deleting backups, disable, disable backups, turn off backups, disable cloud backup, turn off cloud backup, bluexp 
 summary: 백업 일정을 변경하고, 새 백업 정책을 만들고, 볼륨 백업을 활성화/비활성화하고, 백업을 일시 중지하고, 백업을 삭제하는 등 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다. 여기에는 스냅샷 복사본, 복제된 볼륨 및 오브젝트 스토리지의 백업 파일을 포함한 모든 유형의 백업이 포함됩니다. 
 ---
-= ONTAP 시스템의 백업을 관리합니다
+= BlueXP 백업 및 복구를 통해 ONTAP 시스템의 백업을 관리하세요
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 백업 일정을 변경하고, 새 백업 정책을 만들고, 볼륨 �
 
 
 [role="lead"]
-백업 일정을 변경하고, 볼륨 백업을 활성화/비활성화하고, 백업을 일시 중지하고, 백업을 삭제하는 등 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다. 여기에는 스냅샷 복사본, 복제된 볼륨 및 오브젝트 스토리지의 백업 파일을 포함한 모든 유형의 백업이 포함됩니다.
+BlueXP 백업 및 복구를 사용하면 백업 일정 변경, 볼륨 백업 활성화/비활성화, 백업 일시 중지, 백업 삭제 등을 통해 Cloud Volumes ONTAP 및 온프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다. 여기에는 스냅샷 복사본, 복제된 볼륨 및 오브젝트 스토리지의 백업 파일을 포함한 모든 유형의 백업이 포함됩니다.
 
 
 CAUTION: 스토리지 시스템이나 클라우드 제공업체 환경에서 직접 백업 파일을 관리하거나 변경하지 마십시오. 이로 인해 파일이 손상되어 지원되지 않는 구성이 발생할 수 있습니다.

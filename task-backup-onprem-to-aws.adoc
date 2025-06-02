@@ -4,7 +4,7 @@ permalink: task-backup-onprem-to-aws.html
 keywords: backing up, back up, backup, backup on-prem ontap, on-premises, back up volumes, cloud backup, aws, aws s3, amazon s3, govcloud, government 
 summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Amazon S3 클라우드 스토리지로 볼륨 데이터 백업을 시작하십시오. 
 ---
-= 사내 ONTAP 데이터를 Amazon S3에 백업합니다
+= BlueXP 백업 및 복구를 사용하여 온프레미스 ONTAP 데이터를 Amazon S3에 백업하세요.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Amazon S
 
 
 [role="lead"]
-몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 보조 스토리지 시스템 및 Amazon S3 클라우드 스토리지로 볼륨 데이터 백업을 시작하십시오.
+온프레미스 ONTAP 시스템의 볼륨 데이터를 보조 스토리지 시스템과 Amazon S3 클라우드 스토리지로 백업하려면 BlueXP 백업 및 복구에서 몇 가지 단계를 완료하세요.
 
 
 NOTE: "사내 ONTAP 시스템"에는 FAS, AFF 및 ONTAP Select 시스템이 포함됩니다.
@@ -144,7 +144,7 @@ AWS 및 BlueXP의 라이센스 요구 사항을 확인해야 합니다.
 
 * 지원되는 지역 *
 
-모든 지역의 사내 시스템에서 Amazon S3로 백업을 생성할 수 있습니다 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP가 지원되는 경우"^]AWS GovCloud 지역 포함. 서비스를 설정할 때 백업을 저장할 지역을 지정합니다.
+AWS GovCloud 지역을 포함한 모든 지역의 온프레미스 시스템에서 Amazon S3로 백업을 생성할 수 있습니다. 서비스를 설정할 때 백업을 저장할 지역을 지정합니다.
 
 
 

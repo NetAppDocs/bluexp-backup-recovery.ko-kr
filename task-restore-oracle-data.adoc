@@ -4,7 +4,7 @@ permalink: task-restore-oracle-data.html
 keywords: restore, Azure, Amazon Web services, Oracle database 
 summary: 클라우드에서 사내 SnapCenter 서버로 Oracle 데이터베이스를 복원할 수 있습니다. 
 ---
-= Oracle 데이터베이스를 복원합니다
+= BlueXP 백업 및 복구를 사용하여 Oracle 데이터베이스 복원
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 클라우드에서 사내 SnapCenter 서버로 Oracle 데이터베이�
 
 
 [role="lead"]
-Oracle 데이터베이스를 원래 위치 또는 대체 위치로 복구할 수 있습니다. RAC 데이터베이스의 경우 데이터가 백업을 생성한 사내 노드로 복구됩니다.
+BlueXP 백업 및 복구를 사용하면 Oracle 데이터베이스를 원래 위치나 대체 위치로 복원할 수 있습니다. RAC 데이터베이스의 경우 데이터가 백업을 생성한 사내 노드로 복구됩니다.
 
 제어 파일 복원이 있는 전체 데이터베이스만 지원됩니다. 아카이브 로그가 AFS에 없는 경우 복구에 필요한 아카이브 로그가 포함된 위치를 지정해야 합니다.
 

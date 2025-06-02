@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
-  <block id="4757c134887b4b01e3ff6492a880fb07" category="doc">AWS S3 아카이브 스토리지 클래스 및 복원 검색 시간</block>
   <block id="c3da09e0a65b048cdbca120f1e6b23c9" category="paragraph">백업 파일이 처음 생성되면 S3_Standard_Storage에 저장됩니다. 이 계층은 자주 액세스하지 않는 데이터를 저장하는 데 최적화되어 있지만 이를 즉시 액세스할 수도 있습니다. 30일 후에 백업이 S3_Standard - Infrequent Access_storage 클래스로 전환되어 비용이 절감됩니다.</block>
   <block id="c84f9bdf2de63c378b4a57466b3e08bc" category="inline-link">S3 스토리지 클래스에 대해 알아보십시오</block>
   <block id="da714780eb0a2a3ce15dd3c59d515474" category="paragraph"><block ref="fa9857a8e7d680b812395a24af3527ff" category="inline-link-rx"></block>.</block>
@@ -55,8 +54,6 @@
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">단계</block>
   <block id="aadbd6cd1f8b4e9deafea8f1d6c8333c" category="list-text">커넥터가 설치된 네트워크에서 다음 연결을 사용할 수 있는지 확인합니다.</block>
   <block id="699a71169310a3553bddb7e36ecb8a5c" category="list-text">포트 443을 통해 ONTAP 클러스터 관리 LIF에 HTTPS로 연결합니다</block>
-  <block id="93aa1523e92b241e9be754ad452f4026" category="inline-link">Cloud Volumes ONTAP가 지원되는 경우</block>
-  <block id="ff3e862b2a18f8bce76ed20224f2e575" category="paragraph">모든 지역의 온프레미스 시스템에서 Azure Blob으로 백업을 생성할 수 있습니다<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>Azure Government 지역을 비롯한 모든 지역에서 사용할 수 있습니다. 서비스를 설정할 때 백업을 저장할 지역을 지정합니다.</block>
   <block id="3a580f142203677f1f0bc30898f63f53" category="inline-link">Azure를 지원합니다</block>
   <block id="ac311923d7cae9a2261e1a28ccabceeb" category="inline-link-macro">BYOL 라이센스 관리 방법에 대해 알아보십시오</block>
   <block id="39476a4d8825e098719d72ca18619ed8" category="paragraph">백업이 위치할 오브젝트 스토리지 공간에 Azure를 구독해야 합니다.</block>
@@ -161,7 +158,6 @@
   <block id="f76a9390149b62241c42efed985a431a" category="paragraph">10년 월간 LTR</block>
   <block id="9030e39f00132d583da4122532e509e9" category="paragraph">매월</block>
   <block id="da4fb5c6e93e74d3df8527599fa62642" category="paragraph">120</block>
-  <block id="834584c768066ae32da6d93ce603642d" category="doc">Azure 아카이브 계층 및 복원 검색 시간</block>
   <block id="8fb345995433b95f0008d77ee6840097" category="paragraph">백업 파일이 처음 생성될 때는 _Cool_access 계층에 저장됩니다. 이 계층은 자주 액세스하지 않는 데이터를 저장하는 데 최적화되어 있지만 필요할 때 즉시 액세스할 수 있습니다.</block>
   <block id="07e61ccfcb604b4d08fc03603677751d" category="inline-link">Azure Blob 액세스 계층에 대해 알아보십시오</block>
   <block id="e298f51ca48eff0d92cee75ca43aaa3a" category="paragraph"><block ref="ac0a406faf148be2b386c73b962697e7" category="inline-link-rx"></block>.</block>
@@ -475,7 +471,6 @@
   <block id="e30347a67bfdcb246f056cfd9aa4efbd" category="list-text">볼륨이 있는 스토리지 VM에 대해 DNS 서버가 구성되어 있어야 합니다. 자세한 내용은 를 참조하십시오<block ref="f1c08d303d78e879204468f0ff96d977" category="inline-link-rx"></block>.</block>
   <block id="3389249695ca8c10d31bf35b73b0c94e" category="inline-xref">VPC 엔드포인트 인터페이스를 설정하고 S3 인증서를 로드하는 방법을 알아보십시오.</block>
   <block id="9433d8064a183eecdc4dfa1b31b38834" category="section-title">라이센스 요구 사항을 확인합니다</block>
-  <block id="ae026b849c4275f68e7902a73ecf0632" category="paragraph">모든 지역의 사내 시스템에서 Amazon S3로 백업을 생성할 수 있습니다<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>AWS GovCloud 지역 포함. 서비스를 설정할 때 백업을 저장할 지역을 지정합니다.</block>
   <block id="95be42e50b8072b622c23cf84099c7b8" category="section-title">S3 권한 설정</block>
   <block id="0d0602824136f714807f54069c6d5a89" category="paragraph">두 가지 권한 집합을 구성해야 합니다.</block>
   <block id="e1e27de3274b6be648bacdf85d89a282" category="list-text">S3 버킷에서 데이터를 읽고 쓸 수 있도록 사내 ONTAP 클러스터에 대한 권한.</block>
@@ -494,7 +489,6 @@
   <block id="8d8630ce63e489500c1a1b11f72bee42" category="list-text">AWS에서는<block ref="d5a3b912b6075cc4f090f53976a7cdd5" category="inline-link-rx"></block> 및<block ref="b9cad212d942ecacb38ec39aea6c65ac" category="inline-link-rx"></block> 리소스가 새로운 S3 버킷에 구축됩니다.</block>
   <block id="9fece9ac1c7d50fbf1a1498b93cbeb15" category="inline-link">Google Cloud BigQuery 서비스</block>
   <block id="fedaab8c05c476a14c09d3ad41bf9a22" category="list-text">Google에서는 새로운 버킷이 배포되고<block ref="7c8e47e4f5e61b3b1d7f7769baa8100f" category="inline-link-rx"></block> 계정/프로젝트 수준에서 프로비저닝됩니다.</block>
-  <block id="5e04c7ce8120dee91a67c3f89dc435ef" category="paragraph">모든 지역의 사내 시스템에서 Google Cloud 스토리지로 백업을 생성할 수 있습니다<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>. 서비스를 설정할 때 백업을 저장할 지역을 지정합니다.</block>
   <block id="c6df30fd69d443c5f65257f03e22d182" category="cell">추가 클라우드 공급자 리소스가 필요하지 않습니다</block>
   <block id="2bb068da3540e8034049c29306ef2a17" category="list-text">Google Cloud 요구사항:</block>
   <block id="7f55f1ead15a67b08eea9e732f6ed59d" category="list-text">AWS에 저장된 백업의 경우 새로운 S3 버킷과 을 프로비저닝합니다<block ref="d5a117e0ffd0e43cc6657792905f20d6" category="inline-link-rx"></block> 및<block ref="101f211ea2a04b6a9a7d1de9342390c3" category="inline-link-rx"></block>.</block>
@@ -735,7 +729,6 @@
   <block id="9ee754e4742a85085c00a0da15114de7" category="section-title">보관 저장 설정</block>
   <block id="7efe72f6baeb19dc4e15e1feb217b66a" category="inline-image-macro">백업 정책을 생성할 때의 아카이브 정책 설정 스크린샷</block>
   <block id="bff3ba9699160e0c8d9eccbf41cf51f7" category="paragraph"><block ref="bff3ba9699160e0c8d9eccbf41cf51f7" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7e7595ef438d9d19d857be29daa1e8d2" category="list-text">인터넷 HTTP 통신을 위해 프록시 서버를 사용하지 않고 커넥터를 구성해야 합니다 *. Connector에 대해 HTTP 프록시 서버를 구성한 경우 검색 및 바꾸기 기능을 사용할 수 없습니다.</block>
   <block id="7b2b7c08da06dd437ae98c50b4ace20f" category="inline-link">필요한 권한을 복사하여 붙여넣을 수 있는 정책의 전체 JSON 형식을 봅니다</block>
   <block id="9644265a314e497bc18814e1694c3d27" category="paragraph">다음 링크에서 새로 고침 토큰을 생성해야 합니다. https://services.cloud.netapp.com/refresh-token/. 새로 고침 토큰은 사용자 토큰을 생성하는 데 사용할 영숫자 문자열입니다.</block>
   <block id="22c37949858e0a6877e1770be16db62b" category="paragraph">백업에 DataLock 및 랜섬웨어 보호를 사용하려면 StorageGRID 시스템에서 버전 11.6.0.3 이상을 실행해야 합니다.</block>
@@ -953,8 +946,6 @@
   <block id="a8db6f5de8da7da9d3f1b9e9e4dfc251" category="list-text">BlueXP 커넥터 ID가 포함된 x-agent-id를 얻습니다.</block>
   <block id="9330e7377c5511f70bfc35493714892a" category="list-text">BlueXP UI에서 * 보호 * &gt; * 백업 및 복구 * &gt; * 가상 머신 * &gt; * 설정 * &gt; * SnapCenter Plug-in for VMware vSphere * 를 클릭합니다.</block>
   <block id="8fc5a6acddf8678dc2c340b6dfae42a9" category="list-text">백업 및 복구 * &gt; * 가상 머신 * 을 클릭합니다.</block>
-  <block id="2b36d2f46a4c7d47c05352e78b2ebe53" category="doc">온프레미스 애플리케이션 데이터를 Google Cloud Platform으로 백업합니다</block>
-  <block id="b4866a33463f80d02c65e0910ff4b146" category="paragraph">정책을 만들거나 BlueXP에서 사용할 수 있는 다음 미리 정의된 정책 중 하나를 사용할 수 있습니다.</block>
   <block id="317b69f3380634b0bc0612de54205fbc" category="list-text">프로젝트 편집 * 을 클릭하고 사용하려는 프로젝트가 기본 프로젝트(커넥터 위치)와 다른 경우 새 프로젝트를 선택합니다.</block>
   <block id="ef63a877f0594c057f824f4327169a39" category="list-text">Google Cloud Platform(GCP) 및 StorageGRID를 지원하여 애플리케이션 정합성 보장 스냅샷을 백업합니다</block>
   <block id="c95623cd0395d5a6bb6105b9d32f197b" category="inline-link">BlueXP에 대한 고지 사항</block>
@@ -1106,7 +1097,6 @@
   <block id="e674451efff1f119cf056a3e852d4483" category="paragraph">이전 릴리즈에서는 데이터를 사내 ONTAP 시스템으로 복원할 때만 애그리게이트를 선택할 수 있었습니다. 이제 이 기능은 데이터를 Cloud Volumes ONTAP 시스템으로 복원할 때 작동합니다.</block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">시작하기 전에</block>
   <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">작업을 마친 후</block>
-  <block id="1d1f829431c9386d582ffb5743db4e57" category="doc">Google 아카이브 스토리지 클래스 및 복원 검색 시간</block>
   <block id="ba9d8863610ca6cf8a9d81a9d08b4ff0" category="paragraph">백업 파일이 처음 생성되면 파일이 _Standard_storage에 저장됩니다. 이 계층은 자주 액세스하지 않는 데이터를 저장하는 데 최적화되어 있지만 이를 즉시 액세스할 수도 있습니다.</block>
   <block id="ce438ee45b86179bda77bf3e35381fab" category="inline-link">Google 스토리지 클래스에 대해 알아보십시오</block>
   <block id="6ee8bcc3a0d1b2140035e4aba95e8380" category="paragraph"><block ref="75c9271cc9749f3d160922047bd03bc4" category="inline-link-rx"></block>.</block>
@@ -1378,7 +1368,6 @@
   <block id="902b0d55fddef6f8d651fe1035b7d4bd" category="cell">오류</block>
   <block id="fb902a35540ad53bda044609815ee278" category="summary">몇 가지 단계를 완료하여 사내 ONTAP 시스템의 볼륨 데이터를 NetApp StorageGRID 시스템의 오브젝트 스토리지로 백업을 시작하십시오.</block>
   <block id="4ab7d99363507ea7d2dfa59860eae018" category="summary">몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 Google Cloud 스토리지로 볼륨 데이터 백업을 시작하십시오.</block>
-  <block id="2ec8fbded5e88799ebd7fdba2189b818" category="paragraph">몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 Google 클라우드 스토리지로 볼륨 데이터 백업을 시작하십시오.</block>
   <block id="87a05d4200b00403ad79b218876c73d4" category="inline-link">Google Cloud에 Connector를 구축합니다</block>
   <block id="38d4d167f6dd9174c3535fc5c7ba4b76" category="section-title">2023년 4월 4일</block>
   <block id="40c193dda1b0a4df68695abe150f234a" category="section-title">"제한" 모드에서 Cloud Volumes ONTAP 시스템의 데이터를 클라우드로 백업하는 기능</block>
@@ -1394,7 +1383,6 @@
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">시작하기 전에</block>
   <block id="949ad3136d64be33cc1a6a67e3add3d1" category="paragraph">클라우드 공급자에 데이터 저장소 및 가상 머신 백업을 시작하기 전에 다음 요구 사항을 읽고 지원되는 구성이 있는지 확인하십시오.</block>
   <block id="9b9477e579c3b44dd623d5a6e1ea8d78" category="list-text">BlueXP</block>
-  <block id="75f480f92315c62b407d8ae1ad890f29" category="paragraph">하나 이상의 데이터 저장소를 Amazon Web Services에 백업 및 아카이브하면 스토리지 효율성과 클라우드 전환을 개선할 수 있습니다.</block>
   <block id="88e6abd4ee4f112ba359e37a218778f6" category="paragraph">데이터 저장소가 아카이브 정책에 연결되어 있는 경우 아카이브 계층을 선택할 수 있습니다. 지원되는 아카이브 계층은 Glacier 및 Glacier Deep입니다.</block>
   <block id="899494c2cbe7f443bbc4d058b8ea51a6" category="paragraph">BlueXP에서 검색할 클러스터 관리 LIF를 구성합니다. 데이터 저장소 중 하나에 작업 환경을 추가한 후 동일한 ONTAP 클러스터에 상주하는 다른 모든 데이터 저장소에 다시 사용할 수 있습니다.</block>
   <block id="b19fb0dfd78b28bc5415a7f3f4ad6a49" category="list-text">클러스터 관리 LIF의 IP 주소를 지정합니다.</block>
@@ -1407,16 +1395,12 @@
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">이 작업에 대해</block>
   <block id="ca69b8ee34e44ac66b7f0dfd3b786e9c" category="paragraph">BlueXP에서 다음과 같은 사전 정의된 정책을 사용할 수 있습니다.</block>
   <block id="7250cb0d0c1524aec805084d9f0ffc21" category="paragraph">1년 일별 LTR(장기 보존)</block>
-  <block id="8016908361c8a89e5b37a2ac87b22faa" category="paragraph">SnapCenter Plug-in for VMware vSphere 호스트를 BlueXP와 통합하여 하나 이상의 데이터 저장소를 Google Cloud Platform에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
   <block id="06ac0cb7b7615ba7b7f08032fcc97c6a" category="summary">BlueXP에서 VMware vSphere 호스트용 SnapCenter 플러그인을 등록합니다.</block>
   <block id="437ae89009b207d1aafce3d11e58f524" category="doc">VMware vSphere 호스트용 SnapCenter 플러그인을 등록합니다</block>
-  <block id="8d69a4a1581a5dfb55d085bec9816e72" category="paragraph">표시할 데이터 저장소 및 가상 시스템에 대해 BlueXP의 VMware vSphere 호스트용 SnapCenter 플러그인을 등록해야 합니다. 관리 액세스 권한이 있는 사용자만 VMware vSphere 호스트용 SnapCenter 플러그인을 등록할 수 있습니다.</block>
   <block id="ebeea6bd6cc46b0c9f463f2b01659606" category="list-text">VMware vSphere용 SnapCenter 플러그인 필드에서 VMware vSphere 호스트용 SnapCenter 플러그인의 FQDN 또는 IP 주소를 지정합니다.</block>
   <block id="463d350eb6c9887e5addb9a6561a47ad" category="list-text">포트 필드에서 VMware vSphere 호스트용 SnapCenter 플러그인이 실행되고 있는 포트 번호를 지정합니다.</block>
   <block id="1e88a362bd23950ee5a102f645348ac8" category="paragraph">VMware vSphere 호스트용 등록된 SnapCenter 플러그인을 사용하여 보호되는 모든 데이터 저장소와 가상 머신을 보려면 * 백업 및 복구 * &gt; * 가상 머신 * 을 클릭합니다.</block>
   <block id="942c9249796cf6b78c981ebf15195809" category="list-text"><block ref="942c9249796cf6b78c981ebf15195809" category="inline-link-rx"></block></block>
-  <block id="26000c50c37289d13041f03c670085a3" category="paragraph">SnapCenter Plug-in for VMware vSphere 호스트를 BlueXP와 통합하여 하나 이상의 데이터 저장소를 Microsoft Azure에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
-  <block id="11cda0a1f9099558841d0f78195d8cf6" category="paragraph">데이터를 백업 및 복원하기 전에 정책, 데이터 저장소 및 가상 시스템을 볼 수 있습니다. 데이터베이스, 정책 또는 리소스 그룹의 변경에 따라 BlueXP UI에서 업데이트를 볼 수 있습니다.</block>
   <block id="5bea9354a7049a7e639553b703f18e84" category="paragraph">사전 구성된 기본 정책을 모두 볼 수 있습니다. 이러한 각 정책에 대해 세부 정보를 볼 때 연결된 모든 정책과 가상 머신이 나열됩니다.</block>
   <block id="1c281da53a696408c46b6da9d44b27e7" category="paragraph">연결된 정책 및 가상 머신이 나열됩니다.</block>
   <block id="8ed12ef54cb1d9b3b955b96ba5173201" category="section-title">데이터 저장소 및 가상 머신 보기</block>
@@ -1425,7 +1409,6 @@
   <block id="09d402d9d90a8c43787a9b36dbc81909" category="paragraph">BlueXP에서 VMware vSphere 호스트용 SnapCenter 플러그인의 세부 정보를 편집할 수 있습니다.</block>
   <block id="8a27c524970cd13dc7b03f92b7043065" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 를 클릭하고 * 편집 * 을 선택합니다.</block>
   <block id="05c829c7b617d014c0186656453575ea" category="list-text">필요에 따라 세부 정보를 수정합니다.</block>
-  <block id="9f7b95641e24cb882e149de39743a97c" category="paragraph">VMware vSphere 호스트용 SnapCenter 플러그인을 BlueXP와 통합하여 하나 이상의 데이터 저장소를 StorageGRID에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
   <block id="42d7d856cc8f6a2f82ed10cd8356e7d2" category="inline-link">BlueXP 배포 모드에 대해 자세히 알아보십시오</block>
   <block id="d7cfe6967f3004ef3386a27fe99a4610" category="inline-link">ONTAP S3와 타겟 통합</block>
   <block id="7126662a353f79c46a7ccefe46dc4c0a" category="sidebar">ONTAP 볼륨 데이터를 보호합니다</block>
@@ -1440,26 +1423,19 @@
   <block id="a27f86f1478b6387e451780970eeec78" category="list-text">데이터베이스가 더 높은 상태이지만 복원 작업을 수행하려면 상태를 더 낮은 상태로 변경해야 하는 경우 이 확인란을 선택해야 합니다.</block>
   <block id="716078928e1b9c0191a857b90b4337aa" category="list-text">데이터베이스가 더 낮은 상태에 있지만 복원 작업을 수행하려면 상태를 더 높은 상태로 변경해야 하는 경우 확인란을 선택하지 않아도 데이터베이스 상태가 자동으로 변경됩니다.</block>
   <block id="7158dc2d775418b2ecf11a1c8944a89e" category="paragraph">아카이브 로그가 액티브 파일 시스템에 없는 경우 복구에 필요한 아카이브 로그를 포함하는 위치를 지정해야 합니다.</block>
-  <block id="534f2e4b7106b8520d0ec26b959d75eb" category="paragraph">SnapCenter Server 4.6 이상이 실행 중인 호스트는 SnapCenterAdmin 역할의 사용자만 등록할 수 있습니다. BlueXP에서 여러 SnapCenter 서버 호스트를 등록할 수 있습니다.</block>
   <block id="ec0196a677b3e7e5a33fe3bb2f94480c" category="list-text">포트 필드에서 SnapCenter 서버 호스트가 실행 중인 포트 번호를 지정합니다.</block>
   <block id="86168283148ce2a703441df7c9eebd32" category="paragraph">SnapCenter 서버와 BlueXP 간의 통신이 가능하도록 포트가 열려 있는지 확인해야 합니다.</block>
   <block id="c70d5bad4ddff9626b3f3245da8a13fc" category="list-text">커넥터 * 드롭다운에서 커넥터를 선택합니다.</block>
   <block id="3fc4d8d6036d0b597c573a49c2122c6b" category="paragraph">등록된 SnapCenter 서버 호스트를 사용하여 보호되는 모든 응용 프로그램을 보려면 * 백업 및 복원 * &gt; * 응용 프로그램 * 을 클릭합니다. 기본적으로 응용 프로그램은 매일 자정에 자동으로 검색됩니다.</block>
   <block id="fab2808b23dc2c58cebadeb8767f0c1f" category="paragraph">다음 데이터베이스는 표시되지 않습니다.</block>
-  <block id="f45093e474e81b002e0fc86bd669de92" category="paragraph">ONTAP에서 Google 클라우드 플랫폼으로 애플리케이션 데이터를 백업하려면 몇 가지 단계를 완료하십시오.</block>
   <block id="5678a20b6637895d79a33f663b42dbc2" category="paragraph">BlueXP에서 검색할 클러스터 관리 LIF를 구성합니다. 애플리케이션 중 하나에 대한 작업 환경을 추가한 후 동일한 ONTAP 클러스터에 있는 다른 모든 애플리케이션에 다시 사용할 수 있습니다.</block>
   <block id="837d3589301e8037c200010dda94b0f0" category="paragraph">BlueXP 애플리케이션 백업 및 복구는 클러스터 관리자만 지원합니다.</block>
-  <block id="0dbcf5d30fb23b988f7e09251180eac1" category="paragraph">ONTAP에서 Microsoft Azure로 애플리케이션 데이터를 백업하려면 몇 가지 단계를 완료하십시오.</block>
-  <block id="9efea5dc57ddf655c92c407f96dd1337" category="paragraph">애플리케이션 데이터를 클라우드에 백업하는 정책을 생성해야 합니다.</block>
-  <block id="301968c8dabe6b72a7e8efa9bd0258d1" category="paragraph">ONTAP에서 Amazon Web Services로 애플리케이션 데이터를 백업하려면 몇 가지 단계를 완료하십시오.</block>
-  <block id="29df1904737a953fe664af42457666a3" category="paragraph">정책 보기, 백업 보기, 데이터베이스 레이아웃, 정책 및 리소스 그룹의 변경 내용 보기, BlueXP UI의 모든 작업 모니터링을 통해 응용 프로그램 보호를 관리할 수 있습니다.</block>
   <block id="54e5caa106ba057c6767f92dd1fc9585" category="admonition">백업이 나열되는 데 걸리는 시간은 ONTAP의 기본 복제 일정에 따라 다릅니다.</block>
   <block id="131bf56dea076782b2ffcdb107f1c64d" category="list-text">Microsoft SQL Server 인스턴스의 경우 해당 인스턴스 아래에 있는 데이터베이스의 백업이 나열됩니다.</block>
   <block id="c38851ea84519272d9a64f525a014582" category="paragraph">데이터베이스에 볼륨이 추가되면 SnapCenter 서버는 정책 및 일정에 따라 새 볼륨에 스냅샷을 자동으로 레이블을 지정합니다. 이러한 새 볼륨에는 개체 저장소 끝점이 없으므로 다음 단계를 실행하여 볼륨을 새로 고쳐야 합니다.</block>
   <block id="56fbe2f096aa64edf14cf6a040364521" category="list-text">제거된 볼륨이 다른 응용 프로그램에서 사용되지 않는 경우 개체 저장소 관계를 수동으로 삭제해야 합니다.</block>
   <block id="f41d81011039cf5b858be58b20be3d6c" category="list-text">애플리케이션 인벤토리를 업데이트하면 애플리케이션의 현재 스토리지 레이아웃이 포함됩니다.</block>
   <block id="a5e6ecead112df3e4d309c64d21be613" category="paragraph">SnapCenter 정책 또는 리소스 그룹이 변경된 경우 보호 관계를 새로 고쳐야 합니다.</block>
-  <block id="6d5571dc24e5e0915d6576d87e5ac094" category="paragraph">ONTAP에서 StorageGRID로 애플리케이션 데이터를 백업하려면 몇 가지 단계를 완료하십시오.</block>
   <block id="678c7b4b57d185b0a32c6bb97f354282" category="list-text">클러스터 관리 LIF의 IP 주소를 지정합니다.</block>
   <block id="256c6643ca1c733f72685d5a161161f5" category="section-title">2023년 4월 14일</block>
   <block id="c0c906f83c940d4d16ffb433d7a368ca" category="list-text">스크립트 기반 시스템 새로 고침을 지원합니다</block>
@@ -1595,7 +1571,6 @@
   <block id="805ec627e54267e3f12d2e51de9e2a1a" category="inline-image-macro">BlueXP 백업 및 복구가 백업 파일이 있는 소스 시스템 및 대상 스토리지의 볼륨과 통신하는 방법을 보여주는 다이어그램입니다.</block>
   <block id="0466afdcc96844324ad464c4a732e684" category="paragraph"><block ref="0466afdcc96844324ad464c4a732e684" category="inline-image-macro-rx" type="image"></block></block>
   <block id="eff86eb019454391cfc891cdd043177d" category="paragraph">BlueXP 백업 및 복구 BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. <block ref="62ce7cf96b97e2e1aa800b0e35162d2f" category="inline-link-macro-rx"></block>.</block>
-  <block id="fa0e57d14b046871ace0930dbea76b89" category="list-text">BlueXP 백업 및 복구는 모든 GCP 지역에서 지원됩니다<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>.</block>
   <block id="4ef685c2962363dd871d0878a6b5088c" category="paragraph">작업 환경 마법사를 완료하여 새 Cloud Volumes ONTAP 시스템을 생성하면 BlueXP 백업 및 복구를 활성화할 수 있습니다.</block>
   <block id="58eb9d74646132f374a8cf71e9517481" category="list-text">* 서비스 *: BlueXP 백업 및 복구 서비스를 활성화된 상태로 두고 * 계속 * 을 클릭합니다.</block>
   <block id="033ea2ef069463a1ce7c46766e6c716e" category="inline-image-macro">에는 작업 환경 마법사의 BlueXP 백업 및 복구 옵션이 나와 있습니다.</block>
@@ -1617,7 +1592,6 @@
   <block id="ed001b9aa030f4df5dc01cf65e036f51" category="paragraph">Cloud Volumes ONTAP 및 BlueXP 백업 및 복구를 번들로 제공할 수 있는 연간 계약의 경우 Cloud Volumes ONTAP 작업 환경을 생성할 때 연간 계약을 설정해야 합니다. 이 옵션을 사용하면 온프레미스 데이터를 백업할 수 없습니다.</block>
   <block id="b8cc9261de49179da667ae55f7d16d20" category="paragraph"><block ref="b8cc9261de49179da667ae55f7d16d20" category="inline-image-macro-rx" type="image"></block></block>
   <block id="79f04e1dda3ae8199a87101dd28cbd95" category="paragraph">BlueXP 백업 및 복구 BYOL 라이센스의 경우, 라이센스 기간 및 용량 동안 서비스를 사용할 수 있도록 지원하는 NetApp의 일련 번호가 필요합니다. <block ref="685a1f13858a68e0a232160884c81603" category="inline-link-macro-rx"></block>. Connector 및 Cloud Volumes ONTAP 시스템이 어두운 사이트에 구축된 경우 BYOL 라이센스를 사용해야 합니다.</block>
-  <block id="a54679f8abf71edeb14ceece70928820" category="list-text">BlueXP 백업 및 복구는 모든 Azure 지역에서 지원됩니다<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>Azure Government 지역을 비롯한 모든 지역에서 사용할 수 있습니다.</block>
   <block id="c893816e7a773a744b9ed4b6a86aa940" category="paragraph">기본적으로 BlueXP 백업 및 복구는 비용 최적화를 위해 LRS(Local Redundancy)와 함께 Blob 컨테이너를 프로비저닝합니다. BlueXP 백업 및 복구가 활성화된 후 데이터가 다른 영역 간에 복제되도록 하려면 이 설정을 ZRS(Zone Redundancy)로 변경할 수 있습니다. 에 대한 Microsoft 지침을 참조하십시오<block ref="c549763665cfbb93dbccfdbf667aa0f2" category="inline-link-rx"></block>.</block>
   <block id="404ad1bc321be3b042156261e6ba2b4f" category="paragraph">BlueXP 백업 및 복구는 작업 환경 마법사에서 기본적으로 활성화됩니다. 옵션을 활성 상태로 유지해야 합니다.</block>
   <block id="4f2a0931f8313551f535951dc36ca589" category="inline-xref">기존 시스템에서 BlueXP 백업 및 복구 활성화</block>
@@ -1653,7 +1627,6 @@
   <block id="9fe2f95002b4b4815d52173b68bf9862" category="summary">데이터 저장소를 백업하는 정책을 생성합니다</block>
   <block id="38fb3153d6139974d24ba11e28a0718d" category="list-text">오브젝트 저장소에서 아카이브 스토리지로 백업을 이동하려면 ONTAP 9.10.1 이상을 실행해야 하며 Amazon Web Services 또는 Microsoft Azure가 클라우드 공급자가 되어야 합니다.</block>
   <block id="44dae527927c9be3aabaf37ba09b9068" category="admonition">데이터 저장소와 연결된 정책은 편집하거나 삭제할 수 없습니다.</block>
-  <block id="ffa1e37a2c6478ff157a0a7d25a607e9" category="doc">클라우드에서 가상 머신 데이터를 복원합니다</block>
   <block id="3eb97a71011fe0dae37080fd785e4db5" category="sidebar">가상 머신 데이터 백업 및 복원</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">새로운 소식</block>
   <block id="3daba77ab92b57915950a36f17f965c3" category="summary">BlueXP 백업 및 복구 서비스는 온프레미스와 클라우드 모두에서 NetApp ONTAP 데이터, 데이터베이스 및 가상 시스템에 효율적이고 안전하며 비용 효율적인 데이터 보호를 제공합니다. 백업은 자동으로 생성되어 퍼블릭 또는 프라이빗 클라우드 계정의 오브젝트 저장소에 저장됩니다.</block>
@@ -1664,8 +1637,6 @@
   <block id="197747cde80c31576877de78be696240" category="section-title">애플리케이션의 BlueXP 백업 및 복구 기능 향상(클라우드 네이티브)</block>
   <block id="abfdb85669faee0a0fe78a3ddd25158b" category="list-text">클라우드 네이티브 API에 맞춰 하이브리드 REST API 수정</block>
   <block id="6aed75aba7c0fd43b22d758888e056e5" category="list-text">클라우드 네이티브 Oracle 데이터베이스의 클론 복제 지원</block>
-  <block id="3a462fe0425c18b634a1f644c1b6e5b0" category="inline-link">BlueXP 백업 및 복구 및 SnapCenter를 사용한 애플리케이션 인식 백업</block>
-  <block id="d924f26cc49b9ff35abdb19f684eccab" category="list-text"><block ref="d924f26cc49b9ff35abdb19f684eccab" category="inline-link-rx"></block></block>
   <block id="ddc4eff2345788fc606fb71155e77e08" category="inline-image-macro">BlueXP 백업 및 복구가 백업 파일이 있는 사내 애플리케이션 및 대상 스토리지와 통신하는 방법을 보여주는 다이어그램입니다.</block>
   <block id="5900ca7e734dbd4ebfc5c92beb6901ad" category="paragraph"><block ref="5900ca7e734dbd4ebfc5c92beb6901ad" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ebf717b1a7acfe5b3fb0c86dacb00223" category="summary">BlueXP 백업 및 복구 서비스를 다시 시작해야 하는 경우가 있을 수 있습니다.</block>
@@ -1849,7 +1820,6 @@
   <block id="56dd14a7bf28acd20f0a0435a86d17e0" category="list-text">인덱싱된 카탈로그 백업 zip 파일을 복사합니다. 예제 파일 이름 "Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip"을 백업 위치에서 "/opt/application/NetApp/CBS" 폴더의 새 커넥터 호스트로 사용합니다.</block>
   <block id="39ba61f148a69dbb1215b6b10c98b11a" category="list-text">다음 명령을 사용하여 "Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip" 파일의 압축을 풉니다.</block>
   <block id="3b3267745861675e9a5e88b689b4cda8" category="list-text">ls * 명령을 실행하여 "catalogdb1" 폴더가 하위 폴더 아래에 "changes" 및 "snapshots"와 함께 생성되었는지 확인하십시오.</block>
-  <block id="864720dc2dde0915fefa08788be26fb4" category="paragraph">BlueXP 백업 및 복구 보고서를 사용하면 조직의 정의된 정책에 따라 중요한 데이터를 보호하고 규정 준수 요구 사항에 대한 감사를 제공할 수 있습니다.</block>
   <block id="3763c7668e8aeb422b9407d01d4e6481" category="paragraph">BlueXP 백업 및 복구 보고서를 통해 다음과 같은 작업을 수행할 수 있습니다.</block>
   <block id="1f9ab6f8211cd0f71cb927f72e9fb635" category="list-text">* 운영 가시성 *: 데이터 보호, 백업 성공률 및 비즈니스 요구에 따른 백업 윈도우 정렬과 관련된 서비스 수준 계약을 모니터링합니다.</block>
   <block id="8d1b84001f281cc291dc64f6b86aabe5" category="list-text">* 규정 준수 및 감사 *: 지속적인 규정 준수 모니터링을 위해 내부 및 외부 감사 프로세스에서 운영 및 인벤토리 보고서를 사용합니다.</block>
@@ -1964,7 +1934,6 @@
   <block id="cfca0342d906d31ff717aa42ed391bcb" category="list-text">소스 스토리지에 공간이 충분하지 않거나 소스 스토리지가 다운된 경우 * 스토리지 위치 변경 * 을 선택합니다.</block>
   <block id="d0aa9f6dc927738d3c07012b7c8b6e03" category="list-text">스토리지 매핑 페이지에서 오브젝트 저장소에서 복원된 데이터가 저장될 대체 스토리지 위치 세부 정보를 지정합니다.</block>
   <block id="d3cb840d450fe62742c860611a591afe" category="paragraph">이 작업은 지정된 호스트에서 선택한 백업의 스토리지 내보내기만 수행합니다. 파일 시스템을 수동으로 마운트하고 데이터베이스를 불러와야 합니다. 볼륨을 사용한 후에는 스토리지 관리자가 ONTAP 클러스터에서 볼륨을 삭제할 수 있습니다.</block>
-  <block id="822c8fbde1e65209f07f97e6791263d6" category="paragraph">Oracle 데이터베이스를 원래 위치 또는 대체 위치로 복구할 수 있습니다. RAC 데이터베이스의 경우 데이터가 백업을 생성한 사내 노드로 복구됩니다.</block>
   <block id="a91a41f2fc1f089d3e56a267d2a78fd0" category="list-text">복원 옵션 페이지에서 데이터베이스 파일을 복원할 위치를 지정합니다.</block>
   <block id="c69c60692525e502b22a94d63eaccc46" category="paragraph">원래 위치로 복구하려는 경우</block>
   <block id="34c4d04aa0f3533b502e02796da12987" category="list-text">원래 위치로 복원 * 을 선택합니다.</block>
@@ -1989,7 +1958,6 @@
   <block id="fa150600eb6c4639a0aefa969e7b726b" category="list-text">아마존 웹 서비스를 사용하는 경우 ONTAP 9.10.1 이상을 사용해야 합니다</block>
   <block id="4f4531e8c58b9c676a23551cf59b1c06" category="list-text">Microsoft Azure를 사용하는 경우 ONTAP 9.10.1 이상을 사용해야 합니다</block>
   <block id="5da22ea309211ebae6d45637520d568b" category="list-text">Google Cloud를 사용하는 경우 ONTAP 9.12.1 이상을 사용해야 합니다</block>
-  <block id="9bfef37a59ea84d9474c85061ccb5c6d" category="paragraph">SQL Server 데이터베이스를 원래 위치 또는 대체 위치로 복원할 수 있습니다.</block>
   <block id="cc2de7a3d6d06ec140e204ae05b8a500" category="admonition">SFR(Single File Restore), 로그 백업 복구 및 가용성 그룹의 재시드는 지원되지 않습니다.</block>
   <block id="7bc6d5a8a28607c76af17a625855d538" category="list-text">대상 호스트 페이지에서 호스트 이름을 선택하고 데이터베이스 이름(선택 사항)을 제공하며 인스턴스를 선택하고 복구 경로를 지정합니다.</block>
   <block id="d475931bfdebb1c87cf700b06709d879" category="paragraph">일시적으로 다른 저장소로 복구한 다음 복원된 파일을 대체 위치로 복사하려는 경우</block>
@@ -2053,8 +2021,6 @@ cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 G
   <block id="3d61f1dcef482f1c526370542b798e50" category="paragraph">VMware vSphere 호스트용 SnapCenter 플러그인과 연결된 모든 데이터 저장소 및 가상 시스템은 보호되지 않습니다.</block>
   <block id="6a45c59dd3a525bee9f5d9c555c1ff8a" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> VMware vSphere 호스트용 SnapCenter 플러그인에 해당하는 * 등록 취소 * 를 클릭합니다.</block>
   <block id="bdf7101606af29df0cbed18a5171b7c0" category="summary">백업 일정을 변경하고, 새 백업 정책을 만들고, 볼륨 백업을 활성화/비활성화하고, 백업을 일시 중지하고, 백업을 삭제하는 등 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다. 여기에는 스냅샷 복사본, 복제된 볼륨 및 오브젝트 스토리지의 백업 파일을 포함한 모든 유형의 백업이 포함됩니다.</block>
-  <block id="d04ac75da006cef6da314dc3097ce2f8" category="doc">ONTAP 시스템의 백업을 관리합니다</block>
-  <block id="22167ead98802172cb14bf487326a7c1" category="paragraph">백업 일정을 변경하고, 볼륨 백업을 활성화/비활성화하고, 백업을 일시 중지하고, 백업을 삭제하는 등 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다. 여기에는 스냅샷 복사본, 복제된 볼륨 및 오브젝트 스토리지의 백업 파일을 포함한 모든 유형의 백업이 포함됩니다.</block>
   <block id="f60a029ad87a896d979011a7be077ccc" category="admonition">스토리지 시스템이나 클라우드 제공업체 환경에서 직접 백업 파일을 관리하거나 변경하지 마십시오. 이로 인해 파일이 손상되어 지원되지 않는 구성이 발생할 수 있습니다.</block>
   <block id="dd6f4e2c97bf14c09a3cb569f35cae7c" category="section-title">작업 환경의 볼륨 백업 상태를 봅니다</block>
   <block id="1ede887179a4e037eadaa01d9f069324" category="paragraph">현재 백업 중인 모든 볼륨의 목록을 Volumes Backup Dashboard에서 볼 수 있습니다. 여기에는 스냅샷 복사본, 복제된 볼륨 및 오브젝트 스토리지의 백업 파일을 포함한 모든 유형의 백업이 포함됩니다. 현재 백업 중이 아닌 작업 환경의 볼륨을 볼 수도 있습니다.</block>
@@ -2168,7 +2134,6 @@ cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 G
   <block id="b824bc22ee9f92a715b2811c4e959405" category="list-text">볼륨 * 탭에서 을 클릭합니다 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 소스 볼륨에 대해 * 백업 * &gt; * 관계 삭제 * 를 선택합니다.</block>
   <block id="4e1290c8ff92d5a27a050ca094bd7f4d" category="section-title">작업 환경의 BlueXP 백업 및 복구를 비활성화합니다</block>
   <block id="8bb230dbc28c95a8f2687efaf8ca64f3" category="section-title">작동 환경의 BlueXP 백업 및 복구 등록 취소</block>
-  <block id="3618be0c223951c8ad19bcd0eb9d03c4" category="doc">Cloud Volumes ONTAP 데이터를 Google 클라우드 스토리지에 백업합니다</block>
   <block id="420f5c27f3e2bcd031d764f5cda9d052" category="list-text">Cloud Volumes ONTAP 9.8 이상을 GCP에서 실행하고 있습니다(ONTAP 9.8P13 이상 권장).</block>
   <block id="0ef0534049f6e4c235970cfab1429510" category="paragraph">이미 GCP 지역에 Connector를 구축한 경우, 모두 설정됩니다. 그렇지 않은 경우 Cloud Volumes ONTAP 데이터를 Google 클라우드 스토리지에 백업하려면 GCP에 BlueXP 커넥터를 설치해야 합니다. 커넥터는 전체 인터넷 액세스("표준 모드")가 있는 사이트나 제한된 인터넷 연결("제한 모드")으로 설치할 수 있습니다.</block>
   <block id="eee6483ebca29b603119b832ad33fa66" category="paragraph"><block ref="eb1f9e92049de9d40aa33c3c567550dc" category="inline-xref-macro-rx"></block></block>
@@ -2272,8 +2237,6 @@ cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 G
   <block id="a2d11ef9b285b7636b5b7612d8a82079" category="list-text">백업 및 복구 활성화 마법사에서 * API 요청 보기 * 를 선택합니다.</block>
   <block id="aeca4594f6e55fcbfbfb9d9afb369365" category="list-text">명령을 클립보드로 복사하려면 * 복사 * 아이콘을 선택합니다.</block>
   <block id="1ea06868db269f34b7f5ba14e699c11f" category="summary">몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 보조 스토리지 시스템 및 Google 클라우드 스토리지로 볼륨 데이터 백업을 시작하십시오.</block>
-  <block id="8e4bf073edf59649a0f460fa772a07bb" category="doc">사내 ONTAP 데이터를 Google 클라우드 스토리지에 백업합니다</block>
-  <block id="0565cf043978c615b1f8f7cad9c764d4" category="paragraph">몇 가지 단계를 완료하여 사내 운영 ONTAP 시스템에서 보조 스토리지 시스템 및 Google 클라우드 스토리지로 볼륨 데이터 백업을 시작하십시오.</block>
   <block id="0c0bf2caafe0a0bcf95f58c110265658" category="admonition">"사내 ONTAP 시스템"에는 FAS, AFF 및 ONTAP Select 시스템이 포함됩니다.</block>
   <block id="8679d305959a742634fdc19258f41c4e" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 사용할 연결 방법을 식별합니다</block>
   <block id="8ec119f44cc76251903e9141fc7c49c4" category="paragraph"><block ref="d61bfca6e72207060fa33f0ff3f8d293" category="inline-xref-macro-rx"></block>.</block>
@@ -2351,7 +2314,6 @@ cmdlet과 함께 사용할 수 있는 매개 변수와 이에 대한 설명은 G
   <block id="2431dbeea281025f7c870739a8d4fd06" category="paragraph">AWS 및 BlueXP의 라이센스 요구 사항을 모두 확인해야 합니다.</block>
   <block id="734ae6792aa130ab1f8ab369f6b65f98" category="paragraph">운영 및 2차 스토리지 시스템이 ONTAP 버전 및 네트워킹 요구 사항을 충족하는지 확인합니다.</block>
   <block id="b020181b7079f2f8f6eb833171fd1a70" category="paragraph">커넥터는 전체 또는 제한된 인터넷 액세스("표준" 또는 "제한된" 모드)가 있는 AWS 지역에 설치해야 합니다.<block ref="30d3d302b7eb1435cdb8dd90d49c0322" category="inline-link-rx"></block>.</block>
-  <block id="79f4595ef857cd7fe8a1592a47b43578" category="list-text">BlueXP 백업 및 복구는 모든 AWS 지역에서 지원됩니다<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>AWS GovCloud 지역 포함.</block>
   <block id="9feadd99082c13ad518a2f8f13eaa66e" category="list-text">클라우드 공급자로 * Amazon Web Services * 를 선택하고 단일 노드 또는 HA 시스템을 선택합니다.</block>
   <block id="9d3299c9d0bd79be7be2abc583954654" category="list-text">서비스 페이지에서 서비스를 활성 상태로 두고 * 계속 * 을 선택합니다.</block>
   <block id="0052b2a763b3da3faf0a7621ac750280" category="paragraph">백업에 대한 AWS 대상이 Canvas에서 작업 환경으로 존재하는 경우 ONTAP 클러스터를 AWS 오브젝트 스토리지로 끌 수 있습니다.</block>
@@ -2444,7 +2406,6 @@ GCP에서 BlueXP는 Google Cloud Storage 버킷을 위한 저장소 계정이 �
   <block id="2ad2934a6b663d3e1150684467ab796f" category="list-text">디렉토리/폴더 복구는 현재 복제 및/또는 로컬 스냅샷에서 지원되지 않습니다.</block>
   <block id="7766a2f89be98923b575fe6eb519d31e" category="paragraph">이 설정은 작업 환경의 볼륨에 대해 구성할 수 있는 다른 복제 관계에 할당된 대역폭에 영향을 주지 않습니다.</block>
   <block id="861cb48bf82afb2d1addc6ef6c8ff905" category="doc">사내 ONTAP 데이터를 StorageGRID에 백업합니다</block>
-  <block id="1c217460a8591d40515e5ac52003a8a3" category="paragraph">몇 가지 단계를 완료하여 사내 운영 ONTAP 시스템에서 보조 스토리지 시스템으로 볼륨 데이터를 백업하고 NetApp StorageGRID 시스템의 오브젝트 스토리지로 백업을 시작하십시오.</block>
   <block id="78cd41832e44ff3412f34a5c7037262b" category="paragraph">공용 인터넷을 통해 온-프레미스 ONTAP 클러스터를 StorageGRID에 직접 연결하는 방법 또는 VPN을 사용하고 트래픽을 전용 VPC 엔드포인트 인터페이스를 통해 StorageGRID로 라우팅할지 여부를 검토합니다.</block>
   <block id="d311cb365e159296336d1969d8b3eaa1" category="paragraph">StorageGRID 및 BlueXP의 라이센스 요구 사항을 모두 확인해야 합니다.</block>
   <block id="eb0c38f90fc27e7262d8f96bbee133fa" category="paragraph">BlueXP에서 ONTAP 클러스터를 검색하고, 클러스터가 최소 요구 사항을 충족하는지 확인하고, 클러스터를 StorageGRID에 연결할 수 있도록 네트워크 설정을 사용자 지정합니다.</block>
@@ -2474,8 +2435,6 @@ GCP에서 BlueXP는 Google Cloud Storage 버킷을 위한 저장소 계정이 �
   <block id="1f56b8f69150cdfb9829cf942c51a8d3" category="list-text">* 퍼블릭 클라우드로 계층 백업 *: 백업을 계층화할 클라우드 공급자를 선택하고 공급자 세부 정보를 입력합니다.</block>
   <block id="b9cc781dc30db6bd9fb4cf5550c741f4" category="paragraph">새 StorageGRID 클러스터를 선택하거나 생성합니다. BlueXP에서 검색할 수 있도록 StorageGRID 클러스터를 생성하는 방법에 대한 자세한 내용은 을 참조하십시오<block ref="babf3072d9403ab5e1ffb9e4bb9a27cb" category="inline-link-rx"></block>.</block>
   <block id="9bdfbf10688e2b38e82b1ddeb1a0af32" category="paragraph">BlueXP 백업 및 복구는 볼륨의 초기 백업을 수행하기 시작합니다. 복제된 볼륨 및 백업 파일의 기본 전송에는 소스 데이터의 전체 복사본이 포함됩니다. 후속 전송에는 스냅샷 복사본에 포함된 운영 스토리지 데이터의 차등 복사본이 포함됩니다.</block>
-  <block id="c6f935fce64d135ae3250df1beb9c2aa" category="doc">온프레미스 ONTAP 데이터를 Azure Blob 저장소에 백업</block>
-  <block id="b26f7b31288fff69c8d3c7065e19c5d4" category="paragraph">몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 보조 스토리지 시스템 및 Azure Blob 저장소로 볼륨 데이터 백업을 시작하십시오.</block>
   <block id="57baa3c287eb66f99ca7a7281024c30a" category="paragraph">Azure VNET 또는 구내에 이미 Connector가 배포되어 있는 경우 모두 설정됩니다. 그렇지 않은 경우 ONTAP 데이터를 Azure Blob 저장소에 백업하려면 BlueXP 커넥터를 만들어야 합니다. 또한 Azure에 연결할 수 있도록 커넥터의 네트워크 설정을 사용자 지정해야 합니다.</block>
   <block id="9175d0745db62701ca4f4b1f795bc78e" category="paragraph">BlueXP에서 ONTAP 클러스터를 검색하고, 클러스터가 최소 요구 사항을 충족하는지 확인하고, 클러스터가 Azure에 연결될 수 있도록 네트워크 설정을 사용자 지정합니다.</block>
   <block id="45b0dc574541901afc9c84c2a03ebe28" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> Azure Blob을 백업 타겟으로 준비합니다</block>
@@ -2515,7 +2474,6 @@ GCP에서 BlueXP는 Google Cloud Storage 버킷을 위한 저장소 계정이 �
   <block id="6ec4c60eba80c2599e1ec50a2128ddfe" category="list-text">필요에 따라 이전에 구성한 Azure 개인 끝점을 사용할지 여부를 선택합니다.<block ref="8584d4afa86512d6b0f9e751d54630bb" category="inline-link-rx"></block>.</block>
   <block id="ffec7ec0cd271a5f8e4f646a0028cabb" category="paragraph">복제된 볼륨이 대상 클러스터에 생성되며, 이 볼륨은 기본 볼륨과 동기화됩니다.</block>
   <block id="a106a6840e265cdb3aa38c21a38e1b4e" category="paragraph">입력한 리소스 그룹에 Blob 저장소 계정이 만들어지고 백업 파일이 여기에 저장됩니다. 백업 상태를 모니터링할 수 있도록 볼륨 백업 대시보드가 표시됩니다.</block>
-  <block id="0ac5da5698976e512fb0207d330744f6" category="doc">Cloud Volumes ONTAP 데이터를 Azure Blob 저장소에 백업합니다</block>
   <block id="dee9e3e2aeabf737fa6d44063b734525" category="list-text">Cloud Volumes ONTAP 9.8 이상을 Azure에서 실행하고 있습니다(ONTAP 9.8P13 이상 권장).</block>
   <block id="7d43c1b3e8a80ec6b8eab793bca8c4ad" category="paragraph">Azure 지역에 이미 Connector가 배포되어 있는 경우 모두 설정됩니다. 그렇지 않은 경우 Azure에 BlueXP 커넥터를 설치하여 Cloud Volumes ONTAP 데이터를 Azure Blob 저장소에 백업해야 합니다. 커넥터는 전체 인터넷 액세스("표준 모드")가 있는 사이트나 제한된 인터넷 연결("제한 모드")으로 설치할 수 있습니다.</block>
   <block id="dd7dc066cb6a0b619ef397e8b37b57c3" category="list-text">Azure 포털에서 가상 머신 서비스를 엽니다.</block>
@@ -2539,7 +2497,6 @@ GCP에서 BlueXP는 Google Cloud Storage 버킷을 위한 저장소 계정이 �
   <block id="c803c78477efc0df24eba994923aaaa7" category="list-text">첫 번째 백업 정책에서 _S3 Glacier Deep Archive _ 를 선택한 경우 해당 계층은 해당 클러스터에 대한 향후 백업 정책에 사용할 수 있는 유일한 아카이브 계층이 됩니다.</block>
   <block id="1dc2ad9cca2244507b67e5dd79a50439" category="summary">몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 Amazon S3 클라우드 스토리지로 볼륨 데이터 백업을 시작하십시오.</block>
   <block id="4ee1036b0252e5c9c4406ffc2dd45603" category="doc">사내 ONTAP 데이터를 Amazon S3에 백업합니다</block>
-  <block id="5b22e9dc0aac2861a10f4140014d93c3" category="paragraph">몇 가지 단계를 완료하여 사내 ONTAP 시스템에서 보조 스토리지 시스템 및 Amazon S3 클라우드 스토리지로 볼륨 데이터 백업을 시작하십시오.</block>
   <block id="2caab6b4309c96fb35f222d679c93f7e" category="paragraph">AWS VPC 또는 사내에 Connector가 이미 구축되어 있는 경우 모두 설정됩니다. 그렇지 않은 경우 ONTAP 데이터를 AWS S3 스토리지에 백업하려면 BlueXP 커넥터를 생성해야 합니다. 또한 AWS S3에 연결할 수 있도록 커넥터의 네트워크 설정을 사용자 지정해야 합니다.</block>
   <block id="398e6504d026007c7ca4939af70b96c3" category="paragraph">BlueXP에서 ONTAP 클러스터를 검색하고, 클러스터가 최소 요구 사항을 충족하는지 확인하고, 클러스터를 AWS S3에 연결할 수 있도록 네트워크 설정을 사용자 지정합니다.</block>
   <block id="d2f8e6d3b9e2b8fd47b579f91bd8bc4c" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> Amazon S3를 백업 타겟으로 준비합니다</block>
@@ -2638,12 +2595,10 @@ GCP에서 BlueXP는 Google Cloud Storage 버킷을 위한 저장소 계정이 �
   <block id="ee45da3db51b4bd67f3174dd7bdd4bc3" category="inline-link-macro">사내 ONTAP 데이터를 Google Cloud에 백업합니다</block>
   <block id="b9f0ffe30c24fa412122cf8fe6926b64" category="summary">ONTAP 볼륨 데이터의 백업은 백업을 생성한 위치, 스냅샷 복사본, 복제된 볼륨 및/또는 오브젝트 스토리지에 저장된 백업에서 사용할 수 있습니다. 이러한 백업 위치에서 특정 시점의 데이터를 복원할 수 있습니다. 백업 파일에서 전체 ONTAP 볼륨을 복원하거나 몇 개의 파일만 복원해야 하는 경우 폴더 또는 개별 파일을 복원할 수 있습니다.</block>
   <block id="bb03c52ec2a68c9eed4513c8ecf6c24d" category="doc">백업 파일에서 ONTAP 데이터를 복원합니다</block>
-  <block id="d3d3d7f1f9c466e1fcd09795d11d7fda" category="paragraph">ONTAP 볼륨 데이터의 백업은 오브젝트 스토리지에 저장된 Snapshot 복사본, 복제된 볼륨 및 백업 등 백업을 생성한 위치에서 사용할 수 있습니다. 이러한 백업 위치에서 특정 시점의 데이터를 복원할 수 있습니다. 백업 파일에서 전체 ONTAP 볼륨을 복원하거나 몇 개의 파일만 복원해야 하는 경우 폴더 또는 개별 파일을 복원할 수 있습니다.</block>
   <block id="97a422c25f068e46d88f8b46fa057e27" category="paragraph">요약하면, 볼륨 데이터를 ONTAP 작업 환경으로 복원하는 데 사용할 수 있는 유효한 플로입니다.</block>
   <block id="880c04d29288ca6dbdf8598c75af755f" category="list-text">백업 파일 -&gt; 복원된 볼륨</block>
   <block id="385ec83416d2acacbf83c42099e5828e" category="list-text">복제된 볼륨 -&gt; 복원된 볼륨</block>
   <block id="294431832876ce9e39076e7ab6f99361" category="list-text">Snapshot 복사본 -&gt; 복원된 볼륨</block>
-  <block id="d111236cacc86fadca19453883d94b63" category="paragraph">이 표에서는 두 가지 방법의 기능을 비교합니다.</block>
   <block id="36bce3524e4446bfe42ccad6f813430a" category="paragraph">이 표는 백업 파일이 있는 위치를 기준으로 유효한 복원 작업 목록을 제공합니다.</block>
   <block id="a09aa546b6aa449c6baf91e8d0ebb636" category="cell">백업 유형</block>
   <block id="cdabcc59f5dffd726bced2c44fc05f05" category="cell">* 볼륨 복원 *</block>
@@ -2860,7 +2815,6 @@ Cloud Volumes ONTAP 시스템에는 ONTAP 9.9.1 이상이 필요합니다.</bloc
   <block id="1716834171e243de0f898a67621b6624" category="cell">ONTAP S3</block>
   <block id="470964c6383a21c37ec7c78148306066" category="list-text">ONTAP S3의 경우 커넥터를 온프레미스(인터넷 액세스 유무에 관계없이) 또는 클라우드 공급자 환경에 배포할 수 있습니다</block>
   <block id="f19394f3b7f64df50fbe3cf08b518aa3" category="list-text">ONTAP S3에서 복원하는 경우 ONTAP S3 서버의 FQDN과 ONTAP가 ONTAP S3와의 HTTPS 통신에 사용해야 하는 포트를 입력하고 오브젝트 스토리지에 액세스하는 데 필요한 액세스 키 및 암호 키를 선택합니다. 및 대상 볼륨이 상주할 ONTAP 클러스터의 IPspace입니다.</block>
-  <block id="6b2e325b80840b0a9d8b16c541de5ba2" category="list-text">폴더 또는 개별 파일은 개체 저장소의 백업 파일에서만 복원할 수 있습니다. 현재 파일 및 폴더 복구는 로컬 스냅샷 복사본 또는 보조 작업 환경(복제된 볼륨)에 있는 백업 파일에서 지원되지 않습니다.</block>
   <block id="24ac68c9fd3a2031d9d90480b0b100c4" category="list-text">폴더 복원은 현재 ONTAP S3 오브젝트 스토리지의 볼륨에서 지원되지 않습니다.</block>
   <block id="6f09a8c8e8b4f8b3acf1f96e43dca354" category="list-text">StorageGRID 및 ONTAP S3 요구사항:</block>
   <block id="8100b28bcfd3e23e2256df4e160ffe93" category="list-text">StorageGRID 또는 ONTAP S3에 저장된 백업의 경우 커넥터 또는 클라우드 공급자 환경에서 공간을 프로비저닝합니다.</block>
@@ -2904,7 +2858,6 @@ ONTAP S3</block>
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
-  <block id="1ca3bd8f6dc961579b0cb3fd37bec744" category="paragraph">로컬 스냅샷, 복제 및 시작한 객체 스토리지 작업에 대한 백업의 상태를 모니터링하고 시작한 작업을 복구할 수 있습니다. 완료, 진행 중 또는 실패한 작업을 확인하여 문제를 진단하고 해결할 수 있습니다. BlueXP 알림 센터를 사용하면 전자 메일로 알림을 보내도록 설정할 수 있으므로 시스템에 로그인하지 않은 경우에도 중요한 시스템 작업을 알 수 있습니다. BlueXP 타임라인을 사용하면 UI 또는 API를 통해 시작된 모든 작업의 세부 정보를 볼 수 있습니다.</block>
   <block id="06bf7dd6f0ab94d87f59e43fc93b6d3c" category="section-title">작업 모니터에서 작업 상태를 봅니다</block>
   <block id="402bab7d605cd8ea629df214c4351f69" category="paragraph">상태는 다음과 같습니다.</block>
   <block id="ac624cf312f41265d4598a7409f6c357" category="list-text">추가 열 표시(작업 환경, SVM, 사용자 이름, 워크로드, 정책 이름, Snapshot Label(스냅샷 레이블))에서 을 선택합니다 <block ref="67e31c53d0f38fc4da85c525a5be7511" category="inline-image-macro-rx" type="image"></block>.</block>
@@ -2974,8 +2927,6 @@ ONTAP S3</block>
   <block id="5ea7c922bf64f9c4520ccdf833e34e39" category="paragraph"><block ref="287ce1c3ffcd9fd04ac3fb9608fef690" category="inline-link-rx"></block>.</block>
   <block id="7b666c0edc9876b87778d0969629cfbf" category="list-text">백업 및 복구 표시줄에서 * 볼륨 * 을 선택합니다. 볼륨 탭에서 * 작업 * 을 선택합니다 <block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block> 아이콘을 클릭하고 단일 볼륨에 대해 * 백업 활성화 * 를 선택합니다(복제 또는 객체 스토리지에 대한 백업이 이미 활성화되어 있지 않음).</block>
   <block id="ef8c31bba1fe5a62e7a6cfedbb9d29da" category="summary">NetApp에서 제공하는 기본 백업 정책을 사용하여 백업을 생성하거나 사용자 지정 정책을 생성할 수 있습니다. 정책은 백업 유형, 백업 아키텍처, 스토리지 시스템 및 백업 빈도를 제어합니다.</block>
-  <block id="defb6c38e16057d80b8b116a92ab8665" category="doc">ONTAP 볼륨에 대한 백업 정책을 관리합니다</block>
-  <block id="7ee9b8ccc530c51b1215b5f1266eee5e" category="paragraph">NetApp에서 제공하는 기본 백업 정책을 사용하여 백업을 생성하거나 사용자 지정 정책을 생성할 수 있습니다. 정책은 백업 빈도, 백업 소요 시간 및 보존되는 백업 파일 수를 제어합니다.</block>
   <block id="c5e61d7841bf9a1c1ef625157d503535" category="paragraph">제공되는 기본 백업 정책에 대한 자세한 내용은 을 참조하십시오 <block ref="26e6d65b3efbcdaf9fdb0f41b6ffe1ab" category="inline-link-macro-rx"></block>.</block>
   <block id="9c2cf3d903ec11e031aac200337d550f" category="cell">스냅샷 정책 저장소 위치입니다</block>
   <block id="03cef7774b631377e1518e05ea03e5f0" category="cell">복제 정책 저장소 위치입니다</block>
@@ -3071,23 +3022,19 @@ ONTAP S3</block>
   <block id="60a7ad592c196ecee9eebdab38d4ed7e" category="list-text">커넥터 프록시 구축 모델 지원</block>
   <block id="82725bf31262afb73c02d0bbce2d3389" category="paragraph">모든 BlueXP 백업 및 복구 작업에 대해 작업이 생성됩니다. 각 작업의 일부로 수행되는 모든 작업과 모든 하위 작업을 모니터링할 수 있습니다.</block>
   <block id="65e3ba6149c87f14c99c67806cbe8899" category="doc">MongoDB, MySQL 및 PostgreSQL 데이터베이스를 복원합니다</block>
-  <block id="eb92df223c0140de30f9a1bfb050ab30" category="paragraph">MongoDB, MySQL 및 PostgreSQL 데이터베이스를 모든 호스트로 복원할 수 있습니다.</block>
   <block id="b89cd7529d8b58accf14d298da485e40" category="list-text">Filter by * 필드에서 * Type * 필터를 선택하고 드롭다운에서 * mongodb *, * mysql * 또는 * PostgreSQL * 을 선택합니다.</block>
   <block id="0aa96c72f941184ee1fddb9f1e93bb8e" category="paragraph">저장 위치 변경 * 을 선택하면 대상 볼륨에 접미사를 추가할 수 있습니다. 확인란을 선택하지 않은 경우 기본적으로 *_restore * 가 대상 볼륨에 추가됩니다.</block>
-  <block id="4bca56bf446030b30e5509102dc7d31d" category="paragraph">BlueXP는 데이터 잠금 및 랜섬웨어 보호를 지원합니다. ONTAP 클러스터가 ONTAP 9.12.1 이상 버전에서 실행되고 있고 아카이브 스토리지를 구성하지 않은 경우 백업을 덮어쓰기, 삭제 및 랜섬웨어 위협으로부터 보호할 수 있습니다.</block>
   <block id="bcbbe01c67d093d1c5217f38a5c8bb3f" category="list-text">정책에 아카이브 스토리지를 구성한 경우 아카이브 계층을 선택합니다.</block>
   <block id="a271ff9e1d0739d62e4ef10ba279b1e9" category="list-text">데이터 잠금 및 랜섬웨어 보호를 구성합니다.</block>
   <block id="206e3718af092fd1d12f80cae771ccac" category="list-text">MongoDB</block>
   <block id="62a004b95946bb97541afa471dcca73a" category="list-text">MySQL</block>
   <block id="399bd1ee587245ecac6f39beaa99886f" category="list-text">PostgreSQL</block>
-  <block id="b3b5981b5c14115139a4ba794d8c793a" category="paragraph">SAP HANA 데이터베이스를 모든 호스트에 복원할 수 있습니다.</block>
   <block id="ba4b1fdd90381666d97a2e59fb00966e" category="paragraph">BlueXP는 데이터 잠금 및 랜섬웨어 보호를 지원합니다. ONTAP 클러스터가 ONTAP 9.11.1 이상에서 실행 중인 경우 StorageGRID 시스템은 11.6.0.3 이상이며, 아카이브 스토리지를 구성하지 않은 경우 백업을 덮어쓰기, 삭제 및 랜섬웨어 위협으로부터 보호할 수 있습니다.</block>
   <block id="9a6113d5326dfb90b5db6b0741ca8825" category="list-text">정책에 아카이브 스토리지를 구성한 경우 아카이브 계층을 지정합니다.</block>
   <block id="7f2e7c1f843724479ad33af92042ed17" category="cell">다음을 선택한 경우...</block>
   <block id="592a3b45c9297fe905b909e9ac714fad" category="cell">다음을 수행합니다.</block>
   <block id="22c52a6e95d8c684b8eb086270330ab0" category="list-text">드롭다운에서 StorageGRID을 선택하거나 StorageGRID 클러스터를 추가합니다.</block>
   <block id="b69c04cbc4cab46d7ef82b0687e311c1" category="list-text">드롭다운에서 StorageGRID 클러스터를 선택하거나 클러스터를 추가합니다.</block>
-  <block id="a7abc6648bf0f980d7382b0d6c64a0e0" category="paragraph">BlueXP는 데이터 잠금 및 랜섬웨어 보호를 지원합니다. ONTAP 클러스터가 ONTAP 9.11.1 이상에서 실행되고 있고 아카이브 스토리지를 구성하지 않은 경우 백업을 덮어쓰기, 삭제 및 랜섬웨어 위협으로부터 보호할 수 있습니다.</block>
   <block id="495b38ce22b9921d524af6512fbadb82" category="paragraph">데이터 저장소를 Amazon Web Services S3, Microsoft Azure Blob, Google Cloud Platform 및 StorageGRID에 백업하고 VMware vSphere 호스트용 온프레미스 SnapCenter 플러그인으로 가상 머신을 복원할 수 있습니다. 가상 머신을 위한 BlueXP 백업 및 복구도 커넥터 프록시 구축 모델도 지원합니다.</block>
   <block id="7148963c1fe9bd20799d84596b688191" category="list-text">프록시가 구성된 커넥터를 배포하려면 모든 발신 커넥터 호출이 프록시 서버를 통해 라우팅되는지 확인합니다.</block>
   <block id="ab414934858114c45b862fbf3a2f8f9d" category="list-text">MongoDB, MySQL 및 PostgreSQL의 경우 각 백업의 데이터 백업과 종료 날짜만 나열됩니다. 백업을 선택하고 지정된 호스트에서 스토리지 내보내기를 수행할 수 있습니다.</block>
@@ -3264,7 +3211,6 @@ ONTAP S3</block>
   <block id="b1314bfff132a050766ce5d32ac976de" category="section-title">데이터 저장소 보호 해제</block>
   <block id="24e973d26bb253c7b5fb8a764db6860a" category="paragraph">이전에 이미 보호되었던 데이터 저장소의 보호를 해제할 수 있습니다. 클라우드 백업을 삭제하거나 더 이상 클라우드에 백업하지 않으려는 경우 데이터 저장소의 보호를 해제할 수 있습니다. 보호 해제에 성공한 후 데이터 저장소를 다시 보호할 수 있습니다.</block>
   <block id="2c86bcd8467882ddafa5699064a113a9" category="list-text">을 클릭합니다 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 보호를 해제할 데이터 저장소에 해당하는 다음 * Unprotect * 를 클릭합니다.</block>
-  <block id="331f8541bc1d88d7b3a99d070122fc1c" category="paragraph">클라우드에서 가상 머신 데이터를 다시 사내 vCenter로 복구할 수 있습니다. 가상 머신을 백업을 수행한 위치와 정확히 동일한 위치 또는 대체 위치로 복구할 수 있습니다. 가상 머신이 아카이브 정책을 사용하여 백업된 경우 아카이브 복구 우선 순위를 설정할 수 있습니다.</block>
   <block id="1c79f8653ccf267be1bce47f8ccf3d2f" category="list-text">다른 위치로 복원하는 경우:</block>
   <block id="0bd63162a36deb15bb735dfc68ec0b84" category="list-text">소스 및 대상 vCenter가 연결 모드인지 확인합니다.</block>
   <block id="b9d3026a416c9548a1ce214ae1cac290" category="list-text">소스 및 대상 클러스터의 세부 정보가 BlueXP Canvas에 추가되고, 두 SnapCenter Plug-in for VMware vSphere 호스트에 있는 연결 모드 vCenter에 추가되는지 확인합니다.</block>
@@ -3345,7 +3291,6 @@ ifdef::GCP[]</block>
   <block id="17c54e9ba828968f120b82b8cd07abfa" category="inline-link-macro">오브젝트에 백업 정책 설정</block>
   <block id="0bc441f660cc6026f623b6cab169011c" category="list-text">오브젝트에 백업 정책의 경우 DataLock 및 랜섬웨어 차단 설정을 설정합니다. DataLock 및 랜섬웨어 방지에 대한 자세한 내용은 을 참조하십시오 <block ref="d72e0969f8971a4b91ad44a04438bfb9" category="inline-link-macro-rx"></block>.</block>
   <block id="c017d92a691d34eeedab98c2b0d24a2a" category="summary">각 ONTAP 시스템에 대해 BlueXP 백업 및 복구를 활성화할 때 설정하는 많은 클러스터 레벨 오브젝트 백업 설정을 변경할 수 있습니다. "기본" 백업 설정으로 적용되는 일부 설정을 수정할 수도 있습니다. 여기에는 스토리지 키 변경, 오브젝트 스토리지에 대한 백업 전송 속도, 기간별 스냅샷 복사본을 백업 파일로 내보낼 것인지 여부 등이 포함됩니다. 작업 환경에 대한 랜섬웨어 검사를 활성화 또는 비활성화할 수도 있습니다.</block>
-  <block id="ea44ae5b51bb08fddcc53530d06a69a1" category="doc">고급 설정 페이지에서 개체 저장소 백업 옵션을 관리합니다</block>
   <block id="ced47daa04f0ab245996945ce084fb6a" category="admonition">이 설정은 오브젝트 백업 스토리지에만 사용할 수 있습니다. 이러한 설정은 스냅샷 또는 복제 설정에 영향을 주지 않습니다. 스냅샷 및 복제에 대한 유사한 클러스터 수준 복제 설정이 나중에 추가됩니다.</block>
   <block id="c7097337eab210464618620268aa80bc" category="paragraph">고급 설정 페이지에서 다음 옵션을 변경할 수 있습니다.</block>
   <block id="6d1da260b80b103438f3aedda67c1b8e" category="list-text">Max Transfer Rate 옵션을 사용하여 백업을 객체 스토리지에 업로드하기 위해 할당된 네트워크 대역폭 변경
@@ -3628,8 +3573,6 @@ ifdef::AWS[]</block>
   <block id="eb908336fca360ed35207a1e198562b2" category="list-text">온프레미스 ONTAP 시스템 또는 Azure 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Azure Blob에 백업할 수 있습니다. <block ref="d0f49153a0d69289bf4d240d8900efdd" category="inline-link-macro-rx"></block>..</block>
   <block id="e23da6bf724f3225b25342aa20aab822" category="cell"><block ref="1e8904cbbffb7eff1de96297f70cd53e" prefix="" category="inline-code"></block></block>
   <block id="7a912606781d54fe98a96090d0cd3c74" category="paragraph">백업에 5개 이상의 볼륨이 활성화된 경우 BlueXP  백업 및 복구는 한 번에 5개의 볼륨만 초기화합니다. 이러한 작업이 완료되면 5개의 하위 작업의 다음 일괄 처리를 생성하여 다음 세트를 시작하고 모든 볼륨이 초기화될 때까지 계속됩니다.</block>
-  <block id="542b4404b0cd2b4cf01b81a3a97b2c20" category="inline-link">Data Infrastructure Insights 및 Cloud Secure를 참조하십시오</block>
-  <block id="5212f7d39ed0f1c16c365beda23afc75" category="paragraph">이 기능은 소스 볼륨에 대한 보호 기능을 제공하지 않으며 해당 소스 볼륨의 백업에만 사용됩니다. NetApp 또는 의 일부를<block ref="086d55e347fe71de47923b356a73187b" category="inline-link-rx"></block> 사용하여<block ref="17959d7def942fae173290691e2a40ae" category="inline-link-rx"></block> 소스 볼륨을 보호합니다.</block>
   <block id="46206fcd0fa4af78eefe04f1bd8d42c6" category="list-text">온프레미스 볼륨을 위한 SnapLock Compliance(ONTAP 9 .14 이상 필요)</block>
   <block id="c4357ca22c7a0a7b40dcc64dcd915aad" category="paragraph">StorageGRID의 DataLock 및 랜섬웨어 차단 요구사항에 대한 자세한 내용은 을 참조하십시오<block ref="cb8de3051c432af9d9d024226709f28f" category="inline-link-macro-rx"></block>.</block>
   <block id="e44dd1be7752eb1b45f88c82336a3d7d" category="inline-link">BlueXP  정책 권한</block>
@@ -3905,4 +3848,93 @@ ifdef::AWS[]</block>
   <block id="782af9afc0728a9389fd837476a88107" category="inline-link">가격에 대한 자세한 내용은 NetApp 지능형 서비스 마켓플레이스 오퍼링을 참조하십시오</block>
   <block id="6d641e087ca9cbb2e0778a492ac1066a" category="list-text">Azure는 다음과<block ref="211ed702bd160a1aa192248c846136e5" category="inline-link-rx"></block>같습니다.</block>
   <block id="80720981863bfe0c9cc6702701d24f18" category="list-text">Google 클라우드<block ref="5aa99f120ab43d5669622268ca1e3fd1" category="inline-link-rx"></block>:</block>
+  <block id="540f825e896e533b68a7c908366cab6f" category="doc">BlueXP 백업 및 복구의 객체 백업 정책 옵션</block>
+  <block id="ff76fcf5a77bc3d2d6fcc0bc89e691e8" category="paragraph">이 기능은 소스 볼륨에 대한 보호 기능을 제공하지 않으며 해당 소스 볼륨의 백업에만 사용됩니다. 일부를 사용하세요 <block ref="086d55e347fe71de47923b356a73187b" category="inline-link-rx"></block> 소스 볼륨을 보호하세요.</block>
+  <block id="dd8880b4f59210ef9057ade8974ae6e1" category="doc">BlueXP 백업 및 복구를 통해 온프레미스 애플리케이션 데이터를 보호하세요</block>
+  <block id="d43f91d720bdc702da17a91373c66bc1" category="doc">BlueXP 백업 및 복구를 통해 보호 여정을 계획하세요</block>
+  <block id="3fdf5c3e5388ce90a37a4ca89e13b9c1" category="doc">BlueXP 백업 및 복구를 통한 AWS S3 보관 스토리지 클래스 및 복원 검색 시간</block>
+  <block id="d1bef4123b9b553377dec07d51e6f364" category="doc">BlueXP 백업 및 복구를 통한 Azure 보관 계층 및 복원 검색 시간</block>
+  <block id="4065cba16ae5fb2de62b3e17fb5bfdbd" category="doc">BlueXP 백업 및 복구를 사용하여 Azure에서 다중 계정 액세스를 위한 백업 구성</block>
+  <block id="607fa5c64e5b074d69b6e276f485f5f7" category="doc">BlueXP 백업 및 복구를 통한 Google 보관 스토리지 클래스 및 복원 검색 시간</block>
+  <block id="bf23ff2e6c4769fb762df9ae2c3207f9" category="doc">BlueXP 백업 및 복구의 알려진 제한 사항</block>
+  <block id="f65fc1bd2b82bd5e6d220cd1f78f776d" category="doc">BlueXP 백업 및 복구를 사용하여 온프레미스 애플리케이션 데이터를 Amazon Web Services에 백업하세요.</block>
+  <block id="e8df8bd60a7fb153f027e8464649cb28" category="paragraph">ONTAP에서 Amazon Web Services로 애플리케이션 데이터를 백업하려면 BlueXP 백업 및 복구에서 몇 가지 단계를 완료하세요.</block>
+  <block id="dae64a28bb076b36ab1c9aa580605900" category="paragraph">BlueXP 백업 및 복구는 데이터 잠금 및 랜섬웨어 보호를 지원합니다. ONTAP 클러스터가 ONTAP 9.11.1 이상에서 실행되고 있고 아카이브 스토리지를 구성하지 않은 경우 백업을 덮어쓰기, 삭제 및 랜섬웨어 위협으로부터 보호할 수 있습니다.</block>
+  <block id="c451a5ac4212c3c0e2006be724728826" category="doc">BlueXP 백업 및 복구를 사용하여 온프레미스 애플리케이션 데이터를 Microsoft Azure에 백업하세요.</block>
+  <block id="e36e1aa9fe93be990593423953b8c0d4" category="paragraph">ONTAP에서 Microsoft Azure로 애플리케이션 데이터를 백업하려면 BlueXP 백업 및 복구에서 몇 가지 단계를 완료하세요.</block>
+  <block id="851ed6c1c3e26f517481171c15262687" category="paragraph">BlueXP 백업 및 복구는 데이터 잠금 및 랜섬웨어 보호를 지원합니다. ONTAP 클러스터가 ONTAP 9.12.1 이상에서 실행되고 있고 아카이브 스토리지를 구성하지 않은 경우 백업을 덮어쓰기, 삭제 및 랜섬웨어 위협으로부터 보호할 수 있습니다.</block>
+  <block id="8e2ac7dcc8a0c0d6608fae9c87b3fb29" category="doc">BlueXP 백업 및 복구를 사용하여 온프레미스 애플리케이션 데이터를 Google Cloud Platform에 백업하세요.</block>
+  <block id="5080948e73b2b115a6695b2dcff2ce4d" category="paragraph">ONTAP에서 Google Cloud Platform으로 애플리케이션 데이터를 백업하려면 BlueXP 백업 및 복구에서 몇 가지 단계를 완료하세요.</block>
+  <block id="fda137de1b5bc43b13317a424711d1e6" category="doc">BlueXP 백업 및 복구를 사용하여 온프레미스 애플리케이션 데이터를 StorageGRID에 백업합니다.</block>
+  <block id="194484d10cfc49eac7b71220ac0dca66" category="paragraph">ONTAP에서 StorageGRID로 애플리케이션 데이터를 백업하려면 BlueXP 백업 및 복구에서 몇 가지 단계를 완료하세요.</block>
+  <block id="8cb7156f6b4a6d375ab0fc3f5b7531f4" category="doc">BlueXP 백업 및 복구를 사용하여 온프레미스 ONTAP 데이터를 StorageGRID에 백업합니다.</block>
+  <block id="e60868416e61654787b5c5c78f635d55" category="paragraph">온프레미스 기본 ONTAP 시스템의 볼륨 데이터를 보조 스토리지 시스템과 NetApp StorageGRID 시스템의 개체 스토리지로 백업하려면 BlueXP 백업 및 복구에서 몇 가지 단계를 완료하세요.</block>
+  <block id="de84af939f41492b1264ce8c3df573a9" category="paragraph">사용자 보관 저장소를 사용하려면 관리자 노드 IP 액세스가 필요합니다.</block>
+  <block id="a99287c7990930f58a55c1e2dba88d64" category="paragraph">게이트웨이 IP 액세스는 항상 필요합니다.</block>
+  <block id="ec499d74ffee301ac24c73d0642b04a9" category="doc">BlueXP 백업 및 복구를 사용하여 온프레미스 ONTAP 데이터를 Amazon S3에 백업하세요.</block>
+  <block id="5201ae0a8dd968743b9235731fe305a3" category="paragraph">온프레미스 ONTAP 시스템의 볼륨 데이터를 보조 스토리지 시스템과 Amazon S3 클라우드 스토리지로 백업하려면 BlueXP 백업 및 복구에서 몇 가지 단계를 완료하세요.</block>
+  <block id="e20dcdabdc6586c6d1c2519661bfa097" category="paragraph">AWS GovCloud 지역을 포함한 모든 지역의 온프레미스 시스템에서 Amazon S3로 백업을 생성할 수 있습니다. 서비스를 설정할 때 백업을 저장할 지역을 지정합니다.</block>
+  <block id="5b383bb3dcd5218c037a97639e5483fd" category="doc">BlueXP 백업 및 복구를 사용하여 온-프레미스 ONTAP 데이터를 Azure Blob 스토리지에 백업합니다.</block>
+  <block id="050a8a0826b4f6a434806b42a94148be" category="paragraph">온-프레미스 ONTAP 시스템의 볼륨 데이터를 보조 스토리지 시스템과 Azure Blob 스토리지로 백업하려면 BlueXP 백업 및 복구에서 몇 가지 단계를 완료하세요.</block>
+  <block id="a2dc9a4fb704e8ca875a1a77d909ba7d" category="paragraph">Azure Government 지역을 포함한 모든 지역의 온-프레미스 시스템에서 Azure Blob으로 백업을 만들 수 있습니다. 서비스를 설정할 때 백업을 저장할 지역을 지정합니다.</block>
+  <block id="23bedde7ddc61aac291af3e114a05acb" category="doc">BlueXP 백업 및 복구를 사용하여 온프레미스 ONTAP 데이터를 Google Cloud Storage에 백업하세요.</block>
+  <block id="60a2c829d4e3dac67d35b9042f9a1d83" category="paragraph">온프레미스 기본 ONTAP 시스템의 볼륨 데이터를 보조 스토리지 시스템과 Google Cloud Storage로 백업하려면 BlueXP 백업 및 복구에서 몇 가지 단계를 완료하세요.</block>
+  <block id="ad6104adc661a5f0a3b5810ddf2ab7de" category="paragraph">모든 지역의 온프레미스 시스템에서 Google Cloud Storage로 백업을 생성할 수 있습니다. 서비스를 설정할 때 백업을 저장할 지역을 지정합니다.</block>
+  <block id="b40ebd0d6f7b3caa0ab8a49e9b6580eb" category="doc">BlueXP 백업 및 복구를 사용하여 온프레미스 ONTAP 데이터를 ONTAP S3에 백업하세요.</block>
+  <block id="a0ca4610c0721031e104e0191b6e74ce" category="paragraph">BlueXP 백업 및 복구에서 몇 가지 단계를 완료하여 기본 온프레미스 ONTAP 시스템의 볼륨 데이터 백업을 시작하세요. 보조 ONTAP 스토리지 시스템(복제된 볼륨) 또는 S3 서버(백업 파일) 또는 이 둘 다로 구성된 ONTAP 시스템의 버킷 또는 둘 다로 백업을 전송할 수 있습니다.</block>
+  <block id="6229d867edeee086ad40575645ba334a" category="doc">BlueXP 백업 및 복구를 사용하여 Cloud Volumes ONTAP 데이터를 Azure Blob 스토리지에 백업합니다.</block>
+  <block id="a85cfaa752aead0610179df62c49ff8f" category="paragraph">BlueXP 백업 및 복구에서 몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 Azure Blob 스토리지로 볼륨 데이터를 백업하세요.</block>
+  <block id="e3dfa9e948ac98dc0ed6533458de6302" category="list-text">BlueXP 백업 및 복구는 Azure Government 지역을 포함한 모든 Azure 지역에서 지원됩니다.</block>
+  <block id="99ec02dbe3f6d200e522bff2097ecea5" category="doc">BlueXP 백업 및 복구를 사용하여 Cloud Volumes ONTAP 데이터를 Google Cloud Storage에 백업합니다.</block>
+  <block id="8cf3385b1fe0a1b02c857ec21a5af34c" category="paragraph">BlueXP 백업 및 복구에서 몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 Google Cloud Storage로 볼륨 데이터를 백업하세요.</block>
+  <block id="f85b702786ab1255b6f75943db831fc4" category="list-text">BlueXP 백업 및 복구는 모든 GCP 지역에서 지원됩니다.</block>
+  <block id="c25fcc0471a0ad6baa101316e2663a17" category="doc">BlueXP 백업 및 복구를 사용하여 Cloud Volumes ONTAP 데이터를 Amazon S3에 백업합니다.</block>
+  <block id="b87144d361b33d6a0a21d405c6312414" category="paragraph">BlueXP 백업 및 복구에서 몇 가지 단계를 완료하여 Cloud Volumes ONTAP 시스템에서 Amazon S3로 볼륨 데이터 백업을 시작하세요.</block>
+  <block id="f3085be06b9d9d6b20b4bd87df2778a9" category="list-text">BlueXP 백업 및 복구는 AWS GovCloud 지역을 포함한 모든 AWS 지역에서 지원됩니다.</block>
+  <block id="c93d3d91ecbdac64376390c3ba8bc184" category="doc">BlueXP 백업 및 복구를 사용하여 Amazon Web Services에 데이터 저장소 백업</block>
+  <block id="76565212c97f433cfecbe932104085e1" category="paragraph">BlueXP 백업 및 복구를 사용하면 하나 이상의 데이터 저장소를 Amazon Web Services로 백업하고 보관하여 스토리지 효율성과 클라우드 전환을 개선할 수 있습니다.</block>
+  <block id="42147c935afda5dae590fcd753802ecb" category="doc">BlueXP 백업 및 복구를 사용하여 Microsoft Azure에 데이터 저장소 백업</block>
+  <block id="829b723e3ad2e396d5f3854821073440" category="paragraph">VMware vSphere 호스트용 SnapCenter 플러그인을 BlueXP 백업 및 복구와 통합하여 하나 이상의 데이터 저장소를 Microsoft Azure에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
+  <block id="71d48965d44330ce6aadd0b2b300d4eb" category="doc">BlueXP 백업 및 복구를 사용하여 Google Cloud Platform에 데이터 저장소를 백업하세요.</block>
+  <block id="2f72baaa9b16a3efb71880ce33e1e357" category="paragraph">VMware vSphere 호스트용 SnapCenter 플러그인을 BlueXP 백업 및 복구와 통합하여 하나 이상의 데이터 저장소를 Google Cloud Platform에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
+  <block id="fddd1f44da7e6a1400bf9653382b2b1f" category="doc">BlueXP 백업 및 복구를 사용하여 StorageGRID에 데이터 저장소 백업</block>
+  <block id="225430adf0449b2d30fd18f6f78a6546" category="paragraph">VMware vSphere 호스트용 SnapCenter 플러그인을 BlueXP 백업 및 복구와 통합하여 하나 이상의 데이터 저장소를 StorageGRID에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.</block>
+  <block id="07884344156bef203d4774b9b4e05bcc" category="doc">BlueXP 백업 및 복구를 사용하여 애플리케이션을 백업하는 정책을 만듭니다.</block>
+  <block id="d79f0e7ae4ba23da95a77d37ef807fda" category="paragraph">BlueXP 백업 및 복구를 사용하여 애플리케이션 데이터를 클라우드에 백업하는 정책을 만들어야 합니다.</block>
+  <block id="314324dd700b367f5f0641abc565a4c9" category="doc">BlueXP 백업 및 복구를 통해 ONTAP 볼륨에 대한 백업 정책 관리</block>
+  <block id="c1457fdbc4513f3e6535d346fa3caed9" category="paragraph">BlueXP 백업 및 복구를 사용하면 NetApp에서 제공하는 기본 백업 정책을 사용하여 백업을 만들거나 사용자 정의 정책을 만들 수 있습니다. 정책은 백업 빈도, 백업 소요 시간 및 보존되는 백업 파일 수를 제어합니다.</block>
+  <block id="8a5896c4e6a37d3bfd0a4d10525d455e" category="doc">BlueXP 백업 및 복구를 사용하여 데이터 저장소를 백업하는 정책을 만듭니다.</block>
+  <block id="8b41f2faa6254d67c032254c242c1e67" category="paragraph">BlueXP 백업 및 복구에서 사용 가능한 다음 사전 정의된 정책 중 하나를 사용하거나 정책을 만들 수 있습니다.</block>
+  <block id="e1e81448e2561a2712c3735e71195fc7" category="doc">BlueXP 백업 및 복구를 통해 애플리케이션 보호 관리</block>
+  <block id="b71af8b06690342b6fef970d56904e2a" category="paragraph">BlueXP 백업 및 복구에서 애플리케이션 보호를 관리할 수 있습니다. 정책 보기, 백업 보기, 데이터베이스 레이아웃, 정책 및 리소스 그룹의 변경 사항 보기, BlueXP UI에서 모든 작업 모니터링 등을 수행할 수 있습니다.</block>
+  <block id="d990d9847e15eb4896a00d368560b8ad" category="doc">BlueXP 백업 및 복구의 고급 설정 페이지에서 백업-객체 스토리지 옵션을 관리합니다.</block>
+  <block id="11300907cdd8e6d0b8aa90b3da5cf26c" category="doc">BlueXP 백업 및 복구를 통해 ONTAP 시스템의 백업을 관리하세요</block>
+  <block id="9fff28df5b2afc9a4445f62a9a7d03b0" category="paragraph">BlueXP 백업 및 복구를 사용하면 백업 일정 변경, 볼륨 백업 활성화/비활성화, 백업 일시 중지, 백업 삭제 등을 통해 Cloud Volumes ONTAP 및 온프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다. 여기에는 스냅샷 복사본, 복제된 볼륨 및 오브젝트 스토리지의 백업 파일을 포함한 모든 유형의 백업이 포함됩니다.</block>
+  <block id="c11cdf4fffd5c6ff6663cf2dc509a570" category="doc">BlueXP 백업 및 복구를 통해 데이터 저장소 및 가상 머신 데이터의 보호를 관리하세요</block>
+  <block id="65ff10ea9ed405e2e5c060d29e45b7db" category="paragraph">BlueXP 백업 및 복구를 사용하면 데이터를 백업하고 복원하기 전에 정책, 데이터 저장소 및 가상 머신을 볼 수 있습니다. 데이터베이스, 정책 또는 리소스 그룹의 변경에 따라 BlueXP UI에서 업데이트를 볼 수 있습니다.</block>
+  <block id="bdb8c867c3ff79b007318c8f82976f3a" category="doc">SnapMirror를 사용하여 BlueXP 백업 및 복구로 볼륨을 Cloud Resync로 마이그레이션</block>
+  <block id="e350a5e7d03f5504d39a4bbc422bd97d" category="paragraph">BlueXP 백업 및 복구의 SnapMirror to Cloud Resync 기능은 NetApp 환경에서 볼륨 마이그레이션 중에 데이터 보호와 연속성을 간소화합니다. SnapMirror LRSE(논리적 복제)를 사용하여 온프레미스 NetApp 구축에서 다른 구축으로 또는 Cloud Volumes ONTAP 또는 Cloud Volumes Service와 같은 클라우드 기반 솔루션으로 볼륨을 마이그레이션한 경우, SnapMirror에서 클라우드 재동기화는 기존 클라우드 백업이 그대로 유지되고 작동되도록 보장합니다.</block>
+  <block id="210680da0c0fd8e6e8f29ef8ee1c009d" category="doc">BlueXP 백업 및 복구 백업 및 복원 작업의 상태를 모니터링합니다.</block>
+  <block id="96989715cc38ac4aa88b081ea5b8a435" category="paragraph">BlueXP 백업 및 복구를 사용하면 사용자가 시작한 로컬 스냅샷, 복제 및 개체 스토리지 작업으로의 백업 상태를 모니터링하고 사용자가 시작한 작업을 복원할 수 있습니다. 완료, 진행 중 또는 실패한 작업을 확인하여 문제를 진단하고 해결할 수 있습니다. BlueXP 알림 센터를 사용하면 전자 메일로 알림을 보내도록 설정할 수 있으므로 시스템에 로그인하지 않은 경우에도 중요한 시스템 작업을 알 수 있습니다. BlueXP 타임라인을 사용하면 UI 또는 API를 통해 시작된 모든 작업의 세부 정보를 볼 수 있습니다.</block>
+  <block id="a6e7f2673ad6cfe07dd0ae3d08d696db" category="doc">BlueXP 백업 및 복구를 사용하여 VMware vSphere 호스트에 SnapCenter 플러그인 등록</block>
+  <block id="b4461c65f875da7d1703c38013cd268d" category="paragraph">데이터스토어와 가상 머신이 표시되도록 BlueXP 백업 및 복구에서 VMware vSphere 호스트용 SnapCenter 플러그인을 등록해야 합니다. 관리 액세스 권한이 있는 사용자만 VMware vSphere 호스트용 SnapCenter 플러그인을 등록할 수 있습니다.</block>
+  <block id="c3aa07f7af7e219d8ccc9a65c3e0d10f" category="doc">BlueXP 백업 및 복구를 위해 SnapCenter 서버 등록</block>
+  <block id="c9501309ae9b56dd0b1a5452f134800f" category="paragraph">SnapCenter Server 4.6 이상이 실행 중인 호스트는 SnapCenterAdmin 역할의 사용자만 등록할 수 있습니다. BlueXP 백업 및 복구에 여러 개의 SnapCenter Server 호스트를 등록할 수 있습니다.</block>
+  <block id="c10b87f212d66f823cdd75424654a2b4" category="doc">BlueXP 백업 및 복구를 통한 데이터 보호 범위에 대한 보고서</block>
+  <block id="29f7fc3c7a2eefe32f668d0920450bba" category="paragraph">BlueXP 백업 및 복구 보고서를 사용하면 조직의 정의된 정책에 따라 중요 데이터가 보호되는지 확인하고 규정 준수 요구 사항에 대한 감사를 제공할 수 있습니다.</block>
+  <block id="dcd13e0917f086ba1dc3c89ba6b4188c" category="doc">BlueXP 백업 및 복구를 사용하여 백업 파일에서 ONTAP 데이터 복원</block>
+  <block id="ff48e96315b11d9dbcdabececcd0120a" category="paragraph">ONTAP 볼륨 데이터의 백업은 오브젝트 스토리지에 저장된 Snapshot 복사본, 복제된 볼륨 및 백업 등 백업을 생성한 위치에서 사용할 수 있습니다. 이러한 백업 위치에서 특정 시점의 데이터를 복원할 수 있습니다. BlueXP 백업 및 복구를 사용하면 백업 파일에서 전체 ONTAP 볼륨을 복원할 수 있으며, 몇 개의 파일만 복원하면 되는 경우 폴더나 개별 파일을 복원할 수 있습니다.</block>
+  <block id="395730a64ca01ee6442fde01925dc46f" category="paragraph">이 표는 두 가지 방법의 기능을 비교한 것입니다.</block>
+  <block id="0f2760fbfab4c50aa7c84e3487e45bf3" category="admonition">폴더 또는 개별 파일은 개체 저장소의 백업 파일에서만 복원할 수 있습니다. 현재 로컬 스냅샷 복사본이나 보조 작업 환경(복제된 볼륨)에 있는 백업 파일에서 파일과 폴더를 복원하는 것은 지원되지 않습니다.</block>
+  <block id="70971bc2d4ca475176f349e0daf2779d" category="list-text">인터넷 HTTP 통신을 위해 프록시 서버를 사용하지 않고 커넥터를 구성해야 합니다 *. 커넥터에 대해 HTTP 프록시 서버를 구성한 경우 검색 및 복원 기능을 사용할 수 없습니다.</block>
+  <block id="f16a485aa0b0240f4f70b7aa1b30edc6" category="doc">BlueXP 백업 및 복구를 사용하여 MongoDB, MySQL 및 PostgreSQL 데이터베이스를 복원하세요</block>
+  <block id="56eadfd0578c6c3a8c02078246fda6fc" category="paragraph">BlueXP 백업 및 복구를 사용하면 MongoDB, MySQL, PostgreSQL 데이터베이스를 모든 호스트로 복원할 수 있습니다.</block>
+  <block id="01e44bda1d12dfcaa984ecf22aceae0b" category="doc">BlueXP 백업 및 복구를 사용하여 SAP HANA 데이터베이스 복원</block>
+  <block id="b4803946c3dd9549f4dd127b2d9ec17b" category="paragraph">BlueXP 백업 및 복구를 사용하면 SAP HANA 데이터베이스를 모든 호스트로 복원할 수 있습니다.</block>
+  <block id="da0cb47c1050b54b38c52ef5086656f1" category="doc">BlueXP 백업 및 복구를 사용하여 Oracle 데이터베이스 복원</block>
+  <block id="77ff7f221f1aa4ef7c57310829772e42" category="paragraph">BlueXP 백업 및 복구를 사용하면 Oracle 데이터베이스를 원래 위치나 대체 위치로 복원할 수 있습니다. RAC 데이터베이스의 경우 데이터가 백업을 생성한 사내 노드로 복구됩니다.</block>
+  <block id="01287111d0b9a0ad4340087443c247ed" category="doc">BlueXP 백업 및 복구를 사용하여 SQL Server 데이터베이스 복원</block>
+  <block id="d640d79008b735ca2dc6f9998f6e6b0c" category="paragraph">BlueXP 백업 및 복구를 사용하면 SQL Server 데이터베이스를 원래 위치나 대체 위치로 복원할 수 있습니다.</block>
+  <block id="e2ff8a804078a87e79588e39359c1c3c" category="doc">BlueXP 백업 및 복구를 사용하여 클라우드에서 가상 머신 데이터를 복원하세요</block>
+  <block id="231e73289131d2027069457c140a2c22" category="paragraph">BlueXP 백업 및 복구를 사용하면 클라우드에서 온프레미스 vCenter로 가상 머신 데이터를 복원할 수 있습니다. 가상 머신을 백업을 수행한 위치와 정확히 동일한 위치 또는 대체 위치로 복구할 수 있습니다. 가상 머신이 아카이브 정책을 사용하여 백업된 경우 아카이브 복구 우선 순위를 설정할 수 있습니다.</block>
 </blocks>

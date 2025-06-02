@@ -4,7 +4,7 @@ permalink: task-restore-sql-data.html
 keywords: restore, Azure, Amazon Web services, Microsoft SQL Server database 
 summary: SQL Server 데이터베이스를 클라우드에서 사내 SnapCenter 서버로 복원할 수 있습니다. 
 ---
-= SQL Server 데이터베이스를 복원합니다
+= BlueXP 백업 및 복구를 사용하여 SQL Server 데이터베이스 복원
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: SQL Server 데이터베이스를 클라우드에서 사내 SnapCenter �
 
 
 [role="lead"]
-SQL Server 데이터베이스를 원래 위치 또는 대체 위치로 복원할 수 있습니다.
+BlueXP 백업 및 복구를 사용하면 SQL Server 데이터베이스를 원래 위치나 대체 위치로 복원할 수 있습니다.
 
 
 NOTE: SFR(Single File Restore), 로그 백업 복구 및 가용성 그룹의 재시드는 지원되지 않습니다.

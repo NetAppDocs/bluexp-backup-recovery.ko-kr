@@ -4,7 +4,7 @@ permalink: task-manage-backup-settings-ontap.html
 keywords: cloud backup, cloud backup service, storage keys, network bandwidth, auto backup, delete yearly snapshot, export snapshots, ransomware scans, scans 
 summary: '각 ONTAP 시스템에 대해 BlueXP 백업 및 복구를 활성화할 때 설정하는 많은 클러스터 레벨 오브젝트 백업 설정을 변경할 수 있습니다. "기본" 백업 설정으로 적용되는 일부 설정을 수정할 수도 있습니다. 여기에는 스토리지 키 변경, 오브젝트 스토리지에 대한 백업 전송 속도, 기간별 스냅샷 복사본을 백업 파일로 내보낼 것인지 여부 등이 포함됩니다. 작업 환경에 대한 랜섬웨어 검사를 활성화 또는 비활성화할 수도 있습니다.' 
 ---
-= 고급 설정 페이지에서 개체 저장소 백업 옵션을 관리합니다
+= BlueXP 백업 및 복구의 고급 설정 페이지에서 백업-객체 스토리지 옵션을 관리합니다.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

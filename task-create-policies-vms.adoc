@@ -4,7 +4,7 @@ permalink: task-create-policies-vms.html
 keywords: create policy, protection policies, predefined policies, custom policies 
 summary: 데이터 저장소를 백업하는 정책을 생성합니다 
 ---
-= 데이터 저장소를 백업하는 정책을 생성합니다
+= BlueXP 백업 및 복구를 사용하여 데이터 저장소를 백업하는 정책을 만듭니다.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 데이터 저장소를 백업하는 정책을 생성합니다
 
 
 [role="lead"]
-정책을 만들거나 BlueXP에서 사용할 수 있는 다음 미리 정의된 정책 중 하나를 사용할 수 있습니다.
+BlueXP 백업 및 복구에서 사용 가능한 다음 사전 정의된 정책 중 하나를 사용하거나 정책을 만들 수 있습니다.
 
 .시작하기 전에
 * 미리 정의된 정책을 편집하지 않으려면 정책을 만들어야 합니다.

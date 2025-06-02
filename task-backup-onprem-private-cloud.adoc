@@ -4,7 +4,7 @@ permalink: task-backup-onprem-private-cloud.html
 keywords: backing up, back up, backup, backup on-prem ontap, on-prem, on-premises, back up volumes, cloud backup, StorageGRID 
 summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템의 볼륨 데이터를 NetApp StorageGRID 시스템의 오브젝트 스토리지로 백업을 시작하십시오. 
 ---
-= 사내 ONTAP 데이터를 StorageGRID에 백업합니다
+= BlueXP 백업 및 복구를 사용하여 온프레미스 ONTAP 데이터를 StorageGRID에 백업합니다.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 몇 가지 단계를 완료하여 사내 ONTAP 시스템의 볼륨 데�
 
 
 [role="lead"]
-몇 가지 단계를 완료하여 사내 운영 ONTAP 시스템에서 보조 스토리지 시스템으로 볼륨 데이터를 백업하고 NetApp StorageGRID 시스템의 오브젝트 스토리지로 백업을 시작하십시오.
+온프레미스 기본 ONTAP 시스템의 볼륨 데이터를 보조 스토리지 시스템과 NetApp StorageGRID 시스템의 개체 스토리지로 백업하려면 BlueXP 백업 및 복구에서 몇 가지 단계를 완료하세요.
 
 
 NOTE: "사내 ONTAP 시스템"에는 FAS, AFF 및 ONTAP Select 시스템이 포함됩니다.
@@ -239,6 +239,10 @@ StorageGRID의 DataLock 및 랜섬웨어 차단 요구사항에 대한 자세한
 백업에 DataLock 및 랜섬웨어 보호를 사용하려면 StorageGRID 시스템에서 버전 11.6.0.3 이상을 실행해야 합니다.
 
 이전 백업을 클라우드 아카이브 스토리지에 계층화하려면 StorageGRID 시스템에서 버전 11.3 이상이 실행되고 있어야 합니다. 또한 StorageGRID 시스템이 BlueXP Canvas에서 검색되어야 합니다.
+
+사용자 보관 저장소를 사용하려면 관리자 노드 IP 액세스가 필요합니다.
+
+게이트웨이 IP 액세스는 항상 필요합니다.
 
 --
 S3 자격 증명:: StorageGRID 스토리지에 대한 액세스를 제어하려면 S3 테넌트 계정을 생성해야 합니다. https://docs.netapp.com/us-en/storagegrid-117/admin/creating-tenant-account.html["자세한 내용은 StorageGRID 문서를 참조하십시오"^].

@@ -4,7 +4,7 @@ permalink: task-backup-app-data-to-storagegrid.html
 keywords: backing up, back up, backup, backup application data, Google Cloud, GCP, BlueXP backup and recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: ONTAP에서 GCP로 애플리케이션 데이터를 백업하기 위한 몇 가지 단계를 완료합니다. 
 ---
-= 사내 애플리케이션 데이터를 StorageGRID에 백업합니다
+= BlueXP 백업 및 복구를 사용하여 온프레미스 애플리케이션 데이터를 StorageGRID에 백업합니다.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: ONTAP에서 GCP로 애플리케이션 데이터를 백업하기 위한 
 
 
 [role="lead"]
-ONTAP에서 StorageGRID로 애플리케이션 데이터를 백업하려면 몇 가지 단계를 완료하십시오.
+ONTAP에서 StorageGRID로 애플리케이션 데이터를 백업하려면 BlueXP 백업 및 복구에서 몇 가지 단계를 완료하세요.
 
 BlueXP는 데이터 잠금 및 랜섬웨어 보호를 지원합니다. ONTAP 클러스터가 ONTAP 9.11.1 이상에서 실행 중인 경우 StorageGRID 시스템은 11.6.0.3 이상이며, 아카이브 스토리지를 구성하지 않은 경우 백업을 덮어쓰기, 삭제 및 랜섬웨어 위협으로부터 보호할 수 있습니다.
 

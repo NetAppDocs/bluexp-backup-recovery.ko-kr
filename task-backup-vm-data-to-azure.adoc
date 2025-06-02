@@ -4,7 +4,7 @@ permalink: task-backup-vm-data-to-azure.html
 keywords: back up, backup, backup datastore, Microsoft Azure, backup datastores 
 summary: 사내 ONTAP에서 Azure로 데이터 저장소를 백업합니다. 
 ---
-= Microsoft Azure에 데이터 저장소를 백업합니다
+= BlueXP 백업 및 복구를 사용하여 Microsoft Azure에 데이터 저장소 백업
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 사내 ONTAP에서 Azure로 데이터 저장소를 백업합니다.
 
 
 [role="lead"]
-SnapCenter Plug-in for VMware vSphere 호스트를 BlueXP와 통합하여 하나 이상의 데이터 저장소를 Microsoft Azure에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.
+VMware vSphere 호스트용 SnapCenter 플러그인을 BlueXP 백업 및 복구와 통합하여 하나 이상의 데이터 저장소를 Microsoft Azure에 백업할 수 있습니다. VM 관리자는 이를 통해 스토리지 효율성을 위해 데이터를 쉽고 빠르게 백업 및 아카이브하고 클라우드 전환을 가속화할 수 있습니다.
 
 데이터 저장소가 아카이브 정책과 연결된 경우 아카이브 계층을 선택할 수 있는 옵션이 제공됩니다. 지원되는 아카이브 계층은 Azure Archive Blob Storage입니다.
 

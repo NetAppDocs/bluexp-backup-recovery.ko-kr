@@ -4,7 +4,7 @@ permalink: task-backup-vm-data-to-aws.html
 keywords: back up, backup, backup datastore, aws, Amazon Web Services, backup datastores 
 summary: 사내 ONTAP에서 AWS로 데이터 저장소를 백업합니다. 
 ---
-= Amazon Web Services에 데이터 저장소를 백업합니다
+= BlueXP 백업 및 복구를 사용하여 Amazon Web Services에 데이터 저장소 백업
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 사내 ONTAP에서 AWS로 데이터 저장소를 백업합니다.
 
 
 [role="lead"]
-하나 이상의 데이터 저장소를 Amazon Web Services에 백업 및 아카이브하면 스토리지 효율성과 클라우드 전환을 개선할 수 있습니다.
+BlueXP 백업 및 복구를 사용하면 하나 이상의 데이터 저장소를 Amazon Web Services로 백업하고 보관하여 스토리지 효율성과 클라우드 전환을 개선할 수 있습니다.
 
 데이터 저장소가 아카이브 정책에 연결되어 있는 경우 아카이브 계층을 선택할 수 있습니다. 지원되는 아카이브 계층은 Glacier 및 Glacier Deep입니다.
 

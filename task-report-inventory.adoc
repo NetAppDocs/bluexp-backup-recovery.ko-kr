@@ -4,7 +4,7 @@ permalink: task-report-inventory.html
 keywords: cloud backup, backup and recovery service, backup and recovery, backup, restore, report, inventory, bluexp 
 summary: BlueXP 백업 및 복구 보고서를 사용하면 조직의 정의된 정책에 따라 중요한 데이터를 보호하고 규정 준수 프로세스에 대한 감사를 효율적으로 지원할 수 있습니다. 백업 인벤토리 보고서를 사용하면 특정 계정, 작업 환경 또는 SVM 인벤토리에 대한 모든 백업을 볼 수 있습니다. 
 ---
-= 데이터 보호 범위에 대한 보고
+= BlueXP 백업 및 복구를 통한 데이터 보호 범위에 대한 보고서
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: BlueXP 백업 및 복구 보고서를 사용하면 조직의 정의된 
 
 
 [role="lead"]
-BlueXP 백업 및 복구 보고서를 사용하면 조직의 정의된 정책에 따라 중요한 데이터를 보호하고 규정 준수 요구 사항에 대한 감사를 제공할 수 있습니다.
+BlueXP 백업 및 복구 보고서를 사용하면 조직의 정의된 정책에 따라 중요 데이터가 보호되는지 확인하고 규정 준수 요구 사항에 대한 감사를 제공할 수 있습니다.
 
 BlueXP 백업 및 복구 보고서를 통해 다음과 같은 작업을 수행할 수 있습니다.
 

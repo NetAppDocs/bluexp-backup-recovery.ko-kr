@@ -4,7 +4,7 @@ permalink: concept-cloud-backup-policies.html
 keywords: backing up, back up, backup, back up volumes, cloud backup, backup policies, policies, schedules 
 summary: BlueXP 백업 및 복구를 사용하면 사내 ONTAP 및 Cloud Volumes ONTAP 시스템에 대한 다양한 구성 설정으로 백업 정책을 생성할 수 있습니다. 
 ---
-= 오브젝트에 백업 정책 옵션
+= BlueXP 백업 및 복구의 객체 백업 정책 옵션
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -60,7 +60,7 @@ BlueXP 백업 및 복구는 볼륨 백업에 대한 DataLock 및 랜섬웨어 �
 
 https://bluexp.netapp.com/blog/cbs-blg-the-bluexp-feature-that-protects-backups-from-ransomware["자세한 내용은 DataLock 및 랜섬웨어 보호 블로그 를 참조하십시오"^].
 
-이 기능은 소스 볼륨에 대한 보호 기능을 제공하지 않으며 해당 소스 볼륨의 백업에만 사용됩니다. NetApp 또는 의 일부를 https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ONTAP에서 제공하는 랜섬웨어 방지 보호"^] 사용하여 https://cloud.netapp.com/ci-sde-plp-cloud-secure-info-trial?hsCtaTracking=fefadff4-c195-4b6a-95e3-265d8ce7c0cd%7Cb696fdde-c026-4007-a39e-5e986c4d27c6["Data Infrastructure Insights 및 Cloud Secure를 참조하십시오"^] 소스 볼륨을 보호합니다.
+이 기능은 소스 볼륨에 대한 보호 기능을 제공하지 않으며 해당 소스 볼륨의 백업에만 사용됩니다. 일부를 사용하세요  https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ONTAP에서 제공하는 랜섬웨어 방지 보호"^] 소스 볼륨을 보호하세요.
 
 [CAUTION]
 ====
