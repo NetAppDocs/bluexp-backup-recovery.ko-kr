@@ -1,0 +1,40 @@
+= 색인된 카탈로그 지원 업데이트
+:allow-uri-read: 
+
+
+
+
+=== 색인된 카탈로그 지원 업데이트
+
+2025년 2월, 데이터 복원 시 검색 및 복원 방식에 사용되는 업데이트된 인덱싱 기능(인덱싱된 카탈로그 v2)이 출시되었습니다. 이전 릴리스에서는 온프레미스 환경에서 데이터 인덱싱 성능이 크게 향상되었습니다. 이번 릴리스에서는 Amazon Web Services, Microsoft Azure, Google Cloud Platform(GCP) 환경에서 인덱싱 카탈로그를 사용할 수 있습니다.
+
+신규 고객인 경우, 모든 신규 환경에서 Indexed Catalog v2가 기본적으로 활성화됩니다. 기존 고객인 경우, Indexed Catalog v2를 활용하기 위해 기존 환경을 다시 인덱싱할 수 있습니다.
+
+.인덱싱을 활성화하려면 어떻게 해야 합니까?
+데이터를 복원하는 검색 및 복원 방법을 사용하려면 먼저 볼륨 또는 파일을 복원하려는 각 소스 작업 환경에서 "인덱싱"을 활성화해야 합니다. 검색 및 복원을 수행할 때 *인덱싱 사용* 옵션을 선택하세요.
+
+색인된 카탈로그는 모든 볼륨과 백업 파일을 추적하여 검색을 빠르고 효율적으로 수행할 수 있도록 해줍니다.
+
+자세한 내용은 을 https://docs.netapp.com/us-en/bluexp-backup-recovery/task-restore-backups-ontap.html#restore-ontap-data-using-search-restore["검색 및 복원 을 사용하여 ONTAP 데이터를 복원하는 방법"]참조하십시오.
+
+
+
+=== Azure 개인 링크 엔드포인트 및 서비스 엔드포인트
+
+일반적으로 BlueXP 백업 및 복구는 클라우드 제공업체와 프라이빗 엔드포인트를 설정하여 다양한 보호 작업을 처리합니다. 이번 릴리스에서는 BlueXP 백업 및 복구가 프라이빗 엔드포인트를 자동으로 생성하는 것을 활성화 또는 비활성화할 수 있는 선택적 설정이 도입되었습니다. 프라이빗 엔드포인트 생성 프로세스를 더욱 세부적으로 제어하려는 경우 이 기능이 유용할 수 있습니다.
+
+이 설정을 비활성화하면 BlueXP 백업 및 복구가 제대로 작동하도록 개인 엔드포인트를 수동으로 생성해야 합니다. 연결이 제대로 되지 않으면 백업 및 복구 작업을 제대로 수행하지 못할 수 있습니다.
+
+
+
+=== ONTAP S3에서 SnapMirror to Cloud Resync 지원
+
+이전 릴리스에서는 SnapMirror to Cloud Resync(SM-C Resync) 지원이 도입되었습니다. 이 기능은 NetApp 환경에서 볼륨 마이그레이션 시 데이터 보호를 간소화합니다. 이번 릴리스에서는 ONTAP S3뿐 아니라 Wasabi, MinIO와 같은 다른 S3 호환 공급업체에서도 SM-C Resync를 지원합니다.
+
+
+
+=== StorageGRID용 자체 버킷 가져오기
+
+작업 환경의 개체 스토리지에 백업 파일을 생성할 때, 기본적으로 BlueXP 백업 및 복구는 사용자가 구성한 개체 스토리지 계정에 백업 파일의 컨테이너(버킷 또는 스토리지 계정)를 생성합니다. 이전에는 이를 재정의하여 Amazon S3, Azure Blob Storage 및 Google Cloud Storage에 대한 자체 컨테이너를 지정할 수 있었습니다. 이번 릴리스에서는 자체 StorageGRID 개체 스토리지 컨테이너를 사용할 수 있습니다.
+
+을 https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-protection-journey.html#do-you-want-to-create-your-own-object-storage-container["나만의 객체 스토리지 컨테이너를 만드세요"]참조하십시오.

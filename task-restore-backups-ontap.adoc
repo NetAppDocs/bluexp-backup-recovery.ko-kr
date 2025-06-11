@@ -47,7 +47,7 @@ NOTE: BlueXP 백업 및 복구는 적어도 하나의 작업 환경에 대해 �
 
 image:screenshot_restore_dashboard.png["Browse  amp; Restore 또는 Search  amp; Restore 기능을 사용할 수 있는 옵션이 표시된 Restore Dashboard입니다."]
 
-보시다시피, 복원 대시보드는 백업 파일에서 데이터를 복원하는 두 가지 다른 방법을 제공합니다. * 찾아보기 및 복원 * 및 * 검색 및 복원 *.
+보시다시피, 복원 대시보드는 백업 파일에서 데이터를 복원하는 두 가지 방법을 제공합니다. *찾아보기 및 복원*과 *검색 및 복원*입니다.
 
 
 
@@ -246,7 +246,7 @@ video::9Og5agUWyRk[youtube,width=848,height=480,end=164]
 . Restore * 탭을 클릭하면 Restore Dashboard가 표시됩니다.
 . Browse & Restore _ 섹션에서 * Restore Volume * 을 클릭합니다.
 +
-image:screenshot_restore_volume_selection.png["Restore Dashboard에서 Restore Volumes 버튼을 선택한 스크린샷"]
+image:screenshot_restore_dashboard.png["Browse  amp; Restore 또는 Search  amp; Restore 기능을 사용할 수 있는 옵션이 표시된 Restore Dashboard입니다."]
 
 . Select Source_페이지에서 복원하려는 볼륨의 백업 파일로 이동합니다. 복원할 날짜/시간 스탬프가 있는 * Working Environment *, * Volume * 및 * Backup * 파일을 선택합니다.
 +
@@ -407,7 +407,7 @@ video::9Og5agUWyRk[youtube,width=848,height=480,start=165]
 . Restore * 탭을 클릭하면 Restore Dashboard가 표시됩니다.
 . Browse & Restore_ 섹션에서 * 파일 또는 폴더 복원 * 을 클릭합니다.
 +
-image:screenshot_restore_files_selection.png["Restore Dashboard에서 Restore Files 또는 Folder 버튼을 선택하는 스크린샷"]
+image:screenshot_restore_dashboard.png["Browse  amp; Restore 또는 Search  amp; Restore 기능을 사용할 수 있는 옵션이 표시된 Restore Dashboard입니다."]
 
 . Select Source_페이지에서 복원하려는 파일이 포함된 볼륨의 백업 파일을 찾습니다. 파일을 복원할 날짜/시간 스탬프가 있는 * Working Environment *, * Volume * 및 * Backup * 을 선택합니다.
 +
@@ -727,7 +727,7 @@ image:diagram_search_restore_vol_file.png["검색 및 앰프, 복원을 사용�
 인덱싱된 카탈로그는 작업 환경의 모든 볼륨 및 백업 파일에 대한 메타데이터를 저장하는 데이터베이스입니다. 검색 및 복원 기능에서 복원하려는 데이터가 포함된 백업 파일을 빠르게 찾는 데 사용됩니다.
 
 .인덱싱된 카탈로그 v2 기능
-2025년 2월에 출시된 인덱싱 카탈로그 v2에는 더 효율적이고 사용하기 쉬운 새로운 기능이 추가되었습니다. 이 버전은 성능이 크게 향상되었으며 모든 신규 고객에게 기본적으로 사용됩니다.
+2025년 2월에 출시되고 2025년 6월에 업데이트된 색인 카탈로그 v2에는 카탈로그를 더 효율적이고 사용하기 쉽게 만드는 기능이 포함되어 있습니다. 이 버전은 성능이 크게 향상되었으며 모든 신규 고객에게 기본적으로 사용됩니다.
 
 v2와 관련하여 다음 고려 사항을 검토하십시오.
 
@@ -736,6 +736,7 @@ v2와 관련하여 다음 고려 사항을 검토하십시오.
 * Catalog v2는 스냅샷 레이블이 있는 스냅샷만 인덱싱합니다.
 * BlueXP  백업 및 복구는 "시간별" SnapMirror 레이블을 사용하여 스냅샷을 인덱싱하지 않습니다. "시간별" SnapMirror 레이블을 사용하여 스냅샷을 인덱싱하려면 v2가 미리보기 모드에 있는 동안 스냅샷을 수동으로 활성화해야 합니다.
 * BlueXP  백업 및 복구는 카탈로그 v2를 통해서만 BlueXP  백업 및 복구로 보호되는 작업 환경과 관련된 볼륨 및 스냅숏을 인덱싱합니다. BlueXP  플랫폼에서 검색된 다른 작업 환경은 인덱싱되지 않습니다.
+* Catalog v2를 사용한 데이터 인덱싱은 온프레미스 환경과 Amazon Web Services, Microsoft Azure, Google Cloud Platform(GCP) 환경에서 수행됩니다.
 
 
 인덱싱된 카탈로그 v2는 다음을 지원합니다.
@@ -801,31 +802,34 @@ image:screenshot_restore_enable_indexing.png["인덱싱된 카탈로그를 활�
 
 .단계
 . BlueXP 메뉴에서 * 보호 > 백업 및 복구 * 를 선택합니다.
-. Restore * 탭을 클릭하면 Restore Dashboard가 표시됩니다.
-. Search & Restore _ 섹션에서 * Search & Restore * 를 클릭합니다.
+. 복원 * 탭을 클릭합니다.
 +
-image:screenshot_restore_start_search_restore.png["Restore Dashboard에서 Search  amp; Restore 버튼을 선택하는 스크린샷."]
+복원 대시보드가 표시됩니다.
 
-. 복원 검색 페이지에서 다음을 수행합니다.
+. _검색 및 복원_ 섹션에서 *검색 및 복원*을 선택합니다.
++
+image:screenshot_restore_dashboard.png["Browse  amp; Restore 또는 Search  amp; Restore 기능을 사용할 수 있는 옵션이 표시된 Restore Dashboard입니다."]
+
+. 검색 및 복원 페이지에서 다음을 수행합니다.
 +
 .. 검색 표시줄 _ 에서 전체 또는 부분 볼륨 이름, 폴더 이름 또는 파일 이름을 입력합니다.
 .. 리소스 유형 * 볼륨 *, * 파일 *, * 폴더 * 또는 * 모두 * 를 선택합니다.
 .. Filter by_영역에서 필터 기준을 선택합니다. 예를 들어 데이터가 있는 작업 환경과 파일 형식(예: .jpeg 파일)을 선택할 수 있습니다. 또는 오브젝트 스토리지에서 사용 가능한 스냅샷 복사본 또는 백업 파일 내에서만 결과를 검색하려면 백업 위치 유형을 선택할 수 있습니다.
 
 
-. 검색 * 을 클릭하면 검색 결과 영역에 검색과 일치하는 파일, 폴더 또는 볼륨이 있는 모든 리소스가 표시됩니다.
+. *검색*을 선택하면 검색 결과 영역에 검색 조건에 맞는 파일, 폴더 또는 볼륨이 있는 모든 리소스가 표시됩니다.
 +
 image:screenshot_restore_step1_search_restore.png["검색 및 amp; 복원 페이지에서 검색 기준과 검색 결과를 보여주는 스크린샷."]
 
-. 복원할 데이터가 있는 리소스를 찾고 * 모든 백업 보기 * 를 클릭하여 일치하는 볼륨, 폴더 또는 파일이 포함된 모든 백업 파일을 표시합니다.
+. 복원하려는 데이터가 있는 리소스를 찾은 다음 *모든 백업 보기*를 선택하면 일치하는 볼륨, 폴더 또는 파일이 포함된 모든 백업 파일이 표시됩니다.
 +
 image:screenshot_restore_step2_search_restore.png["검색 기준과 일치하는 모든 백업을 보는 방법을 보여 주는 스크린샷"]
 
-. 데이터를 복원하는 데 사용할 백업 파일을 찾고 * 복원 * 을 클릭합니다.
+. 데이터를 복원하는 데 사용할 백업 파일을 찾아 *복원*을 선택합니다.
 +
 결과는 로컬 볼륨 스냅샷 복사본과 검색에 파일이 포함된 원격 복제 볼륨을 식별합니다. 클라우드 백업 파일, 스냅샷 복사본 또는 복제된 볼륨에서 복원을 선택할 수 있습니다.
 
-. 볼륨, 폴더 또는 파일을 복원할 대상 위치를 선택하고 * 복원 * 을 클릭합니다.
+. 볼륨, 폴더 또는 파일을 복원할 대상 위치를 선택하고 *복원*을 선택합니다.
 +
 ** 볼륨의 경우 원래 대상 작업 환경을 선택하거나 대체 작업 환경을 선택할 수 있습니다. FlexGroup 볼륨을 복원할 때 여러 애그리게이트를 선택해야 합니다.
 ** 폴더의 경우 원래 위치로 복원하거나 작업 환경, 볼륨 및 폴더를 포함한 대체 위치를 선택할 수 있습니다.
@@ -865,6 +869,6 @@ endif::gcp[]
 
 
 .결과
-볼륨, 폴더 또는 파일이 복원되고 복구 작업의 진행률을 검토할 수 있도록 복구 대시보드로 돌아갑니다. 또한 * Job Monitoring * 탭을 클릭하여 복원 진행률을 확인할 수도 있습니다.
+볼륨, 폴더 또는 파일이 복원되고 복구 작업의 진행률을 검토할 수 있도록 복구 대시보드로 돌아갑니다. *작업 모니터링* 탭을 선택하여 복원 진행 상황을 확인할 수도 있습니다.
 
 복원된 볼륨의 경우 를 사용할 수 있습니다 link:task-manage-backups-ontap.html["이 새 볼륨에 대한 백업 설정을 관리합니다"] 필요에 따라.
