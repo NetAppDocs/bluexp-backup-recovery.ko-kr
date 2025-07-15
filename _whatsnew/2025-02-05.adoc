@@ -1,0 +1,20 @@
+= BlueXP backup and recovery 미리보기 릴리스
+:allow-uri-read: 
+
+
+
+
+=== BlueXP backup and recovery 미리보기 릴리스
+
+BlueXP backup and recovery 의 이 미리 보기 릴리스에서는 BlueXP backup and recovery 서비스에서 익숙한 3-2-1 보호 전략을 사용하여 Microsoft SQL Server 워크로드를 관리할 수 있는 업데이트된 사용자 인터페이스를 제공합니다. 이 새로운 버전을 사용하면 이러한 워크로드를 기본 스토리지에 백업하고, 보조 스토리지에 복제하고, 클라우드 객체 스토리지에 백업할 수 있습니다.
+
+
+NOTE: 이 문서는 기술 미리 보기로 제공됩니다. 이 사전 공개 오퍼링과 함께 NetApp은 일반 출시 이전에 서비스 세부 정보, 콘텐츠 및 일정을 수정할 권한을 보유합니다.
+
+BlueXP backup and recovery Preview 2025 버전에는 다음과 같은 업데이트가 포함되어 있습니다.
+
+* 백업 및 복구 작업을 관리하는 데 있어 보다 직관적인 환경을 제공하는 재설계된 사용자 인터페이스입니다.
+* 미리보기 버전을 사용하면 Microsoft SQL Server 데이터베이스를 백업하고 복원할 수 있습니다. (다른 워크로드에 대한 지원은 향후 릴리스에서 추가될 예정입니다.)
+* 이 버전은 SnapCenter 기능을 통합하여 BlueXP backup and recovery 사용자 인터페이스에서 3-2-1 데이터 보호 전략을 통해 SnapCenter 리소스를 관리하고 보호할 수 있습니다.
+* 이 버전을 사용하면 SnapCenter 워크로드를 BlueXP backup and recovery 로 가져올 수 있습니다.
+

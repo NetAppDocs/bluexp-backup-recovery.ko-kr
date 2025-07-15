@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: br-use-previous-version.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, BlueXP backup and recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: 이전 버전의 BlueXP backup and recovery 사용하면 VMware 워크로드 및 ONTAP 워크로드를 포함한 다양한 워크로드 유형을 보호할 수 있습니다. 
+---
+= 이전 버전의 BlueXP backup and recovery 사용
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+이전 버전의 BlueXP backup and recovery 사용하면 VMware 워크로드 및 ONTAP 워크로드를 포함한 다양한 워크로드 유형을 보호할 수 있습니다.
+
+새로운 BlueXP backup and recovery UI와 이전 BlueXP backup and recovery UI를 전환할 수 있습니다. 새로운 UI는 누구나 사용할 수 있으며, 새 UI에서 아직 사용할 수 없는 워크로드를 백업해야 하는 경우 이전 UI로 다시 전환할 수 있습니다.
+
+*각 UI에서 어떤 워크로드를 백업할 수 있나요?*
+
+[cols="40,30,30"]
+|===
+| 워크로드 | 새로운 UI | 이전 UI 
+
+
+| 바로 Microsoft SQL Server 워크로드입니다 | 사용 가능 | 사용할 수 없음 
+
+
+| VMware 워크로드 | 아직 사용할 수 없습니다 | 사용 가능 
+
+
+| 볼륨 | 아직 사용할 수 없습니다 | 사용 가능 
+
+
+| 쿠버네티스 워크로드 | 아직 사용할 수 없습니다 | 사용할 수 없음 
+|===
+*어떤 UI를 사용하고 있는지 어떻게 알 수 있나요?* 새로운 UI는 이전 UI와 다른 메뉴 구조를 사용합니다.
+
+새로운 UI: image:screen-br-menu-unified.png["BlueXP backup and recovery 위한 새로운 UI 스크린샷"]
+
+이전 UI: image:screen-br-menu-legacy.png["BlueXP backup and recovery 위한 이전 UI 스크린샷"]
+
+
+
+== 다른 작업으로 전환
+
+BlueXP backup and recovery UI에서 다른 워크로드로 전환할 수 있습니다.
+
+.단계
+. BlueXP 왼쪽 탐색 창에서 *보호* > *백업 및 복구*를 선택합니다.
+. 페이지 오른쪽 상단에서 *작업량 전환* 드롭다운 목록을 선택합니다.
+. 전환하려는 작업 부하를 선택하세요. image:screen-br-menu-switch-ui.png["BlueXP backup and recovery 위한 스위치 워크로드 스크린샷"]
++
+페이지가 새로 고쳐지고 선택한 작업 부하가 적절한 UI에 표시됩니다.
+
+

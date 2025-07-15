@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: br-start-setup.html 
+keywords: bluexp, backup, back up, restore, recovery, aws, azure 
+summary: BlueXP backup and recovery 사용하기 전에 몇 가지 단계를 거쳐 백업 대상을 설정하세요. 
+---
+= BlueXP backup and recovery 사용하기 전에 백업 대상을 설정하세요
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+BlueXP backup and recovery 사용하기 전에 몇 가지 단계를 거쳐 백업 대상을 설정하세요.
+
+시작하기 전에 검토를 통해 link:concept-start-prereq.html["필수 구성 요소"]사용 중인 환경이 준비되어 있는지 확인하십시오.
+
+
+
+== 백업 대상을 준비합니다
+
+다음 백업 대상 중 하나 이상을 준비하세요.
+
+* NetApp StorageGRID.
++
+을 https://docs.netapp.com/us-en/bluexp-storagegrid/task-discover-storagegrid.html["StorageGRID 알아보세요"^]참조하십시오.
+
++
+참조하다  https://docs.netapp.com/us-en/storagegrid-117/index.html["StorageGRID 설명서"^] StorageGRID 에 대한 자세한 내용은 다음을 참조하세요.
+
+* 아마존 웹 서비스. 을 https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["Amazon S3 문서"^]참조하십시오.
++
+AWS를 백업 대상으로 준비하려면 다음을 수행하세요.
+
++
+** AWS에서 계정을 설정합니다.
+** 다음 섹션에 나와 있는 AWS에서 S3 권한을 구성합니다.
+** BlueXP 에서 AWS 스토리지를 관리하는 방법에 대한 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/bluexp-setup-admin/task-viewing-amazon-s3.html["Amazon S3 버킷을 관리합니다"^].
+
+
+
+
+* 마이크로소프트 애저.
++
+** 을 https://docs.netapp.com/us-en/bluexp-azure-netapp-files/index.html["Azure NetApp Files 설명서"^]참조하십시오.
+** Azure에서 계정을 설정합니다.
+** 구성  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html["Azure 권한"^] Azure에서.
+** BlueXP 에서 Azure 저장소를 관리하는 방법에 대한 자세한 내용은 다음을 참조하세요.  https://docs.netapp.com/us-en/bluexp-blob-storage/task-view-azure-blob-storage.html["Azure 저장소 계정을 관리합니다"^] .
+
+
+
+
+백업 대상 자체에서 옵션을 구성한 후에는 나중에 BlueXP backup and recovery 서비스에서 백업 대상으로 구성하게 됩니다. BlueXP backup and recovery 에서 백업 대상을 구성하는 방법에 대한 자세한 내용은 다음을 참조하십시오. link:br-start-discover-backup-targets.html["백업 대상을 검색하세요"] .
+
+
+
+== S3 권한 설정
+
+AWS S3 권한 두 세트를 구성해야 합니다.
+
+* Connector의 S3 버킷 생성 및 관리 권한
+* S3 버킷에서 데이터를 읽고 쓸 수 있도록 사내 ONTAP 클러스터에 대한 권한.
+
+
+.단계
+. 커넥터에 필요한 권한이 있는지 확인합니다. 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html["BlueXP  정책 권한"].
++
+
+NOTE: AWS 중국 지역에서 백업을 생성할 때는 IAM 정책의 All_Resource_섹션에서 AWS 리소스 이름 "arn"을 "AWS"에서 "AWS-cn"으로 변경해야 합니다 `arn:aws-cn:s3:::netapp-backup-*`.
+
+. 서비스를 활성화하면 백업 마법사에서 액세스 키와 암호 키를 입력하라는 메시지가 표시됩니다. 이러한 자격 증명은 ONTAP 클러스터에 전달되므로 ONTAP는 S3 버킷으로 데이터를 백업 및 복원할 수 있습니다. 이를 위해서는 다음과 같은 권한을 가진 IAM 사용자를 생성해야 합니다.
++
+을 참조하십시오 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["AWS 설명서: IAM 사용자에게 권한을 위임하기 위한 역할 생성"^].
+
++
+[%collapsible]
+====
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+     "Statement": [
+        {
+           "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:ListBucket",
+                "s3:ListAllMyBuckets",
+                "s3:GetBucketLocation",
+                "s3:PutEncryptionConfiguration"
+            ],
+            "Resource": "arn:aws:s3:::netapp-backup-*",
+            "Effect": "Allow",
+            "Sid": "backupPolicy"
+        },
+        {
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetBucketLocation"
+            ],
+            "Resource": "arn:aws:s3:::netapp-backup*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:ListAllMyBuckets",
+                "s3:PutObjectTagging",
+                "s3:GetObjectTagging",
+                "s3:RestoreObject",
+                "s3:GetBucketObjectLockConfiguration",
+                "s3:GetObjectRetention",
+                "s3:PutBucketObjectLockConfiguration",
+                "s3:PutObjectRetention"
+            ],
+            "Resource": "arn:aws:s3:::netapp-backup*/*",
+            "Effect": "Allow"
+        }
+    ]
+}
+----
+====
+

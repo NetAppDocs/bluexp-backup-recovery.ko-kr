@@ -1,0 +1,155 @@
+---
+sidebar: sidebar 
+permalink: br-start-discover-backup-targets.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, BlueXP backup and recovery, Microsoft SQL Server database, 
+summary: 'BlueXP backup and recovery 에서 오프사이트 백업 대상을 찾는 몇 가지 단계를 완료하세요. 이러한 대상에는 Amazon Web Services(AWS) S3, Microsoft Azure Blob Storage, Google Cloud Storage, StorageGRID 포함될 수 있습니다.' 
+---
+= BlueXP backup and recovery 에서 오프사이트 백업 대상을 찾아보세요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+BlueXP backup and recovery 에서 오프사이트 백업 대상을 검색하거나 수동으로 추가하려면 몇 가지 단계를 완료하세요.
+
+
+
+== 백업 타겟을 찾아보세요
+
+BlueXP backup and recovery 사용하기 전에 Amazon Web Services(AWS) S3, Microsoft Azure Blob Storage, Google Cloud Storage 또는 StorageGRID 의 백업 대상을 구성해야 합니다.
+
+이러한 타겟을 자동으로 검색하거나 수동으로 추가할 수 있습니다.
+
+스토리지 계정 시스템에 액세스하는 데 필요한 자격 증명을 제공하세요. 이 자격 증명은 백업할 워크로드를 검색하는 데 사용됩니다.
+
+.단계
+. BlueXP backup and recovery 메뉴에서 *인벤토리*를 선택합니다.
+. *오프사이트 백업 대상* 탭을 선택합니다.
++
+image:screen-br-inventory-offsite-backup-targets.png["오프사이트 백업 대상 탭"]
+
+. *백업 대상 검색*을 선택합니다.
+. 백업 대상 유형 중 하나를 선택하세요: *Amazon Web Services(AWS) S3*, *Microsoft Azure Blob Storage*, * StorageGRID* 또는 * ONTAP S3*.
+. 정보를 입력하세요. 선택한 백업 대상 유형에 따라 입력하는 정보가 달라집니다.
++
+** AWS의 경우:
++
+*** *자격 증명 이름*: AWS 자격 증명 이름을 입력하세요.
+*** *액세스 키*: AWS 비밀번호를 입력하세요.
+*** *비밀 키*: AWS 비밀 키를 입력하세요.
+
+
+** Azure의 경우:
++
+*** *자격 증명 이름*: Azure Blob Storage 자격 증명 이름을 입력하세요.
+*** *클라이언트 비밀번호*: Azure Blob Storage 클라이언트 비밀번호를 입력하세요.
+*** *애플리케이션(클라이언트) ID*: Azure Blob Storage 애플리케이션 ID를 선택합니다.
+*** *디렉토리 테넌트 ID*: Azure Blob Storage 테넌트 ID를 입력하세요.
+
+
+** StorageGRID의 경우:
++
+*** *자격 증명 이름*: StorageGRID 자격 증명 이름을 입력하세요.
+*** *게이트웨이 노드 FQDN*: StorageGRID 에 대한 FQDN 이름을 입력하세요.
+*** *포트*: StorageGRID 의 포트 번호를 입력하세요.
+*** *액세스 키*: StorageGRID S3 액세스 키를 입력하세요.
+*** *비밀 키*: StorageGRID S3 비밀 키를 입력하세요.
+
+
+** ONTAP S3의 경우:
++
+*** *자격 증명 이름*: ONTAP S3 자격 증명 이름을 입력하세요.
+*** *게이트웨이 노드 FQDN*: ONTAP S3의 FQDN 이름을 입력하세요.
+*** *포트*: ONTAP S3의 포트 번호를 입력하세요.
+*** *액세스 키*: ONTAP S3 액세스 키를 입력하세요.
+*** *비밀 키*: ONTAP S3 비밀 키를 입력하세요.
+
+
+
+
+. Discover * 를 선택합니다.
+
+
+
+
+== 백업 대상에 버킷 추가
+
+BlueXP backup and recovery 버킷을 자동으로 검색하는 대신, 오프사이트 백업 대상에 버킷을 수동으로 추가할 수 있습니다.
+
+.단계
+. BlueXP backup and recovery 메뉴에서 *인벤토리*를 선택합니다.
+. *오프사이트 백업 대상*을 선택하세요.
+. 대상을 선택하고 오른쪽에서 *작업*을 선택하세요. image:icon-action.png["작업 아이콘"] 아이콘을 클릭하고 *버킷 추가*를 선택하세요.
+. 버킷 정보를 입력하세요. 선택한 백업 대상 유형에 따라 정보가 달라집니다.
++
+** AWS의 경우:
++
+*** *버킷 이름*: S3 버킷의 이름을 입력하세요.
+*** *AWS 계정*: AWS 계정 이름을 입력하세요.
+*** *버킷 지역*: 버킷의 AWS 지역을 입력하세요.
+*** *S3 객체 잠금 활성화*: 버킷에 대해 S3 객체 잠금을 활성화하려면 이 옵션을 선택하세요. S3 객체 잠금은 지정된 보존 기간 동안 객체가 삭제되거나 덮어쓰이지 않도록 하여 데이터 보호 수준을 한층 더 강화합니다. 이 기능은 버킷을 생성할 때만 활성화할 수 있으며 나중에 해제할 수 없습니다.
++
+**** *거버넌스 모드*: S3 객체 잠금 버킷에 대한 거버넌스 모드를 활성화하려면 이 옵션을 선택하세요. 거버넌스 모드를 사용하면 대부분의 사용자가 객체를 삭제하거나 덮어쓰지 못하도록 보호할 수 있지만, 특정 사용자가 보존 설정을 변경할 수 있습니다.
+**** *준수 모드*: S3 객체 잠금 버킷에 대한 준수 모드를 활성화하려면 이 옵션을 선택하세요. 준수 모드는 루트 사용자를 포함한 모든 사용자가 보존 기간이 만료될 때까지 보존 설정을 변경하거나 객체를 삭제할 수 없도록 합니다.
+
+
+*** *버전 관리*: S3 버킷의 버전 관리를 활성화하려면 이 옵션을 선택하세요. 버전 관리를 통해 버킷에 여러 버전의 객체를 보관할 수 있으며, 이는 백업 및 복구에 유용합니다.
+*** *태그*: S3 버킷의 태그를 선택하세요. 태그는 S3 리소스를 구성하고 관리하는 데 사용할 수 있는 키-값 쌍입니다.
+*** *암호화*: S3 버킷의 암호화 유형을 선택합니다. AWS S3 관리형 키 또는 AWS Key Management Service 키 중에서 선택할 수 있습니다. AWS Key Management Service 키를 선택하는 경우 키 ID를 제공해야 합니다.
+
+
+** Azure의 경우:
++
+*** *구독*: Azure Blob Storage 컨테이너의 이름을 선택합니다.
+*** *리소스 그룹*: Azure 리소스 그룹의 이름을 선택합니다.
+*** *인스턴스 세부 정보*:
++
+**** *저장소 계정 이름*: Azure Blob Storage 컨테이너의 이름을 입력하세요.
+**** *Azure 지역*: 컨테이너의 Azure 지역을 입력하세요.
+**** *성능 유형*: Azure Blob Storage 컨테이너에 대해 표준 또는 프리미엄 성능 유형을 선택하여 필요한 성능 수준을 나타냅니다.
+**** *암호화*: Azure Blob Storage 컨테이너의 암호화 유형을 선택합니다. Microsoft 관리 키 또는 고객 관리 키 중에서 선택할 수 있습니다. 고객 관리 키를 선택하는 경우 키 자격 증명 모음 이름과 키 이름을 제공해야 합니다.
+
+
+
+
+** StorageGRID의 경우:
++
+*** *백업 대상 이름*: StorageGRID 버킷의 이름을 선택합니다.
+*** *버킷 이름*: StorageGRID 버킷의 이름을 입력하세요.
+*** *지역*: 버킷의 StorageGRID 지역을 입력하세요.
+*** *버전 관리 사용*: StorageGRID 버킷의 버전 관리를 활성화하려면 이 옵션을 선택하세요. 버전 관리를 통해 버킷에 여러 버전의 객체를 보관할 수 있으며, 이는 백업 및 복구에 유용합니다.
+*** *객체 잠금*: StorageGRID 버킷에 대한 객체 잠금을 활성화하려면 이 옵션을 선택하세요. 객체 잠금은 지정된 보존 기간 동안 객체가 삭제되거나 덮어쓰이지 않도록 하여 데이터 보호 수준을 한층 더 높여줍니다. 이 기능은 버킷을 생성할 때만 활성화할 수 있으며 나중에 해제할 수 없습니다.
+*** *용량*: StorageGRID 버킷의 용량을 입력하세요. 이는 버킷에 저장할 수 있는 최대 데이터 양입니다.
+
+
+** ONTAP S3의 경우:
++
+*** *백업 대상 이름*: ONTAP S3 버킷의 이름을 선택합니다.
+*** *버킷 대상 이름*: ONTAP S3 버킷의 이름을 입력하세요.
+*** *용량*: ONTAP S3 버킷의 용량을 입력하세요. 이는 버킷에 저장할 수 있는 최대 데이터 양입니다.
+*** *버전 관리 사용*: ONTAP S3 버킷의 버전 관리를 활성화하려면 이 옵션을 선택하세요. 버전 관리를 통해 버킷에 여러 버전의 객체를 보관할 수 있으며, 이는 백업 및 복구에 유용합니다.
+*** *객체 잠금*: ONTAP S3 버킷에 대한 객체 잠금을 활성화하려면 이 옵션을 선택하세요. 객체 잠금은 지정된 보존 기간 동안 객체가 삭제되거나 덮어쓰이지 않도록 하여 데이터 보호 수준을 한층 더 높여줍니다. 이 기능은 버킷을 생성할 때만 활성화할 수 있으며 나중에 해제할 수 없습니다.
+
+
+
+
+. 추가 * 를 선택합니다.
+
+
+
+
+== 백업 대상의 자격 증명 변경
+
+백업 대상에 액세스하는 데 필요한 자격 증명을 입력하세요.
+
+.단계
+. BlueXP backup and recovery 메뉴에서 *인벤토리*를 선택합니다.
+. *오프사이트 백업 대상*을 선택하세요.
+. 대상을 선택하고 오른쪽에서 *작업*을 선택하세요. image:icon-action.png["작업 아이콘"] 아이콘을 클릭하고 *자격 증명 변경*을 선택하세요.
+. 백업 대상의 새 자격 증명을 입력하세요. 입력 하는 정보는 선택한 백업 대상 유형에 따라 다릅니다.
+. 완료 * 를 선택합니다.
+

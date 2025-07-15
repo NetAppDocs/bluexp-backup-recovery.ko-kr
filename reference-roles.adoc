@@ -1,0 +1,287 @@
+---
+sidebar: sidebar 
+permalink: reference-roles.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, roles, permissions, access control, role-based access control, rbac 
+summary: BlueXP backup and recovery 각 사용자가 특정 기능 및 작업에 액세스할 수 있는 권한을 관리하기 위해 역할을 사용합니다. 
+---
+= BlueXP backup and recovery 역할 기반 기능 액세스
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+BlueXP backup and recovery 역할을 사용하여 각 사용자가 특정 기능과 작업에 대해 갖는 액세스 권한을 관리합니다.
+
+이 서비스는 BlueXP backup and recovery 에 특정한 다음 역할을 사용합니다.
+
+* *백업 및 복구 슈퍼 관리자*: BlueXP backup and recovery 에서 모든 작업을 수행합니다.
+* *백업 관리*: BlueXP backup and recovery 에서 로컬 스냅샷으로 백업을 수행하고, 보조 저장소로 복제하고, 개체 저장소 작업으로 백업합니다.
+* *관리자 복원*: BlueXP backup and recovery 사용하여 작업 부하를 복원합니다.
+* *관리자 복제*: BlueXP backup and recovery 사용하여 애플리케이션과 데이터를 복제합니다.
+* *백업 및 복구 뷰어*: BlueXP backup and recovery 의 정보를 볼 수 있지만, 어떤 작업도 수행할 수 없습니다.
+
+
+모든 BlueXP 액세스 역할에 대한 자세한 내용은 다음을 참조하세요.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["BlueXP  설정 및 관리 설명서"^] .
+
+다음 표는 각 BlueXP backup and recovery 역할이 수행할 수 있는 작업을 나타냅니다.
+
+[cols="20,20,15,15a,15a,15a"]
+|===
+| 기능 및 동작 | 백업 및 복구 슈퍼 관리자 | 백업 관리자 | 관리자 복원 | 관리자 복제 | Viewer(뷰어) 
+
+
+| 호스트 추가, 편집 또는 삭제 | 예 | 아니요  a| 
+아니요
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+| 플러그인 설치 | 예 | 아니요  a| 
+아니요
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+| 자격 증명 추가(호스트, 인스턴스, vCenter) | 예 | 아니요  a| 
+아니요
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+| 대시보드 및 모든 탭을 봅니다 | 예 | 예  a| 
+예
+ a| 
+예
+ a| 
+예
+
+
+
+| 무료 평가판을 시작하십시오 | 예 | 아니요  a| 
+아니요
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+| 워크로드 검색 시작 | 아니요 | 예  a| 
+예
+ a| 
+예
+ a| 
+아니요
+
+
+
+| 라이센스 정보 보기 | 예 | 예  a| 
+예
+ a| 
+예
+ a| 
+예
+
+
+
+| 라이센스 활성화 | 예 | 아니요  a| 
+아니요
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+| 호스트 보기 | 예 | 예  a| 
+예
+ a| 
+예
+ a| 
+예
+
+
+
+6+| *일정*: 
+
+
+| 일정 활성화 | 예 | 예  a| 
+예
+ a| 
+예
+ a| 
+아니요
+
+
+
+| 일정을 중단하다 | 예 | 예  a| 
+예
+ a| 
+예
+ a| 
+아니요
+
+
+
+6+| *정책 및 보호*: 
+
+
+| 보호 계획 보기 | 예 | 예  a| 
+예
+ a| 
+예
+ a| 
+예
+
+
+
+| 보호 생성, 수정 또는 삭제 | 예 | 예  a| 
+아니요
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+| 작업 부하 복원 | 예 | 아니요  a| 
+예
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+| 복제본 생성, 복제본 분할 또는 복제본 삭제 | 예 | 아니요  a| 
+아니요
+ a| 
+예
+ a| 
+아니요
+
+
+
+| 정책 생성, 수정 또는 삭제 | 예 | 예  a| 
+아니요
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+6+| *보고서*: 
+
+
+| 보고서 보기 | 예 | 예  a| 
+예
+ a| 
+예
+ a| 
+예
+
+
+
+| 보고서 작성 | 예 | 예  a| 
+예
+ a| 
+예
+ a| 
+아니요
+
+
+
+| 보고서를 삭제합니다 | 예 | 아니요  a| 
+아니요
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+6+| * SnapCenter 에서 가져오기 및 호스트 관리*: 
+
+
+| 가져온 SnapCenter 데이터 보기 | 예 | 예  a| 
+예
+ a| 
+예
+ a| 
+예
+
+
+
+| SnapCenter 에서 데이터 가져오기 | 예 | 예  a| 
+아니요
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+| 호스트 관리(마이그레이션) | 예 | 예  a| 
+아니요
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+6+| *설정 구성*: 
+
+
+| 로그 디렉터리를 구성합니다 | 예 | 예  a| 
+예
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+| 인스턴스 자격 증명 연결 또는 제거 | 예 | 예  a| 
+예
+ a| 
+아니요
+ a| 
+아니요
+
+
+
+6+| *버킷*: 
+
+
+| 버킷을 봅니다 | 예 | 예  a| 
+예
+ a| 
+예
+ a| 
+예
+
+
+
+| 버킷 생성, 편집 또는 삭제 | 예 | 예  a| 
+아니요
+ a| 
+아니요
+ a| 
+아니요
+
+|===

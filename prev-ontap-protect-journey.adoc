@@ -1,0 +1,290 @@
+---
+sidebar: sidebar 
+permalink: prev-ontap-protect-journey.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, BlueXP backup and recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetApp BlueXP backup and recovery 통해 VMware 워크로드를 보호하세요. 
+---
+= BlueXP 백업 및 복구를 통해 보호 여정을 계획하세요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+BlueXP 백업 및 복구 서비스를 사용하면 소스 볼륨의 복사본을 최대 3개까지 생성하여 데이터를 보호할 수 있습니다. 볼륨에서 이 서비스를 활성화할 때 선택할 수 있는 옵션은 여러 가지가 있으므로 준비가 되도록 선택 사항을 검토해야 합니다.
+
+[]
+====
+*참고* BlueXP backup and recovery 워크로드로 전환하려면 다음을 참조하세요. link:br-start-switch-ui.html["다양한 BlueXP backup and recovery 워크로드로 전환"] .
+
+====
+다음 옵션을 살펴보겠습니다.
+
+* 스냅샷 복사본, 복제된 볼륨 및/또는 클라우드에 백업 등 사용할 보호 기능
+* 사용할 백업 아키텍처: 볼륨의 계단식 백업 또는 팬아웃 백업
+* 기본 백업 정책을 사용합니까? 아니면 사용자 지정 정책을 생성해야 합니까
+* 서비스를 통해 클라우드 버킷을 생성하시겠습니까, 아니면 시작하기 전에 오브젝트 스토리지 컨테이너를 생성하시겠습니까
+* 사용 중인 BlueXP Connector 배포 모드(표준, 제한 또는 비공개 모드)
+
+
+
+
+== 사용할 보호 기능
+
+사용할 기능을 선택하기 전에 각 기능의 기능과 해당 기능이 제공하는 보호 유형에 대한 간단한 설명을 살펴보겠습니다.
+
+[cols="20,70"]
+|===
+| 백업 유형 | 설명 
+
+
+| 스냅샷 | 소스 볼륨 내에 스냅샷 복사본으로 볼륨의 읽기 전용 시점 이미지를 생성합니다. 스냅샷 복사본을 사용하여 개별 파일을 복구하거나 볼륨의 전체 내용을 복원할 수 있습니다. 
+
+
+| 복제 | 다른 ONTAP 스토리지 시스템에 데이터의 보조 복사본을 생성하고 보조 데이터를 지속적으로 업데이트합니다. 데이터는 최신 상태로 유지되고 필요할 때마다 사용할 수 있습니다. 
+
+
+| 클라우드 백업 | 보호 및 장기 보관을 위해 데이터를 클라우드에 백업합니다. 필요한 경우 백업에서 동일한 작업 환경 또는 다른 작업 환경으로 볼륨, 폴더 또는 개별 파일을 복원할 수 있습니다. 
+|===
+스냅샷은 모든 백업 방법의 기반이며 백업 및 복구 서비스를 사용하는 데 필요합니다. 스냅샷 복사본은 볼륨의 읽기 전용 시점 이미지입니다. 마지막 스냅샷 복사본이 생성된 이후 파일의 변경 사항만 기록하기 때문에 이미지는 최소한의 스토리지 공간을 사용하며 성능 오버헤드가 거의 없습니다. 그림에 표시된 것처럼 볼륨에 생성된 스냅샷 복사본은 복제된 볼륨 및 백업 파일을 소스 볼륨에 대한 변경 사항과 동기화된 상태로 유지하는 데 사용됩니다.
+
+image:diagram-321-overview.png["백업 파일이 소스 시스템에 스냅샷 복사본, 보조 스토리지 시스템의 복제된 볼륨, 오브젝트 스토리지의 백업 파일로 존재하는 방식을 보여 주는 다이어그램"]
+
+복제된 볼륨을 다른 ONTAP 스토리지 시스템에 생성하고 클라우드에 백업 파일을 생성하도록 선택할 수 있습니다. 또는 복제된 볼륨이나 백업 파일을 생성하도록 선택할 수 있습니다.
+
+요약하면 ONTAP 작업 환경에서 볼륨에 대해 생성할 수 있는 유효한 보호 흐름은 다음과 같습니다.
+
+* 소스 볼륨 -> 스냅샷 복사본 -> 복제된 볼륨 -> 백업 파일
+* 소스 볼륨 -> 스냅샷 복사본 -> 백업 파일
+* 소스 볼륨 -> 스냅샷 복사본 -> 복제된 볼륨
+
+
+
+NOTE: 복제된 볼륨 또는 백업 파일의 초기 생성에는 소스 데이터의 전체 복제본이 포함됩니다. 이를 _baseline transfer_라고 합니다. 후속 전송에는 소스 데이터(스냅샷)의 차등 복제본만 포함됩니다.
+
+* 다른 백업 방법의 비교 *
+
+다음 표에서는 세 가지 백업 방법에 대한 일반적인 비교를 보여 줍니다. 일반적으로 오브젝트 스토리지 공간은 사내 디스크 스토리지에 비해 저렴하지만, 클라우드에서 데이터를 자주 복원한다고 생각하는 경우 클라우드 공급자를 통한 대피 비용을 통해 비용을 절감할 수 있습니다. 클라우드에 있는 백업 파일에서 데이터를 복원해야 하는 빈도를 확인해야 합니다.
+
+이 기준 외에도 클라우드 스토리지는 DataLock 및 랜섬웨어 보호 기능을 사용하는 경우 추가 보안 옵션을 제공하며 이전 백업 파일에 대한 아카이브 스토리지 클래스를 선택하면 비용을 추가로 절약할 수 있습니다. link:prev-ontap-policy-object-options.html["DataLock 및 랜섬웨어 보호와 보관 스토리지 설정에 대해 자세히 알아보세요."]..
+
+[cols="18,18,22,18,22"]
+|===
+| 백업 유형 | 백업 속도 | 백업 비용 | 복원 속도 | 복원 비용 
+
+
+| * 스냅샷 * | 높음 | 부족(디스크 공간) | 높음 | 낮음 
+
+
+| * 복제 * | 중간 | 중간(디스크 공간) | 중간 | 중간(네트워크) 
+
+
+| * 클라우드 백업 * | 낮음 | 부족(오브젝트 공간) | 낮음 | 높음(공급자 비용) 
+|===
+
+
+== 사용할 백업 아키텍처
+
+복제된 볼륨과 백업 파일을 모두 생성할 때 볼륨을 백업할 팬아웃 또는 캐스케이드 아키텍처를 선택할 수 있습니다.
+
+팬아웃 * 아키텍처는 스냅샷 복사본을 타겟 스토리지 시스템과 클라우드의 백업 개체 모두에 독립적으로 전송합니다.
+
+image:diagram-321-fanout-detailed.png["볼륨의 스냅샷 복사본을 사용하여 복제된 볼륨 및 백업 파일을 만들고 업데이트하는 방법을 보여 주는 다이어그램"]
+
+Cascade * 아키텍처는 먼저 스냅샷 복사본을 대상 스토리지 시스템으로 전송한 다음 해당 시스템에서 클라우드의 백업 객체로 전송합니다.
+
+image:diagram-321-cascade-detailed.png["볼륨의 스냅샷 복사본을 사용하여 복제된 볼륨 및 백업 파일을 만들고 업데이트하는 방법을 보여 주는 다이어그램"]
+
+* 다양한 아키텍처 선택 비교 *
+
+이 표는 팬아웃 아키텍처와 캐스케이드 아키텍처를 비교한 것입니다.
+
+[cols="50,50"]
+|===
+| 팬아웃 | 계단식 배열 
+
+
+| 스냅샷 복사본을 서로 다른 2개의 시스템으로 전송하므로 소스 시스템의 성능에 미치는 영향이 작습니다 | 스냅샷 복사본을 한 번만 전송하므로 소스 스토리지 시스템의 성능에 미치는 영향이 적습니다 
+
+
+| 모든 정책, 네트워킹 및 ONTAP 구성이 소스 시스템에서 수행되므로 설정이 더 쉽습니다 | 보조 시스템에서 일부 네트워킹 및 ONTAP 구성도 수행해야 합니다. 
+|===
+
+
+== 스냅샷, 복제 및 백업에 대한 기본 정책을 사용하시겠습니까
+
+NetApp에서 제공하는 기본 정책을 사용하여 백업을 만들거나 사용자 지정 정책을 만들 수 있습니다. 활성화 마법사를 사용하여 볼륨에 대한 백업 및 복구 서비스를 활성화할 때 기본 정책 및 작업 환경(Cloud Volumes ONTAP 또는 온-프레미스 ONTAP 시스템)에 이미 있는 다른 정책 중에서 선택할 수 있습니다. 기존 정책과 다른 정책을 사용하려면 활성화 마법사를 시작하기 전에 또는 사용하는 동안 정책을 만들면 됩니다.
+
+* 기본 스냅샷 정책은 시간별, 일별 및 주별 스냅샷 복사본을 생성하며 6개의 시간별, 2개의 일별, 2개의 주별 스냅샷 복사본을 유지합니다.
+* 기본 복제 정책은 일별 및 주별 스냅샷 복제본을 복제하며 7개의 주간 및 52개의 주간 스냅샷 복제본을 유지합니다.
+* 기본 백업 정책은 일별 및 주별 스냅샷 복사본을 복제하며 7개의 주간 스냅샷 및 52개의 주간 스냅샷 복사본을 유지합니다.
+
+
+복제 또는 백업에 대한 사용자 지정 정책을 생성하는 경우 정책 레이블(예: "매일" 또는 "매주")이 스냅샷 정책에 있는 레이블과 일치해야 합니다. 그렇지 않으면 복제된 볼륨 및 백업 파일이 생성되지 않습니다.
+
+BlueXP  백업 및 복구 UI에서 오브젝트 스토리지 정책에 대한 스냅샷, 복제, 백업을 생성할 수 있습니다. 자세한 내용은 섹션을 link:prev-ontap-backup-manage.html["새 백업 정책 추가"]참조하십시오.
+
+BlueXP  백업 및 복구를 사용하여 사용자 지정 정책을 생성하는 것 외에도 System Manager 또는 ONTAP CLI(명령줄 인터페이스)를 사용할 수 있습니다.
+
+* https://docs.netapp.com/us-en/ontap/task_dp_configure_snapshot.html["System Manager 또는 ONTAP CLI를 사용하여 스냅샷 정책을 생성합니다"^]
+* https://docs.netapp.com/us-en/ontap/task_dp_create_custom_data_protection_policies.html["System Manager 또는 ONTAP CLI를 사용하여 복제 정책을 생성합니다"^]
+
+
+* 참고: * System Manager를 사용할 때는 복제 정책의 정책 유형으로 * Asynchronous * 를 선택하고, * Asynchronous * 및 * Back to cloud * 를 선택하여 객체 정책에 백업합니다.
+
+다음은 사용자 지정 정책을 만들 때 유용할 수 있는 ONTAP CLI 명령 몇 가지 예입니다. 이러한 명령에서 _admin_vserver(스토리지 VM)를 사용해야 `<vserver_name>` 합니다.
+
+[cols="30,70"]
+|===
+| 정책 설명 | 명령 
+
+
+| 단순한 스냅샷 정책 | `snapshot policy create -policy WeeklySnapshotPolicy -enabled true -schedule1 weekly -count1 10 -vserver ClusterA -snapmirror-label1 weekly` 
+
+
+| 클라우드 백업 간소화 | `snapmirror policy create -policy <policy_name> -transfer-priority normal -vserver <vserver_name> -create-snapshot-on-source false -type vault`
+`snapmirror policy add-rule -policy <policy_name> -vserver <vserver_name> -snapmirror-label <snapmirror_label> -keep` 
+
+
+| DataLock 및 랜섬웨어 보호를 사용하여 클라우드로 백업 | `snapmirror policy create -policy CloudBackupService-Enterprise -snapshot-lock-mode enterprise -vserver <vserver_name>`
+`snapmirror policy add-rule -policy CloudBackupService-Enterprise -retention-period 30days` 
+
+
+| 아카이빙 스토리지 클래스를 사용하여 클라우드에 백업 | `snapmirror policy create -vserver <vserver_name> -policy <policy_name> -archive-after-days <days> -create-snapshot-on-source false -type vault`
+`snapmirror policy add-rule -policy <policy_name> -vserver <vserver_name> -snapmirror-label <snapmirror_label> -keep` 
+
+
+| 다른 스토리지 시스템에 간편하게 복제 | `snapmirror policy create -policy <policy_name> -type async-mirror -vserver <vserver_name>`
+`snapmirror policy add-rule -policy <policy_name> -vserver <vserver_name> -snapmirror-label <snapmirror_label> -keep` 
+|===
+
+NOTE: 클라우드 간 관계를 백업하는 데는 볼트 정책만 사용할 수 있습니다.
+
+
+
+== 내 정책은 어디에 있습니까?
+
+백업 정책은 사용할 백업 아키텍처(팬 아웃 또는 계단식)에 따라 서로 다른 위치에 상주합니다. 복제 쌍 두 개의 ONTAP 스토리지 시스템 및 객체에 대한 백업이 스토리지 공급자를 대상으로 사용하기 때문에 복제 정책과 백업 정책은 동일한 방식으로 설계되지 않았습니다.
+
+* 스냅샷 정책은 항상 운영 스토리지 시스템에 상주합니다.
+* 복제 정책은 항상 보조 스토리지 시스템에 상주합니다.
+* 소스 볼륨이 있는 시스템에 객체 백업 정책이 생성됩니다. 이 정책은 팬아웃 구성의 운영 클러스터이며 계단식 구성을 위한 2차 클러스터입니다.
+
+
+이러한 차이는 표에 나와 있습니다.
+
+[cols="25,25,25,25"]
+|===
+| 있습니다 | 스냅샷 정책 | 복제 정책 | 백업 정책 
+
+
+| * 팬아웃 * | 기본 | 보조 | 기본 
+
+
+| * 계단식 * | 기본 | 보조 | 보조 
+|===
+따라서 계단식 아키텍처를 사용할 때 사용자 지정 정책을 만들려면 복제된 볼륨이 생성될 보조 시스템에 복제 및 개체 백업 정책을 만들어야 합니다. 팬아웃 아키텍처를 사용할 때 사용자 지정 정책을 생성하려는 경우 복제된 볼륨이 생성될 보조 시스템에 복제 정책을 생성하고 기본 시스템의 객체 정책에 백업해야 합니다.
+
+모든 ONTAP 시스템에 있는 기본 정책을 사용하는 경우 모두 설정됩니다.
+
+
+
+== 고유한 오브젝트 스토리지 컨테이너를 생성하시겠습니까
+
+작업 환경의 객체 스토리지에서 백업 파일을 생성할 때 기본적으로 백업 및 복구 서비스는 구성한 객체 스토리지 계정의 백업 파일에 대한 컨테이너(버킷 또는 스토리지 계정)를 생성합니다. AWS 또는 GCP 버킷의 이름은 기본적으로 "NetApp-backup-<uuid>"입니다. Azure Blob 스토리지 계정의 이름은 "netappbackup <uuid>"입니다.
+
+특정 접두사를 사용하거나 특수 속성을 할당하려면 개체 공급자 계정에서 직접 컨테이너를 만들 수 있습니다. 고유한 컨테이너를 만들려면 활성화 마법사를 시작하기 전에 컨테이너를 만들어야 합니다. BlueXP  백업 및 복구는 모든 버킷 및 공유 버킷을 사용할 수 있습니다. 백업 활성화 마법사는 선택한 계정 및 자격 증명에 대해 프로비저닝된 컨테이너를 자동으로 검색하여 사용할 컨테이너를 선택할 수 있도록 합니다.
+
+BlueXP 또는 클라우드 공급업체에서 버킷을 생성할 수 있습니다.
+
+* https://docs.netapp.com/us-en/bluexp-s3-storage/task-add-s3-bucket.html["BlueXP에서 Amazon S3 버킷을 생성합니다"^]
+* https://docs.netapp.com/us-en/bluexp-blob-storage/task-add-blob-storage.html["BlueXP에서 Azure Blob 저장소 계정을 만듭니다"^]
+* https://docs.netapp.com/us-en/bluexp-google-cloud-storage/task-add-gcp-bucket.html["BlueXP에서 Google Cloud Storage 버킷을 생성합니다"^]
+
+
+"NetApp-backup-xxxxxx"와 다른 버킷 접두사를 사용하려는 경우 Connector IAM Role의 S3 권한을 수정해야 합니다.
+
+* 고급 버킷 설정 *
+
+이전 백업 파일을 아카이브 스토리지로 이동하거나 DataLock 및 랜섬웨어 보호를 활성화하여 백업 파일을 잠그고 랜섬웨어가 발생할 수 있는 가능성이 있는지 스캔하려는 경우 특정 구성 설정으로 컨테이너를 생성해야 합니다.
+
+* 현재 클러스터에서 ONTAP 9.10.1 이상의 소프트웨어를 사용하는 경우 사용자 고유의 버킷에 있는 아카이브 스토리지가 AWS S3 스토리지에서 지원됩니다. 기본적으로 백업은 S3_Standard_storage 클래스에서 시작됩니다. 적절한 수명 주기 규칙을 사용하여 버킷을 만들어야 합니다.
++
+** 30일 후 버킷의 전체 범위에 있는 오브젝트를 S3_Standard-IA_로 이동합니다.
+** "smc_push_to_archive: true" 태그를 사용하여 객체를 _Glacier Flexible Retrieval_(이전 S3 Glacier)로 이동합니다.
+
+
+* 클러스터에서 ONTAP 9.11.1 이상 소프트웨어를 사용하면 AWS 스토리지에서 DataLock 및 랜섬웨어 보호가 지원되고, ONTAP 9.12.1 이상 소프트웨어를 사용하면 Azure 스토리지에서 DataLock 및 랜섬웨어 보호가 지원됩니다.
++
+** AWS의 경우 30일 보존 기간을 사용하여 버킷에서 오브젝트 잠금을 활성화해야 합니다.
+** Azure의 경우 버전 수준 불변성을 지원하여 스토리지 클래스를 생성해야 합니다.
+
+
+
+
+
+
+== 사용 중인 BlueXP Connector 배포 모드
+
+BlueXP를 사용하여 스토리지를 관리하는 경우 BlueXP 커넥터가 이미 설치되어 있습니다. BlueXP 백업 및 복구와 동일한 커넥터를 사용하려는 경우 모두 설정됩니다. 다른 Connector를 사용해야 하는 경우 백업 및 복구 구현을 시작하기 전에 설치해야 합니다.
+
+BlueXP는 비즈니스 및 보안 요구 사항을 충족하는 방식으로 BlueXP를 사용할 수 있는 다양한 배포 모드를 제공합니다. _표준 모드_ 는 BlueXP SaaS 계층을 활용하여 모든 기능을 제공하며, 연결 제한이 있는 조직에서는 _restricted mode_ 및 _private mode_를 사용할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["BlueXP 배포 모드에 대해 자세히 알아보십시오"^]..
+
+
+
+=== 완벽한 인터넷 연결이 가능한 사이트 지원
+
+BlueXP 백업 및 복구가 전체 인터넷 연결이 있는 사이트에서 사용되는 경우(_standard mode_ 또는 _sas mode_라고도 함), BlueXP가 관리하는 온프레미스 ONTAP 또는 Cloud Volumes ONTAP 시스템에서 복제된 볼륨을 생성할 수 있습니다. 또한 지원되는 모든 클라우드 공급자의 오브젝트 스토리지에 백업 파일을 생성할 수 있습니다. link:concept-backup-to-cloud.html["지원되는 전체 백업 대상 목록을 참조하십시오"]..
+
+유효한 커넥터 위치 목록은 백업 파일을 생성할 클라우드 공급자에 대한 다음 백업 절차 중 하나를 참조하십시오. Connector를 Linux 시스템에 수동으로 설치하거나 특정 클라우드 공급자에 배포해야 하는 몇 가지 제한 사항이 있습니다.
+
+* link:prev-ontap-backup-cvo-aws.html["Cloud Volumes ONTAP 데이터를 Amazon S3에 백업합니다"]
+* link:prev-ontap-backup-cvo-azure.html["Cloud Volumes ONTAP 데이터를 Azure Blob에 백업합니다"]
+* link:prev-ontap-backup-cvo-gcp.html["Cloud Volumes ONTAP 데이터를 Google Cloud에 백업합니다"]
+* link:prev-ontap-backup-onprem-aws.html["사내 ONTAP 데이터를 Amazon S3에 백업합니다"]
+* link:prev-ontap-backup-onprem-azure.html["온프레미스 ONTAP 데이터를 Azure Blob에 백업"]
+* link:prev-ontap-backup-onprem-gcp.html["사내 ONTAP 데이터를 Google Cloud에 백업합니다"]
+* link:prev-ontap-backup-onprem-storagegrid.html["사내 ONTAP 데이터를 StorageGRID에 백업합니다"]
+* link:prev-ontap-backup-onprem-ontaps3.html["온프레미스 ONTAP를 ONTAP S3에 백업합니다"]
+
+
+
+
+=== 인터넷 연결이 제한된 사이트에 대한 지원
+
+BlueXP 백업 및 복구는 인터넷 연결이 제한된 사이트(_restricted mode_라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 경우 대상 클라우드 지역에 BlueXP  Connector를 배포해야 합니다.
+
+ifdef::aws[]
+
+* AWS 상업 지역에 설치된 온프레미스 ONTAP 시스템 또는 Cloud Volumes ONTAP 시스템의 데이터를 Amazon S3로 백업할 수 있습니다. link:prev-ontap-backup-cvo-aws.html["Cloud Volumes ONTAP 데이터를 Amazon S3에 백업합니다"]..
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+* 온프레미스 ONTAP 시스템 또는 Azure 상업 지역에 설치된 Cloud Volumes ONTAP 시스템의 데이터를 Azure Blob에 백업할 수 있습니다. link:prev-ontap-backup-cvo-azure.html["Cloud Volumes ONTAP 데이터를 Azure Blob에 백업합니다"]..
+
+
+endif::azure[]
+
+
+
+=== 인터넷 연결이 없는 사이트에 대한 지원
+
+BlueXP 백업 및 복구는 인터넷에 연결되지 않은 사이트(_private mode_ 또는 _dark_sites라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 경우 동일한 사이트의 Linux 호스트에 BlueXP 커넥터를 배포해야 합니다.
+
+* 로컬 사내 ONTAP 시스템에서 로컬 NetApp StorageGRID 시스템으로 데이터를 백업할 수 있습니다. link:prev-ontap-backup-onprem-storagegrid.html["사내 ONTAP 데이터를 StorageGRID에 백업합니다"]..
+* 로컬 온프레미스 ONTAP 시스템의 데이터를 S3 오브젝트 스토리지용으로 구성된 로컬 온프레미스 ONTAP 시스템 또는 Cloud Volumes ONTAP 시스템으로 백업할 수 있습니다. link:prev-ontap-backup-onprem-ontaps3.html["온프레미스 ONTAP 데이터를 ONTAP S3에 백업합니다"] . ifdef::aws[]
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+endif::azure[]
