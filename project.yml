@@ -120,7 +120,7 @@ sidebar:
         url: "/prev-vmware-prereqs.html"
       - title: VMware vSphere 호스트용 SnapCenter 플러그인을 등록합니다
         url: "/prev-vmware-register-snapcenter.html"
-      - title: VMware 데이터 저장소를 백업하기 위한 정책 생성
+      - title: 가상 머신 데이터를 백업하기 위한 정책 생성
         url: "/prev-vmware-policy-create.html"
       - title: Amazon Web Services에 데이터 저장소를 백업합니다
         url: "/prev-vmware-backup-aws.html"
@@ -132,7 +132,7 @@ sidebar:
         url: "/prev-vmware-backup-storagegrid.html"
       - title: 데이터 저장소 및 가상 머신 데이터 보호 관리
         url: "/prev-vmware-manage.html"
-      - title: VMware 데이터스토어 복원
+      - title: 가상 머신 데이터 및 데이터 저장소 복원
         url: "/prev-vmware-restore.html"
     - title: 작업을 모니터링합니다
       url: "/br-use-monitor-tasks.html"

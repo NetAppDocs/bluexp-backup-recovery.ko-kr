@@ -20,10 +20,3 @@ BlueXP backup and recovery 에서 쿠버네티스 워크로드를 관리하면 �
 NOTE: 이 문서는 기술 미리 보기로 제공됩니다. 미리보기 기간 동안 Kubernetes 기능은 프로덕션 워크로드에 권장되지 않습니다. 이 사전 공개 오퍼링과 함께 NetApp은 일반 출시 이전에 서비스 세부 정보, 콘텐츠 및 일정을 수정할 권한을 보유합니다.
 
 Kubernetes 워크로드 관리와 관련된 다음 작업을 수행할 수 있습니다.
-
-* link:br-start-discover.html#discover-kubernetes-workloads["Kubernetes 워크로드를 알아보세요"]..
-* link:br-use-manage-kubernetes-clusters.html["Kubernetes 클러스터 관리"]..
-* link:br-use-protect-kubernetes-applications.html["Kubernetes 애플리케이션 추가 및 보호"]..
-* link:br-use-manage-kubernetes-applications.html["Kubernetes 애플리케이션 관리"]..
-* link:br-use-restore-kubernetes-applications.html["Kubernetes 애플리케이션 복원"]..
-

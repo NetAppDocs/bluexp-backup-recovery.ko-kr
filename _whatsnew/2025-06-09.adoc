@@ -15,13 +15,13 @@
 
 색인된 카탈로그는 모든 볼륨과 백업 파일을 추적하여 검색을 빠르고 효율적으로 수행할 수 있도록 해줍니다.
 
-자세한 내용은 을 https://docs.netapp.com/us-en/bluexp-backup-recovery/task-restore-backups-ontap.html#restore-ontap-data-using-search-restore["검색 및 복원 을 사용하여 ONTAP 데이터를 복원하는 방법"]참조하십시오.
+자세한 내용은 을 https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-restore.html["검색 및 복원에 대한 인덱싱 활성화"]참조하십시오.
 
 
 
 === Azure 개인 링크 엔드포인트 및 서비스 엔드포인트
 
-일반적으로 BlueXP 백업 및 복구는 클라우드 제공업체와 프라이빗 엔드포인트를 설정하여 다양한 보호 작업을 처리합니다. 이번 릴리스에서는 BlueXP 백업 및 복구가 프라이빗 엔드포인트를 자동으로 생성하는 것을 활성화 또는 비활성화할 수 있는 선택적 설정이 도입되었습니다. 프라이빗 엔드포인트 생성 프로세스를 더욱 세부적으로 제어하려는 경우 이 기능이 유용할 수 있습니다.
+일반적으로 BlueXP backup and recovery 클라우드 공급자와 개인 엔드포인트를 설정하여 보호 작업을 처리합니다. 이번 릴리스에서는 BlueXP 백업 및 복구가 프라이빗 엔드포인트를 자동으로 생성하는 것을 활성화 또는 비활성화할 수 있는 선택적 설정이 도입되었습니다. 프라이빗 엔드포인트 생성 프로세스를 더욱 세부적으로 제어하려는 경우 이 기능이 유용할 수 있습니다.
 
 보호 기능을 활성화하거나 복원 프로세스를 시작할 때 이 옵션을 활성화하거나 비활성화할 수 있습니다.
 
@@ -39,4 +39,4 @@
 
 작업 환경의 개체 스토리지에 백업 파일을 생성할 때, 기본적으로 BlueXP 백업 및 복구는 사용자가 구성한 개체 스토리지 계정에 백업 파일의 컨테이너(버킷 또는 스토리지 계정)를 생성합니다. 이전에는 이를 재정의하여 Amazon S3, Azure Blob Storage 및 Google Cloud Storage에 대한 자체 컨테이너를 지정할 수 있었습니다. 이번 릴리스에서는 자체 StorageGRID 개체 스토리지 컨테이너를 사용할 수 있습니다.
 
-을 https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-protection-journey.html#do-you-want-to-create-your-own-object-storage-container["나만의 객체 스토리지 컨테이너를 만드세요"]참조하십시오.
+을 https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html["나만의 객체 스토리지 컨테이너를 만드세요"]참조하십시오.

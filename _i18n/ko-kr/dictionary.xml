@@ -124,7 +124,6 @@
   <block id="ed09c1b67736709db40a3664c46e855a" category="list-text">백업은 ONTAP 보조 백업에서만 지원됩니다.</block>
   <block id="3dd0180637528cde8671a0c957cf90da" category="list-text">SM-BC 구성은 지원되지 않습니다.</block>
   <block id="5f5966e9da5716290dfc2b88ceeb2217" category="list-text">복원 중인 파일은 대상 볼륨의 언어와 동일한 언어를 사용해야 합니다. 언어가 동일하지 않으면 오류 메시지가 나타납니다.</block>
-  <block id="fab27e4b9f13b45f921fe1c7f42ffac1" category="section-title">백업 복사본은 NetApp 계정과 연결됩니다</block>
   <block id="c3ce6809be6bdc67ae978395484d0585" category="list-text">ONTAP 9.8 이상</block>
   <block id="002f7378a5fcfc2f66cfea851a7fd5f4" category="cell">정책 이름</block>
   <block id="b021df6aac4654c454f46c77646e745f" category="cell">라벨</block>
@@ -2184,7 +2183,6 @@ ifdef::AWS[]</block>
   <block id="bebfb016f9defe9a78fff65f418f213b" category="paragraph">AWS(Amazon Web Services) ID 및 액세스 관리(IAM) 역할 Anywhere 서비스를 사용하면 AWS의 words_outside_of AWS에 대한 IAM 역할 및 단기 자격 증명을 사용하여 AWS API에 안전하게 액세스할 수 있으며, 이때 words_on_AWS에 IAM 역할을 사용하는 것과 같은 방법으로 AWS API에 안전하게 액세스할 수 있습니다. 어디서나 개인 키 인프라 및 AWS 토큰을 사용할 경우 장기 AWS 액세스 키와 비밀 키가 필요하지 않습니다. 이렇게 하면 자격 증명을 더 자주 순환할 수 있으므로 보안이 향상됩니다.</block>
   <block id="24c6cf6b2747b390a5d9eb672e1d54d4" category="paragraph">이 릴리스에서 AWS IAM 역할 Anywhere 서비스에 대한 지원은 기술 미리 보기입니다.</block>
   <block id="75a3bff844d1c7ffb01e7ef22ab82b4d" category="inline-link-macro">Cloud Volumes ONTAP를 AWS에 백업</block>
-  <block id="4e6ae608536b374d1b71a28785ef9a8b" category="inline-link-macro">온프레미스 ONTAP 데이터를 AWS에 백업</block>
   <block id="ddc7fe4301c8a4aa6a14e1843c25f30b" category="inline-link">BlueXP 백업 및 복구 2024년 7월 릴리즈 블로그</block>
   <block id="f1db3a8ee789ee9607754f5f8a9871b1" category="paragraph">을<block ref="7de2d0863d92330816fac8b7768edb68" category="inline-link-rx"></block>참조하십시오.</block>
   <block id="5ab4d79a28b46b39467c24096b99316f" category="section-title">이제 FlexGroup 폴더 또는 디렉토리 복원을 사용할 수 있습니다</block>
@@ -2226,11 +2224,7 @@ ifdef::AWS[]</block>
   <block id="0ca08a23718c0a91743dd6c0146ca353" category="paragraph">Cloud Volumes ONTAP에서 다음과 같은 주요 워크플로우를 사용하려면 NetApp 지원 사이트 자격 증명을 BlueXP  조직과 연결해야 합니다.</block>
   <block id="c81c8e01f5d906ae1ab0c5c606f06b05" category="paragraph">NSS 자격 증명을 BlueXP  조직과 연결하는 것은 BlueXP  사용자 로그인과 연결된 NSS 계정과 다릅니다.</block>
   <block id="8166996cb4a59c147200d89a061bb49c" category="paragraph">이러한 NSS 자격 증명은 특정 BlueXP  조직 ID와 연결됩니다. BlueXP  조직에 속한 사용자는 * 지원 &gt; NSS 관리 * 에서 이러한 자격 증명에 액세스할 수 있습니다.</block>
-  <block id="447432dc1956c6ca8ef783da40afa0ba" category="paragraph">이는 에 <block ref="36745b46d10b0daef886af9c3561dc82" category="inline-link-macro-rx"></block>적용됩니다. 이는 에 <block ref="28610eddc6cc2d865303aa5fe254d6ff" category="inline-link-macro-rx"></block>적용됩니다.</block>
   <block id="5b932b14c237e03588a415b41b9a0b43" category="list-text">DataLock 및 랜섬웨어 보호를 사용하려는 경우 첫 번째 백업 정책을 생성하고 해당 클러스터에 대해 BlueXP 백업 및 복구를 활성화할 때 사용하도록 설정할 수 있습니다. 나중에 BlueXP  백업 및 복구 고급 설정을 사용하여 랜섬웨어 검사를 사용하거나 사용하지 않도록 설정할 수 있습니다.</block>
-  <block id="84142ff06d4e9d4646fc2a3b18cc1d91" category="paragraph"><block ref="a21af64035213e0424a2bf24b7431646" category="inline-link-rx"></block>..</block>
-  <block id="2f080abae9949a746e32fbd78d3382f7" category="paragraph">DataLock에 대한 자세한 내용과 관련 비용을 줄이는 방법에 대한 팁은 을<block ref="116b2987b0e6fcf4c15ff7c1a1a47ed3" category="inline-link-rx"></block>참조하십시오.</block>
-  <block id="b1b12c3c76c5dc414df3c68e8a811c2a" category="paragraph">자세한 내용은 을<block ref="ef40acf6b73cf65ed40d9b8f7f6be1c3" category="inline-link-rx"></block>참조하십시오.</block>
   <block id="2a26ca1d77691991f2402c219881a81b" category="paragraph">특정 접두사를 사용하거나 특수 속성을 할당하려면 개체 공급자 계정에서 직접 컨테이너를 만들 수 있습니다. 고유한 컨테이너를 만들려면 활성화 마법사를 시작하기 전에 컨테이너를 만들어야 합니다. BlueXP  백업 및 복구는 모든 버킷 및 공유 버킷을 사용할 수 있습니다. 백업 활성화 마법사는 선택한 계정 및 자격 증명에 대해 프로비저닝된 컨테이너를 자동으로 검색하여 사용할 컨테이너를 선택할 수 있도록 합니다.</block>
   <block id="3a66ab30f960deed7e2d6dbe5675eebc" category="paragraph">BlueXP 백업 및 복구는 인터넷 연결이 제한된 사이트(_restricted mode_라고도 함)에서 볼륨 데이터를 백업하는 데 사용할 수 있습니다. 이 경우 대상 클라우드 지역에 BlueXP  Connector를 배포해야 합니다.</block>
   <block id="e23da6bf724f3225b25342aa20aab822" category="cell"><block ref="1e8904cbbffb7eff1de96297f70cd53e" prefix="" category="inline-code"></block></block>
@@ -2242,7 +2236,6 @@ ifdef::AWS[]</block>
   <block id="3c97d3b45dd14b2958c1e0e304230aa0" category="paragraph">이 BlueXP  백업 및 복구 릴리스에는 다음 업데이트가 포함되어 있습니다.</block>
   <block id="517624d736bd2a385ee8cda71584112f" category="section-title">SnapLock Compliance 및 SnapLock Enterprise 보호 모드</block>
   <block id="139da935670a9f985194d3241917c359" category="paragraph">BlueXP  백업 및 복구 기능은 이제 SnapLock Compliance 또는 SnapLock Enterprise 보호 모드를 사용하여 구성된 FlexVol 및 FlexGroup 온프레미스 볼륨을 모두 백업할 수 있습니다. 클러스터에서 ONTAP 9.14 이상을 실행해야 합니다. SnapLock 엔터프라이즈 모드를 사용한 FlexVol 볼륨 백업은 ONTAP 버전 9.11.1 이후로 지원됩니다. 이전 ONTAP 릴리즈에서는 SnapLock 보호 볼륨의 백업을 지원하지 않습니다.</block>
-  <block id="9ddb3e6714694f5c7f619d474fec8169" category="paragraph">에서 지원되는 볼륨의 전체 목록을<block ref="9e68a582cc487ad29425f5a4796c9e45" category="inline-link-rx"></block> 참조하십시오.</block>
   <block id="fec92c3dfb6a0b3db498488c7f4d2f29" category="section-title">볼륨 페이지에서 검색 및 복원 프로세스를 위한 인덱싱</block>
   <block id="20d3b0b7cfe7a9f3dcfdb0faa9398efd" category="paragraph">검색 및 복원을 사용하려면 볼륨 데이터를 복원할 각 소스 작업 환경에서 "인덱싱"을 활성화해야 합니다. 따라서 인덱스화된 카탈로그에서 모든 볼륨의 백업 파일을 추적할 수 있습니다. 이제 볼륨 페이지에 인덱싱 상태가 표시됩니다.</block>
   <block id="cd9b31737e78e0a0a755acc12151f766" category="list-text">인덱싱됨: 볼륨이 인덱싱되었습니다.</block>
@@ -2303,7 +2296,6 @@ ifdef::AWS[]</block>
   <block id="1928ef25d05266e1052541c930f2737c" category="paragraph">데이터를 복원하는 검색 및 복원 방법을 사용하려면 먼저 볼륨 또는 파일을 복원하려는 각 소스 작업 환경에서 "인덱싱"을 활성화해야 합니다. 따라서 인덱스화된 카탈로그가 모든 볼륨과 모든 백업 파일을 추적할 수 있어 빠르고 효율적으로 검색할 수 있습니다.</block>
   <block id="d28994d1a9691ce26fcae71b9a05d1bc" category="paragraph">검색 및 복원을 수행할 때 "인덱싱 사용" 옵션을 선택하여 소스 작업 환경에서 인덱싱을 활성화합니다.</block>
   <block id="6b14c6e0d643870ea727335d7739df30" category="inline-link">검색 및 복원 을 사용하여 ONTAP 데이터를 복원하는 방법</block>
-  <block id="9031cfd1bcd3de043cd6391f098dc91b" category="paragraph">자세한 내용은 설명서를<block ref="7ae860a58fb7c028461eb3a0f3043711" category="inline-link-rx"></block>참조하십시오.</block>
   <block id="2d31667baed414ccd330141663dac284" category="paragraph-title">지원되는 배율</block>
   <block id="b2ec30cb49afbacbac6cc89a95133887" category="paragraph">새 인덱싱 기능은 다음을 지원합니다.</block>
   <block id="3201cddda2c272104ed2ef30674f361a" category="list-text">3분 이내에 글로벌 검색 효율성 향상</block>
@@ -2388,7 +2380,6 @@ ifdef::AWS[]</block>
   <block id="9de9a72e99be1fee8dc0790411738dd4" category="paragraph">이 기능을 사용하면 시간이 오래 걸리고 리소스 소모가 많은 기준선 변경 작업이 필요하지 않으므로 백업 작업이 마이그레이션 후 작업을 계속할 수 있습니다. 이 기능은 워크로드 마이그레이션 시나리오에 유용하며 FlexVols와 FlexGroups를 모두 지원하며 ONTAP 버전 9.16.1부터 사용할 수 있습니다.</block>
   <block id="9c69774894ac0ae0f2bbae9b12964cfe" category="paragraph">SnapMirror to Cloud Resync는 환경 간 백업 연속성을 유지함으로써 운영 효율성을 개선하고 하이브리드 및 멀티 클라우드 데이터 관리의 복잡성을 줄일 수 있습니다.</block>
   <block id="5746bb5eeaa153936151cb52823109e6" category="inline-link">SnapMirror를 사용하여 볼륨을 클라우드 재동기화로 마이그레이션</block>
-  <block id="3a55cfa97f4682f930352f0f81220899" category="paragraph">재동기화 작업을 수행하는 방법에 대한 자세한 내용은 을 참조하십시오<block ref="207dcf1aaf014b22c1836348f392f25c" category="inline-link-rx"></block>.</block>
   <block id="d7aa9347c7a241e0b5959147e0834507" category="section-title">타사 MinIO 개체 저장소 지원(미리 보기)</block>
   <block id="74f850f0e7d77a9dfb658a6664c11580" category="paragraph">이제 BlueXP  백업 및 복구는 MinIO에 중점을 두고 타사 오브젝트 저장소까지 지원을 확장합니다. 이 새로운 미리 보기 기능을 사용하면 백업 및 복구 요구에 S3 호환 오브젝트 저장소를 활용할 수 있습니다.</block>
   <block id="fba2533d6fb852f662ab27cb8831c6c2" category="paragraph">이 미리 보기 버전을 사용하면 전체 기능이 배포되기 전에 타사 개체 저장소와의 강력한 통합을 보장할 수 있습니다. 이 새로운 기능을 살펴보고 서비스 개선에 도움이 되는 피드백을 제공하는 것이 좋습니다.</block>
@@ -2400,7 +2391,6 @@ ifdef::AWS[]</block>
   <block id="7f4d22b3de45045172408ddd711a85a1" category="paragraph">* 시작하기 *</block>
   <block id="5955ccac697a810563b00d68d2e643a8" category="paragraph">이 미리 보기 기능을 사용하려면 BlueXP  커넥터에서 플래그를 활성화해야 합니다. 그런 다음 백업 섹션에서 * 타사 호환 * 개체 저장소를 선택하여 보호 워크플로에 MinIO 타사 개체 저장소의 연결 세부 정보를 입력할 수 있습니다.</block>
   <block id="3e49d780723839a4238980f0ed8f0e54" category="inline-link">BlueXP  백업 및 복구의 미리 보기 기능을 활성화합니다</block>
-  <block id="e4d99443f32762da8fffc177c52518aa" category="paragraph">미리보기 피처를 활성화하는 방법에 대한 지침은 을 참조하십시오<block ref="918e5958ca0f0d47162ab1a4f8ffabd1" category="inline-link-rx"></block>.</block>
   <block id="21ade0a59a521983cc4ace159928965c" category="section-title">BlueXP  백업 및 복구 SnapMirror를 클라우드로 재동기화하는 방법</block>
   <block id="5f6d83d4b0c669ea7f7bd4da5824cd65" category="paragraph">기술 업데이트를 완료하거나 ONTAP 클러스터 간에 볼륨을 마이그레이션할 경우 백업이 중단 없이 계속 작동해야 합니다. BlueXP  백업 및 복구 SnapMirror to Cloud Resync는 볼륨 마이그레이션 후에도 클라우드 백업의 정합성을 보장함으로써 이러한 문제를 해결하는 데 도움이 됩니다.</block>
   <block id="4d947fe0b5c4693f487f4fd1a4295c99" category="paragraph">예를 들면 다음과 같습니다.</block>
@@ -2542,16 +2532,13 @@ ifdef::AWS[]</block>
   <block id="109a536d105313ba22a3a245fbe42d66" category="paragraph">신규 고객인 경우, 모든 신규 환경에서 Indexed Catalog v2가 기본적으로 활성화됩니다. 기존 고객인 경우, Indexed Catalog v2를 활용하기 위해 기존 환경을 다시 인덱싱할 수 있습니다.</block>
   <block id="ed568c90c2ab6e924749399e3a2572f7" category="paragraph">데이터를 복원하는 검색 및 복원 방법을 사용하려면 먼저 볼륨 또는 파일을 복원하려는 각 소스 작업 환경에서 "인덱싱"을 활성화해야 합니다. 검색 및 복원을 수행할 때 *인덱싱 사용* 옵션을 선택하세요.</block>
   <block id="53b903d5c7d704138f78087fb044d909" category="paragraph">색인된 카탈로그는 모든 볼륨과 백업 파일을 추적하여 검색을 빠르고 효율적으로 수행할 수 있도록 해줍니다.</block>
-  <block id="b135d75112998c5959ea2e656baaca04" category="paragraph">자세한 내용은 을<block ref="7ae860a58fb7c028461eb3a0f3043711" category="inline-link-rx"></block>참조하십시오.</block>
   <block id="a5e1a06a60e331b5d516136e96719929" category="section-title">Azure 개인 링크 엔드포인트 및 서비스 엔드포인트</block>
-  <block id="a6f1ad5d9fc5adf781d978f4d43bae4c" category="paragraph">일반적으로 BlueXP 백업 및 복구는 클라우드 제공업체와 프라이빗 엔드포인트를 설정하여 다양한 보호 작업을 처리합니다. 이번 릴리스에서는 BlueXP 백업 및 복구가 프라이빗 엔드포인트를 자동으로 생성하는 것을 활성화 또는 비활성화할 수 있는 선택적 설정이 도입되었습니다. 프라이빗 엔드포인트 생성 프로세스를 더욱 세부적으로 제어하려는 경우 이 기능이 유용할 수 있습니다.</block>
   <block id="8ee64b87fd8e5fd67f5f38194c7faf59" category="paragraph">이 설정을 비활성화하면 BlueXP 백업 및 복구가 제대로 작동하도록 개인 엔드포인트를 수동으로 생성해야 합니다. 연결이 제대로 되지 않으면 백업 및 복구 작업을 제대로 수행하지 못할 수 있습니다.</block>
   <block id="fad4c67d1d97874133e7a367fe5038fd" category="section-title">ONTAP S3에서 SnapMirror to Cloud Resync 지원</block>
   <block id="8e0a943cdbcd7f9c7f29128489119715" category="paragraph">이전 릴리스에서는 SnapMirror to Cloud Resync(SM-C Resync) 지원이 도입되었습니다. 이 기능은 NetApp 환경에서 볼륨 마이그레이션 시 데이터 보호를 간소화합니다. 이번 릴리스에서는 ONTAP S3뿐 아니라 Wasabi, MinIO와 같은 다른 S3 호환 공급업체에서도 SM-C Resync를 지원합니다.</block>
   <block id="fa551b5810fe894fcd21bf7c8ffc98d1" category="section-title">StorageGRID용 자체 버킷 가져오기</block>
   <block id="f2ff9aeba193e347e07d88061902be70" category="paragraph">작업 환경의 개체 스토리지에 백업 파일을 생성할 때, 기본적으로 BlueXP 백업 및 복구는 사용자가 구성한 개체 스토리지 계정에 백업 파일의 컨테이너(버킷 또는 스토리지 계정)를 생성합니다. 이전에는 이를 재정의하여 Amazon S3, Azure Blob Storage 및 Google Cloud Storage에 대한 자체 컨테이너를 지정할 수 있었습니다. 이번 릴리스에서는 자체 StorageGRID 개체 스토리지 컨테이너를 사용할 수 있습니다.</block>
   <block id="e6e5a011626c6db86099687e0a358c1f" category="inline-link">나만의 객체 스토리지 컨테이너를 만드세요</block>
-  <block id="68c8f46b97e6aeb1e429ccce285cfda1" category="paragraph">을<block ref="7a95086a5f98875b2249d837314b5c45" category="inline-link-rx"></block>참조하십시오.</block>
   <block id="8cc135257549041a5024c6e351c58dfb" category="paragraph">"NetApp-backup-xxxxxx"와 다른 버킷 접두사를 사용하려는 경우 Connector IAM Role의 S3 권한을 수정해야 합니다.</block>
   <block id="73c86e71b090fff443b784dff449590a" category="list-text">클러스터에서 ONTAP 9.11.1 이상 소프트웨어를 사용하면 AWS 스토리지에서 DataLock 및 랜섬웨어 보호가 지원되고, ONTAP 9.12.1 이상 소프트웨어를 사용하면 Azure 스토리지에서 DataLock 및 랜섬웨어 보호가 지원됩니다.</block>
   <block id="18a05ed293e5a9815ac509be9947a561" category="paragraph">보시다시피, 복원 대시보드는 백업 파일에서 데이터를 복원하는 두 가지 방법을 제공합니다. *찾아보기 및 복원*과 *검색 및 복원*입니다.</block>
@@ -2564,7 +2551,6 @@ ifdef::AWS[]</block>
   <block id="2990ab511029f6c10e696e43177d4fdd" category="list-text">데이터를 복원하는 데 사용할 백업 파일을 찾아 *복원*을 선택합니다.</block>
   <block id="4d1f1dc63841491797cde0fde7dec31d" category="list-text">볼륨, 폴더 또는 파일을 복원할 대상 위치를 선택하고 *복원*을 선택합니다.</block>
   <block id="791d05d0e9072626d0316ef0a7cf21bc" category="section-title">2025년 6월 9일</block>
-  <block id="0a849c115a4741e75692ddd548e07b4d" category="paragraph">보호 기능을 활성화하거나 복원 프로세스를 시작할 때 이 옵션을 활성화하거나 비활성화할 수 있습니다.</block>
   <block id="9bbf67835dcc255a2362d9d5043708ad" category="paragraph">Indexed Catalog v2를 사용할 때 이 서비스는 별도의 버킷을 프로비저닝하지 않습니다. 대신 AWS, Azure, Google Cloud Platform, StorageGRID 또는 ONTAP S3에 저장된 백업의 경우, 이 서비스는 커넥터 또는 클라우드 공급자 환경에 공간을 프로비저닝합니다.</block>
   <block id="c2da3976b7bba43b7d1d45f7a32a43bd" category="paragraph">v2 릴리스 이전에 인덱싱된 카탈로그를 활성화한 경우 작업 환경에서 다음이 발생합니다.</block>
   <block id="5323d04b0f0228d9a4b7ec5629ddb280" category="doc">BlueXP 백업 및 복구의 새로운 기능</block>
@@ -3098,16 +3084,12 @@ ifdef::AWS[]</block>
   <block id="eb77981f2e476b76c513faaacd09914a" category="paragraph">BlueXP backup and recovery 에서 쿠버네티스 워크로드를 관리하면 쿠버네티스 클러스터와 애플리케이션을 한 곳에서 관리하고 보호할 수 있습니다. 쿠버네티스 클러스터에서 호스팅되는 리소스와 애플리케이션을 관리할 수 있으며, 쿠버네티스 워크로드의 보호 설정도 관리할 수 있습니다.</block>
   <block id="dd0f352a678f8f7a3bd4045615456919" category="admonition">이 문서는 기술 미리 보기로 제공됩니다. 미리보기 기간 동안 Kubernetes 기능은 프로덕션 워크로드에 권장되지 않습니다. 이 사전 공개 오퍼링과 함께 NetApp은 일반 출시 이전에 서비스 세부 정보, 콘텐츠 및 일정을 수정할 권한을 보유합니다.</block>
   <block id="e94d9102ade906ff7fd5fc370d68c0d8" category="paragraph">Kubernetes 워크로드 관리와 관련된 다음 작업을 수행할 수 있습니다.</block>
-  <block id="f0338e38e7978ec30d1f5eb9b845e843" category="inline-link-macro">Kubernetes 워크로드를 알아보세요</block>
-  <block id="0022038e456ea404ab796f4b75f7e6ea" category="list-text"><block ref="1aaecb747e58be0aa9e10461fda65c97" category="inline-link-macro-rx"></block>..</block>
   <block id="384b71db954a7a463c759208283e47c4" category="inline-link-macro">Kubernetes 클러스터 관리</block>
   <block id="75750592598a2163e070809696d795f5" category="list-text"><block ref="4c3d4ee32af52a5715d89ae7d8ef89d4" category="inline-link-macro-rx"></block>..</block>
   <block id="bd0d9feacbc44891c493b82f74939311" category="inline-link-macro">Kubernetes 애플리케이션 추가 및 보호</block>
-  <block id="d0b5709d97bbe5098abd93c7e694cb77" category="list-text"><block ref="3e35e8d4173c71043e7b66d0d706f7de" category="inline-link-macro-rx"></block>..</block>
   <block id="7ce6b1278baad78a64a18c8640136c77" category="inline-link-macro">Kubernetes 애플리케이션 관리</block>
   <block id="1c39e480280e05e6e2669259a50ce500" category="list-text"><block ref="dc144ac0d06e909a8d08dc882910af82" category="inline-link-macro-rx"></block>..</block>
   <block id="343af147af834c1b9b9a351344e425f2" category="inline-link-macro">Kubernetes 애플리케이션 복원</block>
-  <block id="1af35924e4dcf46a6e48f4acc678dff6" category="list-text"><block ref="7769ce529a2e3eb709e04d840fce1c3b" category="inline-link-macro-rx"></block>..</block>
   <block id="57425d1304f6091f6a1ef42a0adfc0ba" category="summary">BlueXP backup and recovery 사용하면 애플리케이션 보호 작업 전이나 후에 작업을 수행하기 위해 실행 후크를 관리할 수 있습니다.</block>
   <block id="e8dfbdb38e4ccb6248a9493ac24c8181" category="doc">Kubernetes 워크로드에 대한 BlueXP backup and recovery 실행 후크 템플릿 관리</block>
   <block id="cf1efa56f611411b6426b3cf4ae8b4ea" category="paragraph">실행 후크는 관리형 Kubernetes 애플리케이션의 데이터 보호 작업과 함께 실행되도록 구성할 수 있는 사용자 지정 작업입니다. 예를 들어 데이터베이스 앱이 있는 경우 실행 후크를 사용하여 스냅샷 전에 모든 데이터베이스 트랜잭션을 일시 중지하고 스냅샷이 완료된 후 트랜잭션을 다시 시작할 수 있습니다. 따라서 애플리케이션 정합성이 보장되는 스냅샷이 보장됩니다. 실행 후크 템플릿을 생성할 때 후크 유형, 실행할 스크립트, 그리고 후크가 적용되는 컨테이너를 결정하는 필터를 지정할 수 있습니다. 그런 다음 이 템플릿을 사용하여 실행 후크를 애플리케이션에 연결할 수 있습니다.</block>
@@ -3944,9 +3926,6 @@ ifdef::AWS[]</block>
   <block id="8a340071e94008e324032801daab45d8" category="paragraph">백업 복사본은 BlueXP가 클라우드 계정에 생성하는 객체 저장소에 저장됩니다. 클러스터 또는 작업 환경당 하나의 객체 저장소가 있으며 BlueXP 다음과 같이 객체 저장소의 이름을 지정합니다. <block ref="395f30b009fd80d4c1cba9bc07db445d" prefix=" " category="inline-code"></block> . 이 오브젝트 저장소를 삭제하지 마십시오.</block>
   <block id="ff20fb34d64300f8525105ebee562e00" category="list-text">AWS에서 BlueXP 다음을 지원합니다. <block ref="b38667957fcdf9b9da65b213e7fb2492" category="inline-link-rx"></block> S3 버킷에. endif::aws[]</block>
   <block id="1af6f75abfa248fb172917c8f8cd1975" category="list-text">Azure에서 BlueXP는 Blob 컨테이너용 저장소 계정이 있는 새 리소스 그룹 또는 기존 리소스 그룹을 사용합니다. BlueXP <block ref="a7068b8d2b60241ce77a1051f3a66ed5" category="inline-link-rx"></block> 기본적으로. endif::azure[]</block>
-  <block id="065c13346a6a1b4ec88ebda80e48a910" category="inline-link">BlueXP 계정</block>
-  <block id="36e79c272f0fce1f66a6c0c2474f01e9" category="paragraph">백업 사본은 다음과 연관됩니다. <block ref="804faa4f81a5cffbc00a90ef504a2fbd" category="inline-link-rx"></block> BlueXP 커넥터가 있는 곳입니다.</block>
-  <block id="5618e21a98c314ffca80dd956757bb83" category="paragraph">동일한 BlueXP 계정에 여러 개의 커넥터가 있는 경우 각 커넥터는 동일한 백업 목록을 표시합니다.</block>
   <block id="f91faf1a13607ac0db1201bfb304b328" category="section-title">BlueXP backup and recovery 에 도움이 될 수 있는 용어</block>
   <block id="4631dd7356561dcd994558a79249bcaa" category="paragraph">보호와 관련된 용어를 이해하는 것이 도움이 될 수 있습니다.</block>
   <block id="661b3d31f95036ff86eec46ca498f96e" category="list-text">*보호*: BlueXP backup and recovery 의 보호는 보호 정책을 사용하여 스냅샷과 변경 불가능한 백업이 다른 보안 도메인에 정기적으로 발생하도록 보장하는 것을 의미합니다.</block>
@@ -4228,17 +4207,8 @@ ifdef::AWS[]</block>
   <block id="b06c9fd76246f4cfb339125284b25aa5" category="list-text">*월별* 라벨을 선택하고 보존 횟수를 3으로 설정하면 스냅샷 보존 기간은 90일입니다.</block>
   <block id="efdf2d46dfa5c7a9f73d28bb893f836f" category="list-text">*연간* 라벨을 선택하고 보존 횟수를 1로 설정하면 스냅샷 보존 기간은 365일이 됩니다.</block>
   <block id="a60142749401298f0a788c8439772777" category="section-title">보유기간(RUD)은 무엇이고, 어떻게 계산합니까?</block>
-  <block id="eeada300415ab437a13601d2e69f066a" category="paragraph">보존 기간(RUD)은 스냅샷 보존 기간을 기준으로 결정됩니다.</block>
-  <block id="6984bab6fc7fe177ce259ff499fada58" category="list-text">보존 기간은 스냅샷 보존 기간과 버퍼를 합산하여 계산됩니다.</block>
-  <block id="95ff93ddc0c74a02cf692e476561a39d" category="list-text">버퍼는 전송 시간 버퍼(6일) + 비용 최적화 버퍼(8일)로 총 14일이 됩니다.</block>
-  <block id="ac3a820fa3f3116f54715975be367471" category="list-text">최소 보관 기간은 30일 + 14일입니다.</block>
   <block id="c0dc453646abf19770644c4988b76265" category="paragraph">다음은 몇 가지 예입니다.</block>
-  <block id="19606e2b227c881953690cfcbb2621ad" category="list-text">12개의 보존 기간을 사용하여 월별 백업 스케줄을 생성하는 경우 백업이 삭제되기 전 12개월(14일 이상) 동안 잠깁니다(다음 백업 파일로 대체).</block>
   <block id="19703e6040b3a90f1ca1c6525c9432f8" category="list-text">매일 30회, 매주 7회, 매달 12회의 백업을 생성하는 백업 정책을 만들면 3개의 잠긴 보존 기간이 있습니다.</block>
-  <block id="32e9736765675e582a92ea22621346f6" category="list-text">"30일" 백업은 44일 동안 보관됩니다(30일 + 14일 버퍼).</block>
-  <block id="08725775ceb79bf9dd25c482670a47a4" category="list-text">"7주" 백업은 9주(7주 + 14일) 동안 보관됩니다.</block>
-  <block id="f0d1e71c852348fd449a59d2b4456479" category="list-text">"12개월" 백업은 12개월(14일 추가) 동안 보관됩니다.</block>
-  <block id="bf7c437191fdcde55e7d7e2fc049c230" category="list-text">24개의 보존 기간을 사용하여 시간별 백업 일정을 생성하는 경우 백업이 24시간 동안 잠겨 있다고 생각할 수 있습니다. 그러나 이 기간이 최소 30일 미만이므로 각 백업은 44일(30일 + 14일 버퍼) 동안 잠기고 보존됩니다.</block>
   <block id="16ec215ee395a25e960a53b7cdcdc794" category="admonition">DataLock 보존 기간이 만료되면 이전 백업은 삭제되지만, 백업 정책 보존 기간이 만료되면 삭제되지 않습니다.</block>
   <block id="b31b5b22923a2871f33f5a4b77d6be83" category="paragraph">DataLock 보존 설정은 백업 정책의 정책 보존 설정보다 우선합니다. 이 경우 백업 파일이 개체 저장소에 장기간 저장되므로 스토리지 비용이 영향을 받을 수 있습니다.</block>
   <block id="010f0e105bcb6f73ab6c815fef84dd1c" category="section-title">DataLock 및 랜섬웨어 보호 활성화</block>
@@ -4532,11 +4502,35 @@ ifdef::AWS[]</block>
   <block id="79cf38f604ea494dd925df57b6a906b6" category="sidebar">가상 머신 워크로드 보호</block>
   <block id="7706cc052aa7120ddac8475709793258" category="sidebar">가상 머신 워크로드 보호 개요</block>
   <block id="9ce88727019b612743000c7bcc2bfd23" category="sidebar">가상 머신 워크로드 보호를 위한 전제 조건</block>
-  <block id="6a1574cd5135a4d659f7c25fd4102feb" category="sidebar">VMware 데이터 저장소를 백업하기 위한 정책 생성</block>
-  <block id="6cc90c7021ed31cf57b48ce2a8946fd6" category="sidebar">VMware 데이터스토어 복원</block>
   <block id="4639d0e2e2909a747265c2f704128bca" category="sidebar">작업을 모니터링합니다</block>
   <block id="3e8569bed0b50d0e3ac8dd96195c94f1" category="sidebar">SnapCenter 의 정책과 BlueXP backup and recovery 비교</block>
   <block id="f1518f15324a3922da2c43bf2d8a6950" category="sidebar">BlueXP backup and recovery 역할 및 권한</block>
   <block id="62967cdcfc7912e3c1a9b3870580fe3f" category="sidebar">지원되는 Azure 보관 저장소 계층</block>
   <block id="6af2225d62ab9c4b0de4dfa7f9e852f5" category="sidebar">지원되는 Google Cloud 보관 스토리지 계층</block>
+  <block id="c4b08eb240d5acefc7787d3c1f4dc211" category="paragraph">DataLock에 대한 자세한 내용과 관련 비용을 줄이는 방법에 대한 팁은 을<block ref="d90fde943a025df225ab32a40384dd6a" category="inline-link-rx"></block>참조하십시오.</block>
+  <block id="19b4ad2674c96d56da6480ae5941dbcc" category="paragraph">이는 에 <block ref="3511a6172016ee8cfe1d338bd0065ef8" category="inline-link-macro-rx"></block>적용됩니다.</block>
+  <block id="7409daf66203b2febe12a1f1d0810390" category="paragraph">자세한 내용은 을<block ref="d9a7b0453d5c88d7a03a4a533a91ebbd" category="inline-link-rx"></block>참조하십시오.</block>
+  <block id="dd1d86ea4419b25992a75d6434e263f5" category="paragraph"><block ref="f93ca486f4a1aabddf8ac5ec83073dce" category="inline-link-rx"></block>..</block>
+  <block id="852a449d8705172593dae97c83ea01cf" category="paragraph">에서 지원되는 볼륨의 전체 목록을<block ref="7145d27b15b026f49ce31235923b6206" category="inline-link-rx"></block> 참조하십시오.</block>
+  <block id="581f1a24c9473eb02495cf214eff5f16" category="paragraph">자세한 내용은 설명서를<block ref="7032ad075c5740af58977615413f7319" category="inline-link-rx"></block>참조하십시오.</block>
+  <block id="3363af40fef96c985a6160ac6cebf40f" category="paragraph">재동기화 작업을 수행하는 방법에 대한 자세한 내용은 을 참조하십시오<block ref="26011448910fe4558756af892237733b" category="inline-link-rx"></block>.</block>
+  <block id="4818e0e89efe2955c1288f2df1d064bb" category="inline-link">검색 및 복원에 대한 인덱싱 활성화</block>
+  <block id="48fe5c0defd01f149e20ad998ea50bc8" category="paragraph">자세한 내용은 을<block ref="08c33d3978c0be0f60606e54818e9704" category="inline-link-rx"></block>참조하십시오.</block>
+  <block id="39b551835fb0f105ce0b01ab6a4b0330" category="paragraph">일반적으로 BlueXP backup and recovery 클라우드 공급자와 개인 엔드포인트를 설정하여 보호 작업을 처리합니다. 이번 릴리스에서는 BlueXP 백업 및 복구가 프라이빗 엔드포인트를 자동으로 생성하는 것을 활성화 또는 비활성화할 수 있는 선택적 설정이 도입되었습니다. 프라이빗 엔드포인트 생성 프로세스를 더욱 세부적으로 제어하려는 경우 이 기능이 유용할 수 있습니다.</block>
+  <block id="2211c8a4939111428200ceec5f271f42" category="paragraph">보호 기능을 활성화하거나 복원 프로세스를 시작할 때 이 옵션을 활성화하거나 비활성화할 수 있습니다.</block>
+  <block id="030908b5781e3d39669f22cf9e8c02c4" category="paragraph">을<block ref="f1ca93d1640a6fbcba487063d3fdcf11" category="inline-link-rx"></block>참조하십시오.</block>
+  <block id="b9d8a93fed4f12013570bf6f643cb331" category="section-title">백업 사본은 BlueXP 조직과 연결됩니다.</block>
+  <block id="d135d1b6a10879ca27887c632f4576d7" category="inline-link">BlueXP  ID 및 액세스 관리에 대해 자세히 알아보십시오</block>
+  <block id="80a8421050b068560b8a6a9ede26cb9b" category="paragraph">백업 사본은 BlueXP Connector가 있는 BlueXP 조직과 연결됩니다. <block ref="00bb451fd39671f4aa08ee6cf3130758" category="inline-link-rx"></block> .</block>
+  <block id="3fe11e28eeacfe638604d387a3e527ee" category="paragraph">동일한 BlueXP 조직에 여러 개의 커넥터가 있는 경우 각 커넥터는 동일한 백업 목록을 표시합니다.</block>
+  <block id="33f34f378ec48f478eda58fa96594aa4" category="paragraph">보존 기간(RUD)은 스냅샷 보존 기간을 기준으로 결정됩니다. 보존 기간은 스냅샷 보존 기간과 버퍼를 합산하여 계산됩니다.</block>
+  <block id="0b918c8e643ab519717fd0eec681371c" category="list-text">버퍼는 전송 시간 버퍼(3일) + 비용 최적화 버퍼(28일)로 총 31일이 됩니다.</block>
+  <block id="10040237b3e7b790c7f0c1983647279e" category="list-text">최소 보존 기간은 30일 + 31일 버퍼 = 61일입니다.</block>
+  <block id="f84724515a26602458b4cabf395689b0" category="list-text">12개의 보존 기간을 사용하여 월별 백업 스케줄을 생성하는 경우 백업이 삭제되기 전 12개월(31일 이상) 동안 잠깁니다(다음 백업 파일로 대체).</block>
+  <block id="dc1987905977bd763b00c2a0741b977b" category="list-text">"30일" 백업은 61일 동안 보관됩니다(30일 + 31일 버퍼).</block>
+  <block id="dda5e0548944d946d7ab9e81fdd1296f" category="list-text">"7주" 백업은 11주(7주 + 31일) 동안 보관됩니다.</block>
+  <block id="b8400c37ab80692ef1ca26e1fa71d6f7" category="list-text">"12개월" 백업은 12개월(31일 추가) 동안 보관됩니다.</block>
+  <block id="52d355afb10d30259b33c1f1c1cd46c8" category="list-text">24개의 보존 기간을 사용하여 시간별 백업 일정을 생성하는 경우 백업이 24시간 동안 잠겨 있다고 생각할 수 있습니다. 그러나 이 기간이 최소 30일 미만이므로 각 백업은 61일(30일 + 31일 버퍼) 동안 잠기고 보존됩니다.</block>
+  <block id="776ec5ed6f61de56be98c037c8ca01c9" category="sidebar">가상 머신 데이터를 백업하기 위한 정책 생성</block>
+  <block id="9234f5bc35aa09673eacbf8fece508db" category="sidebar">가상 머신 데이터 및 데이터 저장소 복원</block>
 </blocks>

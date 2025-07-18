@@ -249,11 +249,11 @@ endif::gcp[]
 
 
 
-=== 백업 복사본은 NetApp 계정과 연결됩니다
+=== 백업 사본은 BlueXP 조직과 연결됩니다.
 
-백업 사본은 다음과 연관됩니다.  https://docs.netapp.com/us-en/bluexp-setup-admin/concept-netapp-accounts.html["BlueXP 계정"^] BlueXP 커넥터가 있는 곳입니다.
+백업 사본은 BlueXP Connector가 있는 BlueXP 조직과 연결됩니다.  https://docs.netapp.com/us-en/bluexp-setup-admin/concept-identity-and-access-management.html["BlueXP  ID 및 액세스 관리에 대해 자세히 알아보십시오"^] .
 
-동일한 BlueXP 계정에 여러 개의 커넥터가 있는 경우 각 커넥터는 동일한 백업 목록을 표시합니다.
+동일한 BlueXP 조직에 여러 개의 커넥터가 있는 경우 각 커넥터는 동일한 백업 목록을 표시합니다.
 
 
 
