@@ -4532,4 +4532,5 @@ ifdef::AWS[]</block>
   <block id="b75b69427facaf94889fb25900eb710a" category="admonition">이 문서는 기술 미리보기로 제공됩니다. 이 사전 공개 오퍼링과 함께 NetApp은 일반 출시 이전에 서비스 세부 정보, 콘텐츠 및 일정을 수정할 권한을 보유합니다.</block>
   <block id="1215f8190533dfdf63d2224a6d88266f" category="inline-link-macro">Google Cloud NetApp 볼륨</block>
   <block id="cb4bf32603c89d08cad17e7e7dd302f2" category="list-text"><block ref="cb4bf32603c89d08cad17e7e7dd302f2" category="inline-link-macro-rx"></block></block>
+  <block id="5e58a6444bf20b49389e233ebf6021d5" category="admonition">이 기능은 2025년 5월에 출시된 BlueXP backup and recovery 버전 4.0.3부터 사용할 수 있습니다.</block>
 </blocks>
