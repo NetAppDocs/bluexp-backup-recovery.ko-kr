@@ -43,7 +43,7 @@ BlueXP 백업 및 복구의 새로운 기능에 대해 알아보십시오.
 이것을 완료하면 미리보기에 가입할 수 있습니다.  https://forms.office.com/pages/responsepage.aspx?id=oBEJS5uSFUeUS8A3RRZbOojtBW63mDRDv3ZK50MaTlJUNjdENllaVTRTVFJGSDQ2MFJIREcxN0EwQi4u&route=shorturl["미리보기 가입 양식"^] .
 
 
-NOTE: Microsoft SQL Server 워크로드 보호에 대한 이 문서는 기술 미리보기로 제공됩니다. 이 사전 공개 오퍼링과 함께 NetApp은 일반 출시 이전에 서비스 세부 정보, 콘텐츠 및 일정을 수정할 권한을 보유합니다.
+NOTE: Microsoft SQL Server 워크로드 보호에 대한 이 문서는 기술 미리보기 형태로 제공됩니다. NetApp 이 미리보기 버전의 제품 세부 정보, 내용 및 출시 일정을 정식 출시 전에 수정할 권리를 보유합니다.
 
 이 버전의 BlueXP backup and recovery 다음과 같은 업데이트가 포함되어 있습니다.
 
@@ -322,7 +322,7 @@ BlueXP  백업 및 복구에는 소스 작업 환경에서 데이터를 보다 
 BlueXP backup and recovery 의 이 미리 보기 릴리스에서는 BlueXP backup and recovery 서비스에서 익숙한 3-2-1 보호 전략을 사용하여 Microsoft SQL Server 워크로드를 관리할 수 있는 업데이트된 사용자 인터페이스를 제공합니다. 이 새로운 버전을 사용하면 이러한 워크로드를 기본 스토리지에 백업하고, 보조 스토리지에 복제하고, 클라우드 객체 스토리지에 백업할 수 있습니다.
 
 
-NOTE: 이 문서는 기술 미리 보기로 제공됩니다. 이 사전 공개 오퍼링과 함께 NetApp은 일반 출시 이전에 서비스 세부 정보, 콘텐츠 및 일정을 수정할 권한을 보유합니다.
+NOTE: 이 문서는 기술 미리보기로 제공됩니다. 이 사전 공개 오퍼링과 함께 NetApp은 일반 출시 이전에 서비스 세부 정보, 콘텐츠 및 일정을 수정할 권한을 보유합니다.
 
 BlueXP backup and recovery Preview 2025 버전에는 다음과 같은 업데이트가 포함되어 있습니다.
 
