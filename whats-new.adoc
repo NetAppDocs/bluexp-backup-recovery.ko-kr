@@ -24,7 +24,7 @@ BlueXP 백업 및 복구의 새로운 기능에 대해 알아보십시오.
 
 
 
-=== 공개 기술 미리보기로서의 Kubernetes 워크로드 지원
+=== 미리 보기로 Kubernetes 워크로드 지원
 
 BlueXP backup and recovery 의 이번 릴리스에서는 Kubernetes 워크로드 검색 및 관리에 대한 지원이 도입되었습니다.
 
@@ -36,6 +36,8 @@ BlueXP backup and recovery 의 이번 릴리스에서는 Kubernetes 워크로드
 * Kubernetes에서 실행되는 컨테이너와 가상 머신을 사용합니다.
 * 실행 후크와 템플릿을 사용하여 애플리케이션과 일관된 백업을 만듭니다.
 
+
+Kubernetes 워크로드 보호에 대한 자세한 내용은 다음을 참조하세요.  https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-kubernetes-protect-overview.html["Kubernetes 워크로드 보호 개요"] .
 
 
 
