@@ -20,12 +20,6 @@ indexpage:
       url: br-start-setup.html
     - title: BlueXP backup and recovery 설정 구성
       url: br-start-configure.html
-  - title: 백업 및 복원에 대한 정책 관리
-    links:
-    - title: 백업 및 복원을 관리하는 정책 만들기
-      url: br-use-policies-create.html
-    - title: 대시보드에서 보호 상태 보기
-      url: br-use-dashboard.html
   - title: ONTAP 볼륨 워크로드 보호
     links:
     - title: ONTAP 볼륨 워크로드 개요 보호
@@ -58,6 +52,20 @@ indexpage:
       url: prev-vmware-policy-create.html
     - title: 가상 머신 워크로드 복원
       url: prev-vmware-restore.html
+  - title: Kubernetes 워크로드 보호(미리 보기)
+    links:
+    - title: Kubernetes 워크로드 보호 개요
+      url: br-use-kubernetes-protect-overview.html
+    - title: Kubernetes 워크로드를 알아보세요
+      url: br-start-discover-kubernetes.html
+    - title: Kubernetes 애플리케이션 추가 및 보호
+      url: link:br-use-protect-kubernetes-applications.html
+    - title: Kubernetes 클러스터 관리
+      url: br-use-manage-kubernetes-clusters.html
+    - title: Kubernetes 애플리케이션 관리
+      url: br-use-manage-kubernetes-applications.html
+    - title: Kubernetes 애플리케이션 복원
+      url: br-use-restore-kubernetes-applications.html
   - title: 블로그 및 커뮤니티
     links:
     - title: NetApp 커뮤니티

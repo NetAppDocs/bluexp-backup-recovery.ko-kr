@@ -612,7 +612,6 @@
   <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">NSS 계정을 가지고 있는 NetApp 고객은 BlueXP를 통해 지원을 받기 위해 등록하기만 하면 됩니다.</block>
   <block id="5226d4ec1f4f81b740cbbd27635b441f" category="list-text">위에 사용된 BlueXP 계정 일련 번호(960xxxx)를 일련 번호 필드에 복사해야 합니다. 이렇게 하면 계정 처리 속도가 빨라집니다.</block>
   <block id="c9df4195a305212ffd7b56d24f67129d" category="summary">NetApp은 다양한 방법으로 BlueXP를 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다. 지원 등록에는 웹 티켓팅을 통한 원격 기술 지원이 포함됩니다.</block>
-  <block id="7c5661ab6b39ee901cea00a6e7020a49" category="paragraph">NetApp은 다양한 방법으로 BlueXP 및 클라우드 서비스를 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다. 지원 등록에는 웹 티켓팅을 통한 원격 기술 지원이 포함됩니다.</block>
   <block id="9a3db1abe5491d0eb9bb5d125981356c" category="paragraph">문제를 해결하는 데 도움이 되는 문서를 찾으려면 BlueXP 기술 자료를 검색하십시오.</block>
   <block id="00c5fef3bb9d593ae96bf5d2ee60354a" category="paragraph">BlueXP 커뮤니티에 가입하여 진행 중인 토론을 팔로우하거나 새 토론을 만드십시오.</block>
   <block id="a4a6c2ea0078252eac2d74ef3e6c917c" category="paragraph">현재 보고 있는 BlueXP 문서입니다.</block>
@@ -1124,8 +1123,6 @@
   <block id="3b0a91a5ea7b77db2fb83f740b7d1303" category="list-text">보고서 작성 * 을 선택합니다.</block>
   <block id="28164bf9e881ddc9e7ff74744bfce180" category="paragraph">두 가지 유형의 일련 번호를 등록하면 지원 티켓 열기와 자동 케이스 생성 등의 기능을 사용할 수 있습니다. 아래 설명과 같이 BlueXP에 NetApp Support 사이트(NSS) 계정을 추가하여 등록을 완료합니다.</block>
   <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">NSS 자격 증명 추가 * 를 선택하고 NetApp Support 사이트(NSS) 인증 프롬프트를 따릅니다.</block>
-  <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">계정 일련 번호와 녹색 확인란이 표시된 스크린샷 및 지원을 위해 등록된 텍스트.</block>
-  <block id="3d183819a15163ef2e2e7d9d764254a9" category="paragraph"><block ref="3d183819a15163ef2e2e7d9d764254a9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">기존 사용권 및 제품 번호가 _NO_NSS인 기존 NetApp 고객인 경우 NSS 계정을 만들어 BlueXP 로그인과 연결해야 합니다.</block>
   <block id="0499bba105f8a891a2c671f1ba99dd34" category="list-text">의 단계를 완료하여 새 NSS 계정을 BlueXP 로그인에 연결합니다 <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
   <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">NetApp Support 사이트 계정이 있으면 의 단계를 완료하여 계정을 BlueXP 로그인에 연결합니다 <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
@@ -2744,7 +2741,6 @@ ifdef::AWS[]</block>
   <block id="6e9928eb22c01e32a268322a930590b5" category="paragraph"><block ref="6e9928eb22c01e32a268322a930590b5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5d93632dd21f2b862652e38274ab25f3" category="list-text">*백업 대상 검색*을 선택합니다.</block>
   <block id="abd59a7e6214ae0bc1f2eb0e1d451616" category="list-text">백업 대상 유형 중 하나를 선택하세요: *Amazon Web Services(AWS) S3*, *Microsoft Azure Blob Storage*, * StorageGRID* 또는 * ONTAP S3*.</block>
-  <block id="9b1e0dd4ace755c537f9972ef8ebdfcc" category="list-text">정보를 입력하세요. 선택한 백업 대상 유형에 따라 입력하는 정보가 달라집니다.</block>
   <block id="b6c8346e3af7fef18cf0ce7935a8df2d" category="list-text">*자격 증명 이름*: AWS 자격 증명 이름을 입력하세요.</block>
   <block id="de89622fdc09e747a68f2d59e8e93aeb" category="list-text">*액세스 키*: AWS 비밀번호를 입력하세요.</block>
   <block id="7ae5b4d35ef4eee6d24f3cb1687c3bce" category="list-text">*비밀 키*: AWS 비밀 키를 입력하세요.</block>
@@ -3077,7 +3073,6 @@ ifdef::AWS[]</block>
   <block id="b92ff61eb96a6335a8c3f7f10988723a" category="list-text">로컬, 보조 및 개체 스토리지에서 수행된 복원 작업 수입니다. 차트 위에 마우스를 올리면 자세한 내용을 볼 수 있습니다.</block>
   <block id="4c931104d6ff5fdc2a76bdfc6fba4662" category="summary">온프레미스 ONTAP 시스템에서 Amazon Web Services, Microsoft Azure, Google Cloud Platform 및 StorageGRID 에 이르기까지 Kubernetes 애플리케이션과 애플리케이션 데이터를 보호하여 데이터가 안전하게 보호되도록 할 수 있습니다.</block>
   <block id="ff1a3fbe6f92249e286b8a93cf5b5d2e" category="doc">Kubernetes 워크로드 관리 개요</block>
-  <block id="eb77981f2e476b76c513faaacd09914a" category="paragraph">BlueXP backup and recovery 에서 쿠버네티스 워크로드를 관리하면 쿠버네티스 클러스터와 애플리케이션을 한 곳에서 관리하고 보호할 수 있습니다. 쿠버네티스 클러스터에서 호스팅되는 리소스와 애플리케이션을 관리할 수 있으며, 쿠버네티스 워크로드의 보호 설정도 관리할 수 있습니다.</block>
   <block id="e94d9102ade906ff7fd5fc370d68c0d8" category="paragraph">Kubernetes 워크로드 관리와 관련된 다음 작업을 수행할 수 있습니다.</block>
   <block id="384b71db954a7a463c759208283e47c4" category="inline-link-macro">Kubernetes 클러스터 관리</block>
   <block id="75750592598a2163e070809696d795f5" category="list-text"><block ref="4c3d4ee32af52a5715d89ae7d8ef89d4" category="inline-link-macro-rx"></block>..</block>
@@ -3110,7 +3105,6 @@ ifdef::AWS[]</block>
   <block id="f098e888afa8ccb3f1ad3337c3b6eea1" category="list-text">사후 스냅샷 후크가 실행되었습니다</block>
   <block id="59b50be8e9e2ed1b0e1bccae54c76036" category="list-text">예비 후크가 실행되었습니다</block>
   <block id="1f374d287bf615eef6eb9afd92b862f2" category="list-text">백업 후 후크가 실행되었습니다</block>
-  <block id="e807d528474129e76f18c5ce17a2c3d6" category="admonition">위의 순서 예제는 기존 스냅샷을 사용하지 않는 백업을 실행하는 경우에만 적용됩니다.</block>
   <block id="b74efcc6eafe1d8dec6ade34cfa13365" category="admonition">운영 환경에서 실행 후크 스크립트를 사용하려면 항상 해당 스크립트를 테스트해야 합니다. 'kubbeck exec' 명령을 사용하여 스크립트를 편리하게 테스트할 수 있습니다. 운영 환경에서 실행 후크를 사용하도록 설정한 후 결과 스냅샷과 백업을 테스트하여 정합성이 보장되는지 확인합니다. 앱을 임시 네임스페이스에 클론 복제하고, 스냅샷 또는 백업을 복원한 다음 앱을 테스트하여 이 작업을 수행할 수 있습니다.</block>
   <block id="3094ed24e92fa43f93a063b74aba1810" category="admonition">스냅샷 사전 실행 후크가 Kubernetes 리소스를 추가, 변경 또는 제거하는 경우 스냅샷 또는 백업과 이후의 복원 작업에 변경 사항이 포함됩니다.</block>
   <block id="f99748fb4b1cf592516b60937743c52d" category="section-title">사용자 정의 실행 후크에 대한 중요 참고 사항</block>
@@ -3135,7 +3129,6 @@ ifdef::AWS[]</block>
   <block id="0cb7c5b441857e03f08093031a6339f7" category="list-text">*실행 후크 템플릿* 섹션을 확장합니다.</block>
   <block id="2a088015f75a0a613f092e9e8f5f7ecc" category="list-text">*실행 후크 템플릿 만들기*를 선택합니다.</block>
   <block id="6c2bb6397009eba196d81d9b0513c7af" category="list-text">실행 후크의 이름을 입력하세요.</block>
-  <block id="9c9a0aa3db923b616c1a56b0a66bf10b" category="list-text">후크 유형을 선택하세요. 예를 들어, 복원 후 후크는 복원 작업이 완료된 후 실행됩니다.</block>
   <block id="568e240ce60c5111628400e9a73d1b19" category="list-text">*스크립트* 텍스트 상자에 실행 후크 템플릿의 일부로 실행할 실행 가능한 셸 스크립트를 입력합니다. 선택적으로, *스크립트 업로드*를 선택하여 스크립트 파일을 업로드할 수 있습니다.</block>
   <block id="2d25ab95e435f153440ab9d3233adfc9" category="paragraph">템플릿이 생성되어 *실행 후크 템플릿* 섹션의 템플릿 목록에 나타납니다.</block>
   <block id="11855fa3782bd3579091c4ab1eb9cfd1" category="summary">BlueXP backup and recovery 사용하면 워크로드 호스트 정보, 데이터베이스 정보 및 인스턴스 정보를 관리할 수 있습니다. 인벤토리의 보호 설정을 확인, 편집 및 삭제할 수 있습니다.</block>
@@ -3217,26 +3210,12 @@ ifdef::AWS[]</block>
   <block id="c4c777723be13a16e4277a51201e6ecb" category="paragraph">지금 Microsoft SQL Server 인스턴스와 데이터베이스를 백업하여 데이터를 즉시 보호할 수 있습니다.</block>
   <block id="4853389deec9b1ee2dd392ded61fb375" category="list-text">*인스턴스* 또는 *데이터베이스* 탭을 선택합니다.</block>
   <block id="70c2224d92fad32ea2b3d68fcf62837b" category="list-text">인스턴스나 데이터베이스를 선택하세요.</block>
-  <block id="e0969aab9a754fbeb65c97a743ecf3e8" category="paragraph">BlueXP backup and recovery 사용하면 Kubernetes 애플리케이션과 관련 리소스를 관리할 수 있습니다. Kubernetes 애플리케이션의 보호 설정을 생성, 확인, 편집 및 삭제할 수 있습니다.</block>
-  <block id="2473107ecc76d85d95c0613ff136ac38" category="section-title">Kubernetes 애플리케이션 편집</block>
-  <block id="1298ad3fdec77ca1e805bb223dca6095" category="paragraph">애플리케이션과 연결된 리소스가 변경된 경우 기존 Kubernetes 애플리케이션의 설정을 수정할 수 있습니다.</block>
-  <block id="b1259a1c3d1d04e664d36ffe13213f17" category="list-text">BlueXP backup and recovery 에서 *인벤토리* &gt; *애플리케이션*을 선택합니다.</block>
-  <block id="eddc20dd71d8c9752bbca2d735f01f8b" category="list-text">애플리케이션 목록에서 편집하려는 애플리케이션을 선택하고 관련된 작업 메뉴를 선택합니다.</block>
-  <block id="071ef8ace6c74c9a1515550077974172" category="list-text">편집 * 을 선택합니다.</block>
-  <block id="63e3dd274252241ed3ae7de72811c358" category="list-text">이름이나 포함된 리소스 등 애플리케이션 정의에 필요한 변경 사항을 적용합니다.</block>
-  <block id="1babd014dacd7ec3dc5797b9becacd63" category="list-text">완료되면 *다음*을 선택하세요.</block>
-  <block id="98efd82b79ad45368c5ef167a1c76c07" category="list-text">보호 설정에 필요한 변경 사항을 적용합니다.</block>
-  <block id="91a8fa3f6989d0babb6d08cdbd5720cd" category="list-text">완료되면 *완료*를 선택하세요.</block>
   <block id="cff401a662fcb28482f083d31d6cafe6" category="section-title">Kubernetes 애플리케이션 보호 해제</block>
-  <block id="172487ea9d46d90e7d631e11625255b4" category="paragraph">더 이상 보호하고 싶지 않은 애플리케이션의 보호를 해제할 수 있습니다. 애플리케이션 보호를 해제하면 BlueXP backup and recovery 해당 애플리케이션의 보호를 중단하지만, 관련된 모든 백업과 스냅샷은 만료될 때까지 보관됩니다.</block>
   <block id="b48b4006b16497af09b539c62263032c" category="list-text">애플리케이션 목록에서 보호를 해제할 애플리케이션을 선택하고 관련된 작업 메뉴를 선택합니다.</block>
   <block id="36f0283cb14ad41f5a35341825d6cb8f" category="list-text">*보호 해제*를 선택하세요.</block>
   <block id="8896e71a8de95cbfa7c12f414c5bf926" category="list-text">공지사항을 읽고 준비가 되면 *보호 해제*를 선택하세요.</block>
   <block id="f0b8c712a2979155a90a4d45542f57f1" category="section-title">Kubernetes 애플리케이션 삭제</block>
-  <block id="64bb5e30da0ef718081b849fa6220af5" category="paragraph">더 이상 필요하지 않은 애플리케이션은 삭제할 수 있습니다. 애플리케이션을 삭제하면 BlueXP backup and recovery 해당 애플리케이션 보호를 중단하고, 사용자가 선택한 경우 연결된 모든 백업 및 스냅샷도 삭제됩니다.</block>
   <block id="e9f066e195a46d59f447e0e9faed2a72" category="list-text">애플리케이션 목록에서 삭제하려는 애플리케이션을 선택하고 관련된 작업 메뉴를 선택합니다.</block>
-  <block id="e321c0c05a076cc3a5dc34f5defbe33c" category="list-text">선택적으로, *스냅샷 및 백업 삭제*를 활성화하여 애플리케이션의 모든 스냅샷과 백업을 제거합니다.</block>
-  <block id="d1b66833603a5e5aeb679ed3da88713c" category="admonition">이렇게 하면 해당 스냅샷과 백업을 사용하여 애플리케이션을 더 이상 복원할 수 없습니다.</block>
   <block id="2c498f050391660a19bd7982f3f63e5f" category="list-text">작업을 확인하고 *삭제*를 선택하세요.</block>
   <block id="aa9ddc26c88ec2cf667e9e13add116ed" category="summary">BlueXP backup and recovery 사용하면 Kubernetes 클러스터를 검색하고 관리하여 클러스터에서 호스팅되는 리소스를 보호할 수 있습니다.</block>
   <block id="87534497274da3072815e676c271a1d9" category="section-title">Kubernetes 클러스터 정보 편집</block>
@@ -3244,7 +3223,6 @@ ifdef::AWS[]</block>
   <block id="c05213ade621f320091205852d0404f9" category="list-text">BlueXP backup and recovery 에서 *인벤토리* &gt; *클러스터*를 선택합니다.</block>
   <block id="8eb32ceb6b7d95adcdd8d5829f98c044" category="list-text">클러스터 목록에서 편집하려는 클러스터를 선택하고 연관된 작업 메뉴를 선택합니다.</block>
   <block id="539e1806cdbd1431ba6cb6b4b84fc393" category="list-text">*클러스터 편집*을 선택하세요.</block>
-  <block id="cf2d600cead59452b16e14068d2cde33" category="list-text">클러스터 이름을 필요에 따라 변경합니다.</block>
   <block id="f23e3ed54ae928c06add368fe4fe5a66" category="section-title">Kubernetes 클러스터 제거</block>
   <block id="284b1d184c099b9f362ef253708bf5a8" category="paragraph">Kubernetes 클러스터에서 호스팅되는 리소스를 더 이상 보호할 필요가 없으면 BlueXP backup and recovery 에서 제거할 수 있습니다. 클러스터를 제거해도 클러스터 자체나 리소스는 삭제되지 않고, BlueXP 인벤토리에서만 제거됩니다. 클러스터를 제거하려면 먼저 BlueXP backup and recovery 에서 보호 기능을 비활성화하고 관련 애플리케이션을 삭제해야 합니다.</block>
   <block id="884dae5f1c15db330f66f8e2866510c1" category="list-text">*클러스터 제거*를 선택합니다.</block>
@@ -3715,18 +3693,14 @@ ifdef::AWS[]</block>
   <block id="03335a80c0921aa8da8f7e365d892176" category="paragraph">*어떤 UI를 사용하고 있는지 어떻게 알 수 있나요?* 새로운 UI는 이전 UI와 다른 메뉴 구조를 사용합니다.</block>
   <block id="a69bdeacbeaa4d505c045535794fede1" category="paragraph">새로운 UI: <block ref="5ec9ba2d6c07e18e4f6caf9c1d51cc8e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c7aa3a54e5fdb6213cad90c7044afd96" category="paragraph">이전 UI: <block ref="fa2e599941b781bf3a65ea0199d76803" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f180b22cf0fe1951fec3aeedc5e4c0ae" category="paragraph">BlueXP backup and recovery 사용하면 워크로드 호스트 정보, 데이터베이스 정보 및 인스턴스 정보를 관리할 수 있습니다. 인벤토리의 보호 설정을 확인, 편집 및 삭제할 수 있습니다.</block>
   <block id="5f630cc239007de25f5a99cae937f7b6" category="section-title">새로운 Kubernetes 애플리케이션 추가 및 보호</block>
   <block id="8e104d608697694db956a64bbb7f44d6" category="paragraph">쿠버네티스 애플리케이션을 보호하는 첫 번째 단계는 BlueXP backup and recovery 내에 애플리케이션을 생성하는 것입니다. 애플리케이션을 생성하면 BlueXP 쿠버네티스 클러스터에서 실행 중인 애플리케이션을 인식하게 됩니다.</block>
   <block id="1ededf46b716bee183793af35442a908" category="list-text">*신청서 만들기*를 선택하세요.</block>
   <block id="f446f13c3f03f5e706e59025856f1357" category="list-text">애플리케이션의 이름을 입력하세요.</block>
-  <block id="213c6ac9f0b7732c6e07fdb1130eec26" category="list-text">보호하려는 리소스를 검색하려면 다음 필드 중 하나를 선택하세요.</block>
   <block id="10c36ac54e8d8af7b07be76efa014c6d" category="list-text">연관된 클러스터</block>
   <block id="ba8e99e47d2b3859bc28a87f721af62d" category="list-text">연관된 네임스페이스</block>
   <block id="b6af2b8fdca63591236d48930018b8db" category="list-text">리소스 유형</block>
   <block id="635c4235a331a9bc9e0197a493f38268" category="list-text">라벨 선택기</block>
-  <block id="1437507207cef97741c707e6cdca5446" category="list-text">선택적으로, 클러스터 수준에서 범위가 지정되고 애플리케이션에 포함되지 않는 리소스를 선택하려면 *클러스터 범위 리소스*를 선택합니다. 이러한 리소스를 포함하면 애플리케이션을 생성할 때 해당 리소스가 애플리케이션에 추가됩니다.</block>
-  <block id="b4fbd0589f942f7f4b9d49d16ec396e6" category="list-text">검색 기준에 맞는 리소스를 찾으려면 *검색*을 선택하세요.</block>
   <block id="de183577631c168afe44797528dcd1b6" category="list-text">BlueXP 검색 기준과 일치하는 리소스 목록을 표시합니다.</block>
   <block id="aa49cc3a36d2c16ec191533800daa634" category="list-text">보호하려는 리소스가 목록에 포함되어 있으면 *다음*을 선택합니다.</block>
   <block id="e9caf784881cf54a35354c0cac59319c" category="list-text">*정책* 영역에서 애플리케이션을 보호하기 위한 기존 보호 정책을 선택하거나 새 정책을 만듭니다.</block>
@@ -3738,13 +3712,11 @@ ifdef::AWS[]</block>
   <block id="104d1a34e290d2de5a494845fa1be7b8" category="list-text">애플리케이션 목록에서 보호하려는 애플리케이션을 선택하고 관련된 작업 메뉴를 선택합니다.</block>
   <block id="20d541172ecc7e2d477ce2738120938c" category="list-text">protect * 를 선택합니다.</block>
   <block id="6eeabb5a1fdc64db00294aa16e2efc65" category="list-text">*Prescripts and postscripts* 영역에서 백업 작업 전 또는 후에 실행할 Prescript 또는 Postscript 실행 후크를 활성화하고 구성합니다. 실행 후크 유형, 사용하는 템플릿, 인수 및 레이블 선택기를 구성할 수 있습니다.</block>
-  <block id="142661662e2986b0019be862c0461dea" category="paragraph">BlueXP 사용자 설정에 따라 애플리케이션을 보호하고, 백업 및 복구의 *모니터링* 영역에서 진행 상황을 모니터링할 수 있습니다.</block>
   <block id="53932eb694521eb34987ea9c43f0a292" category="section-title">지금 Kubernetes 애플리케이션을 백업하세요</block>
   <block id="4b6c3c6a317300967177891eec6ba8fd" category="paragraph">향후 백업 및 스냅샷을 위한 기준을 설정하거나 최신 데이터가 보호되도록 Kubernetes 애플리케이션의 백업을 수동으로 생성합니다.</block>
   <block id="ef4da1dbc592e89fff8af00102b37ff3" category="list-text">애플리케이션 목록에서 백업하려는 애플리케이션을 선택하고 관련된 작업 메뉴를 선택합니다.</block>
   <block id="46b6ecff43461a732d3eda912df73a42" category="list-text">*지금 백업*을 선택하세요.</block>
   <block id="793c79d603a2a6eb42272304c6135f12" category="list-text">올바른 애플리케이션 이름이 선택되었는지 확인하세요.</block>
-  <block id="754dbe33c97d1eab966f4afbcc17281a" category="list-text">정책 목록에서 보호 정책을 선택하세요.</block>
   <block id="ff4d762e1ab6dd75731a4f97e66ec902" category="list-text">백업 * 을 선택합니다.</block>
   <block id="13aa7d37adedbada3ba62d0025ffd669" category="summary">BlueXP backup and recovery 에서 백업 수, 성공한 백업 수, 실패한 백업 수를 포함한 백업 상태를 확인하는 보고서를 생성할 수 있습니다. 또한 백업 유형, 백업에 사용된 스토리지 시스템, 백업 시간 등 각 백업의 세부 정보도 확인할 수 있습니다.</block>
   <block id="4ffac2ad8d1b6f043c1b6d9001f3e6f6" category="doc">BlueXP backup and recovery 에서 Microsoft SQL Server 워크로드에 대한 보고서 만들기</block>
@@ -3764,17 +3736,12 @@ ifdef::AWS[]</block>
   <block id="fb197ee87a0f850dc3b7bb98fe408518" category="inline-link-macro">설정을 구성합니다</block>
   <block id="33d5eea2cdcc60026d006f7ddcce9495" category="paragraph">설정 페이지에서 이메일 알림을 구성하세요. 이메일 알림 구성에 대한 자세한 내용은 다음을 참조하세요. <block ref="d31e50b2f0a34cda84cb4d51887db3bf" category="inline-link-macro-rx"></block> .</block>
   <block id="d43afa987ad0de9723ba949b8f0a04a1" category="summary">BlueXP backup and recovery 사용하면 보호 정책으로 보호한 애플리케이션을 복원할 수 있습니다.</block>
-  <block id="1f392f3f733a11cc3493b55c6be17d19" category="paragraph">BlueXP backup and recovery 사용하면 보호 정책으로 보호한 애플리케이션을 복원할 수 있습니다. 애플리케이션을 복원하려면 해당 애플리케이션의 보호 상태가 "보호됨"이어야 하며, 관련 보호 정책이 있어야 합니다. 로컬 스냅샷, 보조 스냅샷, 그리고 객체 저장소 백업으로 구성된 복원 지점을 사용하여 애플리케이션을 복원합니다. 로컬, 보조 또는 객체 저장소 아카이브를 사용하여 애플리케이션을 복원할 수 있습니다.</block>
-  <block id="03bf994f880d919cb2e0cfede0e2f660" category="list-text">Kubernetes 워크로드를 선택하고 워크로드의 호스트 열에서 *보기*를 선택합니다.</block>
   <block id="b2c71ce0eb7f82adff3580d86f20d76d" category="list-text">애플리케이션 목록에서 복원하려는 애플리케이션을 선택하고 관련된 작업 메뉴를 선택합니다.</block>
   <block id="553b5cd5dac97c088cf126dd86d0a9fb" category="list-text">*보기 및 복원*을 선택하세요.</block>
   <block id="5a870c22146ba310e89eaf52f510bdc8" category="paragraph">복원 지점 목록이 나타납니다.</block>
   <block id="c42e645eedd858c3f07be6b12b14117e" category="list-text">사용하려는 복원 지점에 대한 작업 메뉴를 열고 *복원*을 선택합니다.</block>
   <block id="de62775a71fc2bf7a13d7530ae24a7ed" category="floating-title">일반 설정</block>
-  <block id="c6e3b7d6e6d837a3fe004e3967838f08" category="list-text">복원할 소스(로컬, 보조 또는 개체 저장소)를 선택합니다.</block>
   <block id="d7560bb34437cec51e7e4319ee098f83" category="list-text">*클러스터* 목록에서 대상 클러스터를 선택합니다.</block>
-  <block id="b1e7fff726dadc201adbdc2bf9650bb2" category="list-text">복원 대상 네임스페이스(원래 또는 새 네임스페이스)를 선택합니다.</block>
-  <block id="c15ed67de3c2ba4c15392050d9a04910" category="paragraph">다른 클러스터와 원래 네임스페이스로 복원하는 것은 지원되지 않습니다.</block>
   <block id="0ea90fe06c37ce54f4695cefd1980f66" category="floating-title">리소스 선택</block>
   <block id="74f41c06ce4ca2bd3dc7e2b83148072b" category="list-text">애플리케이션과 관련된 모든 리소스를 복원할지 아니면 필터를 사용하여 복원할 특정 리소스를 선택할지 선택하세요.</block>
   <block id="6ead82e0fb87f1d2639b05d1f514c487" category="open-title">모든 리소스 복원</block>
@@ -3789,7 +3756,6 @@ ifdef::AWS[]</block>
   <block id="b5c9051aafb85384e02d47693c3be179" category="list-text">결과에 만족하면 *다음*을 선택하세요.</block>
   <block id="8d7c9cf5b15032c441cad2d538d90368" category="floating-title">목적지 설정</block>
   <block id="5d49eb458c546b4f70a99f4b37bbcc20" category="list-text">기본 저장소 클래스 또는 다른 저장소 클래스로 복원할지 선택합니다.</block>
-  <block id="59f8aa9e3a0e112d49baa4279aa55fc3" category="list-text">선택적으로, 다른 저장소 클래스로 복원하도록 선택한 경우 각 소스 저장소 클래스와 일치하는 대상 저장소 클래스를 선택하십시오. 대상 저장소 클래스는 대상 클러스터에서 사용 가능해야 합니다.</block>
   <block id="c98c13337e16cd6efd0d5944bba7c3be" category="summary">백업 및 복구 환경을 유지하는 데 도움이 될 수 있는 고급 설정이 있습니다. 인벤토리 관리, 백업 삭제, 리소스 등록 해제, 관계 삭제, 서비스 요금 중단을 위한 리소스 보호 해제, SnapMirror 관계의 최대 전송 속도 설정, 스냅샷 사본을 개체 저장소로 내보내기, 연간 스냅샷 자동 삭제 활성화, 유지 관리 모드 활성화, 애플리케이션 플러그인 업데이트 등의 고급 설정을 구성할 수 있습니다.</block>
   <block id="d8532f86141af810dd005a564080075a" category="doc">BlueXP backup and recovery 에서 고급 설정 구성</block>
   <block id="576dfff4a076aeb9d45b7d615d1074a3" category="paragraph">다음과 같은 방법으로 BlueXP backup and recovery 고급 설정을 구성하세요.</block>
@@ -3993,7 +3959,6 @@ ifdef::AWS[]</block>
   <block id="89c5399d4b0ad654b2008a7c0f2b69cf" category="list-text"><block ref="89c5399d4b0ad654b2008a7c0f2b69cf" category="inline-link-macro-rx"></block></block>
   <block id="a83f1ed3639378d8a5c8766fc08ab842" category="section-title">BlueXP 에서</block>
   <block id="44b43220cddd60410d9468a032ce4216" category="inline-link-macro">BlueXP backup and recovery 역할 기반 기능 액세스</block>
-  <block id="8a04748ea8a87567c4b5b798c1560ba7" category="list-text">BlueXP 사용자는 Microsoft SQL Server 워크로드에 대한 작업을 수행하는 데 필요한 역할과 권한을 보유해야 합니다. 리소스를 검색하려면 BlueXP backup and recovery 역할(Super admin)이 있어야 합니다. 자세한 내용은 다음을 참조하세요. <block ref="a05625c69ff931c9860060259f76b925" category="inline-link-macro-rx"></block> BlueXP backup and recovery 작업을 수행하는 데 필요한 역할과 권한에 대한 자세한 내용은 다음을 참조하세요.</block>
   <block id="b7ab05a2d5f81c9f2d4db3c8f5d660e2" category="list-text">온프레미스 ONTAP 클러스터 또는 Cloud Volumes ONTAP 에 연결되는 활성 BlueXP 커넥터가 하나 이상 있는 BlueXP 조직입니다. 아래 *초기 미리보기 설정 프로세스*를 참조하세요.</block>
   <block id="116655111d41d0456e3b0ef0d3855cd4" category="list-text">NetApp 온프레미스 ONTAP 또는 Cloud Volumes ONTAP 클러스터가 있는 BlueXP 작업 환경이 하나 이상 있어야 합니다.</block>
   <block id="1814746c026b2253f1fd4e1ea066cea1" category="list-text">BlueXP 커넥터</block>
@@ -4463,7 +4428,6 @@ ifdef::AWS[]</block>
   <block id="f2673d4a3fe0162a501d43f5168ae950" category="section-title">2025년 7월 14일</block>
   <block id="6cdd743b39af79062eb92fec70569354" category="section-title">2025년 2월 13일</block>
   <block id="8fb577f7388be9dbd876c13b3fce7c69" category="sidebar">BlueXP backup and recovery 서비스는 온프레미스와 클라우드 모두에서 데이터베이스에 대한 효율적이고 안전하며 비용 효율적인 데이터 보호 기능을 제공합니다.</block>
-  <block id="8b11af28439113b2496a02172e80198b" category="sidebar">백업 및 복원에 대한 정책 관리</block>
   <block id="4cd511c4b46eedfc6c0c344f09eba377" category="sidebar">백업 및 복원을 관리하는 정책 만들기</block>
   <block id="79ea3ea9942b969dda927a2d7853b651" category="sidebar">ONTAP 볼륨 워크로드 보호</block>
   <block id="9123d1b1585355faf99db6ce88c0b806" category="sidebar">ONTAP 볼륨 워크로드 개요 보호</block>
@@ -4533,4 +4497,97 @@ ifdef::AWS[]</block>
   <block id="1215f8190533dfdf63d2224a6d88266f" category="inline-link-macro">Google Cloud NetApp 볼륨</block>
   <block id="cb4bf32603c89d08cad17e7e7dd302f2" category="list-text"><block ref="cb4bf32603c89d08cad17e7e7dd302f2" category="inline-link-macro-rx"></block></block>
   <block id="5e58a6444bf20b49389e233ebf6021d5" category="admonition">이 기능은 2025년 5월에 출시된 BlueXP backup and recovery 버전 4.0.3부터 사용할 수 있습니다.</block>
+  <block id="6902ada6aa5bd3c4c129d87093d48e07" category="doc">공개 기술 미리보기로서의 Kubernetes 워크로드 지원</block>
+  <block id="36442e954ef2484603f79c5f3abc842b" category="paragraph">BlueXP backup and recovery 의 이번 릴리스에서는 Kubernetes 워크로드 검색 및 관리에 대한 지원이 도입되었습니다.</block>
+  <block id="200a1ca96330b8c7561607ba3e8efa76" category="list-text">kubeconfig 파일을 공유하지 않고도 NetApp ONTAP 지원하는 Red Hat OpenShift와 오픈 소스 Kubernetes 클러스터를 살펴보세요.</block>
+  <block id="bc97cde5f3a6fe336563401fb4b522a7" category="list-text">통합 제어 평면을 사용하여 여러 Kubernetes 클러스터에서 애플리케이션을 검색, 관리 및 보호합니다.</block>
+  <block id="8671fb87efe354c05f9373edb6889d96" category="list-text">Kubernetes 애플리케이션의 백업 및 복구를 위한 데이터 이동 작업을 NetApp ONTAP 으로 오프로드합니다.</block>
+  <block id="be6ced50bfb2300cc42f3b12987b1359" category="list-text">로컬 및 개체 스토리지 기반 애플리케이션 백업을 조율합니다.</block>
+  <block id="780f81400ecdaedf5afa343aa9bd9abf" category="list-text">모든 Kubernetes 클러스터에 전체 애플리케이션과 개별 리소스를 백업하고 복원합니다.</block>
+  <block id="a914111953cd6ee9c63146474d7745de" category="list-text">Kubernetes에서 실행되는 컨테이너와 가상 머신을 사용합니다.</block>
+  <block id="87418d35e5df78aab70f2540a73bdaf6" category="list-text">실행 후크와 템플릿을 사용하여 애플리케이션과 일관된 백업을 만듭니다.</block>
+  <block id="0222d44a84ea3563d85d453d801f6427" category="list-text">*자격 증명 위치 선택* 섹션에서 자격 증명이 있는 위치를 선택한 다음 자격 증명을 연결하는 방법을 선택합니다.</block>
+  <block id="f3ade6a9606e111612431ac1a3ff68e2" category="list-text">자격 증명 정보를 입력하세요. 정보는 선택한 백업 대상 유형과 자격 증명 위치에 따라 달라집니다.</block>
+  <block id="cce6a1d73324f1a96e9e21a346062b73" category="doc">BlueXP backup and recovery 에서 Kubernetes 워크로드를 알아보세요</block>
+  <block id="70f7f628eae3e8e1ca1f6342c3a27f75" category="paragraph">BlueXP backup and recovery 서비스를 사용하려면 먼저 Kubernetes 워크로드를 검색해야 합니다.</block>
+  <block id="f0338e38e7978ec30d1f5eb9b845e843" category="section-title">Kubernetes 워크로드를 알아보세요</block>
+  <block id="c988aaf24f6241e980dd65e46002172d" category="paragraph">백업 및 복구 인벤토리에서 사용자 환경에서 실행 중인 Kubernetes 워크로드를 검색할 수 있습니다. 워크로드를 검색하면 Kubernetes 클러스터가 BlueXP backup and recovery 에 추가되어 클러스터에 애플리케이션을 추가하고 클러스터에서 호스팅되는 리소스를 보호할 수 있습니다.</block>
+  <block id="4420c8b02efc1be4f7fbf08201ed7b57" category="list-text">처음으로 Kubernetes 워크로드를 검색하는 경우 BlueXP backup and recovery 에서 Kubernetes 워크로드 유형 아래에서 *검색 및 관리*를 선택합니다.</block>
+  <block id="8b317f478daa269f84cd6cdd4931b972" category="list-text">이미 Kubernetes 워크로드를 검색한 경우 BlueXP backup and recovery 에서 *인벤토리* &gt; *워크로드*를 선택한 다음 *리소스 검색*을 선택합니다.</block>
+  <block id="e7c444e4a1d2f156d71a907145c8a598" category="list-text">*Kubernetes* 워크로드 유형을 선택하세요.</block>
+  <block id="96c35fcba67cbf6710845bcca4668cc2" category="list-text">클러스터 이름을 입력하고 클러스터와 함께 사용할 커넥터를 선택하세요.</block>
+  <block id="39b0136210d9abd099b81781cc0a17db" category="list-text">표시되는 명령줄 지침을 따르세요.</block>
+  <block id="3b47301a2201ba1175e2a109a103127b" category="list-text">Trident 보호 네임스페이스 만들기</block>
+  <block id="ed6eabebedff09350cdabab556887c62" category="list-text">쿠버네티스 비밀을 생성하세요</block>
+  <block id="6c27e11d1144953d7877449d5adc966d" category="list-text">Helm 저장소 추가</block>
+  <block id="c1a343fd7e28cea1253758e1b64a4d0d" category="list-text">Trident Protect 및 Trident Protect 커넥터 설치</block>
+  <block id="6534a731be9c6bfffa9e33daa4b11427" category="paragraph">이러한 단계를 거치면 BlueXP backup and recovery 클러스터와 상호 작용할 수 있습니다.</block>
+  <block id="9bac5e7d53677c1fdcf7d275fd58ed60" category="list-text">모든 단계를 완료한 후 *검색*을 선택하세요.</block>
+  <block id="6b3946603d5588826f1cd3f2695b8542" category="paragraph">클러스터가 인벤토리에 추가됩니다.</block>
+  <block id="95f06f6ac101b19d86ae2a17fb3eb848" category="list-text">연관된 Kubernetes 워크로드에서 *보기*를 선택하면 해당 워크로드에 대한 애플리케이션, 클러스터 및 네임스페이스 목록을 볼 수 있습니다.</block>
+  <block id="f9fa15d7e7327a0679589b0b4bf63d45" category="paragraph">BlueXP backup and recovery 보드를 표시하려면 다음 단계를 따르세요.</block>
+  <block id="0023e6c28000b2b0e540612bd4511db3" category="list-text">상단 메뉴에서 *대시보드*를 선택하세요.</block>
+  <block id="2388fac091ce6515773e162ce2488e2f" category="paragraph">BlueXP backup and recovery 에서 쿠버네티스 워크로드를 관리하면 쿠버네티스 클러스터와 애플리케이션을 한곳에서 검색, 관리 및 보호할 수 있습니다. 쿠버네티스 클러스터에 호스팅된 리소스와 애플리케이션을 관리할 수 있습니다. 또한, 단일 인터페이스를 사용하여 쿠버네티스 워크로드에 대한 보호 정책을 생성하고 연결할 수 있습니다.</block>
+  <block id="d1b6f4df1f42df470c1bfa384687e106" category="paragraph">다음 다이어그램은 Kubernetes 워크로드에 대한 백업 및 복구의 구성 요소와 기본 아키텍처를 보여주며, 다양한 데이터 복사본을 어떻게 다양한 위치에 저장할 수 있는지 보여줍니다.</block>
+  <block id="47cae08dce34f06a5f1a2add5c4d92c4" category="inline-image-macro">Kubernetes 워크로드에 대한 백업 및 복구 아키텍처 다이어그램</block>
+  <block id="2c3fb17cb3de300689b53969785defa5" category="paragraph"><block ref="2c3fb17cb3de300689b53969785defa5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="aeb2143cef16a3403bebfefb50c96248" category="paragraph">BlueXP backup and recovery Kubernetes 워크로드 관리에 다음과 같은 이점을 제공합니다.</block>
+  <block id="2f2ca5d33d51345d8cec8b57e1d131d5" category="list-text">여러 쿠버네티스 클러스터에서 실행되는 애플리케이션을 보호하기 위한 단일 제어 평면입니다. 이러한 애플리케이션에는 쿠버네티스 클러스터에서 실행되는 컨테이너 또는 가상 머신이 포함될 수 있습니다.</block>
+  <block id="ed200d27f38aee4afdff8b4619cdf2ae" category="list-text">NetApp SnapMirror 와의 기본 통합을 통해 모든 백업 및 복구 워크플로에 대한 스토리지 오프로드 기능을 제공합니다.</block>
+  <block id="1a46229aa405bed39558957f4cb25619" category="list-text">Kubernetes 애플리케이션에 대한 증분적 영구 백업은 복구 지점 목표(RPO)와 복구 시간 목표(RTO)를 낮추는 데 도움이 됩니다.</block>
+  <block id="0022038e456ea404ab796f4b75f7e6ea" category="list-text"><block ref="1aaecb747e58be0aa9e10461fda65c97" category="inline-link-macro-rx"></block> .</block>
+  <block id="d0b5709d97bbe5098abd93c7e694cb77" category="list-text"><block ref="3e35e8d4173c71043e7b66d0d706f7de" category="inline-link-macro-rx"></block> .</block>
+  <block id="1af35924e4dcf46a6e48f4acc678dff6" category="list-text"><block ref="7769ce529a2e3eb709e04d840fce1c3b" category="inline-link-macro-rx"></block> .</block>
+  <block id="52740a2d44d8a6ec2b73bcb636dfbd8b" category="list-text">BlueXP 에서 *보호* &gt; *백업 및 복구*로 이동합니다.</block>
+  <block id="157e2474b5e10c9143fb5843d68a82e1" category="list-text">원하는 후크 유형을 선택하세요. 예를 들어, 복원 후 후크는 복원 작업이 완료된 후 실행됩니다.</block>
+  <block id="fba2fea1f9e53916416ed24e92b83509" category="summary">BlueXP backup and recovery 사용하면 Kubernetes 애플리케이션과 관련 리소스의 보호를 해제하고 삭제할 수 있습니다.</block>
+  <block id="e7841ceb28d947e1589702d3cc8fc671" category="paragraph">더 이상 보호하고 싶지 않은 애플리케이션의 보호를 해제할 수 있습니다. 애플리케이션 보호를 해제하면 BlueXP backup and recovery 해당 애플리케이션의 보호를 중단하지만, 관련된 모든 백업과 스냅샷은 그대로 유지합니다.</block>
+  <block id="4db291743c7cb716f5e5cc7be76bce50" category="list-text">Kubernetes 인스턴스를 선택하고 *보기*를 선택하여 해당 인스턴스와 연결된 리소스를 확인합니다.</block>
+  <block id="404131d2e90ac877b08c54d35e0c976e" category="list-text">*응용 프로그램* 탭을 선택하세요.</block>
+  <block id="4e37736ae1844ec4d0132bb364554433" category="paragraph">더 이상 필요하지 않은 애플리케이션은 삭제할 수 있습니다. 애플리케이션을 삭제하면 BlueXP backup and recovery 해당 애플리케이션 보호를 중단하고 관련된 모든 백업과 스냅샷을 삭제합니다.</block>
+  <block id="ef50a59af25c08fa4e4c545948dd656e" category="list-text">*스냅샷 및 백업 삭제*를 활성화하면 애플리케이션의 모든 스냅샷과 백업이 제거됩니다.</block>
+  <block id="c62ed3fc24c6a092f0236d0ce18f8adf" category="admonition">이러한 스냅샷과 백업을 사용하여 더 이상 애플리케이션을 복원할 수 없습니다.</block>
+  <block id="52a963c135feb74f5fa42fa2a2e78c47" category="admonition">Kubernetes 클러스터를 검색하려면 다음을 참조하세요. <block ref="0ea93fbc4698ff0eba11bdb2bfa8224d" category="inline-link-macro-rx"></block> .</block>
+  <block id="9d5bb9ed8ea1b49d007ac97a59fc2f73" category="list-text">클러스터 이름을 필요에 따라 변경하세요. 클러스터 이름은 검색 과정에서 Helm 명령에 사용한 이름과 일치해야 합니다.</block>
+  <block id="17becfe4990286d1ec69c6fa596d27d3" category="paragraph">BlueXP backup and recovery 사용하면 kubeconfig 파일을 생성하고 업로드하지 않고도 Kubernetes 클러스터를 쉽게 검색할 수 있습니다. BlueXP 사용자 인터페이스에서 복사한 간단한 명령을 사용하여 Kubernetes 클러스터를 연결하고 필요한 소프트웨어를 설치할 수 있습니다.</block>
+  <block id="e2d84a068107d6310a638f342af1a416" category="inline-link-macro">Kubernetes 워크로드 검색</block>
+  <block id="0ff42294892cbc24c39a0f81d88f902b" category="paragraph">Kubernetes 애플리케이션을 추가하고 보호하려면 다음이 필요합니다. <block ref="69f5fa0b5f42b753171e9fa8fbef9c66" category="inline-link-macro-rx"></block> .</block>
+  <block id="1bce142d5bcf9869d1f052a522fa5822" category="list-text">선택적으로 다음 필드 중 하나를 선택하여 보호하려는 리소스를 검색하세요.</block>
+  <block id="dc997bda771b80d1666f7d07ffd6b7d7" category="list-text">선택적으로, 클러스터 수준에서 범위가 지정된 리소스를 선택하려면 *클러스터 범위 리소스*를 선택합니다. 이 리소스를 포함하면 애플리케이션을 생성할 때 해당 리소스가 애플리케이션에 추가됩니다.</block>
+  <block id="812f9cbafb4aa2378e7470b20baa1fef" category="list-text">선택적으로 *검색*을 선택하여 검색 기준에 따라 리소스를 찾으세요.</block>
+  <block id="cd052ad0ede3d8d23a3b065ef26168d8" category="admonition">BlueXP 검색 매개변수나 결과를 저장하지 않습니다. 매개변수는 애플리케이션에 포함될 수 있는 리소스를 선택한 Kubernetes 클러스터에서 검색하는 데 사용됩니다.</block>
+  <block id="375665cdd163819cd9ddcb1def13c5da" category="list-text">선택적으로, *정책* 영역에서 기존 보호 정책을 선택하여 애플리케이션을 보호하거나 새 정책을 만들 수 있습니다. 정책을 선택하지 않으면 애플리케이션은 보호 정책 없이 생성됩니다. 나중에 정책을 추가할 수 있습니다.</block>
+  <block id="6bd8ef6649ea59b964673233a7cdd855" category="paragraph">BlueXP 설정에 따라 애플리케이션 보호를 활성화하며, 백업 및 복구의 *모니터링* 영역에서 진행 상황을 모니터링할 수 있습니다. 애플리케이션 보호를 활성화하는 즉시 BlueXP 애플리케이션의 전체 백업을 생성합니다. 이후 증분 백업은 애플리케이션과 관련된 보호 정책에 정의된 일정에 따라 생성됩니다.</block>
+  <block id="be9a2f94b85d3bc8821f79138f4c1385" category="paragraph">BlueXP 애플리케이션 백업을 생성하고 백업 및 복구의 *모니터링* 영역에 진행 상황을 표시합니다. 백업은 애플리케이션과 연결된 보호 정책을 기반으로 생성됩니다.</block>
+  <block id="5a5da37e66cddefa275e61455c6ce599" category="paragraph">BlueXP backup and recovery 사용하면 보호 정책으로 보호한 애플리케이션을 복원할 수 있습니다. 애플리케이션을 복원하려면 애플리케이션에 최소 하나의 복원 지점이 있어야 합니다. 복원 지점은 로컬 스냅샷 또는 개체 저장소 백업(또는 둘 다)으로 구성됩니다. 로컬, 보조 또는 개체 저장소 아카이브를 사용하여 애플리케이션을 복원할 수 있습니다.</block>
+  <block id="0b829a26d220bb63e030d1042081a086" category="list-text">복원할 소스(로컬 또는 개체 저장소)를 선택합니다.</block>
+  <block id="f01f0a18d4bc038c4ed2929f4450ed7d" category="list-text">복원 대상 네임스페이스를 선택합니다.</block>
+  <block id="75e31fe436b541e95871c54827070e6e" category="paragraph">원래 네임스페이스로 복원하거나 새 네임스페이스로 복원할 수 있습니다.</block>
+  <block id="a9f292136fbf924f6d8d675318db6235" category="admonition">표시된 리소스는 현재 클러스터에 존재하는 리소스입니다.</block>
+  <block id="12c3c958b266fff57134abb1c9649419" category="list-text">선택적으로, 다른 스토리지 클래스로 복원하도록 선택한 경우 각 소스 스토리지 클래스와 일치하는 대상 스토리지 클래스를 선택합니다.</block>
+  <block id="cb1b8938f12c99c7787423a78f4db357" category="list-text">Kubernetes 워크로드(미리 보기):</block>
+  <block id="1c1c6b4c5003945f6d28242d24286ee6" category="list-text">Kubernetes 애플리케이션과 리소스를 한 곳에서 관리하고 보호하세요.</block>
+  <block id="3f06fb8fe2ecccdacfaa2644488d935d" category="list-text">보호 정책을 사용하여 증분 백업을 구성합니다.</block>
+  <block id="116fc6c4cddb8e42e7260e6817cd901f" category="list-text">동일하거나 다른 클러스터와 네임스페이스에 애플리케이션과 리소스를 복원합니다.</block>
+  <block id="f9e2b15491897c12214f857779daa042" category="list-text">BlueXP 사용자는 Microsoft SQL Server 및 Kubernetes 워크로드에서 작업을 수행하는 데 필요한 역할과 권한을 보유해야 합니다. 리소스를 검색하려면 BlueXP backup and recovery 역할(Super admin)이 있어야 합니다. 자세한 내용은 <block ref="a05625c69ff931c9860060259f76b925" category="inline-link-macro-rx"></block> BlueXP backup and recovery 작업을 수행하는 데 필요한 역할과 권한에 대한 자세한 내용은 다음을 참조하세요.</block>
+  <block id="fdbad3e808e9a1c02fc7bb3048776f74" category="section-title">Kubernetes 애플리케이션을 보호하기 위해</block>
+  <block id="35efe147e51e11d3e82b92163214c36a" category="paragraph">Kubernetes 리소스를 검색하고 Kubernetes 애플리케이션을 보호하려면 특정 요구 사항이 필요합니다.</block>
+  <block id="b4c31e66ff0b9146f1e9eb96caaa088b" category="paragraph">BlueXP 요구 사항은 다음을 참조하세요. <block ref="254e85327e361b35a0db5eec424af630" category="inline-xref-macro-rx"></block> .</block>
+  <block id="4894ae84725aa8a3354a8774b1566f5f" category="list-text">기본 ONTAP 시스템(ONTAP 9.16.1 이상)</block>
+  <block id="806a86b605f4d90fb902dc0738b93a29" category="list-text">Kubernetes 클러스터 - 지원되는 Kubernetes 배포판과 버전은 다음과 같습니다.</block>
+  <block id="7cc1edf2116d94e97b8f4a69079de132" category="list-text">Anthos On-Prem(VMware) 및 Anthos on bare metal 1.16</block>
+  <block id="f39d8c359b3284c30097b65ae4e0dccf" category="list-text">쿠버네티스 1.27 - 1.33</block>
+  <block id="d858eab1cb0b74aa1e6d052d7c06bd76" category="list-text">오픈시프트 4.10 - 4.18</block>
+  <block id="42113cf11e30b764619d3a98db65262d" category="list-text">Rancher Kubernetes Engine 2(RKE2) v1.26.7+rke2r1, v1.28.5+rke2r1</block>
+  <block id="59aaea4a07522d3cb111c0d446b7e7e3" category="list-text">NetApp Trident 24.10 이상</block>
+  <block id="f186f228bc71cb57a140bcc20f23c216" category="list-text">NetApp Trident Protect 25.07 이상(Kubernetes 워크로드 검색 중 설치됨)</block>
+  <block id="2c2fbc0a1685b20c95a5f489ce3868b3" category="list-text">NetApp Trident Protect Connector 25.07 이상(Kubernetes 워크로드 검색 중 설치됨)</block>
+  <block id="362363dccd2cc68b02c87c4b9e577f91" category="list-text">Kubernetes 클러스터, Trident Protect Connector 및 Trident Protect 프록시 간의 아웃바운드 방향에서 TCP 포트 443이 필터링되지 않았는지 확인하세요.</block>
+  <block id="bbbc9b55f08bfe80f146b5207bdb7728" category="paragraph">NetApp BlueXP 와 클라우드 서비스에 대한 다양한 지원을 제공합니다. 지식 베이스(KB) 문서 및 커뮤니티 포럼 등 다양한 무료 셀프 지원 옵션을 연중무휴 24시간 이용하실 수 있습니다. 지원 등록 시 웹 티켓팅을 통한 원격 기술 지원이 제공됩니다.</block>
+  <block id="759d32287efdf88cd8ac71dccc0ecf8d" category="inline-image-macro">계정 일련번호, 녹색 확인란, 지원 등록이라는 텍스트가 표시된 스크린샷입니다.</block>
+  <block id="4c441b388bebcddf8c08fb782095b864" category="paragraph"><block ref="4c441b388bebcddf8c08fb782095b864" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="67c66b3b8df7b2dee0354dd9f9fcec17" category="section-title">2025년 7월 28일</block>
+  <block id="60c0c463b8839d0f2c5e5cea8fa728ad" category="sidebar">Kubernetes 워크로드 보호(미리 보기)</block>
+  <block id="c3c3199204503d3bbd5d4dce7eabf238" category="sidebar">Kubernetes 워크로드 보호 개요</block>
+  <block id="3186e7c44dc909386a0204716ffc46f6" category="sidebar">Kubernetes 워크로드에 대한 실행 후크 템플릿 관리</block>
 </blocks>

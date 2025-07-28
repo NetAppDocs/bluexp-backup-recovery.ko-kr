@@ -133,6 +133,22 @@ sidebar:
         url: "/prev-vmware-manage.html"
       - title: 가상 머신 데이터 및 데이터 저장소 복원
         url: "/prev-vmware-restore.html"
+    - title: Kubernetes 워크로드 보호(미리 보기)
+      entries:
+      - title: Kubernetes 워크로드 보호 개요
+        url: "/br-use-kubernetes-protect-overview.html"
+      - title: Kubernetes 워크로드를 알아보세요
+        url: br-start-discover-kubernetes.html
+      - title: Kubernetes 애플리케이션 추가 및 보호
+        url: "/br-use-protect-kubernetes-applications.html"
+      - title: Kubernetes 애플리케이션 복원
+        url: "/br-use-restore-kubernetes-applications.html"
+      - title: Kubernetes 클러스터 관리
+        url: "/br-use-manage-kubernetes-clusters.html"
+      - title: Kubernetes 애플리케이션 관리
+        url: "/br-use-manage-kubernetes-applications.html"
+      - title: Kubernetes 워크로드에 대한 실행 후크 템플릿 관리
+        url: "/br-use-manage-execution-hook-templates.html"
     - title: 작업을 모니터링합니다
       url: "/br-use-monitor-tasks.html"
     - title: BlueXP 백업 및 복구를 다시 시작합니다
