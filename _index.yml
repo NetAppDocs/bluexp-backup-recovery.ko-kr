@@ -59,7 +59,7 @@ indexpage:
     - title: Kubernetes 워크로드를 알아보세요
       url: br-start-discover-kubernetes.html
     - title: Kubernetes 애플리케이션 추가 및 보호
-      url: link:br-use-protect-kubernetes-applications.html
+      url: br-use-protect-kubernetes-applications.html
     - title: Kubernetes 클러스터 관리
       url: br-use-manage-kubernetes-clusters.html
     - title: Kubernetes 애플리케이션 관리
