@@ -192,6 +192,7 @@ GCP를 사용하면 NetApp 에서 비공개 제안을 요청한 다음 BlueXP ba
 * ONTAP 볼륨
 * 물리적, VMware Virtual Machine File System(VMFS) 및 VMware Virtual Machine Disk(VMDK) NFS(미리 보기)를 위한 Microsoft SQL Server 인스턴스 및 데이터베이스
 * VMware 데이터 저장소
+* Kubernetes 워크로드(미리 보기)
 
 
 .지원되는 작업 환경
