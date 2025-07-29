@@ -32,7 +32,7 @@ NOTE: 이 문서는 기술 미리보기로 제공됩니다. 미리보기 기간 
 
 Kubernetes 워크로드 관리와 관련된 다음 작업을 수행할 수 있습니다.
 
-* link:br-start-discover.html#discover-kubernetes-workloads["Kubernetes 워크로드를 알아보세요"] .
+* link:br-start-discover-kubernetes.html["Kubernetes 워크로드를 알아보세요"] .
 * link:br-use-manage-kubernetes-clusters.html["Kubernetes 클러스터 관리"]..
 * link:br-use-protect-kubernetes-applications.html["Kubernetes 애플리케이션 추가 및 보호"] .
 * link:br-use-manage-kubernetes-applications.html["Kubernetes 애플리케이션 관리"]..
