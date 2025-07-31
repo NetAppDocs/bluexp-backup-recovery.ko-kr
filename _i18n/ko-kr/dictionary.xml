@@ -4592,4 +4592,74 @@ ifdef::AWS[]</block>
   <block id="f4270282e09abd3774ba339dc49af208" category="paragraph">Kubernetes 워크로드 보호에 대한 자세한 내용은 다음을 참조하세요. <block ref="44b634c6507d9116150094fb69849fd2" category="inline-link-rx"></block> .</block>
   <block id="d30235bcb420e82027cadb3cffab450f" category="list-text"><block ref="bdf340f843cf54500673f62df22d5070" category="inline-link-macro-rx"></block> .</block>
   <block id="339f6d69f0298e3d4bbd943ba3211c6c" category="list-text">Kubernetes 워크로드(미리 보기)</block>
+  <block id="9c288f5720b39b68330ff6558f4d728b" category="inline-link">BlueXP backup and recovery 위한 BlueXP 자동화</block>
+  <block id="b0d36ddf3864894974cfcf7f668e9b9c" category="paragraph">각 BlueXP backup and recovery API에 대한 설명서는 다음에서 제공됩니다.<block ref="d997d711dd0ca8a2419efc218eebd515" category="inline-link-rx"></block> .</block>
+  <block id="92ab15f0eb1b97b8c4bdb14a10948af8" category="inline-link">서비스 액세스 토큰 생성</block>
+  <block id="7ee1b8532fd572ee3c5a1cd48ff05db9" category="admonition">서비스 계정을 사용하는 경우 사용자 토큰 대신 서비스 액세스 토큰을 사용해야 합니다.  "client_id" 값("Mu0V1ywgYteI6w1MbD15fKfVIUrNXGWC")은 고정된 값이므로 변경할 수 없습니다.  이 경우에는 다음 지침을 따르세요.<block ref="baaa234cb07675a6b3437f1c7177f86d" category="inline-link-rx"></block> .</block>
+  <block id="0ad47815ac126d3e59945dd94620559b" category="summary">인터넷 접속이 없는 사이트("비공개 모드"라고 함)에서 BlueXP backup and recovery 사용하는 경우, BlueXP backup and recovery 구성 데이터는 백업이 저장되는 StorageGRID 또는 ONTAP S3 버킷에 백업됩니다.  나중에 BlueXP Connector 호스트 시스템에 문제가 발생하면 새로운 Connector를 배포하고 중요한 BlueXP backup and recovery 데이터를 복원할 수 있습니다.</block>
+  <block id="1590a700aeef97b74c78e0edddc666d6" category="doc">다크 사이트에서 BlueXP backup and recovery 구성 데이터 복원</block>
+  <block id="b60143d8607e2a12a97d5dc98902b3a3" category="paragraph">인터넷 접속이 없는 사이트(개인 모드)에서 BlueXP backup and recovery 사용하는 경우, BlueXP backup and recovery 구성 데이터는 백업이 저장되는 StorageGRID 또는 ONTAP S3 버킷에 백업됩니다.  BlueXP Connector 호스트 시스템에 문제가 있는 경우 새로운 Connector를 배포하고 중요한 BlueXP backup and recovery 데이터를 복원할 수 있습니다.</block>
+  <block id="701ba6e125e8ce791098165f107eb472" category="admonition">이 절차는 ONTAP 볼륨 데이터에만 적용됩니다.</block>
+  <block id="400d95f0927e7eaac4a93498115f8b4f" category="paragraph">BlueXP 커넥터가 클라우드 공급업체나 인터넷 접속이 가능한 자체 호스트 시스템에 배포된 SaaS 환경에서 BlueXP backup and recovery 사용하면 모든 중요한 BlueXP backup and recovery 구성 데이터가 클라우드에 백업되고 보호됩니다.  커넥터에 문제가 있는 경우 새 커넥터를 만들고 작업 환경을 추가하면 백업 세부 정보가 자동으로 복원됩니다.</block>
+  <block id="28f81c5bbd7730901f36546c0e51e06f" category="paragraph">백업되는 데이터에는 두 가지 유형이 있습니다.</block>
+  <block id="3f90954724de2ab33270c2e29ef44d4c" category="list-text">BlueXP backup and recovery 데이터베이스 - 모든 볼륨, 백업 파일, 백업 정책 및 구성 정보 목록이 포함되어 있습니다.</block>
+  <block id="ae429398e7a8cba2d2c57d308c8ed88a" category="list-text">색인된 카탈로그 파일 - 볼륨 데이터를 복원할 때 검색을 매우 빠르고 효율적으로 수행할 수 있는 검색 및 복원 기능에 사용되는 자세한 색인이 포함되어 있습니다.</block>
+  <block id="c9cfba3160309eb4416746c049e4b9da" category="paragraph">이 데이터는 하루에 한 번 자정에 백업되며, 각 파일의 최대 7개 사본이 보관됩니다.  커넥터가 여러 개의 온프레미스 ONTAP 작업 환경을 관리하는 경우 BlueXP backup and recovery 파일은 먼저 활성화된 작업 환경의 버킷에 위치하게 됩니다.</block>
+  <block id="33cc4fba89a0e27990f9826b52a31440" category="admonition">BlueXP backup and recovery 데이터베이스나 색인된 카탈로그 파일에는 볼륨 데이터가 포함되지 않습니다.</block>
+  <block id="7aa13416e899895bea151695a08fc22d" category="section-title">BlueXP backup and recovery 데이터를 새 BlueXP 커넥터로 복원합니다.</block>
+  <block id="11c11cb03c79f4af018caa66bf0c66d4" category="paragraph">온프레미스 BlueXP Connector에 심각한 오류가 발생한 경우 새 Connector를 설치한 다음 BlueXP backup and recovery 데이터를 새 Connector로 복원해야 합니다.</block>
+  <block id="6c9913da2722f6c96e97b9d6aa37bb46" category="paragraph">BlueXP backup and recovery 시스템을 작동 상태로 되돌리려면 다음 작업을 수행해야 합니다.</block>
+  <block id="49ec960387a7762f70c9454eff39ff67" category="list-text">새로운 BlueXP 커넥터 설치</block>
+  <block id="6b7f0194ee0161c1ec6ef481e87fdaa2" category="list-text">BlueXP backup and recovery 데이터베이스 복원</block>
+  <block id="bac8f03e2f29846dbab5b2b784213272" category="list-text">인덱싱된 카탈로그 파일 복원</block>
+  <block id="f7610e9182682c46b21a456bb9f88633" category="list-text">온프레미스 ONTAP 시스템과 StorageGRID 시스템을 모두 BlueXP UI로 다시 검색하세요.</block>
+  <block id="f19661624edbf73361ae75955e672733" category="paragraph">시스템이 다시 정상적으로 작동하는지 확인한 후에는 새로운 백업 파일을 만드는 것이 좋습니다.</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">필요한 것</block>
+  <block id="e4cf85fe9c170bcb24ec06be023db892" category="paragraph">백업 파일이 저장되어 있는 StorageGRID 또는 ONTAP S3 버킷에서 최신 데이터베이스 및 인덱스 백업에 액세스해야 합니다.</block>
+  <block id="e53202674690c06ddcfdb1f7eb32a51c" category="list-text">BlueXP backup and recovery MySQL 데이터베이스 파일</block>
+  <block id="0d106b3c1ec4b5f2dce1ea9aa708a3db" category="paragraph">이 파일은 버킷의 다음 위치에 있습니다.<block ref="004f71688c8fd4622d305c92c30ed7bf" prefix=" " category="inline-code"></block> , 그리고 그것은 이름이 붙습니다<block ref="76dfdaa4fa2f1fa24f016f6559440652" prefix=" " category="inline-code"></block> .</block>
+  <block id="9187ca15364232be9ebf6b59d5bc6421" category="list-text">색인된 카탈로그 백업 zip 파일</block>
+  <block id="a4981f0083fe431764b930206324bfe8" category="paragraph">이 파일은 버킷의 다음 위치에 있습니다.<block ref="9abc3fd112ebf9d8d228e5c5b3b930a4" prefix=" " category="inline-code"></block> , 그리고 그것은 이름이 붙습니다<block ref="5f3198716099b7e0c9df490b9dd7b132" prefix=" " category="inline-code"></block> .</block>
+  <block id="f0f8593cf8d423b69e3ba1407f6f5b05" category="section-title">새로운 온프레미스 Linux 호스트에 새 커넥터 설치</block>
+  <block id="65432ae2b80d2de48c0eff9f34726b87" category="inline-link">백업 데이터베이스를 복원한 후 Connector 소프트웨어를 최신 버전으로 업그레이드합니다.</block>
+  <block id="a454364b080d416ad203233987bc1148" category="paragraph">새로운 BlueXP Connector를 설치할 때는 원래 Connector에 설치했던 것과 동일한 소프트웨어 릴리스를 다운로드해야 합니다.  BlueXP backup and recovery 데이터베이스 구조가 주기적으로 변경되면 최신 소프트웨어 릴리스가 원래 데이터베이스 백업과 호환되지 않을 수 있습니다.  당신은 할 수 있습니다<block ref="2e0a24ee8438c92516f1c39f0bf156f8" category="inline-link-rx"></block> .</block>
+  <block id="fb91cab4ff80a23255e3962dd363d180" category="inline-link">새로운 온프레미스 Linux 호스트에 BlueXP 커넥터 설치</block>
+  <block id="6c962f0e820a4789f1eba2c1a38f944d" category="list-text"><block ref="6c962f0e820a4789f1eba2c1a38f944d" category="inline-link-rx"></block></block>
+  <block id="ecbcbb16fdbff1b3b59d0639b270e056" category="list-text">방금 생성한 관리자 사용자 자격 증명을 사용하여 BlueXP 에 로그인합니다.</block>
+  <block id="b47ed0a876023d6bae71fb57f4671fc8" category="list-text">백업 위치에서 MySQL 백업을 새 커넥터 호스트로 복사합니다.  아래에서는 "CBS_DB_Backup_23_05_2023.sql"이라는 예제 파일 이름을 사용하겠습니다.</block>
+  <block id="2bd2b4226296570c863270e08d511da0" category="list-text">Docker 또는 Podman 컨테이너를 사용하는지에 따라 다음 명령 중 하나를 사용하여 백업을 MySQL Docker 컨테이너에 복사합니다.</block>
+  <block id="4b049f120edc0f4092d8d8e236ea964b" category="list-text">Docker 또는 Podman 컨테이너를 사용하는지에 따라 다음 명령 중 하나를 사용하여 MySQL 컨테이너 셸을 입력합니다.</block>
+  <block id="ea88528cf92a2583181519ef77cd0928" category="list-text">컨테이너 셸에서 "env"를 배포합니다.</block>
+  <block id="fb4d2049eb8a30a41f47794ab189550a" category="list-text">MySQL DB 비밀번호가 필요하므로 "MYSQL_ROOT_PASSWORD" 키 값을 복사합니다.</block>
+  <block id="a68527cebf1aaeae64bda2645985b661" category="list-text">다음 명령을 사용하여 BlueXP backup and recovery MySQL DB를 복원합니다.</block>
+  <block id="391b3817ffe9fe659a3a443a7fba86f2" category="list-text">다음 SQL 명령을 사용하여 BlueXP backup and recovery MySQL DB가 올바르게 복원되었는지 확인하세요.</block>
+  <block id="1a411806f1f54597b7259137d2e753db" category="paragraph">비밀번호를 입력하세요.</block>
+  <block id="3ec8f556a760c1ea438f0c8012517d09" category="paragraph">표시된 볼륨이 원래 환경에 있던 볼륨과 동일한지 확인하세요.</block>
+  <block id="56dd14a7bf28acd20f0a0435a86d17e0" category="list-text">백업 위치에서 Indexed Catalog 백업 zip 파일(예시 파일 이름 "Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip"을 사용함)을 "/opt/application/netapp/cbs" 폴더에 있는 새 커넥터 호스트로 복사합니다.</block>
+  <block id="39ba61f148a69dbb1215b6b10c98b11a" category="list-text">다음 명령을 사용하여 "Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip" 파일의 압축을 풉니다.</block>
+  <block id="3b3267745861675e9a5e88b689b4cda8" category="list-text">*ls* 명령을 실행하여 "catalogdb1" 폴더가 생성되었고 그 아래에 "changes"와 "snapshots"라는 하위 폴더가 있는지 확인합니다.</block>
+  <block id="47088be6cbcb439bd7241ec72edf3a91" category="section-title">ONTAP 클러스터와 StorageGRID 시스템을 알아보세요</block>
+  <block id="202fec1254d856dde5dee6e53f5eb9e9" category="inline-link">온프레미스 ONTAP 작업 환경을 모두 알아보세요</block>
+  <block id="b805aeaea109186b2d372f733c8143b0" category="list-text"><block ref="9b634f22874d44b1e001e536ff14de06" category="inline-link-rx"></block>이전 환경에서 사용 가능했던 기능입니다.  여기에는 S3 서버로 사용한 ONTAP 시스템이 포함됩니다.</block>
+  <block id="f8fe3d533b3c8ec77c886cdbfcbd8c60" category="inline-link">StorageGRID 시스템을 알아보세요</block>
+  <block id="9859429ce021a771d55011bbad61663d" category="list-text"><block ref="95020d92addc538671ad8a553222768a" category="inline-link-rx"></block> .</block>
+  <block id="8a817b57889a6e642ad7fb06e7b26c80" category="section-title">StorageGRID 환경 세부 정보 설정</block>
+  <block id="95405ad3ad814456093255e6d36ee69e" category="inline-link">BlueXP API</block>
+  <block id="dd356e8ea63119f95e3666d6db68f47e" category="paragraph">원래 커넥터 설정에서 설정된 대로 ONTAP 작업 환경과 연결된 StorageGRID 시스템의 세부 정보를 추가합니다.<block ref="84b7c1fcfbca071b9004578261b65308" category="inline-link-rx"></block> .</block>
+  <block id="da2ba8762d0dcb78945a22c9a375fffa" category="inline-link">DarkSite 클라우드 백업: MySQL 및 인덱스 카탈로그 백업 및 복원</block>
+  <block id="bb10a63044b830cc42091d93b78fd668" category="paragraph">다음 정보는 BlueXP 3.9.xx부터 개인 모드 설치에 적용됩니다.  이전 버전의 경우 다음 절차를 따르세요.<block ref="2da286ce66fc5078574abb0f7864085c" category="inline-link-rx"></block> .</block>
+  <block id="241380d8d42b823d8bd7c25c9fc3014f" category="paragraph">StorageGRID 에 데이터를 백업하는 각 시스템에 대해 이러한 단계를 수행해야 합니다.</block>
+  <block id="3f1b9decb18d57a001f26c7273adeddc" category="list-text">다음 oauth/token API를 사용하여 권한 부여 토큰을 추출합니다.</block>
+  <block id="cd6c5272ababe8075a9145908c571172" category="paragraph">IP 주소, 사용자 이름, 비밀번호는 사용자 지정 값이지만 계정 이름은 그렇지 않습니다.  계정 이름은 항상 "account-DARKSITE1"입니다.  또한, 사용자 이름은 이메일 형식의 이름을 사용해야 합니다.</block>
+  <block id="f2b2dd8a7061a4f2836de5feda40a45e" category="paragraph">이 API는 다음과 같은 응답을 반환합니다.  아래와 같이 인증 토큰을 검색할 수 있습니다.</block>
+  <block id="74e96d8b9d4abdf183199553dd665e53" category="list-text">tenancy/external/resource API를 사용하여 작업 환경 ID와 X-Agent-Id를 추출합니다.</block>
+  <block id="69473e9fe37da40f59b6a4abb9d0b124" category="paragraph">이 API는 다음과 같은 응답을 반환합니다.  "resourceIdentifier" 아래의 값은 _WorkingEnvironment Id_를 나타내고 "agentId" 아래의 값은 _x-agent-id_를 나타냅니다.</block>
+  <block id="2decbd35e1c4f4abc73df06a5256970a" category="list-text">작업 환경과 관련된 StorageGRID 시스템의 세부 정보로 BlueXP backup and recovery 데이터베이스를 업데이트합니다.  아래와 같이 StorageGRID 의 정규화된 도메인 이름, 액세스 키, 스토리지 키를 입력해야 합니다.</block>
+  <block id="119ce87fb0068eaf943265dcfa7867a2" category="section-title">BlueXP backup and recovery 설정 확인</block>
+  <block id="e828f5871c88d64ebf2a764153246360" category="list-text">각 ONTAP 작업 환경을 선택하고 오른쪽 패널의 백업 및 복구 서비스 옆에 있는 *백업 보기*를 클릭합니다.</block>
+  <block id="36c688567530141607520ff8f371abad" category="paragraph">볼륨에 대해 생성된 모든 백업을 볼 수 있어야 합니다.</block>
+  <block id="ca58572920332b0113296b57e60a56de" category="list-text">복원 대시보드의 검색 및 복원 섹션에서 *인덱싱 설정*을 클릭합니다.</block>
+  <block id="98c648bc34880f7f4d457836f8d482d7" category="paragraph">이전에 색인 카탈로그화를 활성화했던 작업 환경이 계속 활성화되어 있는지 확인하세요.</block>
+  <block id="080b8dd3f3323a86a22c3af13ee1c495" category="list-text">검색 및 복원 페이지에서 몇 가지 카탈로그 검색을 실행하여 인덱싱된 카탈로그 복원이 성공적으로 완료되었는지 확인합니다.</block>
+  <block id="14873f48c9db88415c7c75e61a0ddd00" category="sidebar">다크 사이트에서 구성 데이터 복원</block>
 </blocks>

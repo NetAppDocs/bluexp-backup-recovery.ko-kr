@@ -32,11 +32,20 @@ BlueXP 백업 및 복구 내에 10가지 유형의 엔드포인트가 정의되�
 
 
 
+== API 참조입니다
+
+각 BlueXP backup and recovery API에 대한 설명서는 다음에서 제공됩니다. https://docs.netapp.com/us-en/bluexp-automation/cbs/overview.html["BlueXP backup and recovery 위한 BlueXP 자동화"^] .
+
+
+
 == 시작하기
 
 BlueXP 백업 및 복구 API를 시작하려면 사용자 토큰, BlueXP 계정 ID 및 BlueXP 커넥터 ID를 얻어야 합니다.
 
 API 호출을 할 때 인증 헤더에 사용자 토큰을 추가하고 X-agent-id 헤더에 BlueXP 커넥터 ID를 추가합니다. API에서 BlueXP 계정 ID를 사용해야 합니다.
+
+
+NOTE: 서비스 계정을 사용하는 경우 사용자 토큰 대신 서비스 액세스 토큰을 사용해야 합니다.  "client_id" 값("Mu0V1ywgYteI6w1MbD15fKfVIUrNXGWC")은 고정된 값이므로 변경할 수 없습니다.  이 경우에는 다음 지침을 따르세요. https://docs.netapp.com/us-en/bluexp-automation/platform/create_service_token.html["서비스 액세스 토큰 생성"^] .
 
 .단계
 . NetApp BlueXP 웹 사이트에서 사용자 토큰을 받으십시오.
@@ -180,8 +189,3 @@ curl --location --request GET 'https://api.bluexp.netapp.com/account/account-DpT
     ]
 }
 ----
-
-
-== API 참조입니다
-
-각 BlueXP  백업 및 복구 API에 대한 설명서는 에서 확인할 수 https://docs.netapp.com/us-en/bluexp-automation/cbs/overview.html["BlueXP  자동화"^]있습니다.
