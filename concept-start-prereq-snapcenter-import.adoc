@@ -4,7 +4,7 @@ permalink: concept-start-prereq-snapcenter-import.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, backup and recovery, snapcenter, import, migration, migrate 
 summary: 운영 환경, BlueXP 커넥터, BlueXP 계정의 준비 상태를 확인하여 BlueXP backup and recovery 시작하세요. BlueXP backup and recovery 사용하려면 다음 전제 조건이 필요합니다. 
 ---
-= SnapCenter 에서 BlueXP backup and recovery 로 가져오는 경우 추가 항목을 구성합니다.
+= 플러그인 서비스에서 BlueXP backup and recovery 로 가져오기 위한 전제 조건
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,19 @@ summary: 운영 환경, BlueXP 커넥터, BlueXP 계정의 준비 상태를 확�
 
 
 [role="lead"]
-SnapCenter 에서 BlueXP backup and recovery 로 리소스를 가져오려면 몇 가지 항목을 더 구성해야 합니다.
+Microsoft SQL Server용 SnapCenter 플러그인 서비스에서 BlueXP backup and recovery 로 리소스를 가져오려면 몇 가지 항목을 더 구성해야 합니다.
+
+
+
+== 먼저 BlueXP Canvas에서 작업 환경을 만드세요
+
+SnapCenter 에서 리소스를 가져오려면 SnapCenter 에서 가져오기 전에 BlueXP Canvas에서 모든 온프레미스 SnapCenter 클러스터 스토리지에 대한 작업 환경을 먼저 생성해야 합니다. 이렇게 하면 호스트 리소스를 올바르게 검색하고 가져올 수 있습니다.
 
 
 
 == SnapCenter 플러그인을 설치하기 위한 호스트 요구 사항을 확인하세요.
 
-SnapCenter 에서 리소스를 가져오려면 Microsoft SQL Server용 SnapCenter 플러그인을 설치하기 위한 호스트 요구 사항이 충족되는지 확인하세요.
+Microsoft SQL Server용 SnapCenter 플러그인에서 리소스를 가져오려면 Microsoft SQL Server용 SnapCenter 플러그인을 설치하기 위한 호스트 요구 사항이 충족되는지 확인하세요.
 
 SnapCenter 요구 사항을 특별히 확인하세요. link:concept-start-prereq.html["BlueXP backup and recovery 필수 구성 요소"] .
 
@@ -163,8 +169,3 @@ Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies
 
 LocalAccountTokenFilterPolicy : 1
 ----
-
-
-== 먼저 BlueXP Canvas에서 작업 환경을 만드세요
-
-SnapCenter 에서 리소스를 가져오려면 SnapCenter 에서 가져오기 전에 BlueXP Canvas에서 모든 온프레미스 SnapCenter 클러스터 스토리지에 대한 작업 환경을 먼저 생성해야 합니다. 이렇게 하면 호스트 리소스를 올바르게 검색하고 가져올 수 있습니다.

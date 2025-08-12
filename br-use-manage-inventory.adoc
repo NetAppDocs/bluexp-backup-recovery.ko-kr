@@ -58,6 +58,45 @@ BlueXP backup and recovery 사용하면 Microsoft SQL Server 워크로드 호스
 
 
 
+=== 호스트를 관리합니다
+
+작업 환경에서 발견된 호스트를 관리할 수 있습니다. 호스트를 개별적으로 또는 그룹으로 관리할 수 있습니다.
+
+
+TIP: 호스트 열에 "관리되지 않음" 상태가 표시된 호스트만 관리할 수 있습니다. 상태가 "관리됨"인 경우, 해당 호스트는 이미 BlueXP backup and recovery 에서 관리되고 있음을 의미합니다.
+
+BlueXP backup and recovery 에서 호스트를 관리한 후에는 SnapCenter 해당 호스트의 리소스를 더 이상 관리하지 않습니다.
+
+*필수 BlueXP 역할* 조직 관리자, 폴더 또는 프로젝트 관리자, 백업 및 복구 최고 관리자.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["모든 서비스에 대한 BlueXP 액세스 역할에 대해 알아보세요"^] .
+
+.단계
+. 메뉴에서 *인벤토리*를 선택하세요.
++
+image:screen-br-inventory.png["BlueXP backup and recovery 위한 인벤토리 스크린샷"]
+
+. 보호 세부 정보를 보려면 작업 부하를 선택하세요.
+. 작업 아이콘을 선택하세요 image:../media/icon-action.png["작업 옵션"] > *자세한 내용 보기*.
++
+image:screen-br-inventory-sql.png["BlueXP backup and recovery 위한 인벤토리 세부 정보 페이지 스크린샷"]
+
+. *호스트* 탭을 선택하세요.
+. 하나 이상의 호스트를 선택하세요. 여러 호스트를 선택하면 '대량 작업' 옵션이 나타나고, 여기서 *관리(최대 5개 호스트)*를 선택할 수 있습니다.
+. 작업 아이콘을 선택하세요 image:../media/icon-action.png["작업 옵션"] > *관리*.
++
+image:screen-br-inventory-details-manage-hosts.png["호스트 관리 페이지"]
+
+. 호스트 종속성을 검토하세요.
++
+** vCenter가 표시되지 않으면 연필 아이콘을 선택하여 vCenter 세부 정보를 추가하거나 편집합니다.
+** vCenter를 추가하는 경우 *vCenter 등록*을 선택하여 vCenter도 등록해야 합니다.
+
+
+. 설정을 테스트하려면 *설정 검증*을 선택하세요.
+. 호스트를 관리하려면 *관리*를 선택하세요.
+
+
+
+
 === 일정을 중단하다
 
 호스트의 백업 및 복원 작업을 중지하기 위해 일정을 일시 중지할 수 있습니다. 호스트에서 유지 관리 작업을 수행해야 하는 경우 이 기능이 유용할 수 있습니다.

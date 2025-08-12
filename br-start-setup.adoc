@@ -27,7 +27,7 @@ BlueXP backup and recovery 사용하기 전에 몇 가지 단계를 거쳐 백�
 을 https://docs.netapp.com/us-en/bluexp-storagegrid/task-discover-storagegrid.html["StorageGRID 알아보세요"^]참조하십시오.
 
 +
-참조하다  https://docs.netapp.com/us-en/storagegrid-117/index.html["StorageGRID 설명서"^] StorageGRID 에 대한 자세한 내용은 다음을 참조하세요.
+참조하다 https://docs.netapp.com/us-en/storagegrid/index.html["StorageGRID 설명서"^] StorageGRID 에 대한 자세한 내용은 다음을 참조하세요.
 
 * 아마존 웹 서비스. 을 https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["Amazon S3 문서"^]참조하십시오.
 +

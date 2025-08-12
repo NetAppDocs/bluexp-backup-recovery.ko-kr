@@ -93,7 +93,7 @@ sidebar:
         url: "/prev-ontap-backup-manage.html"
       - title: ONTAP 백업에서 복원합니다
         url: "/prev-ontap-restore.html"
-    - title: Microsoft SQL Server 워크로드 보호(미리 보기)
+    - title: Microsoft SQL Server 워크로드 보호
       entries:
       - title: Microsoft SQL Server 워크로드 보호 개요
         url: "/br-use-mssql-protect-overview.html"

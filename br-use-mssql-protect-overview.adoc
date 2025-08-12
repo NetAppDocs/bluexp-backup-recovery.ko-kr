@@ -50,15 +50,18 @@ BlueXP backup and recovery 사용하면 다음 소스 작업 환경에서 다음
 
 
 | AWS의 Cloud Volumes ONTAP | AWS의 Cloud Volumes ONTAP
-사내 ONTAP 시스템 | Amazon S3 
+사내 ONTAP 시스템 | 아마존 S3 ONTAP S3 
 
 
 | Azure의 Cloud Volumes ONTAP | Azure의 Cloud Volumes ONTAP
-사내 ONTAP 시스템 | Azure Blob 
+사내 ONTAP 시스템 | Azure Blob ONTAP S3 
 
 
 | 사내 ONTAP 시스템 | Cloud Volumes ONTAP
-사내 ONTAP 시스템 | Amazon S3 Azure Blob NetApp StorageGRID ifdef::gcp[] endif::gcp[] ifdef::gcp[] endif::gcp[] 
+사내 ONTAP 시스템 | Amazon S3 Azure Blob NetApp StorageGRID ONTAP S3 
+
+
+| NetApp ONTAP용 Amazon FSx | NetApp ONTAP용 Amazon FSx | NA ifdef::gcp[] endif::gcp[] ifdef::gcp[] endif::gcp[] 
 |===
 .지원되는 복원 대상
 기본 저장소나 보조 작업 환경(복제된 볼륨) 또는 개체 저장소(백업 파일)에 있는 백업에서 Microsoft SQL Server 인스턴스와 데이터베이스를 다음 작업 환경으로 복원할 수 있습니다. 스냅샷 복사본은 소스 작업 환경에 있으며 동일한 시스템에만 복원할 수 있습니다.
@@ -72,15 +75,18 @@ BlueXP backup and recovery 사용하면 다음 소스 작업 환경에서 다음
 
 
 | Amazon S3 | AWS의 Cloud Volumes ONTAP
-사내 ONTAP 시스템 | AWS 온프레미스 ONTAP 시스템의 클라우드 볼륨 
+사내 ONTAP 시스템 | AWS 온프레미스 ONTAP 시스템 ONTAP S3의 클라우드 볼륨 
 
 
 | Azure Blob | Azure의 Cloud Volumes ONTAP
-사내 ONTAP 시스템 | Azure 온프레미스 ONTAP 시스템의 Cloud Volumes ONTAP ifdef::gcp[] endif::gcp[] 
+사내 ONTAP 시스템 | Azure 온프레미스 ONTAP 시스템 ONTAP S3의 Cloud Volumes ONTAP ifdef::gcp[] endif::gcp[] 
 
 
 | StorageGRID | Cloud Volumes ONTAP
-사내 ONTAP 시스템 | 사내 ONTAP 시스템 
+사내 ONTAP 시스템 | 온프레미스 ONTAP 시스템 ONTAP S3 
+
+
+| NetApp ONTAP용 Amazon FSx | NetApp ONTAP용 Amazon FSx | 해당 없음 
 |===
 
 NOTE: "온프레미스 ONTAP 시스템"에 대한 참조에는 FAS 및 AFF 시스템이 포함됩니다.

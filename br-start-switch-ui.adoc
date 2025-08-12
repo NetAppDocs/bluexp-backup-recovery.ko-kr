@@ -18,7 +18,7 @@ summary: 다양한 BlueXP backup and recovery 워크로드 간에 전환할 수 
 
 *어떤 UI를 사용하고 있는지 어떻게 알 수 있나요?*
 
-Microsoft SQL Server 워크로드의 작업 표시줄은 다음과 같습니다. image:screen-br-menu-unified.png["BlueXP backup and recovery 위한 새로운 UI 스크린샷"]
+Microsoft SQL Server 및 Kubernetes(미리 보기) 워크로드의 작업 표시줄은 다음과 같습니다.image:screen-br-menu-unified.png["BlueXP backup and recovery 위한 새로운 UI 스크린샷"]
 
 ONTAP 볼륨 및 VMware 워크로드의 메뉴 표시줄은 다음과 같습니다. image:screen-br-menu-legacy.png["BlueXP backup and recovery 위한 이전 UI 스크린샷"]
 

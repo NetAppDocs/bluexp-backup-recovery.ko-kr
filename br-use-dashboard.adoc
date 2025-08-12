@@ -21,7 +21,7 @@ summary: 워크로드 상태를 모니터링하면 워크로드 보호 관련 �
 .단계
 . BlueXP backup and recovery 메뉴에서 *대시보드*를 선택합니다.
 +
-image:screen-br-dashboard2.png["BlueXP backup and recovery 보드"]
+image:screen-br-dashboard3.png["BlueXP backup and recovery 보드"]
 
 
 
