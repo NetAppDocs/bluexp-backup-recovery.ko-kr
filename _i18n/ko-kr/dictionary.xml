@@ -3595,7 +3595,6 @@ ifdef::AWS[]</block>
   <block id="5e4be38dc556e235a6420a92a206702f" category="inline-link-macro">로그 디렉토리 구성</block>
   <block id="c787ed2d7e5bc557b61149e67595840c" category="list-text">*로그 백업 활성화*: (쿠버네티스 워크로드에서는 사용할 수 없음) 로그 백업 옵션을 선택하고 로그 백업 빈도와 보존 기간을 설정합니다. 이 작업을 수행하려면 로그 백업이 이미 구성되어 있어야 합니다. 을 <block ref="c4a2a21123ec8dd6e71a040e68355146" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="6f55153177e57b6d7eb7c4cad4a859a7" category="list-text">*공급자*: (Kubernetes 워크로드에만 해당) Kubernetes 애플리케이션 리소스를 호스팅하는 스토리지 공급자를 선택합니다.</block>
-  <block id="71109c8bd1c0018c7479893b1fd7e6a0" category="list-text">*백업 대상*: (쿠버네티스 워크로드만 해당) 백업 대상 시스템을 선택하세요. 스냅샷이 저장될 스토리지 시스템입니다. 백업 환경 내에서 대상에 액세스할 수 있는지 확인하세요.</block>
   <block id="747b35b746df7e37e6b643aa0c244e28" category="list-text">선택적으로 일정 오른쪽에 있는 *고급*을 선택하여 SnapMirror 레이블을 설정하고 스냅샷 잠금을 활성화합니다(Kubernetes 워크로드에서는 사용할 수 없음).</block>
   <block id="146a0850e1031071bccdee12df305d5a" category="list-text">* SnapMirror 레이블*: 레이블은 관계의 보존 규칙에 따라 지정된 스냅샷을 전송하기 위한 마커 역할을 합니다. 스냅샷에 레이블을 추가하면 해당 스냅샷이 SnapMirror 복제 대상으로 표시됩니다.</block>
   <block id="8036e5e1e57026168bfeac2027f9cc84" category="list-text">*시점 기준 오프셋*: 스냅샷을 시의 시작부터 오프셋할 분 수를 입력합니다. 예를 들어, *15*를 입력하면 스냅샷은 시의 15분에 촬영됩니다.</block>
@@ -3697,7 +3696,6 @@ ifdef::AWS[]</block>
   <block id="635c4235a331a9bc9e0197a493f38268" category="list-text">라벨 선택기</block>
   <block id="de183577631c168afe44797528dcd1b6" category="list-text">BlueXP 검색 기준과 일치하는 리소스 목록을 표시합니다.</block>
   <block id="aa49cc3a36d2c16ec191533800daa634" category="list-text">보호하려는 리소스가 목록에 포함되어 있으면 *다음*을 선택합니다.</block>
-  <block id="e9caf784881cf54a35354c0cac59319c" category="list-text">*정책* 영역에서 애플리케이션을 보호하기 위한 기존 보호 정책을 선택하거나 새 정책을 만듭니다.</block>
   <block id="4049c9e3b9c424f5991c5f917ad92c40" category="inline-link-macro">실행 후크 템플릿</block>
   <block id="5e97a71c79e2f24deabf91daa3d20cd1" category="list-text">*Prescripts and postscripts* 영역에서 백업 작업 전후에 실행할 Prescripts 또는 Postscripts 실행 후크를 활성화하고 구성합니다. Prescripts 또는 Postscripts를 활성화하려면 최소 하나 이상의 <block ref="3059f3d40a47ddab4d322199b8601d95" category="inline-link-macro-rx"></block> .</block>
   <block id="96cff17e81239eeaa49df92ce0b9e6a1" category="paragraph">애플리케이션이 생성되어 쿠버네티스 인벤토리의 *애플리케이션* 탭에 있는 애플리케이션 목록에 나타납니다. BlueXP 설정에 따라 애플리케이션을 보호하며, 백업 및 복구의 *모니터링* 영역에서 진행 상황을 모니터링할 수 있습니다.</block>
@@ -4546,7 +4544,6 @@ ifdef::AWS[]</block>
   <block id="dc997bda771b80d1666f7d07ffd6b7d7" category="list-text">선택적으로, 클러스터 수준에서 범위가 지정된 리소스를 선택하려면 *클러스터 범위 리소스*를 선택합니다. 이 리소스를 포함하면 애플리케이션을 생성할 때 해당 리소스가 애플리케이션에 추가됩니다.</block>
   <block id="812f9cbafb4aa2378e7470b20baa1fef" category="list-text">선택적으로 *검색*을 선택하여 검색 기준에 따라 리소스를 찾으세요.</block>
   <block id="cd052ad0ede3d8d23a3b065ef26168d8" category="admonition">BlueXP 검색 매개변수나 결과를 저장하지 않습니다. 매개변수는 애플리케이션에 포함될 수 있는 리소스를 선택한 Kubernetes 클러스터에서 검색하는 데 사용됩니다.</block>
-  <block id="375665cdd163819cd9ddcb1def13c5da" category="list-text">선택적으로, *정책* 영역에서 기존 보호 정책을 선택하여 애플리케이션을 보호하거나 새 정책을 만들 수 있습니다. 정책을 선택하지 않으면 애플리케이션은 보호 정책 없이 생성됩니다. 나중에 정책을 추가할 수 있습니다.</block>
   <block id="6bd8ef6649ea59b964673233a7cdd855" category="paragraph">BlueXP 설정에 따라 애플리케이션 보호를 활성화하며, 백업 및 복구의 *모니터링* 영역에서 진행 상황을 모니터링할 수 있습니다. 애플리케이션 보호를 활성화하는 즉시 BlueXP 애플리케이션의 전체 백업을 생성합니다. 이후 증분 백업은 애플리케이션과 관련된 보호 정책에 정의된 일정에 따라 생성됩니다.</block>
   <block id="be9a2f94b85d3bc8821f79138f4c1385" category="paragraph">BlueXP 애플리케이션 백업을 생성하고 백업 및 복구의 *모니터링* 영역에 진행 상황을 표시합니다. 백업은 애플리케이션과 연결된 보호 정책을 기반으로 생성됩니다.</block>
   <block id="5a5da37e66cddefa275e61455c6ce599" category="paragraph">BlueXP backup and recovery 사용하면 보호 정책으로 보호한 애플리케이션을 복원할 수 있습니다. 애플리케이션을 복원하려면 애플리케이션에 최소 하나의 복원 지점이 있어야 합니다. 복원 지점은 로컬 스냅샷 또는 개체 저장소 백업(또는 둘 다)으로 구성됩니다. 로컬, 보조 또는 개체 저장소 아카이브를 사용하여 애플리케이션을 복원할 수 있습니다.</block>
@@ -4663,4 +4660,8 @@ ifdef::AWS[]</block>
   <block id="b884440e8464e067fc1993b8e7564b2c" category="paragraph">이 서비스는 다음 작업 부하를 보호합니다.</block>
   <block id="a7834976a2cbdc12ddeb76acc0345f2d" category="inline-link-macro">백업 및 복구 데이터 서비스 역할 및 권한</block>
   <block id="092238820de0395a7d97ae63a784ea7f" category="paragraph">*필수 BlueXP 역할* 이 작업에는 데이터 서비스 백업 및 복구 슈퍼 관리자 역할이 필요합니다.  에 대해 알아보세요<block ref="48e53f0dd24db48908da75d62a8f8086" category="inline-link-macro-rx"></block> .<block ref="c46fcff617e849cb6f8ded33051f7905" category="inline-link-rx"></block> .</block>
+  <block id="2cf6a2d8c1cb12d031a59d63b2674c2d" category="list-text">*백업 대상*: (Kubernetes 워크로드에만 해당) Kubernetes 애플리케이션 리소스를 호스팅하는 스토리지 버킷을 선택합니다.  스냅샷은 이 버킷에 저장됩니다.  백업 환경 내에서 버킷에 액세스할 수 있는지 확인하세요.</block>
+  <block id="4d3ca3588667d04ddbd4f318cdd7677e" category="inline-link-macro">보호 정책 추가</block>
+  <block id="2769be0838f5e6f63e01200eeeec1910" category="list-text">선택적으로, *정책* 영역에서 기존 보호 정책을 선택하여 애플리케이션을 보호하거나 새 정책을 만들 수 있습니다. 정책을 선택하지 않으면 애플리케이션은 보호 정책 없이 생성됩니다. 당신은 할 수 있습니다<block ref="99c823f28a98717f81cda4eb0c448db5" category="inline-link-macro-rx"></block> 나중에.</block>
+  <block id="f58eabeb108df6c5973f0ece276c562f" category="list-text">*정책* 영역에서 애플리케이션을 보호하기 위한 기존 보호 정책을 선택하거나 새 정책을 만듭니다.  참조하다<block ref="3739f9f9696bd133d77df1c4736a8480" category="inline-link-macro-rx"></block> 보호 정책 생성에 대한 자세한 내용은 여기를 참조하세요.</block>
 </blocks>
