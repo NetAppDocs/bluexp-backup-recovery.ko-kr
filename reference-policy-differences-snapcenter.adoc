@@ -14,7 +14,9 @@ summary: BlueXP backup and recovery 에 사용되는 정책과 SnapCenter 에서
 [role="lead"]
 SnapCenter 에서 사용되는 정책과 BlueXP backup and recovery 에서 사용되는 정책 사이에는 몇 가지 차이점이 있으며, 이는 SnapCenter 에서 리소스와 정책을 가져온 후에 표시되는 내용에 영향을 줄 수 있습니다.
 
-SnapCenter 와 BlueXP backup and recovery 약간 다른 정책 일정을 사용합니다.
+
+
+== 일정 계층
 
 SnapCenter 다음과 같은 일정 계층을 사용합니다.
 
@@ -78,6 +80,12 @@ SnapCenter 에 여러 정책이 적용된 리소스가 있는 경우 BlueXP back
 * SnapCenter 의 "전체 백업 및 로그"와 "전체 백업"의 경우, BlueXP backup and recovery "전체 백업 및 로그" 보존 값을 사용합니다.
 * SnapCenter 에 전체 백업만 있는 경우 BlueXP backup and recovery 에서는 로그 백업을 사용할 수 없습니다.
 
+
+
+
+== 로그 백업 보존
+
+SnapCenter 사용하면 리소스에 연결된 여러 정책에 걸쳐 여러 보존 값을 가질 수 있습니다.  하지만 BlueXP backup and recovery 리소스에 연결된 모든 정책에 대해 단일 보존 값만 지원합니다.
 
 
 

@@ -109,9 +109,3 @@ SnapCenter 호스트에 대한 리소스 매핑 스토리지 클러스터나 SVM
 특정 시간에 시작해서 몇 분마다 반복되는 SnapCenter 정책 일정이 있지만 각 분이 15분 간격이 아닌 경우, BlueXP backup and recovery 해당 일정을 가져오지 않습니다.
 
 *해결 방법*: SnapCenter 사용하여 정책이 15분 간격으로 반복되도록 조정합니다.
-
-
-
-=== 로그 백업 보존
-
-SnapCenter 사용하면 리소스에 연결된 여러 정책에 대해 여러 보존 값을 가질 수 있습니다. 그러나 BlueXP backup and recovery 프리뷰 버전은 리소스에 연결된 모든 정책에 대해 단일 보존 값만 지원합니다.

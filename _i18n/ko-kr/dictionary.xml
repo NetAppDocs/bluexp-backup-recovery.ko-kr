@@ -2613,7 +2613,6 @@ ifdef::AWS[]</block>
   <block id="04691de3768fe7039c2c412d7b4595b2" category="paragraph">특정 시간에 시작해서 몇 분마다 반복되는 SnapCenter 정책 일정이 있지만 각 분이 15분 간격이 아닌 경우, BlueXP backup and recovery 해당 일정을 가져오지 않습니다.</block>
   <block id="da5c7a32fb1f34042f2d0d433f50328c" category="paragraph">*해결 방법*: SnapCenter 사용하여 정책이 15분 간격으로 반복되도록 조정합니다.</block>
   <block id="572e4e930a93aaf8ecb497410b31bcae" category="section-title">로그 백업 보존</block>
-  <block id="647c2420ebb99caa8af94d848bf32dc5" category="paragraph">SnapCenter 사용하면 리소스에 연결된 여러 정책에 대해 여러 보존 값을 가질 수 있습니다. 그러나 BlueXP backup and recovery 프리뷰 버전은 리소스에 연결된 모든 정책에 대해 단일 보존 값만 지원합니다.</block>
   <block id="cb836aaac7ed6e97ca43d8b38d0d27bc" category="doc">ONTAP 볼륨에 대한 BlueXP backup and recovery 의 알려진 제한 사항</block>
   <block id="c772b48db71b62774173b09358a6272c" category="paragraph">알려진 제한 사항은 이 BlueXP backup and recovery 릴리스에서 지원하지 않거나 올바르게 상호 운용되지 않는 기능을 나타냅니다. 이러한 제한 사항을 주의 깊게 검토하십시오.</block>
   <block id="a8a0607f859b592d67071c436d8a3293" category="section-title">ONTAP 볼륨에 대한 복제 제한</block>
@@ -2876,47 +2875,6 @@ ifdef::AWS[]</block>
   <block id="0d03bc1841a7715444e6ab8b4f36fa63" category="paragraph"><block ref="0d03bc1841a7715444e6ab8b4f36fa63" category="inline-image-macro-rx" type="image"></block></block>
   <block id="09799d4864834161536cca195023364b" category="inline-link-macro">대시보드가 보여주는 내용을 알아보세요</block>
   <block id="d5292ed1370bb405095587cd10827f95" category="paragraph"><block ref="2a35d34f81dbac907e6068b45b5d538a" category="inline-link-macro-rx"></block>..</block>
-  <block id="b1151aae9531d2f5e85d085e8878cea6" category="summary">이 FAQ는 질문에 대한 간단한 답변을 찾는 경우에 도움이 될 수 있습니다.</block>
-  <block id="4ef5e2df08f16b412c25bf31670b109d" category="doc">BlueXP backup and recovery 대한 자주 묻는 질문</block>
-  <block id="ea355214fd4bc7c57f471bd92918879b" category="section-title">구축</block>
-  <block id="2499669cd400d71d3b95894f8345a23d" category="paragraph">* BlueXP 백업 및 복구 미리보기 버전을 사용하려면 라이선스가 필요합니까?*</block>
-  <block id="924cc6eaf82618251de609e2689ed733" category="paragraph">다음과 같은 라이센스 유형을 사용할 수 있습니다.</block>
-  <block id="63f202b7fcd80e9277a9e585cd35c7ae" category="list-text">30일 무료 평가판을 신청하십시오.</block>
-  <block id="e70cecf933eba8a711bc2b91937cde3b" category="paragraph">* BlueXP backup and recovery 어떻게 활성화하나요?* BlueXP backup and recovery 별도의 활성화가 필요하지 않습니다. 백업 및 복구 옵션은 BlueXP 왼쪽 탐색 메뉴에서 자동으로 활성화됩니다.</block>
-  <block id="532ffb2f3fab7d7b22de1e6940021707" category="paragraph">이 서비스를 이용하려면 등록하거나 NetApp 영업 담당자에게 연락하여 이 서비스를 체험해 보십시오. BlueXP Connector를 사용하면 서비스에 적합한 기능이 여기에 포함됩니다.</block>
-  <block id="c12b8175d2e983ee8b8ce043ae10f1cb" category="paragraph">BlueXP backup and recovery 시작하려면 초기 랜딩 페이지에서 "워크로드 검색 시작"을 클릭합니다.</block>
-  <block id="b180bd10a1fd7b4eca59ca9a369bdcae" category="paragraph">* BlueXP backup and recovery 표준, 제한 및 비공개 모드에서 사용할 수 있나요?* 현재 BlueXP backup and recovery 미리 보기 버전은 표준 모드에서만 사용할 수 있습니다. 많은 관심 부탁드립니다.</block>
-  <block id="2579d10862aa7770a64b058fb84ce858" category="inline-link">BlueXP 배포 모드</block>
-  <block id="d29231e4316da436d079d40f2271015e" category="paragraph">모든 BlueXP  서비스에서 이러한 모드에 대한 설명은 을 참조하십시오<block ref="333027f5702e4d8adf36d6f2355422dc" category="inline-link-rx"></block>.</block>
-  <block id="bf733d8a933c1601697f364223fc7ecb" category="section-title">액세스</block>
-  <block id="b8efad953c71d3c13cd9e6259b52050b" category="inline-link"><block ref="b8efad953c71d3c13cd9e6259b52050b" category="inline-link-rx"></block></block>
-  <block id="965d02098cf19eab5a686aeb79965a74" category="paragraph">* BlueXP backup and recovery URL은 무엇인가요?* URL의 경우 브라우저에 다음을 입력하여 BlueXP  콘솔에 액세스합니다.<block ref="f7adc20e3c7166869a0baacb09b84649" category="inline-link-rx"></block></block>
-  <block id="6b95918551f87e6ece870e17dd0bb85f" category="paragraph">* 액세스 권한은 어떻게 처리됩니까? * 조직 관리자만 서비스를 시작하고 워크로드를 검색할 수 있습니다(리소스 사용을 커밋하는 작업이 포함되므로). 이후 상호 작용은 모든 역할에 의해 수행될 수 있습니다.</block>
-  <block id="50f57e8a04f9e81cccea59d08d0cbcc2" category="paragraph">* 어떤 장치 해상도가 가장 좋습니까? * BlueXP backup and recovery 에 권장되는 장치 해상도는 1920x1080 이상입니다.</block>
-  <block id="3462920d936c74204339015d2f24872a" category="paragraph">* 어떤 브라우저를 사용해야 합니까? * 모든 최신 브라우저가 작동합니다.</block>
-  <block id="cf49c80b52a1cb095928d387f3ae47ed" category="section-title">다른 서비스와의 상호 작용</block>
-  <block id="07d2b565e1ee7870eff3c5ee0251548a" category="paragraph">* BlueXP backup and recovery NetApp ONTAP 에서 설정된 보호 설정을 인식합니까?* 예, BlueXP backup and recovery ONTAP 에서 설정된 스냅샷 일정을 검색합니다.</block>
-  <block id="cde60122ad9e09a8b3596d49c2d4b8c6" category="paragraph">* BlueXP backup and recovery 사용하여 정책을 설정하는 경우 향후 변경은 이 서비스에서만 해야 합니까?* BlueXP backup and recovery 서비스에서 정책을 변경하는 것이 좋습니다.</block>
-  <block id="35084d885dea7b061e6894c1cf3036d9" category="section-title">워크로드</block>
-  <block id="d402524aad46e7fd520fcc6819d646ba" category="paragraph">* 워크로드를 구성하는 요소는 무엇입니까? * 워크로드는 Preview 2025 버전용 애플리케이션입니다. 워크로드에는 단일 애플리케이션 인스턴스에서 사용하는 모든 볼륨이 포함됩니다. 예를 들어, mssql3.host.com에 배포된 Microsoft SQL Server DB 인스턴스는 데이터와 로그에 대해 각각 vol1과 vol2를 가질 수 있습니다. 이러한 볼륨은 함께 해당 DB 인스턴스의 특정 인스턴스에 대한 워크로드를 구성합니다.</block>
-  <block id="ba69f65299b1fbca3d8af94cc200eaef" category="paragraph">* BlueXP backup and recovery 어떤 워크로드를 지원합니까?*</block>
-  <block id="c81d9a0e8eaaab00a6dbbd70f3a9ac5c" category="paragraph">Preview 2025 버전의 경우 BlueXP backup and recovery 다음 작업 부하를 식별할 수 있습니다. Microsoft SQL Server 애플리케이션.</block>
-  <block id="4069d1b0660b91602ac9db989206f6d2" category="paragraph">* "보호된" 워크로드란 무엇입니까? * BlueXP backup and recovery 에서는 기본 감지 정책이 활성화된 경우 워크로드가 "보호됨" 상태로 표시됩니다.</block>
-  <block id="4909b811fdf0fea4db96f92f4f78a663" category="paragraph">* "위험" 워크로드란 무엇입니까? * 워크로드에 기본 감지 정책이 활성화되어 있지 않으면 백업 및 스냅샷 정책을 활성화한 경우에도 "위험에 처해 있습니다."</block>
-  <block id="e4244b45de1484571df7257e76a4102e" category="paragraph">*새로운 워크로드가 추가되었지만 아직 나타나지 않음* 환경에 새로운 워크로드를 추가한 경우 검색을 다시 시작하고 해당 새로운 리소스를 보호하기 위해 보호 정책을 적용합니다.</block>
-  <block id="5d1184f76781faaf229c6b885314bcd3" category="section-title">보호 정책</block>
-  <block id="ea95a58451a1989c175ccd67b54a9a5c" category="paragraph">* BlueXP backup and recovery NetApp ONTAP 에서 설정된 보호 설정을 인식합니까?*</block>
-  <block id="aa217fda6986b6fa796d252c5b5bf862" category="paragraph">네, BlueXP backup and recovery ONTAP 에 설정된 스냅샷 일정을 검색하고 검색된 워크로드에서 ARP 및 FPolicy가 활성화되어 있는지 여부를 검색합니다. 대시보드의 처음에 표시되는 정보는 다른 NetApp 솔루션 및 제품에서 집계됩니다.</block>
-  <block id="f5f6ffba7652b213c1041b8c1376525f" category="paragraph">* BlueXP backup and recovery SnapCenter 에 이미 만들어진 정책을 인식합니까?*</block>
-  <block id="6e0480718d9964a63da356415b52f7a0" category="paragraph">네, SnapCenter 에서 관리되는 워크로드가 있는 경우 해당 제품에서 관리하는 정책이 BlueXP backup and recovery 로 적용됩니다.</block>
-  <block id="65b1c67f533e18ce83c9880a7f09c9a7" category="paragraph">* SnapCenter 에서 가져온 정책을 수정할 수 있나요?*</block>
-  <block id="bedcd85d57f8ea040dea1ca4d99f0039" category="paragraph">네, BlueXP backup and recovery 내에서 SnapCenter 가 관리하던 정책을 수정할 수 있습니다.</block>
-  <block id="7b14cb9145e6a8f73746c6843dbed3a4" category="paragraph">* ONTAP 의 정책(ARP, FPolicy, 스냅샷 등 시스템 관리자에서 이미 활성화됨)이 있는 경우 BlueXP backup and recovery 에서 해당 정책이 변경됩니까?*</block>
-  <block id="a3586452db18e2fa414a1eb5ae8d17cc" category="paragraph">아니요. BlueXP backup and recovery ONTAP 의 기존 탐지 정책(ARP, FPolicy 설정)을 수정하지 않습니다.</block>
-  <block id="1f102fdd144462324993234d7144754c" category="paragraph">* BlueXP backup and recovery 에 가입한 후 SnapCenter 에 새로운 정책을 추가하면 어떻게 되나요?*</block>
-  <block id="486197dde031f487d2826b6993b6bcc8" category="paragraph">BlueXP backup and recovery SnapCenter 에서 생성된 모든 새로운 정책을 인식합니다.</block>
-  <block id="518f0b9f41f0f038466364ab7781803f" category="paragraph">* ONTAP에서 정책을 변경할 수 있습니까? *</block>
-  <block id="b6b9673775332f978f238fe3752a6399" category="paragraph">네, BlueXP backup and recovery 에서 ONTAP 의 정책을 변경할 수 있습니다. BlueXP backup and recovery 에서 새 정책을 생성하여 워크로드에 적용할 수도 있습니다. 이 작업을 수행하면 기존 ONTAP 정책이 BlueXP backup and recovery 에서 생성된 정책으로 대체됩니다.</block>
   <block id="e12f47a69c86e30f0a5db1108ff58262" category="paragraph"><block ref="e12f47a69c86e30f0a5db1108ff58262" category="inline-link-macro-rx"></block></block>
   <block id="9a0032d5f65be045870969ee7b059114" category="paragraph">무료 평가판이 종료되면 중단 없이 자동으로 PAYGO 구독으로 전환됩니다. BlueXP backup and recovery 계속 사용하지 않기로 결정한 경우 <block ref="63ddedb28f0e4bad0f842e2bd919ad67" category="inline-link-macro-rx"></block> 체험판이 종료되기 전에 구독하면 요금이 청구되지 않습니다.</block>
   <block id="edb466d68f36c5d8f76ba746b949c72f" category="list-text">AWS: <block ref="e5469c6686b5a2c86b78502f7ea8c335" category="inline-link-rx"></block> . endif::aws[]</block>
@@ -4006,7 +3964,6 @@ ifdef::AWS[]</block>
   <block id="9a243911fa9310348bcfd0c1703da065" category="paragraph"><block ref="b8c311ba5d17296f83798faf3af622bb" category="inline-link-macro-rx"></block>..</block>
   <block id="138c352248ca19ae50fddb3da317946e" category="paragraph">BlueXP backup and recovery 활성화하는 단계는 기존 Cloud Volumes ONTAP 시스템이 있는지 아니면 새 시스템이 있는지에 따라 약간 다릅니다.</block>
   <block id="de001bf2f5f1715efab739a30cdfd691" category="summary">BlueXP backup and recovery 사용하면 백업 일정 변경, 볼륨 백업 활성화, 백업 일시 중지, 백업 삭제 등을 통해 Cloud Volumes ONTAP 및 온프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다. BlueXP backup and recovery 의 등록을 취소할 수도 있습니다.</block>
-  <block id="0ac8e1da7de1134c2e31b3c1a0ecd0e7" category="paragraph">BlueXP 백업 및 복구를 사용하면 백업 일정 변경, 볼륨 백업 활성화/비활성화, 백업 일시 중지, 백업 삭제 등을 통해 Cloud Volumes ONTAP 및 온프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다. 여기에는 스냅샷 복사본, 복제된 볼륨, 개체 스토리지의 백업 파일을 포함한 모든 유형의 백업이 포함됩니다. BlueXP backup and recovery 의 등록을 취소할 수도 있습니다.</block>
   <block id="f37795430af0be1df0ff157c264939b5" category="paragraph">현재 백업 중인 모든 볼륨의 목록을 Volumes Backup Dashboard에서 볼 수 있습니다. 여기에는 스냅샷 복사본, 복제된 볼륨, 개체 스토리지의 백업 파일을 포함한 모든 유형의 백업이 포함됩니다. 현재 백업 중이 아닌 작업 환경의 볼륨을 볼 수도 있습니다.</block>
   <block id="fadcca31332cb3ca4ffb014def85ccca" category="list-text">Cloud Volumes ONTAP 및 온프레미스 ONTAP 시스템의 백업된 볼륨 목록을 보려면 *볼륨* 탭을 선택하세요.</block>
   <block id="967a559f8463f8584f05c86c2fe8737e" category="paragraph">추가 열(집계, 보안 스타일(Windows 또는 UNIX), 스냅샷 정책, 복제 정책 및 백업 정책)을 표시하려면 더하기 기호를 선택합니다.</block>
@@ -4043,7 +4000,6 @@ ifdef::AWS[]</block>
   <block id="0eb7e8c21301092887a8677e9e19a3a3" category="list-text">_새 정책 추가_ 페이지에서 아래쪽 화살표를 선택하여 _레이블 및 보존_ 섹션을 확장하여 일정 및 백업 보존을 정의하고 *저장*을 선택합니다.</block>
   <block id="e349061d3500a23acb2f4629950fa23f" category="paragraph">DataLock 및 랜섬웨어 보호를 사용하여 잠근 백업 파일은 삭제할 수 없습니다. 잠긴 백업 파일을 하나 이상 선택한 경우 UI에서 "삭제" 옵션을 사용할 수 없습니다.</block>
   <block id="282e41e144ea29af4a0b285331b59ba4" category="list-text">선택하다 <block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block> 모든 백업을 삭제하려는 작업 환경에서 *모든 백업 삭제*를 선택합니다.</block>
-  <block id="6126938e40a034209c1c70b1449968c0" category="list-text">확인 대화 상자에서 작업 환경의 이름을 입력하고 *삭제*를 선택합니다.</block>
   <block id="22f12d99e813b34048e25ac4a5f568f3" category="section-title">볼륨의 모든 백업 파일 삭제</block>
   <block id="a8ba6304562632a6eb4762aebfe0d175" category="paragraph">볼륨에 대한 모든 백업을 삭제하면 해당 볼륨에 대한 이후의 백업도 비활성화됩니다.</block>
   <block id="fac3794c7ab19ecf79400a46e7b334b1" category="list-text">*볼륨* 탭에서 다음을 클릭합니다. <block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block> 소스 볼륨에 대해 *세부 정보 및 백업 목록*을 선택합니다.</block>
@@ -4053,7 +4009,6 @@ ifdef::AWS[]</block>
   <block id="2c9220461da540ceac8b243e96929a74" category="list-text">*작업* &gt; *모든 백업 삭제*를 선택합니다.</block>
   <block id="624ecdc29248b4d270234342590e62e7" category="inline-image-macro">모든 백업 삭제 옵션을 보여주는 스크린샷</block>
   <block id="1b080a8f11c49f34d248636294b2a55d" category="paragraph"><block ref="1b080a8f11c49f34d248636294b2a55d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2b0e92328f433f20d847a41a4f27ee4b" category="list-text">볼륨 이름을 입력하고 모든 백업을 강제로 삭제할지 여부를 표시합니다.</block>
   <block id="c6f11bef049f9978b6acc052d17daf5a" category="list-text">*볼륨* 탭에서 다음을 선택하세요. <block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block> 소스 볼륨의 경우 *볼륨 세부 정보 보기*를 선택합니다.</block>
   <block id="720c9e00fafd4e708d8298f7f3cc89cd" category="paragraph">볼륨에 대한 세부 정보가 표시되고 * Snapshot *, * Replication * 또는 * Backup * 을 선택하여 볼륨에 대한 모든 백업 파일 목록을 볼 수 있습니다. 기본적으로 사용 가능한 스냅샷 복사본이 표시됩니다.</block>
   <block id="8dac01775d5cf014de7509d0b8b228e4" category="list-text">선택하다 <block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block> 삭제하려는 볼륨 백업 파일에 대해 *삭제*를 선택합니다.</block>
@@ -4303,7 +4258,6 @@ ifdef::AWS[]</block>
   <block id="6cd8cc5fdd9e1409bcb46d17177068ee" category="list-text">작업 아이콘을 선택하세요 <block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block> 복원하려는 가상 머신에 해당하는 항목을 선택하고 *복원*을 선택합니다.</block>
   <block id="65c21609a555003c2d87b338ad06f851" category="summary">BlueXP backup and recovery 에 사용되는 정책과 SnapCenter 에서 사용되는 정책 사이에는 몇 가지 차이점이 있습니다.</block>
   <block id="bdb2c9fdb7d584eed557444b42bc0d49" category="paragraph">SnapCenter 에서 사용되는 정책과 BlueXP backup and recovery 에서 사용되는 정책 사이에는 몇 가지 차이점이 있으며, 이는 SnapCenter 에서 리소스와 정책을 가져온 후에 표시되는 내용에 영향을 줄 수 있습니다.</block>
-  <block id="eed1fc7cfee5bcc66b97468735bf9e60" category="paragraph">SnapCenter 와 BlueXP backup and recovery 약간 다른 정책 일정을 사용합니다.</block>
   <block id="23f9c52e4c2d311c3072f509e50b4d03" category="paragraph">SnapCenter 다음과 같은 일정 계층을 사용합니다.</block>
   <block id="b8d71d1c739c4b9834c70d9c7beec28e" category="list-text">*시간별*: 모든 시간(0-23)과 모든 분(0-60)을 포함한 여러 시간과 분.</block>
   <block id="88695f8ce2149aa505995ad3f760a282" category="list-text">*매일*: 특정 날짜마다 반복하는 옵션(예: 3일마다)이 포함되어 있습니다.</block>
@@ -4628,7 +4582,6 @@ ifdef::AWS[]</block>
   <block id="b884440e8464e067fc1993b8e7564b2c" category="paragraph">이 서비스는 다음 작업 부하를 보호합니다.</block>
   <block id="a7834976a2cbdc12ddeb76acc0345f2d" category="inline-link-macro">백업 및 복구 데이터 서비스 역할 및 권한</block>
   <block id="092238820de0395a7d97ae63a784ea7f" category="paragraph">*필수 BlueXP 역할* 이 작업에는 데이터 서비스 백업 및 복구 슈퍼 관리자 역할이 필요합니다.  에 대해 알아보세요<block ref="48e53f0dd24db48908da75d62a8f8086" category="inline-link-macro-rx"></block> .<block ref="c46fcff617e849cb6f8ded33051f7905" category="inline-link-rx"></block> .</block>
-  <block id="2cf6a2d8c1cb12d031a59d63b2674c2d" category="list-text">*백업 대상*: (Kubernetes 워크로드에만 해당) Kubernetes 애플리케이션 리소스를 호스팅하는 스토리지 버킷을 선택합니다.  스냅샷은 이 버킷에 저장됩니다.  백업 환경 내에서 버킷에 액세스할 수 있는지 확인하세요.</block>
   <block id="4d3ca3588667d04ddbd4f318cdd7677e" category="inline-link-macro">보호 정책 추가</block>
   <block id="2769be0838f5e6f63e01200eeeec1910" category="list-text">선택적으로, *정책* 영역에서 기존 보호 정책을 선택하여 애플리케이션을 보호하거나 새 정책을 만들 수 있습니다. 정책을 선택하지 않으면 애플리케이션은 보호 정책 없이 생성됩니다. 당신은 할 수 있습니다<block ref="99c823f28a98717f81cda4eb0c448db5" category="inline-link-macro-rx"></block> 나중에.</block>
   <block id="f58eabeb108df6c5973f0ece276c562f" category="list-text">*정책* 영역에서 애플리케이션을 보호하기 위한 기존 보호 정책을 선택하거나 새 정책을 만듭니다.  참조하다<block ref="3739f9f9696bd133d77df1c4736a8480" category="inline-link-macro-rx"></block> 보호 정책 생성에 대한 자세한 내용은 여기를 참조하세요.</block>
@@ -4719,4 +4672,15 @@ ifdef::AWS[]</block>
   <block id="af45dce32c393d74375fcf6543060be0" category="paragraph">BlueXP backup and recovery IAM(ID 및 액세스 관리)을 사용하여 각 사용자가 특정 기능과 작업에 대해 갖는 액세스 권한을 관리합니다.</block>
   <block id="d341f0c47f4b7ad5cc1b4c9bb210cfda" category="section-title">2025년 8월 12일</block>
   <block id="3d5a9cd83b30ec6ec9f0802593907f05" category="sidebar">Microsoft SQL Server 워크로드 보호</block>
+  <block id="94909f2ec8275797b7659a53af432b61" category="list-text">*백업 대상*: (Kubernetes 워크로드에만 해당) Kubernetes 애플리케이션 리소스를 호스팅하는 스토리지 버킷을 선택합니다. 스냅샷 시점의 애플리케이션 리소스 정의는 이 버킷에 저장됩니다. 백업 환경 내에서 버킷에 액세스할 수 있는지 확인하세요.</block>
+  <block id="5c851bd90645848b446210999f3e2a77" category="paragraph">BlueXP backup and recovery 사용하면 백업 일정 변경, 볼륨 백업 활성화/비활성화, 백업 일시 중지, 백업 삭제, 백업 강제 삭제 등을 통해 Cloud Volumes ONTAP 및 온프레미스 ONTAP 시스템의 백업을 관리할 수 있습니다.  여기에는 스냅샷 복사본, 복제된 볼륨, 개체 스토리지의 백업 파일을 포함한 모든 유형의 백업이 포함됩니다.  BlueXP backup and recovery 의 등록을 취소할 수도 있습니다.</block>
+  <block id="bc57a9fce0dfbc05c202b0f5a0ea83d6" category="paragraph"><block ref="bc57a9fce0dfbc05c202b0f5a0ea83d6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="182c10c8f0a6db351a76261c01e00ab4" category="list-text">확인 대화 상자에서 작업 환경의 이름을 입력합니다.</block>
+  <block id="b2efc38b6f353a6ab5275e1b97a3207b" category="list-text">*고급 설정*을 선택하세요.</block>
+  <block id="faf054b5001a252d9df902ee16e53f79" category="list-text">*백업 강제 삭제*: 모든 백업을 강제로 삭제할지 여부를 표시합니다.</block>
+  <block id="5aea9e9558836559d5fe9a8137f4ed8b" category="paragraph">극단적인 경우에는 BlueXP backup and recovery 더 이상 백업에 액세스하지 못하도록 하려는 경우도 있습니다. 예를 들어, 서비스가 더 이상 백업 버킷에 액세스할 수 없거나 백업이 DataLock으로 보호되지만 더 이상 필요하지 않은 경우 이런 일이 발생할 수 있습니다. 이전에는 직접 삭제할 수 없었고 NetApp 지원팀에 문의해야 했습니다. 이 릴리스에서는 볼륨 및 작업 환경 수준에서 백업을 강제로 삭제하는 옵션을 사용할 수 있습니다.</block>
+  <block id="125aa7ed80cb288006b134021f74ae4d" category="list-text">볼륨 이름을 입력하세요.</block>
+  <block id="2cc9cb7cd5398e9028f9c98c0685d1a6" category="paragraph">극단적인 경우에는 BlueXP backup and recovery 더 이상 백업에 액세스하지 못하도록 하려는 경우도 있습니다.  예를 들어, 하위 서비스가 백업 버킷에 액세스할 수 없거나 백업이 DataLock으로 보호되었지만 더 이상 필요하지 않은 경우 이런 일이 발생할 수 있습니다. 이전에는 직접 삭제할 수 없었고 NetApp 지원팀에 문의해야 했습니다. 이 릴리스에서는 볼륨 및 작업 환경 수준에서 백업을 강제로 삭제하는 옵션을 사용할 수 있습니다.</block>
+  <block id="aa029ba3399a1aa8daaa58567b0e0a96" category="section-title">일정 계층</block>
+  <block id="46ab31129184c1b6b0ef3989168fee15" category="paragraph">SnapCenter 사용하면 리소스에 연결된 여러 정책에 걸쳐 여러 보존 값을 가질 수 있습니다.  하지만 BlueXP backup and recovery 리소스에 연결된 모든 정책에 대해 단일 보존 값만 지원합니다.</block>
 </blocks>
