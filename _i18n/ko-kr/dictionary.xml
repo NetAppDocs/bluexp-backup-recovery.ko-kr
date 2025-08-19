@@ -4043,7 +4043,6 @@ ifdef::AWS[]</block>
   <block id="0e7df5d1c44a98734ad463aca5107c4e" category="list-text">AWS S3 Glacier 또는 S3 Glacier Deep Archive 스토리지에 백업을 계층화하도록 선택할 수 있습니다. <block ref="9ababc464a82d6f1db77ecd4b1df297b" category="inline-link-macro-rx"></block>..</block>
   <block id="4023fc8cad184a96ff951576eb9b8edb" category="paragraph">선택한 보관 정책 설정에 따라 StorageGRID 에서 정보 수명 주기 관리(ILM) 정책이 생성되고 해당 설정이 "규칙"으로 추가됩니다.</block>
   <block id="972e0ef2d514c88b857934a12f7afa97" category="summary">BlueXP 백업 및 복구의 SnapMirror to Cloud Resync 기능은 NetApp 환경에서 볼륨 마이그레이션 중에 데이터 보호와 연속성을 간소화합니다.</block>
-  <block id="985b48d30460fe47147847a8b5a8b89d" category="doc">BlueXP backup and recovery 에서 SnapMirror 사용하여 볼륨을 Cloud Resync로 마이그레이션합니다.</block>
   <block id="907302bb1fd4581066b79f7dab5fff74" category="section-title">BlueXP backup and recovery SnapMirror to Cloud Resync 작동 방식</block>
   <block id="d683b5a068fd3bc0acd433ee36b8e172" category="paragraph">제공된 기본 백업 정책에 대해 알아보려면 다음을 참조하세요. <block ref="586d9517f9118e1d4d7dcfa262c8e08f" category="inline-link-macro-rx"></block> .</block>
   <block id="7aa02d1490041a6267fc77bf9b4232c2" category="paragraph">스냅샷 복사본, 복제 및 개체 스토리지에 대한 백업을 관리하는 정책을 만들 수 있습니다.</block>
@@ -4683,4 +4682,17 @@ ifdef::AWS[]</block>
   <block id="2cc9cb7cd5398e9028f9c98c0685d1a6" category="paragraph">극단적인 경우에는 BlueXP backup and recovery 더 이상 백업에 액세스하지 못하도록 하려는 경우도 있습니다.  예를 들어, 하위 서비스가 백업 버킷에 액세스할 수 없거나 백업이 DataLock으로 보호되었지만 더 이상 필요하지 않은 경우 이런 일이 발생할 수 있습니다. 이전에는 직접 삭제할 수 없었고 NetApp 지원팀에 문의해야 했습니다. 이 릴리스에서는 볼륨 및 작업 환경 수준에서 백업을 강제로 삭제하는 옵션을 사용할 수 있습니다.</block>
   <block id="aa029ba3399a1aa8daaa58567b0e0a96" category="section-title">일정 계층</block>
   <block id="46ab31129184c1b6b0ef3989168fee15" category="paragraph">SnapCenter 사용하면 리소스에 연결된 여러 정책에 걸쳐 여러 보존 값을 가질 수 있습니다.  하지만 BlueXP backup and recovery 리소스에 연결된 모든 정책에 대해 단일 보존 값만 지원합니다.</block>
+  <block id="64d100d00b61364f5c3f3456b1dbbc90" category="paragraph">다음 전제 조건이 충족되었는지 확인하세요.</block>
+  <block id="dfc6646fc34ce265f46c4e38da4e74d3" category="list-text">이전 Source ONTAP 클러스터는 BlueXP backup and recovery 사용하여 보호해야 합니다.</block>
+  <block id="afc84816829f9211a8bcb4ef3cdef8e0" category="list-text">SnapMirror to Cloud Resync 기능은 2025년 5월에 출시된 BlueXP backup and recovery 버전 4.0.3부터 사용할 수 있습니다.</block>
+  <block id="d89b5c3996c2c493e8038816381da875" category="list-text">개체 저장소의 최신 백업은 이전 소스, 새 소스 및 개체 저장소에 대한 공통 스냅샷이어야 합니다.  공통 스냅샷은 개체 저장소에 백업된 최신 스냅샷보다 오래될 수 없습니다.</block>
+  <block id="db62eeba01b9529a3e55dd7f235c2184" category="list-text">이전 ONTAP 에서 사용되었던 스냅샷 정책과 SnapMirror 정책은 모두 재동기화 작업을 시작하기 전에 새 ONTAP 클러스터에서 생성되어야 합니다.  재동기화 프로세스에서 정책을 사용할 경우 해당 정책도 만들어야 합니다.  재동기화 작업으로 정책이 생성되지 않습니다.</block>
+  <block id="6a08ac0900dfba7c4eb26a6326b2b0dd" category="list-text">마이그레이션 볼륨 SnapMirror 관계에 적용되는 SnapMirror 정책에 클라우드 관계에 사용되는 것과 동일한 레이블이 포함되어 있는지 확인하세요.  문제를 방지하려면 볼륨과 모든 스냅샷의 정확한 미러를 관리하는 정책을 사용하세요.</block>
+  <block id="09a30f0e3a3c79015421558886b76635" category="admonition">볼륨 ID가 아닌 볼륨 인스턴스 UUID를 사용해야 합니다.  볼륨 인스턴스 UUID는 마이그레이션 전체에서 일관되게 유지되는 고유 식별자인 반면, 볼륨 ID는 마이그레이션 후에 변경될 수 있습니다.</block>
+  <block id="a3e605055ea4117757586cf8c5cb4a06" category="list-text">백업 설정 페이지에서 *모두 보기*를 선택합니다.</block>
+  <block id="5baf811797f2b09cafb9c8d0b606f3fd" category="list-text">_새로운_ 소스 오른쪽에 있는 작업... 메뉴에서 *백업 재동기화*를 선택합니다.</block>
+  <block id="c3de5afc2b623a5e734ef52904e31122" category="paragraph">BlueXP backup and recovery 재동기화를 위해 선택된 각 볼륨이 최신 스냅샷인지, 그리고 최소한 하나의 공통 스냅샷이 있는지 검증합니다.  이렇게 하면 볼륨이 SnapMirror to Cloud Resync 작업에 준비됩니다.</block>
+  <block id="b98c88f62c4834a257b2a73ee9fbb4dd" category="list-text">볼륨 적합성을 확인하세요.  시스템은 볼륨이 재동기화에 적합한지 확인합니다.  볼륨이 적합하지 않은 경우 최신 스냅샷이 아니거나 공통 스냅샷을 찾을 수 없음을 의미합니다.</block>
+  <block id="c856ee3b535d4aa35b19af5253f54e81" category="list-text">재동기화 작업을 시작하려면 *재동기화*를 선택하세요.  시스템은 최신의 공통 스냅샷을 사용하여 증분 변경 사항만 전송하여 백업 연속성을 보장합니다.</block>
+  <block id="8d2d3fb9cf8aa026f491048ab9fdf368" category="list-text">작업 모니터 페이지에서 재동기화 프로세스를 모니터링합니다.</block>
 </blocks>
