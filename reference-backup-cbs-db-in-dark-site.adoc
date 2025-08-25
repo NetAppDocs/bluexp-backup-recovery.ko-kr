@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-backup-cbs-db-in-dark-site.html 
 keywords: backup database, recover database, dark site, private mode, restore database, backup and recovery, BlueXP Connector 
-summary: '인터넷 접속이 없는 사이트("비공개 모드"라고 함)에서 BlueXP backup and recovery 사용하는 경우, BlueXP backup and recovery 구성 데이터는 백업이 저장되는 StorageGRID 또는 ONTAP S3 버킷에 백업됩니다.  나중에 BlueXP Connector 호스트 시스템에 문제가 발생하면 새로운 Connector를 배포하고 중요한 BlueXP backup and recovery 데이터를 복원할 수 있습니다.' 
+summary: '인터넷 접속이 불가능한 사이트("비공개 모드"라고 함)에서 BlueXP backup and recovery 사용하는 경우, BlueXP backup and recovery 구성 데이터는 백업이 저장되는 StorageGRID 또는 ONTAP S3 버킷에 백업됩니다. 나중에 BlueXP Connector 호스트 시스템에 문제가 발생하면 새로운 Connector를 배포하고 중요한 BlueXP backup and recovery 데이터를 복원할 수 있습니다.' 
 ---
 = 다크 사이트에서 BlueXP backup and recovery 구성 데이터 복원
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: '인터넷 접속이 없는 사이트("비공개 모드"라고 함)에�
 
 
 [role="lead"]
-인터넷 접속이 없는 사이트(개인 모드)에서 BlueXP backup and recovery 사용하는 경우, BlueXP backup and recovery 구성 데이터는 백업이 저장되는 StorageGRID 또는 ONTAP S3 버킷에 백업됩니다.  BlueXP Connector 호스트 시스템에 문제가 있는 경우 새로운 Connector를 배포하고 중요한 BlueXP backup and recovery 데이터를 복원할 수 있습니다.
+인터넷 접속이 불가능한 사이트(개인 모드)에서 BlueXP backup and recovery 사용하는 경우 BlueXP backup and recovery 구성 데이터는 백업이 저장되는 StorageGRID 또는 ONTAP S3 버킷에 백업됩니다. BlueXP Connector 호스트 시스템에 문제가 있는 경우 새로운 Connector를 배포하고 중요한 BlueXP backup and recovery 데이터를 복원할 수 있습니다.
 
 
 NOTE: 이 절차는 ONTAP 볼륨 데이터에만 적용됩니다.

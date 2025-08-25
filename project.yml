@@ -29,10 +29,12 @@ sidebar:
     entries:
     - title: 새로운 소식
       url: "/whats-new.html"
-    - title: Microsoft SQL Server 워크로드에 대한 알려진 제한 사항
-      url: "/br-limitations.html"
     - title: ONTAP 볼륨 워크로드에 대한 알려진 제한 사항
       url: "/br-reference-limitations.html"
+    - title: Microsoft SQL Server 워크로드에 대한 알려진 제한 사항
+      url: "/br-limitations.html"
+    - title: VMware 워크로드에 대한 알려진 제한 사항
+      url: "/br-limitations-vmware.html"
   - title: 시작하십시오
     entries:
     - title: BlueXP 백업 및 복구에 대해 알아보십시오
@@ -113,7 +115,19 @@ sidebar:
         url: "/br-use-manage-snapshots.html"
       - title: Microsoft SQL Server 보고서 만들기
         url: "/br-use-reports.html"
-    - title: 가상 머신 워크로드 보호
+    - title: VMware 워크로드 보호(VMware용 SnapCenter 플러그인 없이 미리 보기)
+      entries:
+      - title: VMware 워크로드 보호 개요
+        url: "/br-use-vmware-protect-overview.html"
+      - title: VMware 워크로드 알아보기
+        url: "/br-use-vmware-discovery.html"
+      - title: VMware 워크로드에 대한 보호 그룹 생성 및 관리
+        url: "/br-use-vmware-protection-groups.html"
+      - title: VMware 워크로드 백업
+        url: "/br-use-vmware-backup.html"
+      - title: VMware 워크로드 복원
+        url: "/br-use-vmware-restore.html"
+    - title: VMware 워크로드 보호(VMware용 SnapCenter 플러그인 사용)
       entries:
       - title: 가상 머신 워크로드 보호 개요
         url: "/prev-vmware-protect-overview.html"
@@ -163,6 +177,8 @@ sidebar:
       url: "/reference-policy-differences-snapcenter.html"
     - title: BlueXP backup and recovery 역할 및 권한
       url: "/reference-roles.html"
+    - title: 어두운 사이트에서 BlueXP backup and recovery 데이터 복원
+      url: "/reference-backup-cbs-db-in-dark-site.html"
     - title: 지원되는 AWS 아카이브 스토리지 계층
       url: "/prev-reference-aws-archive-storage-tiers.html"
     - title: 지원되는 Azure 보관 저장소 계층
