@@ -4919,11 +4919,11 @@ ifdef::AWS[]</block>
   <block id="40e80975f18e076da51a2f87004f77ab" category="summary">인터넷 접속이 불가능한 사이트("비공개 모드"라고 함)에서 BlueXP backup and recovery 사용하는 경우, BlueXP backup and recovery 구성 데이터는 백업이 저장되는 StorageGRID 또는 ONTAP S3 버킷에 백업됩니다. 나중에 BlueXP Connector 호스트 시스템에 문제가 발생하면 새로운 Connector를 배포하고 중요한 BlueXP backup and recovery 데이터를 복원할 수 있습니다.</block>
   <block id="b1e27f8c2d43223a85b44c94d6a02cc0" category="paragraph">인터넷 접속이 불가능한 사이트(개인 모드)에서 BlueXP backup and recovery 사용하는 경우 BlueXP backup and recovery 구성 데이터는 백업이 저장되는 StorageGRID 또는 ONTAP S3 버킷에 백업됩니다. BlueXP Connector 호스트 시스템에 문제가 있는 경우 새로운 Connector를 배포하고 중요한 BlueXP backup and recovery 데이터를 복원할 수 있습니다.</block>
   <block id="0428e48e7f58929099e52febd0558232" category="section-title">2025년 8월 25일</block>
-  <block id="b9d888f58b09c4007db0247286e392b5" category="section-title">2025년 8월 11일</block>
   <block id="0d8cae156f9904fac41e4f76eb3502db" category="sidebar">VMware 워크로드 보호(미리 보기)</block>
   <block id="79d4e4bc94bda2b257f4190786069be1" category="sidebar">VMware 워크로드 보호 개요</block>
   <block id="fe5216e8c6ca199aaa9802985fb31c17" category="sidebar">VMware 워크로드에 대한 알려진 제한 사항</block>
   <block id="f4aa5ca6921e92380246ea7a562973a9" category="sidebar">VMware 워크로드 보호(VMware용 SnapCenter 플러그인 없이 미리 보기)</block>
   <block id="b1b8c22062b7762d4a3c459e880dee3b" category="sidebar">VMware 워크로드 보호(VMware용 SnapCenter 플러그인 사용)</block>
   <block id="5e8c098d325749413b23d5eba5837aad" category="sidebar">어두운 사이트에서 BlueXP backup and recovery 데이터 복원</block>
+  <block id="2c7a4c64b750d295df0cbadb67206302" category="paragraph">BlueXP backup and recovery 작업 정보를 15일 동안 보관한 후 삭제하여 작업 모니터에 더 이상 표시되지 않습니다.</block>
 </blocks>
